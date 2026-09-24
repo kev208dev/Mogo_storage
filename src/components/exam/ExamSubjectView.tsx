@@ -13,10 +13,15 @@ import { AutoGrader } from "./AutoGrader";
 import { DifficultQuestions } from "./DifficultQuestions";
 import { ExamFiles } from "./ExamFiles";
 import { ExamHeader } from "./ExamHeader";
+import { ExamSchedulePanel } from "./ExamSchedulePanel";
 import { fileViewHref } from "./FileDownloadCard";
 import { GradeCutTable } from "./GradeCutTable";
 import { QuestionExplorer } from "./QuestionExplorer";
 import { SubjectTabs } from "./SubjectTabs";
+
+function todayKst(): string {
+  return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
 
 /**
  * 시험 상세(과목) 화면.
@@ -24,8 +29,17 @@ import { SubjectTabs } from "./SubjectTabs";
  * 다운로드 위에는 어떤 부가 요소도 두지 않는다.
  */
 export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
-  const { exam, subjects, subject, files, questions, gradeCuts, vocabulary, listeningTracks } =
-    detail;
+  const {
+    exam,
+    subjects,
+    subject,
+    files,
+    questions,
+    gradeCuts,
+    vocabulary,
+    listeningTracks,
+    schedule,
+  } = detail;
   const subjectKey = subject.subject;
   const subjectLabel = SUBJECT_LABELS[subjectKey];
   const isEnglish = subjectKey === "english";
@@ -47,6 +61,9 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     <article className="pb-6">
       <ExamHeader exam={exam} subject={subjectKey} />
       <SubjectTabs exam={exam} subjects={subjects} current={subjectKey} />
+      {schedule && files.length === 0 && schedule.status !== "cancelled" ? (
+        <ExamSchedulePanel schedule={schedule} today={todayKst()} />
+      ) : null}
       <ExamFiles
         files={files}
         examId={exam.id}

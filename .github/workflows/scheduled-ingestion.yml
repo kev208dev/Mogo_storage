@@ -1,0 +1,38 @@
+name: Scheduled ingestion
+
+# 운영 scheduler 로 GitHub Actions 를 선택한 경우에만 동작한다.
+#   repository variable  INGESTION_SCHEDULER = github-actions
+#   repository secrets   INGESTION_SITE_URL (예: https://mogo.example.com), CRON_SECRET
+# 값이 없으면 아무것도 하지 않고 성공으로 끝난다.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "scheduled | release-watch | jobs"
+        default: scheduled
+
+concurrency:
+  group: scheduled-ingestion
+  cancel-in-progress: false
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Call ingestion endpoint
+        env:
+          SCHEDULER: ${{ vars.INGESTION_SCHEDULER }}
+          SITE_URL: ${{ secrets.INGESTION_SITE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          TASK: ${{ github.event.inputs.task || 'scheduled' }}
+        run: |
+          if [ "$SCHEDULER" != "github-actions" ] || [ -z "$SITE_URL" ] || [ -z "$CRON_SECRET" ]; then
+            echo "GitHub Actions scheduler not configured — skipping."
+            exit 0
+          fi
+          curl --fail-with-body -sS --max-time 320 \
+            -H "Authorization: Bearer $CRON_SECRET" \
+            "$SITE_URL/api/cron/$TASK"

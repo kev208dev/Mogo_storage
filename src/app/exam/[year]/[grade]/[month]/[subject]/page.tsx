@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ExamSubjectView } from "@/components/exam/ExamSubjectView";
 import { DEFAULT_SUBJECT, SUBJECTS } from "@/lib/constants";
-import { getExam, getExamSubjects, getRepository } from "@/lib/data";
-import { buildExamMetadata } from "@/lib/exam-metadata";
+import { getExam, getExamSubjects, getRepository, getSubjectDetail } from "@/lib/data";
+import { buildExamMetadata, upcomingDate } from "@/lib/exam-metadata";
 import { examPath, gradeSegment, isSubject, monthSegment, parseExamParams } from "@/lib/exam-path";
 import { loadSubjectDetail, resolveExamKey } from "@/lib/exam-route";
 
@@ -29,7 +29,10 @@ export async function generateMetadata({
   if (!key || !isSubject(p.subject)) return {};
   const exam = await getExam(key.year, key.grade, key.month);
   if (!exam) return {};
-  return buildExamMetadata(exam, await getExamSubjects(exam.id), p.subject);
+  const detail = await getSubjectDetail(key.year, key.grade, key.month, p.subject);
+  return buildExamMetadata(exam, await getExamSubjects(exam.id), p.subject, {
+    upcomingExamDate: upcomingDate(detail),
+  });
 }
 
 export default async function ExamSubjectPage({

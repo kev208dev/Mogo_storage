@@ -1,0 +1,25 @@
+name: Ingestion source health
+
+# 실제 공식 사이트에 대한 adapter health check (live).
+# CI 기본 테스트/빌드와 분리되어 있으며, 결과가 broken 이어도 build 를 깨뜨리지 않는다.
+# 결과를 DB 에 기록하려면 repository secret INGESTION_DATABASE_URL 을 설정한다 (선택).
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check sources
+        env:
+          DATABASE_URL: ${{ secrets.INGESTION_DATABASE_URL }}
+        run: npm run ingest:health

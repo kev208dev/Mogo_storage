@@ -8,6 +8,19 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: mogo
+          POSTGRES_PASSWORD: mogo
+          POSTGRES_DB: mogo_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U mogo" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      # integration tests (fake official source → DB → site). 외부 실제 사이트에는 요청하지 않는다.
+      DATABASE_URL_TEST: postgres://mogo:mogo@localhost:5432/mogo_test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

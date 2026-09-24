@@ -80,10 +80,33 @@ export interface DiscoveredArtifact {
   officialReleaseAt?: string | null;
 }
 
+/** source 페이지 종류 (fixture metadata 의 pageType 과 같다) */
+export const PAGE_TYPES = [
+  "exam_list",
+  "exam_detail",
+  "exam_release_index",
+  "listening_archive",
+  "schedule",
+] as const;
+export type PageType = (typeof PAGE_TYPES)[number];
+
 /** discoverArtifacts 입력: canonical identity + (있으면) source 내부 위치 */
 export interface ExamLocator extends CanonicalExam {
   externalId?: string;
   sourceUrl?: string;
+  /** sourceUrl 의 페이지 종류. 운영자가 공식 공지에서 등록한 KICE 시험별 index 등 */
+  pageType?: PageType;
+  /** 시험일 (공개 시각 표에 날짜가 없을 때 사용) */
+  examDate?: string | null;
+}
+
+/** source 가 제공한 공식 공개 시각 (예: KICE 정답 공개시간). 시험마다 다르며 하드코딩하지 않는다 */
+export interface DiscoveredReleaseTime {
+  subject: Subject;
+  course: CourseResolution;
+  sourceLabel: string;
+  rawTime: string;
+  officialReleaseAt: string | null;
 }
 
 export interface SourceHealth {
@@ -101,5 +124,10 @@ export interface ExamSourceAdapter {
   readonly source: SourceConfig;
   discoverExams(options: DiscoverOptions): Promise<DiscoveredExam[]>;
   discoverArtifacts(exam: ExamLocator): Promise<DiscoveredArtifact[]>;
+  /**
+   * 시험별 공개 시각 (지원하는 source 만). 자료 링크가 아직 없어도 공개 예정 시각을 알려준다.
+   * locator.pageType = exam_release_index 인 경우에만 호출된다.
+   */
+  discoverReleaseTimes?(exam: ExamLocator): Promise<DiscoveredReleaseTime[]>;
   healthCheck(): Promise<SourceHealth>;
 }

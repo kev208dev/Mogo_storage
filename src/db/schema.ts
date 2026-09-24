@@ -613,6 +613,11 @@ export const examSchedules = pgTable(
     status: examScheduleStatusEnum("status").notNull().default("scheduled"),
     /** 일정 근거 (공식 공지 URL 등) */
     announcementUrl: text("announcement_url"),
+    /** 공식 공지에서 확인한 시험별 source 페이지 (KICE 시험별 자료 index 등) */
+    sourcePages: jsonb("source_pages")
+      .$type<Array<{ sourceId: string; url: string; pageType: string }>>()
+      .notNull()
+      .default([]),
     isSample: boolean("is_sample").notNull().default(false),
     examId: text("exam_id").references(() => exams.id, { onDelete: "set null" }),
     ...timestamps,

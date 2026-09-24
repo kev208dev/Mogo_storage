@@ -138,7 +138,7 @@ describe("parser contract (all sources)", () => {
 });
 
 describe("live fixture validation (tests/fixtures/live layout)", () => {
-  function makeLiveDir() {
+  function makeLiveDir(extra: Partial<FixtureMeta> = { expectedReviewed: true }) {
     const root = mkdtempSync(path.join(os.tmpdir(), "live-"));
     mkdirSync(path.join(root, "ebsi"));
     const html = fixture("ebsi", "listing-high2-2025.html");
@@ -150,6 +150,7 @@ describe("live fixture validation (tests/fixtures/live layout)", () => {
         context: { grade: 2, year: 2025 },
       }),
       sha256: sha256(html),
+      ...extra,
     };
     writeFileSync(path.join(root, "ebsi", "listing-g2-2025.html"), html);
     writeFileSync(path.join(root, "ebsi", "listing-g2-2025.json"), JSON.stringify(m));
@@ -165,6 +166,13 @@ describe("live fixture validation (tests/fixtures/live layout)", () => {
       parserVersion: currentParserVersion("ebsi"),
     });
     expect(summaries[0]!.fixtureHash).toMatch(/^[0-9a-f]{32}$/);
+  });
+
+  it("parse 가 통과해도 사람이 expected 를 확인하지 않은 fixture 는 승인 증거가 아니다", () => {
+    const { results, summaries } = validateLiveFixtures(makeLiveDir({ expectedReviewed: false }));
+    expect(results[0]!.ok).toBe(true);
+    expect(summaries[0]).toMatchObject({ passed: false, fixtureHash: null });
+    expect(summaries[0]!.unreviewed).toEqual(["ebsi/listing-g2-2025"]);
   });
 
   it("detects a fixture edited after capture (sha256 mismatch)", () => {

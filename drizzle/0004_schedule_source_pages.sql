@@ -1,0 +1,1 @@
+ALTER TABLE "exam_schedules" ADD COLUMN "source_pages" jsonb DEFAULT '[]'::jsonb NOT NULL;

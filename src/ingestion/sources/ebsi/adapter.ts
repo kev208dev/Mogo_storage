@@ -11,12 +11,12 @@ import type {
   SourceConfig,
   SourceHealth,
 } from "../../types";
-import { parseEbsiListing, type ParsedEbsiExam } from "./parser";
-import { ebsiListingUrl } from "./structure";
+import { parseEbsiExamArtifacts, parseEbsiExamList } from "./parser";
+import { ebsiArtifactPageUrl, ebsiListingUrl } from "./structure";
 
 export class EbsiExamSource implements ExamSourceAdapter {
-  /** 한 번의 실행 안에서 같은 목록 페이지를 두 번 요청하지 않는다 */
-  private readonly listingCache = new Map<string, Promise<ParsedEbsiExam[]>>();
+  /** 한 번의 실행 안에서 같은 페이지를 두 번 요청하지 않는다 (목록 = 자료 페이지인 현재 구조에서 중요) */
+  private readonly pageCache = new Map<string, Promise<string>>();
 
   constructor(
     readonly source: SourceConfig,
@@ -24,19 +24,22 @@ export class EbsiExamSource implements ExamSourceAdapter {
     private readonly now: () => Date = () => new Date(),
   ) {}
 
-  private listing(grade: Grade, year: number): Promise<ParsedEbsiExam[]> {
-    const url = ebsiListingUrl(this.source.baseUrl, grade, year);
-    if (!this.listingCache.has(url)) {
-      this.listingCache.set(
+  private page(url: string): Promise<string> {
+    if (!this.pageCache.has(url)) {
+      this.pageCache.set(
         url,
-        this.fetcher.fetch(url, { accept: "text/html" }).then((res) => {
-          const { exams } = parseEbsiListing(decodeHtml(res), { pageUrl: url, grade, year });
-          // 목록 페이지가 다른 연도 시험을 섞어 보여줘도 해당 연도만 사용
-          return exams.filter((e) => e.canonical.year === year);
-        }),
+        this.fetcher.fetch(url, { accept: "text/html" }).then((res) => decodeHtml(res)),
       );
     }
-    return this.listingCache.get(url)!;
+    return this.pageCache.get(url)!;
+  }
+
+  /** [Discovery] 학년·연도별 시험 목록 (pageType exam_list) */
+  private async listing(grade: Grade, year: number): Promise<DiscoveredExam[]> {
+    const url = ebsiListingUrl(this.source.baseUrl, grade, year);
+    const { exams } = parseEbsiExamList(await this.page(url), { pageUrl: url, grade, year });
+    // 목록 페이지가 다른 연도 시험을 섞어 보여줘도 해당 연도만 사용
+    return exams.filter((e) => e.canonical.year === year);
   }
 
   async discoverExams(options: DiscoverOptions): Promise<DiscoveredExam[]> {
@@ -48,27 +51,38 @@ export class EbsiExamSource implements ExamSourceAdapter {
     for (let year = to; year >= from; year -= 1) {
       for (const grade of grades) {
         options.signal?.throwIfAborted();
-        const exams = await this.listing(grade, year);
-        for (const exam of exams) {
+        for (const exam of await this.listing(grade, year)) {
           if (options.month && exam.canonical.month !== options.month) continue;
-          const { artifacts: _artifacts, ...discovered } = exam;
-          void _artifacts;
-          found.push(discovered);
+          found.push(exam);
         }
       }
     }
     return found;
   }
 
+  /**
+   * [Artifact discovery] 시험 하나의 자료 URL. 시험 목록과 별개 단계다.
+   * externalId 가 없으면(release watch 등) 목록에서 canonical identity 로 찾는다.
+   */
   async discoverArtifacts(exam: ExamLocator): Promise<DiscoveredArtifact[]> {
-    const exams = await this.listing(exam.grade, exam.year);
-    const key = canonicalKey(exam);
-    const match = exams.find(
-      (e) =>
-        (exam.externalId && e.externalId === exam.externalId) ||
-        (canonicalKey(e.canonical) === key && e.canonical.examType === exam.examType),
-    );
-    return match?.artifacts ?? [];
+    let externalId = exam.externalId;
+    if (!externalId) {
+      const key = canonicalKey(exam);
+      const match = (await this.listing(exam.grade, exam.year)).find(
+        (e) => canonicalKey(e.canonical) === key && e.canonical.examType === exam.examType,
+      );
+      if (!match) return [];
+      externalId = match.externalId;
+    }
+    const listingUrl = ebsiListingUrl(this.source.baseUrl, exam.grade, exam.year);
+    const pageUrl = ebsiArtifactPageUrl(listingUrl);
+    const { artifacts } = parseEbsiExamArtifacts(await this.page(pageUrl), {
+      pageUrl,
+      grade: exam.grade,
+      year: exam.year,
+      externalId,
+    });
+    return artifacts;
   }
 
   async healthCheck(): Promise<SourceHealth> {

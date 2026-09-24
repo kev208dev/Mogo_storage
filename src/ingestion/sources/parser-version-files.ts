@@ -5,6 +5,7 @@
  */
 const SHARED = [
   "src/ingestion/sources/html.ts",
+  "src/ingestion/sources/listening-parser.ts",
   "src/ingestion/canonical/classify.ts",
   "src/ingestion/canonical/course.ts",
   "src/ingestion/canonical/subject.ts",
@@ -21,6 +22,7 @@ export const PARSER_VERSION_FILES: Record<string, string[]> = {
   ],
   kice: [
     "src/ingestion/sources/kice/structure.ts",
+    "src/ingestion/sources/kice/index-parser.ts",
     "src/ingestion/sources/board/parser.ts",
     ...SHARED,
   ],

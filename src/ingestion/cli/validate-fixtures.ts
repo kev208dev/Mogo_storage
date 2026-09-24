@@ -31,14 +31,20 @@ async function main() {
   } else {
     for (const r of results) {
       console.log(
-        `${r.ok ? "✓" : "✗"} ${r.name}  exams=${r.exams} artifacts=${r.artifacts} ambiguousCourses=${r.ambiguousCourses}`,
+        `${r.ok ? "✓" : "✗"} ${r.name} [${r.pageType}]  exams=${r.exams} artifacts=${r.artifacts} subjects=${r.summary.subjects.join(",") || "-"} ambiguousCourses=${r.ambiguousCourses}${r.expectedReviewed ? "" : "  (expected 미확인)"}`,
       );
       for (const e of r.errors) console.log(`    - ${e}`);
+      if (r.drift.length)
+        console.log("    ⚠ 실제 페이지 구조가 바뀌었을 수 있습니다. 페이지를 확인하세요.");
     }
     for (const s of summaries) {
       console.log(
         `${s.passed ? "PASS" : "FAIL"} ${s.source} (${s.fixtures} fixtures, parser ${s.parserVersion})`,
       );
+      if (s.unreviewed.length)
+        console.log(
+          `    expectedReviewed=false: ${s.unreviewed.join(", ")} — 실제 페이지와 expected 요약을 대조한 뒤 true 로 바꾸세요`,
+        );
     }
   }
   if (args.record) {
@@ -46,6 +52,14 @@ async function main() {
     const db = createDb(process.env.DATABASE_URL, 2);
     await syncBuiltinSources(db);
     for (const s of summaries) {
+      const structuralFailure = results.some((r) => r.source === s.source && !r.ok);
+      if (!s.passed && !structuralFailure) {
+        // 파싱은 통과했지만 사람이 expected 를 확인하지 않음 → 증거를 남기지도, 기존 승인을 취소하지도 않는다
+        console.log(
+          `skipped ${s.source}: expected 요약 미확인 fixture 가 있어 증거로 기록하지 않음`,
+        );
+        continue;
+      }
       await recordLiveFixtureEvidence(db, s.source, {
         passed: s.passed,
         fixtureHash: s.fixtureHash,

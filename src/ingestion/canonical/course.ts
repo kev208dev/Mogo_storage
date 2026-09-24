@@ -18,7 +18,7 @@ export function normalizeCourseLabel(raw: string): string {
     .replace(/Ⅰ|Ⅰ/g, "1")
     .replace(/(?<=[가-힣])\s*II(?![A-Za-z])/g, "2")
     .replace(/(?<=[가-힣])\s*I(?![A-Za-z])/g, "1")
-    .replace(/[\s·ㆍ・•.,_\-()[\]{}<>「」『』]/g, "")
+    .replace(/[\s·ㆍ・•.,_\-()[\]{}<>「」『』/|]/g, "")
     .toLowerCase();
 }
 

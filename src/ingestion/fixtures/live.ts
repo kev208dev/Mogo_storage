@@ -2,7 +2,13 @@ import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { currentParserVersion } from "../sources/verification";
-import { validateFixture, type ContractResult, type FixtureMeta } from "./contract";
+import {
+  pageTypeOf,
+  summarize,
+  validateFixture,
+  type ContractResult,
+  type FixtureMeta,
+} from "./contract";
 
 export const LIVE_FIXTURE_DIR = "tests/fixtures/live";
 
@@ -45,13 +51,18 @@ export function listLiveFixtures(root = LIVE_FIXTURE_DIR): LiveFixture[] {
 export interface FixtureValidation extends ContractResult {
   name: string;
   source: FixtureMeta["source"];
+  pageType: string;
   sha256Matches: boolean;
+  /** 사람이 expected 요약을 실제 페이지와 대조했는지 */
+  expectedReviewed: boolean;
 }
 
 export interface SourceValidationSummary {
   source: FixtureMeta["source"];
   fixtures: number;
   passed: boolean;
+  /** expected 요약을 사람이 확인하지 않은 fixture (있으면 승인 증거로 쓰지 않는다) */
+  unreviewed: string[];
   /** 이 source 의 fixture 묶음 hash (승인 기록용) */
   fixtureHash: string | null;
   parserVersion: string | null;
@@ -67,12 +78,16 @@ export function validateLiveFixtures(root = LIVE_FIXTURE_DIR, onlySource?: strin
       results.push({
         name: fx.name,
         source: fx.meta.source,
+        pageType: pageTypeOf(fx.meta),
         sha256Matches: false,
+        expectedReviewed: Boolean(fx.meta.expectedReviewed),
         ok: false,
         records: [],
         exams: 0,
         artifacts: 0,
         ambiguousCourses: 0,
+        summary: summarize([]),
+        drift: [],
         errors: ["html file missing"],
       });
       continue;
@@ -85,18 +100,23 @@ export function validateLiveFixtures(root = LIVE_FIXTURE_DIR, onlySource?: strin
       ok: result.ok && matches,
       name: fx.name,
       source: fx.meta.source,
+      pageType: pageTypeOf(fx.meta),
       sha256Matches: matches,
+      expectedReviewed: Boolean(fx.meta.expectedReviewed),
     });
   }
   const bySource = new Map<FixtureMeta["source"], FixtureValidation[]>();
   for (const r of results) bySource.set(r.source, [...(bySource.get(r.source) ?? []), r]);
   const summaries: SourceValidationSummary[] = [...bySource.entries()].map(([source, list]) => {
-    const passed = list.every((r) => r.ok);
+    const unreviewed = list.filter((r) => !r.expectedReviewed).map((r) => r.name);
+    // parse 성공만으로는 부족하다: 사람이 기대 요약을 확인한 fixture 여야 검증 증거가 된다
+    const passed = list.every((r) => r.ok) && unreviewed.length === 0;
     const fixtures = listLiveFixtures(root).filter((f) => f.meta.source === source);
     return {
       source,
       fixtures: list.length,
       passed,
+      unreviewed,
       fixtureHash: passed
         ? sha256(
             fixtures

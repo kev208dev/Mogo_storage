@@ -19,6 +19,19 @@ export const scheduleInputSchema = z.object({
   expectedReleaseStart: z.string().datetime({ offset: true }).optional(),
   expectedReleaseEnd: z.string().datetime({ offset: true }).optional(),
   announcementUrl: z.string().url().optional(),
+  /**
+   * 공식 공지에서 확인한 시험별 source 페이지 (예: KICE 시험별 자료 index).
+   * URL 규칙을 추측하지 않기 위해 운영자가 명시적으로 등록한다. host 는 source allowlist 로 다시 검사된다.
+   */
+  sourcePages: z
+    .array(
+      z.object({
+        sourceId: z.string().min(1),
+        url: z.string().url(),
+        pageType: z.enum(["exam_release_index", "exam_detail", "listening_archive"]),
+      }),
+    )
+    .optional(),
 });
 export const scheduleFileSchema = z.object({ schedules: z.array(scheduleInputSchema) });
 export type ScheduleInput = z.infer<typeof scheduleInputSchema>;
@@ -50,6 +63,7 @@ export async function upsertSchedule(db: Database, input: ScheduleInput) {
     expectedReleaseStart: input.expectedReleaseStart ? new Date(input.expectedReleaseStart) : null,
     expectedReleaseEnd: input.expectedReleaseEnd ? new Date(input.expectedReleaseEnd) : null,
     announcementUrl: input.announcementUrl ?? null,
+    sourcePages: input.sourcePages ?? [],
     examId: exam.examId,
   };
   const [row] = await db

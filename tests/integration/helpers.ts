@@ -162,6 +162,8 @@ export function makeContext(db: Database, overrides: Partial<IngestionContext> =
     now: () => now,
     adapterOptions: { allowPrivateNetwork: true },
     workerId: "test-worker",
+    // 로컬 fake source 는 live 검증 대상이 아니므로 테스트 context 에서만 허용 (게이트 자체는 별도 테스트)
+    allowUnverifiedSources: true,
     ...overrides,
   };
   return {
@@ -189,6 +191,7 @@ export function testSource(
     allowedHosts: ["127.0.0.1"],
     deliveryPolicy: "source_redirect",
     enabled: true,
+    liveVerified: false,
     minPollIntervalSeconds: 300,
     requestTimeoutMs: 5000,
     maxConcurrentRequests: 2,

@@ -12,7 +12,7 @@ import type {
   SourceHealth,
 } from "../../types";
 import { parseEbsiListing, type ParsedEbsiExam } from "./parser";
-import { ebsiListingUrl, EBSI_STRUCTURE } from "./structure";
+import { ebsiListingUrl } from "./structure";
 
 export class EbsiExamSource implements ExamSourceAdapter {
   /** 한 번의 실행 안에서 같은 목록 페이지를 두 번 요청하지 않는다 */
@@ -78,13 +78,8 @@ export class EbsiExamSource implements ExamSourceAdapter {
     }
     try {
       const exams = await this.listing(3, this.now().getFullYear());
-      return {
-        status: EBSI_STRUCTURE.verifiedAgainstLivePage ? "healthy" : "degraded",
-        checkedAt,
-        message: EBSI_STRUCTURE.verifiedAgainstLivePage
-          ? `parsed ${exams.length} exams`
-          : `parsed ${exams.length} exams (parser not yet verified against live page)`,
-      };
+      // 실제 구조 검증 여부는 DB(exam_sources.verified_*)가 판단한다. 여기서는 요청·파싱 결과만 보고한다
+      return { status: "healthy", checkedAt, message: `parsed ${exams.length} exams` };
     } catch (error) {
       const e = toIngestionError(error);
       return {

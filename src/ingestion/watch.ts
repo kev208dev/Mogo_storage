@@ -54,7 +54,9 @@ export interface ReleaseWatchResult {
 export async function runReleaseWatch(ctx: IngestionContext): Promise<ReleaseWatchResult> {
   const now = ctx.now();
   const result: ReleaseWatchResult = { schedules: [], jobs: null };
-  const sources = (await loadSources(ctx.db)).filter((s) => s.enabled);
+  const sources = (await loadSources(ctx.db)).filter(
+    (s) => s.enabled && (ctx.allowUnverifiedSources || s.liveVerified),
+  );
   const schedules = await loadWatchableSchedules(ctx.db, now);
 
   for (const schedule of schedules) {
@@ -182,7 +184,9 @@ export async function runScheduledIngestion(ctx: IngestionContext): Promise<Sche
     };
     result.releaseWatch = await runReleaseWatch(ctx);
 
-    for (const source of (await loadSources(ctx.db)).filter((s) => s.enabled)) {
+    for (const source of (await loadSources(ctx.db)).filter(
+      (s) => s.enabled && (ctx.allowUnverifiedSources || s.liveVerified),
+    )) {
       const last = await lastRunAt(ctx, source.id, "scheduled");
       if (!isPollDue(last, SCHEDULED_DISCOVERY_INTERVAL_SECONDS, now)) {
         result.discovery.push({ source: source.id, result: "not_due" });

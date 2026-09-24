@@ -17,7 +17,6 @@ export interface BoardSourceDefinition {
   /** 목록 페이지 URL (1부터) */
   listUrl(baseUrl: string, page: number): string;
   maxPages: number;
-  verifiedAgainstLivePage: boolean;
 }
 
 /** 게시판형 공식 자료실 공통 adapter (KICE, 교육청 등) */
@@ -93,12 +92,8 @@ export class BoardExamSource implements ExamSourceAdapter {
     if (!this.source.enabled) return { status: "disabled", checkedAt, message: "source disabled" };
     try {
       const exams = await this.page(1);
-      const verified = this.definition.verifiedAgainstLivePage;
-      return {
-        status: verified ? "healthy" : "degraded",
-        checkedAt,
-        message: `parsed ${exams.length} exams on page 1${verified ? "" : " (parser not yet verified against live page)"}`,
-      };
+      // 실제 구조 검증 여부는 DB(exam_sources.verified_*)가 판단한다. 여기서는 요청·파싱 결과만 보고한다
+      return { status: "healthy", checkedAt, message: `parsed ${exams.length} exams on page 1` };
     } catch (error) {
       const e = toIngestionError(error);
       return {

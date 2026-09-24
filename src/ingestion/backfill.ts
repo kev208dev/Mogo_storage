@@ -37,9 +37,17 @@ export interface BackfillScopeResult {
  * 이미 있는 시험/자료는 update/skip 되며 중복 생성되지 않는다.
  */
 export async function runBackfill(ctx: IngestionContext, options: BackfillOptions) {
-  const sources = (await loadSources(ctx.db)).filter((s) =>
+  const selected = (await loadSources(ctx.db)).filter((s) =>
     options.sourceIds?.length ? options.sourceIds.includes(s.id) : s.enabled,
   );
+  // 실제 페이지 fixture 로 검증·승인되지 않은 source 는 수집하지 않는다 (--source 로 지정해도 마찬가지)
+  const sources = selected.filter((s) => ctx.allowUnverifiedSources || s.liveVerified);
+  for (const s of selected.filter((x) => !sources.includes(x))) {
+    ctx.logger.warn("ingestion.skipped", {
+      source: s.id,
+      reason: "source not verified against live fixtures",
+    });
+  }
   const grades = options.grades?.length ? options.grades : [...GRADES];
   const results: BackfillScopeResult[] = [];
   for (const source of sources) {

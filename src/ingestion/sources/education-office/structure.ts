@@ -7,7 +7,6 @@ import type { BoardSourceDefinition } from "../board/adapter";
  *    학력평가 자료를 어느 교육청 페이지에서 공개하는지 확인한 뒤 listUrl/selector 를 갱신한다.
  */
 export const EDUCATION_OFFICE_DEFINITION: BoardSourceDefinition = {
-  verifiedAgainstLivePage: false,
   maxPages: 20,
   listUrl(baseUrl, page) {
     const url = new URL("/web/services/bbs/bbsList.action", baseUrl);

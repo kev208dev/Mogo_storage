@@ -23,6 +23,11 @@ export interface IngestionContext {
   adapterOptions?: AdapterFactoryOptions;
   /** 작업자 식별자 (job lock 기록용) */
   workerId: string;
+  /**
+   * 테스트 전용: 실제 fixture 검증 전의 source 로도 수집을 허용한다.
+   * 코드에서만 설정할 수 있고 환경변수·CLI 로는 켤 수 없다 (운영 우회 방지).
+   */
+  allowUnverifiedSources?: boolean;
 }
 
 /** HTTP 로 Next 앱의 revalidate endpoint 를 호출 (CLI/외부 scheduler 에서 실행할 때) */

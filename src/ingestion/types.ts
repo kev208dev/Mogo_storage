@@ -19,6 +19,8 @@ export interface SourceConfig {
   allowedHosts: string[];
   deliveryPolicy: ArtifactDeliveryPolicy;
   enabled: boolean;
+  /** 실제 페이지 fixture 로 검증·승인됐고 parser 버전이 그대로인지 (DB 상태에서 계산) */
+  liveVerified: boolean;
   minPollIntervalSeconds: number;
   requestTimeoutMs: number;
   maxConcurrentRequests: number;

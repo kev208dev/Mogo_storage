@@ -37,6 +37,8 @@ export const SAMPLE_STATISTICS_SOURCE = "샘플 통계 (개발용)";
 
 /** 대표 샘플 시험: 모든 부가기능 데이터가 들어있다. */
 export const FEATURED_EXAM = { year: 2025, grade: 2 as Grade, month: 9 };
+/** 고3 선택과목(사회·문화, 제2외국어/한문) 화면 확인용 샘플 시험 */
+export const ELECTIVE_SAMPLE_EXAM = { year: 2025, grade: 3 as Grade, month: 7 };
 
 // ── deterministic PRNG ──────────────────────────────────────
 function hashString(value: string): number {
@@ -209,6 +211,23 @@ function buildFiles(featured: Exam): ExamFile[] {
   files.push(makeFile(featured, "english", "listening_script", 420_000));
   files.push(makeFile(featured, "english", "vocabulary_pdf", 310_000));
   return files;
+}
+
+/** 고3 선택과목 샘플: 사회·문화, 일본어 I 은 자료 있음 / 한문 I 은 "자료 준비 중" 확인용 */
+function buildElectiveFiles(exam: Exam): ExamFile[] {
+  return [
+    makeFile(exam, "social", "question", 1_400_000, "social-culture"),
+    makeFile(exam, "social", "solution", 600_000, "social-culture"),
+    makeFile(exam, "second_language", "question", 1_100_000, "japanese-1"),
+    makeFile(exam, "second_language", "solution", 400_000, "japanese-1"),
+  ];
+}
+
+function buildElectiveCourses(exam: Exam): SampleExamCourse[] {
+  return ["social-culture", "japanese-1", "classical-chinese-1"].map((courseId) => ({
+    examId: exam.id,
+    courseId,
+  }));
 }
 
 // ── questions / statistics ──────────────────────────────────
@@ -650,11 +669,22 @@ function buildSampleDataset(): SampleDataset {
       e.month === FEATURED_EXAM.month,
   );
   if (!featured) throw new Error("Featured sample exam is missing");
-  const files = buildFiles(featured);
+  const elective = exams.find(
+    (e) =>
+      e.year === ELECTIVE_SAMPLE_EXAM.year &&
+      e.grade === ELECTIVE_SAMPLE_EXAM.grade &&
+      e.month === ELECTIVE_SAMPLE_EXAM.month,
+  );
+  if (!elective) throw new Error("Elective sample exam is missing");
+  const files = [...buildFiles(featured), ...buildElectiveFiles(elective)];
   const questions = buildQuestions(featured);
   return {
     exams,
-    examSubjects: buildExamSubjects(exams),
+    examSubjects: [
+      ...buildExamSubjects(exams),
+      // 제2외국어/한문 영역은 이 시험에만 (다른 시험 탭에는 나타나지 않는다)
+      { examId: elective.id, subject: "second_language", ...SUBJECT_SHAPE.second_language },
+    ],
     files,
     questions,
     statistics: buildStatistics(questions),
@@ -662,7 +692,7 @@ function buildSampleDataset(): SampleDataset {
     vocabulary: buildVocabulary(featured, questions),
     listeningTracks: buildListeningTracks(featured, files),
     schedules,
-    examCourses: buildExamCourses(featured),
+    examCourses: [...buildExamCourses(featured), ...buildElectiveCourses(elective)],
   };
 }
 

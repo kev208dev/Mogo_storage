@@ -36,12 +36,15 @@ export function FileDownloadCard({
   examId,
   subject,
   title,
+  processing = false,
 }: {
   type: FileType;
   file: ExamFile | undefined;
   examId: string;
   subject: Subject;
   title: string;
+  /** 공식 자료를 발견해 확인 중 (곧 게시) */
+  processing?: boolean;
 }) {
   const isAudio = type === "listening_audio";
   const Icon = isAudio ? MusicIcon : FileTextIcon;
@@ -62,7 +65,13 @@ export function FileDownloadCard({
             {isAudio ? "" : " PDF"}
           </p>
           <p className="text-muted-foreground text-[13px]">
-            {file ? formatLabel(file) : <Badge variant="neutral">자료 준비 중</Badge>}
+            {file ? (
+              formatLabel(file)
+            ) : processing ? (
+              <Badge variant="neutral">공식 자료 확인 중 · 곧 게시</Badge>
+            ) : (
+              <Badge variant="neutral">자료 준비 중</Badge>
+            )}
           </p>
         </div>
         <div className="ml-auto shrink-0">

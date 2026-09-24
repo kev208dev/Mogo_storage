@@ -211,4 +211,9 @@ export interface ExamSubjectDetail {
   listeningTracks: ListeningTrack[];
   /** 확정된 시험 일정 (시험 전 페이지 표시용) */
   schedule: ExamSchedule | null;
+  /**
+   * 공식 자료가 발견되어 검증 중인 자료 종류 (아직 게시 전). 화면에 "확인 중"으로 표시한다.
+   * 자동 수집 DB 가 없으면 빈 배열.
+   */
+  processingTypes: FileType[];
 }

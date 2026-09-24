@@ -85,6 +85,17 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
                     실제 구조 미검증
                   </span>
                 )}
+                {!verified &&
+                ["structure_changed", "network_error", "broken", "degraded"].includes(
+                  s.healthStatus,
+                ) ? (
+                  <HealthBadge status={s.healthStatus} />
+                ) : null}
+                {s.healthStatus === "structure_changed" || s.healthStatus === "broken" ? (
+                  <span className="text-danger-strong text-xs font-bold">
+                    자동 게시 중단 — 페이지 구조를 확인하세요
+                  </span>
+                ) : null}
                 {s.lastHealthCheckAt ? (
                   <span className="text-muted-foreground text-xs">
                     health check <HealthBadge status={s.healthStatus} />{" "}

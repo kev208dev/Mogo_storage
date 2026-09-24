@@ -10,8 +10,8 @@ test("Flow C: admin → 과목 미확정 자료 → 수동 과목 지정 → 게
   await expect(page).toHaveURL(/\/admin$/);
 
   // 실제 구조 미검증 source 는 "정상" 으로 보이지 않는다
-  await expect(page.getByText("실제 구조 미검증")).toBeVisible();
-  await expect(page.getByText("fixture 검증 필요")).toBeVisible();
+  await expect(page.getByText("실제 구조 미검증").first()).toBeVisible();
+  await expect(page.getByText("fixture 검증 필요").first()).toBeVisible();
 
   await page.getByRole("link", { name: "검토 대기" }).click();
   const item = page.getByTestId("unresolved-artifact").filter({ hasText: '표기 "윤리 문제"' });

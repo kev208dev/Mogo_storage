@@ -5,6 +5,7 @@
 import { sql } from "drizzle-orm";
 import { runBackfill } from "@/ingestion/backfill";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
+import { KICE_DEFINITION } from "@/ingestion/sources/kice/structure";
 import { createDb } from "@/db/client";
 import {
   ebsiListingHtml,
@@ -41,6 +42,8 @@ export default async function globalSetup() {
                   title: "2023학년도 9월 고3 모의평가",
                   subjects: [
                     { name: "사회탐구", links: [{ label: "윤리 문제", path: "/f/ethics.pdf" }] },
+                    // Flow I: 확정 가능한 자료는 자동으로 검증·게시된다
+                    { name: "국어", links: [{ label: "문제", path: "/f/kor.pdf" }] },
                   ],
                 },
               ]
@@ -48,13 +51,24 @@ export default async function globalSetup() {
         ),
       });
     }
-    fake.set("/f/ethics.pdf", {
-      contentType: "application/pdf",
-      body: await makePdf(["E2E FIXTURE — NOT A REAL EXAM", "x".repeat(60)]),
+    const pdf = await makePdf(["E2E FIXTURE — NOT A REAL EXAM", "x".repeat(60)]);
+    fake.set("/f/ethics.pdf", { contentType: "application/pdf", body: pdf });
+    fake.set("/f/kor.pdf", { contentType: "application/pdf", body: pdf });
+    // Flow J: 다른 source(평가원 게시판)의 목록 구조가 바뀐 상황
+    const kiceList = new URL(KICE_DEFINITION.listUrl(fake.baseUrl, 1));
+    fake.set(kiceList.pathname + kiceList.search, {
+      contentType: "text/html",
+      body: "<html><body><div class='renewal'>새 디자인</div></body></html>",
     });
-    await installSources(db, [testSource("ebsi", "ebsi", fake.baseUrl)]);
-    const { ctx } = makeContext(db);
-    await runBackfill(ctx, { fromYear: 2022, toYear: 2022, grades: [3] });
+    await installSources(db, [
+      testSource("ebsi", "ebsi", fake.baseUrl),
+      testSource("kice", "kice", fake.baseUrl),
+    ]);
+    const { ctx, setNow } = makeContext(db);
+    // canary 게이트: 2022년 자료를 "최근 1년" 범위로 수집하도록 시계를 맞춘다
+    setNow(new Date("2022-12-01T12:00:00+09:00"));
+    await runBackfill(ctx, { fromYear: 2022, toYear: 2022, grades: [3], sourceIds: ["ebsi"] });
+    await runBackfill(ctx, { fromYear: 2022, toYear: 2022, grades: [3], sourceIds: ["kice"] });
   } finally {
     await fake.close();
     await db.$client.end({ timeout: 5 });

@@ -15,6 +15,7 @@ import { CourseSelector } from "./CourseSelector";
 import { DifficultQuestions } from "./DifficultQuestions";
 import { ExamFiles } from "./ExamFiles";
 import { ExamHeader } from "./ExamHeader";
+import { ExamRelatedLinks } from "./ExamRelatedLinks";
 import { ExamSchedulePanel } from "./ExamSchedulePanel";
 import { fileViewHref } from "./FileDownloadCard";
 import { GradeCutTable } from "./GradeCutTable";
@@ -44,6 +45,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     vocabulary,
     listeningTracks,
     schedule,
+    processingTypes,
   } = detail;
   const subjectKey = subject.subject;
   const areaLabel = SUBJECT_AREA_LABELS[subjectKey] ?? SUBJECT_LABELS[subjectKey];
@@ -83,7 +85,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
   ].filter((x): x is { href: string; label: string } => Boolean(x));
 
   return (
-    <article className="pb-6">
+    <article className="pb-6" data-exam-id={exam.id}>
       <ExamHeader
         exam={exam}
         subject={subjectKey}
@@ -114,6 +116,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
           examId={exam.id}
           subject={subjectKey}
           title={`${examTitle(exam)} ${subjectLabel}`}
+          processingTypes={processingTypes}
         />
       ) : (
         <p className="border-border text-muted-foreground mt-4 rounded-md border px-3 py-3 text-sm">
@@ -210,6 +213,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
           </>
         ) : null}
       </div>
+      <ExamRelatedLinks exam={exam} />
     </article>
   );
 }

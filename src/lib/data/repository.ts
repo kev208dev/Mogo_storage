@@ -22,6 +22,8 @@ export interface ExamRepository {
   getExam(key: ExamKey): Promise<Exam | null>;
   getExamById(id: string): Promise<Exam | null>;
   getExamSubjects(examId: string): Promise<ExamSubject[]>;
+  /** 모든 시험의 영역 (sitemap/정적 생성용, 시험마다 조회하지 않도록 한 번에) */
+  listAllExamSubjects(): Promise<ExamSubject[]>;
   /** courseCode 가 있으면 세부과목 페이지 데이터, 없으면 영역 페이지 데이터 */
   getSubjectDetail(
     key: ExamKey,

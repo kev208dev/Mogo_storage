@@ -11,11 +11,14 @@ export function ExamFiles({
   examId,
   subject,
   title,
+  processingTypes = [],
 }: {
   files: ExamFile[];
   examId: string;
   subject: Subject;
   title: string;
+  /** 공식 자료가 발견되어 검증 중인 종류 */
+  processingTypes?: FileType[];
 }) {
   const types = subject === "english" ? [...PRIMARY_TYPES, ...ENGLISH_TYPES] : PRIMARY_TYPES;
   return (
@@ -32,6 +35,7 @@ export function ExamFiles({
             examId={examId}
             subject={subject}
             title={title}
+            processing={processingTypes.includes(type)}
           />
         ))}
       </ul>

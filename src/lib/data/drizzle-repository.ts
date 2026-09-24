@@ -92,6 +92,17 @@ export class DrizzleExamRepository implements ExamRepository {
     return row ? toExam(row) : null;
   }
 
+  async listAllExamSubjects(): Promise<ExamSubject[]> {
+    return this.db
+      .select({
+        examId: s.examSubjects.examId,
+        subject: s.examSubjects.subject,
+        questionCount: s.examSubjects.questionCount,
+        totalScore: s.examSubjects.totalScore,
+      })
+      .from(s.examSubjects);
+  }
+
   async getExamSubjects(examId: string): Promise<ExamSubject[]> {
     return this.db
       .select({
@@ -243,6 +254,22 @@ export class DrizzleExamRepository implements ExamRepository {
     for (const c of courses)
       courseFileCounts[c.code] = counts.find((x) => x.courseId === c.id)?.n ?? 0;
 
+    // 발견됐지만 아직 게시 전인 공식 자료 (검증 중) → "확인 중" 표시
+    const pending = await this.db
+      .selectDistinct({ type: s.sourceArtifacts.type })
+      .from(s.sourceArtifacts)
+      .where(
+        and(
+          eq(s.sourceArtifacts.examId, exam.id),
+          eq(s.sourceArtifacts.subject, subject),
+          courseId ? eq(s.sourceArtifacts.courseId, courseId) : isNull(s.sourceArtifacts.courseId),
+          inArray(s.sourceArtifacts.status, ["discovered", "verifying", "changed"]),
+        ),
+      );
+    const processingTypes = pending
+      .map((p) => p.type)
+      .filter((t) => !files.some((f) => f.type === t));
+
     return {
       exam,
       subjects,
@@ -256,6 +283,7 @@ export class DrizzleExamRepository implements ExamRepository {
       vocabulary,
       listeningTracks,
       schedule,
+      processingTypes,
     };
   }
 

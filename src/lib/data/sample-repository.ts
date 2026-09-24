@@ -45,6 +45,10 @@ export class SampleExamRepository implements ExamRepository {
     return this.data.exams.find((e) => e.id === id) ?? null;
   }
 
+  async listAllExamSubjects() {
+    return this.data.examSubjects;
+  }
+
   async getExamSubjects(examId: string) {
     return this.data.examSubjects.filter((s) => s.examId === examId);
   }
@@ -94,6 +98,7 @@ export class SampleExamRepository implements ExamRepository {
       courses,
       course,
       courseFileCounts,
+      processingTypes: [],
       files: inSlot(this.data.files),
       questions,
       gradeCuts: inSlot(this.data.gradeCuts),

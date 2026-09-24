@@ -9,7 +9,14 @@ export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const repo = getRepository();
-  const [exams, years] = await Promise.all([repo.listExams(), repo.listYears()]);
+  const [exams, years, allSubjects] = await Promise.all([
+    repo.listExams(),
+    repo.listYears(),
+    repo.listAllExamSubjects(),
+  ]);
+  const subjectsOf = new Map<string, Set<string>>();
+  for (const es of allSubjects)
+    subjectsOf.set(es.examId, (subjectsOf.get(es.examId) ?? new Set()).add(es.subject));
 
   const entries: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/"), changeFrequency: "daily", priority: 1 },
@@ -27,11 +34,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // noindex 대상(샘플) 시험은 sitemap 에서도 제외한다.
   for (const exam of exams.filter((e) => !shouldNoindexExam(e))) {
-    const subjects = await repo.getExamSubjects(exam.id);
+    const subjects = subjectsOf.get(exam.id) ?? new Set<string>();
     const lastModified = new Date(exam.updatedAt);
     entries.push({ url: absoluteUrl(examPath(exam)), lastModified, priority: 0.9 });
     for (const subject of SUBJECTS) {
-      if (subject === DEFAULT_SUBJECT || !subjects.some((s) => s.subject === subject)) continue;
+      if (subject === DEFAULT_SUBJECT || !subjects.has(subject)) continue;
       entries.push({ url: absoluteUrl(examPath(exam, subject)), lastModified, priority: 0.8 });
     }
   }

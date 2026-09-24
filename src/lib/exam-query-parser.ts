@@ -1,4 +1,7 @@
-import type { Grade } from "./constants";
+import { resolveCourse } from "../ingestion/canonical/course";
+import { normalizeSubject } from "../ingestion/canonical/subject";
+import type { Grade, Subject } from "./constants";
+import { courseByCode } from "./courses";
 import { MAX_YEAR, MIN_YEAR } from "./exam-path";
 
 export interface ParsedExamQuery {
@@ -7,9 +10,35 @@ export interface ParsedExamQuery {
   month: number | null;
 }
 
+/** 검색어에 과목/세부과목이 있으면 (예: "사회문화", "영어") 해당 페이지로 보낸다 */
+export interface QueryTarget {
+  subject: Subject | null;
+  courseCode: string | null;
+}
+
 export type ExamQueryParseResult =
-  | { ok: true; year: number; grade: Grade; month: number }
-  | { ok: false; partial: ParsedExamQuery; missing: Array<keyof ParsedExamQuery> };
+  | ({ ok: true; year: number; grade: Grade; month: number } & QueryTarget)
+  | ({ ok: false; partial: ParsedExamQuery; missing: Array<keyof ParsedExamQuery> } & QueryTarget);
+
+/**
+ * 시험 표기를 뺀 나머지 글자에서 과목/세부과목. 확실한 경우만 (모호하면 null → 시험 페이지로).
+ */
+export function detectTarget(rest: string): QueryTarget {
+  // 검색어는 소문자로 정규화돼 있다: "일본어ⅰ"/"물리학 ii" 같은 로마 숫자를 되돌리고, 과목명에 붙지 않은 숫자만 지운다
+  const text = rest
+    .replace(/(?<=[가-힣])\s*ii(?![a-z])/g, "2")
+    .replace(/(?<=[가-힣])\s*i(?![a-z])/g, "1")
+    .replace(/(?<![가-힣])\d+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!text) return { subject: null, courseCode: null };
+  const course = resolveCourse(text);
+  if (course.status === "resolved" && course.confidence >= 0.9) {
+    const def = courseByCode(course.code);
+    if (def) return { subject: def.subject, courseCode: def.code };
+  }
+  return { subject: normalizeSubject(text), courseCode: null };
+}
 
 /**
  * 자유 입력 검색어를 year / grade / month 로 해석한다.
@@ -73,14 +102,15 @@ export function parseExamQuery(input: string, now: Date = new Date()): ExamQuery
     year = null;
   }
 
+  const target = detectTarget(text);
   const partial: ParsedExamQuery = { year, grade, month };
   if (year !== null && grade !== null && month !== null) {
-    return { ok: true, year, grade, month };
+    return { ok: true, year, grade, month, ...target };
   }
   const missing = (Object.keys(partial) as Array<keyof ParsedExamQuery>).filter(
     (key) => partial[key] === null,
   );
-  return { ok: false, partial, missing };
+  return { ok: false, partial, missing, ...target };
 }
 
 function normalize(input: string): string {

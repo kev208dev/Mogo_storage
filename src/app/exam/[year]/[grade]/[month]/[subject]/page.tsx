@@ -18,11 +18,11 @@ export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const repo = getRepository();
-  const exams = await repo.listExams();
+  const [exams, allSubjects] = await Promise.all([repo.listExams(), repo.listAllExamSubjects()]);
   const params = [];
   // 시험에 실제로 있는 영역만 (직업탐구·제2외국어는 해당 시험에만)
   for (const e of exams) {
-    for (const { subject } of await repo.getExamSubjects(e.id)) {
+    for (const { subject } of allSubjects.filter((x) => x.examId === e.id)) {
       if (subject === DEFAULT_SUBJECT) continue;
       params.push({
         year: String(e.year),

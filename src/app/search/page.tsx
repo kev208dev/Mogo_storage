@@ -3,15 +3,19 @@ import { redirect } from "next/navigation";
 import { ExamList } from "@/components/exam/ExamList";
 import { ExamSearch } from "@/components/search/ExamSearch";
 import { GRADES, type Grade } from "@/lib/constants";
-import { getRepository } from "@/lib/data";
-import { examPath, examTitle } from "@/lib/exam-path";
-import { parseExamQuery, type ParsedExamQuery } from "@/lib/exam-query-parser";
+import { getRepository, getSubjectDetail } from "@/lib/data";
+import { examCoursePath, examPath, examTitle } from "@/lib/exam-path";
+import { parseExamQuery, type ParsedExamQuery, type QueryTarget } from "@/lib/exam-query-parser";
 
 export const metadata: Metadata = {
   title: "모의고사 검색",
   robots: { index: false, follow: true },
   alternates: { canonical: "/search" },
 };
+
+function todayKst(): string {
+  return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
 
 function first(value: string | string[] | undefined): string | undefined {
   return Array.isArray(value) ? value[0] : value;
@@ -27,9 +31,11 @@ export default async function SearchPage({ searchParams }: PageProps<"/search">)
   const q = first(params.q)?.slice(0, 100) ?? "";
 
   let parsed: ParsedExamQuery;
+  let target: QueryTarget = { subject: null, courseCode: null };
   if (q) {
     const result = parseExamQuery(q);
     parsed = result.ok ? result : result.partial;
+    target = { subject: result.subject, courseCode: result.courseCode };
   } else {
     const grade = toInt(first(params.grade));
     parsed = {
@@ -43,9 +49,35 @@ export default async function SearchPage({ searchParams }: PageProps<"/search">)
   const repo = getRepository();
   const { year, grade, month } = parsed;
 
-  if (year !== null && grade !== null && month !== null) {
-    const exam = await repo.getExam({ year, grade, month });
-    if (exam) redirect(examPath(exam));
+  // 년도 없이 "고3 6평" 처럼 학년·월만 → 가장 최근 시험
+  let found =
+    year !== null && grade !== null && month !== null
+      ? await repo.getExam({ year, grade, month })
+      : null;
+  if (!found && year === null && grade !== null && month !== null) {
+    const recent = (await repo.listExams({ grade }))
+      .filter((e) => e.month === month && (!e.examDate || e.examDate <= todayKst()))
+      .sort((a, b) => b.year - a.year);
+    found = recent[0] ?? null;
+  }
+  if (found) {
+    // 과목/세부과목까지 적었으면 그 페이지로 (시험에 실제로 있는 경우만)
+    if (target.courseCode && target.subject) {
+      const detail = await getSubjectDetail(
+        found.year,
+        found.grade,
+        found.month,
+        target.subject,
+        target.courseCode,
+      );
+      if (detail?.course) redirect(examCoursePath(found, target.subject, target.courseCode));
+    }
+    if (target.subject) {
+      const subjects = await repo.getExamSubjects(found.id);
+      if (subjects.some((sub) => sub.subject === target.subject))
+        redirect(examPath(found, target.subject));
+    }
+    redirect(examPath(found));
   }
 
   // 정확한 시험이 없으면: 해석된 조건으로 후보 목록을 보여준다.

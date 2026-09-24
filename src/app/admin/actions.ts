@@ -170,6 +170,7 @@ export async function mapCourseAction(form: FormData) {
       courseCode,
       admin,
       aliasScope: scope,
+      regimeOnly: form.get("regimeOnly") === "1",
     });
     audit(admin, "artifact.map_course", `${id(form)} -> ${courseCode}`);
     await runJobs(ctx, { timeBudgetMs: 30_000 });

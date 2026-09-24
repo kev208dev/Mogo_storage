@@ -38,7 +38,13 @@ export default async function ReviewPage({ searchParams }: PageProps<"/admin/rev
             const suggested = resolveCourse(artifact.courseLabel ?? "", {
               subject: artifact.subject,
             });
-            const suggestedCodes = suggested.status === "ambiguous" ? suggested.candidates : [];
+            // 모호한 표기의 후보, 또는 체제 검증으로 보류된 카탈로그 판정
+            const suggestedCodes =
+              suggested.status === "ambiguous"
+                ? suggested.candidates
+                : suggested.status === "resolved"
+                  ? [suggested.code]
+                  : [];
             const options = [
               ...catalog.filter((c) => suggestedCodes.includes(c.code)),
               ...catalog.filter(
@@ -50,6 +56,10 @@ export default async function ReviewPage({ searchParams }: PageProps<"/admin/rev
                 <p className="font-semibold">
                   {exam.year} 고{exam.grade} {exam.month}월 {SUBJECT_LABELS[artifact.subject]}{" "}
                   {FILE_TYPE_LABELS[artifact.type]} · 표기 &quot;{artifact.courseLabel}&quot;
+                </p>
+                <p className="text-muted-foreground text-xs" data-testid="source-label">
+                  source 원문: &quot;{artifact.sourceLabel ?? artifact.courseLabel}&quot;
+                  {artifact.statusReason ? ` · ${artifact.statusReason}` : ""}
                 </p>
                 <p className="text-muted-foreground text-xs">
                   {source.name} · {artifact.status} ·{" "}
@@ -89,6 +99,9 @@ export default async function ReviewPage({ searchParams }: PageProps<"/admin/rev
                   </select>
                   <label className="flex items-center gap-1 text-xs">
                     <input type="checkbox" name="scope" value="global" /> 모든 source 에 적용
+                  </label>
+                  <label className="flex items-center gap-1 text-xs">
+                    <input type="checkbox" name="regimeOnly" value="1" /> 이 시험 체제에만 적용
                   </label>
                   <SmallButton variant="primary">과목 지정</SmallButton>
                 </form>

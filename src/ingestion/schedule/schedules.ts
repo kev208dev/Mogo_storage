@@ -2,7 +2,7 @@ import { and, eq, inArray, lte } from "drizzle-orm";
 import { z } from "zod";
 import type { Database } from "../../db/client";
 import { examSchedules, exams } from "../../db/schema";
-import { EXAM_TYPES, SUBJECTS } from "../../lib/constants";
+import { CORE_SUBJECTS, EXAM_TYPES } from "../../lib/constants";
 import { ensureExamSubjects, organizerFor, upsertCanonicalExam } from "../pipeline/exams";
 
 /**
@@ -39,7 +39,7 @@ export async function upsertSchedule(db: Database, input: ScheduleInput) {
     academicYear: input.examType === "school_mock" ? null : input.year + 1,
   };
   const exam = await upsertCanonicalExam(db, canonical, { examDate: input.examDate });
-  await ensureExamSubjects(db, exam.examId, SUBJECTS);
+  await ensureExamSubjects(db, exam.examId, [...CORE_SUBJECTS]);
   const values = {
     year: input.year,
     grade: input.grade,

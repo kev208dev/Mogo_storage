@@ -1,12 +1,19 @@
 import type { FileType, Subject } from "../../lib/constants";
-import { courseByCode } from "../../lib/courses";
+import { COURSE_BASED_SUBJECTS, courseByCode } from "../../lib/courses";
 import type { DiscoveredArtifact } from "../types";
 import { normalizeArtifactType } from "./artifact-type";
 import { resolveCourse, type CourseResolution } from "./course";
 import { normalizeSubject } from "./subject";
 
 /** 선택과목이 존재할 수 있는 영역 (국어/수학 선택, 탐구) */
-const SUBJECTS_WITH_COURSES: Subject[] = ["korean", "math", "social", "science"];
+const SUBJECTS_WITH_COURSES: Subject[] = [
+  "korean",
+  "math",
+  "social",
+  "science",
+  "vocational",
+  "second_language",
+];
 
 export interface ClassifyInput {
   /** 영역/과목 블록 표기 (예: "사회탐구", "국어") — 없으면 null */
@@ -73,7 +80,9 @@ export function classifyArtifact(input: ClassifyInput): ClassifyResult {
       courseLabel: course.status === "none" ? null : linkLabel,
       containerType: archive ? "archive" : "file",
       containsMultipleCourses:
-        archive && course.status !== "resolved" && (subject === "social" || subject === "science"),
+        archive && course.status !== "resolved" && COURSE_BASED_SUBJECTS.includes(subject),
+      sourceSubjectLabel: subjectLabel?.trim() || null,
+      sourceLabel: combined,
     },
   };
 }

@@ -5,6 +5,7 @@
  * ⚠️ 실제 시험 데이터가 아니다. 모든 레코드는 is_sample=true 로 들어간다.
  */
 import { sampleDataset } from "../lib/data/sample-data";
+import { syncCourseCatalog } from "../ingestion/pipeline/course-aliases";
 import { getDb } from "./client";
 import * as s from "./schema";
 
@@ -20,6 +21,8 @@ async function main() {
       rows.slice(i * size, i * size + size),
     );
 
+  // 직업탐구·제2외국어 course 는 migration 이 아니라 카탈로그 동기화로 들어간다 (enum 추가 제약)
+  await syncCourseCatalog(db);
   await db.transaction(async (tx) => {
     for (const rows of chunk(d.exams)) {
       await tx

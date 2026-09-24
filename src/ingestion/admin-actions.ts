@@ -11,6 +11,7 @@ import {
   vocabularyCandidates,
 } from "../db/schema";
 import type { ReportStatus } from "../lib/constants";
+import { regimeFor } from "../lib/regimes";
 import type { IngestionContext } from "./context";
 import { IngestionError } from "./errors";
 import { enqueuePublish } from "./jobs/handlers";
@@ -162,6 +163,8 @@ export async function mapArtifactCourse(
     courseCode: string;
     admin: string;
     aliasScope?: "source" | "global";
+    /** true 면 이 시험의 체제(예: legacy)에서만 alias 를 적용 — 과거 표기를 현재 체제에 퍼뜨리지 않는다 */
+    regimeOnly?: boolean;
   },
 ) {
   const [a] = await ctx.db
@@ -197,15 +200,19 @@ export async function mapArtifactCourse(
   }
 
   if (a.courseLabel) {
+    const [exam] = input.regimeOnly
+      ? await ctx.db.select().from(exams).where(eq(exams.id, a.examId))
+      : [];
     await saveCourseAlias(ctx.db, {
       label: a.courseLabel,
       courseCode: course.code,
       sourceId: input.aliasScope === "global" ? null : a.sourceId,
+      regimeCode: exam ? regimeFor(exam).code : null,
       createdBy: input.admin,
     });
   }
   const previousSlot = { examId: a.examId, subject: a.subject, courseId: a.courseId, type: a.type };
-  const verified = Boolean(a.sha256 && a.verifiedAt);
+  const verified = Boolean(a.verifiedAt);
   const nextStatus = !verified
     ? "discovered"
     : a.deliveryPolicy === "manual_review"

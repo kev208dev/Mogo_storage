@@ -16,6 +16,12 @@ export function computeParserHash(files: string[]): string {
   return h.digest("hex").slice(0, 16);
 }
 
+/** "ebsi-v2" → "ebsi-v3" (없으면 v1) */
+export function nextParserVersion(source: string, previous: string | null | undefined): string {
+  const n = previous ? Number(/-v(\d+)$/.exec(previous)?.[1] ?? 0) + 1 : 1;
+  return `${source}-v${n}`;
+}
+
 if (process.argv[1]?.endsWith("parser-version.ts")) {
   let current: Record<string, { version: string; hash: string }> = {};
   try {
@@ -31,8 +37,7 @@ if (process.argv[1]?.endsWith("parser-version.ts")) {
       next[source] = prev;
       continue;
     }
-    const n = prev ? Number(/-(\d+)$/.exec(prev.version)?.[1] ?? 0) + 1 : 1;
-    next[source] = { version: `${source}-v${n}`, hash };
+    next[source] = { version: nextParserVersion(source, prev?.version), hash };
     console.log(`${source}: ${prev?.version ?? "(new)"} → ${next[source]!.version}`);
   }
   writeFileSync(FILE, `${JSON.stringify(next, null, 2)}\n`);

@@ -1,3 +1,4 @@
+import { currentParserVersion } from "@/ingestion/sources/verification";
 import { mkdtempSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -158,7 +159,11 @@ describe("live fixture validation (tests/fixtures/live layout)", () => {
   it("passes and produces a fixture set hash + parser version for approval", () => {
     const { results, summaries } = validateLiveFixtures(makeLiveDir());
     expect(results[0]!.ok).toBe(true);
-    expect(summaries[0]).toMatchObject({ source: "ebsi", passed: true, parserVersion: "ebsi-v1" });
+    expect(summaries[0]).toMatchObject({
+      source: "ebsi",
+      passed: true,
+      parserVersion: currentParserVersion("ebsi"),
+    });
     expect(summaries[0]!.fixtureHash).toMatch(/^[0-9a-f]{32}$/);
   });
 

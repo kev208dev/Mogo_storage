@@ -10,8 +10,33 @@ export type Grade = (typeof GRADES)[number];
 
 export const MONTHS = [3, 4, 5, 6, 7, 9, 10, 11] as const;
 
-export const SUBJECTS = ["korean", "math", "english", "history", "social", "science"] as const;
+/**
+ * 시험 영역. 배열 순서가 곧 화면 표시 순서다 (주요 과목 순서는 바꾸지 않는다).
+ *  - history 는 "한국사" 영역이다 (세계사·동아시아사는 social 의 세부과목)
+ *  - vocational(직업탐구), second_language(제2외국어/한문)는 고3 시험 일부에만 존재한다.
+ *    시험에 실제 자료/과목이 있을 때만 탭에 나타난다 (exam_subjects 기준).
+ */
+export const SUBJECTS = [
+  "korean",
+  "math",
+  "english",
+  "history",
+  "social",
+  "science",
+  "vocational",
+  "second_language",
+] as const;
 export type Subject = (typeof SUBJECTS)[number];
+
+/** 모든 시험에 기본으로 존재하는 영역 (일정 등록 시 exam_subjects 로 미리 만든다) */
+export const CORE_SUBJECTS: readonly Subject[] = [
+  "korean",
+  "math",
+  "english",
+  "history",
+  "social",
+  "science",
+];
 
 export const SUBJECT_LABELS: Record<Subject, string> = {
   korean: "국어",
@@ -20,6 +45,20 @@ export const SUBJECT_LABELS: Record<Subject, string> = {
   history: "한국사",
   social: "사회",
   science: "과학",
+  vocational: "직업탐구",
+  second_language: "제2외국어/한문",
+};
+
+/** URL segment. 대부분 enum 값과 같고, 밑줄이 있는 값만 하이픈으로 바꾼다 */
+export const SUBJECT_SEGMENTS: Record<Subject, string> = {
+  korean: "korean",
+  math: "math",
+  english: "english",
+  history: "history",
+  social: "social",
+  science: "science",
+  vocational: "vocational",
+  second_language: "second-language",
 };
 
 /** 시험 상세 기본 URL(/exam/2025/high2/09)에서 보여줄 과목 */

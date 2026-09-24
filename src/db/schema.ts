@@ -128,6 +128,14 @@ export const courses = pgTable(
     subject: subjectEnum("subject").notNull(),
     displayOrder: smallint("display_order").notNull().default(0),
     active: boolean("active").notNull().default(true),
+    /**
+     * 이 세부과목이 존재할 수 있는 시험 체제와 학년 (src/lib/courses.ts 에서 동기화, 검증 참고용).
+     * 예) [{"regime":"csat_2022","grades":[2,3]}]
+     */
+    regimes: jsonb("regimes")
+      .$type<Array<{ regime: string; grades?: number[] }>>()
+      .notNull()
+      .default([]),
     ...timestamps,
   },
   (t) => [uniqueIndex("courses_code_uq").on(t.code), index("courses_subject_idx").on(t.subject)],
@@ -146,17 +154,25 @@ export const courseAliases = pgTable(
       .notNull()
       .references(() => courses.id, { onDelete: "cascade" }),
     sourceId: text("source_id").references(() => examSources.id, { onDelete: "cascade" }),
+    /** 시험 체제 한정 alias (예: 과거 표기 "물리Ⅰ" 은 legacy 체제에만). null = 모든 체제 */
+    regimeCode: text("regime_code"),
     createdBy: text("created_by").notNull().default("system"),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [
-    // PostgreSQL 에서 NULL 은 서로 다르게 취급되므로 source 유무에 따라 partial unique index 를 나눈다
+    // PostgreSQL 에서 NULL 은 서로 다르게 취급되므로 source/체제 유무에 따라 partial unique index 를 나눈다
     uniqueIndex("course_aliases_global_uq")
       .on(t.alias)
-      .where(sql`${t.sourceId} is null`),
+      .where(sql`${t.sourceId} is null and ${t.regimeCode} is null`),
     uniqueIndex("course_aliases_source_uq")
       .on(t.alias, t.sourceId)
-      .where(sql`${t.sourceId} is not null`),
+      .where(sql`${t.sourceId} is not null and ${t.regimeCode} is null`),
+    uniqueIndex("course_aliases_global_regime_uq")
+      .on(t.alias, t.regimeCode)
+      .where(sql`${t.sourceId} is null and ${t.regimeCode} is not null`),
+    uniqueIndex("course_aliases_source_regime_uq")
+      .on(t.alias, t.sourceId, t.regimeCode)
+      .where(sql`${t.sourceId} is not null and ${t.regimeCode} is not null`),
   ],
 );
 
@@ -488,6 +504,10 @@ export const sourceArtifacts = pgTable(
     slotKey: text("slot_key").notNull().default(""),
     /** source 가 표기한 원래 과목명 (예: "윤리", "사회문화영역") */
     courseLabel: text("course_label"),
+    /** source 원문 영역 표기 (예: "제2외국어/한문") — canonical 로 바꾼 뒤에도 보존 */
+    sourceSubjectLabel: text("source_subject_label"),
+    /** source 원문 표기 전체 (영역 + 링크 표기) — parser 디버깅/관리자 검토용 */
+    sourceLabel: text("source_label"),
     type: fileTypeEnum("type").notNull(),
     sourceUrl: text("source_url").notNull(),
     /** file | archive (여러 과목이 든 zip 등 — 아직 압축 해제는 하지 않고 검토 대상으로 둔다) */

@@ -2,9 +2,17 @@ import { describe, expect, it } from "vitest";
 import parserVersions from "@/ingestion/sources/parser-versions.json";
 import { PARSER_VERSION_FILES } from "@/ingestion/sources/parser-version-files";
 import { canIngest, currentParserVersion, isLiveVerified } from "@/ingestion/sources/verification";
-import { computeParserHash } from "../../scripts/parser-version";
+import { computeParserHash, nextParserVersion } from "../../scripts/parser-version";
 
 describe("parser version", () => {
+  it("bumps the numeric suffix (ebsi-v1 → ebsi-v2), so a parser change really invalidates approval", () => {
+    expect(nextParserVersion("ebsi", "ebsi-v1")).toBe("ebsi-v2");
+    expect(nextParserVersion("education_office", "education_office-v9")).toBe(
+      "education_office-v10",
+    );
+    expect(nextParserVersion("kice", null)).toBe("kice-v1");
+  });
+
   it.each(Object.keys(PARSER_VERSION_FILES))(
     "%s: parser files match the recorded hash (bump with `npm run ingest:parser-version`)",
     (source) => {

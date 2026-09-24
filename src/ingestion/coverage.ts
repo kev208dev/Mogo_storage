@@ -25,6 +25,8 @@ const SLOT_TYPES: Record<Subject, FileType[]> = {
   history: ["question", "solution"],
   social: ["question", "solution"],
   science: ["question", "solution"],
+  vocational: ["question", "solution"],
+  second_language: ["question", "solution"],
 };
 const COURSE_SLOT_TYPES: FileType[] = ["question", "solution"];
 

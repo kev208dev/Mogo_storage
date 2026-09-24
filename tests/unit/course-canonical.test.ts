@@ -14,8 +14,15 @@ describe("course catalog", () => {
     expect(new Set(codes).size).toBe(codes.length);
     for (const c of codes) expect(isCourseCode(c)).toBe(true);
     const sql = readFileSync("drizzle/0002_course_aware.sql", "utf8");
-    for (const c of COURSE_CATALOG)
+    const regimes = readFileSync("drizzle/0003_exam_regimes_and_subjects.sql", "utf8");
+    for (const c of COURSE_CATALOG) {
+      // 직업탐구·제2외국어 course 는 새 enum 값을 쓰므로 migration 이 아니라 syncCourseCatalog 가 넣는다
+      if (c.subject === "vocational" || c.subject === "second_language") continue;
       expect(sql).toContain(`('${c.code}', '${c.code}', '${c.name}', '${c.subject}'`);
+      expect(regimes).toContain(
+        `UPDATE "courses" SET "regimes" = '${JSON.stringify(c.regimes)}'::jsonb WHERE "id" = '${c.code}';`,
+      );
+    }
   });
   it("seo name drops the middle dot", () => {
     expect(courseSeoName(courseByCode("social-culture")!.name)).toBe("사회문화");

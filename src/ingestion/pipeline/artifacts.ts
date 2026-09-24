@@ -5,8 +5,10 @@ import { courses, examFiles, exams, examSources, sourceArtifacts } from "../../d
 import type { ArtifactDeliveryPolicy, FileType, Subject } from "../../lib/constants";
 import { FILE_TYPE_LABELS, SUBJECT_LABELS } from "../../lib/constants";
 import { courseByCode } from "../../lib/courses";
-import { examPath } from "../../lib/exam-path";
+import { examCoursePath, examPath } from "../../lib/exam-path";
+import { regimeFor } from "../../lib/regimes";
 import {
+  applyRegime,
   courseSlotKey,
   resolveCourse,
   type CourseAlias,
@@ -49,19 +51,29 @@ export function defaultFileName(
   return `${exam.year}년 고${exam.grade} ${exam.month}월 ${area} ${FILE_TYPE_LABELS[type]}.${ext}`;
 }
 
-/** DB alias(관리자 mapping)까지 반영한 최종 course 판정 */
+/**
+ * DB alias(관리자 mapping)와 시험 체제까지 반영한 최종 course 판정.
+ * 체제에 맞지 않는 카탈로그 판정은 확정하지 않는다 (manual_review). source 표기는 그대로 보존된다.
+ */
 export function finalCourseResolution(
   artifact: DiscoveredArtifact,
   sourceId: string,
   aliases: CourseAlias[],
+  exam?: { year: number; grade: number },
 ): CourseResolution {
-  if (artifact.course.status === "resolved" || !artifact.courseLabel) return artifact.course;
-  const again = resolveCourse(artifact.courseLabel, {
-    subject: artifact.subject,
-    sourceId,
-    aliases,
-  });
-  return again.status === "none" ? artifact.course : again;
+  let resolution = artifact.course;
+  if (artifact.courseLabel) {
+    const again = resolveCourse(artifact.courseLabel, {
+      subject: artifact.subject,
+      sourceId,
+      aliases,
+      regime: exam ? regimeFor(exam).code : null,
+    });
+    // 관리자 alias 는 코드 카탈로그 판정보다 우선
+    if (again.status === "resolved" && again.via === "alias") resolution = again;
+    else if (resolution.status !== "resolved" && again.status !== "none") resolution = again;
+  }
+  return exam ? applyRegime(resolution, exam) : resolution;
 }
 
 export type ArtifactUpsertAction = "created" | "url_changed" | "unchanged";
@@ -85,7 +97,7 @@ export async function upsertDiscoveredArtifact(
   },
 ): Promise<{ id: string; action: ArtifactUpsertAction; slotKey: string; courseId: string | null }> {
   const { artifact, source, now } = input;
-  const resolution = finalCourseResolution(artifact, source.id, input.aliases ?? []);
+  const resolution = finalCourseResolution(artifact, source.id, input.aliases ?? [], input.exam);
   const slotKey = courseSlotKey(resolution);
   const courseId = resolution.status === "resolved" ? await courseIdFor(db, resolution.code) : null;
   const fileName = sanitizeFileName(
@@ -163,7 +175,7 @@ export async function upsertDiscoveredArtifact(
     artifact.containerType === "archive"
       ? "archive file (may contain several courses) — extraction not implemented, review required"
       : resolution.status === "ambiguous"
-        ? `ambiguous course "${artifact.courseLabel}" (candidates: ${resolution.candidates.join(", ")})`
+        ? `ambiguous course "${artifact.courseLabel}" (candidates: ${resolution.candidates.join(", ")})${resolution.reason ? ` — ${resolution.reason}` : ""}`
         : null;
 
   let id: string;
@@ -178,6 +190,8 @@ export async function upsertDiscoveredArtifact(
         courseId,
         slotKey,
         courseLabel: artifact.courseLabel,
+        sourceSubjectLabel: artifact.sourceSubjectLabel,
+        sourceLabel: artifact.sourceLabel,
         type: artifact.type,
         sourceUrl: artifact.url,
         containerType: artifact.containerType,
@@ -217,6 +231,16 @@ export async function upsertDiscoveredArtifact(
   } else {
     id = existing.id;
     action = "unchanged";
+    // 이전 버전에서 저장된 행에는 원문 표기가 없다 → 다음 발견 때 채운다 (canonical 값은 건드리지 않음)
+    if (existing.sourceLabel === null) {
+      await db
+        .update(sourceArtifacts)
+        .set({
+          sourceLabel: artifact.sourceLabel,
+          sourceSubjectLabel: artifact.sourceSubjectLabel,
+        })
+        .where(eq(sourceArtifacts.id, existing.id));
+    }
     // 실패/사라졌던 자료가 다시 목록에 보이면 재검증
     if (existing.status === "unavailable") {
       await db
@@ -375,7 +399,7 @@ export async function publishSlot(ctx: IngestionContext, slot: Slot): Promise<Pu
   });
   const key = { year: exam.year, grade: exam.grade as 1 | 2 | 3, month: exam.month };
   const paths = [examPath(key), examPath(key, slot.subject)];
-  if (courseCode) paths.push(`${examPath(key, slot.subject)}/${courseCode}`);
+  if (courseCode) paths.push(examCoursePath(key, slot.subject, courseCode));
   return { published: true, reason: "published", examPaths: paths };
 }
 

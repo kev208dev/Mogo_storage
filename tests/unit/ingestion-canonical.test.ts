@@ -86,10 +86,14 @@ describe("normalizeSubject / normalizeArtifactType", () => {
     ["eng_listen.mp3", "english"],
   ])("%s → %s", (raw, subject) => expect(normalizeSubject(raw)).toBe(subject));
 
-  it("지원하지 않는 과목은 null", () => {
-    expect(normalizeSubject("제2외국어")).toBeNull();
-    expect(normalizeSubject("제2외국어한문영역_문제지.pdf")).toBeNull();
-    expect(normalizeSubject("직업탐구")).toBeNull();
+  it("직업탐구·제2외국어/한문은 별도 영역 (예전에는 미지원 → null)", () => {
+    expect(normalizeSubject("제2외국어")).toBe("second_language");
+    expect(normalizeSubject("제2외국어한문영역_문제지.pdf")).toBe("second_language");
+    expect(normalizeSubject("직업탐구")).toBe("vocational");
+    // "중국어" 가 국어 규칙에 걸리지 않아야 한다
+    expect(normalizeSubject("중국어Ⅰ")).toBe("second_language");
+    expect(normalizeSubject("한국사")).toBe("history");
+    expect(normalizeSubject("알 수 없는 과목")).toBeNull();
   });
 
   it.each([
@@ -112,6 +116,8 @@ describe("dedupeArtifacts", () => {
     label: "해설",
     fileNameHint: null,
     publishedAt: null,
+    sourceSubjectLabel: null,
+    sourceLabel: "해설",
     course: { status: "none" },
     courseLabel: null,
     containerType: "file",

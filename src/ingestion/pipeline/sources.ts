@@ -7,12 +7,14 @@ import { BUILTIN_SOURCES, DEFAULT_SOURCE_PRIORITIES } from "../sources/config";
 import { envEnabled } from "../sources/registry";
 import { currentParserVersion, isLiveVerified } from "../sources/verification";
 import { IngestionError } from "../errors";
+import { syncCourseCatalog } from "./course-aliases";
 
 /**
  * 코드의 기본 source 설정을 DB 에 넣는다 (없을 때만). 운영자가 바꾼 값은 덮어쓰지 않는다.
  * allowedHosts/baseUrl 처럼 코드가 정답인 값만 갱신한다.
  */
 export async function syncBuiltinSources(db: Database, sources: SourceConfig[] = BUILTIN_SOURCES) {
+  await syncCourseCatalog(db);
   for (const s of sources) {
     await db
       .insert(examSources)

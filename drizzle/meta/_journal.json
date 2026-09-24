@@ -22,6 +22,13 @@
       "when": 1790249356000,
       "tag": "0002_course_aware",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790267651913,
+      "tag": "0003_exam_regimes_and_subjects",
+      "breakpoints": true
     }
   ]
 }

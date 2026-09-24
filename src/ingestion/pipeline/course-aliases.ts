@@ -15,10 +15,16 @@ export async function syncCourseCatalog(db: Database) {
         name: c.name,
         subject: c.subject,
         displayOrder: c.displayOrder,
+        regimes: c.regimes,
       })
       .onConflictDoUpdate({
         target: courses.code,
-        set: { name: c.name, displayOrder: c.displayOrder, updatedAt: new Date() },
+        set: {
+          name: c.name,
+          displayOrder: c.displayOrder,
+          regimes: c.regimes,
+          updatedAt: new Date(),
+        },
       });
   }
 }
@@ -26,7 +32,12 @@ export async function syncCourseCatalog(db: Database) {
 /** DB 에 저장된 alias (관리자 mapping 포함) */
 export async function loadCourseAliases(db: Pick<Database, "select">): Promise<CourseAlias[]> {
   const rows = await db
-    .select({ alias: courseAliases.alias, code: courses.code, sourceId: courseAliases.sourceId })
+    .select({
+      alias: courseAliases.alias,
+      code: courses.code,
+      sourceId: courseAliases.sourceId,
+      regime: courseAliases.regimeCode,
+    })
     .from(courseAliases)
     .innerJoin(courses, eq(courses.id, courseAliases.courseId));
   return rows;
@@ -38,8 +49,16 @@ export async function loadCourseAliases(db: Pick<Database, "select">): Promise<C
  */
 export async function saveCourseAlias(
   db: Pick<Database, "insert">,
-  input: { label: string; courseCode: string; sourceId: string | null; createdBy: string },
+  input: {
+    label: string;
+    courseCode: string;
+    sourceId: string | null;
+    createdBy: string;
+    /** 시험 체제 한정 (예: legacy). null/생략 = 모든 체제 */
+    regimeCode?: string | null;
+  },
 ) {
+  const regimeCode = input.regimeCode ?? null;
   const alias = normalizeCourseLabel(input.label);
   if (!alias) throw new Error("empty alias");
   await db
@@ -48,15 +67,18 @@ export async function saveCourseAlias(
       alias,
       courseId: input.courseCode,
       sourceId: input.sourceId,
+      regimeCode,
       createdBy: input.createdBy,
     })
     .onConflictDoUpdate({
-      target: input.sourceId
-        ? [courseAliases.alias, courseAliases.sourceId]
-        : [courseAliases.alias],
-      targetWhere: input.sourceId
-        ? sql`${courseAliases.sourceId} is not null`
-        : sql`${courseAliases.sourceId} is null`,
+      target: [
+        courseAliases.alias,
+        ...(input.sourceId ? [courseAliases.sourceId] : []),
+        ...(regimeCode ? [courseAliases.regimeCode] : []),
+      ],
+      targetWhere: sql.raw(
+        `"course_aliases"."source_id" is ${input.sourceId ? "not " : ""}null and "course_aliases"."regime_code" is ${regimeCode ? "not " : ""}null`,
+      ),
       set: { courseId: input.courseCode, createdBy: input.createdBy },
     });
   return alias;

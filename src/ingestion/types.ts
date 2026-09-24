@@ -72,6 +72,12 @@ export interface DiscoveredArtifact {
   /** file | archive (여러 과목이 든 zip 등 — 압축 해제는 아직 하지 않음) */
   containerType: "file" | "archive";
   containsMultipleCourses: boolean;
+  /** source 가 표시한 영역 표기 원문 (예: "사회탐구", "제2외국어/한문") — canonical 후에도 버리지 않는다 */
+  sourceSubjectLabel: string | null;
+  /** source 원문 표기 전체 (영역 + 링크 표기). 예: "사회탐구 사회·문화 문제" */
+  sourceLabel: string;
+  /** source 가 제공한 공식 공개 예정 시각 (KICE 정답 공개시간 등). ISO, 없으면 undefined */
+  officialReleaseAt?: string | null;
 }
 
 /** discoverArtifacts 입력: canonical identity + (있으면) source 내부 위치 */

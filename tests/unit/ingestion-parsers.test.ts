@@ -47,11 +47,11 @@ describe("EBSi parser (synthetic fixtures)", () => {
     expect(exams[1]!.artifacts[0]!.url).toBe(
       "https://www.ebsi.co.kr/ebs/down/20250604/go2/kor_q.pdf",
     );
-    // 공지 글과 제2외국어는 경고로만 남는다
-    expect(warnings.map((w) => w.code).sort()).toEqual([
-      "UNRECOGNIZED_TITLE",
-      "UNSUPPORTED_SUBJECT",
-    ]);
+    // 공지 글은 경고로만 남는다. 제2외국어는 이제 지원 영역 (second_language)
+    expect(warnings.map((w) => w.code).sort()).toEqual(["UNRECOGNIZED_TITLE"]);
+    const lang = sep.artifacts.filter((a) => a.subject === "second_language");
+    expect(lang.length).toBeGreaterThan(0);
+    expect(lang[0]!.sourceSubjectLabel).toBe("제2외국어");
   });
 
   it("학년도 표기 시험을 시행 연도로 변환한다", () => {
@@ -143,7 +143,11 @@ describe("KICE board parser (synthetic fixtures)", () => {
       "english:listening_audio",
       "english:listening_script",
       "history:question",
+      // 제2외국어/한문 영역 전체 PDF: 영역은 인식하되 세부과목은 추정하지 않는다
+      "second_language:question",
     ]);
+    const lang = artifacts.find((a) => a.subject === "second_language")!;
+    expect(lang.course.status).toBe("none");
     expect(artifacts[0]!.url).toBe("https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=a1");
   });
 

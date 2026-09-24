@@ -1,5 +1,11 @@
 import type { Subject } from "../../lib/constants";
-import { AMBIGUOUS_COURSE_LABELS, COURSE_CATALOG, type CourseDefinition } from "../../lib/courses";
+import {
+  AMBIGUOUS_COURSE_LABELS,
+  COURSE_CATALOG,
+  courseExpectation,
+  type CourseDefinition,
+} from "../../lib/courses";
+import { regimeFor } from "../../lib/regimes";
 
 /**
  * course 표기 정규화: NFKC, 로마 숫자(Ⅰ/Ⅱ/I/II) → 1/2, 공백·구두점 제거.
@@ -18,7 +24,7 @@ export function normalizeCourseLabel(raw: string): string {
 
 /** 자료 종류/파일 표기 단어 (course 판별 전에 제거) */
 const NOISE =
-  /(영역|과목|탐구|문제지|문제|정답표|정답|해설지|해설|및|듣기|대본|pdf|hwp|zip|mp3|파일|시험지|전체|선택)/g;
+  /(제2외국어한문|제2외국어|영역|과목|탐구|문제지|문제|정답표|정답|해설지|해설|및|듣기|대본|pdf|hwp|zip|mp3|파일|시험지|전체|선택)/g;
 
 export type CourseResolution =
   | {
@@ -28,14 +34,22 @@ export type CourseResolution =
       matched: string;
       via: "catalog" | "alias";
     }
-  | { status: "ambiguous"; candidates: string[]; matched: string }
+  | {
+      status: "ambiguous";
+      candidates: string[];
+      matched: string;
+      /** 왜 확정하지 않았는지 (체제 검증 등). 없으면 표기 자체가 모호 */
+      reason?: string;
+    }
   | { status: "none" };
 
-/** 관리자 mapping 등 DB 에 저장된 alias (source 별 또는 전체) */
+/** 관리자 mapping 등 DB 에 저장된 alias (source 별 또는 전체, 선택적으로 시험 체제 한정) */
 export interface CourseAlias {
   alias: string; // normalizeCourseLabel 결과
   code: string;
   sourceId: string | null;
+  /** 예) 과거 "물리Ⅰ" 표기를 legacy 체제 시험에만 적용 */
+  regime?: string | null;
 }
 
 interface Entry {
@@ -64,7 +78,13 @@ const CATALOG_ENTRIES: Entry[] = COURSE_CATALOG.flatMap((c: CourseDefinition) =>
  */
 export function resolveCourse(
   raw: string,
-  options: { subject?: Subject | null; sourceId?: string | null; aliases?: CourseAlias[] } = {},
+  options: {
+    subject?: Subject | null;
+    sourceId?: string | null;
+    aliases?: CourseAlias[];
+    /** 시험 체제 코드 — 체제 한정 alias 는 같은 체제에서만 쓴다 */
+    regime?: string | null;
+  } = {},
 ): CourseResolution {
   const full = normalizeCourseLabel(raw);
   const stripped = full.replace(NOISE, "").replace(/^(고[1-3]|[1-3]학년|\d{4}년?|\d{1,2}월)+/g, "");
@@ -73,12 +93,16 @@ export function resolveCourse(
     !options.subject || COURSE_CATALOG.find((c) => c.code === code)?.subject === options.subject;
 
   // 1) DB alias
-  const aliases = (options.aliases ?? []).filter((a) => inSubject(a.code));
+  const aliases = (options.aliases ?? []).filter(
+    (a) => inSubject(a.code) && (!a.regime || a.regime === options.regime),
+  );
+  const hit = (a: CourseAlias) => a.alias === stripped || a.alias === full;
+  // 우선순위: (source+체제) → source → (전체+체제) → 전체
   const pick =
-    aliases.find(
-      (a) =>
-        a.sourceId && a.sourceId === options.sourceId && (a.alias === stripped || a.alias === full),
-    ) ?? aliases.find((a) => !a.sourceId && (a.alias === stripped || a.alias === full));
+    aliases.find((a) => a.sourceId && a.sourceId === options.sourceId && a.regime && hit(a)) ??
+    aliases.find((a) => a.sourceId && a.sourceId === options.sourceId && !a.regime && hit(a)) ??
+    aliases.find((a) => !a.sourceId && a.regime && hit(a)) ??
+    aliases.find((a) => !a.sourceId && !a.regime && hit(a));
   if (pick)
     return {
       status: "resolved",
@@ -129,4 +153,36 @@ export function courseSlotKey(resolution: CourseResolution): string {
   if (resolution.status === "resolved") return resolution.code;
   if (resolution.status === "ambiguous") return `unresolved:${resolution.matched}`;
   return "";
+}
+
+/**
+ * 시험 체제 검증. 코드 카탈로그 판정이 해당 시험(연도·학년)에 맞지 않으면 확정하지 않고 manual_review 로 보낸다.
+ *  - 관리자 alias 로 확정된 것은 그대로 (사람이 판단한 결과)
+ *  - 체제 목록에 없는 과목 → ambiguous (예: 2028 체제 시험의 "물리학Ⅰ", 고1 시험의 "사회·문화")
+ *  - 과목 구성이 확인되지 않은 과거 체제 → 정확한 과목명(confidence 1)만 인정, 약칭·부분 일치는 검토
+ * 과거 시험을 현재 과목 체계로 강제하지 않기 위한 장치다. source 표기는 호출한 쪽이 그대로 보존한다.
+ */
+export function applyRegime(
+  resolution: CourseResolution,
+  exam: { year: number; grade: number },
+): CourseResolution {
+  if (resolution.status !== "resolved" || resolution.via === "alias") return resolution;
+  const expectation = courseExpectation(resolution.code, exam);
+  if (expectation === "expected") return resolution;
+  const regime = regimeFor(exam);
+  if (expectation === "unknown") {
+    if (resolution.confidence >= 1) return resolution;
+    return {
+      status: "ambiguous",
+      candidates: [resolution.code],
+      matched: resolution.matched,
+      reason: `${regime.name}: 약칭/부분 일치("${resolution.matched}")는 과거 시험에서 자동 확정하지 않음`,
+    };
+  }
+  return {
+    status: "ambiguous",
+    candidates: [resolution.code],
+    matched: resolution.matched,
+    reason: `${regime.name} 고${exam.grade} 시험에 없는 세부과목 (${resolution.code})`,
+  };
 }

@@ -10,7 +10,7 @@
  */
 import {
   GRADES,
-  SUBJECTS,
+  CORE_SUBJECTS,
   type ExamType,
   type FileType,
   type Grade,
@@ -115,11 +115,13 @@ const SUBJECT_SHAPE: Record<Subject, { questionCount: number; totalScore: number
   history: { questionCount: 20, totalScore: 50 },
   social: { questionCount: 20, totalScore: 50 },
   science: { questionCount: 20, totalScore: 50 },
+  vocational: { questionCount: 20, totalScore: 50 },
+  second_language: { questionCount: 30, totalScore: 50 },
 };
 
 function buildExamSubjects(exams: Exam[]): ExamSubject[] {
   return exams.flatMap((exam) =>
-    SUBJECTS.map((subject) => ({ examId: exam.id, subject, ...SUBJECT_SHAPE[subject] })),
+    CORE_SUBJECTS.map((subject) => ({ examId: exam.id, subject, ...SUBJECT_SHAPE[subject] })),
   );
 }
 
@@ -155,6 +157,8 @@ const SUBJECT_FILE_LABEL: Record<Subject, string> = {
   history: "한국사",
   social: "사회",
   science: "과학",
+  vocational: "직업탐구",
+  second_language: "제2외국어",
 };
 
 function makeFile(
@@ -189,7 +193,7 @@ function buildFiles(featured: Exam): ExamFile[] {
   const rand = mulberry32(hashString("files"));
   const size = (min: number, max: number) => Math.round(min + rand() * (max - min));
   const files: ExamFile[] = [];
-  for (const subject of SUBJECTS) {
+  for (const subject of CORE_SUBJECTS) {
     files.push(makeFile(featured, subject, "question", size(1_800_000, 6_500_000)));
     // 한국사 해설지는 "자료 준비 중" 상태 확인용으로 비워둔다.
     if (subject !== "history") {
@@ -229,7 +233,7 @@ function scoreTable(subject: Subject, count: number): number[] {
 
 function buildQuestions(featured: Exam): Question[] {
   const questions: Question[] = [];
-  for (const subject of SUBJECTS) {
+  for (const subject of CORE_SUBJECTS) {
     const { questionCount } = SUBJECT_SHAPE[subject];
     const scores = scoreTable(subject, questionCount);
     const rand = mulberry32(hashString(`answers:${subject}`));

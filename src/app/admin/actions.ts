@@ -7,6 +7,7 @@ import { and, eq, isNull } from "drizzle-orm";
 import { exams, ingestionErrors, jobs } from "@/db/schema";
 import {
   approveArtifact,
+  mapArtifactCourse,
   rejectArtifact,
   remapSourceExam,
   retryArtifact,
@@ -17,7 +18,13 @@ import {
 } from "@/ingestion/admin-actions";
 import { runJobs } from "@/ingestion/jobs/worker";
 import { runDiscovery } from "@/ingestion/pipeline/discovery";
-import { loadSource, syncBuiltinSources } from "@/ingestion/pipeline/sources";
+import {
+  approveLiveVerification,
+  loadSource,
+  revokeLiveVerification,
+  syncBuiltinSources,
+} from "@/ingestion/pipeline/sources";
+import { IngestionError } from "@/ingestion/errors";
 import { REPORT_STATUSES, type ReportStatus } from "@/lib/constants";
 import {
   ADMIN_COOKIE,
@@ -80,30 +87,94 @@ const id = (form: FormData, key = "id") => {
   return value;
 };
 
+/** 운영자가 이해할 수 있는 오류는 대시보드 안내로 돌려준다 (redirect 는 try 밖에서) */
+async function withNotice(path: string, fn: () => Promise<string | void>) {
+  let message: string;
+  try {
+    message = (await fn()) ?? "처리했습니다.";
+  } catch (error) {
+    if (error instanceof IngestionError) message = error.message;
+    else throw error;
+  }
+  revalidatePath(path);
+  redirect(`${path}?notice=${encodeURIComponent(message)}`);
+}
+
 export async function toggleSourceAction(form: FormData) {
   const { ctx, admin } = await context();
   const sourceId = id(form);
   const enabled = form.get("enabled") === "true";
-  await toggleSource(ctx, sourceId, enabled);
-  audit(admin, enabled ? "source.enable" : "source.disable", sourceId);
-  revalidatePath("/admin");
+  await withNotice("/admin", async () => {
+    await toggleSource(ctx, sourceId, enabled);
+    audit(admin, enabled ? "source.enable" : "source.disable", sourceId);
+    return `${sourceId}: 자동 수집을 ${enabled ? "켰습니다" : "껐습니다"}.`;
+  });
 }
 
-/** source 수동 재수집 (최근 2년) + job 처리 */
+/** 실제 fixture 검증 증거를 확인하고 승인 (parser 버전에 묶임) */
+export async function approveVerificationAction(form: FormData) {
+  const { ctx, admin } = await context();
+  const sourceId = id(form);
+  await withNotice("/admin", async () => {
+    await approveLiveVerification(ctx.db, sourceId, admin);
+    audit(admin, "source.verify_approve", sourceId);
+    return `${sourceId}: 실제 구조 검증을 승인했습니다. 필요하면 자동 수집을 켜세요.`;
+  });
+}
+
+export async function revokeVerificationAction(form: FormData) {
+  const { ctx, admin } = await context();
+  const sourceId = id(form);
+  await withNotice("/admin", async () => {
+    await revokeLiveVerification(ctx.db, sourceId);
+    audit(admin, "source.verify_revoke", sourceId);
+    return `${sourceId}: 검증을 취소하고 자동 수집을 껐습니다.`;
+  });
+}
+
+/** source 수동 재수집 (최근 2년) + job 처리 — 실제 구조 검증이 끝난 source 만 */
 export async function runSourceNowAction(form: FormData) {
   const { ctx, admin } = await context();
-  await syncBuiltinSources(ctx.db);
-  const source = await loadSource(ctx.db, id(form));
-  if (!source) throw new Error("source not found");
-  const year = new Date().getFullYear();
-  audit(admin, "source.run", source.id);
-  await runDiscovery(ctx, {
-    source: { ...source, enabled: true },
-    mode: "manual_retry",
-    options: { fromYear: year - 1, toYear: year },
+  await withNotice("/admin", async () => {
+    await syncBuiltinSources(ctx.db);
+    const source = await loadSource(ctx.db, id(form));
+    if (!source) throw new IngestionError("NOT_FOUND", "source not found");
+    if (!source.liveVerified) {
+      throw new IngestionError(
+        "SOURCE_NOT_VERIFIED",
+        `${source.name}: 실제 페이지 fixture 검증과 승인이 필요합니다.`,
+      );
+    }
+    const year = new Date().getFullYear();
+    audit(admin, "source.run", source.id);
+    const result = await runDiscovery(ctx, {
+      source,
+      mode: "manual_retry",
+      options: { fromYear: year - 1, toYear: year },
+    });
+    await runJobs(ctx, { timeBudgetMs: 60_000 });
+    return `${source.name}: ${result.status} (발견 ${result.counts.discovered}, 신규 ${result.counts.created})`;
   });
-  await runJobs(ctx, { timeBudgetMs: 60_000 });
-  revalidatePath("/admin");
+}
+
+/** 과목이 모호한 자료에 세부과목 지정 → alias 저장 → (검증된 자료면) 바로 게시 */
+export async function mapCourseAction(form: FormData) {
+  const { ctx, admin } = await context();
+  const courseCode = String(form.get("course") ?? "");
+  const scope = form.get("scope") === "global" ? "global" : "source";
+  await withNotice("/admin/review", async () => {
+    if (!/^[a-z0-9-]{1,60}$/.test(courseCode))
+      throw new IngestionError("INVALID", "과목을 선택하세요.");
+    const result = await mapArtifactCourse(ctx, {
+      artifactId: id(form),
+      courseCode,
+      admin,
+      aliasScope: scope,
+    });
+    audit(admin, "artifact.map_course", `${id(form)} -> ${courseCode}`);
+    await runJobs(ctx, { timeBudgetMs: 30_000 });
+    return `과목을 ${courseCode} 로 지정했습니다 (${result.status === "ready" ? "게시 처리됨" : result.status}). 같은 표기는 다음 수집부터 자동으로 적용됩니다.`;
+  });
 }
 
 export async function retryJobAction(form: FormData) {
@@ -143,10 +214,12 @@ export async function resolveErrorsAction() {
 
 export async function approveArtifactAction(form: FormData) {
   const { ctx, admin } = await context();
-  await approveArtifact(ctx, id(form));
-  audit(admin, "artifact.approve", id(form));
-  await runJobs(ctx, { timeBudgetMs: 30_000 });
-  revalidatePath("/admin/review");
+  await withNotice("/admin/review", async () => {
+    await approveArtifact(ctx, id(form));
+    audit(admin, "artifact.approve", id(form));
+    await runJobs(ctx, { timeBudgetMs: 30_000 });
+    return "승인했습니다.";
+  });
 }
 
 export async function rejectArtifactAction(form: FormData) {

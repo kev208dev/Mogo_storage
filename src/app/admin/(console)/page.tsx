@@ -7,14 +7,19 @@ import {
   retryAllFailedAction,
   retryArtifactAction,
   retryJobAction,
+  revokeVerificationAction,
+  approveVerificationAction,
   runSourceNowAction,
   toggleSourceAction,
 } from "../actions";
+import { currentParserVersion, isLiveVerified } from "@/ingestion/sources/verification";
+import { AdminNotice } from "./notice";
 import { NoDatabase } from "./no-db";
 
 export const dynamic = "force-dynamic";
 
-export default async function AdminDashboard() {
+export default async function AdminDashboard({ searchParams }: PageProps<"/admin">) {
+  const notice = (await searchParams).notice;
   const db = getDb();
   if (!db) return <NoDatabase />;
   const data = await dashboardData(db);
@@ -24,6 +29,7 @@ export default async function AdminDashboard() {
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-bold">오늘의 수집 상태</h1>
+      <AdminNotice value={notice} />
       {!ingestionOn ? (
         <p className="bg-warning-soft text-warning-strong rounded-md px-3 py-2 text-sm font-semibold">
           INGESTION_ENABLED=false — 자동 수집(cron)이 꺼져 있습니다.
@@ -51,32 +57,81 @@ export default async function AdminDashboard() {
               등록된 source 가 없습니다. npm run ingest:sources 로 동기화하세요.
             </li>
           ) : null}
-          {data.sources.map((s) => (
-            <li key={s.id} className="flex flex-wrap items-center gap-x-4 gap-y-1 py-2 text-sm">
-              <span className="w-40 font-bold">{s.name}</span>
-              <HealthBadge status={s.enabled ? s.healthStatus : "disabled"} />
-              <span className="text-muted-foreground">
-                마지막 확인 {formatKst(s.lastSuccessfulFetchAt)} · 최근 실패{" "}
-                {formatKst(s.lastFailureAt)} (연속 {s.failureCount}회) · 정책 {s.deliveryPolicy}
-              </span>
-              {s.healthMessage ? (
-                <span className="text-danger-strong w-full text-xs">{s.healthMessage}</span>
-              ) : null}
-              <span className="ml-auto flex gap-1">
-                <form action={runSourceNowAction}>
-                  <input type="hidden" name="id" value={s.id} />
-                  <SmallButton>지금 수집</SmallButton>
-                </form>
-                <form action={toggleSourceAction}>
-                  <input type="hidden" name="id" value={s.id} />
-                  <input type="hidden" name="enabled" value={s.enabled ? "false" : "true"} />
-                  <SmallButton variant={s.enabled ? "danger" : "primary"}>
-                    {s.enabled ? "끄기" : "켜기"}
-                  </SmallButton>
-                </form>
-              </span>
-            </li>
-          ))}
+          {data.sources.map((s) => {
+            const current = currentParserVersion(s.kind);
+            const verified = isLiveVerified(s.kind, s);
+            const evidenceCurrent =
+              Boolean(s.liveFixtureValidatedAt) && s.liveFixtureParserVersion === current;
+            return (
+              <li key={s.id} className="flex flex-wrap items-center gap-x-4 gap-y-1 py-2 text-sm">
+                <span className="w-40 font-bold">{s.name}</span>
+                {verified ? (
+                  <HealthBadge status={s.enabled ? s.healthStatus : "disabled"} />
+                ) : (
+                  <span className="bg-warning-soft text-warning-strong rounded px-1.5 py-0.5 text-xs font-bold">
+                    실제 구조 미검증
+                  </span>
+                )}
+                <span className="text-muted-foreground">
+                  자동 수집: <strong>{verified && s.enabled ? "활성" : "비활성"}</strong> · parser{" "}
+                  {current} · 정책 {s.deliveryPolicy}
+                </span>
+                {verified ? (
+                  <span className="text-muted-foreground w-full text-xs">
+                    검증 승인 {formatKst(s.verifiedAt)} · {s.verifiedBy} · fixture{" "}
+                    {s.verifiedFixtureHash?.slice(0, 12)} · 마지막 확인{" "}
+                    {formatKst(s.lastSuccessfulFetchAt)} · 최근 실패 {formatKst(s.lastFailureAt)}{" "}
+                    (연속 {s.failureCount}회)
+                  </span>
+                ) : evidenceCurrent ? (
+                  <span className="w-full text-xs">
+                    실제 fixture 검증 통과 {formatKst(s.liveFixtureValidatedAt)} (fixture{" "}
+                    {s.liveFixtureHash?.slice(0, 12)}) — 관리자 승인 대기
+                  </span>
+                ) : (
+                  <span className="text-muted-foreground w-full text-xs">
+                    {s.liveFixtureValidatedAt
+                      ? `fixture 검증이 이전 parser(${s.liveFixtureParserVersion}) 기준입니다. 다시 검증해야 합니다.`
+                      : "실제 페이지 fixture 가 없습니다."}{" "}
+                    npm run ingest:capture → npm run ingest:fixtures:validate -- --record
+                  </span>
+                )}
+                {s.healthMessage ? (
+                  <span className="text-danger-strong w-full text-xs">{s.healthMessage}</span>
+                ) : null}
+                <span className="ml-auto flex gap-1">
+                  {verified ? (
+                    <>
+                      <form action={runSourceNowAction}>
+                        <input type="hidden" name="id" value={s.id} />
+                        <SmallButton>지금 수집</SmallButton>
+                      </form>
+                      <form action={toggleSourceAction}>
+                        <input type="hidden" name="id" value={s.id} />
+                        <input type="hidden" name="enabled" value={s.enabled ? "false" : "true"} />
+                        <SmallButton variant={s.enabled ? "danger" : "primary"}>
+                          {s.enabled ? "끄기" : "켜기"}
+                        </SmallButton>
+                      </form>
+                      <form action={revokeVerificationAction}>
+                        <input type="hidden" name="id" value={s.id} />
+                        <SmallButton variant="danger">검증 취소</SmallButton>
+                      </form>
+                    </>
+                  ) : evidenceCurrent ? (
+                    <form action={approveVerificationAction}>
+                      <input type="hidden" name="id" value={s.id} />
+                      <SmallButton variant="primary">검증 승인</SmallButton>
+                    </form>
+                  ) : (
+                    <span className="border-border text-muted-foreground inline-flex min-h-9 items-center rounded-md border border-dashed px-2.5 text-xs font-semibold">
+                      fixture 검증 필요
+                    </span>
+                  )}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </Panel>
 
@@ -99,12 +154,24 @@ export default async function AdminDashboard() {
                 <p className="text-muted-foreground text-xs">아직 발견된 자료 없음</p>
               ) : null}
               <ul className="mt-1 space-y-0.5">
-                {m.subjects.map((s) => (
-                  <li key={s.subject} className="flex gap-3">
-                    <span className="w-12">{SUBJECT_LABELS[s.subject]}</span>
-                    <Mark value={s.question} name="문제" />
-                    <Mark value={s.solution} name="해설" />
-                    {s.listening ? <Mark value={s.listening} name="듣기" /> : null}
+                {m.subjects.map((subj) => (
+                  <li key={subj.subject}>
+                    {subj.areaLabel ? <p className="mt-1 font-semibold">{subj.areaLabel}</p> : null}
+                    <ul className={subj.areaLabel ? "pl-3" : undefined}>
+                      {subj.rows.map((r) => (
+                        <li key={r.label} className="flex flex-wrap gap-x-3">
+                          <span className="w-24">{r.label}</span>
+                          <Mark value={r.question} name="문제" />
+                          <Mark value={r.solution} name="해설" />
+                          {r.listening ? <Mark value={r.listening} name="듣기" /> : null}
+                        </li>
+                      ))}
+                      {subj.unresolved ? (
+                        <li className="text-warning-strong text-xs">
+                          과목 미확정 자료 {subj.unresolved}건 → 검토 대기에서 과목 지정
+                        </li>
+                      ) : null}
+                    </ul>
                   </li>
                 ))}
               </ul>

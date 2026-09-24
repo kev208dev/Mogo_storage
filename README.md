@@ -385,14 +385,17 @@ npm run ingest:schedules -- --file=data/schedules/2027.json   # 공식 발표로
 3. `[어휘]` 섹션 안의 항목은 신뢰도가 높아 자동 승인하고, 나머지는 `needs_review` 로 남겨 관리자가 검토합니다.
 4. 승인된 단어로 우리가 만든 단어장 PDF 를 생성합니다 (Noto Sans KR, OFL). 이 PDF 는 `artifact_origin=generated` 로 공식 자료와 분리됩니다.
 
-## 측정 결과 (로컬 production build, Lighthouse 13)
+## 측정 결과 (로컬 production build, Lighthouse 12.8, 2026-09-24)
 
-| 페이지                        | Performance | Accessibility | Best Practices | SEO  |
-| ----------------------------- | ----------- | ------------- | -------------- | ---- |
-| `/` (mobile / desktop)        | 99 / 100    | 100           | 100            | 100  |
-| `/exam/2025/high2/09/english` | 97 / 100    | 100           | 100            | 100* |
+| 페이지                                      | Performance (mobile / desktop) | Accessibility | Best Practices | SEO   |
+| ------------------------------------------- | ------------------------------ | ------------- | -------------- | ----- |
+| `/`                                         | 98 / 100                       | 100           | 100            | 100   |
+| `/exam/2025/high2/09`                       | 99 / 100                       | 100           | 100            | 100\* |
+| `/exam/2025/high2/09/english`               | 95 / 100                       | 100           | 100            | 100\* |
+| `/exam/2025/high3/07/social/social-culture` | 98 / 100                       | 100           | 100            | 100\* |
 
-\* `ALLOW_SAMPLE_INDEXING=1`로 빌드한 경우입니다. 이 설정이 없으면 샘플 페이지는 의도대로 noindex 처리됩니다.
+CLS 0.000, mobile LCP 1.9~2.6초 (Lighthouse 모바일 throttling 기준).
+\* `ALLOW_SAMPLE_INDEXING=1`로 빌드한 경우입니다. 기본 빌드에서는 샘플 시험이 의도대로 noindex 라 SEO 66 으로 측정됩니다 (실제 데이터는 index).
 
 ## 배포
 

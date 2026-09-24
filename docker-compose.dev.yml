@@ -1,0 +1,20 @@
+# 로컬 개발용 PostgreSQL 만 (운영 배포용 아님)
+#   docker compose -f docker-compose.dev.yml up -d
+#   DATABASE_URL=postgres://mogo:mogo@localhost:5432/mogo_storage npm run db:migrate:prod && npm run db:seed
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: mogo
+      POSTGRES_PASSWORD: mogo
+      POSTGRES_DB: mogo_storage
+    ports:
+      - "5432:5432"
+    volumes:
+      - mogo-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mogo"]
+      interval: 5s
+      retries: 10
+volumes:
+  mogo-pg:

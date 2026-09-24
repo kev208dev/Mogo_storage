@@ -5,6 +5,10 @@ on:
     branches: [main]
   pull_request:
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -33,6 +37,10 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run format:check
+      # schema.ts 와 drizzle/ migration 이 어긋나면 실패 (migration 누락 방지)
+      - run: npx drizzle-kit generate --name=ci_drift_check && git diff --exit-code -- drizzle && test -z "$(git status --porcelain drizzle)"
+      # migration 을 실제 PostgreSQL 에 적용 (fresh DB)
+      - run: DATABASE_URL=$DATABASE_URL_TEST npm run db:migrate:prod
       - run: npm test
       # 저장된 실제 source fixture 를 parser 에 통과 (네트워크 없음, fixture 가 없으면 통과)
       - run: npm run ingest:fixtures:validate

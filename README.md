@@ -7,6 +7,8 @@
 
 ⚠️ 이 저장소에는 **실제 시험지/해설지/음원이 포함되어 있지 않습니다.** 정답·해설·정답률·등급컷·단어장·듣기 대본 등은 모두 개발용 **샘플 데이터**이며, 화면에도 "샘플"로 표시됩니다.
 
+운영 문서: [docs/OPERATIONS.md](docs/OPERATIONS.md) (상황별 대응 · 백업/복구) · [docs/ADDING_SOURCE.md](docs/ADDING_SOURCE.md) (공식 source 추가)
+
 ## 기술 스택
 
 Next.js 16 (App Router, TypeScript strict) · Tailwind CSS 4 · shadcn/ui 스타일 컴포넌트(Radix) · Lucide · PostgreSQL + Drizzle ORM · Zod · ESLint · Prettier · Vitest · Playwright
@@ -23,9 +25,10 @@ npm run dev          # http://localhost:3000
 ### PostgreSQL 사용
 
 ```bash
+docker compose -f docker-compose.dev.yml up -d   # 로컬 PostgreSQL (선택)
 cp .env.example .env.local        # DATABASE_URL 설정
-npm run db:migrate                # drizzle/ 마이그레이션 적용
-npm run db:seed                   # 샘플 데이터 입력 (여러 번 실행해도 중복 없음)
+npm run db:migrate:prod           # drizzle/ 마이그레이션 적용 + 세부과목 카탈로그·source 기본값 동기화
+npm run db:seed                   # 샘플 데이터 입력 (여러 번 실행해도 중복 없음, 개발용)
 npm run dev
 ```
 
@@ -33,31 +36,36 @@ npm run dev
 
 ### 스크립트
 
-| 명령                | 설명                                  |
-| ------------------- | ------------------------------------- |
-| `npm run dev`       | 개발 서버                             |
-| `npm run build`     | 프로덕션 빌드 (시험 페이지 정적 생성) |
-| `npm run typecheck` | `tsc --noEmit`                        |
-| `npm run lint`      | ESLint                                |
-| `npm run format`    | Prettier                              |
-| `npm test`          | Vitest 단위 테스트                    |
-| `npm run test:e2e`  | Playwright (먼저 `npm run build`)     |
-| `npm run check`     | typecheck + lint + format + test      |
-| `npm run db:*`      | generate / migrate / push / seed      |
+| 명령                       | 설명                                                |
+| -------------------------- | --------------------------------------------------- |
+| `npm run dev`              | 개발 서버                                           |
+| `npm run build`            | 프로덕션 빌드 (시험 페이지 정적 생성)               |
+| `npm run typecheck`        | `tsc --noEmit`                                      |
+| `npm run lint`             | ESLint                                              |
+| `npm run format`           | Prettier                                            |
+| `npm test`                 | Vitest 단위 테스트                                  |
+| `npm run test:e2e`         | Playwright (먼저 `npm run build`)                   |
+| `npm run check`            | typecheck + lint + format + test                    |
+| `npm run db:*`             | generate / migrate / push / seed                    |
+| `npm run db:migrate:prod`  | 운영 migration (drizzle-kit 없이) + 카탈로그 동기화 |
+| `npm run ingest:*`         | 자동 수집 CLI (아래 "자동 수집")                    |
+| `npm run storage:selftest` | R2 실제 연결 점검 (`_internal/test/` 만 사용)       |
 
 ## URL 구조
 
-| URL                                         | 설명                                                    |
-| ------------------------------------------- | ------------------------------------------------------- |
-| `/exam/2025/high2/09`                       | 시험 상세 (기본 과목: 국어, canonical)                  |
-| `/exam/2025/high2/09/english`               | 과목별 페이지 (math, english, history, social, science) |
-| `/exam/2025/high3/09/social`                | 사회탐구 영역 페이지 (세부과목 선택)                    |
-| `/exam/2025/high3/09/social/social-culture` | 세부과목 페이지 (사회·문화, `science/physics-1` 등)     |
-| `/grade/high2`, `/year/2025`                | 학년별 / 년도별 목록                                    |
-| `/search?q=25 고2 9모`                      | 자유 검색 → 해당 시험으로 redirect                      |
-| `/api/files/[fileId]/download`              | 다운로드 (스토리지 URL로 302)                           |
-| `/api/files/[fileId]/view`                  | 미리보기/재생 (inline)                                  |
-| `/api/reports`                              | 오류 신고 (POST, Zod 검증)                              |
+| URL                                         | 설명                                                                                 |
+| ------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `/exam/2025/high2/09`                       | 시험 상세 (기본 과목: 국어, canonical)                                               |
+| `/exam/2025/high2/09/english`               | 과목별 페이지 (math, english, history, social, science, vocational, second-language) |
+| `/exam/2025/high3/09/social`                | 사회탐구 영역 페이지 (세부과목 선택)                                                 |
+| `/exam/2025/high3/09/social/social-culture` | 세부과목 페이지 (사회·문화, `science/physics-1` 등)                                  |
+| `/grade/high2`, `/year/2025`                | 학년별 / 년도별 목록                                                                 |
+| `/search?q=25 고2 9모`                      | 자유 검색 → 해당 시험으로 redirect                                                   |
+| `/api/files/[fileId]/download`              | 다운로드 (스토리지 URL로 302)                                                        |
+| `/api/files/[fileId]/view`                  | 미리보기/재생 (inline)                                                               |
+| `/api/reports`                              | 오류 신고 (POST, Zod 검증)                                                           |
+| `/api/health`                               | `{app, database}` 상태만 (민감정보 없음)                                             |
+| `/api/cron/{scheduled,release-watch,jobs}`  | scheduler 진입점 (`Authorization: Bearer CRON_SECRET`)                               |
 
 `/exam/2025/high2/9` → `/exam/2025/high2/09`, `/exam/.../korean` → 기본 URL로 영구 redirect 합니다.
 
@@ -186,7 +194,8 @@ interface ExamSourceAdapter {
 - **같은 시험, 여러 source:** "2026학년도 9월 모의평가", "2025년 9월 모의평가", "9월 모평" 은 모두 `2025-3-09 kice_mock` 하나의 Exam 으로 합쳐지고, 각 source 는 `source_exams` 로 연결됩니다.
 - **우선순위** (`source_priorities`, 시험 유형별로 설정): 평가원 시험은 KICE → EBSi → 교육청, 학력평가는 교육청 → EBSi → KICE 순입니다. 원본성 기준이며 서비스 평가가 아닙니다.
 - **학년도 vs 시행 연도:** URL·SEO 의 `year` 는 항상 **시행 연도**입니다. `2027학년도 수능`은 `/exam/2026/high3/11` 이 되고, `exams.academic_year = 2027` 로 따로 저장됩니다.
-- **지원하지 않는 것:** 제2외국어·직업탐구는 건너뜁니다.
+- **영역:** 국어 · 수학 · 영어 · 한국사(`history`) · 사회탐구 · 과학탐구 · 직업탐구(`vocational`) · 제2외국어/한문(`second_language`, URL `second-language`).
+  과목 탭은 하드코딩하지 않고 시험에 실제로 있는 영역(`exam_subjects`)만 보여줍니다.
 
 ### 세부과목(선택과목) 모델
 
@@ -211,6 +220,22 @@ interface ExamSourceAdapter {
   - 예: KICE 에 사회·문화가 있으면 KICE 를 씁니다. KICE 에 생활과 윤리가 없으면 EBSi 자료를 씁니다.
 - **실시간 공개:** course 단위로 즉시 게시합니다. 사회·문화가 공개되면 사회·문화만 게시되고, 아직 없는 생활과 윤리는 "자료 준비 중" 입니다.
 
+### 시험 체제 (regime) — 과거·미래 시험을 현재 과목 체계로 강제하지 않기
+
+"특정 연도·학년의 시험에 어떤 세부과목이 있을 수 있는가"만 표현합니다 (`src/lib/regimes.ts`).
+체제는 학생이 치를 수능 학년도(cohort = 시행연도 + 4 − 학년)로 고릅니다.
+
+| 체제        | cohort       | 세부과목 검증                                                             |
+| ----------- | ------------ | ------------------------------------------------------------------------- |
+| `legacy`    | ~2021학년도  | 목록 없음 → 정확한 과목명·관리자 alias 만 인정, 약칭은 검토               |
+| `csat_2022` | 2022~2027    | 국어·수학 선택, 사탐 9, 과탐 8, 직탐 6, 제2외국어/한문 9 (학년 조건 포함) |
+| `csat_2028` | 2028~ (잠정) | 통합사회·통합과학 등. 목록 밖 과목은 manual_review                        |
+
+- 체제에 없는 카탈로그 판정(예: 2028 체제 시험의 "물리학Ⅰ")은 확정하지 않고 manual_review 로 보냅니다. source 표기는 덮어쓰지 않습니다.
+- source 원문은 `source_artifacts.source_label` / `source_subject_label` / `course_label` 에 항상 보존합니다 (예: 원문 "사회·문화" ↔ canonical `social-culture`).
+- 관리자 alias 는 "이 시험 체제에만" 저장할 수 있습니다 (과거 표기 "물리Ⅰ" 을 2028 체제에 퍼뜨리지 않음).
+- 직업탐구·제2외국어 course 행은 새 enum 값 제약 때문에 migration 이 아니라 `db:migrate:prod`/`ingest:sources`/`db:seed` 의 카탈로그 동기화가 넣습니다.
+
 ### 실제 source 검증 (live fixture)
 
 EBSi/KICE 의 실제 페이지를 보지 않은 상태에서 parser 가 맞다고 가정하지 않습니다.
@@ -218,9 +243,15 @@ EBSi/KICE 의 실제 페이지를 보지 않은 상태에서 parser 가 맞다�
 
 ```bash
 # 1) 네트워크가 되는 환경에서 실제 공개 페이지(HTML 만) 저장 — allowlist·robots.txt·요청 간격 준수, 저장 전 sanitize
-npm run ingest:capture -- --source=ebsi --url="https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs?targetCd=D300" --grade=3 --year=2025
-npm run ingest:capture -- --source=kice --url="<목록 URL>" --kind=board-list
-npm run ingest:capture -- --source=kice --url="<게시글 URL>" --kind=board-detail --exam-title="2026학년도 9월 모의평가"
+npm run ingest:capture -- --source=ebsi --page-type=exam_list --grade=3 --year=2025
+npm run ingest:capture -- --source=kice --page-type=exam_list --url="<목록 URL>"
+npm run ingest:capture -- --source=kice --page-type=exam_detail --url="<게시글 URL>" --exam-title="2026학년도 9월 모의평가"
+npm run ingest:capture -- --source=kice --page-type=exam_release_index --url="<공지의 시험별 자료 페이지>" \
+  --exam-title="2026학년도 대학수학능력시험" --exam-date=2025-11-13
+#    → 저장된 .json 의 expected 요약(시험 수·영역·자료 수)을 실제 페이지와 대조한 뒤 expectedReviewed: true 로 바꾼다
+
+# 1-1) 읽기 전용 진단 (DB 변경 없음)
+npm run ingest:inspect -- --source=ebsi --year=2026 --grade=3 --month=9
 
 # 2) 저장된 모든 실제 fixture 를 parser 에 통과 (네트워크 없음, CI 에서도 실행)
 npm run ingest:fixtures:validate
@@ -232,20 +263,27 @@ npm run ingest:parser-version
 # 4) 통과하면 증거 기록 (DATABASE_URL)
 npm run ingest:fixtures:validate -- --record
 
-# 5) /admin 에서 [검증 승인] → [켜기]
+# 5) /admin 에서 [검증 승인] → [health check] → [켜기] → 기능 단계별 켜기 (시험 목록 → 자료 수집 → 시험일 감시)
 ```
 
-- **fixture 형식:** `tests/fixtures/live/<source>/<name>.html` 과 `.json`(source, capturedAt, url, sha256, kind, context, expect) 입니다.
+- **fixture 형식:** `tests/fixtures/live/<source>/<name>.html` 과 `.json`(source, pageType, url, capturedAt, sha256, parserVersion, examIdentity, context, expected, expectedReviewed) 입니다.
+  - pageType: `exam_list` · `exam_detail` · `exam_release_index` · `listening_archive` · `schedule`
   - 저장 후 HTML 을 손으로 고치면 sha256 불일치로 실패합니다.
+  - parse 가 성공해도 expected 요약(시험 수, 포함 영역·세부과목, 최소 자료 수, 공개 시각 수)과 다르면 "구조 변경 가능성"으로 실패합니다.
+  - `expectedReviewed: false` 인 fixture 는 검증 증거로 쓰지 않습니다 (parser 가 맞다고 추측해서 verified 처리하지 않음).
 - **sanitizer:** 쿠키·세션 id(jsessionid 등), CSRF 토큰·nonce, 추적 parameter(utm_*, gclid …), 분석 스크립트, 로그인 개인화 영역, 이메일을 제거합니다.
 - **parser contract:** 모든 source 가 `year, grade, month, examType, subject, course(nullable), artifactType, artifactUrl` 을 돌려줘야 합니다.
   - 필드 누락, 구조 변경, allowlist 밖 URL, 예상과 다른 빈 페이지는 실패로 처리합니다.
 - **parser 버전:** `src/ingestion/sources/parser-versions.json` 에 parser 관련 파일 hash 와 버전이 고정됩니다.
   - 코드가 바뀌면 테스트가 실패하므로 `ingest:parser-version` 으로 버전을 올려야 합니다.
   - 버전이 바뀌면 이전 승인은 무효가 되어 다시 검증해야 합니다.
-- **자동 수집 조건:** `enabled = true` AND 실제 fixture 검증 증거 AND 관리자 승인 AND 승인된 parser 버전 = 현재 버전.
+- **켜기 조건 (production 활성화):** live fixture 존재 + fixture validation 통과(증거 기록) + 현재 parserVersion 과 fixture parserVersion 일치 + 관리자 승인 + 24시간 내 health check 통과.
+- **기능 단위 활성화:** `discovery`(시험 metadata) → `artifacts`(자료 URL·검증·게시) → `release_watch`(시험일 감시) 순서로만 켤 수 있습니다.
   - `SOURCE_<ID>_ENABLED` 환경변수로는 우회할 수 없습니다.
-  - 실제 fixture 검증이 실패하면 승인이 취소되고 source 가 꺼집니다.
+  - 실제 fixture 검증이 실패하면 승인이 취소되고 source 와 모든 기능이 꺼집니다.
+- **source health:** `unverified` · `healthy` · `degraded`(부분 실패) · `structure_changed`(구조/robots/404 — 사람 확인 전까지 중단) · `network_error`(timeout·5xx·429·403 — 재시도) · `disabled`. 구조 변경과 네트워크 장애를 같은 값으로 묶지 않습니다.
+- **KICE 시험별 자료 표:** `KiceExamIndexParser` 는 CSS selector 대신 표 머리글(교시·시험영역·정답 공개시간·문제·정답·듣기평가·음성대본)로 열을 찾습니다. index URL 은 운영자가 공식 공지에서 확인해 일정 파일의 `sourcePages` 에 등록합니다 (URL 규칙을 추측하지 않음).
+- **영어 듣기 페이지:** `listening_archive` parser 는 MP3·대본만 수집하고, 듣기 문제·정답 PDF 는 본 시험 영어 슬롯을 덮어쓰지 않도록 건너뜁니다. ZIP 은 압축 해제하지 않고 검토 대상으로 둡니다.
 
 ### Artifact 정책 · 저작권
 
@@ -258,21 +296,29 @@ npm run ingest:fixtures:validate -- --record
 - 사용자 UX 는 항상 같습니다. 화면은 `/api/files/{id}/download` 만 알고, 서버가 `storage` 이면 R2 서명 URL 을, `redirect` 이면 공식 URL 을 선택합니다. 공식 URL 을 화면에 하드코딩하지 않습니다.
 - 공개적으로 접근 가능한 공식 자료만 대상으로 합니다. 로그인, CAPTCHA, anti-bot, 비공개 API 는 우회하지 않고 robots.txt 를 따릅니다.
 - 실제 시험 PDF 와 음원은 저장소에 절대 넣지 않습니다. 테스트 파일은 모두 코드로 생성한 placeholder 입니다.
-- **provenance:** `source_artifacts` 에 source·sourceUrl·firstDiscoveredAt·sourcePublishedAt·verifiedAt·sha256 을 보존하고, 화면에는 `출처: EBSi` 로 표시합니다.
+- **provenance:** `source_artifacts` 에 source·sourceUrl·finalUrl·deliveryPolicy·firstDiscoveredAt·sourcePublishedAt·verifiedAt·contentFingerprint(·sha256) 를 보존하고, 화면에는 `출처: EBSi` 로 표시합니다.
+- **검증 방식:** `source_redirect`/`manual_review` 는 파일 전체를 받지 않고 앞 4KB + header 로 HTTP status·Content-Type·magic bytes·크기(content-length)·redirect 최종 도메인(allowlist)을 확인합니다 (`verification_mode=probe`). `mirror_allowed` 만 전체를 받아 SHA-256 후 R2 에 저장합니다.
+- **R2 key:** `exams/{year}/high{grade}/{MM}/{subject}/{course?}/{type}-{sha16}.pdf`, 생성 자료는 `generated/exams/...`. 외부 파일명은 key 로 쓰지 않습니다.
 
 ### Backfill
 
 ```bash
 npm run ingest:backfill -- --dry-run                 # 구조 확인 (DB·네트워크 불필요)
-npm run ingest:sources -- --enable=ebsi              # 검증된 source 만 켜기
-INGESTION_ENABLED=true npm run ingest:backfill -- --source=ebsi --from=2015 --to=2026
-npm run ingest:backfill -- --year=2025 --grade=2     # 범위 지정
+# canary: 최근 1년 → audit → 최근 3년 → audit → 전체 (앞 단계 audit 통과 기록이 없으면 넓은 범위는 거부)
+INGESTION_ENABLED=true npm run ingest:backfill -- --source=ebsi --from=2025 --to=2026 --metadata-only
+npm run ingest:audit -- --source=ebsi --from=2025 --to=2026 --record      # blocking 0 이면 다음 단계 허용
+INGESTION_ENABLED=true npm run ingest:backfill -- --source=ebsi --from=2023 --to=2026
+npm run ingest:audit -- --source=ebsi --from=2023 --to=2026 --record
+INGESTION_ENABLED=true npm run ingest:backfill -- --source=ebsi --from=<source 가 보여주는 가장 오래된 연도> --to=2026
 npm run ingest:backfill -- --force                   # 완료된 checkpoint 도 다시 수집
 npm run ingest:coverage -- --from=2015 --to=2026     # 누락 자료 확인 (세부과목 단위, 과목 미확정 포함, --json 지원)
+npm run ingest:audit -- --json                       # 중복·URL·도메인·MIME·누락·미확정·provenance·공개 후 미발견
 ```
 
-- (source, 연도, 학년) 범위마다 `ingestion_checkpoints` 를 남깁니다. 중간에 실패해도 다시 실행하면 완료된 범위는 건너뜁니다.
-- 처음에는 metadata 와 공식 URL 만 구축됩니다 (`source_redirect`).
+- (source, 연도, 학년, 모드) 범위마다 `ingestion_checkpoints` 를 남깁니다. 중간에 실패해도 다시 실행하면 완료된 범위는 건너뜁니다.
+- `--metadata-only`: Exam · ExamSubject · SourceExam · SourceArtifact(공식 URL) 까지만 만들고 파일 검증·다운로드·게시는 하지 않습니다. 이후 전체 수집 때 검증합니다.
+- 시작 연도는 코드에 가정하지 않습니다. source 가 제공하는 archive 범위를 `ingest:inspect` 로 확인해 지정합니다.
+- 시험은 있는데 일부 파일이 없으면 시험을 지우지 않고 coverage/audit 에 누락으로 표시합니다.
 
 ### 시험 일정 · Release watch
 
@@ -282,7 +328,11 @@ npm run ingest:schedules -- --file=data/schedules/2027.json   # 공식 발표로
 
 - 일정을 등록하면 시험 페이지가 미리 생성되고, "시험 예정 · 2027년 3월 24일 / 시험 자료는 시험 종료 후 업데이트됩니다" 를 표시합니다. 검색엔진용 가짜 내용은 만들지 않습니다.
 - **평상시:** source 별로 6시간 간격으로 최근 2년을 확인합니다.
-- **시험 당일 (release watch):** 예상 공개 시간대(기본: 시험일 12:00 ~ 다음 날 23:59 KST, 일정마다 조정 가능)에만 해당 시험을 짧은 간격으로 확인합니다.
+- **시험 당일 (release watch):** 자료 단위(`artifact_watch_states`: 시험·영역·세부과목·종류)로 남은 자료만 확인합니다.
+  - 확인 시작 시각: source 공식 공개 시각(KICE 표의 "국어 10:56" 등) > 일정 metadata > 기본 시간대(시험일 12:00 ~ 다음 날 23:59 KST). 시각은 하드코딩하지 않습니다.
+  - 공개 2분 전부터 낮은 빈도(최소 간격 ×2), 공개 이후 source 최소 간격, 공식 시각 2시간 뒤에도 없으면 간격 ×3.
+  - 이미 확보한 자료(found)는 다시 확인하지 않습니다. 영어 음원만 늦으면 음원만 기다립니다. 모든 슬롯이 found 면 감시 종료.
+  - 공개 시간대가 끝났는데 없는 슬롯은 `missed` 가 되고 운영 알림을 보냅니다.
   - 간격은 source 별 `minPollIntervalSeconds` 이며, 설정과 관계없이 최소 120초입니다.
   - 요청 예절도 source 별로 둡니다: `requestTimeoutMs`, `maxConcurrentRequests`, `minRequestGapMs`, `maxRetries`, robots.txt `crawl-delay`.
 - 발견한 자료는 곧바로 검증·게시됩니다. 일정 상태는 `scheduled → watching → published → completed` 로 바뀝니다.
@@ -308,23 +358,23 @@ npm run ingest:schedules -- --file=data/schedules/2027.json   # 공식 발표로
 - **인증:** `ADMIN_EMAIL_ALLOWLIST` + `ADMIN_ACCESS_TOKEN` 을 확인한 뒤 서명된 세션(12시간)을 발급합니다.
   - `proxy.ts` 와 각 페이지·action 에서 이중으로 확인합니다.
   - 세 값 중 하나라도 없으면 `/admin` 전체가 404 가 됩니다. 가능하면 배포 플랫폼의 접근 보호도 함께 켜세요.
-- **수집 현황:** source health(정상/주의/고장/꺼짐, 마지막 성공, 연속 실패), 시험별 자료 표(문제 ✓ 해설 ✗ 듣기 …), 실패 목록과 [다시 시도] 를 보여줍니다.
-- **운영자 작업:** source 켜기/끄기, 지금 수집, manual review 승인·거절, 단어 후보 검토, source mapping 수정(수정하면 고정되어 자동 수집이 되돌리지 않음), 실행 기록·오류 확인, 오류 신고 처리를 할 수 있습니다.
+- **수집 현황:** source health(정상/주의/구조 변경/네트워크 오류/미검증/꺼짐, 마지막 성공, 연속 실패, health check), 켜기 전 남은 조건, 시험별 자료 표(문제 ✓ 해설 ✗ 듣기 …), 실패 목록과 [다시 시도]/[무시] 를 보여줍니다.
+- **운영자 작업:** health check, 검증 승인·취소, source 켜기/끄기, 기능 단계별 켜기, 지금 수집, manual review 승인·거절, 과목 미확정 자료 과목 지정(source/전체/시험 체제 범위 alias), 단어 후보 검토, source mapping 수정, 실행 기록·오류 확인, 영구 실패 job 재시도·무시, 오류 신고 처리(접수→확인 중→해결/기각).
 - 파일 업로드 UI 는 없습니다. 모든 작업은 같은 job 파이프라인을 거치고 감사 로그가 남습니다.
 
 ### 실패 복구
 
-| 증상                                           | 확인                                   | 조치                                                                                                     |
-| ---------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| source `고장` + `SOURCE_STRUCTURE_CHANGED`     | `/admin/runs`, `npm run ingest:health` | 사이트 개편입니다. `ingest:fixtures` 로 새 구조를 저장하고 `structure.ts` 를 수정한 뒤 배포, [지금 수집] |
-| `ROBOTS_DISALLOWED`                            | 오류 목록                              | 해당 경로는 수집하지 않습니다. source 를 끄고 대체 source 를 사용하세요.                                 |
-| 자료 `failed` (HTML_RESPONSE, INVALID_MAGIC …) | 대시보드 실패 목록                     | 원본을 확인한 뒤 [다시 시도] 하세요. 공식 URL 이 바뀌었다면 다음 discovery 가 자동으로 반영합니다.       |
-| job `failed` (재시도 소진)                     | 대시보드                               | 원인을 해결하고 [실패 job 전체 다시 시도] 를 누르세요.                                                   |
-| 잘못된 시험에 연결됨                           | `/admin/mappings`                      | 올바른 연도·학년·월로 이동하면 mapping 이 고정됩니다.                                                    |
-| 처리 중에 프로세스 종료                        | 자동                                   | 15분 이상 `processing` 으로 남은 job 은 다음 실행에서 자동으로 복구됩니다.                               |
+| 증상                                            | 확인                                   | 조치                                                                                                  |
+| ----------------------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| source `구조 변경` + `SOURCE_STRUCTURE_CHANGED` | `/admin/runs`, `npm run ingest:health` | 사이트 개편입니다. `ingest:capture` 로 새 구조를 저장하고 `structure.ts` 를 수정 → 재검증·승인 → 배포 |
+| `ROBOTS_DISALLOWED`                             | 오류 목록                              | 해당 경로는 수집하지 않습니다. source 를 끄고 대체 source 를 사용하세요.                              |
+| 자료 `failed` (HTML_RESPONSE, INVALID_MAGIC …)  | 대시보드 실패 목록                     | 원본을 확인한 뒤 [다시 시도] 하세요. 공식 URL 이 바뀌었다면 다음 discovery 가 자동으로 반영합니다.    |
+| job `failed` (재시도 소진)                      | 대시보드                               | 원인을 해결하고 [다시 시도], 의미 없는 job 은 [무시] (`dismissed`)                                    |
+| 잘못된 시험에 연결됨                            | `/admin/mappings`                      | 올바른 연도·학년·월로 이동하면 mapping 이 고정됩니다.                                                 |
+| 처리 중에 프로세스 종료                         | 자동                                   | 15분 이상 `processing` 으로 남은 job 은 다음 실행에서 자동으로 복구됩니다.                            |
 
 모든 이벤트는 한 줄 JSON 으로 기록됩니다: `ingestion.started`, `exam.discovered`, `artifact.discovered`, `artifact.verified`, `artifact.published`, `artifact.changed`, `ingestion.failed`, `ingestion.completed` 등. URL query 와 secret 은 로그에서 제거됩니다.
-알림은 `OpsNotifier` 인터페이스로 분리되어 있습니다. 기본 구현은 로그만 남기며, Slack/Discord 구현체를 추가해 연결할 수 있습니다.
+알림: `OPS_WEBHOOK_URL`(https, Discord/Slack 호환)을 설정하면 source 구조 변경, 공개 시간대 종료 후 자료 미발견, job 영구 실패, 공식 자료 내용 변경, 검토 필요를 보냅니다. 없으면 구조화 로그만 남기고 앱은 정상 동작합니다.
 
 ### 영어 단어장 pipeline
 
@@ -344,10 +394,26 @@ npm run ingest:schedules -- --file=data/schedules/2027.json   # 공식 발표로
 
 \* `ALLOW_SAMPLE_INDEXING=1`로 빌드한 경우입니다. 이 설정이 없으면 샘플 페이지는 의도대로 noindex 처리됩니다.
 
-## 향후 작업
+## 배포
 
-- **운영 전 필수:** 각 source 의 실제 페이지를 capture → validate → 승인 (위 절차). 이용조건 확인
-- 실제 fixture 에서 여러 과목 zip 이 확인되면 archive 처리 구현
-- 공식 등급 구분 점수가 공개되는 형식을 확인한 뒤 automated grade-cut adapter 추가
-- Slack/Discord `OpsNotifier` 구현
-- 다중 인스턴스 배포 시 오류 신고 rate limiter 를 공유 저장소로 이전
+Next.js Node runtime 하나와 scheduler 하나면 됩니다 (별도 worker 서비스 불필요 — job 은 cron 호출 안에서 시간 예산 내 처리).
+
+```bash
+docker build -t mogo-storage --build-arg NEXT_PUBLIC_SITE_URL=https://<도메인> .
+docker run --env-file .env.production mogo-storage npm run db:migrate:prod   # 배포마다 먼저 (idempotent)
+docker run -d --env-file .env.production -p 3000:3000 mogo-storage          # HEALTHCHECK: /api/health
+```
+
+- production 에서 위험한 설정(https 아닌 `NEXT_PUBLIC_SITE_URL`, `INGESTION_ENABLED=true` 인데 `CRON_SECRET`/`DATABASE_URL` 없음, R2 설정 누락)이면 서버가 시작되지 않습니다. 관리자 미설정처럼 안전하게 꺼지는 기능은 경고만 남기고 `/admin` 은 404 입니다.
+- scheduler: 위 "Scheduler 설정" 중 하나로 `/api/cron/scheduled` 를 5~10분마다 호출합니다 (`Authorization: Bearer CRON_SECRET`). 동시에 두 번 호출돼도 advisory lock 으로 한 번만 실행됩니다.
+- Vercel 등 serverless 도 가능합니다 (`maxDuration=300`, 폰트 파일 tracing 포함). 단어장 PDF 생성은 Node runtime 이 필요합니다.
+- R2: credential 을 넣은 뒤 `npm run storage:selftest` 로 업로드·읽기·서명 다운로드·한글 파일명을 확인합니다 (`_internal/test/` 사용 후 삭제).
+- GitHub: `main` 에 PR checks(CI)를 required 로, force push 금지, 1명 이상 review 를 권장합니다.
+- 백업/복구, 장애 대응: [docs/OPERATIONS.md](docs/OPERATIONS.md)
+
+## 코드 밖에서 남은 일
+
+- 각 공식 source 의 실제 페이지를 capture → 사람 확인(expectedReviewed) → validate → 승인 (위 절차). 이 개발 환경에서는 네트워크 정책으로 공식 사이트 접근이 차단되어 아직 한 번도 실제 검증되지 않았습니다.
+- source 별 이용조건(재배포 허용 여부) 법적 검토 → 확인된 source 만 `mirror_allowed`
+- R2 bucket·credential 발급, 도메인 연결, `CRON_SECRET`·관리자 secret 발급, `OPS_WEBHOOK_URL` 설정
+- 공식 등급컷·정답률은 공개 형식을 확인한 source 만 입력 (사교육 예상치는 이용조건 확인 전까지 수동 입력)

@@ -7,6 +7,7 @@ import type { ExamRepository } from "./repository";
 import type {
   Exam,
   ExamFile,
+  ExamSchedule,
   ExamSubject,
   GradeCut,
   ListeningTrack,
@@ -22,6 +23,7 @@ type FileRow = typeof s.examFiles.$inferSelect;
 const toExam = (row: ExamRow): Exam => ({
   ...row,
   grade: row.grade as Grade,
+  academicYear: row.academicYear ?? null,
   createdAt: row.createdAt.toISOString(),
   updatedAt: row.updatedAt.toISOString(),
 });
@@ -101,35 +103,38 @@ export class DrizzleExamRepository implements ExamRepository {
     if (!current) return null;
 
     const isEnglish = subject === "english";
-    const [files, questionRows, gradeCutRows, vocabularyRows, trackRows] = await Promise.all([
-      this.db
-        .select()
-        .from(s.examFiles)
-        .where(and(eq(s.examFiles.examId, exam.id), eq(s.examFiles.subject, subject))),
-      this.db.query.questions.findMany({
-        where: and(eq(s.questions.examId, exam.id), eq(s.questions.subject, subject)),
-        orderBy: asc(s.questions.questionNumber),
-        with: { statistics: { orderBy: desc(s.questionStatistics.statisticsUpdatedAt), limit: 1 } },
-      }),
-      this.db
-        .select()
-        .from(s.gradeCuts)
-        .where(and(eq(s.gradeCuts.examId, exam.id), eq(s.gradeCuts.subject, subject))),
-      isEnglish
-        ? this.db
-            .select({ v: s.vocabulary, questionNumber: s.questions.questionNumber })
-            .from(s.vocabulary)
-            .innerJoin(s.questions, eq(s.vocabulary.questionId, s.questions.id))
-            .where(eq(s.vocabulary.examId, exam.id))
-            .orderBy(asc(s.questions.questionNumber))
-        : Promise.resolve([]),
-      isEnglish
-        ? this.db.query.listeningTracks.findMany({
-            where: eq(s.listeningTracks.examId, exam.id),
-            with: { transcript: true },
-          })
-        : Promise.resolve([]),
-    ]);
+    const [files, questionRows, gradeCutRows, vocabularyRows, trackRows, schedule] =
+      await Promise.all([
+        this.db
+          .select()
+          .from(s.examFiles)
+          .where(and(eq(s.examFiles.examId, exam.id), eq(s.examFiles.subject, subject))),
+        this.db.query.questions.findMany({
+          where: and(eq(s.questions.examId, exam.id), eq(s.questions.subject, subject)),
+          orderBy: asc(s.questions.questionNumber),
+          with: {
+            statistics: { orderBy: desc(s.questionStatistics.statisticsUpdatedAt), limit: 1 },
+          },
+        }),
+        this.db
+          .select()
+          .from(s.gradeCuts)
+          .where(and(eq(s.gradeCuts.examId, exam.id), eq(s.gradeCuts.subject, subject))),
+        isEnglish
+          ? this.db
+              .select()
+              .from(s.vocabulary)
+              .where(and(eq(s.vocabulary.examId, exam.id), eq(s.vocabulary.subject, "english")))
+              .orderBy(asc(s.vocabulary.questionNumber), asc(s.vocabulary.word))
+          : Promise.resolve([]),
+        isEnglish
+          ? this.db.query.listeningTracks.findMany({
+              where: eq(s.listeningTracks.examId, exam.id),
+              with: { transcript: true },
+            })
+          : Promise.resolve([]),
+        this.getSchedule(exam.id),
+      ]);
 
     const questions: QuestionWithStats[] = questionRows.map(
       ({ statistics, createdAt: _c, updatedAt: _u, ...q }) => {
@@ -154,9 +159,14 @@ export class DrizzleExamRepository implements ExamRepository {
       return { ...g, updatedAt: g.updatedAt.toISOString() };
     });
 
-    const vocabulary: VocabularyItem[] = vocabularyRows.map(({ v, questionNumber }) => ({
-      ...v,
-      questionNumber,
+    const vocabulary: VocabularyItem[] = vocabularyRows.map((v) => ({
+      id: v.id,
+      examId: v.examId,
+      questionId: v.questionId,
+      questionNumber: v.questionNumber,
+      word: v.word,
+      meaning: v.meaning,
+      partOfSpeech: v.partOfSpeech,
       difficulty: Math.min(3, Math.max(1, v.difficulty)) as 1 | 2 | 3,
       createdAt: v.createdAt.toISOString(),
     }));
@@ -174,6 +184,22 @@ export class DrizzleExamRepository implements ExamRepository {
       gradeCuts,
       vocabulary,
       listeningTracks,
+      schedule,
+    };
+  }
+
+  async getSchedule(examId: string): Promise<ExamSchedule | null> {
+    const [row] = await this.db
+      .select()
+      .from(s.examSchedules)
+      .where(eq(s.examSchedules.examId, examId))
+      .limit(1);
+    if (!row) return null;
+    return {
+      ...row,
+      grade: row.grade as Grade,
+      expectedReleaseStart: row.expectedReleaseStart?.toISOString() ?? null,
+      expectedReleaseEnd: row.expectedReleaseEnd?.toISOString() ?? null,
     };
   }
 

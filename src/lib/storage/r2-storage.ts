@@ -1,5 +1,11 @@
 import { createHash, createHmac } from "node:crypto";
-import { contentDisposition, type StorageFile, type StorageProvider } from "./types";
+import {
+  assertSafeStorageKey,
+  contentDisposition,
+  type PutObjectInput,
+  type StorageFile,
+  type StorageProvider,
+} from "./types";
 
 export interface R2Config {
   /** 공개 버킷/커스텀 도메인 주소. 있으면 미리보기는 CDN URL을 그대로 쓴다. */
@@ -37,6 +43,80 @@ export class R2StorageProvider implements StorageProvider {
   async getDownloadUrl(file: StorageFile) {
     if (this.canSign()) return this.presign(file, "attachment");
     return this.publicUrl(file.storageKey);
+  }
+
+  async putObject(input: PutObjectInput) {
+    assertSafeStorageKey(input.key);
+    if (!this.canSign()) throw new Error("R2 putObject requires R2 credentials");
+    const payloadHash = createHash("sha256").update(input.body).digest("hex");
+    if (input.sha256 && input.sha256 !== payloadHash) throw new Error("sha256 mismatch");
+    const url = this.signRequest("PUT", input.key, {}, payloadHash, {
+      "content-type": input.contentType,
+      "x-amz-content-sha256": payloadHash,
+    });
+    const res = await fetch(url.url, {
+      method: "PUT",
+      headers: url.headers,
+      body: Buffer.from(input.body),
+    });
+    if (!res.ok) throw new Error(`R2 putObject failed: HTTP ${res.status}`);
+  }
+
+  /** 헤더 서명 방식(SigV4) 요청 생성 — putObject 용 */
+  private signRequest(
+    method: "PUT",
+    key: string,
+    query: Record<string, string>,
+    payloadHash: string,
+    extraHeaders: Record<string, string>,
+    now = new Date(),
+  ) {
+    const { accountId, accessKeyId, secretAccessKey, bucket } = this.config;
+    const host = `${accountId}.r2.cloudflarestorage.com`;
+    const path = `/${bucket}/${encodeKey(key)}`;
+    const amzDate = now
+      .toISOString()
+      .replace(/[-:]/g, "")
+      .replace(/\.\d{3}/, "");
+    const day = amzDate.slice(0, 8);
+    const scope = `${day}/auto/s3/aws4_request`;
+    const headers: Record<string, string> = { host, "x-amz-date": amzDate, ...extraHeaders };
+    const names = Object.keys(headers)
+      .map((h) => h.toLowerCase())
+      .sort();
+    const canonicalHeaders = names.map((h) => `${h}:${headers[h]!.trim()}\n`).join("");
+    const canonicalQuery = Object.keys(query)
+      .sort()
+      .map((k) => `${awsEncode(k)}=${awsEncode(query[k]!)}`)
+      .join("&");
+    const canonicalRequest = [
+      method,
+      path,
+      canonicalQuery,
+      canonicalHeaders,
+      names.join(";"),
+      payloadHash,
+    ].join("\n");
+    const stringToSign = [
+      "AWS4-HMAC-SHA256",
+      amzDate,
+      scope,
+      createHash("sha256").update(canonicalRequest).digest("hex"),
+    ].join("\n");
+    const kSigning = hmac(
+      hmac(hmac(hmac(`AWS4${secretAccessKey}`, day), "auto"), "s3"),
+      "aws4_request",
+    );
+    const signature = createHmac("sha256", kSigning).update(stringToSign).digest("hex");
+    const { host: _host, ...sendHeaders } = headers;
+    void _host;
+    return {
+      url: `https://${host}${path}${canonicalQuery ? `?${canonicalQuery}` : ""}`,
+      headers: {
+        ...sendHeaders,
+        authorization: `AWS4-HMAC-SHA256 Credential=${accessKeyId}/${scope}, SignedHeaders=${names.join(";")}, Signature=${signature}`,
+      },
+    };
   }
 
   private canSign() {

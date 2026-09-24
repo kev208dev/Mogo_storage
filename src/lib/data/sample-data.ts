@@ -21,6 +21,7 @@ import { examSlug, monthSegment } from "../exam-path";
 import type {
   Exam,
   ExamFile,
+  ExamSchedule,
   ExamSubject,
   GradeCut,
   ListeningTrack,
@@ -94,6 +95,7 @@ function buildExams(): Exam[] {
           organizer: organizerOf(examType),
           examDate: null,
           slug: examSlug({ year, grade, month }),
+          academicYear: examType === "kice_mock" || examType === "csat" ? year + 1 : null,
           isSample: true,
           createdAt: CREATED_AT,
           updatedAt: CREATED_AT,
@@ -161,7 +163,12 @@ function makeFile(exam: Exam, subject: Subject, type: FileType, fileSize: number
     examId: exam.id,
     subject,
     type,
+    deliveryType: "storage",
     storageKey: `${base}/${type}.${EXT[type]}`,
+    externalUrl: null,
+    artifactOrigin: "official",
+    sourceArtifactId: null,
+    sourceLabel: null,
     mimeType: MIME[type],
     fileSize,
     originalFileName: `[샘플] ${exam.year}년 고${exam.grade} ${exam.month}월 ${SUBJECT_FILE_LABEL[subject]} ${FILE_NAME_LABEL[type]}.${EXT[type]}`,
@@ -517,6 +524,50 @@ function buildListeningTracks(featured: Exam, files: ExamFile[]): ListeningTrack
   return tracks;
 }
 
+// ── schedules ───────────────────────────────────────────────
+/**
+ * 샘플 일정 1건 (시험 전 페이지 UI 확인용). 실제 일정이 아니며 isSample=true.
+ * 운영 DB 에는 공식 발표로 확인된 일정만 등록한다.
+ */
+function buildSchedules(): ExamSchedule[] {
+  return [
+    {
+      id: "sched_sample_2026_h2_10",
+      year: 2026,
+      grade: 2,
+      month: 10,
+      examType: "school_mock",
+      organizer: organizerOf("school_mock"),
+      examDate: "2026-10-21",
+      expectedReleaseStart: null,
+      expectedReleaseEnd: null,
+      status: "scheduled",
+      announcementUrl: null,
+      isSample: true,
+      examId: examId(2026, 2, 10),
+    },
+  ];
+}
+
+function buildScheduledExams(schedules: ExamSchedule[]): Exam[] {
+  return schedules
+    .filter((s) => s.examId)
+    .map((s) => ({
+      id: s.examId!,
+      year: s.year,
+      grade: s.grade,
+      month: s.month,
+      academicYear: null,
+      examType: s.examType,
+      organizer: s.organizer,
+      examDate: s.examDate,
+      slug: examSlug(s),
+      isSample: true,
+      createdAt: CREATED_AT,
+      updatedAt: CREATED_AT,
+    }));
+}
+
 // ── assemble ────────────────────────────────────────────────
 export interface SampleDataset {
   exams: Exam[];
@@ -527,10 +578,12 @@ export interface SampleDataset {
   gradeCuts: GradeCut[];
   vocabulary: VocabularyItem[];
   listeningTracks: ListeningTrack[];
+  schedules: ExamSchedule[];
 }
 
 function buildSampleDataset(): SampleDataset {
-  const exams = buildExams();
+  const schedules = buildSchedules();
+  const exams = [...buildExams(), ...buildScheduledExams(schedules)];
   const featured = exams.find(
     (e) =>
       e.year === FEATURED_EXAM.year &&
@@ -549,6 +602,7 @@ function buildSampleDataset(): SampleDataset {
     gradeCuts: buildGradeCuts(featured),
     vocabulary: buildVocabulary(featured, questions),
     listeningTracks: buildListeningTracks(featured, files),
+    schedules,
   };
 }
 

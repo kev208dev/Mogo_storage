@@ -1,5 +1,7 @@
 import type {
+  ArtifactOrigin,
   ExamType,
+  FileDeliveryType,
   FileType,
   Grade,
   GradeCutSource,
@@ -19,6 +21,8 @@ export interface Exam {
   year: number;
   grade: Grade;
   month: number;
+  /** 대입 학년도 (평가원 모의평가·수능만). year 는 항상 시행 연도 */
+  academicYear: number | null;
   examType: ExamType;
   organizer: string;
   examDate: string | null;
@@ -32,8 +36,9 @@ export interface Exam {
 export interface ExamSubject {
   examId: string;
   subject: Subject;
-  questionCount: number;
-  totalScore: number;
+  /** 자동 수집으로 생성된 과목은 문항 구성을 모를 수 있다 */
+  questionCount: number | null;
+  totalScore: number | null;
 }
 
 export interface ExamFile {
@@ -41,9 +46,17 @@ export interface ExamFile {
   examId: string;
   subject: Subject;
   type: FileType;
-  storageKey: string;
+  /** storage: 우리 스토리지 / redirect: 검증된 공식 원본 URL. 화면은 이 구분을 몰라도 된다. */
+  deliveryType: FileDeliveryType;
+  storageKey: string | null;
+  /** 서버(다운로드 API)에서만 사용. 화면에 직접 렌더링하지 않는다. */
+  externalUrl: string | null;
+  artifactOrigin: ArtifactOrigin;
+  sourceArtifactId: string | null;
+  /** 화면 표시용 출처명 (예: "EBSi") */
+  sourceLabel: string | null;
   mimeType: string;
-  fileSize: number;
+  fileSize: number | null;
   originalFileName: string;
   createdAt: string;
   updatedAt: string;
@@ -84,7 +97,7 @@ export interface QuestionWithStats extends Question {
 export interface VocabularyItem {
   id: string;
   examId: string;
-  questionId: string;
+  questionId: string | null;
   questionNumber: number;
   word: string;
   meaning: string;
@@ -147,6 +160,23 @@ export interface NewReport {
   ipHash: string | null;
 }
 
+export interface ExamSchedule {
+  id: string;
+  year: number;
+  grade: Grade;
+  month: number;
+  examType: ExamType;
+  organizer: string;
+  /** YYYY-MM-DD (KST) */
+  examDate: string;
+  expectedReleaseStart: string | null;
+  expectedReleaseEnd: string | null;
+  status: "scheduled" | "watching" | "published" | "completed" | "cancelled";
+  announcementUrl: string | null;
+  isSample: boolean;
+  examId: string | null;
+}
+
 /** 시험 상세 과목 페이지에 필요한 데이터 묶음 */
 export interface ExamSubjectDetail {
   exam: Exam;
@@ -157,4 +187,6 @@ export interface ExamSubjectDetail {
   gradeCuts: GradeCut[];
   vocabulary: VocabularyItem[];
   listeningTracks: ListeningTrack[];
+  /** 확정된 시험 일정 (시험 전 페이지 표시용) */
+  schedule: ExamSchedule | null;
 }

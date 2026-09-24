@@ -1,5 +1,6 @@
 import { SAMPLE_AUDIO_SECONDS } from "@/lib/data/sample-data";
 import { createPlaceholderPdf, createSilentWav } from "@/lib/storage/mock-files";
+import { readMockObject } from "@/lib/storage/mock-storage";
 import { contentDisposition } from "@/lib/storage/types";
 
 /**
@@ -22,7 +23,16 @@ export async function GET(request: Request, ctx: RouteContext<"/api/mock-storage
 
   let body: Uint8Array<ArrayBuffer>;
   let contentType: string;
-  if (key.endsWith(".pdf")) {
+  // putObject 로 실제 저장된 파일(생성된 단어장 PDF, mirror 된 자료)이 있으면 그것을 우선 제공
+  const stored = await readMockObject(key).catch(() => null);
+  if (stored) {
+    body = new Uint8Array(stored);
+    contentType = key.endsWith(".pdf")
+      ? "application/pdf"
+      : key.endsWith(".mp3")
+        ? "audio/mpeg"
+        : "application/octet-stream";
+  } else if (key.endsWith(".pdf")) {
     body = createPlaceholderPdf([
       "Mogo Storage - SAMPLE PLACEHOLDER",
       "This is not a real exam file.",

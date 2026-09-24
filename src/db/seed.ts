@@ -64,6 +64,7 @@ async function main() {
           id: v.id,
           examId: v.examId,
           questionId: v.questionId,
+          questionNumber: v.questionNumber,
           word: v.word,
           meaning: v.meaning,
           partOfSpeech: v.partOfSpeech,
@@ -94,6 +95,12 @@ async function main() {
     await tx
       .insert(s.gradeCuts)
       .values(d.gradeCuts.map((g) => ({ ...g, updatedAt: new Date(g.updatedAt) })))
+      .onConflictDoNothing();
+    await tx
+      .insert(s.examSchedules)
+      .values(
+        d.schedules.map((sc) => ({ ...sc, expectedReleaseStart: null, expectedReleaseEnd: null })),
+      )
       .onConflictDoNothing();
   });
 

@@ -73,6 +73,7 @@ export class SampleExamRepository implements ExamRepository {
           : [],
       listeningTracks:
         subject === "english" ? this.data.listeningTracks.filter((t) => t.examId === exam.id) : [],
+      schedule: this.data.schedules.find((s) => s.examId === exam.id) ?? null,
     };
   }
 

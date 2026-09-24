@@ -2,6 +2,7 @@ import "server-only";
 import { getRepository } from "@/lib/data";
 import type { ExamFile } from "@/lib/data/types";
 import { getStorageProvider } from "@/lib/storage";
+import { resolveFileDelivery } from "@/lib/storage/delivery";
 
 const FILE_ID_PATTERN = /^[A-Za-z0-9_-]{1,100}$/;
 
@@ -31,7 +32,7 @@ const NOT_FOUND = () =>
   );
 
 /**
- * 파일 id → 스토리지 URL 로 302 redirect.
+ * 파일 id → 스토리지 URL 또는 검증된 공식 원본 URL 로 302 redirect.
  * 중간 페이지 없이 바로 파일로 연결된다. (R2 signed URL 은 매번 바뀌므로 redirect 자체는 캐시하지 않는다)
  *
  * 상태 구분:
@@ -56,12 +57,18 @@ export async function redirectToFile(fileId: string, mode: "view" | "download") 
   if (!file) return NOT_FOUND();
 
   try {
-    const storage = getStorageProvider();
-    const url =
-      mode === "download" ? await storage.getDownloadUrl(file) : await storage.getFileUrl(file);
+    const resolved = await resolveFileDelivery(file, mode, getStorageProvider());
+    if (resolved.kind === "unavailable") {
+      console.error("[file-redirect] unavailable", fileId, resolved.reason);
+      return fileErrorResponse(
+        502,
+        "오류로 다운로드할 수 없습니다",
+        "자료 정보에 문제가 있어 다운로드할 수 없습니다. 시험 페이지의 [오류 신고]로 알려주세요.",
+      );
+    }
     return new Response(null, {
       status: 302,
-      headers: { location: url, "cache-control": "no-store", "x-robots-tag": "noindex" },
+      headers: { location: resolved.url, "cache-control": "no-store", "x-robots-tag": "noindex" },
     });
   } catch (error) {
     console.error("[file-redirect] storage failed", fileId, error);

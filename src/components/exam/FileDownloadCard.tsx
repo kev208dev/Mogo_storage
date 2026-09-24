@@ -21,9 +21,12 @@ function formatLabel(file: ExamFile) {
       : file.mimeType.startsWith("audio/")
         ? "MP3"
         : "파일";
-  return `${ext} · ${formatFileSize(file.fileSize)}`;
+  const parts = [ext];
+  if (file.fileSize) parts.push(formatFileSize(file.fileSize));
+  if (file.artifactOrigin === "generated") parts.push("모의고사 창고 제작");
+  else if (file.sourceLabel) parts.push(`출처: ${file.sourceLabel}`);
+  return parts.join(" · ");
 }
-
 /**
  * 시험자료 1건. 파일이 없으면 버튼을 없애지 않고 "자료 준비 중" 상태를 보여준다.
  */

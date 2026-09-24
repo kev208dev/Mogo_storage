@@ -90,3 +90,27 @@ export const DIFFICULT_RATE_THRESHOLD = 40;
 export const VERY_DIFFICULT_RATE_THRESHOLD = 30;
 
 export const CHOICE_SYMBOLS = ["①", "②", "③", "④", "⑤"] as const;
+
+/** 공식 자료 제공 기관 종류 */
+export const EXAM_SOURCE_KINDS = ["ebsi", "kice", "education_office", "other_official"] as const;
+export type ExamSourceKind = (typeof EXAM_SOURCE_KINDS)[number];
+
+/**
+ * 자료 제공 정책
+ *  - mirror_allowed: 재배포가 확인된 경우에만. 다운로드 → 검증 → 우리 스토리지(R2) 저장
+ *  - source_redirect: 기본값. metadata 와 검증된 공식 URL 만 저장, 다운로드 시 공식 URL 로 redirect
+ *  - manual_review: 자동 공개하지 않고 관리자 검토 대기
+ */
+export const ARTIFACT_DELIVERY_POLICIES = [
+  "mirror_allowed",
+  "source_redirect",
+  "manual_review",
+] as const;
+export type ArtifactDeliveryPolicy = (typeof ARTIFACT_DELIVERY_POLICIES)[number];
+export const DEFAULT_DELIVERY_POLICY: ArtifactDeliveryPolicy = "source_redirect";
+
+export const FILE_DELIVERY_TYPES = ["storage", "redirect"] as const;
+export type FileDeliveryType = (typeof FILE_DELIVERY_TYPES)[number];
+
+export const ARTIFACT_ORIGINS = ["official", "generated"] as const;
+export type ArtifactOrigin = (typeof ARTIFACT_ORIGINS)[number];

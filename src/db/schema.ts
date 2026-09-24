@@ -15,13 +15,27 @@ import {
   uniqueIndex,
 } from "drizzle-orm/pg-core";
 import {
+  ARTIFACT_DELIVERY_POLICIES,
+  ARTIFACT_ORIGINS,
+  EXAM_SOURCE_KINDS,
   EXAM_TYPES,
+  FILE_DELIVERY_TYPES,
   FILE_TYPES,
   GRADE_CUT_SOURCES,
   REPORT_CATEGORIES,
   REPORT_STATUSES,
   SUBJECTS,
 } from "../lib/constants";
+import {
+  EXAM_SCHEDULE_STATUSES,
+  INGESTION_MODES,
+  INGESTION_RUN_STATUSES,
+  JOB_STATUSES,
+  JOB_TYPES,
+  SOURCE_ARTIFACT_STATUSES,
+  SOURCE_HEALTH_STATUSES,
+  VOCABULARY_CANDIDATE_STATUSES,
+} from "../ingestion/constants";
 import type { GradeCutEntry, TranscriptLine } from "../lib/data/types";
 
 const id = () =>
@@ -43,6 +57,21 @@ export const fileTypeEnum = pgEnum("file_type", FILE_TYPES);
 export const gradeCutSourceEnum = pgEnum("grade_cut_source", GRADE_CUT_SOURCES);
 export const reportCategoryEnum = pgEnum("report_category", REPORT_CATEGORIES);
 export const reportStatusEnum = pgEnum("report_status", REPORT_STATUSES);
+export const sourceKindEnum = pgEnum("exam_source_kind", EXAM_SOURCE_KINDS);
+export const deliveryPolicyEnum = pgEnum("artifact_delivery_policy", ARTIFACT_DELIVERY_POLICIES);
+export const fileDeliveryTypeEnum = pgEnum("file_delivery_type", FILE_DELIVERY_TYPES);
+export const artifactOriginEnum = pgEnum("artifact_origin", ARTIFACT_ORIGINS);
+export const sourceHealthEnum = pgEnum("source_health_status", SOURCE_HEALTH_STATUSES);
+export const sourceArtifactStatusEnum = pgEnum("source_artifact_status", SOURCE_ARTIFACT_STATUSES);
+export const ingestionModeEnum = pgEnum("ingestion_mode", INGESTION_MODES);
+export const ingestionRunStatusEnum = pgEnum("ingestion_run_status", INGESTION_RUN_STATUSES);
+export const examScheduleStatusEnum = pgEnum("exam_schedule_status", EXAM_SCHEDULE_STATUSES);
+export const jobTypeEnum = pgEnum("job_type", JOB_TYPES);
+export const jobStatusEnum = pgEnum("job_status", JOB_STATUSES);
+export const vocabularyCandidateStatusEnum = pgEnum(
+  "vocabulary_candidate_status",
+  VOCABULARY_CANDIDATE_STATUSES,
+);
 
 /** 시험 (년도·학년·월 조합당 1개) */
 export const exams = pgTable(
@@ -52,6 +81,11 @@ export const exams = pgTable(
     year: smallint("year").notNull(),
     grade: smallint("grade").notNull(),
     month: smallint("month").notNull(),
+    /**
+     * 대입 학년도 (예: 2026년 11월 시행 수능 → 2027). year 는 항상 "시행 연도"이며 URL 에 쓰인다.
+     * 평가원 모의평가/수능처럼 학년도 표기를 쓰는 시험에서만 값이 있다.
+     */
+    academicYear: smallint("academic_year"),
     examType: examTypeEnum("exam_type").notNull(),
     organizer: text("organizer").notNull(),
     examDate: date("exam_date"),
@@ -77,8 +111,9 @@ export const examSubjects = pgTable(
       .notNull()
       .references(() => exams.id, { onDelete: "cascade" }),
     subject: subjectEnum("subject").notNull(),
-    questionCount: smallint("question_count").notNull(),
-    totalScore: smallint("total_score").notNull(),
+    /** 자동 수집으로 만든 과목은 문항 구성을 모를 수 있다 (null). */
+    questionCount: smallint("question_count"),
+    totalScore: smallint("total_score"),
   },
   (t) => [uniqueIndex("exam_subjects_exam_subject_uq").on(t.examId, t.subject)],
 );
@@ -93,15 +128,29 @@ export const examFiles = pgTable(
       .references(() => exams.id, { onDelete: "cascade" }),
     subject: subjectEnum("subject").notNull(),
     type: fileTypeEnum("type").notNull(),
-    storageKey: text("storage_key").notNull(),
+    /** storage: 우리 스토리지(storageKey) / redirect: 검증된 공식 원본 URL(externalUrl) */
+    deliveryType: fileDeliveryTypeEnum("delivery_type").notNull().default("storage"),
+    storageKey: text("storage_key"),
+    externalUrl: text("external_url"),
+    /** official: 공식 원본 자료 / generated: 우리가 만든 자료(단어장 PDF 등) */
+    artifactOrigin: artifactOriginEnum("artifact_origin").notNull().default("official"),
+    sourceArtifactId: text("source_artifact_id").references(() => sourceArtifacts.id, {
+      onDelete: "set null",
+    }),
+    /** 화면 표시용 출처명 (예: "EBSi") */
+    sourceLabel: text("source_label"),
     mimeType: text("mime_type").notNull(),
-    fileSize: integer("file_size").notNull(),
+    fileSize: integer("file_size"),
     originalFileName: text("original_file_name").notNull(),
     ...timestamps,
   },
   (t) => [
     uniqueIndex("exam_files_exam_subject_type_uq").on(t.examId, t.subject, t.type),
     uniqueIndex("exam_files_storage_key_uq").on(t.storageKey),
+    check(
+      "exam_files_delivery_ck",
+      sql`(${t.deliveryType} = 'storage' and ${t.storageKey} is not null) or (${t.deliveryType} = 'redirect' and ${t.externalUrl} is not null)`,
+    ),
   ],
 );
 
@@ -158,17 +207,22 @@ export const vocabulary = pgTable(
     examId: text("exam_id")
       .notNull()
       .references(() => exams.id, { onDelete: "cascade" }),
-    questionId: text("question_id")
-      .notNull()
-      .references(() => questions.id, { onDelete: "cascade" }),
+    /** 문항 데이터(정답 등)가 아직 없어도 단어장을 만들 수 있도록 nullable. questionNumber 는 항상 있다. */
+    questionId: text("question_id").references(() => questions.id, { onDelete: "cascade" }),
+    subject: subjectEnum("subject").notNull().default("english"),
+    questionNumber: smallint("question_number").notNull(),
     word: text("word").notNull(),
     meaning: text("meaning").notNull(),
     partOfSpeech: text("part_of_speech"),
     difficulty: smallint("difficulty").notNull().default(1),
+    /** 자동 추출 단어의 원본 자료 (수동/샘플 입력은 null) */
+    sourceArtifactId: text("source_artifact_id").references(() => sourceArtifacts.id, {
+      onDelete: "set null",
+    }),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [
-    uniqueIndex("vocabulary_question_word_uq").on(t.questionId, t.word),
+    uniqueIndex("vocabulary_exam_number_word_uq").on(t.examId, t.subject, t.questionNumber, t.word),
     index("vocabulary_exam_idx").on(t.examId),
   ],
 );
@@ -245,6 +299,247 @@ export const reports = pgTable(
   (t) => [
     index("reports_status_idx").on(t.status, t.createdAt),
     index("reports_ip_hash_idx").on(t.ipHash, t.createdAt),
+  ],
+);
+
+// ── 자동 수집 (ingestion) ──────────────────────────────────
+
+/** 공식 자료 출처와 수집 정책/상태 */
+export const examSources = pgTable("exam_sources", {
+  /** 코드에서 쓰는 고정 id (예: "ebsi", "kice") */
+  id: text("id").primaryKey(),
+  kind: sourceKindEnum("kind").notNull(),
+  name: text("name").notNull(),
+  baseUrl: text("base_url").notNull(),
+  /** 허용 도메인 allowlist (SSRF 방지). 비어 있으면 baseUrl 의 host 만 허용 */
+  allowedHosts: jsonb("allowed_hosts").$type<string[]>().notNull().default([]),
+  deliveryPolicy: deliveryPolicyEnum("delivery_policy").notNull().default("source_redirect"),
+  enabled: boolean("enabled").notNull().default(false),
+  // 요청 예절 (source 별)
+  minPollIntervalSeconds: integer("min_poll_interval_seconds").notNull().default(600),
+  requestTimeoutMs: integer("request_timeout_ms").notNull().default(15_000),
+  maxConcurrentRequests: smallint("max_concurrent_requests").notNull().default(2),
+  minRequestGapMs: integer("min_request_gap_ms").notNull().default(1_000),
+  maxRetries: smallint("max_retries").notNull().default(2),
+  // health
+  healthStatus: sourceHealthEnum("health_status").notNull().default("disabled"),
+  healthMessage: text("health_message"),
+  lastHealthCheckAt: timestamp("last_health_check_at", { withTimezone: true }),
+  lastSuccessfulFetchAt: timestamp("last_successful_fetch_at", { withTimezone: true }),
+  lastFailureAt: timestamp("last_failure_at", { withTimezone: true }),
+  failureCount: integer("failure_count").notNull().default(0),
+  ...timestamps,
+});
+
+/** 시험 유형별 source 우선순위 (원본성/신뢰도 기준, 낮은 숫자가 우선) */
+export const sourcePriorities = pgTable(
+  "source_priorities",
+  {
+    id: id(),
+    examType: examTypeEnum("exam_type").notNull(),
+    sourceId: text("source_id")
+      .notNull()
+      .references(() => examSources.id, { onDelete: "cascade" }),
+    priority: smallint("priority").notNull(),
+  },
+  (t) => [uniqueIndex("source_priorities_type_source_uq").on(t.examType, t.sourceId)],
+);
+
+/** 외부 source 의 시험 ↔ 내부 Exam mapping */
+export const sourceExams = pgTable(
+  "source_exams",
+  {
+    id: id(),
+    examId: text("exam_id")
+      .notNull()
+      .references(() => exams.id, { onDelete: "cascade" }),
+    sourceId: text("source_id")
+      .notNull()
+      .references(() => examSources.id, { onDelete: "cascade" }),
+    externalId: text("external_id").notNull(),
+    sourceUrl: text("source_url").notNull(),
+    /** source 가 표기한 원래 시험명 (canonicalization 추적용) */
+    sourceTitle: text("source_title"),
+    /** 관리자가 mapping 을 직접 수정했으면 true → 자동 수집이 덮어쓰지 않는다 */
+    mappingLocked: boolean("mapping_locked").notNull().default(false),
+    firstDiscoveredAt: timestamp("first_discovered_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+    lastSeenAt: timestamp("last_seen_at", { withTimezone: true }).notNull().defaultNow(),
+    metadata: jsonb("metadata").$type<Record<string, unknown>>().notNull().default({}),
+  },
+  (t) => [
+    uniqueIndex("source_exams_source_external_uq").on(t.sourceId, t.externalId),
+    index("source_exams_exam_idx").on(t.examId),
+  ],
+);
+
+/** source 에서 발견한 개별 자료. (source, 시험, 과목, 종류)당 1건 */
+export const sourceArtifacts = pgTable(
+  "source_artifacts",
+  {
+    id: id(),
+    examId: text("exam_id")
+      .notNull()
+      .references(() => exams.id, { onDelete: "cascade" }),
+    sourceId: text("source_id")
+      .notNull()
+      .references(() => examSources.id, { onDelete: "cascade" }),
+    subject: subjectEnum("subject").notNull(),
+    type: fileTypeEnum("type").notNull(),
+    sourceUrl: text("source_url").notNull(),
+    storageKey: text("storage_key"),
+    originalFileName: text("original_file_name").notNull(),
+    mimeType: text("mime_type").notNull(),
+    fileSize: integer("file_size"),
+    sha256: text("sha256"),
+    deliveryPolicy: deliveryPolicyEnum("delivery_policy").notNull(),
+    status: sourceArtifactStatusEnum("status").notNull().default("discovered"),
+    statusReason: text("status_reason"),
+    sourcePublishedAt: timestamp("source_published_at", { withTimezone: true }),
+    firstDiscoveredAt: timestamp("first_discovered_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+    lastCheckedAt: timestamp("last_checked_at", { withTimezone: true }),
+    verifiedAt: timestamp("verified_at", { withTimezone: true }),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("source_artifacts_slot_uq").on(t.sourceId, t.examId, t.subject, t.type),
+    index("source_artifacts_status_idx").on(t.status),
+    index("source_artifacts_exam_idx").on(t.examId, t.subject, t.type),
+  ],
+);
+
+/** 수집 실행 기록 */
+export const ingestionRuns = pgTable(
+  "ingestion_runs",
+  {
+    id: id(),
+    sourceId: text("source_id").references(() => examSources.id, { onDelete: "set null" }),
+    mode: ingestionModeEnum("mode").notNull(),
+    startedAt: timestamp("started_at", { withTimezone: true }).notNull().defaultNow(),
+    finishedAt: timestamp("finished_at", { withTimezone: true }),
+    status: ingestionRunStatusEnum("status").notNull().default("running"),
+    discoveredCount: integer("discovered_count").notNull().default(0),
+    createdCount: integer("created_count").notNull().default(0),
+    updatedCount: integer("updated_count").notNull().default(0),
+    failedCount: integer("failed_count").notNull().default(0),
+    errorSummary: text("error_summary"),
+    metadata: jsonb("metadata").$type<Record<string, unknown>>().notNull().default({}),
+  },
+  (t) => [index("ingestion_runs_source_started_idx").on(t.sourceId, t.startedAt)],
+);
+
+export const ingestionErrors = pgTable(
+  "ingestion_errors",
+  {
+    id: id(),
+    runId: text("run_id").references(() => ingestionRuns.id, { onDelete: "cascade" }),
+    sourceId: text("source_id").references(() => examSources.id, { onDelete: "set null" }),
+    externalId: text("external_id"),
+    url: text("url"),
+    code: text("code").notNull(),
+    message: text("message").notNull(),
+    retryable: boolean("retryable").notNull().default(false),
+    resolvedAt: timestamp("resolved_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("ingestion_errors_created_idx").on(t.createdAt)],
+);
+
+/** backfill 체크포인트: 중간 실패 후 재실행 시 완료된 범위를 건너뛴다 */
+export const ingestionCheckpoints = pgTable(
+  "ingestion_checkpoints",
+  {
+    id: id(),
+    sourceId: text("source_id")
+      .notNull()
+      .references(() => examSources.id, { onDelete: "cascade" }),
+    /** 예: "backfill:2025:high2" */
+    scope: text("scope").notNull(),
+    lastCursor: text("last_cursor"),
+    processedCount: integer("processed_count").notNull().default(0),
+    status: ingestionRunStatusEnum("status").notNull().default("running"),
+    ...timestamps,
+  },
+  (t) => [uniqueIndex("ingestion_checkpoints_source_scope_uq").on(t.sourceId, t.scope)],
+);
+
+/** 시험 일정. 공식 발표로 확인된 일정만 등록한다. */
+export const examSchedules = pgTable(
+  "exam_schedules",
+  {
+    id: id(),
+    year: smallint("year").notNull(),
+    grade: smallint("grade").notNull(),
+    month: smallint("month").notNull(),
+    examType: examTypeEnum("exam_type").notNull(),
+    organizer: text("organizer").notNull(),
+    examDate: date("exam_date").notNull(),
+    expectedReleaseStart: timestamp("expected_release_start", { withTimezone: true }),
+    expectedReleaseEnd: timestamp("expected_release_end", { withTimezone: true }),
+    status: examScheduleStatusEnum("status").notNull().default("scheduled"),
+    /** 일정 근거 (공식 공지 URL 등) */
+    announcementUrl: text("announcement_url"),
+    isSample: boolean("is_sample").notNull().default(false),
+    examId: text("exam_id").references(() => exams.id, { onDelete: "set null" }),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("exam_schedules_identity_uq").on(t.year, t.grade, t.month, t.examType),
+    index("exam_schedules_date_idx").on(t.examDate),
+  ],
+);
+
+/** PostgreSQL 기반 단순 job queue (FOR UPDATE SKIP LOCKED 로 claim) */
+export const jobs = pgTable(
+  "jobs",
+  {
+    id: id(),
+    type: jobTypeEnum("type").notNull(),
+    payload: jsonb("payload").$type<Record<string, unknown>>().notNull().default({}),
+    /** 같은 작업의 중복 enqueue 방지 (idempotency key) */
+    dedupeKey: text("dedupe_key").notNull(),
+    status: jobStatusEnum("status").notNull().default("pending"),
+    attempts: smallint("attempts").notNull().default(0),
+    maxAttempts: smallint("max_attempts").notNull().default(5),
+    runAt: timestamp("run_at", { withTimezone: true }).notNull().defaultNow(),
+    lockedAt: timestamp("locked_at", { withTimezone: true }),
+    lockedBy: text("locked_by"),
+    lastError: text("last_error"),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("jobs_dedupe_key_uq").on(t.dedupeKey),
+    index("jobs_claim_idx").on(t.status, t.runAt),
+  ],
+);
+
+/** 해설 PDF 에서 자동 추출한 단어 후보 (원본에 실제로 있는 단어만) */
+export const vocabularyCandidates = pgTable(
+  "vocabulary_candidates",
+  {
+    id: id(),
+    examId: text("exam_id")
+      .notNull()
+      .references(() => exams.id, { onDelete: "cascade" }),
+    sourceArtifactId: text("source_artifact_id")
+      .notNull()
+      .references(() => sourceArtifacts.id, { onDelete: "cascade" }),
+    questionNumber: smallint("question_number").notNull(),
+    word: text("word").notNull(),
+    meaning: text("meaning"),
+    confidence: real("confidence").notNull(),
+    status: vocabularyCandidateStatusEnum("status").notNull().default("needs_review"),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("vocabulary_candidates_artifact_word_uq").on(
+      t.sourceArtifactId,
+      t.questionNumber,
+      t.word,
+    ),
   ],
 );
 

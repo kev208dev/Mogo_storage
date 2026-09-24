@@ -47,15 +47,17 @@ npm run dev
 
 ## URL 구조
 
-| URL                            | 설명                                                    |
-| ------------------------------ | ------------------------------------------------------- |
-| `/exam/2025/high2/09`          | 시험 상세 (기본 과목: 국어, canonical)                  |
-| `/exam/2025/high2/09/english`  | 과목별 페이지 (math, english, history, social, science) |
-| `/grade/high2`, `/year/2025`   | 학년별 / 년도별 목록                                    |
-| `/search?q=25 고2 9모`         | 자유 검색 → 해당 시험으로 redirect                      |
-| `/api/files/[fileId]/download` | 다운로드 (스토리지 URL로 302)                           |
-| `/api/files/[fileId]/view`     | 미리보기/재생 (inline)                                  |
-| `/api/reports`                 | 오류 신고 (POST, Zod 검증)                              |
+| URL                                         | 설명                                                    |
+| ------------------------------------------- | ------------------------------------------------------- |
+| `/exam/2025/high2/09`                       | 시험 상세 (기본 과목: 국어, canonical)                  |
+| `/exam/2025/high2/09/english`               | 과목별 페이지 (math, english, history, social, science) |
+| `/exam/2025/high3/09/social`                | 사회탐구 영역 페이지 (세부과목 선택)                    |
+| `/exam/2025/high3/09/social/social-culture` | 세부과목 페이지 (사회·문화, `science/physics-1` 등)     |
+| `/grade/high2`, `/year/2025`                | 학년별 / 년도별 목록                                    |
+| `/search?q=25 고2 9모`                      | 자유 검색 → 해당 시험으로 redirect                      |
+| `/api/files/[fileId]/download`              | 다운로드 (스토리지 URL로 302)                           |
+| `/api/files/[fileId]/view`                  | 미리보기/재생 (inline)                                  |
+| `/api/reports`                              | 오류 신고 (POST, Zod 검증)                              |
 
 `/exam/2025/high2/9` → `/exam/2025/high2/09`, `/exam/.../korean` → 기본 URL로 영구 redirect 합니다.
 
@@ -171,27 +173,79 @@ interface ExamSourceAdapter {
 }
 ```
 
-| source             | 구현                        | 역할                                   | 상태                  |
-| ------------------ | --------------------------- | -------------------------------------- | --------------------- |
-| `kice`             | `KiceExamSource`            | 6·9월 모의평가, 수능 원본 (우선순위 1) | ⚠️ 실제 페이지 미검증 |
-| `ebsi`             | `EbsiExamSource`            | 전 학년 기출 archive                   | ⚠️ 실제 페이지 미검증 |
-| `education_office` | `EducationOfficeExamSource` | 전국연합학력평가 출제 기관             | ⚠️ 실제 페이지 미검증 |
+| source             | 구현                        | 역할                                   | 상태                |
+| ------------------ | --------------------------- | -------------------------------------- | ------------------- |
+| `kice`             | `KiceExamSource`            | 6·9월 모의평가, 수능 원본 (우선순위 1) | ⚠️ 실제 구조 미검증 |
+| `ebsi`             | `EbsiExamSource`            | 전 학년 기출 archive                   | ⚠️ 실제 구조 미검증 |
+| `education_office` | `EducationOfficeExamSource` | 전국연합학력평가 출제 기관             | ⚠️ 실제 구조 미검증 |
 
 > ⚠️ **중요:** 개발 환경의 네트워크 정책 때문에 ebsi.co.kr / suneung.re.kr 에 접근할 수 없어,
-> 각 parser 는 `tests/fixtures/*` 의 **합성 fixture** 를 기준으로 작성되었습니다
-> (`structure.ts` 의 `verifiedAgainstLivePage: false`). 운영 전에 반드시 아래를 진행해야 합니다.
->
-> 1. `npm run ingest:fixtures -- --source=ebsi` 로 실제 목록 HTML 저장
-> 2. `structure.ts` 의 selector/URL 을 실제 구조에 맞게 수정하고 parser 테스트를 실제 fixture 로 갱신
-> 3. `npm run ingest:health` 로 live 확인 → `npm run ingest:sources -- --enable=ebsi`
->
-> 구조가 다르면 parser 는 `SourceStructureChangedError` 로 실패하고 source 는 `broken` 으로 표시됩니다.
-> 빈 결과로 조용히 넘어가지 않습니다.
+> 각 parser 는 `tests/fixtures/*` 의 **합성 fixture** 기준입니다. 아래 "실제 source 검증" 절차를 통과하기 전에는
+> 어떤 source 도 자동 수집되지 않습니다 (코드와 DB 가 강제).
 
 - **같은 시험, 여러 source:** "2026학년도 9월 모의평가", "2025년 9월 모의평가", "9월 모평" 은 모두 `2025-3-09 kice_mock` 하나의 Exam 으로 합쳐지고, 각 source 는 `source_exams` 로 연결됩니다.
 - **우선순위** (`source_priorities`, 시험 유형별로 설정): 평가원 시험은 KICE → EBSi → 교육청, 학력평가는 교육청 → EBSi → KICE 순입니다. 원본성 기준이며 서비스 평가가 아닙니다.
 - **학년도 vs 시행 연도:** URL·SEO 의 `year` 는 항상 **시행 연도**입니다. `2027학년도 수능`은 `/exam/2026/high3/11` 이 되고, `exams.academic_year = 2027` 로 따로 저장됩니다.
-- **지원하지 않는 것:** 제2외국어·직업탐구는 건너뜁니다. 탐구 선택과목처럼 한 슬롯에 파일이 여러 개인 경우에도 자동으로 고르지 않고 경고만 남깁니다.
+- **지원하지 않는 것:** 제2외국어·직업탐구는 건너뜁니다.
+
+### 세부과목(선택과목) 모델
+
+실제 모의고사는 한 영역 안에 여러 과목이 있습니다 (사회탐구 9과목, 과학탐구 Ⅰ·Ⅱ, 수학·국어 선택).
+
+- `subject`(국어·수학·영어·한국사·사회·과학) 와 `course`(사회·문화, 물리학 I, 미적분 …) 를 분리했습니다.
+  - `courses`: 카탈로그 (`code` 는 URL 에 쓰는 고정 식별자, `src/lib/courses.ts` 와 migration 0002 가 동기화)
+  - `course_aliases`: 관리자가 확정한 표기 (source 별 또는 전체)
+  - `exam_courses`: 시험별로 제공되는 세부과목
+- `exam_files`, `source_artifacts`, `questions`, `grade_cuts` 에 nullable `course_id` 를 추가했습니다.
+  - course 가 없는 자료(국어·영어·한국사, 영역 전체 자료)는 `course_id = NULL`
+  - uniqueness 는 `course_id IS NULL` / `IS NOT NULL` partial unique index 두 개로 나눠 NULL 중복을 막습니다
+  - `source_artifacts` 는 `slot_key`(`''` / course code / `unresolved:<표기>`)로 identity 를 표현합니다
+- **기존 데이터:** 기존 사회·과학 자료는 `course_id = NULL` 로 그대로 둡니다. 특정 과목으로 임의 mapping 하지 않으며, 영역 페이지에 "사회탐구 전체 (세부과목 구분 없는 자료)" 로 표시됩니다.
+- **정규화:** `사회문화`·`사회·문화`·`사문` → `social-culture`, `물리학1`·`물리Ⅰ`·`물리학 I`·`물1` → `physics-1`.
+  - 정식 명칭은 가장 긴 일치가 우선입니다 ("생활과윤리문제" 는 "윤리" 가 아님).
+  - 약칭은 단독 토큰일 때만 인정합니다.
+- **모호한 표기:** "윤리", "지리", "물리", "화학" 처럼 과목을 확정할 수 없는 표기는 추정하지 않습니다.
+  - 검증까지만 하고 `manual_review` 로 둡니다. 관리자가 `/admin/review` 에서 과목을 지정하면 표기가 alias 로 저장되어 다음 수집부터 자동 적용됩니다.
+- **압축 파일:** 여러 과목이 든 zip 은 `container_type=archive` 로 표시만 하고, 압축 해제·게시는 하지 않습니다 (실제 fixture 확인 후 구현).
+- **우선순위:** 같은 course 가 여러 source 에 있으면 슬롯(artifact) 단위로 우선순위를 계산합니다.
+  - 예: KICE 에 사회·문화가 있으면 KICE 를 씁니다. KICE 에 생활과 윤리가 없으면 EBSi 자료를 씁니다.
+- **실시간 공개:** course 단위로 즉시 게시합니다. 사회·문화가 공개되면 사회·문화만 게시되고, 아직 없는 생활과 윤리는 "자료 준비 중" 입니다.
+
+### 실제 source 검증 (live fixture)
+
+EBSi/KICE 의 실제 페이지를 보지 않은 상태에서 parser 가 맞다고 가정하지 않습니다.
+실제 페이지 fixture 를 넣는 즉시 틀린 부분이 드러나는 구조입니다.
+
+```bash
+# 1) 네트워크가 되는 환경에서 실제 공개 페이지(HTML 만) 저장 — allowlist·robots.txt·요청 간격 준수, 저장 전 sanitize
+npm run ingest:capture -- --source=ebsi --url="https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs?targetCd=D300" --grade=3 --year=2025
+npm run ingest:capture -- --source=kice --url="<목록 URL>" --kind=board-list
+npm run ingest:capture -- --source=kice --url="<게시글 URL>" --kind=board-detail --exam-title="2026학년도 9월 모의평가"
+
+# 2) 저장된 모든 실제 fixture 를 parser 에 통과 (네트워크 없음, CI 에서도 실행)
+npm run ingest:fixtures:validate
+
+# 3) 틀린 부분 수정: src/ingestion/sources/<source>/structure.ts (selector/URL)
+#    parser 파일이 바뀌면 단위 테스트가 버전 갱신을 요구한다
+npm run ingest:parser-version
+
+# 4) 통과하면 증거 기록 (DATABASE_URL)
+npm run ingest:fixtures:validate -- --record
+
+# 5) /admin 에서 [검증 승인] → [켜기]
+```
+
+- **fixture 형식:** `tests/fixtures/live/<source>/<name>.html` 과 `.json`(source, capturedAt, url, sha256, kind, context, expect) 입니다.
+  - 저장 후 HTML 을 손으로 고치면 sha256 불일치로 실패합니다.
+- **sanitizer:** 쿠키·세션 id(jsessionid 등), CSRF 토큰·nonce, 추적 parameter(utm_*, gclid …), 분석 스크립트, 로그인 개인화 영역, 이메일을 제거합니다.
+- **parser contract:** 모든 source 가 `year, grade, month, examType, subject, course(nullable), artifactType, artifactUrl` 을 돌려줘야 합니다.
+  - 필드 누락, 구조 변경, allowlist 밖 URL, 예상과 다른 빈 페이지는 실패로 처리합니다.
+- **parser 버전:** `src/ingestion/sources/parser-versions.json` 에 parser 관련 파일 hash 와 버전이 고정됩니다.
+  - 코드가 바뀌면 테스트가 실패하므로 `ingest:parser-version` 으로 버전을 올려야 합니다.
+  - 버전이 바뀌면 이전 승인은 무효가 되어 다시 검증해야 합니다.
+- **자동 수집 조건:** `enabled = true` AND 실제 fixture 검증 증거 AND 관리자 승인 AND 승인된 parser 버전 = 현재 버전.
+  - `SOURCE_<ID>_ENABLED` 환경변수로는 우회할 수 없습니다.
+  - 실제 fixture 검증이 실패하면 승인이 취소되고 source 가 꺼집니다.
 
 ### Artifact 정책 · 저작권
 
@@ -214,7 +268,7 @@ npm run ingest:sources -- --enable=ebsi              # 검증된 source 만 켜�
 INGESTION_ENABLED=true npm run ingest:backfill -- --source=ebsi --from=2015 --to=2026
 npm run ingest:backfill -- --year=2025 --grade=2     # 범위 지정
 npm run ingest:backfill -- --force                   # 완료된 checkpoint 도 다시 수집
-npm run ingest:coverage -- --from=2015 --to=2026     # 누락 자료 확인 (--json 지원)
+npm run ingest:coverage -- --from=2015 --to=2026     # 누락 자료 확인 (세부과목 단위, 과목 미확정 포함, --json 지원)
 ```
 
 - (source, 연도, 학년) 범위마다 `ingestion_checkpoints` 를 남깁니다. 중간에 실패해도 다시 실행하면 완료된 범위는 건너뜁니다.
@@ -292,8 +346,8 @@ npm run ingest:schedules -- --file=data/schedules/2027.json   # 공식 발표로
 
 ## 향후 작업
 
-- **운영 전 필수:** 각 source 의 실제 페이지로 parser 를 검증하고 이용조건을 확인
-- 탐구 선택과목(과목별 여러 파일)을 지원하도록 파일 슬롯 구조 확장
+- **운영 전 필수:** 각 source 의 실제 페이지를 capture → validate → 승인 (위 절차). 이용조건 확인
+- 실제 fixture 에서 여러 과목 zip 이 확인되면 archive 처리 구현
 - 공식 등급 구분 점수가 공개되는 형식을 확인한 뒤 automated grade-cut adapter 추가
 - Slack/Discord `OpsNotifier` 구현
 - 다중 인스턴스 배포 시 오류 신고 rate limiter 를 공유 저장소로 이전

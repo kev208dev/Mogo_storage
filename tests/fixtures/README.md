@@ -7,10 +7,12 @@
 - 링크된 PDF/MP3 URL 은 실제 파일을 가리키지 않으며, 테스트에서는 placeholder 파일로 응답합니다.
 - 실제 시험지/해설지/음원은 이 저장소에 포함하지 않습니다.
 
-## 실제 구조로 갱신하는 방법
+## 실제 페이지 fixture (live)
 
-1. 네트워크가 허용된 환경에서 `npm run ingest:fixtures -- --source=ebsi` 실행
-   → `tests/fixtures/<source>/live-*.html` 로 실제 목록 페이지가 저장됩니다. (시험 파일은 받지 않음)
-2. `src/ingestion/sources/<source>/structure.ts` 의 selector/URL 을 실제 구조에 맞게 수정
-3. parser 테스트가 실제 fixture 로 통과하도록 갱신하고 `verifiedAgainstLivePage: true` 로 변경
-4. `npm run ingest:health` 로 live 확인 후 운영에서 source 를 enable
+실제 공개 페이지는 `tests/fixtures/live/<source>/` 에 저장합니다 (현재 없음).
+
+1. 네트워크가 허용된 환경에서 `npm run ingest:capture -- --source=ebsi --url="..." --grade=3 --year=2025`
+   → sanitize 된 HTML 과 metadata(json)가 저장되고, 현재 parser 로 바로 contract 검사를 합니다.
+2. `npm run ingest:fixtures:validate` 로 모든 live fixture 를 parser 에 통과 (CI 에서도 실행)
+3. 실패하면 `src/ingestion/sources/<source>/structure.ts` 를 수정 → `npm run ingest:parser-version`
+4. 통과하면 `npm run ingest:fixtures:validate -- --record` → `/admin` 에서 검증 승인

@@ -1,6 +1,8 @@
 import { defineConfig } from "vitest/config";
 
-const alias = { "server-only": new URL("./tests/unit/server-only-stub.ts", import.meta.url).pathname };
+const alias = {
+  "server-only": new URL("./tests/unit/server-only-stub.ts", import.meta.url).pathname,
+};
 
 export default defineConfig({
   resolve: { tsconfigPaths: true },

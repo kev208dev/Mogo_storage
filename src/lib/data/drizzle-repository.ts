@@ -1,10 +1,11 @@
-import { and, asc, count, desc, eq, gte, inArray } from "drizzle-orm";
+import { and, asc, count, desc, eq, gte, inArray, isNull } from "drizzle-orm";
 import type { Database } from "../../db/client";
 import * as s from "../../db/schema";
 import type { Grade, Subject } from "../constants";
 import type { ExamKey } from "../exam-path";
 import type { ExamRepository } from "./repository";
 import type {
+  Course,
   Exam,
   ExamFile,
   ExamSchedule,
@@ -26,6 +27,14 @@ const toExam = (row: ExamRow): Exam => ({
   academicYear: row.academicYear ?? null,
   createdAt: row.createdAt.toISOString(),
   updatedAt: row.updatedAt.toISOString(),
+});
+
+const toCourse = (row: typeof s.courses.$inferSelect): Course => ({
+  id: row.id,
+  code: row.code,
+  name: row.name,
+  subject: row.subject,
+  displayOrder: row.displayOrder,
 });
 
 const toFile = (row: FileRow): ExamFile => ({
@@ -95,22 +104,64 @@ export class DrizzleExamRepository implements ExamRepository {
       .where(eq(s.examSubjects.examId, examId));
   }
 
-  async getSubjectDetail(key: ExamKey, subject: Subject) {
+  /** 이 시험·영역에서 제공되는 세부과목 (exam_courses ∪ 실제 파일이 있는 course) */
+  async getExamCourses(examId: string, subject: Subject): Promise<Course[]> {
+    const [declared, fromFiles] = await Promise.all([
+      this.db
+        .select({ course: s.courses })
+        .from(s.examCourses)
+        .innerJoin(s.courses, eq(s.courses.id, s.examCourses.courseId))
+        .where(and(eq(s.examCourses.examId, examId), eq(s.courses.subject, subject))),
+      this.db
+        .selectDistinct({ course: s.courses })
+        .from(s.examFiles)
+        .innerJoin(s.courses, eq(s.courses.id, s.examFiles.courseId))
+        .where(and(eq(s.examFiles.examId, examId), eq(s.examFiles.subject, subject))),
+    ]);
+    const byId = new Map<string, Course>();
+    for (const { course } of [...declared, ...fromFiles]) {
+      if (!course.active) continue;
+      byId.set(course.id, toCourse(course));
+    }
+    return [...byId.values()].sort((a, b) => a.displayOrder - b.displayOrder);
+  }
+
+  async getSubjectDetail(key: ExamKey, subject: Subject, courseCode: string | null = null) {
     const exam = await this.getExam(key);
     if (!exam) return null;
     const subjects = await this.getExamSubjects(exam.id);
     const current = subjects.find((x) => x.subject === subject);
     if (!current) return null;
+    const courses = await this.getExamCourses(exam.id, subject);
+    const course = courseCode ? (courses.find((c) => c.code === courseCode) ?? null) : null;
+    if (courseCode && !course) return null;
+    const courseId = course?.id ?? null;
+    const courseMatch = <
+      C extends
+        typeof s.examFiles.courseId | typeof s.questions.courseId | typeof s.gradeCuts.courseId,
+    >(
+      col: C,
+    ) => (courseId ? eq(col, courseId) : isNull(col));
 
-    const isEnglish = subject === "english";
+    const isEnglish = subject === "english" && !course;
     const [files, questionRows, gradeCutRows, vocabularyRows, trackRows, schedule] =
       await Promise.all([
         this.db
           .select()
           .from(s.examFiles)
-          .where(and(eq(s.examFiles.examId, exam.id), eq(s.examFiles.subject, subject))),
+          .where(
+            and(
+              eq(s.examFiles.examId, exam.id),
+              eq(s.examFiles.subject, subject),
+              courseMatch(s.examFiles.courseId),
+            ),
+          ),
         this.db.query.questions.findMany({
-          where: and(eq(s.questions.examId, exam.id), eq(s.questions.subject, subject)),
+          where: and(
+            eq(s.questions.examId, exam.id),
+            eq(s.questions.subject, subject),
+            courseMatch(s.questions.courseId),
+          ),
           orderBy: asc(s.questions.questionNumber),
           with: {
             statistics: { orderBy: desc(s.questionStatistics.statisticsUpdatedAt), limit: 1 },
@@ -119,7 +170,13 @@ export class DrizzleExamRepository implements ExamRepository {
         this.db
           .select()
           .from(s.gradeCuts)
-          .where(and(eq(s.gradeCuts.examId, exam.id), eq(s.gradeCuts.subject, subject))),
+          .where(
+            and(
+              eq(s.gradeCuts.examId, exam.id),
+              eq(s.gradeCuts.subject, subject),
+              courseMatch(s.gradeCuts.courseId),
+            ),
+          ),
         isEnglish
           ? this.db
               .select()
@@ -179,6 +236,8 @@ export class DrizzleExamRepository implements ExamRepository {
       exam,
       subjects,
       subject: current,
+      courses,
+      course,
       files: files.map(toFile),
       questions,
       gradeCuts,
@@ -186,6 +245,15 @@ export class DrizzleExamRepository implements ExamRepository {
       listeningTracks,
       schedule,
     };
+  }
+
+  async listExamCoursePaths() {
+    const rows = await this.db
+      .select({ exam: s.exams, course: s.courses })
+      .from(s.examCourses)
+      .innerJoin(s.exams, eq(s.exams.id, s.examCourses.examId))
+      .innerJoin(s.courses, eq(s.courses.id, s.examCourses.courseId));
+    return rows.map((r) => ({ exam: toExam(r.exam), course: toCourse(r.course) }));
   }
 
   async getSchedule(examId: string): Promise<ExamSchedule | null> {

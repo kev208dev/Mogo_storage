@@ -96,6 +96,9 @@ async function main() {
       .insert(s.gradeCuts)
       .values(d.gradeCuts.map((g) => ({ ...g, updatedAt: new Date(g.updatedAt) })))
       .onConflictDoNothing();
+    if (d.examCourses.length) {
+      await tx.insert(s.examCourses).values(d.examCourses).onConflictDoNothing();
+    }
     await tx
       .insert(s.examSchedules)
       .values(

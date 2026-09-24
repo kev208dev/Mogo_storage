@@ -15,6 +15,13 @@
       "when": 1790246126469,
       "tag": "0001_automatic_ingestion",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790249356000,
+      "tag": "0002_course_aware",
+      "breakpoints": true
     }
   ]
 }

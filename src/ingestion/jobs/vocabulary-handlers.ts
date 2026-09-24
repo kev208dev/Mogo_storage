@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { and, asc, eq } from "drizzle-orm";
+import { and, asc, eq, isNull } from "drizzle-orm";
 import { examFiles, exams, vocabulary, vocabularyCandidates } from "../../db/schema";
 import type { IngestionContext } from "../context";
 import { ArtifactValidationError, toIngestionError } from "../errors";
@@ -7,6 +7,7 @@ import { validateArtifact } from "../verify/artifact-validator";
 import { extractVocabularyCandidates } from "../vocabulary/candidates";
 import { generateVocabularyPdf } from "../vocabulary/pdf-generator";
 import { extractPdfText } from "../vocabulary/pdf-text";
+import { examFileConflict } from "../pipeline/slots";
 import { downloadArtifactBytes, JobError } from "./handlers";
 import { enqueueJob, type Job } from "./queue";
 
@@ -118,6 +119,7 @@ export async function handleGenerateVocabularyPdf(ctx: IngestionContext, job: Jo
         eq(examFiles.examId, examId),
         eq(examFiles.subject, "english"),
         eq(examFiles.type, "vocabulary_pdf"),
+        isNull(examFiles.courseId),
       ),
     );
   if (current && current.artifactOrigin !== "generated") {
@@ -159,10 +161,7 @@ export async function handleGenerateVocabularyPdf(ctx: IngestionContext, job: Jo
   await db
     .insert(examFiles)
     .values(values)
-    .onConflictDoUpdate({
-      target: [examFiles.examId, examFiles.subject, examFiles.type],
-      set: values,
-    });
+    .onConflictDoUpdate({ ...examFileConflict(null), set: values });
   ctx.logger.info("vocabulary.pdf_generated", { examId, words: rows.length, storageKey: key });
   await ctx.revalidator.revalidatePaths([
     `/exam/${exam.year}/high${exam.grade}/${String(exam.month).padStart(2, "0")}/english`,

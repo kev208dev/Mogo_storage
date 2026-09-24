@@ -12,7 +12,8 @@ describe("sample dataset", () => {
   it("has no duplicate year/grade/month exams or file slots", () => {
     const keys = sampleDataset.exams.map((e) => `${e.year}-${e.grade}-${e.month}`);
     expect(new Set(keys).size).toBe(keys.length);
-    const slots = sampleDataset.files.map((f) => `${f.examId}-${f.subject}-${f.type}`);
+    // 슬롯 = 시험 + 영역 + 세부과목(없으면 null) + 종류
+    const slots = sampleDataset.files.map((f) => `${f.examId}-${f.subject}-${f.courseId}-${f.type}`);
     expect(new Set(slots).size).toBe(slots.length);
   });
 
@@ -27,10 +28,16 @@ describe("sample dataset", () => {
   it("subject scores add up to total", () => {
     const featured = sampleDataset.exams.find((e) => e.id === "exam_2025_h2_09")!;
     for (const subject of sampleDataset.examSubjects.filter((s) => s.examId === featured.id)) {
+      // 영역 공통(세부과목 없음) 문항의 배점 합
       const total = sampleDataset.questions
-        .filter((q) => q.examId === featured.id && q.subject === subject.subject)
+        .filter((q) => q.examId === featured.id && q.subject === subject.subject && q.courseId === null)
         .reduce((sum, q) => sum + q.score, 0);
       expect(total).toBe(subject.totalScore);
+    }
+    // 세부과목 문항은 과목별로 따로 50점
+    const socialCulture = sampleDataset.questions.filter((q) => q.courseId === "social-culture");
+    expect(socialCulture.reduce((sum, q) => sum + q.score, 0)).toBe(50);
+    {
     }
   });
 });

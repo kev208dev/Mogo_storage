@@ -17,6 +17,7 @@ import {
   type GradeCutSource,
   type Subject,
 } from "../constants";
+import { courseByCode } from "../courses";
 import { examSlug, monthSegment } from "../exam-path";
 import type {
   Exam,
@@ -156,12 +157,19 @@ const SUBJECT_FILE_LABEL: Record<Subject, string> = {
   science: "과학",
 };
 
-function makeFile(exam: Exam, subject: Subject, type: FileType, fileSize: number): ExamFile {
-  const base = `exams/${exam.year}/high${exam.grade}/${monthSegment(exam.month)}/${subject}`;
+function makeFile(
+  exam: Exam,
+  subject: Subject,
+  type: FileType,
+  fileSize: number,
+  courseCode: string | null = null,
+): ExamFile {
+  const base = `exams/${exam.year}/high${exam.grade}/${monthSegment(exam.month)}/${subject}${courseCode ? `/${courseCode}` : ""}`;
   return {
-    id: `file_${exam.id.replace("exam_", "")}_${subject}_${type}`,
+    id: `file_${exam.id.replace("exam_", "")}_${subject}${courseCode ? `_${courseCode.replace(/-/g, "_")}` : ""}_${type}`,
     examId: exam.id,
     subject,
+    courseId: courseCode,
     type,
     deliveryType: "storage",
     storageKey: `${base}/${type}.${EXT[type]}`,
@@ -171,7 +179,7 @@ function makeFile(exam: Exam, subject: Subject, type: FileType, fileSize: number
     sourceLabel: null,
     mimeType: MIME[type],
     fileSize,
-    originalFileName: `[샘플] ${exam.year}년 고${exam.grade} ${exam.month}월 ${SUBJECT_FILE_LABEL[subject]} ${FILE_NAME_LABEL[type]}.${EXT[type]}`,
+    originalFileName: `[샘플] ${exam.year}년 고${exam.grade} ${exam.month}월 ${courseCode ? (courseByCode(courseCode)?.name ?? courseCode).replace(/\s/g, "") : SUBJECT_FILE_LABEL[subject]} ${FILE_NAME_LABEL[type]}.${EXT[type]}`,
     createdAt: CREATED_AT,
     updatedAt: CREATED_AT,
   };
@@ -188,6 +196,11 @@ function buildFiles(featured: Exam): ExamFile[] {
       files.push(makeFile(featured, subject, "solution", size(900_000, 3_200_000)));
     }
   }
+  // 세부과목 샘플: 사회·문화는 자료 있음, 물리학 I 등은 "자료 준비 중" 확인용으로 비워 둔다
+  files.push(
+    makeFile(featured, "social", "question", size(1_000_000, 2_000_000), "social-culture"),
+  );
+  files.push(makeFile(featured, "social", "solution", size(500_000, 900_000), "social-culture"));
   files.push(makeFile(featured, "english", "listening_audio", 14_200_000));
   files.push(makeFile(featured, "english", "listening_script", 420_000));
   files.push(makeFile(featured, "english", "vocabulary_pdf", 310_000));
@@ -229,6 +242,7 @@ function buildQuestions(featured: Exam): Question[] {
         id: `q_${featured.id.replace("exam_", "")}_${subject}_${n}`,
         examId: featured.id,
         subject,
+        courseId: null,
         questionNumber: n,
         answer,
         choiceCount: isShortAnswer ? null : 5,
@@ -237,6 +251,22 @@ function buildQuestions(featured: Exam): Question[] {
         solutionPage: Math.floor((n - 1) / 4) + 1,
       });
     }
+  }
+  // 세부과목 문항 샘플 (사회·문화 20문항, 50점)
+  const rand = mulberry32(hashString("answers:social-culture"));
+  for (let n = 1; n <= 20; n += 1) {
+    questions.push({
+      id: `q_${featured.id.replace("exam_", "")}_social_culture_${n}`,
+      examId: featured.id,
+      subject: "social",
+      courseId: "social-culture",
+      questionNumber: n,
+      answer: String(Math.floor(rand() * 5) + 1),
+      choiceCount: 5,
+      score: n % 2 === 0 ? 3 : 2,
+      explanation: `[샘플 해설] 사회·문화 ${n}번 문항의 해설 자리입니다. 개발용 예시 문장입니다.`,
+      solutionPage: Math.floor((n - 1) / 5) + 1,
+    });
   }
   return questions;
 }
@@ -284,10 +314,12 @@ function buildGradeCuts(featured: Exam): GradeCut[] {
     source: GradeCutSource,
     values: number[],
     sourceUrl: string | null,
+    courseId: string | null = null,
   ): GradeCut => ({
-    id: `gc_${featured.id.replace("exam_", "")}_${subject}_${source}`,
+    id: `gc_${featured.id.replace("exam_", "")}_${subject}${courseId ? `_${courseId}` : ""}_${source}`,
     examId: featured.id,
     subject,
+    courseId,
     source,
     sourceUrl,
     isOfficial: source === "official",
@@ -325,6 +357,9 @@ function buildGradeCuts(featured: Exam): GradeCut[] {
   // 영어·한국사는 절대평가. (등급 기준 점수를 샘플로 입력)
   cuts.push(make("english", "official", [90, 80, 70, 60, 50, 40, 30, 20], null));
   cuts.push(make("history", "official", [40, 35, 30, 25, 20, 15, 10, 5], null));
+  // 세부과목별 등급컷 샘플 (사회·문화) — 임의의 개발용 수치
+  cuts.push(make("social", "official", [47, 43, 38, 32, 26, 20, 15, 11], null, "social-culture"));
+  cuts.push(make("social", "ebs", [47, 42, 37, 32, 26, 20, 15, 11], null, "social-culture"));
   return cuts;
 }
 
@@ -524,6 +559,25 @@ function buildListeningTracks(featured: Exam, files: ExamFile[]): ListeningTrack
   return tracks;
 }
 
+// ── courses ─────────────────────────────────────────────────
+export interface SampleExamCourse {
+  examId: string;
+  courseId: string;
+}
+
+/** 대표 샘플 시험의 세부과목 (사회탐구 3과목, 과학탐구 4과목) */
+function buildExamCourses(featured: Exam): SampleExamCourse[] {
+  return [
+    "life-and-ethics",
+    "korean-geography",
+    "social-culture",
+    "physics-1",
+    "chemistry-1",
+    "life-science-1",
+    "earth-science-1",
+  ].map((courseId) => ({ examId: featured.id, courseId }));
+}
+
 // ── schedules ───────────────────────────────────────────────
 /**
  * 샘플 일정 1건 (시험 전 페이지 UI 확인용). 실제 일정이 아니며 isSample=true.
@@ -579,6 +633,7 @@ export interface SampleDataset {
   vocabulary: VocabularyItem[];
   listeningTracks: ListeningTrack[];
   schedules: ExamSchedule[];
+  examCourses: SampleExamCourse[];
 }
 
 function buildSampleDataset(): SampleDataset {
@@ -603,6 +658,7 @@ function buildSampleDataset(): SampleDataset {
     vocabulary: buildVocabulary(featured, questions),
     listeningTracks: buildListeningTracks(featured, files),
     schedules,
+    examCourses: buildExamCourses(featured),
   };
 }
 

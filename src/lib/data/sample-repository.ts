@@ -1,8 +1,16 @@
 import type { Subject } from "../constants";
+import { courseByCode } from "../courses";
 import type { ExamKey } from "../exam-path";
 import { sortExamsDesc, type ExamRepository } from "./repository";
 import { sampleDataset, type SampleDataset } from "./sample-data";
-import type { Exam, NewReport, QuestionWithStats, Report } from "./types";
+import type { Course, Exam, NewReport, QuestionWithStats, Report } from "./types";
+
+function toCourse(code: string): Course | null {
+  const c = courseByCode(code);
+  return c
+    ? { id: c.code, code: c.code, name: c.name, subject: c.subject, displayOrder: c.displayOrder }
+    : null;
+}
 
 /** DB 없이 개발할 때 쓰는 in-memory 저장소 */
 export class SampleExamRepository implements ExamRepository {
@@ -41,17 +49,31 @@ export class SampleExamRepository implements ExamRepository {
     return this.data.examSubjects.filter((s) => s.examId === examId);
   }
 
-  async getSubjectDetail(key: ExamKey, subject: Subject) {
+  async getSubjectDetail(key: ExamKey, subject: Subject, courseCode: string | null = null) {
     const exam = await this.getExam(key);
     if (!exam) return null;
     const subjects = await this.getExamSubjects(exam.id);
     const current = subjects.find((s) => s.subject === subject);
     if (!current) return null;
 
-    const inSubject = <T extends { examId: string; subject: Subject }>(rows: T[]) =>
-      rows.filter((r) => r.examId === exam.id && r.subject === subject);
+    const courseIds = new Set([
+      ...this.data.examCourses.filter((c) => c.examId === exam.id).map((c) => c.courseId),
+      ...this.data.files.filter((f) => f.examId === exam.id && f.courseId).map((f) => f.courseId!),
+    ]);
+    const courses = [...courseIds]
+      .map(toCourse)
+      .filter((c): c is Course => Boolean(c) && c!.subject === subject)
+      .sort((a, b) => a.displayOrder - b.displayOrder);
+    const course = courseCode ? (courses.find((c) => c.code === courseCode) ?? null) : null;
+    if (courseCode && !course) return null;
+    const courseId = course?.id ?? null;
 
-    const questions: QuestionWithStats[] = inSubject(this.data.questions)
+    const inSlot = <T extends { examId: string; subject: Subject; courseId: string | null }>(
+      rows: T[],
+    ) =>
+      rows.filter((r) => r.examId === exam.id && r.subject === subject && r.courseId === courseId);
+
+    const questions: QuestionWithStats[] = inSlot(this.data.questions)
       .sort((a, b) => a.questionNumber - b.questionNumber)
       .map((q) => ({
         ...q,
@@ -62,19 +84,33 @@ export class SampleExamRepository implements ExamRepository {
       exam,
       subjects,
       subject: current,
-      files: inSubject(this.data.files),
+      courses,
+      course,
+      files: inSlot(this.data.files),
       questions,
-      gradeCuts: inSubject(this.data.gradeCuts),
+      gradeCuts: inSlot(this.data.gradeCuts),
       vocabulary:
-        subject === "english"
+        subject === "english" && !course
           ? this.data.vocabulary
               .filter((v) => v.examId === exam.id)
               .sort((a, b) => a.questionNumber - b.questionNumber)
           : [],
       listeningTracks:
-        subject === "english" ? this.data.listeningTracks.filter((t) => t.examId === exam.id) : [],
+        subject === "english" && !course
+          ? this.data.listeningTracks.filter((t) => t.examId === exam.id)
+          : [],
       schedule: this.data.schedules.find((s) => s.examId === exam.id) ?? null,
     };
+  }
+
+  async listExamCoursePaths() {
+    const result: Array<{ exam: Exam; course: Course }> = [];
+    for (const ec of this.data.examCourses) {
+      const exam = this.data.exams.find((e) => e.id === ec.examId);
+      const course = toCourse(ec.courseId);
+      if (exam && course) result.push({ exam, course });
+    }
+    return result;
   }
 
   async getFile(fileId: string) {

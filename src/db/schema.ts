@@ -118,6 +118,65 @@ export const examSubjects = pgTable(
   (t) => [uniqueIndex("exam_subjects_exam_subject_uq").on(t.examId, t.subject)],
 );
 
+/** 선택과목/세부과목 카탈로그 (사회·문화, 물리학 I, 미적분 …). code 는 URL 에 쓰는 안정 식별자 */
+export const courses = pgTable(
+  "courses",
+  {
+    id: text("id").primaryKey(),
+    code: text("code").notNull(),
+    name: text("name").notNull(),
+    subject: subjectEnum("subject").notNull(),
+    displayOrder: smallint("display_order").notNull().default(0),
+    active: boolean("active").notNull().default(true),
+    ...timestamps,
+  },
+  (t) => [uniqueIndex("courses_code_uq").on(t.code), index("courses_subject_idx").on(t.subject)],
+);
+
+/**
+ * course 별칭. 관리자가 확정한 mapping("윤리" → 생활과 윤리)을 저장해 다음 수집부터 재사용한다.
+ * sourceId 가 null 이면 모든 source 에 적용. alias 는 normalizeCourseLabel 결과.
+ */
+export const courseAliases = pgTable(
+  "course_aliases",
+  {
+    id: id(),
+    alias: text("alias").notNull(),
+    courseId: text("course_id")
+      .notNull()
+      .references(() => courses.id, { onDelete: "cascade" }),
+    sourceId: text("source_id").references(() => examSources.id, { onDelete: "cascade" }),
+    createdBy: text("created_by").notNull().default("system"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [
+    // PostgreSQL 에서 NULL 은 서로 다르게 취급되므로 source 유무에 따라 partial unique index 를 나눈다
+    uniqueIndex("course_aliases_global_uq")
+      .on(t.alias)
+      .where(sql`${t.sourceId} is null`),
+    uniqueIndex("course_aliases_source_uq")
+      .on(t.alias, t.sourceId)
+      .where(sql`${t.sourceId} is not null`),
+  ],
+);
+
+/** 시험에서 제공되는 세부과목과 문항 구성 */
+export const examCourses = pgTable(
+  "exam_courses",
+  {
+    id: id(),
+    examId: text("exam_id")
+      .notNull()
+      .references(() => exams.id, { onDelete: "cascade" }),
+    courseId: text("course_id")
+      .notNull()
+      .references(() => courses.id, { onDelete: "restrict" }),
+    questionCount: smallint("question_count"),
+    totalScore: smallint("total_score"),
+  },
+  (t) => [uniqueIndex("exam_courses_exam_course_uq").on(t.examId, t.courseId)],
+);
+
 /** 시험 자료 파일 metadata. 실제 파일은 StorageProvider(R2 등)에 storageKey로 저장된다. */
 export const examFiles = pgTable(
   "exam_files",
@@ -128,6 +187,8 @@ export const examFiles = pgTable(
       .references(() => exams.id, { onDelete: "cascade" }),
     subject: subjectEnum("subject").notNull(),
     type: fileTypeEnum("type").notNull(),
+    /** 세부과목 (사회·문화 등). 국어/영어/한국사처럼 세부과목이 없거나 영역 전체 자료면 null */
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
     /** storage: 우리 스토리지(storageKey) / redirect: 검증된 공식 원본 URL(externalUrl) */
     deliveryType: fileDeliveryTypeEnum("delivery_type").notNull().default("storage"),
     storageKey: text("storage_key"),
@@ -145,7 +206,13 @@ export const examFiles = pgTable(
     ...timestamps,
   },
   (t) => [
-    uniqueIndex("exam_files_exam_subject_type_uq").on(t.examId, t.subject, t.type),
+    // course 가 없는 자료와 있는 자료를 partial unique index 로 나눈다 (NULL 중복 방지)
+    uniqueIndex("exam_files_slot_no_course_uq")
+      .on(t.examId, t.subject, t.type)
+      .where(sql`${t.courseId} is null`),
+    uniqueIndex("exam_files_slot_course_uq")
+      .on(t.examId, t.subject, t.courseId, t.type)
+      .where(sql`${t.courseId} is not null`),
     uniqueIndex("exam_files_storage_key_uq").on(t.storageKey),
     check(
       "exam_files_delivery_ck",
@@ -163,6 +230,8 @@ export const questions = pgTable(
       .notNull()
       .references(() => exams.id, { onDelete: "cascade" }),
     subject: subjectEnum("subject").notNull(),
+    /** 선택과목 문항(예: 미적분 23~30번, 사회·문화 1~20번). 공통 문항은 null */
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
     questionNumber: smallint("question_number").notNull(),
     answer: text("answer").notNull(),
     choiceCount: smallint("choice_count"),
@@ -172,7 +241,12 @@ export const questions = pgTable(
     ...timestamps,
   },
   (t) => [
-    uniqueIndex("questions_exam_subject_number_uq").on(t.examId, t.subject, t.questionNumber),
+    uniqueIndex("questions_number_no_course_uq")
+      .on(t.examId, t.subject, t.questionNumber)
+      .where(sql`${t.courseId} is null`),
+    uniqueIndex("questions_number_course_uq")
+      .on(t.examId, t.subject, t.courseId, t.questionNumber)
+      .where(sql`${t.courseId} is not null`),
   ],
 );
 
@@ -269,6 +343,8 @@ export const gradeCuts = pgTable(
       .notNull()
       .references(() => exams.id, { onDelete: "cascade" }),
     subject: subjectEnum("subject").notNull(),
+    /** 탐구 과목별 등급컷 (같은 사회탐구라도 사회·문화/생활과 윤리 등급컷은 다르다) */
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
     source: gradeCutSourceEnum("source").notNull(),
     sourceUrl: text("source_url"),
     isOfficial: boolean("is_official").notNull().default(false),
@@ -276,7 +352,14 @@ export const gradeCuts = pgTable(
     cuts: jsonb("cuts").$type<GradeCutEntry[]>().notNull(),
     ...timestamps,
   },
-  (t) => [uniqueIndex("grade_cuts_exam_subject_source_uq").on(t.examId, t.subject, t.source)],
+  (t) => [
+    uniqueIndex("grade_cuts_source_no_course_uq")
+      .on(t.examId, t.subject, t.source)
+      .where(sql`${t.courseId} is null`),
+    uniqueIndex("grade_cuts_source_course_uq")
+      .on(t.examId, t.subject, t.courseId, t.source)
+      .where(sql`${t.courseId} is not null`),
+  ],
 );
 
 /** 오류 신고 (로그인 없이 접수) */
@@ -328,6 +411,17 @@ export const examSources = pgTable("exam_sources", {
   lastSuccessfulFetchAt: timestamp("last_successful_fetch_at", { withTimezone: true }),
   lastFailureAt: timestamp("last_failure_at", { withTimezone: true }),
   failureCount: integer("failure_count").notNull().default(0),
+  // ── 실제 페이지(live fixture) 검증 ──
+  // 증거: npm run ingest:fixtures:validate -- --record 가 실제 fixture 로 parser contract 를 통과했을 때 기록
+  liveFixtureValidatedAt: timestamp("live_fixture_validated_at", { withTimezone: true }),
+  liveFixtureHash: text("live_fixture_hash"),
+  liveFixtureParserVersion: text("live_fixture_parser_version"),
+  // 승인: 관리자가 증거를 확인하고 승인해야 true. parser version 이 바뀌면 다시 필요
+  verifiedAgainstLiveFixture: boolean("verified_against_live_fixture").notNull().default(false),
+  verifiedAt: timestamp("verified_at", { withTimezone: true }),
+  verifiedBy: text("verified_by"),
+  verifiedFixtureHash: text("verified_fixture_hash"),
+  verifiedParserVersion: text("verified_parser_version"),
   ...timestamps,
 });
 
@@ -386,8 +480,19 @@ export const sourceArtifacts = pgTable(
       .notNull()
       .references(() => examSources.id, { onDelete: "cascade" }),
     subject: subjectEnum("subject").notNull(),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
+    /**
+     * 슬롯 식별자: "" (course 없음) / course code / "unresolved:<정규화 표기>" (모호 → manual_review)
+     * 파일명이 아니라 canonical course + 자료 종류 + 시험으로 중복을 판단한다.
+     */
+    slotKey: text("slot_key").notNull().default(""),
+    /** source 가 표기한 원래 과목명 (예: "윤리", "사회문화영역") */
+    courseLabel: text("course_label"),
     type: fileTypeEnum("type").notNull(),
     sourceUrl: text("source_url").notNull(),
+    /** file | archive (여러 과목이 든 zip 등 — 아직 압축 해제는 하지 않고 검토 대상으로 둔다) */
+    containerType: text("container_type").notNull().default("file"),
+    containsMultipleCourses: boolean("contains_multiple_courses").notNull().default(false),
     storageKey: text("storage_key"),
     originalFileName: text("original_file_name").notNull(),
     mimeType: text("mime_type").notNull(),
@@ -405,7 +510,13 @@ export const sourceArtifacts = pgTable(
     ...timestamps,
   },
   (t) => [
-    uniqueIndex("source_artifacts_slot_uq").on(t.sourceId, t.examId, t.subject, t.type),
+    uniqueIndex("source_artifacts_slot_key_uq").on(
+      t.sourceId,
+      t.examId,
+      t.subject,
+      t.type,
+      t.slotKey,
+    ),
     index("source_artifacts_status_idx").on(t.status),
     index("source_artifacts_exam_idx").on(t.examId, t.subject, t.type),
   ],

@@ -33,6 +33,16 @@ export interface Exam {
   updatedAt: string;
 }
 
+/** 세부과목 (사회·문화, 물리학 I, 미적분 …) */
+export interface Course {
+  id: string;
+  /** URL 에 쓰는 안정 식별자 (예: "social-culture") */
+  code: string;
+  name: string;
+  subject: Subject;
+  displayOrder: number;
+}
+
 export interface ExamSubject {
   examId: string;
   subject: Subject;
@@ -45,6 +55,8 @@ export interface ExamFile {
   id: string;
   examId: string;
   subject: Subject;
+  /** 세부과목 id. 세부과목이 없는 과목이거나 영역 전체 자료면 null */
+  courseId: string | null;
   type: FileType;
   /** storage: 우리 스토리지 / redirect: 검증된 공식 원본 URL. 화면은 이 구분을 몰라도 된다. */
   deliveryType: FileDeliveryType;
@@ -66,6 +78,8 @@ export interface Question {
   id: string;
   examId: string;
   subject: Subject;
+  /** 선택과목 문항이면 course id, 공통 문항이면 null */
+  courseId: string | null;
   questionNumber: number;
   /** 객관식은 "1"~"5", 단답형은 숫자 문자열 */
   answer: string;
@@ -132,6 +146,7 @@ export interface GradeCut {
   id: string;
   examId: string;
   subject: Subject;
+  courseId: string | null;
   source: GradeCutSource;
   sourceUrl: string | null;
   isOfficial: boolean;
@@ -182,6 +197,11 @@ export interface ExamSubjectDetail {
   exam: Exam;
   subjects: ExamSubject[];
   subject: ExamSubject;
+  /** 이 시험·영역에서 제공되는 세부과목 (없으면 빈 배열) */
+  courses: Course[];
+  /** 선택된 세부과목. 영역 페이지(/social)면 null */
+  course: Course | null;
+  /** 선택된 영역/세부과목의 자료 (영역 페이지에서는 course 가 없는 자료만) */
   files: ExamFile[];
   questions: QuestionWithStats[];
   gradeCuts: GradeCut[];

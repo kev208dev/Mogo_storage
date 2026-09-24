@@ -23,8 +23,13 @@ export const getExam = cache((year: number, grade: ExamKey["grade"], month: numb
 );
 
 export const getSubjectDetail = cache(
-  (year: number, grade: ExamKey["grade"], month: number, subject: Subject) =>
-    getRepository().getSubjectDetail({ year, grade, month }, subject),
+  (
+    year: number,
+    grade: ExamKey["grade"],
+    month: number,
+    subject: Subject,
+    courseCode: string | null = null,
+  ) => getRepository().getSubjectDetail({ year, grade, month }, subject, courseCode),
 );
 
 export const getExamSubjects = cache((examId: string) => getRepository().getExamSubjects(examId));

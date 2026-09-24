@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { and, eq, inArray } from "drizzle-orm";
+import { and, eq, inArray, isNull } from "drizzle-orm";
 import type { Database } from "../../db/client";
 import { examFiles, exams, examSources, sourceArtifacts } from "../../db/schema";
 import type { ArtifactDeliveryPolicy, FileType, Subject } from "../../lib/constants";
@@ -11,6 +11,7 @@ import { rankSources } from "../sources/config";
 import type { DiscoveredArtifact, SourceConfig } from "../types";
 import { sanitizeFileName } from "../verify/artifact-validator";
 import { examLabel } from "./exams";
+import { examFileConflict } from "./slots";
 import { loadPriorities } from "./sources";
 
 type Tx = Pick<Database, "select" | "insert" | "update">;
@@ -194,6 +195,7 @@ export async function publishSlot(
         eq(examFiles.examId, slot.examId),
         eq(examFiles.subject, slot.subject),
         eq(examFiles.type, slot.type),
+        isNull(examFiles.courseId),
       ),
     );
   // 수동 override(관리자 등록) 또는 1차 MVP 데이터는 자동 수집이 덮어쓰지 않는다
@@ -231,10 +233,7 @@ export async function publishSlot(
   await db
     .insert(examFiles)
     .values(values)
-    .onConflictDoUpdate({
-      target: [examFiles.examId, examFiles.subject, examFiles.type],
-      set: values,
-    });
+    .onConflictDoUpdate({ ...examFileConflict(null), set: values });
 
   ctx.logger.info("artifact.published", {
     examId: slot.examId,

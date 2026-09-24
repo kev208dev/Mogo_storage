@@ -49,7 +49,7 @@ export async function syncBuiltinSources(db: Database, sources: SourceConfig[] =
 type SourceRow = typeof examSources.$inferSelect;
 
 export function toSourceConfig(row: SourceRow, env: NodeJS.ProcessEnv = process.env): SourceConfig {
-  // 환경변수 SOURCE_X_ENABLED=false 는 DB 설정보다 우선하는 비상 스위치
+  // 환경변수 SOURCE_<ID>_ENABLED=true|false 가 있으면 DB 설정보다 우선 (비상 스위치). 비우면 DB 값
   const envFlag = envEnabled(row.id, env);
   return {
     id: row.id,
@@ -58,7 +58,7 @@ export function toSourceConfig(row: SourceRow, env: NodeJS.ProcessEnv = process.
     baseUrl: row.baseUrl,
     allowedHosts: row.allowedHosts,
     deliveryPolicy: row.deliveryPolicy,
-    enabled: envFlag === false ? false : row.enabled,
+    enabled: envFlag ?? row.enabled,
     minPollIntervalSeconds: row.minPollIntervalSeconds,
     requestTimeoutMs: row.requestTimeoutMs,
     maxConcurrentRequests: row.maxConcurrentRequests,

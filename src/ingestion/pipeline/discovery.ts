@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { ingestionErrors, ingestionRuns } from "../../db/schema";
+import { examCourses, ingestionErrors, ingestionRuns } from "../../db/schema";
 import { dedupeArtifacts } from "../canonical/artifact-type";
 import type { IngestionMode } from "../constants";
 import type { IngestionContext } from "../context";
@@ -7,6 +7,7 @@ import { SourceStructureChangedError, redactUrl, toIngestionError } from "../err
 import { createAdapter } from "../sources/registry";
 import type { DiscoverOptions, DiscoveredExam, ExamLocator, SourceConfig } from "../types";
 import { upsertDiscoveredArtifact } from "./artifacts";
+import { loadCourseAliases } from "./course-aliases";
 import { ensureExamSubjects, examLabel, upsertCanonicalExam, upsertSourceExam } from "./exams";
 import { withAdvisoryLock } from "./locks";
 import { recordFetchFailure, recordFetchSuccess } from "./sources";
@@ -79,6 +80,8 @@ export async function runDiscovery(
     };
 
     const adapter = createAdapter(input.source, ctx.adapterOptions);
+    // 관리자가 확정한 course mapping (예: "윤리" → 생활과 윤리) 을 이번 실행 전체에 적용
+    const aliases = await loadCourseAliases(db);
     let fatal: unknown = null;
     try {
       // 1) 시험 목록
@@ -139,7 +142,7 @@ export async function runDiscovery(
               examId,
               subject: group[0]!.subject,
               artifactType: group[0]!.type,
-              reason: "multiple candidate files for one slot (e.g. elective papers)",
+              reason: "multiple candidate files for one slot (same course and type)",
               count: group.length,
             });
           }
@@ -156,7 +159,14 @@ export async function runDiscovery(
               source: input.source,
               artifact,
               now: startedAt,
+              aliases,
             });
+            if (res.courseId) {
+              await db
+                .insert(examCourses)
+                .values({ examId, courseId: res.courseId })
+                .onConflictDoNothing();
+            }
             if (res.action === "created") counts.created += 1;
             if (res.action === "url_changed") counts.updated += 1;
             if (res.action !== "unchanged") {
@@ -165,6 +175,7 @@ export async function runDiscovery(
                 examId,
                 artifactId: res.id,
                 subject: artifact.subject,
+                course: res.slotKey || null,
                 artifactType: artifact.type,
               });
             }

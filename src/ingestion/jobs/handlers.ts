@@ -1,9 +1,14 @@
-import { and, eq, inArray } from "drizzle-orm";
+import { and, eq, inArray, isNull } from "drizzle-orm";
 import { examFiles, exams, examSchedules, ingestionErrors, sourceArtifacts } from "../../db/schema";
 import type { FileType, Subject } from "../../lib/constants";
 import type { IngestionContext } from "../context";
 import { ArtifactValidationError, IngestionError, redactUrl, toIngestionError } from "../errors";
-import { publishSlot } from "../pipeline/artifacts";
+import {
+  enqueuePublishJob,
+  publishSlot,
+  type Slot,
+  type SourceArtifactRow,
+} from "../pipeline/artifacts";
 import { examLabel } from "../pipeline/exams";
 import { loadSource } from "../pipeline/sources";
 import { createFetcherFor } from "../sources/registry";
@@ -116,20 +121,21 @@ export async function handleVerifyArtifact(ctx: IngestionContext, job: Job) {
     const keep =
       previous.status === "ready" || previous.status === "manual_review"
         ? previous.status
-        : artifact.deliveryPolicy === "manual_review"
+        : artifact.deliveryPolicy === "manual_review" || artifact.slotKey.startsWith("unresolved:")
           ? "manual_review"
           : "ready";
     await db
       .update(sourceArtifacts)
-      .set({ status: keep, statusReason: null, lastCheckedAt: now, updatedAt: now })
+      .set({
+        status: keep,
+        statusReason: keep === "manual_review" ? artifact.statusReason : null,
+        lastCheckedAt: now,
+        updatedAt: now,
+      })
       .where(eq(sourceArtifacts.id, artifactId));
     if (keep === "ready") {
       // 게시가 누락됐던 경우를 복구 (같은 버전이면 dedupe 로 무시됨)
-      await enqueuePublish(
-        ctx,
-        { examId: artifact.examId, subject: artifact.subject, type: artifact.type },
-        `${artifact.id}:${result.sha256}`,
-      );
+      await enqueuePublish(ctx, slotOf(artifact), `${artifact.id}:${result.sha256}`);
     }
     return;
   }
@@ -138,7 +144,11 @@ export async function handleVerifyArtifact(ctx: IngestionContext, job: Job) {
   if (artifact.deliveryPolicy === "mirror_allowed") {
     const [exam] = await db.select().from(exams).where(eq(exams.id, artifact.examId));
     const ext = expected === "audio" ? "mp3" : "pdf";
-    storageKey = `official/${exam!.slug}/${artifact.subject}/${artifact.type}-${result.sha256.slice(0, 16)}.${ext}`;
+    const area =
+      artifact.slotKey && !artifact.slotKey.startsWith("unresolved:")
+        ? `${artifact.subject}/${artifact.slotKey}`
+        : artifact.subject;
+    storageKey = `official/${exam!.slug}/${area}/${artifact.type}-${result.sha256.slice(0, 16)}.${ext}`;
     await ctx.storage.putObject({
       key: storageKey,
       body: res.bytes,
@@ -147,12 +157,19 @@ export async function handleVerifyArtifact(ctx: IngestionContext, job: Job) {
     });
   }
 
-  const nextStatus = artifact.deliveryPolicy === "manual_review" ? "manual_review" : "ready";
+  // course 가 모호하면(예: "윤리") 검증은 끝내되 관리자가 과목을 확정할 때까지 게시하지 않는다
+  const unresolvedCourse = artifact.slotKey.startsWith("unresolved:");
+  const nextStatus =
+    artifact.deliveryPolicy === "manual_review" || unresolvedCourse ? "manual_review" : "ready";
   await db
     .update(sourceArtifacts)
     .set({
       status: nextStatus,
-      statusReason: contentChanged ? "re-verified after content change" : null,
+      statusReason: unresolvedCourse
+        ? artifact.statusReason
+        : contentChanged
+          ? "re-verified after content change"
+          : null,
       sha256: result.sha256,
       fileSize: result.size,
       mimeType: result.mimeType,
@@ -178,33 +195,25 @@ export async function handleVerifyArtifact(ctx: IngestionContext, job: Job) {
     await ctx.notifier.notify({
       kind: "manual_review_needed",
       examLabel: exam ? examLabel(exam) : artifact.examId,
-      items: [`${artifact.subject} ${artifact.type}`],
+      items: [`${artifact.courseLabel ?? artifact.subject} ${artifact.type}`],
     });
     return;
   }
-  await enqueuePublish(
-    ctx,
-    { examId: artifact.examId, subject: artifact.subject, type: artifact.type },
-    `${artifact.id}:${result.sha256}`,
-  );
+  await enqueuePublish(ctx, slotOf(artifact), `${artifact.id}:${result.sha256}`);
 }
 
-export async function enqueuePublish(
-  ctx: IngestionContext,
-  slot: { examId: string; subject: Subject; type: FileType },
-  version: string,
-) {
-  await enqueueJob(ctx.db, {
-    runAt: ctx.now(),
-    type: "publish_artifact",
-    payload: slot,
-    dedupeKey: `publish:${slot.examId}:${slot.subject}:${slot.type}:${version}`,
-  });
+function slotOf(a: Pick<SourceArtifactRow, "examId" | "subject" | "courseId" | "type">): Slot {
+  return { examId: a.examId, subject: a.subject, courseId: a.courseId, type: a.type };
+}
+
+export async function enqueuePublish(ctx: IngestionContext, slot: Slot, version: string) {
+  await enqueuePublishJob(ctx.db, ctx.now(), slot, version);
 }
 
 /** PUBLISH: 슬롯 단위로 즉시 공개 + 페이지 재생성 + (영어 해설이면) 단어장 처리 예약 */
 export async function handlePublishArtifact(ctx: IngestionContext, job: Job) {
-  const slot = job.payload as { examId: string; subject: Subject; type: FileType };
+  const payload = job.payload as Omit<Slot, "courseId"> & { courseId?: string | null };
+  const slot: Slot = { ...payload, courseId: payload.courseId ?? null };
   const outcome = await publishSlot(ctx, slot);
   if (!outcome.published) return;
   await ctx.revalidator.revalidatePaths(outcome.examPaths);
@@ -233,6 +242,7 @@ export async function handlePublishArtifact(ctx: IngestionContext, job: Job) {
           eq(examFiles.examId, slot.examId),
           eq(examFiles.subject, "english"),
           eq(examFiles.type, "solution"),
+          isNull(examFiles.courseId),
         ),
       );
     const [artifact] = file?.sourceArtifactId

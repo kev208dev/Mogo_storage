@@ -112,6 +112,10 @@ describe("dedupeArtifacts", () => {
     label: "해설",
     fileNameHint: null,
     publishedAt: null,
+    course: { status: "none" },
+    courseLabel: null,
+    containerType: "file",
+    containsMultipleCourses: false,
     ...over,
   });
 

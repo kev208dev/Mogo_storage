@@ -1,5 +1,7 @@
 import { and, eq } from "drizzle-orm";
 import {
+  courses,
+  examCourses,
   examFiles,
   exams,
   reports,
@@ -13,7 +15,8 @@ import type { IngestionContext } from "./context";
 import { IngestionError } from "./errors";
 import { enqueuePublish } from "./jobs/handlers";
 import { enqueueVocabularyPdf } from "./jobs/vocabulary-handlers";
-import { retryFailedJob } from "./jobs/queue";
+import { enqueueJob, retryFailedJob } from "./jobs/queue";
+import { saveCourseAlias } from "./pipeline/course-aliases";
 import { setSourceEnabled } from "./pipeline/sources";
 
 /**
@@ -27,13 +30,20 @@ export async function approveArtifact(ctx: IngestionContext, artifactId: string)
   if (!a) throw new IngestionError("NOT_FOUND", "artifact not found");
   if (a.status !== "manual_review")
     throw new IngestionError("INVALID_STATE", `artifact is ${a.status}`);
+  if (a.slotKey.startsWith("unresolved:")) {
+    throw new IngestionError("COURSE_UNRESOLVED", "세부과목을 먼저 지정해야 공개할 수 있습니다.");
+  }
+  if (a.containerType === "archive") {
+    throw new IngestionError("ARCHIVE_NOT_SUPPORTED", "압축 파일은 아직 공개할 수 없습니다.");
+  }
+  if (!a.sha256) throw new IngestionError("NOT_VERIFIED", "파일 검증이 끝나지 않았습니다.");
   await ctx.db
     .update(sourceArtifacts)
     .set({ status: "ready", statusReason: "approved by admin", updatedAt: ctx.now() })
     .where(eq(sourceArtifacts.id, artifactId));
   await enqueuePublish(
     ctx,
-    { examId: a.examId, subject: a.subject, type: a.type },
+    { examId: a.examId, subject: a.subject, courseId: a.courseId, type: a.type },
     `${a.id}:${a.sha256 ?? "none"}:approved`,
   );
 }
@@ -92,7 +102,7 @@ export async function remapSourceExam(
     for (const a of moved) {
       await enqueuePublish(
         { ...ctx, db: tx as unknown as IngestionContext["db"] },
-        { examId: mapping.examId, subject: a.subject, type: a.type },
+        { examId: mapping.examId, subject: a.subject, courseId: a.courseId, type: a.type },
         `remap:${a.id}`,
       );
     }
@@ -137,4 +147,107 @@ export async function reviewVocabularyCandidate(
       .onConflictDoNothing();
     await enqueueVocabularyPdf(ctx, c.examId);
   }
+}
+
+/**
+ * 자료의 세부과목 지정/수정 (예: source 가 "윤리" 로만 표기한 자료 → 생활과 윤리).
+ *  - 원래 표기를 course_aliases 에 저장해 다음 수집부터 자동으로 같은 과목으로 판정한다 (기본: 해당 source 한정)
+ *  - 이미 검증된 자료면 바로 게시, 아니면 검증 job 을 만든다
+ *  - 다른 과목으로 잘못 게시돼 있었다면 그 게시를 내리고 원래 슬롯을 다른 source 로 다시 채운다
+ */
+export async function mapArtifactCourse(
+  ctx: IngestionContext,
+  input: {
+    artifactId: string;
+    courseCode: string;
+    admin: string;
+    aliasScope?: "source" | "global";
+  },
+) {
+  const [a] = await ctx.db
+    .select()
+    .from(sourceArtifacts)
+    .where(eq(sourceArtifacts.id, input.artifactId));
+  if (!a) throw new IngestionError("NOT_FOUND", "artifact not found");
+  const [course] = await ctx.db.select().from(courses).where(eq(courses.code, input.courseCode));
+  if (!course) throw new IngestionError("NOT_FOUND", `unknown course ${input.courseCode}`);
+  if (course.subject !== a.subject) {
+    throw new IngestionError(
+      "SUBJECT_MISMATCH",
+      `${course.name} 은(는) ${a.subject} 영역이 아닙니다.`,
+    );
+  }
+  const [clash] = await ctx.db
+    .select({ id: sourceArtifacts.id, sourceUrl: sourceArtifacts.sourceUrl })
+    .from(sourceArtifacts)
+    .where(
+      and(
+        eq(sourceArtifacts.sourceId, a.sourceId),
+        eq(sourceArtifacts.examId, a.examId),
+        eq(sourceArtifacts.subject, a.subject),
+        eq(sourceArtifacts.type, a.type),
+        eq(sourceArtifacts.slotKey, course.code),
+      ),
+    );
+  if (clash && clash.id !== a.id) {
+    throw new IngestionError(
+      "SLOT_OCCUPIED",
+      `이 source 에 이미 ${course.name} 자료가 있습니다. 중복 자료라면 거절 처리하세요.`,
+    );
+  }
+
+  if (a.courseLabel) {
+    await saveCourseAlias(ctx.db, {
+      label: a.courseLabel,
+      courseCode: course.code,
+      sourceId: input.aliasScope === "global" ? null : a.sourceId,
+      createdBy: input.admin,
+    });
+  }
+  const previousSlot = { examId: a.examId, subject: a.subject, courseId: a.courseId, type: a.type };
+  const verified = Boolean(a.sha256 && a.verifiedAt);
+  const nextStatus = !verified
+    ? "discovered"
+    : a.deliveryPolicy === "manual_review"
+      ? "manual_review"
+      : "ready";
+  await ctx.db
+    .update(sourceArtifacts)
+    .set({
+      courseId: course.id,
+      slotKey: course.code,
+      status: nextStatus,
+      statusReason: `course set to ${course.code} by ${input.admin}`,
+      updatedAt: ctx.now(),
+    })
+    .where(eq(sourceArtifacts.id, a.id));
+  await ctx.db
+    .insert(examCourses)
+    .values({ examId: a.examId, courseId: course.id })
+    .onConflictDoNothing();
+
+  // 다른 슬롯에 게시돼 있었다면 내리고, 원래 슬롯은 남은 후보로 다시 채운다
+  if (a.courseId !== course.id) {
+    const removed = await ctx.db
+      .delete(examFiles)
+      .where(eq(examFiles.sourceArtifactId, a.id))
+      .returning({ id: examFiles.id });
+    if (removed.length)
+      await enqueuePublish(ctx, previousSlot, `unmap:${a.id}:${ctx.now().getTime()}`);
+  }
+  if (nextStatus === "ready") {
+    await enqueuePublish(
+      ctx,
+      { examId: a.examId, subject: a.subject, courseId: course.id, type: a.type },
+      `${a.id}:${a.sha256}:course:${course.code}`,
+    );
+  } else if (nextStatus === "discovered") {
+    await enqueueJob(ctx.db, {
+      runAt: ctx.now(),
+      type: "verify_artifact",
+      payload: { artifactId: a.id },
+      dedupeKey: `verify:${a.id}:course:${course.code}:${ctx.now().getTime()}`,
+    });
+  }
+  return { courseCode: course.code, status: nextStatus };
 }

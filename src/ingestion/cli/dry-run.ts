@@ -1,5 +1,6 @@
 import path from "node:path";
 import { GRADES, SUBJECT_LABELS, FILE_TYPE_LABELS, type Grade } from "../../lib/constants";
+import { courseByCode } from "../../lib/courses";
 import { examPath } from "../../lib/exam-path";
 import { dedupeArtifacts } from "../canonical/artifact-type";
 import { canonicalKey } from "../canonical/exam-title";
@@ -105,7 +106,21 @@ export async function dryRunBackfill(options: {
                 : source.deliveryPolicy === "manual_review"
                   ? "검증 → 관리자 검토 대기"
                   : "검증 → 공식 URL 등록 (다운로드 시 redirect)";
-            console.log(`    ${SUBJECT_LABELS[a.subject]} ${FILE_TYPE_LABELS[a.type]}: ${action}`);
+            const area =
+              a.course.status === "resolved"
+                ? `${SUBJECT_LABELS[a.subject]} > ${courseByCode(a.course.code)?.name}`
+                : SUBJECT_LABELS[a.subject];
+            if (a.containerType === "archive") {
+              console.log(
+                `    ${area} ${FILE_TYPE_LABELS[a.type]}: 압축 파일 → 관리자 검토 (압축 해제 미구현)`,
+              );
+            } else if (a.course.status === "ambiguous") {
+              console.log(
+                `    ${area} ${FILE_TYPE_LABELS[a.type]}: 과목 표기 "${a.courseLabel}" 이 모호함 (${a.course.candidates.join(" / ")}) → 검증 후 관리자 과목 지정 대기`,
+              );
+            } else {
+              console.log(`    ${area} ${FILE_TYPE_LABELS[a.type]}: ${action}`);
+            }
           }
           for (const group of conflicts) {
             console.log(

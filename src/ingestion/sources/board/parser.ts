@@ -1,6 +1,5 @@
-import { normalizeArtifactType } from "../../canonical/artifact-type";
+import { classifyArtifact } from "../../canonical/classify";
 import { canonicalizeExamTitle, type TitleHints } from "../../canonical/exam-title";
-import { normalizeSubject } from "../../canonical/subject";
 import { SourceStructureChangedError } from "../../errors";
 import type { DiscoveredArtifact, DiscoveredExam } from "../../types";
 import { absoluteUrl, extractLinkTarget, parseHtml, text } from "../html";
@@ -114,17 +113,13 @@ export function parseBoardAttachments(
     const target = extractLinkTarget(link);
     const url = target ? absoluteUrl(target, context.pageUrl) : null;
     if (!url || !label) continue;
-    const subject = normalizeSubject(label);
-    const type = normalizeArtifactType(label);
-    if (!subject || !type) continue;
-    artifacts.push({
-      subject,
-      type,
+    const result = classifyArtifact({
+      subjectLabel: null,
+      linkLabel: label,
       url,
-      label,
-      fileNameHint: label,
       publishedAt: context.postedAt ? `${context.postedAt}T00:00:00+09:00` : null,
     });
+    if (result.ok) artifacts.push(result.artifact);
   }
   return artifacts;
 }

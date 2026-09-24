@@ -1,7 +1,6 @@
 import type { Grade } from "../../../lib/constants";
-import { normalizeArtifactType } from "../../canonical/artifact-type";
+import { classifyArtifact } from "../../canonical/classify";
 import { canonicalizeExamTitle, canonicalKey } from "../../canonical/exam-title";
-import { normalizeSubject } from "../../canonical/subject";
 import { SourceStructureChangedError } from "../../errors";
 import type { DiscoveredArtifact, DiscoveredExam } from "../../types";
 import { absoluteUrl, extractLinkTarget, parseHtml, text } from "../html";
@@ -60,28 +59,27 @@ export function parseEbsiListing(
     subjectBlocksSeen += blocks.length;
     for (const block of blocks) {
       const subjectLabel = text(block.querySelector(S.subjectName));
-      const subject = normalizeSubject(subjectLabel);
-      if (!subject) {
-        if (subjectLabel) warnings.push({ code: "UNSUPPORTED_SUBJECT", message: subjectLabel });
-        continue;
-      }
       for (const link of block.querySelectorAll(S.downloadLink)) {
         const label = text(link);
         const target = extractLinkTarget(link);
-        const type =
-          normalizeArtifactType(label) ?? (target ? normalizeArtifactType(target) : null);
-        if (!target || !type) continue;
-        const url = absoluteUrl(target, context.pageUrl);
+        const url = target ? absoluteUrl(target, context.pageUrl) : null;
         if (!url) continue;
-        artifacts.push({
-          subject,
-          type,
-          url,
-          label,
-          fileNameHint: decodeURIComponent(new URL(url).pathname.split("/").pop() ?? "") || null,
-          publishedAt: null,
-        });
+        const result = classifyArtifact({ subjectLabel, linkLabel: label, url });
+        if (!result.ok) {
+          if (result.reason === "unsupported_subject") {
+            warnings.push({ code: "UNSUPPORTED_SUBJECT", message: subjectLabel || label });
+          }
+          continue;
+        }
+        artifacts.push(result.artifact);
       }
+    }
+    // 같은 과목 블록에서 경고가 중복되지 않도록 정리
+    const seen = new Set<string>();
+    for (let i = warnings.length - 1; i >= 0; i -= 1) {
+      const key = `${warnings[i]!.code}:${warnings[i]!.message}`;
+      if (seen.has(key)) warnings.splice(i, 1);
+      seen.add(key);
     }
 
     exams.push({

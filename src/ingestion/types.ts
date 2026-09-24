@@ -6,6 +6,7 @@ import type {
   Grade,
   Subject,
 } from "../lib/constants";
+import type { CourseResolution } from "./canonical/course";
 import type { SourceHealthStatus } from "./constants";
 
 /** exam_sources 한 행에 대응하는 설정 (코드 기본값 + DB 값 병합 결과) */
@@ -62,6 +63,13 @@ export interface DiscoveredArtifact {
   label: string;
   fileNameHint: string | null;
   publishedAt: string | null;
+  /** 세부과목 판정 결과 (코드 카탈로그 기준). 모호하면 ambiguous → manual_review */
+  course: CourseResolution;
+  /** 원래 과목 표기 (course 판정에 쓴 표기, 관리자 mapping 시 alias 로 저장) */
+  courseLabel: string | null;
+  /** file | archive (여러 과목이 든 zip 등 — 압축 해제는 아직 하지 않음) */
+  containerType: "file" | "archive";
+  containsMultipleCourses: boolean;
 }
 
 /** discoverArtifacts 입력: canonical identity + (있으면) source 내부 위치 */

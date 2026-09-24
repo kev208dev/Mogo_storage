@@ -1,5 +1,6 @@
 import type { FileType } from "../../lib/constants";
 import type { DiscoveredArtifact } from "../types";
+import { courseSlotKey } from "./course";
 
 /** source 표기(버튼 텍스트, 파일명) → 자료 종류 */
 export function normalizeArtifactType(raw: string): FileType | null {
@@ -22,7 +23,7 @@ function labelRank(artifact: DiscoveredArtifact): number {
 }
 
 /**
- * 한 시험 안에서 (과목, 종류) 슬롯당 하나만 남긴다.
+ * 한 시험 안에서 (영역, 세부과목, 종류) 슬롯당 하나만 남긴다.
  * 탐구 선택과목처럼 한 슬롯에 서로 다른 파일이 여러 개면 모두 버리지 않고 conflicts 로 돌려준다.
  */
 export function dedupeArtifacts(artifacts: DiscoveredArtifact[]): {
@@ -31,7 +32,8 @@ export function dedupeArtifacts(artifacts: DiscoveredArtifact[]): {
 } {
   const slots = new Map<string, DiscoveredArtifact[]>();
   for (const a of artifacts) {
-    const key = `${a.subject}:${a.type}`;
+    // identity: 영역 + canonical course(모호하면 unresolved:<표기>) + 자료 종류. 파일명은 쓰지 않는다
+    const key = `${a.subject}:${courseSlotKey(a.course)}:${a.type}`;
     const list = slots.get(key) ?? [];
     if (!list.some((x) => x.url === a.url)) list.push(a);
     slots.set(key, list);

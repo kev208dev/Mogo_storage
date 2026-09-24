@@ -1,69 +1,111 @@
-import Image from "next/image";
+import { BookOpenIcon, HeadphonesIcon, PencilLineIcon, SpellCheckIcon } from "lucide-react";
+import Link from "next/link";
+import { ExamList } from "@/components/exam/ExamList";
+import { ExamFinder } from "@/components/search/ExamFinder";
+import { ExamSearch } from "@/components/search/ExamSearch";
+import { GRADES, SITE_NAME } from "@/lib/constants";
+import { getRepository } from "@/lib/data";
+import { FEATURED_EXAM } from "@/lib/data/sample-data";
+import { examPath } from "@/lib/exam-path";
 
-export default function Home() {
+export const revalidate = 3600;
+
+const ENGLISH_TOOLS = [
+  {
+    icon: BookOpenIcon,
+    title: "지문별 단어장",
+    body: "문항 번호별로 정리된 단어",
+    anchor: "vocabulary",
+  },
+  {
+    icon: SpellCheckIcon,
+    title: "단어 시험",
+    body: "객관식·주관식, 10~30문항",
+    anchor: "vocabulary-quiz",
+  },
+  {
+    icon: HeadphonesIcon,
+    title: "영어 듣기",
+    body: "문항별 재생, 0.75~1.5배속",
+    anchor: "listening",
+  },
+  { icon: PencilLineIcon, title: "받아쓰기", body: "쉬움·보통·어려움 3단계", anchor: "dictation" },
+] as const;
+
+export default async function HomePage() {
+  const repo = getRepository();
+  const [years, recent] = await Promise.all([repo.listYears(), repo.listRecentExams(9)]);
+  const latest = recent[0];
+  const englishDemo = `${examPath(FEATURED_EXAM, "english")}`;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="mx-auto max-w-2xl py-8 sm:py-12">
+      <section aria-labelledby="hero-title">
+        <h1 id="hero-title" className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+          {SITE_NAME}
+        </h1>
+        <p className="text-muted-foreground mt-1">찾는 모의고사를 바로 다운로드하세요.</p>
+
+        <div className="mt-5 space-y-3">
+          <ExamFinder
+            years={years}
+            defaultValue={
+              latest
+                ? { year: latest.year, grade: latest.grade, month: latest.month }
+                : FEATURED_EXAM
+            }
+          />
+          <ExamSearch />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section aria-labelledby="recent-title" className="mt-10">
+        <div className="mb-3 flex items-end justify-between">
+          <h2 id="recent-title" className="text-lg font-bold">
+            최근 모의고사
+          </h2>
+          <nav aria-label="학년별 전체 보기" className="flex gap-1 text-sm">
+            {GRADES.map((g) => (
+              <Link
+                key={g}
+                href={`/grade/high${g}`}
+                className="text-primary hover:bg-primary-soft inline-flex min-h-11 items-center rounded-md px-2 font-semibold"
+              >
+                고{g} 전체
+              </Link>
+            ))}
+          </nav>
         </div>
-      </main>
+        <ExamList exams={recent} />
+      </section>
+
+      <section aria-labelledby="english-tools-title" className="mt-10">
+        <h2 id="english-tools-title" className="text-lg font-bold">
+          영어 학습 도구
+        </h2>
+        <p className="text-muted-foreground mt-0.5 text-sm">
+          시험 페이지의 영어 탭에서 바로 사용할 수 있습니다.
+        </p>
+        <ul className="mt-3 grid grid-cols-2 gap-2">
+          {ENGLISH_TOOLS.map(({ icon: Icon, title, body, anchor }) => (
+            <li key={title}>
+              <Link
+                href={`${englishDemo}#${anchor}`}
+                className="border-border hover:bg-muted flex h-full items-start gap-2.5 rounded-md border p-3"
+              >
+                <Icon className="text-primary mt-0.5 size-5 shrink-0" aria-hidden />
+                <span>
+                  <span className="block font-semibold">{title}</span>
+                  <span className="text-muted-foreground block text-xs">{body}</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="text-muted-foreground mt-2 text-xs">
+          예시: 2025년 고2 9월 영어 (개발용 샘플 데이터)
+        </p>
+      </section>
     </div>
   );
 }

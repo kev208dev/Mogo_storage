@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
+/*
+ * 디자인 토큰: primary accent 1개(blue) + neutral palette.
+ * 모든 전경/배경 조합은 WCAG AA(4.5:1) 이상을 목표로 한다.
+ */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-strong: #e4e4e7;
+  --muted-foreground: #52525b;
+  --border: #d4d4d8;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --primary-strong: #1e3a8a;
+  --primary-soft: #eff6ff;
+  --primary-foreground: #ffffff;
+  --ring: #2563eb;
+  --success-soft: #ecfdf5;
+  --success-strong: #047857;
+  --danger-soft: #fef2f2;
+  --danger-strong: #b91c1c;
+  --warning-soft: #fffbeb;
+  --warning-strong: #92400e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-ring: var(--ring);
+  --color-success-soft: var(--success-soft);
+  --color-success-strong: var(--success-strong);
+  --color-danger-soft: var(--danger-soft);
+  --color-danger-strong: var(--danger-strong);
+  --color-warning-soft: var(--warning-soft);
+  --color-warning-strong: var(--warning-strong);
+  /* 웹폰트 다운로드 없이 OS 한글 폰트 사용 (성능) */
+  --font-sans:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Malgun Gothic", "맑은 고딕", "Noto Sans KR", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  word-break: keep-all;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* 컴포넌트가 ring 스타일을 직접 그리는 경우 기본 outline 중복 제거 */
+[class*="focus-visible:ring"]:focus-visible {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
 }

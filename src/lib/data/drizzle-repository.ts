@@ -1,0 +1,206 @@
+import { and, asc, count, desc, eq, gte, inArray } from "drizzle-orm";
+import type { Database } from "../../db/client";
+import * as s from "../../db/schema";
+import type { Grade, Subject } from "../constants";
+import type { ExamKey } from "../exam-path";
+import type { ExamRepository } from "./repository";
+import type {
+  Exam,
+  ExamFile,
+  ExamSubject,
+  GradeCut,
+  ListeningTrack,
+  NewReport,
+  QuestionWithStats,
+  Report,
+  VocabularyItem,
+} from "./types";
+
+type ExamRow = typeof s.exams.$inferSelect;
+type FileRow = typeof s.examFiles.$inferSelect;
+
+const toExam = (row: ExamRow): Exam => ({
+  ...row,
+  grade: row.grade as Grade,
+  createdAt: row.createdAt.toISOString(),
+  updatedAt: row.updatedAt.toISOString(),
+});
+
+const toFile = (row: FileRow): ExamFile => ({
+  ...row,
+  createdAt: row.createdAt.toISOString(),
+  updatedAt: row.updatedAt.toISOString(),
+});
+
+export class DrizzleExamRepository implements ExamRepository {
+  constructor(private readonly db: Database) {}
+
+  async listExams(filter: { year?: number; grade?: Grade } = {}) {
+    const conditions = [
+      filter.year ? eq(s.exams.year, filter.year) : undefined,
+      filter.grade ? eq(s.exams.grade, filter.grade) : undefined,
+    ].filter(Boolean);
+    const rows = await this.db
+      .select()
+      .from(s.exams)
+      .where(conditions.length ? and(...conditions) : undefined)
+      .orderBy(desc(s.exams.year), desc(s.exams.month), desc(s.exams.grade));
+    return rows.map(toExam);
+  }
+
+  async listRecentExams(limit: number) {
+    const rows = await this.db
+      .select()
+      .from(s.exams)
+      .orderBy(desc(s.exams.year), desc(s.exams.month), desc(s.exams.grade))
+      .limit(limit);
+    return rows.map(toExam);
+  }
+
+  async listYears() {
+    const rows = await this.db
+      .selectDistinct({ year: s.exams.year })
+      .from(s.exams)
+      .orderBy(desc(s.exams.year));
+    return rows.map((r) => r.year);
+  }
+
+  async getExam(key: ExamKey) {
+    const [row] = await this.db
+      .select()
+      .from(s.exams)
+      .where(
+        and(eq(s.exams.year, key.year), eq(s.exams.grade, key.grade), eq(s.exams.month, key.month)),
+      )
+      .limit(1);
+    return row ? toExam(row) : null;
+  }
+
+  async getExamById(id: string) {
+    const [row] = await this.db.select().from(s.exams).where(eq(s.exams.id, id)).limit(1);
+    return row ? toExam(row) : null;
+  }
+
+  async getExamSubjects(examId: string): Promise<ExamSubject[]> {
+    return this.db
+      .select({
+        examId: s.examSubjects.examId,
+        subject: s.examSubjects.subject,
+        questionCount: s.examSubjects.questionCount,
+        totalScore: s.examSubjects.totalScore,
+      })
+      .from(s.examSubjects)
+      .where(eq(s.examSubjects.examId, examId));
+  }
+
+  async getSubjectDetail(key: ExamKey, subject: Subject) {
+    const exam = await this.getExam(key);
+    if (!exam) return null;
+    const subjects = await this.getExamSubjects(exam.id);
+    const current = subjects.find((x) => x.subject === subject);
+    if (!current) return null;
+
+    const isEnglish = subject === "english";
+    const [files, questionRows, gradeCutRows, vocabularyRows, trackRows] = await Promise.all([
+      this.db
+        .select()
+        .from(s.examFiles)
+        .where(and(eq(s.examFiles.examId, exam.id), eq(s.examFiles.subject, subject))),
+      this.db.query.questions.findMany({
+        where: and(eq(s.questions.examId, exam.id), eq(s.questions.subject, subject)),
+        orderBy: asc(s.questions.questionNumber),
+        with: { statistics: { orderBy: desc(s.questionStatistics.statisticsUpdatedAt), limit: 1 } },
+      }),
+      this.db
+        .select()
+        .from(s.gradeCuts)
+        .where(and(eq(s.gradeCuts.examId, exam.id), eq(s.gradeCuts.subject, subject))),
+      isEnglish
+        ? this.db
+            .select({ v: s.vocabulary, questionNumber: s.questions.questionNumber })
+            .from(s.vocabulary)
+            .innerJoin(s.questions, eq(s.vocabulary.questionId, s.questions.id))
+            .where(eq(s.vocabulary.examId, exam.id))
+            .orderBy(asc(s.questions.questionNumber))
+        : Promise.resolve([]),
+      isEnglish
+        ? this.db.query.listeningTracks.findMany({
+            where: eq(s.listeningTracks.examId, exam.id),
+            with: { transcript: true },
+          })
+        : Promise.resolve([]),
+    ]);
+
+    const questions: QuestionWithStats[] = questionRows.map(
+      ({ statistics, createdAt: _c, updatedAt: _u, ...q }) => {
+        void _c;
+        void _u;
+        const st = statistics[0];
+        return {
+          ...q,
+          statistic: st
+            ? {
+                ...st,
+                answerDistribution: st.answerDistribution ?? null,
+                statisticsUpdatedAt: st.statisticsUpdatedAt.toISOString(),
+              }
+            : null,
+        };
+      },
+    );
+
+    const gradeCuts: GradeCut[] = gradeCutRows.map(({ createdAt: _c, ...g }) => {
+      void _c;
+      return { ...g, updatedAt: g.updatedAt.toISOString() };
+    });
+
+    const vocabulary: VocabularyItem[] = vocabularyRows.map(({ v, questionNumber }) => ({
+      ...v,
+      questionNumber,
+      difficulty: Math.min(3, Math.max(1, v.difficulty)) as 1 | 2 | 3,
+      createdAt: v.createdAt.toISOString(),
+    }));
+
+    const listeningTracks: ListeningTrack[] = trackRows
+      .map(({ transcript, ...t }) => ({ ...t, transcript: transcript?.lines ?? null }))
+      .sort((a, b) => (a.questionNumber ?? 0) - (b.questionNumber ?? 0));
+
+    return {
+      exam,
+      subjects,
+      subject: current,
+      files: files.map(toFile),
+      questions,
+      gradeCuts,
+      vocabulary,
+      listeningTracks,
+    };
+  }
+
+  async getFile(fileId: string) {
+    const [row] = await this.db.select().from(s.examFiles).where(eq(s.examFiles.id, fileId));
+    return row ? toFile(row) : null;
+  }
+
+  async createReport(input: NewReport): Promise<Report> {
+    const [row] = await this.db.insert(s.reports).values(input).returning();
+    if (!row) throw new Error("Failed to insert report");
+    const { ipHash: _ipHash, ...rest } = row;
+    void _ipHash;
+    return { ...rest, createdAt: row.createdAt.toISOString() };
+  }
+
+  async countRecentReports(ipHash: string, since: Date) {
+    const [row] = await this.db
+      .select({ value: count() })
+      .from(s.reports)
+      .where(and(eq(s.reports.ipHash, ipHash), gte(s.reports.createdAt, since)));
+    return row?.value ?? 0;
+  }
+
+  /** 여러 시험의 과목 정보를 한 번에 (sitemap 등) */
+  async getSubjectsForExams(examIds: string[]) {
+    if (examIds.length === 0) return [];
+    return this.db.select().from(s.examSubjects).where(inArray(s.examSubjects.examId, examIds));
+  }
+}

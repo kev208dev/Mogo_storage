@@ -43,6 +43,13 @@
       "when": 1790268644023,
       "tag": "0005_artifact_watch_and_probe",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1790269346073,
+      "tag": "0006_source_health_capabilities_audits",
+      "breakpoints": true
     }
   ]
 }

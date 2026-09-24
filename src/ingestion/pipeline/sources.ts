@@ -2,10 +2,11 @@ import { and, eq, sql } from "drizzle-orm";
 import type { Database } from "../../db/client";
 import { examSources, sourcePriorities } from "../../db/schema";
 import { EXAM_TYPES, type ExamType } from "../../lib/constants";
+import { SOURCE_CAPABILITIES, type SourceCapability } from "../constants";
 import type { SourceHealth, SourceConfig } from "../types";
 import { BUILTIN_SOURCES, DEFAULT_SOURCE_PRIORITIES } from "../sources/config";
 import { envEnabled } from "../sources/registry";
-import { currentParserVersion, isLiveVerified } from "../sources/verification";
+import { activationBlockers, currentParserVersion, isLiveVerified } from "../sources/verification";
 import { IngestionError } from "../errors";
 import { syncCourseCatalog } from "./course-aliases";
 
@@ -31,7 +32,10 @@ export async function syncBuiltinSources(db: Database, sources: SourceConfig[] =
         maxConcurrentRequests: s.maxConcurrentRequests,
         minRequestGapMs: s.minRequestGapMs,
         maxRetries: s.maxRetries,
-        healthStatus: s.enabled ? "healthy" : "disabled",
+        discoveryEnabled: s.capabilities.discovery,
+        artifactEnabled: s.capabilities.artifacts,
+        releaseWatchEnabled: s.capabilities.release_watch,
+        healthStatus: s.enabled ? "healthy" : "unverified",
       })
       .onConflictDoUpdate({
         target: examSources.id,
@@ -64,6 +68,13 @@ export function toSourceConfig(row: SourceRow, env: NodeJS.ProcessEnv = process.
     deliveryPolicy: row.deliveryPolicy,
     enabled: envFlag ?? row.enabled,
     liveVerified: isLiveVerified(row.kind, row),
+    capabilities: {
+      discovery: row.discoveryEnabled,
+      artifacts: row.artifactEnabled,
+      release_watch: row.releaseWatchEnabled,
+    },
+    healthStatus: row.healthStatus,
+    lastHealthCheckAt: row.lastHealthCheckAt,
     minPollIntervalSeconds: row.minPollIntervalSeconds,
     requestTimeoutMs: row.requestTimeoutMs,
     maxConcurrentRequests: row.maxConcurrentRequests,
@@ -109,7 +120,7 @@ export async function recordFetchFailure(
   db: Database,
   sourceId: string,
   now: Date,
-  status: "degraded" | "broken",
+  status: "degraded" | "structure_changed" | "network_error",
   message: string,
 ) {
   await db
@@ -124,6 +135,9 @@ export async function recordFetchFailure(
     .where(eq(examSources.id, sourceId));
 }
 
+/**
+ * health check 결과 기록. 꺼져 있는 source 도 실제 결과를 기록한다 (켜기 전 "health check 통과" 조건).
+ */
 export async function recordHealthCheck(db: Database, sourceId: string, health: SourceHealth) {
   const now = new Date(health.checkedAt);
   await db
@@ -134,7 +148,7 @@ export async function recordHealthCheck(db: Database, sourceId: string, health: 
       healthMessage: health.message.slice(0, 500),
       ...(health.status === "healthy" || health.status === "degraded"
         ? { lastSuccessfulFetchAt: now }
-        : health.status === "broken"
+        : health.status === "structure_changed" || health.status === "network_error"
           ? { lastFailureAt: now, failureCount: sql`${examSources.failureCount} + 1` }
           : {}),
       updatedAt: now,
@@ -142,19 +156,83 @@ export async function recordHealthCheck(db: Database, sourceId: string, health: 
     .where(eq(examSources.id, sourceId));
 }
 
-export async function setSourceEnabled(db: Database, sourceId: string, enabled: boolean) {
+/**
+ * source 켜기/끄기 (master switch). 켜려면 activationBlockers 가 비어 있어야 한다:
+ * live fixture 검증 · 현재 parser 일치 · 관리자 승인 · 최근 health check 통과.
+ * 켠 뒤에도 기능(discovery/artifacts/release_watch)은 따로 단계적으로 켠다.
+ */
+export async function setSourceEnabled(
+  db: Database,
+  sourceId: string,
+  enabled: boolean,
+  now = new Date(),
+) {
   const [row] = await db.select().from(examSources).where(eq(examSources.id, sourceId));
   if (!row) throw new IngestionError("NOT_FOUND", `source ${sourceId} not found`);
-  if (enabled && !isLiveVerified(row.kind, row)) {
-    throw new IngestionError(
-      "SOURCE_NOT_VERIFIED",
-      `${row.name}: 실제 페이지 fixture 검증과 관리자 승인이 필요합니다 (parser ${currentParserVersion(row.kind) ?? "?"}).`,
-    );
+  if (enabled) {
+    const blockers = activationBlockers(row, now);
+    if (blockers.length) {
+      throw new IngestionError(
+        "SOURCE_NOT_VERIFIED",
+        `${row.name}: 켤 수 없습니다 — ${blockers.join(", ")} (parser ${currentParserVersion(row.kind) ?? "?"}).`,
+      );
+    }
   }
   await db
     .update(examSources)
-    .set({ enabled, healthStatus: enabled ? "healthy" : "disabled", updatedAt: new Date() })
+    .set(
+      enabled
+        ? { enabled: true, updatedAt: now }
+        : {
+            enabled: false,
+            discoveryEnabled: false,
+            artifactEnabled: false,
+            releaseWatchEnabled: false,
+            updatedAt: now,
+          },
+    )
     .where(and(eq(examSources.id, sourceId)));
+}
+
+const CAPABILITY_COLUMN = {
+  discovery: "discoveryEnabled",
+  artifacts: "artifactEnabled",
+  release_watch: "releaseWatchEnabled",
+} as const;
+
+/**
+ * 기능 단위 활성화. 순서: discovery → artifacts → release_watch (앞 단계가 켜져 있어야 다음을 켤 수 있다).
+ * 끄면 뒤 단계도 함께 꺼진다.
+ */
+export async function setSourceCapability(
+  db: Database,
+  sourceId: string,
+  capability: SourceCapability,
+  on: boolean,
+  now = new Date(),
+) {
+  const [row] = await db.select().from(examSources).where(eq(examSources.id, sourceId));
+  if (!row) throw new IngestionError("NOT_FOUND", `source ${sourceId} not found`);
+  if (on) {
+    if (!row.enabled || !isLiveVerified(row.kind, row)) {
+      throw new IngestionError(
+        "SOURCE_NOT_ENABLED",
+        `${row.name}: 검증·승인 후 source 를 먼저 켜야 합니다.`,
+      );
+    }
+    if (capability === "artifacts" && !row.discoveryEnabled)
+      throw new IngestionError("CAPABILITY_ORDER", "시험 metadata 수집(discovery)을 먼저 켜세요.");
+    if (capability === "release_watch" && !row.artifactEnabled)
+      throw new IngestionError("CAPABILITY_ORDER", "자료 수집(artifacts)을 먼저 켜세요.");
+  }
+  const index = SOURCE_CAPABILITIES.indexOf(capability);
+  const set: Partial<Record<(typeof CAPABILITY_COLUMN)[SourceCapability], boolean>> = {};
+  if (on) set[CAPABILITY_COLUMN[capability]] = true;
+  else for (const c of SOURCE_CAPABILITIES.slice(index)) set[CAPABILITY_COLUMN[c]] = false;
+  await db
+    .update(examSources)
+    .set({ ...set, updatedAt: now })
+    .where(eq(examSources.id, sourceId));
 }
 
 /** CLI 가 실제 fixture 로 contract 검증을 통과했을 때 남기는 증거 (승인은 아님) */
@@ -180,8 +258,11 @@ export async function recordLiveFixtureEvidence(
             liveFixtureParserVersion: null,
             verifiedAgainstLiveFixture: false,
             enabled: false,
-            healthStatus: "broken",
-            healthMessage: "live fixture contract failed",
+            discoveryEnabled: false,
+            artifactEnabled: false,
+            releaseWatchEnabled: false,
+            healthStatus: "structure_changed",
+            healthMessage: "live fixture contract failed (구조 변경 가능성)",
             updatedAt: evidence.at,
           },
     )
@@ -232,7 +313,10 @@ export async function revokeLiveVerification(db: Database, sourceId: string) {
     .set({
       verifiedAgainstLiveFixture: false,
       enabled: false,
-      healthStatus: "disabled",
+      discoveryEnabled: false,
+      artifactEnabled: false,
+      releaseWatchEnabled: false,
+      healthStatus: "unverified",
       updatedAt: new Date(),
     })
     .where(eq(examSources.id, sourceId));

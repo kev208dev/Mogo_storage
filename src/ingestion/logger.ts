@@ -5,6 +5,7 @@ export type IngestionEvent =
   | "ingestion.completed"
   | "ingestion.failed"
   | "ingestion.skipped"
+  | "ingestion.partial"
   | "exam.discovered"
   | "artifact.discovered"
   | "artifact.verified"
@@ -15,6 +16,8 @@ export type IngestionEvent =
   | "job.failed"
   | "job.retry_scheduled"
   | "source.health"
+  | "source.structure_changed"
+  | "release_watch.missed"
   | "vocabulary.extracted"
   | "vocabulary.pdf_generated"
   | "release_watch.tick";

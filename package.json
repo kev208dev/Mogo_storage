@@ -29,7 +29,9 @@
     "ingest:schedules": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/schedules.ts",
     "ingest:capture": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/capture.ts",
     "ingest:fixtures:validate": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/validate-fixtures.ts",
-    "ingest:parser-version": "node --import tsx scripts/parser-version.ts"
+    "ingest:parser-version": "node --import tsx scripts/parser-version.ts",
+    "ingest:audit": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/audit.ts",
+    "ingest:inspect": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/inspect.ts"
   },
   "dependencies": {
     "@expo-google-fonts/noto-sans-kr": "^0.4.3",

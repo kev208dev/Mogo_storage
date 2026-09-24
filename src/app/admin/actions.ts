@@ -21,10 +21,15 @@ import { runDiscovery } from "@/ingestion/pipeline/discovery";
 import {
   approveLiveVerification,
   loadSource,
+  recordHealthCheck,
   revokeLiveVerification,
+  setSourceCapability,
   syncBuiltinSources,
 } from "@/ingestion/pipeline/sources";
+import { SOURCE_CAPABILITIES, type SourceCapability } from "@/ingestion/constants";
 import { IngestionError } from "@/ingestion/errors";
+import { createAdapter } from "@/ingestion/sources/registry";
+import { canRun } from "@/ingestion/sources/verification";
 import { REPORT_STATUSES, type ReportStatus } from "@/lib/constants";
 import {
   ADMIN_COOKIE,
@@ -111,6 +116,34 @@ export async function toggleSourceAction(form: FormData) {
   });
 }
 
+/** 기능 단위 켜기/끄기 (discovery → artifacts → release_watch) */
+export async function toggleCapabilityAction(form: FormData) {
+  const { ctx, admin } = await context();
+  const sourceId = id(form);
+  const capability = String(form.get("capability") ?? "");
+  const on = form.get("on") === "true";
+  await withNotice("/admin", async () => {
+    if (!(SOURCE_CAPABILITIES as readonly string[]).includes(capability))
+      throw new IngestionError("INVALID", "알 수 없는 기능입니다.");
+    await setSourceCapability(ctx.db, sourceId, capability as SourceCapability, on);
+    audit(admin, `source.capability.${on ? "on" : "off"}`, `${sourceId}:${capability}`);
+    return `${sourceId}: ${capability} ${on ? "켜짐" : "꺼짐"}`;
+  });
+}
+
+/** 실제 공식 사이트 health check (요청 1회). 결과는 source 활성화 조건으로 기록된다 */
+export async function runHealthCheckAction(form: FormData) {
+  const { ctx, admin } = await context();
+  await withNotice("/admin", async () => {
+    const source = await loadSource(ctx.db, id(form));
+    if (!source) throw new IngestionError("NOT_FOUND", "source not found");
+    const health = await createAdapter({ ...source, enabled: true }).healthCheck();
+    await recordHealthCheck(ctx.db, source.id, health);
+    audit(admin, "source.health_check", `${source.id}:${health.status}`);
+    return `${source.name}: health ${health.status} — ${health.message}`;
+  });
+}
+
 /** 실제 fixture 검증 증거를 확인하고 승인 (parser 버전에 묶임) */
 export async function approveVerificationAction(form: FormData) {
   const { ctx, admin } = await context();
@@ -139,10 +172,10 @@ export async function runSourceNowAction(form: FormData) {
     await syncBuiltinSources(ctx.db);
     const source = await loadSource(ctx.db, id(form));
     if (!source) throw new IngestionError("NOT_FOUND", "source not found");
-    if (!source.liveVerified) {
+    if (!canRun(source, "discovery")) {
       throw new IngestionError(
         "SOURCE_NOT_VERIFIED",
-        `${source.name}: 실제 페이지 fixture 검증과 승인이 필요합니다.`,
+        `${source.name}: 실제 페이지 fixture 검증·승인, source 켜기, discovery 기능이 필요합니다.`,
       );
     }
     const year = new Date().getFullYear();
@@ -151,6 +184,7 @@ export async function runSourceNowAction(form: FormData) {
       source,
       mode: "manual_retry",
       options: { fromYear: year - 1, toYear: year },
+      artifacts: canRun(source, "artifacts") ? "full" : "none",
     });
     await runJobs(ctx, { timeBudgetMs: 60_000 });
     return `${source.name}: ${result.status} (발견 ${result.counts.discovered}, 신규 ${result.counts.created})`;

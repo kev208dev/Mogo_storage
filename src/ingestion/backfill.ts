@@ -7,6 +7,8 @@ import { runJobs } from "./jobs/worker";
 import { urlHash } from "./pipeline/artifacts";
 import { runDiscovery, type DiscoveryResult } from "./pipeline/discovery";
 import { loadSources } from "./pipeline/sources";
+import { canaryGate } from "./audit";
+import { canRun } from "./sources/verification";
 import type { SourceConfig } from "./types";
 
 /** 로컬 개발에서 실제 외부 수집이 자동 실행되지 않도록 기본은 꺼져 있다 */
@@ -22,13 +24,19 @@ export interface BackfillOptions {
   force?: boolean;
   runJobs?: boolean;
   jobTimeBudgetMs?: number;
+  /**
+   * Exam · ExamSubject · SourceExam · SourceArtifact(공식 URL) 까지만 만든다.
+   * 파일 검증·다운로드·mirror·게시는 하지 않는다 (1차 backfill 용).
+   */
+  metadataOnly?: boolean;
 }
 
 export interface BackfillScopeResult {
   source: string;
   scope: string;
-  status: "done" | "skipped_checkpoint" | DiscoveryResult["status"];
+  status: "done" | "skipped_checkpoint" | "blocked_canary" | DiscoveryResult["status"];
   counts?: DiscoveryResult["counts"];
+  message?: string;
 }
 
 /**
@@ -40,28 +48,60 @@ export async function runBackfill(ctx: IngestionContext, options: BackfillOption
   const selected = (await loadSources(ctx.db)).filter((s) =>
     options.sourceIds?.length ? options.sourceIds.includes(s.id) : s.enabled,
   );
-  // 실제 페이지 fixture 로 검증·승인되지 않은 source 는 수집하지 않는다 (--source 로 지정해도 마찬가지)
-  const sources = selected.filter((s) => ctx.allowUnverifiedSources || s.liveVerified);
+  // 실제 페이지 fixture 로 검증·승인되고 discovery 기능이 켜진 source 만 (--source 로 지정해도 마찬가지)
+  const allow = { allowUnverified: ctx.allowUnverifiedSources };
+  const sources = selected.filter((s) => canRun(s, "discovery", allow));
   for (const s of selected.filter((x) => !sources.includes(x))) {
     ctx.logger.warn("ingestion.skipped", {
       source: s.id,
-      reason: "source not verified against live fixtures",
+      reason: "source not verified/enabled for discovery",
     });
   }
   const grades = options.grades?.length ? options.grades : [...GRADES];
   const results: BackfillScopeResult[] = [];
+  const currentYear = ctx.now().getFullYear();
   for (const source of sources) {
+    // canary: 최근 1년 → (audit 통과) → 최근 3년 → (audit 통과) → 전체. 한 번에 전 기간을 돌리지 않는다
+    const blocked = await canaryGate(ctx.db, {
+      sourceId: source.id,
+      fromYear: options.fromYear,
+      currentYear,
+    });
+    if (blocked) {
+      ctx.logger.warn("ingestion.skipped", { source: source.id, reason: blocked });
+      results.push({
+        source: source.id,
+        scope: `backfill:${options.fromYear}-${options.toYear}`,
+        status: "blocked_canary",
+        message: blocked,
+      });
+      continue;
+    }
+    // metadata-only 이거나 자료 기능이 꺼져 있으면 자료 검증/게시는 하지 않는다
+    const artifacts: "full" | "metadata" | "none" = !canRun(source, "artifacts", allow)
+      ? options.metadataOnly
+        ? "metadata"
+        : "none"
+      : options.metadataOnly
+        ? "metadata"
+        : "full";
     for (let year = options.toYear; year >= options.fromYear; year -= 1) {
       for (const grade of grades) {
-        const scope = `backfill:${year}:high${grade}`;
+        // checkpoint 는 모드별로 따로 (metadata-only 완료가 전체 수집을 건너뛰게 하지 않음)
+        const scope = `${artifacts === "full" ? "backfill" : `backfill-${artifacts}`}:${year}:high${grade}`;
         results.push(
-          await backfillScope(ctx, source, scope, { year, grade, force: options.force }),
+          await backfillScope(ctx, source, scope, {
+            year,
+            grade,
+            force: options.force,
+            artifacts,
+          }),
         );
       }
     }
   }
   const jobs =
-    options.runJobs === false
+    options.runJobs === false || options.metadataOnly
       ? null
       : await runJobs(ctx, { timeBudgetMs: options.jobTimeBudgetMs ?? 120_000, limit: 1000 });
   return { results, jobs };
@@ -71,7 +111,12 @@ async function backfillScope(
   ctx: IngestionContext,
   source: SourceConfig,
   scope: string,
-  input: { year: number; grade: Grade; force?: boolean },
+  input: {
+    year: number;
+    grade: Grade;
+    force?: boolean;
+    artifacts: "full" | "metadata" | "none";
+  },
 ): Promise<BackfillScopeResult> {
   const [checkpoint] = await ctx.db
     .select()
@@ -94,6 +139,7 @@ async function backfillScope(
     mode: "backfill",
     options: { fromYear: input.year, toYear: input.year, grade: input.grade },
     metadata: { scope },
+    artifacts: input.artifacts,
   });
   await ctx.db
     .update(ingestionCheckpoints)

@@ -3,6 +3,11 @@
  *   npm run ingest:backfill -- --dry-run                     # DB/네트워크 없이 구조 확인 (fixture)
  *   npm run ingest:backfill -- --source=ebsi --from=2015 --to=2026
  *   npm run ingest:backfill -- --year=2025 --grade=2 [--force] [--no-jobs]
+ *   npm run ingest:backfill -- --source=ebsi --from=2025 --to=2026 --metadata-only
+ *
+ * 단계(canary): 최근 1년 → audit 통과 → 최근 3년 → audit 통과 → 전체.
+ *   더 넓은 범위는 앞 단계의 `npm run ingest:audit -- --record` 통과 기록이 있어야 실행된다.
+ * --metadata-only: 시험 · 영역 · SourceExam · 공식 자료 URL 까지만 (파일 검증/다운로드/게시 안 함)
  */
 import type { Grade } from "../../lib/constants";
 import { runBackfill, ingestionEnabled } from "../backfill";
@@ -43,10 +48,12 @@ async function main() {
       grades: grade ? [grade] : undefined,
       force: Boolean(args.force),
       runJobs: !args["no-jobs"],
+      metadataOnly: Boolean(args["metadata-only"]),
     });
     console.table(
       results.map((r) => ({ source: r.source, scope: r.scope, status: r.status, ...r.counts })),
     );
+    for (const r of results.filter((x) => x.message)) console.log(`${r.source}: ${r.message}`);
     if (jobs) console.log("jobs:", jobs);
     if (results.length === 0)
       console.log("실행할 source 가 없습니다. (--source 지정 또는 source enable 필요)");

@@ -94,6 +94,8 @@ export async function upsertDiscoveredArtifact(
     artifact: DiscoveredArtifact;
     now: Date;
     aliases?: CourseAlias[];
+    /** false: metadata-only (URL 만 기록, 검증 job 을 만들지 않음) */
+    verify?: boolean;
   },
 ): Promise<{ id: string; action: ArtifactUpsertAction; slotKey: string; courseId: string | null }> {
   const { artifact, source, now } = input;
@@ -252,7 +254,20 @@ export async function upsertDiscoveredArtifact(
   }
 
   // 압축 파일은 PDF/MP3 검증 대상이 아니므로 verify 하지 않고 검토 대기로 둔다
-  if (action !== "unchanged" && artifact.containerType !== "archive") {
+  // metadata-only 수집은 URL 만 기록한다 (나중에 전체 수집 때 검증)
+  if (input.verify === false) {
+    if (action === "created") {
+      await db
+        .update(sourceArtifacts)
+        .set({ statusReason: "metadata only (not verified yet)" })
+        .where(and(eq(sourceArtifacts.id, id), eq(sourceArtifacts.status, "discovered")));
+    }
+  } else if (
+    artifact.containerType !== "archive" &&
+    (action !== "unchanged" ||
+      // metadata-only 로 URL 만 기록됐던 자료: 전체 수집 때 검증을 시작한다
+      (existing?.status === "discovered" && !existing.verifiedAt))
+  ) {
     await enqueueJob(db, {
       runAt: now,
       type: "verify_artifact",

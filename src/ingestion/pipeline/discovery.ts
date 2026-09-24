@@ -3,7 +3,12 @@ import { examCourses, ingestionErrors, ingestionRuns } from "../../db/schema";
 import { dedupeArtifacts } from "../canonical/artifact-type";
 import type { IngestionMode } from "../constants";
 import type { IngestionContext } from "../context";
-import { SourceStructureChangedError, redactUrl, toIngestionError } from "../errors";
+import {
+  healthStatusForError,
+  SourceStructureChangedError,
+  redactUrl,
+  toIngestionError,
+} from "../errors";
 import { createAdapter } from "../sources/registry";
 import type {
   DiscoverOptions,
@@ -48,6 +53,13 @@ export async function runDiscovery(
     /** release watch: 특정 시험만 자료 확인 */
     exams?: ExamLocator[];
     metadata?: Record<string, unknown>;
+    /**
+     * 자료 처리 범위
+     *  - full (기본): 자료 URL 기록 + 검증·게시 job
+     *  - metadata: Exam · SourceExam · SourceArtifact URL 까지만 (검증/다운로드/게시 안 함)
+     *  - none: Exam · SourceExam 만 (자료 페이지를 요청하지 않음 — discovery 기능만 켠 source)
+     */
+    artifacts?: "full" | "metadata" | "none";
   },
 ): Promise<DiscoveryResult> {
   const { db, logger } = ctx;
@@ -63,7 +75,11 @@ export async function runDiscovery(
         sourceId: input.source.id,
         mode: input.mode,
         startedAt,
-        metadata: { ...input.metadata, options: input.options ?? null },
+        metadata: {
+          ...input.metadata,
+          options: input.options ?? null,
+          artifacts: input.artifacts ?? "full",
+        },
       })
       .returning({ id: ingestionRuns.id });
     const runId = run!.id;
@@ -143,6 +159,7 @@ export async function runDiscovery(
           }
           if (examResult.created) counts.created += 1;
 
+          if (input.artifacts === "none") continue;
           const raw = await adapter.discoverArtifacts(locator);
           if (locator.pageType === "exam_release_index" && adapter.discoverReleaseTimes) {
             const times = await adapter.discoverReleaseTimes(locator);
@@ -173,6 +190,7 @@ export async function runDiscovery(
               artifact,
               now: startedAt,
               aliases,
+              verify: input.artifacts !== "metadata",
             });
             if (res.courseId) {
               await db
@@ -235,14 +253,10 @@ export async function runDiscovery(
 
     if (fatal) {
       const e = toIngestionError(fatal);
-      const broken = e.code === "SOURCE_STRUCTURE_CHANGED" || e.code === "ROBOTS_DISALLOWED";
-      await recordFetchFailure(
-        db,
-        input.source.id,
-        finishedAt,
-        broken ? "broken" : "degraded",
-        `${e.code}: ${e.message}`,
-      );
+      // 구조 변경(사람 확인 필요)과 네트워크 장애(재시도)를 구분해 기록한다
+      const health = healthStatusForError(e);
+      const broken = health === "structure_changed";
+      await recordFetchFailure(db, input.source.id, finishedAt, health, `${e.code}: ${e.message}`);
       logger.error("ingestion.failed", {
         runId,
         source: input.source.id,
@@ -250,12 +264,28 @@ export async function runDiscovery(
         message: e.message,
       });
       if (broken) {
+        logger.error("source.structure_changed", {
+          runId,
+          source: input.source.id,
+          code: e.code,
+          message: e.message,
+        });
         await ctx.notifier.notify({
           kind: "source_broken",
           sourceId: input.source.id,
           message: e.message,
         });
       }
+    } else if (status === "partial") {
+      // 일부 시험만 실패: 계속 시도하되 상태는 degraded
+      await recordFetchFailure(
+        db,
+        input.source.id,
+        finishedAt,
+        "degraded",
+        `partial: ${errors[0]?.code ?? ""} ${errors[0]?.message ?? ""}`.trim(),
+      );
+      logger.warn("ingestion.partial", { runId, source: input.source.id, ...counts });
     } else {
       await recordFetchSuccess(db, input.source.id, finishedAt);
       logger.info("ingestion.completed", { runId, source: input.source.id, status, ...counts });

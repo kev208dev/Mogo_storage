@@ -17,7 +17,10 @@ export function formatKst(value: Date | string | null | undefined): string {
 const HEALTH: Record<string, { label: string; className: string }> = {
   healthy: { label: "정상", className: "bg-success-soft text-success-strong" },
   degraded: { label: "주의", className: "bg-warning-soft text-warning-strong" },
-  broken: { label: "고장", className: "bg-danger-soft text-danger-strong" },
+  broken: { label: "구조 변경 (이전 기록)", className: "bg-danger-soft text-danger-strong" },
+  structure_changed: { label: "구조 변경", className: "bg-danger-soft text-danger-strong" },
+  network_error: { label: "네트워크 오류", className: "bg-warning-soft text-warning-strong" },
+  unverified: { label: "미검증", className: "bg-warning-soft text-warning-strong" },
   disabled: { label: "꺼짐", className: "bg-muted text-muted-foreground" },
 };
 

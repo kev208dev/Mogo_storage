@@ -2,10 +2,14 @@ import { and, eq } from "drizzle-orm";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 import type { Database } from "@/db/client";
 import * as s from "@/db/schema";
+import { recordAudit, runAudit } from "@/ingestion/audit";
+import { runBackfill } from "@/ingestion/backfill";
 import { loadCourseAliases, saveCourseAlias } from "@/ingestion/pipeline/course-aliases";
+import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
 import { upsertSchedule } from "@/ingestion/schedule/schedules";
 import { runReleaseWatch } from "@/ingestion/watch";
 import {
+  ebsiListingHtml,
   installSources,
   makeContext,
   makeMp3,
@@ -194,6 +198,170 @@ run("live-source validation features (integration)", () => {
           and(eq(s.sourceArtifacts.subject, "english"), eq(s.sourceArtifacts.type, "question")),
         );
       expect(engQ).toMatchObject({ verificationMode: "probe", sha256: null, storageKey: null });
+    });
+  });
+
+  describe("backfill: health 구분 · 기능 게이트 · metadata-only · canary · audit", () => {
+    const listing = (grade: 1 | 2 | 3, year: number, body: string, status = 200) => {
+      const u = new URL(ebsiListingUrl(fake.baseUrl, grade, year));
+      fake.set(u.pathname + u.search, { status, contentType: "text/html; charset=utf-8", body });
+    };
+    const EXAM = {
+      id: "E-2025-2-09",
+      title: "2025년 9월 고2 전국연합학력평가",
+      subjects: [
+        {
+          name: "국어",
+          links: [
+            { label: "문제", path: "/files/kor_q.pdf" },
+            { label: "해설", path: "/files/kor_a.pdf" },
+          ],
+        },
+        { name: "사회탐구", links: [{ label: "윤리 문제", path: "/files/eth_q.pdf" }] },
+      ],
+    };
+    const seed = () => {
+      for (const y of [2020, 2021, 2022, 2023, 2024, 2025])
+        for (const g of [1, 2, 3] as const) listing(g, y, ebsiListingHtml(fake.baseUrl, []));
+      listing(2, 2025, ebsiListingHtml(fake.baseUrl, [EXAM]));
+      for (const f of ["kor_q", "kor_a", "eth_q"])
+        fake.set(`/files/${f}.pdf`, { contentType: "application/pdf", body: pdf });
+    };
+    const pdfHits = () => fake.hits.filter((h) => h.startsWith("/files/")).length;
+
+    it("네트워크 장애(503)는 network_error, 구조 변경은 structure_changed — 같은 broken 으로 묶지 않는다", async () => {
+      seed();
+      listing(2, 2025, "busy", 503);
+      await installSources(db, [testSource("ebsi", "ebsi", fake.baseUrl)]);
+      const { ctx } = makeContext(db);
+      await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2], runJobs: false });
+      let [src] = await db.select().from(s.examSources);
+      expect(src!.healthStatus).toBe("network_error");
+
+      listing(2, 2025, `<main><section>개편된 페이지</section></main>`);
+      await runBackfill(ctx, {
+        fromYear: 2025,
+        toYear: 2025,
+        grades: [2],
+        runJobs: false,
+        force: true,
+      });
+      [src] = await db.select().from(s.examSources);
+      expect(src!.healthStatus).toBe("structure_changed");
+      // 구조 변경 상태에서는 운영 조건(검증 필요)에서 어떤 기능도 실행되지 않는다
+      const prod = makeContext(db, { allowUnverifiedSources: false }).ctx;
+      expect(
+        (await runBackfill(prod, { fromYear: 2025, toYear: 2025, grades: [2] })).results,
+      ).toEqual([]);
+    });
+
+    it("discovery 기능만 켠 source 는 시험 metadata 만 수집하고 자료 페이지/파일은 요청하지 않는다", async () => {
+      seed();
+      await installSources(db, [
+        testSource("ebsi", "ebsi", fake.baseUrl, {
+          capabilities: { discovery: true, artifacts: false, release_watch: false },
+        }),
+      ]);
+      const { ctx } = makeContext(db);
+      await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2] });
+      expect(await db.select().from(s.exams)).toHaveLength(1);
+      expect(await db.select().from(s.sourceExams)).toHaveLength(1);
+      expect(await db.select().from(s.sourceArtifacts)).toHaveLength(0);
+      expect(pdfHits()).toBe(0);
+    });
+
+    it("--metadata-only: 공식 URL 까지만 (검증·다운로드·게시 없음), 재실행해도 중복 없음, 이후 전체 수집은 별도 checkpoint", async () => {
+      seed();
+      await installSources(db, [testSource("ebsi", "ebsi", fake.baseUrl)]);
+      const { ctx } = makeContext(db);
+      const opts = { fromYear: 2025, toYear: 2025, grades: [2 as const], metadataOnly: true };
+      const first = await runBackfill(ctx, opts);
+      expect(first.results[0]).toMatchObject({ scope: "backfill-metadata:2025:high2" });
+      const artifacts = await db.select().from(s.sourceArtifacts);
+      expect(artifacts).toHaveLength(3);
+      expect(
+        artifacts.every((a) => a.status === "discovered" || a.status === "manual_review"),
+      ).toBe(true);
+      expect(artifacts.map((a) => a.sourceLabel).sort()).toEqual([
+        "국어 문제",
+        "국어 해설",
+        "사회탐구 윤리 문제",
+      ]);
+      expect(await db.select().from(s.jobs)).toHaveLength(0);
+      expect(await db.select().from(s.examFiles)).toHaveLength(0);
+      expect(pdfHits()).toBe(0);
+
+      // 같은 명령 재실행 (force) → 시험/매핑/자료 중복 없음
+      await runBackfill(ctx, { ...opts, force: true });
+      expect(await db.select().from(s.exams)).toHaveLength(1);
+      expect(await db.select().from(s.sourceExams)).toHaveLength(1);
+      expect(await db.select().from(s.sourceArtifacts)).toHaveLength(3);
+
+      // 전체 수집: metadata checkpoint 에 막히지 않고 검증·게시까지
+      const full = await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2] });
+      expect(full.results[0]).toMatchObject({ scope: "backfill:2025:high2", status: "completed" });
+      const files = await db.select().from(s.examFiles);
+      expect(files.map((f) => f.type).sort()).toEqual(["question", "solution"]); // "윤리" 는 검토 대기
+    });
+
+    it("canary: 최근 1년 → audit 통과 → 최근 3년 → audit 통과 → 전체", async () => {
+      seed();
+      await installSources(db, [testSource("ebsi", "ebsi", fake.baseUrl)]);
+      const { ctx } = makeContext(db); // 2025-09
+      const wide = await runBackfill(ctx, { fromYear: 2020, toYear: 2025, grades: [2] });
+      expect(wide.results).toEqual([
+        expect.objectContaining({
+          status: "blocked_canary",
+          message: expect.stringMatching(/2022/),
+        }),
+      ]);
+      const three = await runBackfill(ctx, { fromYear: 2022, toYear: 2025, grades: [2] });
+      expect(three.results[0]!.status).toBe("blocked_canary");
+
+      await runBackfill(ctx, { fromYear: 2024, toYear: 2025, grades: [2] }); // canary 1년
+      const audit1 = await runAudit(db, {
+        sourceId: "ebsi",
+        fromYear: 2024,
+        toYear: 2025,
+        now: ctx.now(),
+      });
+      expect(audit1.passed).toBe(true);
+      await recordAudit(db, audit1);
+      const three2 = await runBackfill(ctx, { fromYear: 2022, toYear: 2025, grades: [2] });
+      expect(three2.results.every((r) => r.status !== "blocked_canary")).toBe(true);
+      expect(
+        (await runBackfill(ctx, { fromYear: 2020, toYear: 2025, grades: [2] })).results[0]!.status,
+      ).toBe("blocked_canary");
+      await recordAudit(
+        db,
+        await runAudit(db, { sourceId: "ebsi", fromYear: 2022, toYear: 2025, now: ctx.now() }),
+      );
+      const all = await runBackfill(ctx, { fromYear: 2020, toYear: 2025, grades: [2] });
+      expect(all.results.some((r) => r.status === "blocked_canary")).toBe(false);
+    });
+
+    it("audit: 누락·미확정·예상 밖 도메인을 구분해 보고 (시험 자체는 지우지 않는다)", async () => {
+      seed();
+      await installSources(db, [testSource("ebsi", "ebsi", fake.baseUrl)]);
+      const { ctx } = makeContext(db);
+      await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2] });
+      let report = await runAudit(db, { fromYear: 2025, toYear: 2025, now: ctx.now() });
+      expect(report.passed).toBe(true);
+      expect(report.counts).toMatchObject({ exams: 1, artifacts: 3, unresolved: 1 });
+      const codes = report.warnings.map((w) => w.code);
+      expect(codes).toContain("unresolved_course");
+      expect(codes).toContain("missing_solution"); // 사회 해설 없음
+      expect(codes).toContain("non_https_url"); // 로컬 fake source
+
+      // 허용 도메인 밖 URL → blocking
+      await db
+        .update(s.sourceArtifacts)
+        .set({ sourceUrl: "https://evil.example.com/k.pdf" })
+        .where(eq(s.sourceArtifacts.type, "solution"));
+      report = await runAudit(db, { fromYear: 2025, toYear: 2025, now: ctx.now() });
+      expect(report.passed).toBe(false);
+      expect(report.blocking.map((b) => b.code)).toContain("unexpected_domain");
+      expect(await db.select().from(s.exams)).toHaveLength(1);
     });
   });
 

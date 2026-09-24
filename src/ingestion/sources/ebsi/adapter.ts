@@ -1,6 +1,6 @@
 import { GRADES, type Grade } from "../../../lib/constants";
 import { canonicalKey } from "../../canonical/exam-title";
-import { IngestionError, toIngestionError } from "../../errors";
+import { healthStatusForError, toIngestionError } from "../../errors";
 import { decodeHtml, type Fetcher } from "../../net/fetcher";
 import type {
   DiscoverOptions,
@@ -97,7 +97,7 @@ export class EbsiExamSource implements ExamSourceAdapter {
     } catch (error) {
       const e = toIngestionError(error);
       return {
-        status: e instanceof IngestionError && e.retryable ? "degraded" : "broken",
+        status: healthStatusForError(e),
         checkedAt,
         message: `${e.code}: ${e.message}`,
       };

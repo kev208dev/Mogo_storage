@@ -7,7 +7,7 @@ import type {
   Subject,
 } from "../lib/constants";
 import type { CourseResolution } from "./canonical/course";
-import type { SourceHealthStatus } from "./constants";
+import type { SourceCapability, SourceHealthStatus } from "./constants";
 
 /** exam_sources 한 행에 대응하는 설정 (코드 기본값 + DB 값 병합 결과) */
 export interface SourceConfig {
@@ -21,6 +21,11 @@ export interface SourceConfig {
   enabled: boolean;
   /** 실제 페이지 fixture 로 검증·승인됐고 parser 버전이 그대로인지 (DB 상태에서 계산) */
   liveVerified: boolean;
+  /** 기능 단위 활성화 (enabled 와 함께 모두 참이어야 실행) */
+  capabilities: Record<SourceCapability, boolean>;
+  /** 마지막으로 기록된 상태 (health check / 수집 결과) */
+  healthStatus?: SourceHealthStatus;
+  lastHealthCheckAt?: Date | null;
   minPollIntervalSeconds: number;
   requestTimeoutMs: number;
   maxConcurrentRequests: number;

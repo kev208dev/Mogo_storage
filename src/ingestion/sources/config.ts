@@ -9,6 +9,13 @@ import type { SourceConfig } from "../types";
  *    각 기관의 이용조건에서 재배포 허용이 확인된 경우에만 mirror_allowed 로 바꾼다.
  * ⚠️ enabled 기본값은 false. parser 를 실제 페이지로 검증(npm run ingest:health)한 뒤 켠다.
  */
+/** 기능 단위 활성화 기본값: 모두 꺼짐 (검증·승인 후 discovery → artifacts → release_watch 순서로 켠다) */
+export const NO_CAPABILITIES: SourceConfig["capabilities"] = {
+  discovery: false,
+  artifacts: false,
+  release_watch: false,
+};
+
 export const BUILTIN_SOURCES: SourceConfig[] = [
   {
     id: "kice",
@@ -19,6 +26,7 @@ export const BUILTIN_SOURCES: SourceConfig[] = [
     deliveryPolicy: "source_redirect",
     enabled: false,
     liveVerified: false,
+    capabilities: { ...NO_CAPABILITIES },
     minPollIntervalSeconds: 600,
     requestTimeoutMs: 20_000,
     maxConcurrentRequests: 1,
@@ -34,6 +42,7 @@ export const BUILTIN_SOURCES: SourceConfig[] = [
     deliveryPolicy: "source_redirect",
     enabled: false,
     liveVerified: false,
+    capabilities: { ...NO_CAPABILITIES },
     minPollIntervalSeconds: 300,
     requestTimeoutMs: 15_000,
     maxConcurrentRequests: 2,
@@ -49,6 +58,7 @@ export const BUILTIN_SOURCES: SourceConfig[] = [
     deliveryPolicy: "source_redirect",
     enabled: false,
     liveVerified: false,
+    capabilities: { ...NO_CAPABILITIES },
     minPollIntervalSeconds: 900,
     requestTimeoutMs: 20_000,
     maxConcurrentRequests: 1,

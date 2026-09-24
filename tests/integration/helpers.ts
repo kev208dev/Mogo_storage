@@ -196,6 +196,8 @@ export function testSource(
     deliveryPolicy: "source_redirect",
     enabled: true,
     liveVerified: false,
+    // 로컬 fake source 는 모든 기능을 켠 상태로 설치 (게이트 자체는 verification-gate 테스트)
+    capabilities: { discovery: true, artifacts: true, release_watch: true },
     minPollIntervalSeconds: 300,
     requestTimeoutMs: 5000,
     maxConcurrentRequests: 2,

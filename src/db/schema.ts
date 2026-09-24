@@ -414,6 +414,13 @@ export const examSources = pgTable("exam_sources", {
   allowedHosts: jsonb("allowed_hosts").$type<string[]>().notNull().default([]),
   deliveryPolicy: deliveryPolicyEnum("delivery_policy").notNull().default("source_redirect"),
   enabled: boolean("enabled").notNull().default(false),
+  /**
+   * 기능 단위 활성화 (enabled 가 master switch). 단계적으로 켠다:
+   * discovery(시험 metadata) → artifacts(자료 URL·검증·게시) → release_watch(시험 당일 감시)
+   */
+  discoveryEnabled: boolean("discovery_enabled").notNull().default(false),
+  artifactEnabled: boolean("artifact_enabled").notNull().default(false),
+  releaseWatchEnabled: boolean("release_watch_enabled").notNull().default(false),
   // 요청 예절 (source 별)
   minPollIntervalSeconds: integer("min_poll_interval_seconds").notNull().default(600),
   requestTimeoutMs: integer("request_timeout_ms").notNull().default(15_000),
@@ -602,6 +609,26 @@ export const ingestionCheckpoints = pgTable(
     ...timestamps,
   },
   (t) => [uniqueIndex("ingestion_checkpoints_source_scope_uq").on(t.sourceId, t.scope)],
+);
+
+/**
+ * backfill audit 기록. canary backfill 단계(최근 1년 → 최근 3년 → 전체)를 넓히려면
+ * 앞 단계 범위의 audit 이 통과(blocking issue 없음)해야 한다.
+ */
+export const backfillAudits = pgTable(
+  "backfill_audits",
+  {
+    id: id(),
+    sourceId: text("source_id").references(() => examSources.id, { onDelete: "cascade" }),
+    fromYear: smallint("from_year").notNull(),
+    toYear: smallint("to_year").notNull(),
+    passed: boolean("passed").notNull(),
+    blockingCount: integer("blocking_count").notNull().default(0),
+    warningCount: integer("warning_count").notNull().default(0),
+    report: jsonb("report").$type<Record<string, unknown>>().notNull().default({}),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("backfill_audits_source_idx").on(t.sourceId, t.createdAt)],
 );
 
 /** 시험 일정. 공식 발표로 확인된 일정만 등록한다. */

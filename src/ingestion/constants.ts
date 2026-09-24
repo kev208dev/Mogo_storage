@@ -3,8 +3,31 @@
  * (앱/CLI 양쪽에서 import 하므로 server-only 를 쓰지 않는다)
  */
 
-export const SOURCE_HEALTH_STATUSES = ["healthy", "degraded", "broken", "disabled"] as const;
+/**
+ * source 상태. HTML 구조 변경과 네트워크 장애를 같은 값으로 묶지 않는다.
+ *  - unverified: 실제 페이지 fixture 로 검증·승인되지 않음 (자동 수집 불가)
+ *  - healthy: 요청·파싱 정상
+ *  - degraded: 일부 실패(부분 성공) — 계속 시도
+ *  - structure_changed: 페이지 구조/정책(robots, 404 등)이 parser 가정과 달라짐 → 사람이 확인 전까지 중단
+ *  - network_error: timeout, 5xx, 429, 접근 거부 등 일시/외부 장애 → 나중에 재시도
+ *  - disabled: 운영자가 끔
+ *  - broken: 이전 버전 값 (structure_changed 로 표시). DB enum 에서 값을 지울 수 없어 남겨 둔다
+ * enum 순서는 migration(ALTER TYPE ADD VALUE) 순서와 같아야 한다.
+ */
+export const SOURCE_HEALTH_STATUSES = [
+  "healthy",
+  "degraded",
+  "broken",
+  "disabled",
+  "unverified",
+  "structure_changed",
+  "network_error",
+] as const;
 export type SourceHealthStatus = (typeof SOURCE_HEALTH_STATUSES)[number];
+
+/** source 기능 단위 활성화 (단계적으로 켠다: discovery → artifacts → release_watch) */
+export const SOURCE_CAPABILITIES = ["discovery", "artifacts", "release_watch"] as const;
+export type SourceCapability = (typeof SOURCE_CAPABILITIES)[number];
 
 export const SOURCE_ARTIFACT_STATUSES = [
   "discovered",

@@ -25,6 +25,7 @@ import {
 } from "./schedule/release-window";
 import { loadWatchableSchedules } from "./schedule/schedules";
 import { rankSources } from "./sources/config";
+import { canRun } from "./sources/verification";
 import type { PageType } from "./types";
 
 async function lastRunAt(
@@ -71,8 +72,9 @@ export interface ReleaseWatchResult {
 export async function runReleaseWatch(ctx: IngestionContext): Promise<ReleaseWatchResult> {
   const now = ctx.now();
   const result: ReleaseWatchResult = { schedules: [], jobs: null };
-  const sources = (await loadSources(ctx.db)).filter(
-    (s) => s.enabled && (ctx.allowUnverifiedSources || s.liveVerified),
+  // release watch 기능까지 켜진 source 만 (검증·승인 + health + 단계적 활성화)
+  const sources = (await loadSources(ctx.db)).filter((s) =>
+    canRun(s, "release_watch", { allowUnverified: ctx.allowUnverifiedSources }),
   );
   const schedules = await loadWatchableSchedules(ctx.db, now);
 
@@ -250,8 +252,8 @@ export async function runScheduledIngestion(ctx: IngestionContext): Promise<Sche
     };
     result.releaseWatch = await runReleaseWatch(ctx);
 
-    for (const source of (await loadSources(ctx.db)).filter(
-      (s) => s.enabled && (ctx.allowUnverifiedSources || s.liveVerified),
+    for (const source of (await loadSources(ctx.db)).filter((s) =>
+      canRun(s, "discovery", { allowUnverified: ctx.allowUnverifiedSources }),
     )) {
       const last = await lastRunAt(ctx, source.id, "scheduled");
       if (!isPollDue(last, SCHEDULED_DISCOVERY_INTERVAL_SECONDS, now)) {
@@ -264,6 +266,10 @@ export async function runScheduledIngestion(ctx: IngestionContext): Promise<Sche
           source,
           mode: "scheduled",
           options: { fromYear: now.getFullYear() - 1, toYear: now.getFullYear() },
+          // discovery 만 켠 source 는 시험 metadata 만 수집한다
+          artifacts: canRun(source, "artifacts", { allowUnverified: ctx.allowUnverifiedSources })
+            ? "full"
+            : "none",
         }),
       });
     }

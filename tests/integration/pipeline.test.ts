@@ -475,7 +475,7 @@ run("automatic ingestion pipeline (fake official source → DB → site)", () =>
     expect(await db.select().from(s.examFiles)).toHaveLength(1);
   });
 
-  it("a structure change marks the source broken with a clear error", async () => {
+  it("a structure change marks the source structure_changed with a clear error", async () => {
     fake.set(listingPath(2, 2025), {
       contentType: "text/html",
       body: `<div class="exam-archive"><article>개편</article></div>`,
@@ -490,7 +490,7 @@ run("automatic ingestion pipeline (fake official source → DB → site)", () =>
     });
     expect(results[0]!.status).toBe("failed");
     const [source] = await db.select().from(s.examSources);
-    expect(source!.healthStatus).toBe("broken");
+    expect(source!.healthStatus).toBe("structure_changed");
     expect(source!.healthMessage).toContain("SOURCE_STRUCTURE_CHANGED");
     expect(source!.failureCount).toBe(1);
   });

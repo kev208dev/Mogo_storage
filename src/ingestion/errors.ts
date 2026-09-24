@@ -70,3 +70,22 @@ export function toIngestionError(error: unknown): IngestionError {
   const message = error instanceof Error ? error.message : String(error);
   return new IngestionError("UNEXPECTED", message.slice(0, 500), true);
 }
+
+/**
+ * 오류 → source health. 구조 변경(사람 확인 필요)과 네트워크 장애(재시도)를 구분한다.
+ *  - SOURCE_STRUCTURE_CHANGED, 목록 페이지 404/410, robots.txt 금지 → structure_changed
+ *  - timeout, 연결 실패, 5xx, 429, 403(접근 거부 — 우회하지 않는다) → network_error
+ */
+export function healthStatusForError(error: unknown): "structure_changed" | "network_error" {
+  const e = toIngestionError(error);
+  if (
+    e.code === "SOURCE_STRUCTURE_CHANGED" ||
+    e.code === "ROBOTS_DISALLOWED" ||
+    e.code === "HTTP_404" ||
+    e.code === "HTTP_410" ||
+    e.code === "INDEX_EXAM_MISMATCH"
+  ) {
+    return "structure_changed";
+  }
+  return "network_error";
+}

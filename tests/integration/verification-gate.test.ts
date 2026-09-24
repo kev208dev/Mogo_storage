@@ -6,7 +6,9 @@ import { runBackfill } from "@/ingestion/backfill";
 import {
   approveLiveVerification,
   loadSources,
+  recordHealthCheck,
   recordLiveFixtureEvidence,
+  setSourceCapability,
   setSourceEnabled,
 } from "@/ingestion/pipeline/sources";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
@@ -54,7 +56,12 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
       contentType: "application/pdf",
       body: await makePdf(["TEST FIXTURE", "x".repeat(50)]),
     });
-    await installSources(db, [testSource("ebsi", "ebsi", fake.baseUrl)]);
+    // 운영과 같은 기본값: 기능은 모두 꺼진 상태
+    await installSources(db, [
+      testSource("ebsi", "ebsi", fake.baseUrl, {
+        capabilities: { discovery: false, artifacts: false, release_watch: false },
+      }),
+    ]);
   });
 
   const productionContext = () => {
@@ -80,7 +87,7 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
       logs.some(
         (l) =>
           l.event === "ingestion.skipped" &&
-          l.reason === "source not verified against live fixtures",
+          l.reason === "source not verified/enabled for discovery",
       ),
     ).toBe(true);
   });
@@ -115,7 +122,24 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
       verifiedParserVersion: currentParserVersion("ebsi"),
       verifiedFixtureHash: "f".repeat(32),
     });
+    // 승인만으로는 켤 수 없다: 최근 health check 통과가 필요
+    await expect(setSourceEnabled(db, "ebsi", true)).rejects.toThrow(/health check/);
+    await recordHealthCheck(db, "ebsi", {
+      status: "network_error",
+      checkedAt: new Date().toISOString(),
+      message: "timeout",
+    });
+    await expect(setSourceEnabled(db, "ebsi", true)).rejects.toThrow(/network_error/);
+    await recordHealthCheck(db, "ebsi", {
+      status: "healthy",
+      checkedAt: new Date().toISOString(),
+      message: "parsed 1 exams",
+    });
     await setSourceEnabled(db, "ebsi", true);
+    // 기능은 단계적으로: artifacts 는 discovery 뒤에만
+    await expect(setSourceCapability(db, "ebsi", "artifacts", true)).rejects.toThrow(/discovery/);
+    await setSourceCapability(db, "ebsi", "discovery", true);
+    await setSourceCapability(db, "ebsi", "artifacts", true);
 
     const { ctx } = productionContext();
     const { results } = await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2] });
@@ -162,7 +186,9 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
     expect(row).toMatchObject({
       verifiedAgainstLiveFixture: false,
       enabled: false,
-      healthStatus: "broken",
+      healthStatus: "structure_changed",
+      discoveryEnabled: false,
+      artifactEnabled: false,
     });
   });
 

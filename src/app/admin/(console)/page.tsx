@@ -9,10 +9,16 @@ import {
   retryJobAction,
   revokeVerificationAction,
   approveVerificationAction,
+  runHealthCheckAction,
   runSourceNowAction,
+  toggleCapabilityAction,
   toggleSourceAction,
 } from "../actions";
-import { currentParserVersion, isLiveVerified } from "@/ingestion/sources/verification";
+import {
+  activationBlockers,
+  currentParserVersion,
+  isLiveVerified,
+} from "@/ingestion/sources/verification";
 import { AdminNotice } from "./notice";
 import { NoDatabase } from "./no-db";
 
@@ -62,6 +68,12 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
             const verified = isLiveVerified(s.kind, s);
             const evidenceCurrent =
               Boolean(s.liveFixtureValidatedAt) && s.liveFixtureParserVersion === current;
+            const blockers = activationBlockers(s);
+            const capabilities = [
+              ["discovery", "시험 목록", s.discoveryEnabled],
+              ["artifacts", "자료 수집", s.artifactEnabled],
+              ["release_watch", "시험일 감시", s.releaseWatchEnabled],
+            ] as const;
             return (
               <li key={s.id} className="flex flex-wrap items-center gap-x-4 gap-y-1 py-2 text-sm">
                 <span className="w-40 font-bold">{s.name}</span>
@@ -72,6 +84,12 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
                     실제 구조 미검증
                   </span>
                 )}
+                {s.lastHealthCheckAt ? (
+                  <span className="text-muted-foreground text-xs">
+                    health check <HealthBadge status={s.healthStatus} />{" "}
+                    {formatKst(s.lastHealthCheckAt)}
+                  </span>
+                ) : null}
                 <span className="text-muted-foreground">
                   자동 수집: <strong>{verified && s.enabled ? "활성" : "비활성"}</strong> · parser{" "}
                   {current} · 정책 {s.deliveryPolicy}
@@ -99,7 +117,30 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
                 {s.healthMessage ? (
                   <span className="text-danger-strong w-full text-xs">{s.healthMessage}</span>
                 ) : null}
+                {verified && !s.enabled && blockers.length ? (
+                  <span className="text-muted-foreground w-full text-xs">
+                    켜기 전 조건: {blockers.join(" · ")}
+                  </span>
+                ) : null}
+                {verified && s.enabled ? (
+                  <span className="flex w-full flex-wrap gap-1 text-xs">
+                    {capabilities.map(([key, name, on]) => (
+                      <form key={key} action={toggleCapabilityAction}>
+                        <input type="hidden" name="id" value={s.id} />
+                        <input type="hidden" name="capability" value={key} />
+                        <input type="hidden" name="on" value={on ? "false" : "true"} />
+                        <SmallButton variant={on ? "primary" : undefined}>
+                          {name}: {on ? "켜짐 ✓" : "꺼짐"}
+                        </SmallButton>
+                      </form>
+                    ))}
+                  </span>
+                ) : null}
                 <span className="ml-auto flex gap-1">
+                  <form action={runHealthCheckAction}>
+                    <input type="hidden" name="id" value={s.id} />
+                    <SmallButton>health check</SmallButton>
+                  </form>
                   {verified ? (
                     <>
                       <form action={runSourceNowAction}>

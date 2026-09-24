@@ -8,7 +8,19 @@ function todayKst(): string {
   return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
 }
 
-export function ExamHeader({ exam, subject }: { exam: Exam; subject: Subject }) {
+export function ExamHeader({
+  exam,
+  subject,
+  extraCrumbs = [],
+  heading,
+}: {
+  exam: Exam;
+  subject: Subject;
+  /** 영역/세부과목 breadcrumb (예: 사회탐구 > 사회·문화) */
+  extraCrumbs?: Array<{ label: string; href: string }>;
+  /** 스크린리더용 과목 표기 (기본: 영역 이름) */
+  heading?: string;
+}) {
   const title = examTitle(exam);
   return (
     <header className="pt-3 pb-3">
@@ -18,11 +30,12 @@ export function ExamHeader({ exam, subject }: { exam: Exam; subject: Subject }) 
           { label: `고${exam.grade}`, href: `/grade/high${exam.grade}` },
           { label: `${exam.year}년`, href: `/year/${exam.year}` },
           { label: `${exam.month}월 모의고사`, href: examPath(exam) },
+          ...extraCrumbs,
         ]}
       />
       <h1 className="mt-1 text-[22px] leading-tight font-extrabold tracking-tight sm:text-3xl">
         {title}
-        <span className="sr-only"> {SUBJECT_LABELS[subject]}</span>
+        <span className="sr-only"> {heading ?? SUBJECT_LABELS[subject]}</span>
       </h1>
       <p className="text-muted-foreground mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px]">
         <span>

@@ -232,12 +232,24 @@ export class DrizzleExamRepository implements ExamRepository {
       .map(({ transcript, ...t }) => ({ ...t, transcript: transcript?.lines ?? null }))
       .sort((a, b) => (a.questionNumber ?? 0) - (b.questionNumber ?? 0));
 
+    const counts = courses.length
+      ? await this.db
+          .select({ courseId: s.examFiles.courseId, n: count() })
+          .from(s.examFiles)
+          .where(and(eq(s.examFiles.examId, exam.id), eq(s.examFiles.subject, subject)))
+          .groupBy(s.examFiles.courseId)
+      : [];
+    const courseFileCounts: Record<string, number> = {};
+    for (const c of courses)
+      courseFileCounts[c.code] = counts.find((x) => x.courseId === c.id)?.n ?? 0;
+
     return {
       exam,
       subjects,
       subject: current,
       courses,
       course,
+      courseFileCounts,
       files: files.map(toFile),
       questions,
       gradeCuts,

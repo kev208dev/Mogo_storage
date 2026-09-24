@@ -201,6 +201,8 @@ export interface ExamSubjectDetail {
   courses: Course[];
   /** 선택된 세부과목. 영역 페이지(/social)면 null */
   course: Course | null;
+  /** 세부과목 code → 공개된 자료 수 (선택 UI 에서 "자료 준비 중" 표시용) */
+  courseFileCounts: Record<string, number>;
   /** 선택된 영역/세부과목의 자료 (영역 페이지에서는 course 가 없는 자료만) */
   files: ExamFile[];
   questions: QuestionWithStats[];

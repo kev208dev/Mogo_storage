@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { DEFAULT_SUBJECT, GRADES, SUBJECTS } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
 import { shouldNoindexExam } from "@/lib/exam-metadata";
-import { examPath } from "@/lib/exam-path";
+import { examCoursePath, examPath } from "@/lib/exam-path";
 import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 3600;
@@ -34,6 +34,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (subject === DEFAULT_SUBJECT || !subjects.some((s) => s.subject === subject)) continue;
       entries.push({ url: absoluteUrl(examPath(exam, subject)), lastModified, priority: 0.8 });
     }
+  }
+  // 세부과목 페이지 (사회·문화, 물리학 I …)
+  for (const { exam, course } of await repo.listExamCoursePaths()) {
+    if (shouldNoindexExam(exam)) continue;
+    entries.push({
+      url: absoluteUrl(examCoursePath(exam, course.subject, course.code)),
+      lastModified: new Date(exam.updatedAt),
+      priority: 0.7,
+    });
   }
   return entries;
 }

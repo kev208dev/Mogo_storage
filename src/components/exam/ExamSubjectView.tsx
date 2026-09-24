@@ -6,10 +6,12 @@ import { VocabularyQuiz } from "@/components/english/VocabularyQuiz";
 import { SampleNotice } from "@/components/layout/SampleNotice";
 import { Section } from "@/components/ui/section";
 import { SUBJECT_LABELS } from "@/lib/constants";
+import { SUBJECT_AREA_LABELS } from "@/lib/courses";
 import type { ExamSubjectDetail } from "@/lib/data/types";
-import { examTitle } from "@/lib/exam-path";
+import { examCoursePath, examPath, examTitle } from "@/lib/exam-path";
 import { AnswerSheet } from "./AnswerSheet";
 import { AutoGrader } from "./AutoGrader";
+import { CourseSelector } from "./CourseSelector";
 import { DifficultQuestions } from "./DifficultQuestions";
 import { ExamFiles } from "./ExamFiles";
 import { ExamHeader } from "./ExamHeader";
@@ -33,6 +35,9 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     exam,
     subjects,
     subject,
+    courses,
+    course,
+    courseFileCounts,
     files,
     questions,
     gradeCuts,
@@ -41,7 +46,27 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     schedule,
   } = detail;
   const subjectKey = subject.subject;
-  const subjectLabel = SUBJECT_LABELS[subjectKey];
+  const areaLabel = SUBJECT_AREA_LABELS[subjectKey] ?? SUBJECT_LABELS[subjectKey];
+  const subjectLabel = course ? course.name : SUBJECT_LABELS[subjectKey];
+  const extraCrumbs =
+    courses.length > 0 || course
+      ? [
+          {
+            label: areaLabel,
+            href:
+              examPath(exam, subjectKey) === examPath(exam)
+                ? `${examPath(exam)}/${subjectKey}`
+                : examPath(exam, subjectKey),
+          },
+          ...(course
+            ? [{ label: course.name, href: examCoursePath(exam, subjectKey, course.code) }]
+            : []),
+        ]
+      : [];
+  // 세부과목이 있는 영역 페이지: 영역 전체(세부과목 구분 없는) 자료가 있을 때만 파일 목록을 보여준다
+  const showFiles = Boolean(course) || courses.length === 0 || files.length > 0;
+  /** 채점·해설 localStorage 구분용 (세부과목마다 따로 저장) */
+  const progressKey = course ? `${subjectKey}:${course.code}` : subjectKey;
   const isEnglish = subjectKey === "english";
   const audioFile = files.find((f) => f.type === "listening_audio");
   const hasQuestions = questions.length > 0;
@@ -59,17 +84,42 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
 
   return (
     <article className="pb-6">
-      <ExamHeader exam={exam} subject={subjectKey} />
+      <ExamHeader
+        exam={exam}
+        subject={subjectKey}
+        extraCrumbs={extraCrumbs}
+        heading={course ? `${areaLabel} ${course.name}` : undefined}
+      />
       <SubjectTabs exam={exam} subjects={subjects} current={subjectKey} />
+      <CourseSelector
+        exam={exam}
+        subject={subjectKey}
+        courses={courses}
+        current={course}
+        fileCounts={courseFileCounts}
+      />
       {schedule && files.length === 0 && schedule.status !== "cancelled" ? (
         <ExamSchedulePanel schedule={schedule} today={todayKst()} />
       ) : null}
-      <ExamFiles
-        files={files}
-        examId={exam.id}
-        subject={subjectKey}
-        title={`${examTitle(exam)} ${subjectLabel}`}
-      />
+      {course ? (
+        <h2 className="mt-4 text-lg font-bold">{course.name}</h2>
+      ) : courses.length > 0 && files.length > 0 ? (
+        <h2 className="text-muted-foreground mt-4 text-sm font-bold">
+          {areaLabel} 전체 (세부과목 구분 없는 자료)
+        </h2>
+      ) : null}
+      {showFiles ? (
+        <ExamFiles
+          files={files}
+          examId={exam.id}
+          subject={subjectKey}
+          title={`${examTitle(exam)} ${subjectLabel}`}
+        />
+      ) : (
+        <p className="border-border text-muted-foreground mt-4 rounded-md border px-3 py-3 text-sm">
+          위에서 {areaLabel} 과목을 선택하면 시험지와 정답·해설을 받을 수 있습니다.
+        </p>
+      )}
 
       {exam.isSample ? (
         <SampleNotice className="mt-3">
@@ -107,7 +157,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
             >
               <AutoGrader
                 examId={exam.id}
-                subject={subjectKey}
+                subject={progressKey}
                 questions={questions.map(({ questionNumber, answer, score, choiceCount }) => ({
                   questionNumber,
                   answer,
@@ -119,7 +169,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
 
             <Section id="questions" title="문항별 해설 · 정답률">
               <DifficultQuestions questions={questions} />
-              <QuestionExplorer examId={exam.id} subject={subjectKey} questions={questions} />
+              <QuestionExplorer examId={exam.id} subject={progressKey} questions={questions} />
             </Section>
           </>
         ) : (

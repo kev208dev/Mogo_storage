@@ -80,12 +80,20 @@ export class SampleExamRepository implements ExamRepository {
         statistic: this.data.statistics.find((s) => s.questionId === q.id) ?? null,
       }));
 
+    const courseFileCounts: Record<string, number> = {};
+    for (const c of courses) {
+      courseFileCounts[c.code] = this.data.files.filter(
+        (f) => f.examId === exam.id && f.subject === subject && f.courseId === c.id,
+      ).length;
+    }
+
     return {
       exam,
       subjects,
       subject: current,
       courses,
       course,
+      courseFileCounts,
       files: inSlot(this.data.files),
       questions,
       gradeCuts: inSlot(this.data.gradeCuts),

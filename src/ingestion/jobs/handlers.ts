@@ -1,6 +1,5 @@
 import { and, eq, inArray, isNull } from "drizzle-orm";
 import { examFiles, exams, examSchedules, ingestionErrors, sourceArtifacts } from "../../db/schema";
-import type { FileType, Subject } from "../../lib/constants";
 import type { IngestionContext } from "../context";
 import { ArtifactValidationError, IngestionError, redactUrl, toIngestionError } from "../errors";
 import {

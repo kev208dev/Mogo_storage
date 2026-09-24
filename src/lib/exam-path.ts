@@ -70,3 +70,9 @@ export function parseExamParams(params: {
 export function isSubject(value: string): value is Subject {
   return (SUBJECTS as readonly string[]).includes(value);
 }
+
+/** 세부과목 페이지: /exam/2026/high3/09/social/social-culture (국어 선택과목도 영역 segment 를 항상 포함) */
+export function examCoursePath(key: ExamKey, subject: Subject, courseCode: string): string {
+  const base = `/exam/${key.year}/${gradeSegment(key.grade)}/${monthSegment(key.month)}`;
+  return `${base}/${subject}/${courseCode}`;
+}

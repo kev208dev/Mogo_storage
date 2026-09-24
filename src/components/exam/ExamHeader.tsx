@@ -4,6 +4,10 @@ import { EXAM_TYPE_LABELS, SUBJECT_LABELS, type Subject } from "@/lib/constants"
 import type { Exam } from "@/lib/data/types";
 import { examPath, examTitle } from "@/lib/exam-path";
 
+function todayKst(): string {
+  return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
 export function ExamHeader({ exam, subject }: { exam: Exam; subject: Subject }) {
   const title = examTitle(exam);
   return (
@@ -24,7 +28,11 @@ export function ExamHeader({ exam, subject }: { exam: Exam; subject: Subject }) 
         <span>
           {EXAM_TYPE_LABELS[exam.examType]} · {exam.organizer}
         </span>
-        {exam.examDate ? <span>· {exam.examDate} 시행</span> : null}
+        {exam.examDate ? (
+          <span>
+            · {exam.examDate} {exam.examDate > todayKst() ? "시행 예정" : "시행"}
+          </span>
+        ) : null}
         {exam.isSample ? (
           <Badge variant="warning" title="개발용 샘플 데이터입니다">
             샘플

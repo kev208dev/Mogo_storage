@@ -9,15 +9,11 @@ import {
 
 export const MOCK_STORAGE_ROUTE = "/api/mock-storage";
 
-/** 로컬 개발용 저장 위치 (.gitignore 대상) */
-export function mockStorageDir(): string {
-  return path.resolve(process.env.MOCK_STORAGE_DIR ?? ".data/mock-storage");
-}
-
+/** 로컬 개발용 저장 위치: <프로젝트>/.data/mock-storage (.gitignore 대상, 경로를 정적으로 고정) */
 export async function readMockObject(key: string): Promise<Uint8Array | null> {
   assertSafeStorageKey(key);
   try {
-    return new Uint8Array(await readFile(path.join(mockStorageDir(), key)));
+    return new Uint8Array(await readFile(path.join(process.cwd(), ".data", "mock-storage", key)));
   } catch {
     return null;
   }
@@ -41,8 +37,7 @@ export class MockStorageProvider implements StorageProvider {
 
   async putObject(input: PutObjectInput) {
     assertSafeStorageKey(input.key);
-    const target = path.join(mockStorageDir(), input.key);
-    if (!target.startsWith(mockStorageDir() + path.sep)) throw new Error("Invalid storage key");
+    const target = path.join(process.cwd(), ".data", "mock-storage", input.key);
     await mkdir(path.dirname(target), { recursive: true });
     await writeFile(target, input.body);
   }

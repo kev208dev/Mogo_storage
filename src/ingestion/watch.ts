@@ -1,6 +1,6 @@
 import { and, desc, eq, sql } from "drizzle-orm";
-import { examFiles, examSchedules, ingestionRuns } from "../db/schema";
-import type { Grade, Subject } from "../lib/constants";
+import { examSchedules, ingestionRuns } from "../db/schema";
+import type { Grade } from "../lib/constants";
 import { ingestionEnabled, queueRechecks } from "./backfill";
 import type { IngestionContext } from "./context";
 import { runJobs, type WorkerResult } from "./jobs/worker";
@@ -8,13 +8,24 @@ import { runDiscovery, type DiscoveryResult } from "./pipeline/discovery";
 import { withAdvisoryLock } from "./pipeline/locks";
 import { loadPriorities, loadSources } from "./pipeline/sources";
 import {
+  applyOfficialReleaseTimes,
+  ensureWatchStates,
+  hasOfficialTimes,
+  loadWatchStates,
+  markPolled,
+  planPoll,
+  refreshWatchStates,
+  toWatchSlots,
+  type PollPhase,
+} from "./schedule/artifact-watch";
+import {
   computeReleaseWindow,
   isPollDue,
-  isWithinWindow,
   SCHEDULED_DISCOVERY_INTERVAL_SECONDS,
 } from "./schedule/release-window";
 import { loadWatchableSchedules } from "./schedule/schedules";
 import { rankSources } from "./sources/config";
+import type { PageType } from "./types";
 
 async function lastRunAt(
   ctx: IngestionContext,
@@ -33,23 +44,29 @@ async function lastRunAt(
   return row?.startedAt ?? null;
 }
 
-/** 자료가 있어야 할 슬롯 (영어는 듣기 포함) */
-export function expectedSlots(subjects: Subject[]) {
-  return subjects.flatMap((subject) => [
-    { subject, type: "question" as const },
-    { subject, type: "solution" as const },
-    ...(subject === "english" ? [{ subject, type: "listening_audio" as const }] : []),
-  ]);
-}
+export { expectedSlots } from "./schedule/artifact-watch";
 
 export interface ReleaseWatchResult {
-  schedules: Array<{ scheduleId: string; exam: string; state: string; polled: string[] }>;
+  schedules: Array<{
+    scheduleId: string;
+    exam: string;
+    state: string;
+    polled: string[];
+    /** 자료 단위 감시 단계 (complete / idle / fetch_release_times / pre_release / released / backoff) */
+    phase?: PollPhase;
+    waiting?: number;
+    /** 공식 공개 시각을 반영한 슬롯 수 */
+    officialTimesApplied?: number;
+  }>;
   jobs: WorkerResult | null;
 }
 
 /**
- * RELEASE WATCH: 시험 당일 예상 공개 시간대에만 짧은 간격(source 별 최소 간격 준수)으로 해당 시험만 확인한다.
- * 발견된 자료는 곧바로 job 으로 검증·게시된다.
+ * RELEASE WATCH: 시험 당일, 자료 단위(영역·세부과목·종류)로 남은 자료만 확인한다.
+ *  - 확인 시작 시각: 공식 공개 시각(source) > 일정 metadata > 기본 공개 시간대
+ *  - 공개 예정 2분 전부터 낮은 빈도, 공개 이후 source 최소 간격 (source 예절 준수)
+ *  - 발견된 자료는 곧바로 job 으로 검증·게시되고, 그 슬롯은 found 가 되어 더 이상 기다리지 않는다
+ *  - 모든 슬롯이 found 면 시험 감시 종료 (이미 받은 파일을 반복 요청하지 않음)
  */
 export async function runReleaseWatch(ctx: IngestionContext): Promise<ReleaseWatchResult> {
   const now = ctx.now();
@@ -62,17 +79,22 @@ export async function runReleaseWatch(ctx: IngestionContext): Promise<ReleaseWat
   for (const schedule of schedules) {
     const window = computeReleaseWindow(schedule);
     const label = `${schedule.year} 고${schedule.grade} ${schedule.month}월`;
-    const entry = {
+    const entry: ReleaseWatchResult["schedules"][number] = {
       scheduleId: schedule.id,
       exam: label,
       state: "outside_window",
-      polled: [] as string[],
+      polled: [],
     };
     result.schedules.push(entry);
 
+    if (schedule.examId) await ensureWatchStates(ctx.db, schedule);
+
     if (now > window.end) {
-      // 감시 종료: 모든 기대 자료가 모였으면 completed, 아니면 정기 수집에 맡긴다
-      const complete = schedule.examId ? await isExamComplete(ctx, schedule.examId) : false;
+      // 감시 종료: 남은 슬롯은 missed → 정기 수집에 맡긴다
+      const refreshed = schedule.examId
+        ? await refreshWatchStates(ctx.db, { examId: schedule.examId, now, windowEnd: window.end })
+        : null;
+      const complete = Boolean(refreshed && refreshed.missed === 0 && refreshed.found > 0);
       await ctx.db
         .update(examSchedules)
         .set({
@@ -87,14 +109,6 @@ export async function runReleaseWatch(ctx: IngestionContext): Promise<ReleaseWat
       entry.state = complete ? "completed" : "window_closed";
       continue;
     }
-    if (!isWithinWindow(window, now)) continue;
-    entry.state = "watching";
-    if (schedule.status === "scheduled") {
-      await ctx.db
-        .update(examSchedules)
-        .set({ status: "watching", updatedAt: now })
-        .where(eq(examSchedules.id, schedule.id));
-    }
 
     const priorities = await loadPriorities(ctx.db, schedule.examType);
     const ordered = rankSources(
@@ -104,48 +118,100 @@ export async function runReleaseWatch(ctx: IngestionContext): Promise<ReleaseWat
       .map((id) => sources.find((s) => s.id === id)!)
       .filter(Boolean);
     const scope = `${schedule.year}-${schedule.grade}-${schedule.month}`;
+    const canonical = {
+      year: schedule.year,
+      grade: schedule.grade as Grade,
+      month: schedule.month,
+      examType: schedule.examType,
+      academicYear: schedule.examType === "school_mock" ? null : schedule.year + 1,
+    };
+    const examDay = new Date(`${schedule.examDate}T00:00:00+09:00`);
+    let officialApplied = 0;
     for (const source of ordered) {
+      if (schedule.examId) {
+        await refreshWatchStates(ctx.db, { examId: schedule.examId, now });
+      }
+      const rows = schedule.examId ? await loadWatchStates(ctx.db, schedule.examId) : [];
+      const indexPage = schedule.sourcePages.find(
+        (p) => p.sourceId === source.id && p.pageType === "exam_release_index",
+      );
+      const needsReleaseTimes =
+        Boolean(indexPage && schedule.examId && now >= examDay) &&
+        !(await hasOfficialTimes(ctx.db, schedule.examId!));
       const last = await lastRunAt(ctx, source.id, "release_watch", scope);
-      if (!isPollDue(last, source.minPollIntervalSeconds, now)) continue;
+      const plan = planPoll({
+        states: toWatchSlots(rows),
+        now,
+        minIntervalSeconds: source.minPollIntervalSeconds,
+        lastPolledAt: last,
+        needsReleaseTimes,
+      });
+      entry.phase = plan.phase;
+      entry.waiting = plan.waiting;
+      if (plan.phase === "complete") {
+        // 모든 자료 확보 → 이 시험은 더 이상 확인하지 않는다
+        entry.state = "completed";
+        await ctx.db
+          .update(examSchedules)
+          .set({ status: "completed", updatedAt: now })
+          .where(eq(examSchedules.id, schedule.id));
+        break;
+      }
+      if (plan.phase === "idle") continue;
+      entry.state = "watching";
+      if (schedule.status === "scheduled") {
+        await ctx.db
+          .update(examSchedules)
+          .set({ status: "watching", updatedAt: now })
+          .where(eq(examSchedules.id, schedule.id));
+      }
+      if (!plan.due) continue;
       entry.polled.push(source.id);
-      await runDiscovery(ctx, {
+      const page = schedule.sourcePages.find((p) => p.sourceId === source.id);
+      const discovery = await runDiscovery(ctx, {
         source,
         mode: "release_watch",
         exams: [
           {
-            year: schedule.year,
-            grade: schedule.grade as Grade,
-            month: schedule.month,
-            examType: schedule.examType,
-            academicYear: schedule.examType === "school_mock" ? null : schedule.year + 1,
+            ...canonical,
+            examDate: schedule.examDate,
+            ...(page ? { sourceUrl: page.url, pageType: page.pageType as PageType } : {}),
           },
         ],
-        metadata: { scope, scheduleId: schedule.id },
+        metadata: { scope, scheduleId: schedule.id, phase: plan.phase },
       });
+      const activeIds = rows.filter((r) =>
+        plan.active.some(
+          (a) => a.subject === r.subject && a.slotKey === r.slotKey && a.type === r.type,
+        ),
+      );
+      await markPolled(ctx.db, activeIds, now);
+      for (const rt of discovery.releaseTimes) {
+        officialApplied += await applyOfficialReleaseTimes(ctx.db, {
+          examId: rt.examId,
+          sourceId: source.id,
+          times: rt.times,
+          now,
+        });
+      }
     }
+    if (officialApplied) entry.officialTimesApplied = officialApplied;
     ctx.logger.info("release_watch.tick", {
       scheduleId: schedule.id,
       exam: label,
       polled: entry.polled,
+      phase: entry.phase,
+      waiting: entry.waiting,
     });
   }
   // 발견 즉시 검증·게시 (전체 자료가 모이기를 기다리지 않음)
   if (result.schedules.some((s) => s.polled.length)) {
     result.jobs = await runJobs(ctx, { timeBudgetMs: 45_000 });
+    for (const schedule of schedules) {
+      if (schedule.examId) await refreshWatchStates(ctx.db, { examId: schedule.examId, now });
+    }
   }
   return result;
-}
-
-async function isExamComplete(ctx: IngestionContext, examId: string): Promise<boolean> {
-  const files = await ctx.db
-    .select({ subject: examFiles.subject, type: examFiles.type })
-    .from(examFiles)
-    .where(eq(examFiles.examId, examId));
-  const subjects = [...new Set(files.map((f) => f.subject))];
-  if (subjects.length === 0) return false;
-  return expectedSlots(subjects).every((slot) =>
-    files.some((f) => f.subject === slot.subject && f.type === slot.type),
-  );
 }
 
 export interface ScheduledResult {

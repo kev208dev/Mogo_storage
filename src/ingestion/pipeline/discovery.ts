@@ -5,7 +5,13 @@ import type { IngestionMode } from "../constants";
 import type { IngestionContext } from "../context";
 import { SourceStructureChangedError, redactUrl, toIngestionError } from "../errors";
 import { createAdapter } from "../sources/registry";
-import type { DiscoverOptions, DiscoveredExam, ExamLocator, SourceConfig } from "../types";
+import type {
+  DiscoverOptions,
+  DiscoveredExam,
+  DiscoveredReleaseTime,
+  ExamLocator,
+  SourceConfig,
+} from "../types";
 import { upsertDiscoveredArtifact } from "./artifacts";
 import { loadCourseAliases } from "./course-aliases";
 import { ensureExamSubjects, examLabel, upsertCanonicalExam, upsertSourceExam } from "./exams";
@@ -24,6 +30,8 @@ export interface DiscoveryResult {
   status: "completed" | "partial" | "failed" | "locked";
   counts: RunCounts;
   errors: Array<{ code: string; message: string }>;
+  /** 공식 공개 시각 (KICE 시험별 index 등, 지원 source 만) */
+  releaseTimes: Array<{ examId: string; times: DiscoveredReleaseTime[] }>;
 }
 
 /**
@@ -45,6 +53,7 @@ export async function runDiscovery(
   const { db, logger } = ctx;
   const counts: RunCounts = { discovered: 0, created: 0, updated: 0, failed: 0 };
   const errors: DiscoveryResult["errors"] = [];
+  const releaseTimes: DiscoveryResult["releaseTimes"] = [];
 
   const locked = await withAdvisoryLock(db, `ingest:discover:${input.source.id}`, async () => {
     const startedAt = ctx.now();
@@ -135,6 +144,10 @@ export async function runDiscovery(
           if (examResult.created) counts.created += 1;
 
           const raw = await adapter.discoverArtifacts(locator);
+          if (locator.pageType === "exam_release_index" && adapter.discoverReleaseTimes) {
+            const times = await adapter.discoverReleaseTimes(locator);
+            if (times.length) releaseTimes.push({ examId, times });
+          }
           const { artifacts, conflicts } = dedupeArtifacts(raw);
           for (const group of conflicts) {
             logger.warn("artifact.manual_review", {
@@ -255,7 +268,7 @@ export async function runDiscovery(
       source: input.source.id,
       reason: "another run holds the lock",
     });
-    return { runId: null, status: "locked", counts, errors };
+    return { runId: null, status: "locked", counts, errors, releaseTimes };
   }
-  return { runId: locked.value.runId, status: locked.value.status, counts, errors };
+  return { runId: locked.value.runId, status: locked.value.status, counts, errors, releaseTimes };
 }

@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import type { FileType } from "../../lib/constants";
+import { isHostAllowed } from "../net/url-policy";
 
 export type ExpectedKind = "pdf" | "audio";
 
@@ -144,4 +145,83 @@ export function sanitizeFileName(raw: string, fallback: string): string {
     .trim()
     .slice(0, 150);
   return cleaned || fallback;
+}
+
+/** probe 에서 읽는 앞부분 크기: magic bytes, HTML 오류 페이지 판별에 충분하다 */
+export const PROBE_BYTES = 4096;
+
+export type ProbeResult =
+  | {
+      ok: true;
+      /** 내용 변경 감지용 식별자 (전체 hash 가 아님): 최종 URL + 크기 + ETag/Last-Modified + 앞부분 hash */
+      fingerprint: string;
+      size: number | null;
+      mimeType: string;
+      finalUrl: string;
+    }
+  | { ok: false; code: string; message: string };
+
+/**
+ * metadata 검증 (파일 전체를 받지 않음): HTTP status, Content-Type, magic bytes, 크기(content-length),
+ * redirect 최종 목적지와 허용 도메인. source_redirect 자료는 이것으로 충분하다 — 우리 서버에 저장하지 않으므로.
+ */
+export function validateArtifactProbe(input: {
+  status: number;
+  contentType: string;
+  headBytes: Uint8Array;
+  truncated: boolean;
+  declaredSize: number | null;
+  finalUrl: string;
+  allowedHosts: string[];
+  expected: ExpectedKind;
+  etag?: string | null;
+  lastModified?: string | null;
+}): ProbeResult {
+  let host: string;
+  try {
+    host = new URL(input.finalUrl).hostname.toLowerCase();
+  } catch {
+    return { ok: false, code: "INVALID_FINAL_URL", message: "redirect destination is not a URL" };
+  }
+  if (!isHostAllowed(host, input.allowedHosts)) {
+    return {
+      ok: false,
+      code: "UNEXPECTED_DOMAIN",
+      message: `redirect destination ${host} is not an allowlisted source domain`,
+    };
+  }
+  // 크기: 전체를 읽지 않았으면 content-length 로 판단한다
+  const size = input.truncated ? input.declaredSize : input.headBytes.byteLength;
+  if (size !== null && size > MAX_ARTIFACT_BYTES[input.expected]) {
+    return { ok: false, code: "TOO_LARGE", message: `file is ${size} bytes` };
+  }
+  // magic bytes · HTML 오류 페이지 · content-type 은 전체 검증과 같은 규칙 (크기 하한만 실제 크기로)
+  const head = validateArtifact({
+    status: input.status,
+    contentType: input.contentType,
+    bytes: input.headBytes,
+    expected: input.expected,
+  });
+  if (!head.ok && !(head.code === "TOO_SMALL" && input.truncated)) return head;
+  if (!input.truncated && size !== null && size < MIN_BYTES[input.expected]) {
+    return { ok: false, code: "TOO_SMALL", message: `file is only ${size} bytes` };
+  }
+  const fingerprint = `probe:${sha256Hex(
+    new TextEncoder().encode(
+      [
+        input.finalUrl,
+        size ?? "?",
+        input.etag ?? "",
+        input.lastModified ?? "",
+        sha256Hex(input.headBytes),
+      ].join("\n"),
+    ),
+  ).slice(0, 40)}`;
+  return {
+    ok: true,
+    fingerprint,
+    size,
+    mimeType: input.expected === "audio" ? "audio/mpeg" : "application/pdf",
+    finalUrl: input.finalUrl,
+  };
 }

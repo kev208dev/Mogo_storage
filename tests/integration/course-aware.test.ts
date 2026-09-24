@@ -228,7 +228,7 @@ describe.skipIf(!TEST_DB_URL)("course-aware ingestion (탐구 선택과목)", ()
       courseLabel: "윤리 문제",
     });
     expect(artifact!.statusReason).toContain("ambiguous course");
-    expect(artifact!.sha256).toMatch(/^[0-9a-f]{64}$/); // 검증은 끝났다
+    expect(artifact!.contentFingerprint).toMatch(/^probe:/); // 검증(metadata)은 끝났다
     expect(await db.select().from(s.examFiles)).toHaveLength(0); // 자동 게시 안 함
     await expect(approveArtifact(ctx, artifact!.id)).rejects.toThrow(/세부과목/);
 

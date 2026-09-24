@@ -36,6 +36,13 @@
       "when": 1790268451042,
       "tag": "0004_schedule_source_pages",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790268644023,
+      "tag": "0005_artifact_watch_and_probe",
+      "breakpoints": true
     }
   ]
 }

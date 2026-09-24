@@ -136,7 +136,11 @@ export default async function ReviewPage({ searchParams }: PageProps<"/admin/rev
                 </span>
               ) : (
                 <span className="text-muted-foreground text-xs">
-                  sha256 {artifact.sha256?.slice(0, 12)}…
+                  {artifact.verificationMode === "probe" ? "probe" : "sha256"}{" "}
+                  {(artifact.contentFingerprint ?? artifact.sha256)
+                    ?.replace("probe:", "")
+                    .slice(0, 12)}
+                  …
                 </span>
               )}
               <span className="ml-auto flex gap-1">

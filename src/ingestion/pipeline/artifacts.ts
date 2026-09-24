@@ -134,7 +134,7 @@ export async function upsertDiscoveredArtifact(
         ),
       );
     if (pending?.slotKey.startsWith("unresolved:")) {
-      const verified = Boolean(pending.sha256 && pending.verifiedAt);
+      const verified = Boolean(pending.verifiedAt);
       const nextStatus = !verified
         ? "discovered"
         : pending.deliveryPolicy === "manual_review"
@@ -156,7 +156,7 @@ export async function upsertDiscoveredArtifact(
           db,
           now,
           { examId: input.examId, subject: artifact.subject, courseId, type: artifact.type },
-          `${pending.id}:${pending.sha256}:alias`,
+          `${pending.id}:${pending.contentFingerprint ?? pending.sha256}:alias`,
         );
       } else if (nextStatus === "discovered") {
         await enqueueJob(db, {

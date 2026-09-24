@@ -517,7 +517,14 @@ export const sourceArtifacts = pgTable(
     originalFileName: text("original_file_name").notNull(),
     mimeType: text("mime_type").notNull(),
     fileSize: integer("file_size"),
+    /** 파일 전체를 받아 계산한 hash (mirror/단어장 처리 등 전체 다운로드를 한 경우만) */
     sha256: text("sha256"),
+    /** full: 전체 다운로드 검증 / probe: 앞부분 + header 만 확인 (source_redirect 기본) */
+    verificationMode: text("verification_mode"),
+    /** 내용 변경 감지용 버전 식별자: full 이면 sha256, probe 면 "probe:<hash>" */
+    contentFingerprint: text("content_fingerprint"),
+    /** redirect 를 따라간 최종 URL (허용 도메인 검사 결과 기록) */
+    finalUrl: text("final_url"),
     deliveryPolicy: deliveryPolicyEnum("delivery_policy").notNull(),
     status: sourceArtifactStatusEnum("status").notNull().default("discovered"),
     statusReason: text("status_reason"),
@@ -625,6 +632,43 @@ export const examSchedules = pgTable(
   (t) => [
     uniqueIndex("exam_schedules_identity_uq").on(t.year, t.grade, t.month, t.examType),
     index("exam_schedules_date_idx").on(t.examDate),
+  ],
+);
+
+/**
+ * release watch 의 자료 단위(시험 · 영역 · 세부과목 · 종류) polling 상태.
+ * 확보한 자료는 found 가 되어 더 이상 확인하지 않고, 남은 자료만 공개 예정 시각에 맞춰 확인한다.
+ */
+export const artifactWatchStates = pgTable(
+  "artifact_watch_states",
+  {
+    id: id(),
+    examId: text("exam_id")
+      .notNull()
+      .references(() => exams.id, { onDelete: "cascade" }),
+    subject: subjectEnum("subject").notNull(),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
+    /** "" = 영역 전체, 그 외 course code */
+    slotKey: text("slot_key").notNull().default(""),
+    type: fileTypeEnum("type").notNull(),
+    /** waiting | found | missed (감시 시간 안에 나오지 않음 → 정기 수집에 맡김) */
+    status: text("status").notNull().default("waiting"),
+    /** 실제로 확인을 시작할 기준 시각 (artifactExpectedAt) */
+    expectedAt: timestamp("expected_at", { withTimezone: true }),
+    /** source 가 공식 발표한 공개 시각 (KICE 정답 공개시간 등) */
+    officialReleaseAt: timestamp("official_release_at", { withTimezone: true }),
+    /** expectedAt 의 근거: official | schedule | fallback */
+    expectedSource: text("expected_source").notNull().default("fallback"),
+    releaseSourceId: text("release_source_id"),
+    lastPolledAt: timestamp("last_polled_at", { withTimezone: true }),
+    pollCount: integer("poll_count").notNull().default(0),
+    foundAt: timestamp("found_at", { withTimezone: true }),
+    foundSourceId: text("found_source_id"),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("artifact_watch_states_slot_uq").on(t.examId, t.subject, t.slotKey, t.type),
+    index("artifact_watch_states_status_idx").on(t.status),
   ],
 );
 

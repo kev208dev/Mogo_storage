@@ -15,11 +15,22 @@ export interface FetchResult {
   contentType: string;
   headers: Headers;
   bytes: Uint8Array;
+  /** probeBytes 로 앞부분만 읽고 멈췄으면 true (bytes 는 파일 전체가 아니다) */
+  truncated?: boolean;
+  /** 서버가 알려준 전체 크기 (content-length). 모르면 null */
+  declaredSize?: number | null;
+  /** 거쳐 온 redirect (원래 URL 제외, 마지막이 최종 URL) */
+  redirects?: string[];
 }
 
 export interface FetchOptions {
   maxBytes?: number;
   accept?: string;
+  /**
+   * metadata 확인용: 앞 N byte 만 읽고 연결을 닫는다 (magic bytes · content-type · 크기 확인).
+   * source_redirect 자료처럼 파일 전체가 필요 없을 때 불필요한 전체 다운로드를 피한다.
+   */
+  probeBytes?: number;
 }
 
 /** 외부 source 접근은 모두 이 인터페이스를 통한다 (테스트에서는 fixture fetcher 로 교체) */
@@ -87,6 +98,7 @@ export class SafeFetcher implements Fetcher {
   private async fetchOnce(rawUrl: string, options: FetchOptions): Promise<FetchResult> {
     const maxRedirects = this.options.maxRedirects ?? 5;
     let current = rawUrl;
+    const redirects: string[] = [];
     for (let hop = 0; hop <= maxRedirects; hop += 1) {
       const url = assertUrlAllowed(current, this.options.policy);
       await assertResolvesPublic(url, this.resolveHost, this.options.policy);
@@ -118,6 +130,7 @@ export class SafeFetcher implements Fetcher {
         if (!location)
           throw new SourceFetchError("redirect without location", false, response.status);
         current = new URL(location, url).toString(); // 다음 hop 에서 allowlist 재검증
+        redirects.push(current);
         continue;
       }
 
@@ -130,13 +143,36 @@ export class SafeFetcher implements Fetcher {
             response.status,
           );
         }
-        const bytes = await readLimited(response, options.maxBytes ?? DEFAULT_MAX_BYTES);
+        const declared = Number(response.headers.get("content-length") ?? "");
+        const declaredSize = Number.isFinite(declared) && declared > 0 ? declared : null;
+        const maxBytes = options.maxBytes ?? DEFAULT_MAX_BYTES;
+        if (options.probeBytes) {
+          if (declaredSize !== null && declaredSize > maxBytes) {
+            await response.body?.cancel().catch(() => {});
+            throw new SourceFetchError(`response too large (${declaredSize} bytes)`, false);
+          }
+          const { bytes, truncated } = await readHead(response, options.probeBytes);
+          return {
+            url: url.toString(),
+            status: response.status,
+            contentType: (response.headers.get("content-type") ?? "").toLowerCase(),
+            headers: response.headers,
+            bytes,
+            truncated,
+            declaredSize,
+            redirects,
+          };
+        }
+        const bytes = await readLimited(response, maxBytes);
         return {
           url: url.toString(),
           status: response.status,
           contentType: (response.headers.get("content-type") ?? "").toLowerCase(),
           headers: response.headers,
           bytes,
+          truncated: false,
+          declaredSize,
+          redirects,
         };
       } finally {
         clearTimeout(timer);
@@ -229,6 +265,38 @@ async function readLimited(response: Response, maxBytes: number): Promise<Uint8A
     offset += c.byteLength;
   }
   return out;
+}
+
+/** 앞 limit byte 만 읽고 나머지는 받지 않는다 */
+async function readHead(
+  response: Response,
+  limit: number,
+): Promise<{ bytes: Uint8Array; truncated: boolean }> {
+  if (!response.body) return { bytes: new Uint8Array(), truncated: false };
+  const reader = response.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  let truncated = false;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    chunks.push(value);
+    total += value.byteLength;
+    if (total >= limit) {
+      truncated = true;
+      await reader.cancel().catch(() => {});
+      break;
+    }
+  }
+  const out = new Uint8Array(Math.min(total, limit));
+  let offset = 0;
+  for (const c of chunks) {
+    const take = Math.min(c.byteLength, out.byteLength - offset);
+    if (take <= 0) break;
+    out.set(c.subarray(0, take), offset);
+    offset += take;
+  }
+  return { bytes: out, truncated };
 }
 
 export function decodeHtml(result: FetchResult): string {

@@ -37,7 +37,7 @@ export async function approveArtifact(ctx: IngestionContext, artifactId: string)
   if (a.containerType === "archive") {
     throw new IngestionError("ARCHIVE_NOT_SUPPORTED", "압축 파일은 아직 공개할 수 없습니다.");
   }
-  if (!a.sha256) throw new IngestionError("NOT_VERIFIED", "파일 검증이 끝나지 않았습니다.");
+  if (!a.verifiedAt) throw new IngestionError("NOT_VERIFIED", "파일 검증이 끝나지 않았습니다.");
   await ctx.db
     .update(sourceArtifacts)
     .set({ status: "ready", statusReason: "approved by admin", updatedAt: ctx.now() })
@@ -45,7 +45,7 @@ export async function approveArtifact(ctx: IngestionContext, artifactId: string)
   await enqueuePublish(
     ctx,
     { examId: a.examId, subject: a.subject, courseId: a.courseId, type: a.type },
-    `${a.id}:${a.sha256 ?? "none"}:approved`,
+    `${a.id}:${a.contentFingerprint ?? a.sha256 ?? "none"}:approved`,
   );
 }
 
@@ -246,7 +246,7 @@ export async function mapArtifactCourse(
     await enqueuePublish(
       ctx,
       { examId: a.examId, subject: a.subject, courseId: course.id, type: a.type },
-      `${a.id}:${a.sha256}:course:${course.code}`,
+      `${a.id}:${a.contentFingerprint ?? a.sha256}:course:${course.code}`,
     );
   } else if (nextStatus === "discovered") {
     await enqueueJob(ctx.db, {

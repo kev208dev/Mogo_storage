@@ -151,7 +151,11 @@ run("automatic ingestion pipeline (fake official source → DB → site)", () =>
     const artifacts = await db.select().from(s.sourceArtifacts);
     for (const a of artifacts) {
       expect(a.status).toBe("ready");
-      expect(a.sha256).toMatch(/^[0-9a-f]{64}$/);
+      // source_redirect: 파일 전체를 받지 않고 metadata(probe)로 검증한다 → 전체 sha256 은 없다
+      expect(a.verificationMode).toBe("probe");
+      expect(a.contentFingerprint).toMatch(/^probe:[0-9a-f]{40}$/);
+      expect(a.sha256).toBeNull();
+      expect(a.finalUrl).toBe(a.sourceUrl);
       expect(a.verifiedAt).not.toBeNull();
       expect(a.firstDiscoveredAt).not.toBeNull();
     }
@@ -353,7 +357,7 @@ run("automatic ingestion pipeline (fake official source → DB → site)", () =>
       .select()
       .from(s.sourceArtifacts)
       .where(eq(s.sourceArtifacts.id, before!.id));
-    expect(after!.sha256).not.toBe(before!.sha256);
+    expect(after!.contentFingerprint).not.toBe(before!.contentFingerprint);
     expect(after!.status).toBe("ready");
     expect(logs.some((l) => l.event === "artifact.changed")).toBe(true);
   });

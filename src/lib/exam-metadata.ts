@@ -33,12 +33,19 @@ export function buildExamMetadata(
       locale: "ko_KR",
     },
     twitter: { card: "summary", title, description },
-    // 샘플 데이터 시험은 운영 환경 검색 결과에 노출되지 않도록 한다.
-    robots:
-      exam.isSample &&
-      process.env.NODE_ENV === "production" &&
-      process.env.ALLOW_SAMPLE_INDEXING !== "1"
-        ? { index: false, follow: true }
-        : undefined,
+    // 샘플 데이터 시험은 운영 환경 검색 결과에 노출되지 않도록 한다. (실제 데이터는 isSample=false → index)
+    robots: shouldNoindexExam(exam) ? { index: false, follow: true } : undefined,
   };
+}
+
+/**
+ * 샘플 시험 noindex 정책.
+ * production 에서는 기본적으로 샘플 시험을 noindex 하고, 측정 등 특수한 경우에만
+ * ALLOW_SAMPLE_INDEXING=1 로 명시적으로 해제한다. (기본값으로 켜지 말 것)
+ */
+export function shouldNoindexExam(
+  exam: Pick<Exam, "isSample">,
+  env: { NODE_ENV?: string; ALLOW_SAMPLE_INDEXING?: string } = process.env,
+): boolean {
+  return exam.isSample && env.NODE_ENV === "production" && env.ALLOW_SAMPLE_INDEXING !== "1";
 }

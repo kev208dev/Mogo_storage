@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { DEFAULT_SUBJECT, GRADES, SUBJECTS } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
+import { shouldNoindexExam } from "@/lib/exam-metadata";
 import { examPath } from "@/lib/exam-path";
 import { absoluteUrl } from "@/lib/site";
 
@@ -24,7 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
-  for (const exam of exams) {
+  // noindex 대상(샘플) 시험은 sitemap 에서도 제외한다.
+  for (const exam of exams.filter((e) => !shouldNoindexExam(e))) {
     const subjects = await repo.getExamSubjects(exam.id);
     const lastModified = new Date(exam.updatedAt);
     entries.push({ url: absoluteUrl(examPath(exam)), lastModified, priority: 0.9 });

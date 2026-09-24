@@ -21,6 +21,9 @@ export default function ErrorPage({
       <p className="text-muted-foreground mt-2">
         잠시 후 다시 시도해 주세요. 문제가 계속되면 다른 시험 페이지에서 오류 신고를 남겨 주세요.
       </p>
+      {error.digest ? (
+        <p className="text-muted-foreground mt-2 text-sm">오류 코드: {error.digest}</p>
+      ) : null}
       <div className="mt-6 flex gap-2">
         <Button onClick={reset}>다시 시도</Button>
         <Button variant="outline" asChild>

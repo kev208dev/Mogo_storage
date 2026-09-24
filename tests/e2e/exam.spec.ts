@@ -107,6 +107,11 @@ test.describe("부가기능", () => {
 });
 
 test.describe("SEO", () => {
+  test("샘플 시험은 production 에서 noindex", async ({ page }) => {
+    await page.goto("/exam/2025/high2/09");
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+  });
+
   test("canonical, JSON-LD breadcrumb, description", async ({ page }) => {
     await page.goto("/exam/2025/high2/09");
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
@@ -121,8 +126,63 @@ test.describe("SEO", () => {
 
   test("sitemap / robots", async ({ request }) => {
     const sitemap = await request.get("/sitemap.xml");
-    expect(await sitemap.text()).toContain("/exam/2025/high2/09");
+    const xml = await sitemap.text();
+    expect(xml).toContain("/grade/high2");
+    // production 빌드에서는 noindex 대상인 샘플 시험을 sitemap 에서 제외한다.
+    expect(xml).not.toContain("/exam/2025/high2/09");
     const robots = await request.get("/robots.txt");
     expect(await robots.text()).toContain("Sitemap:");
+  });
+});
+
+test.describe("오류 처리", () => {
+  test("잘못된 URL parameter는 404", async ({ request }) => {
+    for (const path of [
+      "/exam/abcd/high2/09",
+      "/exam/2025/high4/09",
+      "/exam/2025/high2/13",
+      "/exam/2025/high2/xx",
+      "/grade/high9",
+      "/year/abcd",
+    ]) {
+      const res = await request.get(path, { maxRedirects: 0 });
+      expect(res.status(), path).toBe(404);
+    }
+  });
+
+  test("존재하지 않는 파일 다운로드는 사용자용 404 페이지", async ({ page }) => {
+    const res = await page.goto("/api/files/file_does_not_exist/download");
+    expect(res?.status()).toBe(404);
+    await expect(page.getByRole("heading", { name: "파일을 찾을 수 없습니다" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "홈으로" })).toBeVisible();
+  });
+
+  test("자료 준비 중인 파일은 다운로드 링크 대신 비활성 버튼", async ({ page }) => {
+    await page.goto("/exam/2025/high2/09/history");
+    await expect(
+      page.getByRole("button", { name: /정답·해설 다운로드 \(자료 준비 중\)/ }),
+    ).toBeDisabled();
+    await expect(page.getByRole("link", { name: /정답·해설 다운로드/ })).toHaveCount(0);
+  });
+
+  test("신고 API는 올바른 status code를 반환한다", async ({ request }) => {
+    const ok = { examId: "exam_2025_h2_09", category: "other" };
+    const post = (data: unknown, headers: Record<string, string> = {}) =>
+      request.post("/api/reports", {
+        data: typeof data === "string" ? data : JSON.stringify(data),
+        headers: { "content-type": "application/json", "x-forwarded-for": "10.9.8.7", ...headers },
+      });
+
+    const invalid = await post({ examId: "exam_2025_h2_09", category: "spam" });
+    expect(invalid.status()).toBe(400);
+    const body = await invalid.json();
+    expect(body.error).toBe("신고 유형을 선택해 주세요.");
+    expect(body).not.toHaveProperty("issues");
+
+    expect((await post("{not json")).status()).toBe(400);
+    expect((await post(ok, { "content-type": "text/plain" })).status()).toBe(415);
+    expect((await post(ok, { origin: "https://evil.example" })).status()).toBe(403);
+    expect((await post({ ...ok, examId: "exam_nope" })).status()).toBe(404);
+    expect((await request.get("/api/reports")).status()).toBe(405);
   });
 });

@@ -14,6 +14,8 @@ export function ExamFinder({
   years: number[];
   defaultValue: { year: number; grade: number; month: number };
 }) {
+  // 등록된 시험이 없어도 선택 UI 가 비지 않도록 기본값 년도를 포함한다.
+  const yearOptions = years.length ? years : [defaultValue.year];
   return (
     <form action="/search" method="get" aria-label="모의고사 찾기" className="space-y-3">
       <div className="grid grid-cols-3 gap-2">
@@ -22,7 +24,7 @@ export function ExamFinder({
             년도
           </label>
           <NativeSelect id="finder-year" name="year" defaultValue={defaultValue.year}>
-            {years.map((year) => (
+            {yearOptions.map((year) => (
               <option key={year} value={year}>
                 {year}년
               </option>

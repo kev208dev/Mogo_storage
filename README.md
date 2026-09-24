@@ -92,9 +92,26 @@ tests/unit, tests/e2e
 - **등급컷**: 공식은 파란 열과 "공식" 배지로, 기관 자료는 "예상" 배지로 구분합니다. 외부 사이트를 scraping하지 않으며, 데이터는 수동으로 입력한다는 가정입니다.
 - **오류 신고 abuse 방지**: body 크기 제한, same-origin 검사, honeypot 필드, IP 해시 기반 rate limit(메모리 + DB)을 적용했습니다.
 - **SEO**: 시험·과목별 `generateMetadata`(canonical, OpenGraph), BreadcrumbList JSON-LD, `sitemap.xml`, `robots.txt`. 시험 페이지는 빌드 시 정적 생성하고 1시간마다 ISR로 갱신합니다.
-  - 샘플 데이터(`isSample`) 시험은 **프로덕션에서 `noindex`** 처리해 가짜 정답이 검색에 노출되지 않게 했습니다. 샘플 데이터로 Lighthouse SEO를 측정하려면 `ALLOW_SAMPLE_INDEXING=1 npm run build`를 사용하세요.
+  - 샘플 데이터(`isSample`) 시험은 **프로덕션에서 `noindex`** 처리해 가짜 정답이 검색에 노출되지 않게 했습니다. 샘플 데이터로 Lighthouse SEO를 측정하려면 `ALLOW_SAMPLE_INDEXING=1 npm run build`를 사용하세요. (기본값으로 설정하지 마세요.) 같은 조건의 샘플 시험은 sitemap에서도 빠집니다. 실제 데이터(`is_sample=false`, DB 기본값)는 자동으로 index됩니다.
 - **성능**: 웹폰트 없이 OS 한글 폰트를 사용합니다. 검색 form은 JS 없이 동작하고, 정답 보기는 `<details>` 기반입니다. 듣기 음원은 `preload="none"`입니다.
 - **접근성**: skip link, 보이는 focus ring, 주요 터치 타깃 44px, radio/fieldset 기반 입력, `aria-current`/`aria-pressed`/`aria-live`를 적용했고, 색상만으로 결과를 구분하지 않습니다.
+
+## 에러 처리
+
+| 상황                                | 처리                                                                      |
+| ----------------------------------- | ------------------------------------------------------------------------- |
+| 존재하지 않는 시험 / 과목           | `notFound()` → 검색창이 있는 404 페이지                                   |
+| 잘못된 URL parameter                | 404. 월이 `9`처럼 canonical이 아니면 `09`로 308 redirect                  |
+| 자료 준비 중                        | 다운로드 링크 대신 비활성 "준비 중" 버튼 + "자료 준비 중" 배지            |
+| 존재하지 않는 파일 id               | `/api/files/*` → 404 안내 HTML                                            |
+| 파일 정보 조회 실패 (DB 장애)       | 503 "지금은 다운로드할 수 없습니다"                                       |
+| 스토리지(R2) 오류                   | 502 "오류로 다운로드할 수 없습니다" (준비 중과 구분)                      |
+| 데이터 없음 (정답/등급컷/단어장 등) | 섹션별 "준비 중" 안내                                                     |
+| API validation 실패                 | 400 + 한국어 메시지와 필드명만 반환 (Zod 내부 구조 비노출)                |
+| 기타 API                            | 403(origin) · 404 · 405 · 413 · 415 · 429 · 500(일반 메시지)              |
+| 예상하지 못한 서버 오류             | `error.tsx` / `global-error.tsx`: 일반 안내 + digest만 표시, stack 비노출 |
+
+내부 오류 상세는 서버 로그(`console.error`)에만 남기고 클라이언트 응답에는 넣지 않습니다.
 
 ## 측정 결과 (로컬 production build, Lighthouse 13)
 

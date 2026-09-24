@@ -40,11 +40,24 @@ export async function POST(request: Request) {
 
   const parsed = reportInputSchema.safeParse(json);
   if (!parsed.success) {
-    const message = parsed.error.issues[0]?.message ?? "입력값을 확인해 주세요.";
-    return NextResponse.json({ error: message, issues: parsed.error.issues }, { status: 400 });
+    // Zod 내부 구조를 그대로 노출하지 않고, 사용자용 메시지와 문제 필드명만 돌려준다.
+    const fields = [...new Set(parsed.error.issues.map((i) => i.path.join(".")).filter(Boolean))];
+    return NextResponse.json(
+      { error: validationMessage(fields), fields },
+      { status: 400, headers: { "cache-control": "no-store" } },
+    );
   }
   const input = parsed.data;
 
+  try {
+    return await saveReport(request, input);
+  } catch (err) {
+    console.error("[reports] failed", err);
+    return error(500, "일시적인 오류로 신고를 접수하지 못했습니다. 잠시 후 다시 시도해 주세요.");
+  }
+}
+
+async function saveReport(request: Request, input: ReturnType<typeof reportInputSchema.parse>) {
   // honeypot 이 채워져 있으면 봇: 성공처럼 응답하고 저장하지 않는다.
   if (input.website) return NextResponse.json({ ok: true }, { status: 201 });
 
@@ -75,6 +88,12 @@ export async function POST(request: Request) {
     ipHash,
   });
   return NextResponse.json({ ok: true, id: report.id }, { status: 201 });
+}
+
+function validationMessage(fields: string[]) {
+  if (fields.includes("category")) return "신고 유형을 선택해 주세요.";
+  if (fields.includes("message")) return "설명은 1000자 이하로 입력해 주세요.";
+  return "입력값을 확인해 주세요.";
 }
 
 /** 브라우저가 보낸 Origin 이 있으면 같은 호스트인지 확인한다. (CSRF/외부 사이트 대량 신고 방지) */

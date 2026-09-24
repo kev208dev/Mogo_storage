@@ -123,3 +123,13 @@ export async function retryFailedJob(db: Database, id: string, now = new Date())
     .set({ status: "pending", attempts: 0, runAt: now, lastError: null, updatedAt: now })
     .where(and(eq(jobs.id, id), eq(jobs.status, "failed")));
 }
+
+/** 관리자가 영구 실패(dead) job 을 확인하고 무시 처리 (기록은 남는다) */
+export async function dismissFailedJob(db: Database, id: string, now = new Date()) {
+  const rows = await db
+    .update(jobs)
+    .set({ status: "dismissed", updatedAt: now })
+    .where(and(eq(jobs.id, id), eq(jobs.status, "failed")))
+    .returning({ id: jobs.id });
+  return rows.length > 0;
+}

@@ -140,7 +140,8 @@ export async function handleGenerateVocabularyPdf(ctx: IngestionContext, job: Jo
       "모의고사 창고가 공식 해설 자료에서 추출한 단어로 만든 학습 자료입니다. 원본 시험 자료가 아닙니다.",
   });
   const sha = createHash("sha256").update(bytes).digest("hex");
-  const key = `generated/${exam.slug}/english/vocabulary-${sha.slice(0, 16)}.pdf`;
+  // 생성 자료는 원본(exams/…)과 분리된 prefix 에 둔다
+  const key = `generated/exams/${exam.year}/high${exam.grade}/${String(exam.month).padStart(2, "0")}/english/vocabulary-${sha.slice(0, 16)}.pdf`;
   await ctx.storage.putObject({ key, body: bytes, contentType: "application/pdf", sha256: sha });
 
   const values = {
@@ -155,7 +156,7 @@ export async function handleGenerateVocabularyPdf(ctx: IngestionContext, job: Jo
     sourceLabel: "모의고사 창고",
     mimeType: "application/pdf",
     fileSize: bytes.byteLength,
-    originalFileName: `${title}.pdf`,
+    originalFileName: `${exam.year}-고${exam.grade}-${exam.month}월-영어-단어장.pdf`,
     updatedAt: ctx.now(),
   };
   await db

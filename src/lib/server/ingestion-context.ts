@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { getDb } from "@/db/client";
 import type { IngestionContext } from "@/ingestion/context";
 import { createLogger } from "@/ingestion/logger";
-import { LogOpsNotifier } from "@/ingestion/notifier";
+import { createOpsNotifier } from "@/ingestion/notifier";
 import { getSharedStorageProvider } from "@/lib/storage/factory";
 
 /** Next 런타임(cron route, admin action)에서 쓰는 수집 context. 게시 즉시 revalidatePath 로 페이지 갱신 */
@@ -15,7 +15,7 @@ export function createAppIngestionContext(): IngestionContext | null {
   return {
     db,
     logger,
-    notifier: new LogOpsNotifier(logger),
+    notifier: createOpsNotifier(logger),
     storage: getSharedStorageProvider(),
     revalidator: {
       async revalidatePaths(paths) {

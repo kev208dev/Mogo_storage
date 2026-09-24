@@ -64,7 +64,18 @@ export const JOB_TYPES = [
 ] as const;
 export type JobType = (typeof JOB_TYPES)[number];
 
-export const JOB_STATUSES = ["pending", "processing", "completed", "failed", "retrying"] as const;
+/**
+ * job 상태. failed = maxAttempts 를 넘겨 영구 실패(dead). run_at 이 다음 재시도 시각(nextRetryAt)이다.
+ * dismissed = 관리자가 확인 후 무시 처리한 dead job (다시 실행하지 않음, 기록은 남김)
+ */
+export const JOB_STATUSES = [
+  "pending",
+  "processing",
+  "completed",
+  "failed",
+  "retrying",
+  "dismissed",
+] as const;
 export type JobStatus = (typeof JOB_STATUSES)[number];
 
 export const VOCABULARY_CANDIDATE_STATUSES = [

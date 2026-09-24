@@ -31,8 +31,9 @@ export interface StorageProvider {
 
 /** 스토리지 key 로 쓸 수 있는 안전한 문자만 허용 (path traversal 방지) */
 export function assertSafeStorageKey(key: string): void {
+  // "_internal/" 은 운영 점검(self-test) 전용 prefix
   if (
-    !/^[a-z0-9][a-z0-9/_.-]{0,300}$/i.test(key) ||
+    !/^(?:_internal\/)?[a-z0-9][a-z0-9/_.-]{0,300}$/i.test(key) ||
     key.includes("..") ||
     key.includes("//") ||
     key.endsWith("/")

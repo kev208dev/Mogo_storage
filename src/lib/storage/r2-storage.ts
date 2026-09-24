@@ -62,9 +62,31 @@ export class R2StorageProvider implements StorageProvider {
     if (!res.ok) throw new Error(`R2 putObject failed: HTTP ${res.status}`);
   }
 
-  /** 헤더 서명 방식(SigV4) 요청 생성 — putObject 용 */
+  /** 저장된 객체 읽기 (운영 점검/self-test 용) */
+  async getObject(key: string): Promise<Uint8Array> {
+    assertSafeStorageKey(key);
+    if (!this.canSign()) throw new Error("R2 getObject requires R2 credentials");
+    const empty = createHash("sha256").update("").digest("hex");
+    const req = this.signRequest("GET", key, {}, empty, { "x-amz-content-sha256": empty });
+    const res = await fetch(req.url, { headers: req.headers });
+    if (!res.ok) throw new Error(`R2 getObject failed: HTTP ${res.status}`);
+    return new Uint8Array(await res.arrayBuffer());
+  }
+
+  /** 객체 삭제. self-test 는 _internal/test/ 아래만 지운다 (운영 자료를 지우는 코드 경로 없음) */
+  async deleteObject(key: string): Promise<void> {
+    assertSafeStorageKey(key);
+    if (!this.canSign()) throw new Error("R2 deleteObject requires R2 credentials");
+    const empty = createHash("sha256").update("").digest("hex");
+    const req = this.signRequest("DELETE", key, {}, empty, { "x-amz-content-sha256": empty });
+    const res = await fetch(req.url, { method: "DELETE", headers: req.headers });
+    if (!res.ok && res.status !== 404)
+      throw new Error(`R2 deleteObject failed: HTTP ${res.status}`);
+  }
+
+  /** 헤더 서명 방식(SigV4) 요청 생성 */
   private signRequest(
-    method: "PUT",
+    method: "PUT" | "GET" | "DELETE",
     key: string,
     query: Record<string, string>,
     payloadHash: string,

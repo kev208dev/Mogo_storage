@@ -452,7 +452,7 @@ run("automatic ingestion pipeline (fake official source → DB → site)", () =>
     const [file] = await db.select().from(s.examFiles);
     expect(file).toMatchObject({ deliveryType: "storage", externalUrl: null });
     expect(file!.storageKey).toMatch(
-      /^official\/2025-high2-09\/korean\/question-[0-9a-f]{16}\.pdf$/,
+      /^exams\/2025\/high2\/09\/korean\/question-[0-9a-f]{16}\.pdf$/,
     );
     const { readFileSync } = await import("node:fs");
     expect(readFileSync(`${storageDir}/${file!.storageKey}`).subarray(0, 5).toString()).toBe(

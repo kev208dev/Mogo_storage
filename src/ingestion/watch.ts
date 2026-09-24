@@ -97,6 +97,18 @@ export async function runReleaseWatch(ctx: IngestionContext): Promise<ReleaseWat
         ? await refreshWatchStates(ctx.db, { examId: schedule.examId, now, windowEnd: window.end })
         : null;
       const complete = Boolean(refreshed && refreshed.missed === 0 && refreshed.found > 0);
+      // 이번 tick 에 새로 missed 가 된 슬롯만 알린다 (같은 알림 반복 방지)
+      if (refreshed && refreshed.newlyMissed.length > 0) {
+        const missed = refreshed.newlyMissed;
+        ctx.logger.warn("release_watch.missed", { scheduleId: schedule.id, missed: missed.length });
+        await ctx.notifier.notify({
+          kind: "release_missed",
+          examLabel: label,
+          items: missed
+            .slice(0, 12)
+            .map((m) => `${m.subject}${m.slotKey ? `/${m.slotKey}` : ""} ${m.type}`),
+        });
+      }
       await ctx.db
         .update(examSchedules)
         .set({

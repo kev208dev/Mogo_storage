@@ -54,8 +54,15 @@ export async function runJobs(
             message: e.message,
           },
         );
-        if (outcome === "failed") result.failed += 1;
-        else result.retrying += 1;
+        if (outcome === "failed") {
+          result.failed += 1;
+          await ctx.notifier.notify({
+            kind: "job_dead",
+            jobType: job.type,
+            jobId: job.id,
+            message: `${e.code}: ${e.message}`.slice(0, 300),
+          });
+        } else result.retrying += 1;
       }
     }
   }

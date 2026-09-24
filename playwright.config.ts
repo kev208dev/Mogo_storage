@@ -34,6 +34,8 @@ export default defineConfig({
       url: `http://localhost:${PORT}`,
       reuseExistingServer: !process.env.CI,
       timeout: 120_000,
+      // localhost 로 production 서버를 띄우므로 운영 env 검증(https 사이트 URL 등)만 건너뛴다
+      env: { SKIP_ENV_VALIDATION: "1" },
     },
     ...(E2E_DB
       ? [
@@ -44,6 +46,7 @@ export default defineConfig({
             reuseExistingServer: false,
             timeout: 120_000,
             env: {
+              SKIP_ENV_VALIDATION: "1",
               DATABASE_URL: E2E_DB,
               ADMIN_EMAIL_ALLOWLIST: "ops@example.com",
               ADMIN_ACCESS_TOKEN: "e2e-token-0123456789abcdefghij",

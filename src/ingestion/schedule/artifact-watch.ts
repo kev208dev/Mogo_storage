@@ -277,7 +277,7 @@ export async function markPolled(
 export async function refreshWatchStates(
   db: Pick<Database, "select" | "update">,
   input: { examId: string; now: Date; windowEnd?: Date | null },
-): Promise<{ found: number; missed: number; waiting: number }> {
+): Promise<{ found: number; missed: number; waiting: number; newlyMissed: WatchStateRow[] }> {
   const states = await loadWatchStates(db, input.examId);
   const files = await db
     .select({
@@ -293,6 +293,7 @@ export async function refreshWatchStates(
   let found = 0;
   let missed = 0;
   let waiting = 0;
+  const newlyMissed: WatchStateRow[] = [];
   for (const s of states) {
     if (s.status !== "waiting") {
       if (s.status === "found") found += 1;
@@ -322,11 +323,12 @@ export async function refreshWatchStates(
         .set({ status: "missed", updatedAt: input.now })
         .where(eq(artifactWatchStates.id, s.id));
       missed += 1;
+      newlyMissed.push(s);
     } else {
       waiting += 1;
     }
   }
-  return { found, missed, waiting };
+  return { found, missed, waiting, newlyMissed };
 }
 
 /** 공식 공개 시각을 하나라도 알고 있는지 */

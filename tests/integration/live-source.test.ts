@@ -4,6 +4,7 @@ import type { Database } from "@/db/client";
 import * as s from "@/db/schema";
 import { recordAudit, runAudit } from "@/ingestion/audit";
 import { runBackfill } from "@/ingestion/backfill";
+import { claimJobs, dismissFailedJob, enqueueJob } from "@/ingestion/jobs/queue";
 import { loadCourseAliases, saveCourseAlias } from "@/ingestion/pipeline/course-aliases";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
 import { upsertSchedule } from "@/ingestion/schedule/schedules";
@@ -362,6 +363,22 @@ run("live-source validation features (integration)", () => {
       expect(report.passed).toBe(false);
       expect(report.blocking.map((b) => b.code)).toContain("unexpected_domain");
       expect(await db.select().from(s.exams)).toHaveLength(1);
+    });
+  });
+
+  describe("dead job 관리", () => {
+    it("영구 실패 job 은 관리자가 무시(dismissed)할 수 있고, 다시 실행되지 않는다", async () => {
+      await enqueueJob(db, {
+        type: "verify_artifact",
+        payload: { artifactId: "x" },
+        dedupeKey: "dead-1",
+      });
+      const [job] = await db.select().from(s.jobs);
+      expect(await dismissFailedJob(db, job!.id)).toBe(false); // pending 은 무시 불가
+      await db.update(s.jobs).set({ status: "failed", attempts: 5 }).where(eq(s.jobs.id, job!.id));
+      expect(await dismissFailedJob(db, job!.id)).toBe(true);
+      expect((await db.select().from(s.jobs))[0]!.status).toBe("dismissed");
+      expect(await claimJobs(db, { limit: 10, workerId: "t" })).toEqual([]);
     });
   });
 

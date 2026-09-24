@@ -16,6 +16,7 @@ import {
   setReportStatus,
   toggleSource,
 } from "@/ingestion/admin-actions";
+import { dismissFailedJob } from "@/ingestion/jobs/queue";
 import { runJobs } from "@/ingestion/jobs/worker";
 import { runDiscovery } from "@/ingestion/pipeline/discovery";
 import {
@@ -218,6 +219,18 @@ export async function retryJobAction(form: FormData) {
   audit(admin, "job.retry", id(form));
   await runJobs(ctx, { timeBudgetMs: 30_000 });
   revalidatePath("/admin");
+}
+
+/** 영구 실패 job 무시 (재시도하지 않음) */
+export async function dismissJobAction(form: FormData) {
+  const { ctx, admin } = await context();
+  await withNotice("/admin", async () => {
+    const ok = await dismissFailedJob(ctx.db, id(form), ctx.now());
+    if (!ok)
+      throw new IngestionError("INVALID_STATE", "영구 실패 상태의 job 만 무시할 수 있습니다.");
+    audit(admin, "job.dismiss", id(form));
+    return "job 을 무시 처리했습니다.";
+  });
 }
 
 export async function retryAllFailedAction() {

@@ -207,6 +207,12 @@ export async function handleVerifyArtifact(ctx: IngestionContext, job: Job) {
       .update(sourceArtifacts)
       .set({ status: "changed", statusReason: "content changed at the same URL", updatedAt: now })
       .where(eq(sourceArtifacts.id, artifactId));
+    const [changedExam] = await db.select().from(exams).where(eq(exams.id, artifact.examId));
+    await ctx.notifier.notify({
+      kind: "artifact_changed",
+      examLabel: changedExam ? examLabel(changedExam) : artifact.examId,
+      item: `${artifact.subject}${artifact.slotKey ? `/${artifact.slotKey}` : ""} ${artifact.type} (${source.id})`,
+    });
   }
   if (comparable && !contentChanged && artifact.verifiedAt) {
     // 재검증: 내용이 같으면 이전 상태(ready / 검토 대기 / 관리자 승인)를 유지하고 확인 시각만 갱신
@@ -240,7 +246,8 @@ export async function handleVerifyArtifact(ctx: IngestionContext, job: Job) {
       artifact.slotKey && !artifact.slotKey.startsWith("unresolved:")
         ? `${artifact.subject}/${artifact.slotKey}`
         : artifact.subject;
-    storageKey = `official/${exam!.slug}/${area}/${artifact.type}-${content.sha256.slice(0, 16)}.${ext}`;
+    // 안정된 key: exams/{year}/high{grade}/{MM}/{subject}/{course?}/{type}-{sha}.{ext} (외부 파일명은 쓰지 않는다)
+    storageKey = `exams/${exam!.year}/high${exam!.grade}/${String(exam!.month).padStart(2, "0")}/${area}/${artifact.type}-${content.sha256.slice(0, 16)}.${ext}`;
     await ctx.storage.putObject({
       key: storageKey,
       body: content.bytes,

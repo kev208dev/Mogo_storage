@@ -9,6 +9,7 @@ import {
   retryJobAction,
   revokeVerificationAction,
   approveVerificationAction,
+  dismissJobAction,
   runHealthCheckAction,
   runSourceNowAction,
   toggleCapabilityAction,
@@ -256,10 +257,16 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
               <span className="text-muted-foreground text-xs">
                 시도 {job.attempts}/{job.maxAttempts} · {job.lastError}
               </span>
-              <form action={retryJobAction} className="ml-auto">
-                <input type="hidden" name="id" value={job.id} />
-                <SmallButton>다시 시도</SmallButton>
-              </form>
+              <span className="ml-auto flex gap-1">
+                <form action={retryJobAction}>
+                  <input type="hidden" name="id" value={job.id} />
+                  <SmallButton>다시 시도</SmallButton>
+                </form>
+                <form action={dismissJobAction}>
+                  <input type="hidden" name="id" value={job.id} />
+                  <SmallButton variant="danger">무시</SmallButton>
+                </form>
+              </span>
             </li>
           ))}
           {failures === 0 ? (

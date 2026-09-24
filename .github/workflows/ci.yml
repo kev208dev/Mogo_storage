@@ -21,6 +21,8 @@ jobs:
     env:
       # integration tests (fake official source → DB → site). 외부 실제 사이트에는 요청하지 않는다.
       DATABASE_URL_TEST: postgres://mogo:mogo@localhost:5432/mogo_test
+      # e2e Flow C (관리자 → 과목 지정 → 게시). global setup 이 스키마를 초기화한다
+      E2E_DATABASE_URL: postgres://mogo:mogo@localhost:5432/mogo_test
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

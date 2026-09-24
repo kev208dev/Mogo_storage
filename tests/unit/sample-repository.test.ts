@@ -13,7 +13,9 @@ describe("sample dataset", () => {
     const keys = sampleDataset.exams.map((e) => `${e.year}-${e.grade}-${e.month}`);
     expect(new Set(keys).size).toBe(keys.length);
     // 슬롯 = 시험 + 영역 + 세부과목(없으면 null) + 종류
-    const slots = sampleDataset.files.map((f) => `${f.examId}-${f.subject}-${f.courseId}-${f.type}`);
+    const slots = sampleDataset.files.map(
+      (f) => `${f.examId}-${f.subject}-${f.courseId}-${f.type}`,
+    );
     expect(new Set(slots).size).toBe(slots.length);
   });
 
@@ -30,7 +32,9 @@ describe("sample dataset", () => {
     for (const subject of sampleDataset.examSubjects.filter((s) => s.examId === featured.id)) {
       // 영역 공통(세부과목 없음) 문항의 배점 합
       const total = sampleDataset.questions
-        .filter((q) => q.examId === featured.id && q.subject === subject.subject && q.courseId === null)
+        .filter(
+          (q) => q.examId === featured.id && q.subject === subject.subject && q.courseId === null,
+        )
         .reduce((sum, q) => sum + q.score, 0);
       expect(total).toBe(subject.totalScore);
     }

@@ -35,7 +35,11 @@ class TempDirStorage extends MockStorageProvider {
 export const TEST_DB_URL = process.env.DATABASE_URL_TEST;
 
 export async function setupDb(): Promise<Database> {
-  const db = createDb(TEST_DB_URL!, 8);
+  return setupDbAt(TEST_DB_URL!);
+}
+
+export async function setupDbAt(url: string): Promise<Database> {
+  const db = createDb(url, 8);
   await migrate(db, { migrationsFolder: path.resolve("drizzle") });
   return db;
 }

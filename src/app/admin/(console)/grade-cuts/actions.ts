@@ -16,10 +16,12 @@ import {
   GradeCutInputError,
   parseGradeCutEntries,
   parseGradeCutSourceUrl,
+  parseGradeCutCsv,
 } from "@/ingestion/grade-cuts/input";
 import { requireAdmin } from "@/lib/server/admin-session";
 
 const PAGE = "/admin/grade-cuts";
+const MAX_CSV_BYTES = 2 * 1024 * 1024;
 
 function formId(form: FormData, key: string): string {
   const value = String(form.get(key) ?? "").trim();
@@ -199,5 +201,154 @@ export async function deleteGradeCutAction(form: FormData) {
       courseCode: row.course?.code ?? null,
     });
     return "등급컷을 삭제했습니다.";
+  });
+}
+
+
+/**
+ * 여러 시험/과목/출처의 등급컷을 한 번에 입력한다.
+ * 서버는 source_url을 fetch하지 않고 HTTPS 형식만 검증한다.
+ */
+export async function bulkImportGradeCutsAction(form: FormData) {
+  const admin = await requireAdmin();
+  const db = getDb();
+  if (!db) throw new Error("DATABASE_URL 이 설정되지 않았습니다.");
+
+  await withNotice(async () => {
+    const file = form.get("file");
+    let csv = String(form.get("csv") ?? "");
+    if (file instanceof File && file.size > 0) {
+      if (file.size > MAX_CSV_BYTES) throw new GradeCutInputError("CSV는 2MB까지입니다.");
+      csv = await file.text();
+    }
+    if (!csv.trim()) throw new GradeCutInputError("CSV를 붙여넣거나 파일을 선택하세요.");
+    if (csv.length > MAX_CSV_BYTES) throw new GradeCutInputError("CSV는 2MB까지입니다.");
+
+    const dryRun = form.get("dryRun") === "1";
+    const parsed = parseGradeCutCsv(csv);
+    let created = 0;
+    let updated = 0;
+    let valid = 0;
+    const errors = [...parsed.invalid];
+
+    for (const row of parsed.rows) {
+      try {
+        const [exam] = await db
+          .select()
+          .from(exams)
+          .where(
+            and(
+              eq(exams.year, row.year),
+              eq(exams.grade, row.grade),
+              eq(exams.month, row.month),
+            ),
+          )
+          .limit(1);
+        if (!exam) throw new GradeCutInputError("해당 시험이 DB에 없습니다.");
+
+        const [examSubject] = await db
+          .select({ examId: examSubjects.examId })
+          .from(examSubjects)
+          .where(and(eq(examSubjects.examId, exam.id), eq(examSubjects.subject, row.subject)))
+          .limit(1);
+        if (!examSubject) throw new GradeCutInputError("해당 시험에 이 영역이 없습니다.");
+
+        let course: { id: string; code: string } | null = null;
+        if (row.courseCode) {
+          const [courseRow] = await db
+            .select({ id: courses.id, code: courses.code, subject: courses.subject })
+            .from(courses)
+            .where(
+              and(
+                eq(courses.code, row.courseCode),
+                eq(courses.subject, row.subject),
+                eq(courses.active, true),
+              ),
+            )
+            .limit(1);
+          if (!courseRow) throw new GradeCutInputError("세부과목 코드를 찾을 수 없습니다.");
+
+          const [declared, published] = await Promise.all([
+            db
+              .select({ courseId: examCourses.courseId })
+              .from(examCourses)
+              .where(and(eq(examCourses.examId, exam.id), eq(examCourses.courseId, courseRow.id)))
+              .limit(1),
+            db
+              .select({ courseId: examFiles.courseId })
+              .from(examFiles)
+              .where(
+                and(
+                  eq(examFiles.examId, exam.id),
+                  eq(examFiles.subject, row.subject),
+                  eq(examFiles.courseId, courseRow.id),
+                ),
+              )
+              .limit(1),
+          ]);
+          if (!declared[0] && !published[0])
+            throw new GradeCutInputError("이 시험에 등록되지 않은 세부과목입니다.");
+          course = { id: courseRow.id, code: courseRow.code };
+        }
+
+        const slot = and(
+          eq(gradeCuts.examId, exam.id),
+          eq(gradeCuts.subject, row.subject),
+          course ? eq(gradeCuts.courseId, course.id) : isNull(gradeCuts.courseId),
+          eq(gradeCuts.source, row.source),
+        );
+        const [existing] = await db.select({ id: gradeCuts.id }).from(gradeCuts).where(slot).limit(1);
+        valid += 1;
+
+        if (!dryRun) {
+          const values = {
+            examId: exam.id,
+            subject: row.subject,
+            courseId: course?.id ?? null,
+            source: row.source,
+            sourceUrl: row.sourceUrl,
+            isOfficial: row.source === "official",
+            isSample: false,
+            cuts: row.cuts,
+            updatedAt: new Date(),
+          };
+          if (existing) {
+            await db.update(gradeCuts).set(values).where(eq(gradeCuts.id, existing.id));
+            updated += 1;
+          } else {
+            await db.insert(gradeCuts).values(values);
+            created += 1;
+          }
+          await revalidateExamSlot({
+            year: exam.year,
+            grade: exam.grade,
+            month: exam.month,
+            subject: row.subject,
+            courseCode: course?.code ?? null,
+          });
+        } else if (existing) updated += 1;
+        else created += 1;
+      } catch (error) {
+        errors.push({
+          line: row.line,
+          error: error instanceof Error ? error.message : "검증에 실패했습니다.",
+        });
+      }
+    }
+
+    console.info(
+      JSON.stringify({
+        event: "admin.action",
+        admin,
+        action: dryRun ? "grade_cut.bulk_dry_run" : "grade_cut.bulk_import",
+        target: { valid, created, updated, invalid: errors.length },
+      }),
+    );
+
+    const examples = errors
+      .slice(0, 3)
+      .map((error) => `${error.line}행: ${error.error}`)
+      .join(" / ");
+    return `${dryRun ? "[검사만] " : ""}유효 ${valid} · 신규 ${created} · 수정 ${updated} · 오류 ${errors.length}${examples ? ` — ${examples}` : ""}`;
   });
 }

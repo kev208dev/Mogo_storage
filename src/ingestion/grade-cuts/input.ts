@@ -1,4 +1,6 @@
 import type { GradeCutEntry } from "../../lib/data/types";
+import { GRADE_CUT_SOURCES, SUBJECTS, type GradeCutSource, type Subject } from "../../lib/constants";
+import { parseCsv } from "../manual-import/csv";
 
 export class GradeCutInputError extends Error {
   constructor(message: string) {
@@ -68,4 +70,95 @@ export function parseGradeCutSourceUrl(input: string): string {
   if (url.username || url.password)
     throw new GradeCutInputError("인증정보가 포함된 출처 URL은 사용할 수 없습니다.");
   return url.toString();
+}
+
+
+export const GRADE_CUT_CSV_HEADER =
+  "year,grade,month,subject,course_code,source,source_url,cuts";
+
+export interface ParsedGradeCutCsvRow {
+  line: number;
+  year: number;
+  grade: 1 | 2 | 3;
+  month: number;
+  subject: Subject;
+  courseCode: string | null;
+  source: GradeCutSource;
+  sourceUrl: string;
+  cuts: GradeCutEntry[];
+}
+
+export interface InvalidGradeCutCsvRow {
+  line: number;
+  error: string;
+}
+
+/**
+ * 대량 등급컷 CSV parser.
+ * cuts 필드는 RFC 4180 따옴표로 감싸 "1:88;2:80;3:72"처럼 넣는다.
+ * DB 조회가 필요한 시험/세부과목 존재 여부는 server action에서 검증한다.
+ */
+export function parseGradeCutCsv(text: string): {
+  rows: ParsedGradeCutCsvRow[];
+  invalid: InvalidGradeCutCsvRow[];
+} {
+  let parsed;
+  try {
+    parsed = parseCsv(text);
+  } catch (error) {
+    throw new GradeCutInputError(error instanceof Error ? error.message : "CSV를 읽을 수 없습니다.");
+  }
+  if (parsed.length === 0) throw new GradeCutInputError("CSV가 비어 있습니다.");
+
+  const expected = GRADE_CUT_CSV_HEADER.split(",");
+  const actual = parsed[0]!.cells.map((cell) => cell.trim());
+  if (actual.length !== expected.length || actual.some((cell, index) => cell !== expected[index])) {
+    throw new GradeCutInputError(`CSV 헤더가 올바르지 않습니다. 필요한 헤더: ${GRADE_CUT_CSV_HEADER}`);
+  }
+
+  const rows: ParsedGradeCutCsvRow[] = [];
+  const invalid: InvalidGradeCutCsvRow[] = [];
+  for (const row of parsed.slice(1)) {
+    try {
+      if (row.cells.length !== expected.length) {
+        throw new GradeCutInputError(`열 개수가 ${expected.length}개여야 합니다.`);
+      }
+      const [yearRaw, gradeRaw, monthRaw, subjectRaw, courseRaw, sourceRaw, urlRaw, cutsRaw] =
+        row.cells.map((cell) => cell.trim());
+
+      const year = Number(yearRaw);
+      const grade = Number(gradeRaw);
+      const month = Number(monthRaw);
+      if (!Number.isInteger(year) || year < 2006 || year > 2099)
+        throw new GradeCutInputError("year가 올바르지 않습니다.");
+      if (![1, 2, 3].includes(grade))
+        throw new GradeCutInputError("grade는 1, 2, 3 중 하나여야 합니다.");
+      if (!Number.isInteger(month) || month < 1 || month > 12)
+        throw new GradeCutInputError("month가 올바르지 않습니다.");
+      if (!(SUBJECTS as readonly string[]).includes(subjectRaw))
+        throw new GradeCutInputError("subject가 올바르지 않습니다.");
+      if (!(GRADE_CUT_SOURCES as readonly string[]).includes(sourceRaw))
+        throw new GradeCutInputError("source가 올바르지 않습니다.");
+      if (courseRaw && !/^[a-z0-9-]{1,60}$/.test(courseRaw))
+        throw new GradeCutInputError("course_code가 올바르지 않습니다.");
+
+      rows.push({
+        line: row.line,
+        year,
+        grade: grade as 1 | 2 | 3,
+        month,
+        subject: subjectRaw as Subject,
+        courseCode: courseRaw || null,
+        source: sourceRaw as GradeCutSource,
+        sourceUrl: parseGradeCutSourceUrl(urlRaw ?? ""),
+        cuts: parseGradeCutEntries(cutsRaw ?? ""),
+      });
+    } catch (error) {
+      invalid.push({
+        line: row.line,
+        error: error instanceof Error ? error.message : "잘못된 행입니다.",
+      });
+    }
+  }
+  return { rows, invalid };
 }

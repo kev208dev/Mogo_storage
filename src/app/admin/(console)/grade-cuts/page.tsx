@@ -13,7 +13,7 @@ import {
 import { GRADE_CUT_SOURCE_POLICIES } from "@/ingestion/grade-cuts/sources";
 import { AdminNotice } from "../notice";
 import { NoDatabase } from "../no-db";
-import { deleteGradeCutAction, upsertGradeCutAction } from "./actions";
+import { bulkImportGradeCutsAction, deleteGradeCutAction, upsertGradeCutAction } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -50,6 +50,39 @@ export default async function GradeCutsPage({ searchParams }: PageProps<"/admin/
         공개 자료를 사람이 확인한 뒤 입력합니다. 서버는 출처 URL을 자동 수집하지 않습니다. 같은
         시험·과목·세부과목·출처를 다시 저장하면 기존 값을 수정합니다.
       </p>
+
+      <Panel title="CSV 대량 입력">
+        <form action={bulkImportGradeCutsAction} className="space-y-2 text-sm">
+          <p className="text-muted-foreground text-xs">
+            한 번에 여러 시험·과목·출처를 처리합니다. 헤더:{" "}
+            <code className="break-all">
+              year,grade,month,subject,course_code,source,source_url,cuts
+            </code>
+          </p>
+          <p className="text-muted-foreground text-xs">
+            cuts 예시: <code>&quot;1:88;2:80;3:72&quot;</code> · source:{" "}
+            <code>official</code>, <code>ebs</code>, <code>megastudy</code>,{" "}
+            <code>daesung</code>
+          </p>
+          <label className="block">
+            <span className="font-semibold">CSV 파일</span>
+            <input type="file" name="file" accept=".csv,text/csv" className="mt-1 block" />
+          </label>
+          <label className="block">
+            <span className="font-semibold">또는 붙여넣기</span>
+            <textarea
+              name="csv"
+              rows={7}
+              className="border-border mt-1 block w-full rounded border p-2 font-mono text-xs"
+              placeholder={'year,grade,month,subject,course_code,source,source_url,cuts\n2025,3,9,korean,,official,https://example.com,"1:88;2:80;3:72"'}
+            />
+          </label>
+          <label className="flex items-center gap-1.5">
+            <input type="checkbox" name="dryRun" value="1" /> 검사만 (DB에 저장하지 않음)
+          </label>
+          <SmallButton variant="primary">CSV 일괄 처리</SmallButton>
+        </form>
+      </Panel>
 
       <Panel title="등급컷 입력 · 수정">
         <form action={upsertGradeCutAction} className="grid gap-3 text-sm md:grid-cols-2">

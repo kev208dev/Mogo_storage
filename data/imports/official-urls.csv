@@ -438,3 +438,82 @@ year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,off
 2025,1,3,school_mock,2025-03-26,,social,integrated-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/s_soc_hsj_F8FAU198.pdf,s_soc_hsj_F8FAU198.pdf,EBSi 2025학년도 3월 고1 통합사회 정답 및 해설
 2025,1,3,school_mock,2025-03-26,,science,integrated-science,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/g_sci_mun_NA5L3D8R.pdf,g_sci_mun_NA5L3D8R.pdf,EBSi 2025학년도 3월 고1 통합과학 문제
 2025,1,3,school_mock,2025-03-26,,science,integrated-science,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/g_sci_hsj_M8L14DEN.pdf,g_sci_hsj_M8L14DEN.pdf,EBSi 2025학년도 3월 고1 통합과학 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/eng_1_mun_9W5644SI_1.pdf,eng_1_mun_9W5644SI_1.pdf,EBSi 2025학년도 10월 고2 영어 문제
+2025,2,10,school_mock,2025-10-14,,social,life-and-ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_ssnyr_mun_T5493DR5.pdf,s_ssnyr_mun_T5493DR5.pdf,EBSi 2025학년도 10월 고2 생활과윤리 문제
+2025,2,10,school_mock,2025-10-14,,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_ssnyr_hsj_3556YM2G.pdf,s_ssnyr_hsj_3556YM2G.pdf,EBSi 2025학년도 10월 고2 생활과윤리 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_yrnss_mun_EB744165.pdf,s_yrnss_mun_EB744165.pdf,EBSi 2025학년도 10월 고2 윤리와사상 문제
+2025,2,10,school_mock,2025-10-14,,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_yrnss_hsj_LO3JN399.pdf,s_yrnss_hsj_LO3JN399.pdf,EBSi 2025학년도 10월 고2 윤리와사상 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_hanji_mun_I1NAIDMK.pdf,s_hanji_mun_I1NAIDMK.pdf,EBSi 2025학년도 10월 고2 한국지리 문제
+2025,2,10,school_mock,2025-10-14,,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_hanji_hsj_32B73PYP.pdf,s_hanji_hsj_32B73PYP.pdf,EBSi 2025학년도 10월 고2 한국지리 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_saeji_mun_AM23HZKF.pdf,s_saeji_mun_AM23HZKF.pdf,EBSi 2025학년도 10월 고2 세계지리 문제
+2025,2,10,school_mock,2025-10-14,,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_saeji_hsj_3179415P.pdf,s_saeji_hsj_3179415P.pdf,EBSi 2025학년도 10월 고2 세계지리 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_easta_mun_26XF9K5X.pdf,s_easta_mun_26XF9K5X.pdf,EBSi 2025학년도 10월 고2 동아시아사 문제
+2025,2,10,school_mock,2025-10-14,,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_easta_hsj_2Y41165L.pdf,s_easta_hsj_2Y41165L.pdf,EBSi 2025학년도 10월 고2 동아시아사 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_sks_mun_29DLES36.pdf,s_sks_mun_29DLES36.pdf,EBSi 2025학년도 10월 고2 세계사 문제
+2025,2,10,school_mock,2025-10-14,,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_sks_hsj_9WFJ8P16.pdf,s_sks_hsj_9WFJ8P16.pdf,EBSi 2025학년도 10월 고2 세계사 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_bnj_mun_A19S47JR.pdf,s_bnj_mun_A19S47JR.pdf,EBSi 2025학년도 10월 고2 정치와 법 문제
+2025,2,10,school_mock,2025-10-14,,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_bnj_hsj_J1F8461U.pdf,s_bnj_hsj_J1F8461U.pdf,EBSi 2025학년도 10월 고2 정치와 법 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_eco_mun_US253E2S.pdf,s_eco_mun_US253E2S.pdf,EBSi 2025학년도 10월 고2 경제 문제
+2025,2,10,school_mock,2025-10-14,,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_eco_hsj_3941P5W1.pdf,s_eco_hsj_3941P5W1.pdf,EBSi 2025학년도 10월 고2 경제 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_samun_mun_6V17KAS8.pdf,s_samun_mun_6V17KAS8.pdf,EBSi 2025학년도 10월 고2 사회·문화 문제
+2025,2,10,school_mock,2025-10-14,,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/s_samun_hsj_8UF99QG1.pdf,s_samun_hsj_8UF99QG1.pdf,EBSi 2025학년도 10월 고2 사회·문화 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/g_phy1_mun_AIU65286.pdf,g_phy1_mun_AIU65286.pdf,EBSi 2025학년도 10월 고2 물리학Ⅰ 문제
+2025,2,10,school_mock,2025-10-14,,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/g_phy1_hsj_21D8B26I.pdf,g_phy1_hsj_21D8B26I.pdf,EBSi 2025학년도 10월 고2 물리학Ⅰ 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/g_che1_mun_9W9G22S9.pdf,g_che1_mun_9W9G22S9.pdf,EBSi 2025학년도 10월 고2 화학Ⅰ 문제
+2025,2,10,school_mock,2025-10-14,,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/g_che1_hsj_VUN2T4GH.pdf,g_che1_hsj_VUN2T4GH.pdf,EBSi 2025학년도 10월 고2 화학Ⅰ 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/g_bio1_mun_R8822Z79.pdf,g_bio1_mun_R8822Z79.pdf,EBSi 2025학년도 10월 고2 생명과학Ⅰ 문제
+2025,2,10,school_mock,2025-10-14,,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/g_bio1_hsj_7LHK17PW.pdf,g_bio1_hsj_7LHK17PW.pdf,EBSi 2025학년도 10월 고2 생명과학Ⅰ 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/g_ear1_mun_WGB1M74A.pdf,g_ear1_mun_WGB1M74A.pdf,EBSi 2025학년도 10월 고2 지구과학Ⅰ 문제
+2025,2,10,school_mock,2025-10-14,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/g_ear1_hsj_3ZV36PTX.pdf,g_ear1_hsj_3ZV36PTX.pdf,EBSi 2025학년도 10월 고2 지구과학Ⅰ 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/math_mun_ZGRLPIL7_1.pdf,math_mun_ZGRLPIL7_1.pdf,EBSi 2025학년도 9월 고2 수학 문제
+2025,2,9,school_mock,2025-09-03,,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/eng_1_mun_97CFC6XF_1.pdf,eng_1_mun_97CFC6XF_1.pdf,EBSi 2025학년도 9월 고2 영어 문제
+2025,2,9,school_mock,2025-09-03,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_his_1_hsj_454R3914_1.pdf,s_his_1_hsj_454R3914_1.pdf,EBSi 2025학년도 9월 고2 한국사 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,social,life-and-ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_ssnyr_mun_6E31K54M.pdf,s_ssnyr_mun_6E31K54M.pdf,EBSi 2025학년도 9월 고2 생활과윤리 문제
+2025,2,9,school_mock,2025-09-03,,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_ssnyr_hsj_JUY74MZ2.pdf,s_ssnyr_hsj_JUY74MZ2.pdf,EBSi 2025학년도 9월 고2 생활과윤리 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_yrnss_mun_9MV2KCXP.pdf,s_yrnss_mun_9MV2KCXP.pdf,EBSi 2025학년도 9월 고2 윤리와사상 문제
+2025,2,9,school_mock,2025-09-03,,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_yrnss_hsj_M512TU7G.pdf,s_yrnss_hsj_M512TU7G.pdf,EBSi 2025학년도 9월 고2 윤리와사상 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_hanji_mun_JOBKLX5M.pdf,s_hanji_mun_JOBKLX5M.pdf,EBSi 2025학년도 9월 고2 한국지리 문제
+2025,2,9,school_mock,2025-09-03,,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_saeji_mun_4FGE987T.pdf,s_saeji_mun_4FGE987T.pdf,EBSi 2025학년도 9월 고2 세계지리 문제
+2025,2,9,school_mock,2025-09-03,,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_easta_mun_3474PVA2.pdf,s_easta_mun_3474PVA2.pdf,EBSi 2025학년도 9월 고2 동아시아사 문제
+2025,2,9,school_mock,2025-09-03,,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_easta_hsj_R5K3BY7W.pdf,s_easta_hsj_R5K3BY7W.pdf,EBSi 2025학년도 9월 고2 동아시아사 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_sks_mun_3438ATY4.pdf,s_sks_mun_3438ATY4.pdf,EBSi 2025학년도 9월 고2 세계사 문제
+2025,2,9,school_mock,2025-09-03,,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_sks_hsj_KES8W694.pdf,s_sks_hsj_KES8W694.pdf,EBSi 2025학년도 9월 고2 세계사 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_bnj_mun_6DO437Y9.pdf,s_bnj_mun_6DO437Y9.pdf,EBSi 2025학년도 9월 고2 정치와 법 문제
+2025,2,9,school_mock,2025-09-03,,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_bnj_hsj_NBRQ668V.pdf,s_bnj_hsj_NBRQ668V.pdf,EBSi 2025학년도 9월 고2 정치와 법 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_eco_mun_JZV7GKR5.pdf,s_eco_mun_JZV7GKR5.pdf,EBSi 2025학년도 9월 고2 경제 문제
+2025,2,9,school_mock,2025-09-03,,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_eco_hsj_YULQ42X4.pdf,s_eco_hsj_YULQ42X4.pdf,EBSi 2025학년도 9월 고2 경제 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_samun_mun_ECBD66W7.pdf,s_samun_mun_ECBD66W7.pdf,EBSi 2025학년도 9월 고2 사회·문화 문제
+2025,2,9,school_mock,2025-09-03,,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_samun_hsj_83677AU2.pdf,s_samun_hsj_83677AU2.pdf,EBSi 2025학년도 9월 고2 사회·문화 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/g_phy1_mun_4AMJQG2L_1.pdf,g_phy1_mun_4AMJQG2L_1.pdf,EBSi 2025학년도 9월 고2 물리학Ⅰ 문제
+2025,2,9,school_mock,2025-09-03,,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/g_phy1_hsj_U86J3E6S_1.pdf,g_phy1_hsj_U86J3E6S_1.pdf,EBSi 2025학년도 9월 고2 물리학Ⅰ 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/g_che1_mun_Y9S52O7E_1.pdf,g_che1_mun_Y9S52O7E_1.pdf,EBSi 2025학년도 9월 고2 화학Ⅰ 문제
+2025,2,9,school_mock,2025-09-03,,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/g_che1_hsj_2AT28QTK_1.pdf,g_che1_hsj_2AT28QTK_1.pdf,EBSi 2025학년도 9월 고2 화학Ⅰ 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/g_bio1_mun_WU8WVW81_1.pdf,g_bio1_mun_WU8WVW81_1.pdf,EBSi 2025학년도 9월 고2 생명과학Ⅰ 문제
+2025,2,9,school_mock,2025-09-03,,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/g_bio1_hsj_U5IQ3YCS_1.pdf,g_bio1_hsj_U5IQ3YCS_1.pdf,EBSi 2025학년도 9월 고2 생명과학Ⅰ 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/g_ear1_mun_4357846H_1.pdf,g_ear1_mun_4357846H_1.pdf,EBSi 2025학년도 9월 고2 지구과학Ⅰ 문제
+2025,2,9,school_mock,2025-09-03,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/g_ear1_hsj_1W62V97B_1.pdf,g_ear1_hsj_1W62V97B_1.pdf,EBSi 2025학년도 9월 고2 지구과학Ⅰ 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/math_hsj_JAO8KFRU.pdf,math_hsj_JAO8KFRU.pdf,EBSi 2025학년도 3월 고2 수학 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_mun_7OKM3R1J.pdf,eng_mun_7OKM3R1J.pdf,EBSi 2025학년도 3월 고2 영어 문제
+2025,2,3,school_mock,2025-03-26,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_his_hsj_A7425461.pdf,s_his_hsj_A7425461.pdf,EBSi 2025학년도 3월 고2 한국사 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,life-and-ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_ssnyr_mun_37WN3162.pdf,s_ssnyr_mun_37WN3162.pdf,EBSi 2025학년도 3월 고2 생활과윤리 문제
+2025,2,3,school_mock,2025-03-26,,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_ssnyr_hsj_1M594A5J.pdf,s_ssnyr_hsj_1M594A5J.pdf,EBSi 2025학년도 3월 고2 생활과윤리 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_yrnss_mun_2216RA6V.pdf,s_yrnss_mun_2216RA6V.pdf,EBSi 2025학년도 3월 고2 윤리와사상 문제
+2025,2,3,school_mock,2025-03-26,,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_hanji_mun_4V75L2G9.pdf,s_hanji_mun_4V75L2G9.pdf,EBSi 2025학년도 3월 고2 한국지리 문제
+2025,2,3,school_mock,2025-03-26,,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_hanji_hsj_48S4N866.pdf,s_hanji_hsj_48S4N866.pdf,EBSi 2025학년도 3월 고2 한국지리 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_saeji_mun_9B141AXK.pdf,s_saeji_mun_9B141AXK.pdf,EBSi 2025학년도 3월 고2 세계지리 문제
+2025,2,3,school_mock,2025-03-26,,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_saeji_hsj_2F2Y63T8.pdf,s_saeji_hsj_2F2Y63T8.pdf,EBSi 2025학년도 3월 고2 세계지리 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_easta_mun_QW8683GU.pdf,s_easta_mun_QW8683GU.pdf,EBSi 2025학년도 3월 고2 동아시아사 문제
+2025,2,3,school_mock,2025-03-26,,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_easta_hsj_214S1O66.pdf,s_easta_hsj_214S1O66.pdf,EBSi 2025학년도 3월 고2 동아시아사 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_sks_mun_4MJRX476.pdf,s_sks_mun_4MJRX476.pdf,EBSi 2025학년도 3월 고2 세계사 문제
+2025,2,3,school_mock,2025-03-26,,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_sks_hsj_JNCUO8YV.pdf,s_sks_hsj_JNCUO8YV.pdf,EBSi 2025학년도 3월 고2 세계사 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_bnj_mun_46999765.pdf,s_bnj_mun_46999765.pdf,EBSi 2025학년도 3월 고2 정치와 법 문제
+2025,2,3,school_mock,2025-03-26,,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_bnj_hsj_58138M6P.pdf,s_bnj_hsj_58138M6P.pdf,EBSi 2025학년도 3월 고2 정치와 법 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_eco_mun_EI9U122B.pdf,s_eco_mun_EI9U122B.pdf,EBSi 2025학년도 3월 고2 경제 문제
+2025,2,3,school_mock,2025-03-26,,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_eco_hsj_8BU3R4KK.pdf,s_eco_hsj_8BU3R4KK.pdf,EBSi 2025학년도 3월 고2 경제 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_samun_mun_ZMR81WQ2.pdf,s_samun_mun_ZMR81WQ2.pdf,EBSi 2025학년도 3월 고2 사회·문화 문제
+2025,2,3,school_mock,2025-03-26,,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_samun_hsj_YA66Q5F5.pdf,s_samun_hsj_YA66Q5F5.pdf,EBSi 2025학년도 3월 고2 사회·문화 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_phy1_mun_N3TUF4KD.pdf,g_phy1_mun_N3TUF4KD.pdf,EBSi 2025학년도 3월 고2 물리학Ⅰ 문제
+2025,2,3,school_mock,2025-03-26,,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_phy1_hsj_356273E9.pdf,g_phy1_hsj_356273E9.pdf,EBSi 2025학년도 3월 고2 물리학Ⅰ 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_che1_mun_E7XACJL2.pdf,g_che1_mun_E7XACJL2.pdf,EBSi 2025학년도 3월 고2 화학Ⅰ 문제
+2025,2,3,school_mock,2025-03-26,,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_bio1_mun_EXO81C92.pdf,g_bio1_mun_EXO81C92.pdf,EBSi 2025학년도 3월 고2 생명과학Ⅰ 문제
+2025,2,3,school_mock,2025-03-26,,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_ear1_mun_AMO7ZJSH.pdf,g_ear1_mun_AMO7ZJSH.pdf,EBSi 2025학년도 3월 고2 지구과학Ⅰ 문제

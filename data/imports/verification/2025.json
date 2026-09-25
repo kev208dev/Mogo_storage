@@ -9031,6 +9031,3464 @@
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/korB_1_hsj_7V175B8B_1.pdf",
+      "slot": "2025 고3 11월 csat korean/language-and-media solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 319344,
+        "pdfPages": 30,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 언어와 매체, 정답 및 해설이 명시됨",
+        "sha256": "6847ad73c2919053f544597680d2ca26ef9fef3288da85466ae8e290008ad690"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/korA_1_hsj_46NL9282_1.pdf",
+      "slot": "2025 고3 11월 csat korean/speech-and-writing solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 300587,
+        "pdfPages": 29,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 화법과 작문, 정답 및 해설이 명시됨",
+        "sha256": "13131a0f3798b0e8bb3765e5d5e1673339309c9067b54f39511fa767882f57c3"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/mathC_1_hsj_3Y992VNM_1.pdf",
+      "slot": "2025 고3 11월 csat math/geometry solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 424344,
+        "pdfPages": 18,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 기하, 정답 및 해설이 명시됨",
+        "sha256": "a4cfb0774c8eeb2de972b146182df969f47b2fe238dc37df4d3c0b22896b26a6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/mathA_1_hsj_OIRNQCO2_1.pdf",
+      "slot": "2025 고3 11월 csat math/probability-and-statistics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 247663,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 확률과 통계, 정답 및 해설이 명시됨",
+        "sha256": "41d985b0135369dc39a6c175d293a2191aeef12634b1aecfd1a0f257622c7c31"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/mathB_1_hsj_1S5W7SZX_2.pdf",
+      "slot": "2025 고3 11월 csat math/calculus solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 310798,
+        "pdfPages": 17,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 미적분, 정답 및 해설이 명시됨",
+        "sha256": "547bd4d29dff3fa380fb10dd4be1603d91ca6a014c16cc075c99e901c1fb912a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/eng_1_mun_9VSFX7CB.pdf",
+      "slot": "2025 고3 11월 csat english/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1858707,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 영어, 문제지이 명시됨",
+        "sha256": "da5013456f405c94ba8d82263667b2a3fee8d0093a665e54ba1e97cf9d3f5f41"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_his_1_mun_A3F3636G.pdf",
+      "slot": "2025 고3 11월 csat history/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3593396,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 한국사, 문제지이 명시됨",
+        "sha256": "4c5f53347113d53c025b2714e7e1ed1069be7fe96df673070cd1fe3e7cb3d80e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_ssnyr_mun_EY7A6BTC.pdf",
+      "slot": "2025 고3 11월 csat social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 904014,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 생활과윤리, 문제지이 명시됨",
+        "sha256": "952bf5db3e39b2b28ce4a3c0c8ec3a5d24a3c52bba9775e7d8ecef19ffcfe92c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_ssnyr_hsj_LIJD8115.pdf",
+      "slot": "2025 고3 11월 csat social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 139991,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 생활과윤리, 정답 및 해설이 명시됨",
+        "sha256": "9501d63619722346828fa8504cfffb7bb1c35431d3790605d46d3554466ed637"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_yrnss_mun_Z54M173T.pdf",
+      "slot": "2025 고3 11월 csat social/ethics-and-thought question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1639309,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 윤리와사상, 문제지이 명시됨",
+        "sha256": "b8b22fb099dc7952929cb5be81def9b886ce868fa6f3b612da3c61a2432df6bc"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_yrnss_hsj_OZBL13M8_1.pdf",
+      "slot": "2025 고3 11월 csat social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 133697,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 윤리와사상, 정답 및 해설이 명시됨",
+        "sha256": "92a8fc5cd374be19494eab7c879ad5a3e788e0e765ab1966ab3ece5ab79f2ff6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_hanji_mun_68848VRG.pdf",
+      "slot": "2025 고3 11월 csat social/korean-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3682417,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 한국지리, 문제지이 명시됨",
+        "sha256": "cd4c25bb6100aedf26b71b19c849f85fe71af0f9b658abaa3557c59b2f6db0a0"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_hanji_hsj_23NV3CZ5_1.pdf",
+      "slot": "2025 고3 11월 csat social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 145553,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 한국지리, 정답 및 해설이 명시됨",
+        "sha256": "68cc7f7dfdeba4db1d344d397ede54a22b064ad0a58a3e2fdb0d480fdbcdee05"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_saeji_mun_EER1734T.pdf",
+      "slot": "2025 고3 11월 csat social/world-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3298259,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 세계지리, 문제지이 명시됨",
+        "sha256": "55317b063e4fb62ff1c769f8f9f6a9396c4abc898d771b66b1d443518498680b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_saeji_hsj_RV8Y438N.pdf",
+      "slot": "2025 고3 11월 csat social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 145756,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 세계지리, 정답 및 해설이 명시됨",
+        "sha256": "d2754e24c3baae75570c6e0ce9803422af1b29b30e44d6a2891d29de74d8243f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_easta_mun_8P79E26Y.pdf",
+      "slot": "2025 고3 11월 csat social/east-asian-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3936891,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 동아시아사, 문제지이 명시됨",
+        "sha256": "e8e1363f1641426855238e3f46990db6310bacc59a5a87163072d8524cc89b35"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_easta_hsj_ODMX1Q1C.pdf",
+      "slot": "2025 고3 11월 csat social/east-asian-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 156614,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 동아시아사, 정답 및 해설이 명시됨",
+        "sha256": "b43d55ab226591295244a800a9b3752108f341c29bdf8a1e245809582c224921"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_sks_mun_1YV3KZA8.pdf",
+      "slot": "2025 고3 11월 csat social/world-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2474714,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 세계사, 문제지이 명시됨",
+        "sha256": "91c27e97307a6d2412d40c943e39c0c56e8b01b9b4e3afb36c778af61cc9cc8a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_sks_hsj_Y8AEJVNT.pdf",
+      "slot": "2025 고3 11월 csat social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 151497,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 세계사, 정답 및 해설이 명시됨",
+        "sha256": "fc642ac3acbbfb8d99c3c258657c2031411312260ef1c22fd5e5cf18b6e16005"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_bnj_mun_VD9W7HR2.pdf",
+      "slot": "2025 고3 11월 csat social/politics-and-law question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1267968,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 정치와 법, 문제지이 명시됨",
+        "sha256": "e58be8aa502469c42e3bd87d37e03ffab88017caf64b6bb2922bd09c799d62c5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_bnj_hsj_B2546SQ2.pdf",
+      "slot": "2025 고3 11월 csat social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 137679,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 정치와 법, 정답 및 해설이 명시됨",
+        "sha256": "d9099d2c83196d2ff87ee63e1358633006f248848a641ae424bad43987862eb7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_eco_mun_7I36VRH2.pdf",
+      "slot": "2025 고3 11월 csat social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1017696,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 경제, 문제지이 명시됨",
+        "sha256": "d638b3df6ae6419d03c5695979c8a00a65f50e03897cdd0ac7975b447668ccf0"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_eco_hsj_1745A832.pdf",
+      "slot": "2025 고3 11월 csat social/economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 148939,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 경제, 정답 및 해설이 명시됨",
+        "sha256": "c17b09993602091bdef591870f1126dacbbe21a06bf0572dc90f4dc532e77f1f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_samun_mun_974N1186.pdf",
+      "slot": "2025 고3 11월 csat social/social-culture question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2290482,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 사회·문화, 문제지이 명시됨",
+        "sha256": "ecb7d0fab7d14d3f54be4e98b3c210c58cd2e220a92f1bb1ad60e79cea304c73"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/s_samun_hsj_I2222C41.pdf",
+      "slot": "2025 고3 11월 csat social/social-culture solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 145359,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 사회·문화, 정답 및 해설이 명시됨",
+        "sha256": "98d10c401de69c186002b1dda0687ea2f16b16b3e532bc047e20823b38610119"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_phy1_mun_O537S34O.pdf",
+      "slot": "2025 고3 11월 csat science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1584531,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 물리학Ⅰ, 문제지이 명시됨",
+        "sha256": "7316cea95d7850f94d9f4aa7bbc200a2dae16308235bf47ebeb618681a23ff78"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_phy1_hsj_1EGW82O6_2.pdf",
+      "slot": "2025 고3 11월 csat science/physics-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 302543,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 물리학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "f30a26d0c99625a7fe7221aafc0481a2dbb6914885e742ff93b5125b94e32ef5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_phy2_mun_9R4ABU31.pdf",
+      "slot": "2025 고3 11월 csat science/physics-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1274798,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 물리학Ⅱ, 문제지이 명시됨",
+        "sha256": "0f1b53649f26f6555eb446d5ccfb1cc51e857a0f63e225e285ebf49dc375a129"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_phy2_hsj_S385274Y_1.pdf",
+      "slot": "2025 고3 11월 csat science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 237244,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 물리학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "084d4b95bd683eb88ac9918d03152b43b8b8aeae94277b272de1a754c66f5ad8"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_che1_mun_MU36GGY1.pdf",
+      "slot": "2025 고3 11월 csat science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 794681,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 화학Ⅰ, 문제지이 명시됨",
+        "sha256": "b315209c58ce3e503f709e38fa12a7153dd68de6542ca2cddac18b38e8d9732e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_che1_hsj_9GZEGIG5.pdf",
+      "slot": "2025 고3 11월 csat science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 188668,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 화학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "7077e1237a306bbd0b8ef773d954b2e1e79cf44aed13926dd68d8bce28f0ba33"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_che2_mun_3NQTPFD7.pdf",
+      "slot": "2025 고3 11월 csat science/chemistry-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1594724,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 화학Ⅱ, 문제지이 명시됨",
+        "sha256": "90ccdb3310a9e0d8947c129c97bbffdc8f1874a3e2142dc244ef01c219c06783"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_che2_hsj_985231OL.pdf",
+      "slot": "2025 고3 11월 csat science/chemistry-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 162085,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 화학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "554d9e68a6c7e04af6dde4f4bb1c602258debc89ba01d14af7f60128ff0d94f7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_bio1_mun_7V3IGX46.pdf",
+      "slot": "2025 고3 11월 csat science/life-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 818655,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 생명과학Ⅰ, 문제지이 명시됨",
+        "sha256": "49fc58ac4ba83da8dc860745615c2f2ce5f3db3c2264f90f97a44de6c7c66602"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_bio1_hsj_TANHFGQG.pdf",
+      "slot": "2025 고3 11월 csat science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 217637,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 생명과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "3640cff43433d78e63667154608bbe4ba1532f0436907da1b6f046be8aed2f96"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_bio2_mun_QBY812WW.pdf",
+      "slot": "2025 고3 11월 csat science/life-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 831744,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 생명과학Ⅱ, 문제지이 명시됨",
+        "sha256": "29ad303b94d4205622c22f70af66b94e27315029429efa6b7fced643166a0a1d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_bio2_hsj_OJG7FC86.pdf",
+      "slot": "2025 고3 11월 csat science/life-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 231196,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 생명과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "8b5cb1cbddef8206895d2c5e39a293204ad02ce632d95ba6bf887fd362aaf6d0"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_ear1_mun_S8N516C4.pdf",
+      "slot": "2025 고3 11월 csat science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2103743,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 지구과학Ⅰ, 문제지이 명시됨",
+        "sha256": "0fba020f8d8751439dead58409464cf5b6c13ab1f8b915a338aa5236b4c4debf"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_ear1_hsj_Q48KW469.pdf",
+      "slot": "2025 고3 11월 csat science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 151923,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 지구과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "40865bb68439ede4d7c6027a32b8dce379df05d206fef1f3360ed31b9fa31e05"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_ear2_mun_BZRFN535.pdf",
+      "slot": "2025 고3 11월 csat science/earth-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2164506,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 지구과학Ⅱ, 문제지이 명시됨",
+        "sha256": "2bbdac684049f14fd32023746ac22fb516da3258ff283c5912c0f9ebd9683134"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/g_ear2_hsj_PL2A372B.pdf",
+      "slot": "2025 고3 11월 csat science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 150070,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 지구과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "52d37de32bb5e81facf4d110309795b92e53aa3faa29d36faecf0c81d8bf093d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_nupgi_mun_178Z2RA9.pdf",
+      "slot": "2025 고3 11월 csat vocational/agriculture-basics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3938407,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 농업 기초 기술, 문제지이 명시됨",
+        "sha256": "79e7041526d847aaa541618dbc3a9e5632e64a79364cfae70b15409aea18aecb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_nupgi_hsj_427TFA8C.pdf",
+      "slot": "2025 고3 11월 csat vocational/agriculture-basics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 163862,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 농업 기초 기술, 정답 및 해설이 명시됨",
+        "sha256": "6487ac57eb528e7261ce9c022414e8e0f84fa02dab192dd59a809591684f0bd9"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_gup_mun_M2QV67NA.pdf",
+      "slot": "2025 고3 11월 csat vocational/industry-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3524556,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 공업 일반, 문제지이 명시됨",
+        "sha256": "5408b0fe2dbb2243f74fcb6a986ff4e1567658669246501f853a7b9b981765d0"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_gup_hsj_JTRY9LU8.pdf",
+      "slot": "2025 고3 11월 csat vocational/industry-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 142226,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 공업 일반, 정답 및 해설이 명시됨",
+        "sha256": "0f3839fefafd3b992ee5235531a5b3d61ab9ca797f080a21de00d10074489b2c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_sangup_mun_S7H92DM1.pdf",
+      "slot": "2025 고3 11월 csat vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2427708,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 상업 경제, 문제지이 명시됨",
+        "sha256": "f34e7781f1e199e22b697f53c801ff4faf03a8e466055b5efa3429ef18c7acf7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_sangup_hsj_3C4UNJ2V.pdf",
+      "slot": "2025 고3 11월 csat vocational/commercial-economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 177368,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 상업 경제, 정답 및 해설이 명시됨",
+        "sha256": "8552d8935bccf7fda3d52f083acc4cbdbc293bc40cd61c334bcd3a31132e6dca"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_susan_mun_13V633GG.pdf",
+      "slot": "2025 고3 11월 csat vocational/fisheries-and-shipping question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2631170,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 수산·해운 산업 기초, 문제지이 명시됨",
+        "sha256": "0c29f397c66e68831a4b7fb2fc473b992492237aae2524614020b95199235847"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_susan_hsj_S2AZPEK4.pdf",
+      "slot": "2025 고3 11월 csat vocational/fisheries-and-shipping solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 144251,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 수산·해운 산업 기초, 정답 및 해설이 명시됨",
+        "sha256": "64d3a23364d6a526ffcce01686d4ee957f34f7ba337fd690b2608cb5b9a321ea"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_inkan_mun_56B1818J.pdf",
+      "slot": "2025 고3 11월 csat vocational/human-development question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2039556,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 인간 발달, 문제지이 명시됨",
+        "sha256": "7be513e2503a715a18b83c5a7464a75c8ce55ab9c7a64fcb5dbcaf56dcfc24ed"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_inkan_hsj_55AX8D8V.pdf",
+      "slot": "2025 고3 11월 csat vocational/human-development solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149997,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 인간 발달, 정답 및 해설이 명시됨",
+        "sha256": "51915477ad55b1635633aff9fea87631ea5ffc3ee8815e713226ca5422db104a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_sjl_mun_53I329XO.pdf",
+      "slot": "2025 고3 11월 csat vocational/successful-career-life question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1871537,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 성공적인 직업 생활, 문제지이 명시됨",
+        "sha256": "b4341759a6918bd93a20f1214fb195f9a1f843f6efb1c8ee917944961893ebd3"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/J_sjl_hsj_R9UT9V91.pdf",
+      "slot": "2025 고3 11월 csat vocational/successful-career-life solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 147898,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 성공적인 직업 생활, 정답 및 해설이 명시됨",
+        "sha256": "73ab331576b6041aa021acb90eb150cd099c1ce1a74e319c506afd7b94d42d3c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_gr_mun_H2RY447N.pdf",
+      "slot": "2025 고3 11월 csat second_language/german-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1677015,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 독일어Ⅰ, 문제지이 명시됨",
+        "sha256": "08334332f1f3d4db31d415aa5e3a4d406d58453b6cdaef25e56b84d3b78e08b2"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_gr_hsj_7X4PK5I8.pdf",
+      "slot": "2025 고3 11월 csat second_language/german-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149063,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 독일어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "90244550195bd5ef221a751488d37a8431680788d8c509ff8f167ef2ae150a15"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_fr_mun_GM2H252F.pdf",
+      "slot": "2025 고3 11월 csat second_language/french-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2370977,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 프랑스어Ⅰ, 문제지이 명시됨",
+        "sha256": "56bd6ec17ffec9949d588be8c6b5522a00c7c42866852d23b9265565bc0c7f87"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_fr_hsj_7S7XBF75.pdf",
+      "slot": "2025 고3 11월 csat second_language/french-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 155011,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 프랑스어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "90bf3a82052724d689c137f72de3c6f7cd13603476ff5e09558976d41fb6fd3e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_sp_mun_S1SD616U.pdf",
+      "slot": "2025 고3 11월 csat second_language/spanish-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1397907,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 스페인어Ⅰ, 문제지이 명시됨",
+        "sha256": "a7a16f88789aa02ae7f4dd2930e71e5a69db3bb78e06c4ff73b6ba2d885b7fdb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_sp_hsj_A7LCBKM3.pdf",
+      "slot": "2025 고3 11월 csat second_language/spanish-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 134137,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 스페인어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "1e597e9c488491568aa713c1831233a7b7eb5b8f8aaafd92678dfd61ecf4ea01"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_ch_mun_M41393F3.pdf",
+      "slot": "2025 고3 11월 csat second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2056088,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 중국어Ⅰ, 문제지이 명시됨",
+        "sha256": "6eeb085a06c2394deea94200c22087159f0e40b67f9147b8c2fda810e33ed32d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_ch_hsj_CLW691RT.pdf",
+      "slot": "2025 고3 11월 csat second_language/chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 174229,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 중국어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "4d62422e34d5046d5ccef16c8be33a30e12ed2ad0b1a6bbb388414da633e3b28"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_ja_mun_BI892H76.pdf",
+      "slot": "2025 고3 11월 csat second_language/japanese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2212713,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 일본어Ⅰ, 문제지이 명시됨",
+        "sha256": "7a18406c81a647d27ed7950119374ce231349188cf8a914a45526bd7a80b102b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_ja_hsj_N5C21Q61.pdf",
+      "slot": "2025 고3 11월 csat second_language/japanese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 185149,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 일본어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "be04cb207b9618a156c452f20bd2745c14a5a00687ba10f292ac1d1fb4ada812"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_ru_mun_HRJ29K4I.pdf",
+      "slot": "2025 고3 11월 csat second_language/russian-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1300547,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 러시아어Ⅰ, 문제지이 명시됨",
+        "sha256": "5a9a2de37e601cbd90993a1d0597b828c73775468eeac649f848937dc507fdf1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_ru_hsj_NP75957Q.pdf",
+      "slot": "2025 고3 11월 csat second_language/russian-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 139171,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 러시아어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "c9e2f74fe66243b4572c341612a44b6e5c18f076b9b5ba7faae4a4670cb4c593"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_ar_mun_RA3FN15Q.pdf",
+      "slot": "2025 고3 11월 csat second_language/arabic-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2862074,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 아랍어Ⅰ, 문제지이 명시됨",
+        "sha256": "4ecb204b6e1aa06292cc54550228e22c5377c0af0b39a7f7635a34c481767f86"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_ar_hsj_M93T6XK5.pdf",
+      "slot": "2025 고3 11월 csat second_language/arabic-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 284512,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 아랍어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "d5aa486813119126ea6b8d2e3c768d00eba998b63d7c8cfded9f161d8a8ca191"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_vit_mun_738GJH13.pdf",
+      "slot": "2025 고3 11월 csat second_language/vietnamese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2289164,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 베트남어Ⅰ, 문제지이 명시됨",
+        "sha256": "029e2a56c9dfd8591d43b899744ce2035898a9a826117b85e69a98974000077e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_vit_hsj_C716ED12.pdf",
+      "slot": "2025 고3 11월 csat second_language/vietnamese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 140565,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 베트남어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "c6b0f9bbcc60b7795deb1d377668c160291cee0a812adebf496217d46eb0f1dd"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_han_mun_876IH2RQ.pdf",
+      "slot": "2025 고3 11월 csat second_language/classical-chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3574260,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 한문Ⅰ, 문제지이 명시됨",
+        "sha256": "c515351b3fc9248029d3fe1d7a65c29c6b351e8014220786491846adcf9850ef"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/2nd_han_hsj_578T42J4.pdf",
+      "slot": "2025 고3 11월 csat second_language/classical-chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 179954,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험, 한문Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "876404453101e361b2e459935030ad534e3d66bb57f84cc112def6f1a45890e7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/korB_1_hsj_57P38D86.pdf",
+      "slot": "2025 고3 10월 school_mock korean/language-and-media solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 303995,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 언어와 매체, 정답 및 해설이 명시됨",
+        "sha256": "13ed2265eb14751a0b4219d5c5129697cfd3197baffa743bb3780a5857585a20"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/korA_1_hsj_2K9L251B.pdf",
+      "slot": "2025 고3 10월 school_mock korean/speech-and-writing solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 299195,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 화법과 작문, 정답 및 해설이 명시됨",
+        "sha256": "bc89f5d5d532ff5fd6fd484d0c932472be5d620a7a62de29a12b6f784a3abd3e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/mathC_1_mun_95643S5O.pdf",
+      "slot": "2025 고3 10월 school_mock math/geometry question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 995703,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 기하, 문제지이 명시됨",
+        "sha256": "4eeb8ecb43cb3d0f5dfe6c9a54c152e221fc6eba5d47f164f698dc3fe57c7461"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/mathC_1_hsj_FCMY5H8B_1.pdf",
+      "slot": "2025 고3 10월 school_mock math/geometry solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 326196,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 기하, 정답 및 해설이 명시됨",
+        "sha256": "b6ae490794a79a48ded8847c20e8d87525467d2e767fe35a80c56fe0e636b89a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/mathA_1_mun_4DUW1I57.pdf",
+      "slot": "2025 고3 10월 school_mock math/probability-and-statistics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 601056,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 확률과 통계, 문제지이 명시됨",
+        "sha256": "7d3f74e5725b34a83624c52bc61bde2b796b23bd206a561a657e21f4f3b4478d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/mathA_1_hsj_P27D7916_1.pdf",
+      "slot": "2025 고3 10월 school_mock math/probability-and-statistics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 326196,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 확률과 통계, 정답 및 해설이 명시됨",
+        "sha256": "b6ae490794a79a48ded8847c20e8d87525467d2e767fe35a80c56fe0e636b89a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/mathB_1_mun_L9S69Y1Z.pdf",
+      "slot": "2025 고3 10월 school_mock math/calculus question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 662959,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 미적분, 문제지이 명시됨",
+        "sha256": "e66035e11d3ebf2f2fe32af9f5f83c4c99290e4e64dac40bf79d38a86f58bdfb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/mathB_1_hsj_KOW122AM_1.pdf",
+      "slot": "2025 고3 10월 school_mock math/calculus solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 326196,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 미적분, 정답 및 해설이 명시됨",
+        "sha256": "b6ae490794a79a48ded8847c20e8d87525467d2e767fe35a80c56fe0e636b89a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/eng_1_mun_7Y42G4CW.pdf",
+      "slot": "2025 고3 10월 school_mock english/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1152106,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 영어, 문제지이 명시됨",
+        "sha256": "b7eda5254d75e9d96273a8c9d9f2171cf7d01ca1b9c6b057746d868817c25f5a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_his_1_hsj_Z72798G5.pdf",
+      "slot": "2025 고3 10월 school_mock history/- solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 132985,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 한국사, 정답 및 해설이 명시됨",
+        "sha256": "26d0341fc7fa793b9a9b7f3ba3160af022d5027cf5dcb42757460db298f9459a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_ssnyr_mun_962P39FF.pdf",
+      "slot": "2025 고3 10월 school_mock social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 800945,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 생활과윤리, 문제지이 명시됨",
+        "sha256": "c014892bb3d37cbaae58d6d04c82e4bcfb5df26d162953f098187e54dc46ffd1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_ssnyr_hsj_BGJ3K695.pdf",
+      "slot": "2025 고3 10월 school_mock social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 132183,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 생활과윤리, 정답 및 해설이 명시됨",
+        "sha256": "9644cd6da23c2396acdae7707fa00218998d511275fe80a0f7824958b5574bd4"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_yrnss_mun_31HD4IJ3.pdf",
+      "slot": "2025 고3 10월 school_mock social/ethics-and-thought question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1838324,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 윤리와사상, 문제지이 명시됨",
+        "sha256": "693da9b6bc09ae62bdf4128bafd285c2a389d88d031d923299ad0b7376bbd481"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_yrnss_hsj_1KBT4942.pdf",
+      "slot": "2025 고3 10월 school_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 146692,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 윤리와사상, 정답 및 해설이 명시됨",
+        "sha256": "8992852665015fd7441f21a61f9add10abeed94bc8aefb49053c44b30d6b4079"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_hanji_mun_975SYEWU.pdf",
+      "slot": "2025 고3 10월 school_mock social/korean-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4709739,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 한국지리, 문제지이 명시됨",
+        "sha256": "575a42b191c499a77ce9a5f81999154c2207752c682ab441c30355867a1bebd9"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_hanji_hsj_FPOJ785I.pdf",
+      "slot": "2025 고3 10월 school_mock social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 129757,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 한국지리, 정답 및 해설이 명시됨",
+        "sha256": "4e82fb1d434f4e4a5855af0d5b3a9fe984764084b54dba7a47a08034f44b7627"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_saeji_mun_GPO7ZSL4.pdf",
+      "slot": "2025 고3 10월 school_mock social/world-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4113124,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 세계지리, 문제지이 명시됨",
+        "sha256": "c9b205e58683a9ac8a1e162483dd6742ab9d807f3d057b06b8285226220a28da"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_saeji_hsj_81YTT3QI.pdf",
+      "slot": "2025 고3 10월 school_mock social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 143068,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 세계지리, 정답 및 해설이 명시됨",
+        "sha256": "3a200651febcde329590267f1a26a6b5da5924d596b5118a7c4932d0883e5b56"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_easta_mun_347IZH8B.pdf",
+      "slot": "2025 고3 10월 school_mock social/east-asian-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 9391741,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 동아시아사, 문제지이 명시됨",
+        "sha256": "a4ff00c0c6d847416b4868d91a53f488b0e35b799b8aa56c6507b1a3f50d3a20"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_easta_hsj_8779X7JE.pdf",
+      "slot": "2025 고3 10월 school_mock social/east-asian-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 138511,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 동아시아사, 정답 및 해설이 명시됨",
+        "sha256": "4cda94a185760fa0f5a11feaf3947bf17618b6fea9c38e5981bd7f8064c0ef0b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_sks_mun_7X7F96W5.pdf",
+      "slot": "2025 고3 10월 school_mock social/world-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 7896349,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 세계사, 문제지이 명시됨",
+        "sha256": "a74d264e393924ac3784b47d0078f99e1d31665bdd8ddfc6afb0da357e157fca"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_sks_hsj_9JS6R7TA.pdf",
+      "slot": "2025 고3 10월 school_mock social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 150221,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 세계사, 정답 및 해설이 명시됨",
+        "sha256": "a59c8a64a7f2fac3968c4e6a6daa64c74a9bb12343cc9b1f3b68b09658671abb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_bnj_mun_PHD3Y762.pdf",
+      "slot": "2025 고3 10월 school_mock social/politics-and-law question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 427928,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 정치와 법, 문제지이 명시됨",
+        "sha256": "870affd901d1f70c09c4efc6ae5e86b5921b97c15ddcd86fb6a0cce55d8382cd"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_bnj_hsj_73YVJYC1.pdf",
+      "slot": "2025 고3 10월 school_mock social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 121530,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 정치와 법, 정답 및 해설이 명시됨",
+        "sha256": "403366c85708491722e4f3c2b5c7ab335051e213e3b860593b2b4f2a522fe6c3"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_eco_mun_N6971XN5.pdf",
+      "slot": "2025 고3 10월 school_mock social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1690762,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 경제, 문제지이 명시됨",
+        "sha256": "c6f548a91e05f542971726d3ae19d0112a88fddacdcbf64bf0e166dc1ae1e004"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_eco_hsj_444G958R.pdf",
+      "slot": "2025 고3 10월 school_mock social/economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 124301,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 경제, 정답 및 해설이 명시됨",
+        "sha256": "325c019729355bdcecda34dd3a413a5c6776fee1186ff998a9c7a847490132a2"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_samun_mun_RM1O76GN.pdf",
+      "slot": "2025 고3 10월 school_mock social/social-culture question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 545088,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 사회·문화, 문제지이 명시됨",
+        "sha256": "a2ff31bc522c172e2c8166d98c4fd543edf39ee1a383ef94ea437553fde70592"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/s_samun_hsj_4PN64116.pdf",
+      "slot": "2025 고3 10월 school_mock social/social-culture solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 135227,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 사회·문화, 정답 및 해설이 명시됨",
+        "sha256": "f9afb9c2e9d9e9b91a20ba8da0aff03115a0ba14a87dffb746d8a3b2342f2400"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_phy1_mun_8442T745.pdf",
+      "slot": "2025 고3 10월 school_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 626974,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 물리학Ⅰ, 문제지이 명시됨",
+        "sha256": "dc81a80e276a370d4f5d865d1a490d38b54f97a04b8df89a8d39d9fb75a3e786"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_phy1_hsj_5U69AA3Z.pdf",
+      "slot": "2025 고3 10월 school_mock science/physics-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 123854,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 물리학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "126e3001e0328e56d574063350601c9c12cd1ffef6fefbfba5248cb2b6cd7707"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_phy2_mun_YXRO5P9T.pdf",
+      "slot": "2025 고3 10월 school_mock science/physics-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1319054,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 물리학Ⅱ, 문제지이 명시됨",
+        "sha256": "e1fbd2fade6da688cd8d3fc082030e3aaa45104e526f11deb979fdcbea0a9d41"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_phy2_hsj_73TM4K1H.pdf",
+      "slot": "2025 고3 10월 school_mock science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 133510,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 물리학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "f3bbd7d697ad7442c130f38ac97d902db5699b102fb51af6da1d853759ebd75b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_che1_mun_13YGZZ72.pdf",
+      "slot": "2025 고3 10월 school_mock science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 369065,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 화학Ⅰ, 문제지이 명시됨",
+        "sha256": "7f98eb33e4061f7219375d0ada9c923d5f29c69f9dba24d6b2bec76813aa1c45"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_che1_hsj_YYHPI9Z4.pdf",
+      "slot": "2025 고3 10월 school_mock science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 110342,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 화학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "1c9550852da5c22cf56b568d081741b088b20d02538551af2dbecaea163e2e0a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_che2_mun_BT421QO5.pdf",
+      "slot": "2025 고3 10월 school_mock science/chemistry-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 517375,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 화학Ⅱ, 문제지이 명시됨",
+        "sha256": "57bdf2e6c5f59f290ca2422a1a43d08ec3cad8e4d6b1d6eb20415e163ed19362"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_che2_hsj_T7TV5E8N.pdf",
+      "slot": "2025 고3 10월 school_mock science/chemistry-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 118089,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 화학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "799b17e617da8d64c68921b1e0fefe9514d5ffc233681e72b2750bb481d8f41e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_bio1_mun_C3PM9FY4.pdf",
+      "slot": "2025 고3 10월 school_mock science/life-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 409159,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 생명과학Ⅰ, 문제지이 명시됨",
+        "sha256": "0263d51567db3883a2e504edb377975530cf261cd5a348c143fcac1320a4de37"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_bio1_hsj_QA647163.pdf",
+      "slot": "2025 고3 10월 school_mock science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 136697,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 생명과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "adb50d59d3132545cc8e156a30705eecb5faaa10a2fda781e60b0c0cf4c0b3f2"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_bio2_mun_9HZ499AG.pdf",
+      "slot": "2025 고3 10월 school_mock science/life-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 717610,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 생명과학Ⅱ, 문제지이 명시됨",
+        "sha256": "e45f5a2b47171e4019f3283b5047682b875a24b91391cc91c079345b44a1bdf1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_bio2_hsj_8494N31Q.pdf",
+      "slot": "2025 고3 10월 school_mock science/life-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 139898,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 생명과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "b26bbd8afd91e6b426157428be300367008832311f12250d9eb3e13e23852220"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_ear1_mun_88625OHQ.pdf",
+      "slot": "2025 고3 10월 school_mock science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 871685,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 지구과학Ⅰ, 문제지이 명시됨",
+        "sha256": "b4ee7f9425d2e13ce8a27dba17db49edbfe4b9728af33372cfb8ff651ce8b69c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_ear1_hsj_63YWQ6CQ.pdf",
+      "slot": "2025 고3 10월 school_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149100,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 지구과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "c127110194ab537c9c553d541ea52b554720ff85ff382d644bbd3c89fca43acf"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_ear2_mun_B262S17D.pdf",
+      "slot": "2025 고3 10월 school_mock science/earth-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 951502,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 지구과학Ⅱ, 문제지이 명시됨",
+        "sha256": "169735d606ead6bc1cb39f33c2ee652f92b17c98542883f9d39c6c23ede971d5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/g_ear2_hsj_X6NP3UJ2.pdf",
+      "slot": "2025 고3 10월 school_mock science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 137810,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 지구과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "ff291a3536a73b3400177786421e2142994eec4b729c32db7a6bbddd9201c32a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_nupgi_mun_9B832AMR.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/agriculture-basics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 908686,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 농업 기초 기술, 문제지이 명시됨",
+        "sha256": "bade2bd0598e87c37996e757000af0101edd61a8b9635fa60ea8e910d1c1d09e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_nupgi_hsj_97ZYSA33.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/agriculture-basics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 161518,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 농업 기초 기술, 정답 및 해설이 명시됨",
+        "sha256": "c3e1dca93ed9b5917d612867eecdf47db78f4905ec970f9c9edd2ca13b3c0db1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_gup_mun_S95L8F69.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/industry-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 785685,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 공업 일반, 문제지이 명시됨",
+        "sha256": "012c200e9d4515dc5bc44eb44aa3eef2069962b585d286d1cdc880acf4161056"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_gup_hsj_23681FFY.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/industry-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 141011,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 공업 일반, 정답 및 해설이 명시됨",
+        "sha256": "4f1ae1dc76f0c7918ac6c897518417c4dcc9a5b85d4ec275f77bb82d9e3b768f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_sangup_mun_D25Q32O1.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 626963,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 상업 경제, 문제지이 명시됨",
+        "sha256": "bd741dcf588fad8b1dd43ae87c3abc3278cc4beb2ff64346170b52ea7c89caa7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_sangup_hsj_WZ789L34.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/commercial-economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 132543,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 상업 경제, 정답 및 해설이 명시됨",
+        "sha256": "bdceb76cc7a70a77966da94152735b274c81c44886710be6b8ea7b41f310d66c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_susan_mun_5459O8JU.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/fisheries-and-shipping question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 749922,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 수산·해운 산업 기초, 문제지이 명시됨",
+        "sha256": "79a92f457c8f2cf5b510ccd794dcd238ef131eecba2e1dc633d5e0ef186e77ce"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_susan_hsj_742U1478.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/fisheries-and-shipping solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 157331,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 수산·해운 산업 기초, 정답 및 해설이 명시됨",
+        "sha256": "beb190e27798a5c74616899fe42a9faf0c979ed20f6b4288803964631a27a598"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_inkan_mun_F916L646.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/human-development question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 477642,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 인간 발달, 문제지이 명시됨",
+        "sha256": "d68acb9b02e9f8db01b6522ec11e6b2b7899f6a95a17d6b317392321845f4b42"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_inkan_hsj_SL2ZZZ25.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/human-development solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 129959,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 인간 발달, 정답 및 해설이 명시됨",
+        "sha256": "b10f9567110ae22c36b211c379b198c1db28225bc93095cecd3ba6e5aa713d88"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_sjl_mun_CNTLRMUQ.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/successful-career-life question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 440016,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 성공적인 직업 생활, 문제지이 명시됨",
+        "sha256": "f7b47bfa1de123a38fd6e9a630eb3d4f8f3b144ab150ba41443b5336aa1eb84f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/J_sjl_hsj_I9XSBOT1.pdf",
+      "slot": "2025 고3 10월 school_mock vocational/successful-career-life solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 128660,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 성공적인 직업 생활, 정답 및 해설이 명시됨",
+        "sha256": "c9d12db2f93867a2dbd0f65855a6eef97afbc1d8becf4d1ad7cfabe30ec3c7ac"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_gr_mun_93TPBXO9.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/german-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 601292,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 독일어Ⅰ, 문제지이 명시됨",
+        "sha256": "1f1d2815ea718e654f9ae3e502f9d3a4194a97d536022a40e23b1f44dff22ebd"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_gr_hsj_7SQ11RKQ.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/german-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 168606,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 독일어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "248f7fba3025048a0fe91d2698ca33893d96763e97d108385d06fd5b502a3140"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_fr_mun_K1ZY8XFQ.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/french-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 526816,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 프랑스어Ⅰ, 문제지이 명시됨",
+        "sha256": "730e18fd698e2afe86f1bd3fb8ff06a9544351460439654de40986d9c417cdb8"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_fr_hsj_P9E618W6.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/french-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 175148,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 프랑스어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "4406c05d2bd2930f9edea0a102318eee4acf9df68bf1bfcbd4769afa8583ef7a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_sp_mun_4I3U93OH.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/spanish-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 712591,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 스페인어Ⅰ, 문제지이 명시됨",
+        "sha256": "be5ee9401fe5bf360de721555542b8b23dd759c5c488b0639d647e66e1a61296"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_sp_hsj_9U9A3VX9.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/spanish-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 173958,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 스페인어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "8ed262ea212fe9b76a3093b8c494f7208155386685efd928fc9ebe51751b0cdd"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_ch_mun_H64833RB.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1003897,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 중국어Ⅰ, 문제지이 명시됨",
+        "sha256": "e4315cd789eecc659bd0914fa0cf967eb40e1e9a55c1ef8ea56fac952ce44194"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_ch_hsj_64F9U6GT.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 203207,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 중국어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "074b891947a32508e9035d2c80fd3246a41b2a65716e16c05ddae3e8dd4ce15e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_ja_mun_7KONFDVK.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/japanese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 766303,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 일본어Ⅰ, 문제지이 명시됨",
+        "sha256": "3220295cfda2d18755fca0b11906e9f852ada10885176f543837e3432be3e23d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_ja_hsj_4VA1IJXC.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/japanese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 182303,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 일본어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "ce4671b6c674dd19085ecfe98e43fdc50c2a8f1a8d9ea6a1ce28b9d9eea96d65"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_ru_mun_96ACQ922.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/russian-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 389496,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 러시아어Ⅰ, 문제지이 명시됨",
+        "sha256": "a5354dc256b85f7f63b6b3cb00a8346681883e9211259f8e923b7d45be6fd16f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_ru_hsj_58491H35.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/russian-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 177234,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 러시아어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "232aff558983330d96e7144192272996f32b5a847c33f8b0d7820ab072603aec"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_han_mun_495O39A7.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/classical-chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 996793,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 한문Ⅰ, 문제지이 명시됨",
+        "sha256": "4ceb754dc97cf6c550482b4a6330addcebe31464a5096637b18fd46621d085c5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/2nd_han_hsj_SNHL6DI5.pdf",
+      "slot": "2025 고3 10월 school_mock second_language/classical-chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 190480,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 10월 고3 전국연합학력평가, 한문Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "e411ff5dd5ea65fbd84e7af68aeedffe669212c29c99a2b010125fb709facf49"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/korB_1_hsj_9LXO251Y_1.pdf",
+      "slot": "2025 고3 7월 school_mock korean/language-and-media solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 617351,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 언어와 매체, 정답 및 해설이 명시됨",
+        "sha256": "3be5b05aa7c15332835cd84810d86313315b9ea0633d6e45fcf2ef58fbf3fa25"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/korA_1_hsj_KP476V55_1.pdf",
+      "slot": "2025 고3 7월 school_mock korean/speech-and-writing solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 376260,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 화법과 작문, 정답 및 해설이 명시됨",
+        "sha256": "9b721565cfc2661ae31789aa968a574a0433fcdbcf61f9c3fc1ba4aaa27c3955"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/mathC_1_hsj_5L4D6V11_12.pdf",
+      "slot": "2025 고3 7월 school_mock math/geometry solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 498029,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 기하, 정답 및 해설이 명시됨",
+        "sha256": "dd39a84979d45be5e29442444deba969bdadbc8af130eeabdc2d0a7a2febb9f6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/mathA_1_mun_23TG4654_11.pdf",
+      "slot": "2025 고3 7월 school_mock math/probability-and-statistics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 435173,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 확률과 통계, 문제지이 명시됨",
+        "sha256": "914b8d9ac363e0d9f0707446047e524ea60addf51a689d676da4b4b453fb6f81"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/mathA_1_hsj_KK223HQR_12.pdf",
+      "slot": "2025 고3 7월 school_mock math/probability-and-statistics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 354501,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 확률과 통계, 정답 및 해설이 명시됨",
+        "sha256": "36bb98602b53dcc7fbc4ac26a97143f6b24320e2145d57cb0c68f2bc9fdb2dc3"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/mathB_1_mun_38S3CNAS_1.pdf",
+      "slot": "2025 고3 7월 school_mock math/calculus question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 296801,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 미적분, 문제지이 명시됨",
+        "sha256": "ef17b7e8fde5aa3663d27f3e3c6131ed9bae40b518542c29c08cb98287777a6a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/mathB_1_hsj_64GOGHII_12.pdf",
+      "slot": "2025 고3 7월 school_mock math/calculus solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 379437,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 미적분, 정답 및 해설이 명시됨",
+        "sha256": "e85647cbae358846c20920593ac27048fb39cc39701d1900d7e2961edf9dda9c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/eng_1_mun_4328TGTW.pdf",
+      "slot": "2025 고3 7월 school_mock english/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 447892,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 영어, 문제지이 명시됨",
+        "sha256": "8147dac8df4f61e7d2b6d89e569a58a0a2c56df074538ff160e49c023dbe5c08"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/eng_1_hsj_7GURW85A_2.pdf",
+      "slot": "2025 고3 7월 school_mock english/- solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 368556,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 영어, 정답 및 해설이 명시됨",
+        "sha256": "98d00e274784bba7ca7e3e4f030269ff38124c4a47405a871f40716fb0a76aa6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_ssnyr_mun_5D81KO97.pdf",
+      "slot": "2025 고3 7월 school_mock social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 486787,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 생활과윤리, 문제지이 명시됨",
+        "sha256": "718c778c4f235c83dcc841aa6c01e0e350c3783d41c972f063fa385574815f02"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_ssnyr_hsj_PK521CGN.pdf",
+      "slot": "2025 고3 7월 school_mock social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 178110,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 생활과윤리, 정답 및 해설이 명시됨",
+        "sha256": "afa7b9d21bd861f0df3d7cf2a80adfbbed4a13741bd53bb5d312030c0df6fa1c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_yrnss_mun_77TYA4SM.pdf",
+      "slot": "2025 고3 7월 school_mock social/ethics-and-thought question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 478483,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 윤리와사상, 문제지이 명시됨",
+        "sha256": "a7e9cf0576d55fa28fd2f0391a06c57c09a51d4e47d1a25c4ea878d69c93cdac"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_yrnss_hsj_N273236D.pdf",
+      "slot": "2025 고3 7월 school_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 179306,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 윤리와사상, 정답 및 해설이 명시됨",
+        "sha256": "15beb260828818989ce0ed9ad65137eaaeac17d28522f0215a8731964c8c6a0a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_hanji_mun_Q6XXIA9P.pdf",
+      "slot": "2025 고3 7월 school_mock social/korean-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1181207,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 한국지리, 문제지이 명시됨",
+        "sha256": "fd3fd70e3d0689dec62841f04294cb9dda18b1904b6f7c259e8cda4144f01314"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_hanji_hsj_F23F5BC2.pdf",
+      "slot": "2025 고3 7월 school_mock social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 166082,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 한국지리, 정답 및 해설이 명시됨",
+        "sha256": "aac25eb3b3bba7ec6f9948218170fdba8de5f904a26bc6570fe730a081a74c9d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_saeji_hsj_6JE631HV.pdf",
+      "slot": "2025 고3 7월 school_mock social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 168856,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 세계지리, 정답 및 해설이 명시됨",
+        "sha256": "63c6df4d4d5c2297e6526d3d6c0eb7d4594cb573f6ea4221cdfd64c7b6e756ad"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_easta_mun_TCU3AQ5W.pdf",
+      "slot": "2025 고3 7월 school_mock social/east-asian-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1371196,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 동아시아사, 문제지이 명시됨",
+        "sha256": "1fa0d78ceac8a382354c7de40ce3f32dbb9aa09575cf7d126294c8b96cae7fb9"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_easta_hsj_4841G87D.pdf",
+      "slot": "2025 고3 7월 school_mock social/east-asian-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 194018,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 동아시아사, 정답 및 해설이 명시됨",
+        "sha256": "c9623ea8371a9945e0fb0938556896593516d75cc1492d6e31958d19afe8001e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_sks_mun_A7B585G1.pdf",
+      "slot": "2025 고3 7월 school_mock social/world-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 996895,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 세계사, 문제지이 명시됨",
+        "sha256": "8f4269d37189afa55ad3358365ef9791dfc14cddaee25bfd9c93bcf1c817de60"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_sks_hsj_AAIMPPGO.pdf",
+      "slot": "2025 고3 7월 school_mock social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 183035,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 세계사, 정답 및 해설이 명시됨",
+        "sha256": "600f86f6a2392ff3a3830f54b1a76ca3960885e8fc30f52fb849185e0c8da8ae"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_bnj_mun_95W9247Z.pdf",
+      "slot": "2025 고3 7월 school_mock social/politics-and-law question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 321127,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 정치와 법, 문제지이 명시됨",
+        "sha256": "7580e1faf9970fdf9ad07bf95351fe647aaa6afb4c051541097384bf4c64885c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_eco_mun_24756VJO.pdf",
+      "slot": "2025 고3 7월 school_mock social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 334145,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 경제, 문제지이 명시됨",
+        "sha256": "ab65e26ee5cb9ae6aecc28d6bd7024c4a8471faf14fbc8881ec81479e04f72a2"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_eco_hsj_9QI6J527.pdf",
+      "slot": "2025 고3 7월 school_mock social/economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 141258,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 경제, 정답 및 해설이 명시됨",
+        "sha256": "73ba1b5ea7e5c15bbb744b59eb315b986d758718ea41faeffbe03533ade11afb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_samun_mun_A4GZU5MG.pdf",
+      "slot": "2025 고3 7월 school_mock social/social-culture question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 570443,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 사회·문화, 문제지이 명시됨",
+        "sha256": "f5f98e016437ed9374c4676d1c2db03486780264c181c5dcae0858072a8b02af"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_samun_hsj_4921A11F.pdf",
+      "slot": "2025 고3 7월 school_mock social/social-culture solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 128156,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 사회·문화, 정답 및 해설이 명시됨",
+        "sha256": "e503a77b2fb06505bad9c20eff30512a87db4969d15d8f733518ee9f290bfd4a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_phy1_mun_7G6Q1667_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 734437,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 물리학Ⅰ, 문제지이 명시됨",
+        "sha256": "3f6580114dd8161b2ce42ddd894d98c2fea825c3683a353109575aa849d6b48d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_phy1_hsj_2PO3C7YM_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/physics-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 142877,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 물리학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "27b10831dbdd37ccff59bec2c4909dc413a32927a504b02e9a7558f9e6829a87"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_phy2_mun_D25G2RVJ_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/physics-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 885602,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 물리학Ⅱ, 문제지이 명시됨",
+        "sha256": "46e281fccf5e52f99c6f2d8b7e3f7eb3102464abce2913d3862f7e4a01d98463"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_phy2_hsj_6675B5TS2.pdf",
+      "slot": "2025 고3 7월 school_mock science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 143200,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 물리학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "94b422bb9ad0c7ca337fa001143a65ac003519c7978048bea5216c35550ce82a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_che1_mun_B427XT98_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 548001,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 화학Ⅰ, 문제지이 명시됨",
+        "sha256": "1060062e8eda250d8432a7fa0752feebcab8cc71d4b39c2cd268d139d2dc577e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_che1_hsj_7PZ58S6G1.pdf",
+      "slot": "2025 고3 7월 school_mock science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 132673,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 화학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "0397f455188401885e5f06cc177c1634c0de3319ca14f3f50e30291a6cd83157"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_che2_mun_7BMJ1976_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/chemistry-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 666232,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 화학Ⅱ, 문제지이 명시됨",
+        "sha256": "fe1ad5e199ffe376ce99a1bb8be3be30bcf0b87b84038403490bc6e60f1f05c7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_che2_hsj_YG9128821.pdf",
+      "slot": "2025 고3 7월 school_mock science/chemistry-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 140624,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 화학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "4ab19d825e995c8cdc151e96dc6762eb6e09929ec5e2b721eeec924102dc5322"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_bio1_mun_219682R7_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/life-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 573938,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 생명과학Ⅰ, 문제지이 명시됨",
+        "sha256": "79608f6fcea0f669b259479e220bf690a6c860fdacde0c7616727feb797a5fa5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_bio1_hsj_56MPF4Q91.pdf",
+      "slot": "2025 고3 7월 school_mock science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 166764,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 생명과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "dddacc9082b7a8078833e30e3df143a3759f4607208a4333cc20119d5f656489"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_bio2_mun_461HF11K_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/life-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 465866,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 생명과학Ⅱ, 문제지이 명시됨",
+        "sha256": "d1c24398aeb0991fd0599052ab500d2123a1eea21c279ed333a342edd5e276e8"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_bio2_hsj_SB72TWA61.pdf",
+      "slot": "2025 고3 7월 school_mock science/life-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 191872,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 생명과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "16707d69cf3160d8d16146b4d6774c8ded8a2868bfc502462c50264ebabf249e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_ear1_mun_S5BBWPP6_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1492308,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 지구과학Ⅰ, 문제지이 명시됨",
+        "sha256": "595d36a8506199ab7902bfb658525cf725eea66235bbcafa1be8c8b4d6c0620b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_ear1_hsj_CVKZZSAE_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 158595,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 지구과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "ae4fa1dade0bc6995c7f33a2a901c9a1a29004bd17fffd6f50f38bf33f1ed3a2"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_ear2_mun_FW9ZBBC7_11.pdf",
+      "slot": "2025 고3 7월 school_mock science/earth-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1760189,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 지구과학Ⅱ, 문제지이 명시됨",
+        "sha256": "f0a7a14acd64070a1e2787d328f5c8200970fc6203c6d0887cf6af29553c068f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/g_ear2_hsj_42ETPA171.pdf",
+      "slot": "2025 고3 7월 school_mock science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 153136,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:14:02.084Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 2025학년도 7월 고3 전국연합학력평가, 지구과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "ebf8036efd637f5d2d7c91a41be0806cf2b2a784ac03a2b4e9639b1a459dd42c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

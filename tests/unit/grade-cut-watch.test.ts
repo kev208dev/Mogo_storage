@@ -2,9 +2,12 @@ import { describe, expect, it, vi } from "vitest";
 import {
   cutsFingerprint,
   examEndAt,
+  FAST_WINDOW_MS,
   isGradeCutDue,
+  LATE_POLL_INTERVAL_MS,
   normalizeCuts,
   runGradeCutWatch,
+  WATCH_DEADLINE_MS,
   type GradeCutAdapter,
   type WatchExam,
   type WatchSlot,
@@ -55,6 +58,7 @@ function mockStore(initial: WatchSlot[]) {
       slot.lastPolledAt = now;
     },
     fail: async () => {},
+    expire: async (slot) => { slot.status = "failed"; },
   };
   return { store, slots, values, snapshots };
 }
@@ -146,6 +150,19 @@ describe("grade cut watch", () => {
     expect(isGradeCutDue(exam, m.slots[0]!, new Date(after.getTime() + 300_000))).toBe(
       true,
     );
+  });
+  it("reduces late polling and expires unresolved slots", async () => {
+    const m = mockStore([korean]);
+    const mega = adapter("megastudy", "korean");
+    const end = examEndAt(exam).getTime();
+    const late = new Date(end + FAST_WINDOW_MS + 1);
+    m.slots[0]!.lastPolledAt = new Date(late.getTime() - LATE_POLL_INTERVAL_MS + 1);
+    expect(isGradeCutDue(exam, m.slots[0]!, late)).toBe(false);
+    m.slots[0]!.lastPolledAt = new Date(late.getTime() - LATE_POLL_INTERVAL_MS);
+    expect(isGradeCutDue(exam, m.slots[0]!, late)).toBe(true);
+    await runGradeCutWatch(m.store, [mega], new Date(end + WATCH_DEADLINE_MS));
+    expect(m.slots[0]!.status).toBe("failed");
+    expect(mega.collect).not.toHaveBeenCalled();
   });
   it("rejects malformed cuts and ignores unknown course mapping", async () => {
     expect(() =>

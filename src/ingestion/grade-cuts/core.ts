@@ -72,11 +72,22 @@ export function examEndAt(exam: WatchExam): Date {
   return new Date(`${exam.examDate}T${time}:00+09:00`);
 }
 export const POLL_INTERVAL_MS = 5 * 60_000;
+/**
+ * Operational cap: active results receive five-minute checks for 48 hours;
+ * delayed publication is checked hourly for 30 days.
+ */
+export const FAST_WINDOW_MS = 48 * 60 * 60_000;
+export const WATCH_DEADLINE_MS = 30 * 24 * 60 * 60_000;
+export const LATE_POLL_INTERVAL_MS = 60 * 60_000;
 export function isGradeCutDue(exam: WatchExam, slot: WatchSlot, now: Date): boolean {
+  const elapsed = now.getTime() - examEndAt(exam).getTime();
+  const interval = elapsed < FAST_WINDOW_MS ? POLL_INTERVAL_MS : LATE_POLL_INTERVAL_MS;
   return (
     slot.status !== "finalized" &&
-    now >= examEndAt(exam) &&
-    (!slot.lastPolledAt || now.getTime() - slot.lastPolledAt.getTime() >= POLL_INTERVAL_MS)
+    slot.status !== "failed" &&
+    elapsed >= 0 &&
+    elapsed < WATCH_DEADLINE_MS &&
+    (!slot.lastPolledAt || now.getTime() - slot.lastPolledAt.getTime() >= interval)
   );
 }
 
@@ -91,11 +102,22 @@ export interface WatchStore {
   ): Promise<boolean>;
   markPolled(slot: WatchSlot, now: Date): Promise<void>;
   fail(slot: WatchSlot, source: GradeCutSource, error: unknown): Promise<void>;
+  expire?(slot: WatchSlot, now: Date): Promise<void>;
 }
 export interface WatchResult {
   changed: number;
   failures: number;
   polled: number;
+}
+export interface WatchSourceEvent {
+  examId: string;
+  source: GradeCutSource;
+  requested: number;
+  collected: number;
+  changed: number;
+  finalized: number;
+  failed: boolean;
+  durationMs: number;
 }
 
 /** Adapter errors are isolated; persistence errors still surface so a broken DB is visible to operations. */
@@ -104,11 +126,20 @@ export async function runGradeCutWatch(
   adapters: readonly GradeCutAdapter[],
   now: Date,
   revalidate: (exam: WatchExam, slot: WatchSlot) => Promise<void> = async () => {},
+  onSource?: (event: WatchSourceEvent) => void,
 ): Promise<WatchResult> {
   const result: WatchResult = { changed: 0, failures: 0, polled: 0 };
   for (const exam of await store.dueExams(now)) {
     if (now < examEndAt(exam)) continue;
-    const slots = (await store.slots(exam)).filter((slot) => isGradeCutDue(exam, slot, now));
+    const candidates = await store.slots(exam);
+    if (now.getTime() - examEndAt(exam).getTime() >= WATCH_DEADLINE_MS) {
+      for (const slot of candidates) {
+        if (slot.status !== "finalized" && slot.status !== "failed")
+          await store.expire?.(slot, now);
+      }
+      continue;
+    }
+    const slots = candidates.filter((slot) => isGradeCutDue(exam, slot, now));
     if (!slots.length) continue;
     // Official sources run first, then finalized slots are removed before estimated adapters run.
     const verified = adapters
@@ -121,24 +152,51 @@ export async function runGradeCutWatch(
     for (const adapter of verified) {
       const requested = [...active.values()];
       if (!requested.length) break;
+      const started = Date.now();
       let collected: CollectedGradeCut[];
       try {
         collected = await adapter.collect(exam, requested);
       } catch (error) {
         result.failures++;
         for (const slot of requested) await store.fail(slot, adapter.source, error);
+        onSource?.({
+          examId: exam.id,
+          source: adapter.source,
+          requested: requested.length,
+          collected: 0,
+          changed: 0,
+          finalized: 0,
+          failed: true,
+          durationMs: Date.now() - started,
+        });
         continue;
       }
+      let changedCount = 0;
+      let finalizedCount = 0;
       for (const value of collected) {
         const slot = active.get(slotKey(value));
         if (!slot) continue; // wrong course or exam mapping must never create a DB row
         const changed = await store.save(exam, slot, adapter.source, value);
         if (changed) {
           result.changed++;
+          changedCount++;
           await revalidate(exam, slot);
         }
-        if (adapter.source === "official") active.delete(slotKey(slot));
+        if (adapter.source === "official") {
+          active.delete(slotKey(slot));
+          finalizedCount++;
+        }
       }
+      onSource?.({
+        examId: exam.id,
+        source: adapter.source,
+        requested: requested.length,
+        collected: collected.length,
+        changed: changedCount,
+        finalized: finalizedCount,
+        failed: false,
+        durationMs: Date.now() - started,
+      });
     }
     for (const slot of slots) {
       await store.markPolled(slot, now);

@@ -312,5 +312,17 @@ export function createGradeCutStore(db: Database): WatchStore {
           })
           .where(eq(gradeCutWatchStates.id, row.id));
     },
+    async expire(slot, now) {
+      await db.update(gradeCutWatchStates).set({
+        status: "failed", lastError: "감시 기간 종료: 공식 원점수 컷을 확인하지 못했습니다.",
+        updatedAt: now,
+      }).where(and(
+        eq(gradeCutWatchStates.examId, slot.examId),
+        eq(gradeCutWatchStates.subject, slot.subject),
+        eq(gradeCutWatchStates.slotKey, slot.courseId ?? ""),
+        ne(gradeCutWatchStates.status, "finalized"),
+        ne(gradeCutWatchStates.status, "failed"),
+      ));
+    },
   };
 }

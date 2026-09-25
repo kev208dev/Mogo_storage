@@ -40,6 +40,7 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
     const db = getDb();
     if (!db) return NextResponse.json({ error: "database not configured" }, { status: 503 });
     try {
+      const started = Date.now();
       const locked = await withAdvisoryLock(db, "ingest:grade-cuts", () =>
         runGradeCutWatch(createGradeCutStore(db), verifiedGradeCutAdapters, new Date(),
           async (exam, slot) => {
@@ -47,8 +48,14 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
             revalidatePath(examPath(key));
             revalidatePath(examPath(key, slot.subject));
             if (slot.courseCode) revalidatePath(examCoursePath(key, slot.subject, slot.courseCode));
-          }),
+          },
+          (event) => console.info(JSON.stringify({ event: "grade_cut_watch.source", ...event })),
+        ),
       );
+      console.info(JSON.stringify({
+        event: "grade_cut_watch.tick", acquired: locked.acquired,
+        result: locked.acquired ? locked.value : null, durationMs: Date.now() - started,
+      }));
       return NextResponse.json(locked.acquired ? { ok: true, result: locked.value } : { skipped: "locked" });
     } catch (error) {
       console.error("grade_cut_watch.failed", error);

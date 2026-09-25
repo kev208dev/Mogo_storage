@@ -55,17 +55,31 @@ export default async function GradeCutsPage({ searchParams }: PageProps<"/admin/
       <p className="text-muted-foreground text-sm">
         검증된 공개 출처만 자동 수집합니다. 아래 입력은 자동 수집 실패 시 수동 보정용입니다.
       </p>
+      <Panel title="자동 수집 출처">
+        <ul className="space-y-1 text-sm">
+          {GRADE_CUT_SOURCES.map((source) => (
+            <li key={source} className="flex flex-wrap gap-2">
+              <span className="font-semibold">{GRADE_CUT_SOURCE_LABELS[source]}</span>
+              <Badge variant={GRADE_CUT_SOURCE_POLICIES[source].status === "automated_verified" ? "default" : "warning"}>
+                {GRADE_CUT_SOURCE_POLICIES[source].status}
+              </Badge>
+              <span className="text-muted-foreground">{GRADE_CUT_SOURCE_POLICIES[source].note}</span>
+            </li>
+          ))}
+        </ul>
+      </Panel>
 
       <Panel title={`자동 감시 상태 · ${watchRows.length}개 슬롯`}>
         {watchRows.length === 0 ? <p className="text-muted-foreground text-sm">아직 감시 기록이 없습니다.</p> : (
           <div className="overflow-x-auto">
             <table className="min-w-[48rem] w-full text-left text-sm">
-              <thead><tr className="border-b"><th>시험/과목</th><th>상태</th><th>마지막 확인</th><th>공식 확정</th><th>실패</th><th>출처</th><th>마지막 오류</th></tr></thead>
+              <thead><tr className="border-b"><th>시험/과목</th><th>상태</th><th>감시 시작</th><th>마지막 확인</th><th>공식 확정</th><th>실패</th><th>출처</th><th>마지막 오류</th></tr></thead>
               <tbody>{watchRows.map(({ state, exam, course }) => {
                 const present = rows.filter(({ cut }) => cut.examId === exam.id && cut.subject === state.subject && cut.courseId === state.courseId);
                 return <tr key={state.id} className="border-b">
                   <td>{exam.year} 고{exam.grade} {exam.month}월 · {SUBJECT_LABELS[state.subject]}{course ? ` · ${course.name}` : ""}</td>
                   <td><Badge variant={state.status === "finalized" ? "default" : "warning"}>{state.status}</Badge></td>
+                  <td>{state.startedAt ? formatKst(state.startedAt) : "-"}</td>
                   <td>{state.lastPolledAt ? formatKst(state.lastPolledAt) : "-"}</td>
                   <td>{state.finalizedAt ? formatKst(state.finalizedAt) : "-"}</td>
                   <td>{state.failureCount}</td>

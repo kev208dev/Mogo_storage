@@ -96,7 +96,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 6,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/his_main_hsj_461Y98HN.pdf",
@@ -116,7 +123,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 1,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_mun_55A7H57F.pdf",
@@ -174,7 +188,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 5,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_main_hsj_2FVA49I8_2.pdf",
@@ -441,7 +462,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 7,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_mun_JBJ4R7WR.pdf",
@@ -499,7 +527,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 1,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_ear1_hsj_868X54WI.pdf",
@@ -519,7 +554,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 1,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_bio1_hsj_YS6CK7I6.pdf",
@@ -539,7 +581,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 1,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_yrnss_hsj_1FUMJPZ3.pdf",
@@ -559,7 +608,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 1,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/eng_main_hsj_4A53HZ97_1.pdf",
@@ -997,7 +1053,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 6,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/kor_main_hsj_5J8MI931.pdf",
@@ -1055,7 +1118,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 1,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_sks_hsj_97E3796O.pdf",
@@ -1075,7 +1145,14 @@
       },
       "result": "held_manual_review",
       "dbStatus": "manual_review",
-      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)",
+      "recheck": {
+        "checkedAt": "2026-09-25T13:08:33.986149Z",
+        "method": "full PDF text, every page",
+        "pages": 1,
+        "result": "still_held",
+        "reason": "문서 전체에서 시험의 시행 연도·월·학년을 확정하는 표기가 없음; 파일명이나 URL 경로만으로 승인하지 않음"
+      }
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_main_hsj_7E1O8247.pdf",

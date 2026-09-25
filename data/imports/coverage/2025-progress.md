@@ -17,6 +17,7 @@ This is an intermediate audit. The 2025 course and file-type inventory is not co
 - EBSi's high3 3/5/7 monthly summary omits Korean history, but its own PDF files confirm actual Korean-history questions or solutions for all three exams. The exam-specific PDFs take precedence over the summary label.
 - The 2025 high3 May exam occurred on 8 May. The EBSi file directory `20250430` is not the exam date.
 - The provisional [full-year slot matrix](2025-expected-slots.csv) has 669 rows: 178 document/public-confirmed, 435 based on EBSi subject-scope tables awaiting exam-specific confirmation, and 56 with official availability or grade-model uncertainty. Its missing count is **not** a final completeness number. The high3 May [exam-specific matrix](2025-high3-05.csv) currently has 45 question/solution slots. None is public, 37 have newly verified EBSi URLs awaiting import, and eight remain without a safely verified official URL. English listening availability is still under investigation and is outside this 45-slot count.
+- All 11 previously held 2025 PDFs were rechecked page by page. None contains sufficient exam year/month/grade identity; all remain held.
 - Across 2025, 69 new official URL rows have been appended. Each has an EBSi PDF content/identity record in the existing evidence and verification JSON. They are recorded as `verified_pending_import` and `not_imported`, not as approved or public.
 
 - Six published high3 Korean/math question files are subject-wide while the provisional choice-course layout expects course-specific files. Their bundle coverage needs document-level confirmation before counting those course slots ready.
@@ -38,6 +39,6 @@ This is an intermediate audit. The 2025 course and file-type inventory is not co
 ## Next audit steps
 
 1. Resolve the 435 scope-provisional and 56 uncertain matrix rows against actual exam-specific material, especially listening, high2 October vocational/second-language, and choice-course bundle layouts; continue official URL discovery for every confirmed missing slot.
-2. Recheck the 11 held 2025 PDFs with official listing or internal document evidence; retain holds where identity remains unproven.
+2. Seek independent official listing or bundle evidence for the 11 still-held 2025 PDFs; retain holds where identity remains unproven.
 3. Record live DB baseline, import new rows into `manual_review`, approve only through the existing business semantics, and recrawl the public pages and redirects.
 4. Complete 2024 and 2023 audits before starting the 2022 backfill.

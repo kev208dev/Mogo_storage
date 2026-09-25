@@ -181,11 +181,12 @@ interface ExamSourceAdapter {
 }
 ```
 
-| source             | 구현                        | 역할                                   | 상태                |
-| ------------------ | --------------------------- | -------------------------------------- | ------------------- |
-| `kice`             | `KiceExamSource`            | 6·9월 모의평가, 수능 원본 (우선순위 1) | ⚠️ 실제 구조 미검증 |
-| `ebsi`             | `EbsiExamSource`            | 전 학년 기출 archive                   | ⚠️ 실제 구조 미검증 |
-| `education_office` | `EducationOfficeExamSource` | 전국연합학력평가 출제 기관             | ⚠️ 실제 구조 미검증 |
+| source             | 구현                        | 역할                                   | 상태                                                                         |
+| ------------------ | --------------------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
+| `kice`             | `KiceExamSource`            | 6·9월 모의평가, 수능 원본 (우선순위 1) | ⛔ robots `Disallow: /` — 자동 수집 불가                                     |
+| `ebsi`             | `EbsiExamSource`            | 전 학년 기출 archive                   | ⛔ robots `Disallow: /*.ajax$` (archive 가 .ajax 로만 제공) — 자동 수집 불가 |
+| `education_office` | `EducationOfficeExamSource` | 전국연합학력평가 출제 기관             | ⛔ robots 허용 자료실 없음 (합성 가정, disabled)                             |
+| `operator_import`  | 운영자 CSV 입력             | 운영자가 브라우저로 확인한 공식 URL    | ✅ 서버는 URL 에 요청하지 않음, 관리자 승인 후 redirect 게시                 |
 
 > ⚠️ **중요:** 개발 환경의 네트워크 정책 때문에 ebsi.co.kr / suneung.re.kr 에 접근할 수 없어,
 > 각 parser 는 `tests/fixtures/*` 의 **합성 fixture** 기준입니다. 아래 "실제 source 검증" 절차를 통과하기 전에는
@@ -194,7 +195,7 @@ interface ExamSourceAdapter {
 - **같은 시험, 여러 source:** "2026학년도 9월 모의평가", "2025년 9월 모의평가", "9월 모평" 은 모두 `2025-3-09 kice_mock` 하나의 Exam 으로 합쳐지고, 각 source 는 `source_exams` 로 연결됩니다.
 - **우선순위** (`source_priorities`, 시험 유형별로 설정): 평가원 시험은 KICE → EBSi → 교육청, 학력평가는 교육청 → EBSi → KICE 순입니다. 원본성 기준이며 서비스 평가가 아닙니다.
 - **학년도 vs 시행 연도:** URL·SEO 의 `year` 는 항상 **시행 연도**입니다. `2027학년도 수능`은 `/exam/2026/high3/11` 이 되고, `exams.academic_year = 2027` 로 따로 저장됩니다.
-- **영역:** 국어 · 수학 · 영어 · 한국사(`history`) · 사회탐구 · 과학탐구 · 직업탐구(`vocational`) · 제2외국어/한문(`second_language`, URL `second-language`).
+- **영역:** 국어 · 수학 · 영어 · 한국사(`history`) · 사회탐구 · 과학탐구 · 직업탐구(`vocational`) · 제2외국어/한문(`second_language`, URL `second-language`, 예: `/exam/2025/high3/07/second-language/japanese-1`. enum 경로 `/second_language/...` 는 308 로 정식 URL 로 이동).
   과목 탭은 하드코딩하지 않고 시험에 실제로 있는 영역(`exam_subjects`)만 보여줍니다.
 
 ### 세부과목(선택과목) 모델
@@ -235,6 +236,19 @@ interface ExamSourceAdapter {
 - source 원문은 `source_artifacts.source_label` / `source_subject_label` / `course_label` 에 항상 보존합니다 (예: 원문 "사회·문화" ↔ canonical `social-culture`).
 - 관리자 alias 는 "이 시험 체제에만" 저장할 수 있습니다 (과거 표기 "물리Ⅰ" 을 2028 체제에 퍼뜨리지 않음).
 - 직업탐구·제2외국어 course 행은 새 enum 값 제약 때문에 migration 이 아니라 `db:migrate:prod`/`ingest:sources`/`db:seed` 의 카탈로그 동기화가 넣습니다.
+
+### 운영자 공식 URL 입력 (CSV import)
+
+robots.txt 가 자동 요청을 막는 EBSi·KICE·교육청 자료는 우회하지 않습니다 (조사 결과: [docs/SOURCE_SURVEY.md](docs/SOURCE_SURVEY.md)).
+대신 운영자가 브라우저에서 확인한 공식 파일 URL 을 CSV 로 대량 입력하고, 관리자가 확인 후 승인합니다.
+
+- 템플릿: `data/imports/official-urls.template.csv`, 사용법: [docs/OFFICIAL_URL_IMPORT.md](docs/OFFICIAL_URL_IMPORT.md)
+- 입력: 관리자 `/admin/imports` 또는 `npm run import:official-urls -- --file=<csv> --admin=<email> [--dry-run]`
+- 서버는 입력된 URL 을 크롤링·검증하지 않고 `manual_review` 로 저장합니다. 재검증 job·단어장 추출에서도 제외됩니다.
+- 관리자가 [공식 URL 열기]로 실제 파일을 확인하고 "브라우저 확인" 에 체크한 뒤 승인하면 `exam_files.delivery_type=redirect` 로 게시됩니다.
+- 같은 CSV 를 다시 넣어도 결과는 같습니다 (idempotent). URL 이 바뀐 슬롯만 다시 검토 대기가 됩니다.
+- 샘플 시험에 실제 자료가 승인되면 그 시험의 샘플 파일·문항·등급컷 등을 제거하고 실제 시험으로 전환합니다.
+- 실제 데이터 coverage: `npm run ingest:coverage -- --summary`
 
 ### 실제 source 검증 (live fixture)
 

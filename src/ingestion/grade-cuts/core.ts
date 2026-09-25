@@ -1,5 +1,6 @@
 import type { ExamType, GradeCutSource, Subject } from "../../lib/constants";
 import type { GradeCutEntry } from "../../lib/data/types";
+import { gradingMode } from "../../lib/grade-cut-mode";
 
 export type AdapterStatus = "automated_verified" | "disabled_unverified" | "disabled_policy";
 export type WatchStatus = "waiting" | "watching" | "finalized" | "failed";
@@ -121,7 +122,9 @@ export async function runGradeCutWatch(
   const result: WatchResult = { changed: 0, failures: 0, polled: 0 };
   for (const exam of await store.dueExams(now)) {
     if (now < examEndAt(exam)) continue;
-    const slots = (await store.slots(exam)).filter((slot) => isGradeCutDue(exam, slot, now));
+    const slots = (await store.slots(exam)).filter(
+      (slot) => gradingMode(exam, slot.subject) === "relative" && isGradeCutDue(exam, slot, now),
+    );
     if (!slots.length) continue;
     // Official sources run first, then finalized slots are removed before estimated adapters run.
     const verified = adapters

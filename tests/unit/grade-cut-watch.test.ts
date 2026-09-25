@@ -203,6 +203,15 @@ describe("grade cut watch", () => {
     expect(result.polled).toBe(0);
     expect(m.slots[0]!.lastPolledAt).toBeNull();
   });
+  it("never hands absolute-evaluation slots to an adapter", async () => {
+    const english: WatchSlot = { ...korean, subject: "english" };
+    const history: WatchSlot = { ...korean, subject: "history" };
+    const m = mockStore([english, history, korean]);
+    const mega = adapter("megastudy", "korean");
+    await runGradeCutWatch(m.store, [mega], after);
+    expect(mega.collect).toHaveBeenCalledWith(exam, [expect.objectContaining({ subject: "korean" })]);
+    expect(m.slots.slice(0, 2).map((s) => s.lastPolledAt)).toEqual([null, null]);
+  });
   it("orders official first for display and score calculation", () => {
     const make = (source: GradeCut["source"], isOfficial: boolean): GradeCut => ({
       id: source,

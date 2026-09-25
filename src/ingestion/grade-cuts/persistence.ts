@@ -11,6 +11,7 @@ import {
 } from "../../db/schema";
 import type { GradeCutSource, Subject } from "../../lib/constants";
 import type { GradeCutEntry } from "../../lib/data/types";
+import { gradingMode } from "../../lib/grade-cut-mode";
 import {
   cutsFingerprint,
   normalizeCuts,
@@ -32,6 +33,11 @@ export interface CutInput {
 
 /** Current row + immutable history are committed together. Only a genuinely new value writes. */
 export async function persistGradeCut(db: Database, input: CutInput): Promise<boolean> {
+  const [exam] = await db.select({ year: exams.year, grade: exams.grade,
+    examType: exams.examType, academicYear: exams.academicYear })
+    .from(exams).where(eq(exams.id, input.examId)).limit(1);
+  if (!exam || gradingMode(exam, input.subject) !== "relative")
+    throw new Error("fixed or unverified grading mode does not accept grade-cut rows");
   const cuts = normalizeCuts(input.cuts);
   const fingerprint = cutsFingerprint(cuts);
   const url = new URL(input.sourceUrl);
@@ -187,7 +193,7 @@ export function createGradeCutStore(db: Database): WatchStore {
           courseId: d.courseId,
           courseCode: d.code,
         })),
-      ];
+      ].filter((candidate) => gradingMode(exam, candidate.subject) === "relative");
       for (const candidate of candidates) {
         const existing = official.find(
           (o) => o.subject === candidate.subject && o.courseId === candidate.courseId,

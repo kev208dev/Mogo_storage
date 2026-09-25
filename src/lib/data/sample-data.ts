@@ -379,9 +379,6 @@ function buildGradeCuts(featured: Exam): GradeCut[] {
       cuts.push(make(subject, source, bySource[source], null));
     }
   }
-  // 영어·한국사는 절대평가. (등급 기준 점수를 샘플로 입력)
-  cuts.push(make("english", "official", [90, 80, 70, 60, 50, 40, 30, 20], null));
-  cuts.push(make("history", "official", [40, 35, 30, 25, 20, 15, 10, 5], null));
   // 세부과목별 등급컷 샘플 (사회·문화) — 임의의 개발용 수치
   cuts.push(make("social", "official", [47, 43, 38, 32, 26, 20, 15, 11], null, "social-culture"));
   cuts.push(make("social", "ebs", [47, 42, 37, 32, 26, 20, 15, 11], null, "social-culture"));

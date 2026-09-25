@@ -184,7 +184,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
         )}
 
         <Section id="grade-cuts" title="등급컷" description="공식 자료와 기관별 예상 등급컷">
-          <GradeCutTable gradeCuts={gradeCuts} subject={subjectKey} />
+          <GradeCutTable gradeCuts={gradeCuts} subject={subjectKey} exam={exam} />
         </Section>
 
         {isEnglish && vocabulary.length > 0 ? (

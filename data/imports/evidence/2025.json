@@ -2799,6 +2799,438 @@
       "head_content_type": "application/pdf",
       "slot": "2-3 science/earth-science-1 question",
       "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korB_hsj_3547QJ99.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 언어와 매체",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 korean/language-and-media solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korA_hsj_84CU269Q.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 화법과 작문",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 korean/speech-and-writing solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathC_hsj_21O9WYJ1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 기하",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 math/geometry solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathA_hsj_AAXYW9Q6.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 확률과 통계",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 math/probability-and-statistics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathB_hsj_O37T4B42.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 미적분",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 math/calculus solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_yrnss_mun_S29RRK1I.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 윤리와사상",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/ethics-and-thought question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_hanji_mun_9U2Q97EA.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 한국지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/korean-geography question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_easta_hsj_I3N7WM9Y.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 동아시아사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/east-asian-history solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_eco_hsj_V4Q5UD9Y.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/economics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_samun_mun_7OK9HAL8.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 사회·문화",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/social-culture question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_samun_hsj_84NH472I.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 사회·문화",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/social-culture solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_bio1_mun_ZPP9T934.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 생명과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/life-science-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_bio2_mun_W84F5285.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 5월",
+      "search_title": "고3 5월 학평(경기) 생명과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/life-science-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korA_mun_52K1U8L8.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 화법과 작문",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 korean/speech-and-writing question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korA_hsj_G2A2712F.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 화법과 작문",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 korean/speech-and-writing solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korB_mun_79OHAI8N.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 언어와 매체",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 korean/language-and-media question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korB_hsj_YA4UFFZA.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 언어와 매체",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 korean/language-and-media solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathC_mun_2I9GVB8F.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 기하",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 math/geometry question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathC_hsj_NTIPC945_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 기하",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 math/geometry solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathA_mun_C3LS7VF1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 확률과 통계",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 math/probability-and-statistics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathA_hsj_3H2CK4MR_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 확률과 통계",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 math/probability-and-statistics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathB_mun_SS558TO2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 미적분",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 math/calculus question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathB_hsj_86D95W6N_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 미적분",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 math/calculus solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_mun_EH21D6QP.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 english/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_his_hsj_26A66369.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 history/- solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_ssnyr_mun_H5VE2Q89.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 생활과윤리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/life-and-ethics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_ssnyr_hsj_9Q5661C7.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 생활과윤리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/life-and-ethics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_yrnss_mun_CCK82H3B.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 윤리와사상",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/ethics-and-thought question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_yrnss_hsj_92959183.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 윤리와사상",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/ethics-and-thought solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_hanji_mun_47XACI9K.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 한국지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/korean-geography question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_hanji_hsj_73JNNFLL.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 한국지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/korean-geography solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_saeji_mun_21U8BL46.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 세계지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/world-geography question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_saeji_hsj_78X32B7F.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 세계지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/world-geography solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_easta_mun_KSVI75GK.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 동아시아사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/east-asian-history question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_easta_hsj_VRQK1M68.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 동아시아사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/east-asian-history solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_sks_mun_P3KO1452.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 세계사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/world-history question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_bnj_mun_T5P96G69.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/politics-and-law question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_bnj_hsj_59943992.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/politics-and-law solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_eco_mun_8ZV1343C.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/economics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_samun_mun_UE48RL12.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 사회·문화",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/social-culture question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_samun_hsj_F5391T6R.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 사회·문화",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/social-culture solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_phy1_hsj_UVS9FJMZ.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 물리학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 science/physics-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_che1_mun_N3N888IF.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 화학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 science/chemistry-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_che1_hsj_8Z3576U9.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 화학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 science/chemistry-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_bio1_mun_88WE7671.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 생명과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 science/life-science-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_bio1_hsj_23KDIUZM.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 생명과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 science/life-science-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_ear1_mun_494A32K6.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 지구과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 science/earth-science-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_ear1_hsj_4H6P7C92.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 3월",
+      "search_title": "고3 3월 학평(서울) 지구과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 science/earth-science-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
     }
   ],
   "held": [

@@ -517,3 +517,51 @@ year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,off
 2025,2,3,school_mock,2025-03-26,,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_che1_mun_E7XACJL2.pdf,g_che1_mun_E7XACJL2.pdf,EBSi 2025학년도 3월 고2 화학Ⅰ 문제
 2025,2,3,school_mock,2025-03-26,,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_bio1_mun_EXO81C92.pdf,g_bio1_mun_EXO81C92.pdf,EBSi 2025학년도 3월 고2 생명과학Ⅰ 문제
 2025,2,3,school_mock,2025-03-26,,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_ear1_mun_AMO7ZJSH.pdf,g_ear1_mun_AMO7ZJSH.pdf,EBSi 2025학년도 3월 고2 지구과학Ⅰ 문제
+2025,3,5,school_mock,2025-05-08,경기도교육청,korean,language-and-media,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korB_hsj_3547QJ99.pdf,korB_hsj_3547QJ99.pdf,EBSi 2025학년도 5월 고3 언어와 매체 정답 및 해설
+2025,3,5,school_mock,2025-05-08,경기도교육청,korean,speech-and-writing,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korA_hsj_84CU269Q.pdf,korA_hsj_84CU269Q.pdf,EBSi 2025학년도 5월 고3 화법과 작문 정답 및 해설
+2025,3,5,school_mock,2025-05-08,경기도교육청,math,geometry,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathC_hsj_21O9WYJ1.pdf,mathC_hsj_21O9WYJ1.pdf,EBSi 2025학년도 5월 고3 기하 정답 및 해설
+2025,3,5,school_mock,2025-05-08,경기도교육청,math,probability-and-statistics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathA_hsj_AAXYW9Q6.pdf,mathA_hsj_AAXYW9Q6.pdf,EBSi 2025학년도 5월 고3 확률과 통계 정답 및 해설
+2025,3,5,school_mock,2025-05-08,경기도교육청,math,calculus,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathB_hsj_O37T4B42.pdf,mathB_hsj_O37T4B42.pdf,EBSi 2025학년도 5월 고3 미적분 정답 및 해설
+2025,3,5,school_mock,2025-05-08,경기도교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_yrnss_mun_S29RRK1I.pdf,s_yrnss_mun_S29RRK1I.pdf,EBSi 2025학년도 5월 고3 윤리와사상 문제
+2025,3,5,school_mock,2025-05-08,경기도교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_hanji_mun_9U2Q97EA.pdf,s_hanji_mun_9U2Q97EA.pdf,EBSi 2025학년도 5월 고3 한국지리 문제
+2025,3,5,school_mock,2025-05-08,경기도교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_easta_hsj_I3N7WM9Y.pdf,s_easta_hsj_I3N7WM9Y.pdf,EBSi 2025학년도 5월 고3 동아시아사 정답 및 해설
+2025,3,5,school_mock,2025-05-08,경기도교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_eco_hsj_V4Q5UD9Y.pdf,s_eco_hsj_V4Q5UD9Y.pdf,EBSi 2025학년도 5월 고3 경제 정답 및 해설
+2025,3,5,school_mock,2025-05-08,경기도교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_samun_mun_7OK9HAL8.pdf,s_samun_mun_7OK9HAL8.pdf,EBSi 2025학년도 5월 고3 사회·문화 문제
+2025,3,5,school_mock,2025-05-08,경기도교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_samun_hsj_84NH472I.pdf,s_samun_hsj_84NH472I.pdf,EBSi 2025학년도 5월 고3 사회·문화 정답 및 해설
+2025,3,5,school_mock,2025-05-08,경기도교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_bio1_mun_ZPP9T934.pdf,g_bio1_mun_ZPP9T934.pdf,EBSi 2025학년도 5월 고3 생명과학Ⅰ 문제
+2025,3,5,school_mock,2025-05-08,경기도교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_bio2_mun_W84F5285.pdf,g_bio2_mun_W84F5285.pdf,EBSi 2025학년도 5월 고3 생명과학Ⅱ 문제
+2025,3,3,school_mock,2025-03-26,,korean,speech-and-writing,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korA_mun_52K1U8L8.pdf,korA_mun_52K1U8L8.pdf,EBSi 2025학년도 3월 고3 화법과 작문 문제
+2025,3,3,school_mock,2025-03-26,,korean,speech-and-writing,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korA_hsj_G2A2712F.pdf,korA_hsj_G2A2712F.pdf,EBSi 2025학년도 3월 고3 화법과 작문 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,korean,language-and-media,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korB_mun_79OHAI8N.pdf,korB_mun_79OHAI8N.pdf,EBSi 2025학년도 3월 고3 언어와 매체 문제
+2025,3,3,school_mock,2025-03-26,,korean,language-and-media,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korB_hsj_YA4UFFZA.pdf,korB_hsj_YA4UFFZA.pdf,EBSi 2025학년도 3월 고3 언어와 매체 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,math,geometry,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathC_mun_2I9GVB8F.pdf,mathC_mun_2I9GVB8F.pdf,EBSi 2025학년도 3월 고3 기하 문제
+2025,3,3,school_mock,2025-03-26,,math,geometry,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathC_hsj_NTIPC945_1.pdf,mathC_hsj_NTIPC945_1.pdf,EBSi 2025학년도 3월 고3 기하 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,math,probability-and-statistics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathA_mun_C3LS7VF1.pdf,mathA_mun_C3LS7VF1.pdf,EBSi 2025학년도 3월 고3 확률과 통계 문제
+2025,3,3,school_mock,2025-03-26,,math,probability-and-statistics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathA_hsj_3H2CK4MR_1.pdf,mathA_hsj_3H2CK4MR_1.pdf,EBSi 2025학년도 3월 고3 확률과 통계 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,math,calculus,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathB_mun_SS558TO2.pdf,mathB_mun_SS558TO2.pdf,EBSi 2025학년도 3월 고3 미적분 문제
+2025,3,3,school_mock,2025-03-26,,math,calculus,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathB_hsj_86D95W6N_1.pdf,mathB_hsj_86D95W6N_1.pdf,EBSi 2025학년도 3월 고3 미적분 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_mun_EH21D6QP.pdf,eng_mun_EH21D6QP.pdf,EBSi 2025학년도 3월 고3 영어 문제
+2025,3,3,school_mock,2025-03-26,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_his_hsj_26A66369.pdf,s_his_hsj_26A66369.pdf,EBSi 2025학년도 3월 고3 한국사 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,social,life-and-ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_ssnyr_mun_H5VE2Q89.pdf,s_ssnyr_mun_H5VE2Q89.pdf,EBSi 2025학년도 3월 고3 생활과윤리 문제
+2025,3,3,school_mock,2025-03-26,,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_ssnyr_hsj_9Q5661C7.pdf,s_ssnyr_hsj_9Q5661C7.pdf,EBSi 2025학년도 3월 고3 생활과윤리 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_yrnss_mun_CCK82H3B.pdf,s_yrnss_mun_CCK82H3B.pdf,EBSi 2025학년도 3월 고3 윤리와사상 문제
+2025,3,3,school_mock,2025-03-26,,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_yrnss_hsj_92959183.pdf,s_yrnss_hsj_92959183.pdf,EBSi 2025학년도 3월 고3 윤리와사상 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_hanji_mun_47XACI9K.pdf,s_hanji_mun_47XACI9K.pdf,EBSi 2025학년도 3월 고3 한국지리 문제
+2025,3,3,school_mock,2025-03-26,,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_hanji_hsj_73JNNFLL.pdf,s_hanji_hsj_73JNNFLL.pdf,EBSi 2025학년도 3월 고3 한국지리 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_saeji_mun_21U8BL46.pdf,s_saeji_mun_21U8BL46.pdf,EBSi 2025학년도 3월 고3 세계지리 문제
+2025,3,3,school_mock,2025-03-26,,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_saeji_hsj_78X32B7F.pdf,s_saeji_hsj_78X32B7F.pdf,EBSi 2025학년도 3월 고3 세계지리 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_easta_mun_KSVI75GK.pdf,s_easta_mun_KSVI75GK.pdf,EBSi 2025학년도 3월 고3 동아시아사 문제
+2025,3,3,school_mock,2025-03-26,,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_easta_hsj_VRQK1M68.pdf,s_easta_hsj_VRQK1M68.pdf,EBSi 2025학년도 3월 고3 동아시아사 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_sks_mun_P3KO1452.pdf,s_sks_mun_P3KO1452.pdf,EBSi 2025학년도 3월 고3 세계사 문제
+2025,3,3,school_mock,2025-03-26,,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_bnj_mun_T5P96G69.pdf,s_bnj_mun_T5P96G69.pdf,EBSi 2025학년도 3월 고3 정치와 법 문제
+2025,3,3,school_mock,2025-03-26,,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_bnj_hsj_59943992.pdf,s_bnj_hsj_59943992.pdf,EBSi 2025학년도 3월 고3 정치와 법 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_eco_mun_8ZV1343C.pdf,s_eco_mun_8ZV1343C.pdf,EBSi 2025학년도 3월 고3 경제 문제
+2025,3,3,school_mock,2025-03-26,,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_samun_mun_UE48RL12.pdf,s_samun_mun_UE48RL12.pdf,EBSi 2025학년도 3월 고3 사회·문화 문제
+2025,3,3,school_mock,2025-03-26,,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_samun_hsj_F5391T6R.pdf,s_samun_hsj_F5391T6R.pdf,EBSi 2025학년도 3월 고3 사회·문화 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_phy1_hsj_UVS9FJMZ.pdf,g_phy1_hsj_UVS9FJMZ.pdf,EBSi 2025학년도 3월 고3 물리학Ⅰ 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_che1_mun_N3N888IF.pdf,g_che1_mun_N3N888IF.pdf,EBSi 2025학년도 3월 고3 화학Ⅰ 문제
+2025,3,3,school_mock,2025-03-26,,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_che1_hsj_8Z3576U9.pdf,g_che1_hsj_8Z3576U9.pdf,EBSi 2025학년도 3월 고3 화학Ⅰ 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_bio1_mun_88WE7671.pdf,g_bio1_mun_88WE7671.pdf,EBSi 2025학년도 3월 고3 생명과학Ⅰ 문제
+2025,3,3,school_mock,2025-03-26,,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_bio1_hsj_23KDIUZM.pdf,g_bio1_hsj_23KDIUZM.pdf,EBSi 2025학년도 3월 고3 생명과학Ⅰ 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_ear1_mun_494A32K6.pdf,g_ear1_mun_494A32K6.pdf,EBSi 2025학년도 3월 고3 지구과학Ⅰ 문제
+2025,3,3,school_mock,2025-03-26,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_ear1_hsj_4H6P7C92.pdf,g_ear1_hsj_4H6P7C92.pdf,EBSi 2025학년도 3월 고3 지구과학Ⅰ 정답 및 해설

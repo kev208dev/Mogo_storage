@@ -1728,6 +1728,141 @@
       "head_content_type": "application/pdf",
       "slot": "3-3 english/ listening_script",
       "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_phy1_mun_QIY1919K.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 물리학Ⅰ 문제지",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 물리학Ⅰ 문제지",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 science/physics-1 question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_phy1_hsj_R84GC29E.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 물리학Ⅰ 정답 및 해설",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 물리학Ⅰ 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 science/physics-1 solution",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_che1_mun_H596NV3A.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 화학Ⅰ 문제지",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 화학Ⅰ 문제지",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 science/chemistry-1 question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_che1_hsj_4MI6488G.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 science/chemistry-1 solution",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_bio1_mun_A39CG49A.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 생명과학Ⅰ 문제지",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 생명과학Ⅰ 문제지",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 science/life-science-1 question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_bio1_hsj_U3419P29.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 science/life-science-1 solution",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_ear1_mun_341A288K.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 지구과학Ⅰ 문제지",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 지구과학Ⅰ 문제지",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 science/earth-science-1 question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_ear1_hsj_3I6G2A69.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 science/earth-science-1 solution",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_ssnyr_mun_X65IQO71_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 생활과 윤리 문제지",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 생활과 윤리 문제지",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/life-and-ethics question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_ssnyr_hsj_D1GA573M.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 생활과 윤리 정답 및 해설",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 생활과 윤리 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/life-and-ethics solution",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_yrnss_mun_CZ77D2JG.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 윤리와 사상 문제지",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 윤리와 사상 문제지",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/ethics-and-thought question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_saeji_mun_1T89GI2Z.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 세계지리 문제지",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 세계지리 문제지",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/world-geography question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_saeji_hsj_2X9868RF.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 세계지리 정답 및 해설",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 세계지리 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/world-geography solution",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_easta_mun_64IY5A17.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 동아시아사 문제지",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 동아시아사 문제지",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/east-asian-history question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_sks_hsj_2W235Y99.pdf",
+      "search_query": "site:wdown.ebsi.co.kr 2025학년도 6월 고2 전국연합학력평가 세계사 정답 및 해설",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 세계사 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/world-history solution",
+      "discovery": "search_engine_indexed_official_url"
     }
   ],
   "held": [

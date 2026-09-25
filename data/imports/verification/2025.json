@@ -3768,6 +3768,291 @@
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_phy1_mun_QIY1919K.pdf",
+      "slot": "2025 고2 6월 school_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2003522,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:44:40.851Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 물리학Ⅰ, 문제지이 명시됨",
+        "sha256": "5ab30e84fb95ceaa09e23aa40872c8f991cae5d15d52ef59cf62cdcc81c2de56"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_phy1_hsj_R84GC29E.pdf",
+      "slot": "2025 고2 6월 school_mock science/physics-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 141745,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T15:44:40.851Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 물리학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "76ccf2094f91ee5e1d8bd8a1e19b60d89aac5358cf857f66433497856e977d28"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_che1_mun_H596NV3A.pdf",
+      "slot": "2025 고2 6월 school_mock science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1868422,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:44:40.851Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 화학Ⅰ, 문제지이 명시됨",
+        "sha256": "1926e1b4f913e74e6cc8e85b17a4b5c7b303b9d3dcc8f3ee9463b979db0400ff"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_che1_hsj_4MI6488G.pdf",
+      "slot": "2025 고2 6월 school_mock science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 213250,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T15:44:40.851Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 화학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "e3b9c0fbf44eecb3c9f615c84da279a0b88f3f31c3b2ec6905454dca318662d2"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_bio1_mun_A39CG49A.pdf",
+      "slot": "2025 고2 6월 school_mock science/life-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2434762,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:44:40.851Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 생명과학Ⅰ, 문제지이 명시됨",
+        "sha256": "f5a26db272ef571c346ce42b154804ca57a6a87014b54d030529e490274648f3"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_bio1_hsj_U3419P29.pdf",
+      "slot": "2025 고2 6월 school_mock science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 141951,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T15:44:40.851Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 생명과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "f3ad0a623e9773dd29a53530c376f5dfd22c7045f6b97bfae9434d6e2d4b70b8"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_ear1_mun_341A288K.pdf",
+      "slot": "2025 고2 6월 school_mock science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4863789,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:44:40.851Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 지구과학Ⅰ, 문제지이 명시됨",
+        "sha256": "4cc13a2e9d9c2daf74659298d6d9c7967aeb5e7a6a328246a8cbe3ddb9d3dc44"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_ear1_hsj_3I6G2A69.pdf",
+      "slot": "2025 고2 6월 school_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 160338,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T15:44:40.851Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 지구과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "f115819adacd2c665e50370e0d8170e0a00bc3d0867dbb5d590d016fe7712d46"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_ssnyr_mun_X65IQO71_1.pdf",
+      "slot": "2025 고2 6월 school_mock social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1660347,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:47:15.798Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 생활과 윤리, 문제지이 명시됨",
+        "sha256": "bcbb03cb48606488634af8c0503807209425fa53f747400b9bf4185e915f23d7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_ssnyr_hsj_D1GA573M.pdf",
+      "slot": "2025 고2 6월 school_mock social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 161393,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T15:47:15.798Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 생활과 윤리, 정답 및 해설이 명시됨",
+        "sha256": "d4d3799a5b6f7d85fc8fabf707cae9338ec8a011c0b1f0f92a53ac20fe0eb668"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_yrnss_mun_CZ77D2JG.pdf",
+      "slot": "2025 고2 6월 school_mock social/ethics-and-thought question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1718721,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:47:15.798Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 윤리와 사상, 문제지이 명시됨",
+        "sha256": "fec3f241f52bb4264603dd3df03ef6b843fe5f10cbc5f65fa6fc8c1c9b3b9255"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_saeji_mun_1T89GI2Z.pdf",
+      "slot": "2025 고2 6월 school_mock social/world-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 17921868,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:47:15.798Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 세계지리, 문제지이 명시됨",
+        "sha256": "5717d9c02a8e896daba16cf72c380c81d1c2f6a459aa3a88f4a09312cf9ced2f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_saeji_hsj_2X9868RF.pdf",
+      "slot": "2025 고2 6월 school_mock social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 170264,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T15:47:15.798Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 세계지리, 정답 및 해설이 명시됨",
+        "sha256": "6e365760cb357f7f5d3a520e863baccc21d17bd150cd4d32500d0253ad7cf4cb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_easta_mun_64IY5A17.pdf",
+      "slot": "2025 고2 6월 school_mock social/east-asian-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 8124019,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:47:15.798Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 동아시아사, 문제지이 명시됨",
+        "sha256": "5b60c2f6ccbfbae64dec9657d7baea953a98bb3a0f0574f77b0567ec9402ea5d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_sks_hsj_2W235Y99.pdf",
+      "slot": "2025 고2 6월 school_mock social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 171804,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T15:47:15.798Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 세계사, 정답 및 해설이 명시됨",
+        "sha256": "d49b883a1f69b14f8752b7de0b31c9f9ccc5f7ba3d0b96744bab7149ea998f07"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

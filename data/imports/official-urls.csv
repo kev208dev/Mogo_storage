@@ -398,3 +398,18 @@ year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,off
 2025,1,6,school_mock,2025-06-04,,english,,listening_script,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_1_scr_5KS2R8O8.pdf,eng_1_scr_5KS2R8O8.pdf,EBSi 2025학년도 6월 고1 영어 듣기평가 대본
 2025,2,3,school_mock,2025-03-26,,english,,listening_script,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_scr_RD4QHL9N.pdf,eng_scr_RD4QHL9N.pdf,EBSi 2025학년도 3월 고2 영어 듣기평가 대본
 2025,3,3,school_mock,2025-03-26,,english,,listening_script,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_scr_8O2866EF.pdf,eng_scr_8O2866EF.pdf,EBSi 2025학년도 3월 고3 영어 듣기평가 대본
+2025,2,6,school_mock,2025-06-04,,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_phy1_mun_QIY1919K.pdf,g_phy1_mun_QIY1919K.pdf,EBSi 2025학년도 6월 고2 물리학Ⅰ 문제
+2025,2,6,school_mock,2025-06-04,,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_phy1_hsj_R84GC29E.pdf,g_phy1_hsj_R84GC29E.pdf,EBSi 2025학년도 6월 고2 물리학Ⅰ 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_che1_mun_H596NV3A.pdf,g_che1_mun_H596NV3A.pdf,EBSi 2025학년도 6월 고2 화학Ⅰ 문제
+2025,2,6,school_mock,2025-06-04,,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_che1_hsj_4MI6488G.pdf,g_che1_hsj_4MI6488G.pdf,EBSi 2025학년도 6월 고2 화학Ⅰ 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_bio1_mun_A39CG49A.pdf,g_bio1_mun_A39CG49A.pdf,EBSi 2025학년도 6월 고2 생명과학Ⅰ 문제
+2025,2,6,school_mock,2025-06-04,,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_bio1_hsj_U3419P29.pdf,g_bio1_hsj_U3419P29.pdf,EBSi 2025학년도 6월 고2 생명과학Ⅰ 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_ear1_mun_341A288K.pdf,g_ear1_mun_341A288K.pdf,EBSi 2025학년도 6월 고2 지구과학Ⅰ 문제
+2025,2,6,school_mock,2025-06-04,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/g_ear1_hsj_3I6G2A69.pdf,g_ear1_hsj_3I6G2A69.pdf,EBSi 2025학년도 6월 고2 지구과학Ⅰ 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,social,life-and-ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_ssnyr_mun_X65IQO71_1.pdf,s_ssnyr_mun_X65IQO71_1.pdf,EBSi 2025학년도 6월 고2 생활과 윤리 문제
+2025,2,6,school_mock,2025-06-04,,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_ssnyr_hsj_D1GA573M.pdf,s_ssnyr_hsj_D1GA573M.pdf,EBSi 2025학년도 6월 고2 생활과 윤리 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_yrnss_mun_CZ77D2JG.pdf,s_yrnss_mun_CZ77D2JG.pdf,EBSi 2025학년도 6월 고2 윤리와 사상 문제
+2025,2,6,school_mock,2025-06-04,,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_saeji_mun_1T89GI2Z.pdf,s_saeji_mun_1T89GI2Z.pdf,EBSi 2025학년도 6월 고2 세계지리 문제
+2025,2,6,school_mock,2025-06-04,,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_saeji_hsj_2X9868RF.pdf,s_saeji_hsj_2X9868RF.pdf,EBSi 2025학년도 6월 고2 세계지리 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_easta_mun_64IY5A17.pdf,s_easta_mun_64IY5A17.pdf,EBSi 2025학년도 6월 고2 동아시아사 문제
+2025,2,6,school_mock,2025-06-04,,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_sks_hsj_2W235Y99.pdf,s_sks_hsj_2W235Y99.pdf,EBSi 2025학년도 6월 고2 세계사 정답 및 해설

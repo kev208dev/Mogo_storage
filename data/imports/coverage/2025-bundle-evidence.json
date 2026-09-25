@@ -1,0 +1,440 @@
+{
+  "year": 2025,
+  "bundles": [
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 7,
+      "subject": "korean",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_mun_3FVD5KG6_1.pdf",
+      "bytes": 952797,
+      "sha256": "fc70e6fe486fb8e7af8a484c2fa3a2c0c0a2a957ce6f26ef0733ae3813eff8da",
+      "pages": 20,
+      "course_headers": [
+        {
+          "page": 13,
+          "headings": [
+            "제1 교시 국어영역(화법과 작문)"
+          ]
+        },
+        {
+          "page": 17,
+          "headings": [
+            "제1 교시 국어영역(언어와 매체)",
+            "제1 교시 국어영역(언어와 매체)"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-25T13:36:21.157112+00:00",
+      "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+      "coverage": [
+        {
+          "course_code": "speech-and-writing",
+          "common_pages": [
+            1,
+            12
+          ],
+          "choice_pages": [
+            13,
+            16
+          ],
+          "label": "화법과 작문"
+        },
+        {
+          "course_code": "language-and-media",
+          "common_pages": [
+            1,
+            12
+          ],
+          "choice_pages": [
+            17,
+            20
+          ],
+          "label": "언어와 매체"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 9,
+      "subject": "math",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "bytes": 1362723,
+      "sha256": "ba40b16aebd2b922d2f9816977038c6d94e9db8534d4c833d1d7a3a599384902",
+      "pages": 20,
+      "course_headers": [
+        {
+          "page": 9,
+          "headings": [
+            "(확률과 통계) 3",
+            "(확률과 통계) 제2 교시"
+          ]
+        },
+        {
+          "page": 10,
+          "headings": [
+            "2 (확률과 통계)"
+          ]
+        },
+        {
+          "page": 11,
+          "headings": [
+            "(확률과 통계) 3"
+          ]
+        },
+        {
+          "page": 12,
+          "headings": [
+            "4 (확률과 통계)"
+          ]
+        },
+        {
+          "page": 13,
+          "headings": [
+            "(미적분) 3",
+            "(미적분) 제2 교시"
+          ]
+        },
+        {
+          "page": 14,
+          "headings": [
+            "2 (미적분)"
+          ]
+        },
+        {
+          "page": 15,
+          "headings": [
+            "(미적분) 3"
+          ]
+        },
+        {
+          "page": 16,
+          "headings": [
+            "4 (미적분)"
+          ]
+        },
+        {
+          "page": 17,
+          "headings": [
+            "(기하) 3",
+            "(기하) 제2 교시"
+          ]
+        },
+        {
+          "page": 18,
+          "headings": [
+            "2 (기하)"
+          ]
+        },
+        {
+          "page": 19,
+          "headings": [
+            "(기하) 3"
+          ]
+        },
+        {
+          "page": 20,
+          "headings": [
+            "4 (기하)"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-25T13:36:21.157112+00:00",
+      "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+      "coverage": [
+        {
+          "course_code": "probability-and-statistics",
+          "common_pages": [
+            1,
+            8
+          ],
+          "choice_pages": [
+            9,
+            12
+          ],
+          "label": "확률과 통계"
+        },
+        {
+          "course_code": "calculus",
+          "common_pages": [
+            1,
+            8
+          ],
+          "choice_pages": [
+            13,
+            16
+          ],
+          "label": "미적분"
+        },
+        {
+          "course_code": "geometry",
+          "common_pages": [
+            1,
+            8
+          ],
+          "choice_pages": [
+            17,
+            20
+          ],
+          "label": "기하"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 10,
+      "subject": "korean",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf",
+      "bytes": 1992792,
+      "sha256": "f17dcbc1ff5c8a315c62cfc1a36e4464e369c5267f7136aac8ccd64f956fcf74",
+      "pages": 20,
+      "course_headers": [],
+      "checked_at": "2026-09-25T13:36:21.157112+00:00",
+      "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+      "coverage": [
+        {
+          "course_code": "speech-and-writing",
+          "common_pages": [
+            1,
+            12
+          ],
+          "choice_pages": [
+            13,
+            16
+          ],
+          "label": "화법과 작문"
+        },
+        {
+          "course_code": "language-and-media",
+          "common_pages": [
+            1,
+            12
+          ],
+          "choice_pages": [
+            17,
+            20
+          ],
+          "label": "언어와 매체"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 11,
+      "subject": "korean",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf",
+      "bytes": 3873553,
+      "sha256": "d92acc5da6806a3c1fe4adc84c4acbf7fa90e75ec6112a78d18adedca17e3d3d",
+      "pages": 20,
+      "course_headers": [
+        {
+          "page": 13,
+          "headings": [
+            "(화법과 작문)"
+          ]
+        },
+        {
+          "page": 14,
+          "headings": [
+            "2 (화법과 작문) 홀수형"
+          ]
+        },
+        {
+          "page": 15,
+          "headings": [
+            "홀수형 (화법과 작문) 3"
+          ]
+        },
+        {
+          "page": 16,
+          "headings": [
+            "4 (화법과 작문) 홀수형"
+          ]
+        },
+        {
+          "page": 17,
+          "headings": [
+            "(언어와 매체)"
+          ]
+        },
+        {
+          "page": 18,
+          "headings": [
+            "2 (언어와 매체) 홀수형"
+          ]
+        },
+        {
+          "page": 19,
+          "headings": [
+            "홀수형 (언어와 매체) 3"
+          ]
+        },
+        {
+          "page": 20,
+          "headings": [
+            "4 (언어와 매체) 홀수형"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-25T13:36:21.157112+00:00",
+      "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+      "coverage": [
+        {
+          "course_code": "speech-and-writing",
+          "common_pages": [
+            1,
+            12
+          ],
+          "choice_pages": [
+            13,
+            16
+          ],
+          "label": "화법과 작문"
+        },
+        {
+          "course_code": "language-and-media",
+          "common_pages": [
+            1,
+            12
+          ],
+          "choice_pages": [
+            17,
+            20
+          ],
+          "label": "언어와 매체"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 11,
+      "subject": "math",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "bytes": 1092019,
+      "sha256": "f54547426a6a08d8cd6d4e4da1ff41a186cb4a7d274190e1ce3afe8f84eafed0",
+      "pages": 20,
+      "course_headers": [
+        {
+          "page": 9,
+          "headings": [
+            "홀수형 (확률과 통계) 3",
+            "(확률과 통계) 제2 교시 홀수형"
+          ]
+        },
+        {
+          "page": 10,
+          "headings": [
+            "2 (확률과 통계) 홀수형"
+          ]
+        },
+        {
+          "page": 11,
+          "headings": [
+            "홀수형 (확률과 통계) 3"
+          ]
+        },
+        {
+          "page": 12,
+          "headings": [
+            "4 (확률과 통계) 홀수형"
+          ]
+        },
+        {
+          "page": 13,
+          "headings": [
+            "홀수형 (미적분) 3",
+            "(미적분) 제2 교시"
+          ]
+        },
+        {
+          "page": 14,
+          "headings": [
+            "2 (미적분) 홀수형"
+          ]
+        },
+        {
+          "page": 15,
+          "headings": [
+            "홀수형 (미적분) 3"
+          ]
+        },
+        {
+          "page": 16,
+          "headings": [
+            "4 (미적분) 홀수형"
+          ]
+        },
+        {
+          "page": 17,
+          "headings": [
+            "홀수형 (기하) 3",
+            "(기하) 제2 교시"
+          ]
+        },
+        {
+          "page": 18,
+          "headings": [
+            "2 (기하) 홀수형"
+          ]
+        },
+        {
+          "page": 19,
+          "headings": [
+            "홀수형 (기하) 3"
+          ]
+        },
+        {
+          "page": 20,
+          "headings": [
+            "4 (기하) 홀수형"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-25T13:36:21.157112+00:00",
+      "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+      "coverage": [
+        {
+          "course_code": "probability-and-statistics",
+          "common_pages": [
+            1,
+            8
+          ],
+          "choice_pages": [
+            9,
+            12
+          ],
+          "label": "확률과 통계"
+        },
+        {
+          "course_code": "calculus",
+          "common_pages": [
+            1,
+            8
+          ],
+          "choice_pages": [
+            13,
+            16
+          ],
+          "label": "미적분"
+        },
+        {
+          "course_code": "geometry",
+          "common_pages": [
+            1,
+            8
+          ],
+          "choice_pages": [
+            17,
+            20
+          ],
+          "label": "기하"
+        }
+      ]
+    }
+  ],
+  "unresolved": "High3 June math source returns 404; bundle content cannot be verified."
+}

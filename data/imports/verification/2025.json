@@ -3369,6 +3369,234 @@
       "result": "verified_pending_import",
       "dbStatus": "not_imported",
       "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_mun_3FVD5KG6_1.pdf",
+      "slot": "2025 고3 7월 school_mock korean/speech-and-writing question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 952797,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "공식 통합본 13쪽 선택과목 머리말: 화법과 작문; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "fc70e6fe486fb8e7af8a484c2fa3a2c0c0a2a957ce6f26ef0733ae3813eff8da"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_mun_3FVD5KG6_1.pdf",
+      "slot": "2025 고3 7월 school_mock korean/language-and-media question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 952797,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "공식 통합본 17쪽 선택과목 머리말: 언어와 매체; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "fc70e6fe486fb8e7af8a484c2fa3a2c0c0a2a957ce6f26ef0733ae3813eff8da"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "slot": "2025 고3 9월 kice_mock math/probability-and-statistics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1362723,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험 9월 모의평가",
+        "visual": "공식 통합본 9쪽 선택과목 머리말: 확률과 통계; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "ba40b16aebd2b922d2f9816977038c6d94e9db8534d4c833d1d7a3a599384902"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "slot": "2025 고3 9월 kice_mock math/calculus question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1362723,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험 9월 모의평가",
+        "visual": "공식 통합본 13쪽 선택과목 머리말: 미적분; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "ba40b16aebd2b922d2f9816977038c6d94e9db8534d4c833d1d7a3a599384902"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "slot": "2025 고3 9월 kice_mock math/geometry question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1362723,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험 9월 모의평가",
+        "visual": "공식 통합본 17쪽 선택과목 머리말: 기하; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "ba40b16aebd2b922d2f9816977038c6d94e9db8534d4c833d1d7a3a599384902"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf",
+      "slot": "2025 고3 10월 school_mock korean/speech-and-writing question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1992792,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "공식 통합본 13쪽 선택과목 머리말: 화법과 작문; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "f17dcbc1ff5c8a315c62cfc1a36e4464e369c5267f7136aac8ccd64f956fcf74"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf",
+      "slot": "2025 고3 10월 school_mock korean/language-and-media question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1992792,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2025학년도 10월 고3 전국연합학력평가",
+        "visual": "공식 통합본 17쪽 선택과목 머리말: 언어와 매체; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "f17dcbc1ff5c8a315c62cfc1a36e4464e369c5267f7136aac8ccd64f956fcf74"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf",
+      "slot": "2025 고3 11월 csat korean/speech-and-writing question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3873553,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "공식 통합본 13쪽 선택과목 머리말: 화법과 작문; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "d92acc5da6806a3c1fe4adc84c4acbf7fa90e75ec6112a78d18adedca17e3d3d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf",
+      "slot": "2025 고3 11월 csat korean/language-and-media question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3873553,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "공식 통합본 17쪽 선택과목 머리말: 언어와 매체; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "d92acc5da6806a3c1fe4adc84c4acbf7fa90e75ec6112a78d18adedca17e3d3d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "slot": "2025 고3 11월 csat math/probability-and-statistics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1092019,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "공식 통합본 9쪽 선택과목 머리말: 확률과 통계; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "f54547426a6a08d8cd6d4e4da1ff41a186cb4a7d274190e1ce3afe8f84eafed0"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "slot": "2025 고3 11월 csat math/calculus question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1092019,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "공식 통합본 13쪽 선택과목 머리말: 미적분; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "f54547426a6a08d8cd6d4e4da1ff41a186cb4a7d274190e1ce3afe8f84eafed0"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "slot": "2025 고3 11월 csat math/geometry question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1092019,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T13:36:21.157112+00:00"
+      },
+      "evidence": {
+        "method": "curl PDF retrieval, PyMuPDF full text and rendered page-header visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험",
+        "visual": "공식 통합본 17쪽 선택과목 머리말: 기하; 공통 문항과 선택 문항을 함께 포함",
+        "bundleSha256": "f54547426a6a08d8cd6d4e4da1ff41a186cb4a7d274190e1ce3afe8f84eafed0"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

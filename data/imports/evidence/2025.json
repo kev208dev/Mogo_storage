@@ -1491,6 +1491,162 @@
       "slot": "3-3 history/ question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 본문에 2025학년도 3월 고3 전국연합학력평가 문제지와 한국사 영역 확인. EBSi 일정의 영역 요약은 한국사를 명시하지 않지만 실제 공식 문제지가 존재함."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_mun_3FVD5KG6_1.pdf",
+      "search_query": "2025학년도 10월 고3 전국연합학력평가 한국사 wdown.ebsi.co.kr",
+      "search_title": "고3 국어영역 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 중국의 유학자인 주희는 사물의 이치를 탐구하는 궁리(窮理)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 korean/speech-and-writing question",
+      "bundle_evidence": {
+        "page": 13,
+        "heading": "화법과 작문",
+        "sha256": "fc70e6fe486fb8e7af8a484c2fa3a2c0c0a2a957ce6f26ef0733ae3813eff8da"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_mun_3FVD5KG6_1.pdf",
+      "search_query": "2025학년도 10월 고3 전국연합학력평가 한국사 wdown.ebsi.co.kr",
+      "search_title": "고3 국어영역 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 중국의 유학자인 주희는 사물의 이치를 탐구하는 궁리(窮理)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 korean/language-and-media question",
+      "bundle_evidence": {
+        "page": 17,
+        "heading": "언어와 매체",
+        "sha256": "fc70e6fe486fb8e7af8a484c2fa3a2c0c0a2a957ce6f26ef0733ae3813eff8da"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "search_query": "2026학년도 9월 모의평가 국어 문제지 wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 5지선다형 1. ×   의 값은? [2점] ①",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 math/probability-and-statistics question",
+      "bundle_evidence": {
+        "page": 9,
+        "heading": "확률과 통계",
+        "sha256": "ba40b16aebd2b922d2f9816977038c6d94e9db8534d4c833d1d7a3a599384902"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "search_query": "2026학년도 9월 모의평가 국어 문제지 wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 5지선다형 1. ×   의 값은? [2점] ①",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 math/calculus question",
+      "bundle_evidence": {
+        "page": 13,
+        "heading": "미적분",
+        "sha256": "ba40b16aebd2b922d2f9816977038c6d94e9db8534d4c833d1d7a3a599384902"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "search_query": "2026학년도 9월 모의평가 국어 문제지 wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 5지선다형 1. ×   의 값은? [2점] ①",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 math/geometry question",
+      "bundle_evidence": {
+        "page": 17,
+        "heading": "기하",
+        "sha256": "ba40b16aebd2b922d2f9816977038c6d94e9db8534d4c833d1d7a3a599384902"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf",
+      "search_query": "2025학년도 10월 고3 전국연합학력평가 국어 정답 wdown.ebsi.co.kr",
+      "search_title": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 인지 심리학에서는 외부 세계를 이미지로 구조화한 정신 표",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-10 korean/speech-and-writing question",
+      "bundle_evidence": {
+        "page": 13,
+        "heading": "화법과 작문",
+        "sha256": "f17dcbc1ff5c8a315c62cfc1a36e4464e369c5267f7136aac8ccd64f956fcf74"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf",
+      "search_query": "2025학년도 10월 고3 전국연합학력평가 국어 정답 wdown.ebsi.co.kr",
+      "search_title": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 인지 심리학에서는 외부 세계를 이미지로 구조화한 정신 표",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-10 korean/language-and-media question",
+      "bundle_evidence": {
+        "page": 17,
+        "heading": "언어와 매체",
+        "sha256": "f17dcbc1ff5c8a315c62cfc1a36e4464e369c5267f7136aac8ccd64f956fcf74"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251113 go3 live_main_paper",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 korean/speech-and-writing question",
+      "bundle_evidence": {
+        "page": 13,
+        "heading": "화법과 작문",
+        "sha256": "d92acc5da6806a3c1fe4adc84c4acbf7fa90e75ec6112a78d18adedca17e3d3d"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251113 go3 live_main_paper",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 korean/language-and-media question",
+      "bundle_evidence": {
+        "page": 17,
+        "heading": "언어와 매체",
+        "sha256": "d92acc5da6806a3c1fe4adc84c4acbf7fa90e75ec6112a78d18adedca17e3d3d"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251113 go3 live_main_paper",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 5지선다형 1.   ×    의 값은? [2점]",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 math/probability-and-statistics question",
+      "bundle_evidence": {
+        "page": 9,
+        "heading": "확률과 통계",
+        "sha256": "f54547426a6a08d8cd6d4e4da1ff41a186cb4a7d274190e1ce3afe8f84eafed0"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251113 go3 live_main_paper",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 5지선다형 1.   ×    의 값은? [2점]",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 math/calculus question",
+      "bundle_evidence": {
+        "page": 13,
+        "heading": "미적분",
+        "sha256": "f54547426a6a08d8cd6d4e4da1ff41a186cb4a7d274190e1ce3afe8f84eafed0"
+      }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251113 go3 live_main_paper",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 5지선다형 1.   ×    의 값은? [2점]",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 math/geometry question",
+      "bundle_evidence": {
+        "page": 17,
+        "heading": "기하",
+        "sha256": "f54547426a6a08d8cd6d4e4da1ff41a186cb4a7d274190e1ce3afe8f84eafed0"
+      }
     }
   ],
   "held": [

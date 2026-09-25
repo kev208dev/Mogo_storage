@@ -1,0 +1,328 @@
+{
+  "year": 2025,
+  "status": "partial_course_inventory",
+  "method": "EBSi 공식 시행 일정, 2025년 6월 시행일 변경 정부 발표, 학교 5월 시행 공지, 실제 EBSi 공식 PDF 본문을 대조",
+  "notes": [
+    "2025년 6월 시험은 원래 일정의 6월 3일에서 대통령 선거로 6월 4일로 변경됨.",
+    "EBSi 일정의 고3 3·5·7월 영역 요약에는 한국사가 빠져 있으나 실제 EBSi 한국사 공식 PDF로 시행을 확인함.",
+    "고3 5월 EBSi PDF URL 디렉터리 20250430은 실제 시행일이 아니며 공식 일정·학교 공지의 2025-05-08을 사용함.",
+    "subject 목록은 확인된 영역 수준. 실제 세부과목 및 듣기 제공 여부는 시험별로 추가 확인해야 함."
+  ],
+  "exams": [
+    {
+      "year": 2025,
+      "grade": 1,
+      "month": 3,
+      "exam_type": "school_mock",
+      "exam_date": "2025-03-26",
+      "organizer": "서울특별시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 1,
+      "month": 6,
+      "exam_type": "school_mock",
+      "exam_date": "2025-06-04",
+      "organizer": "부산광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs",
+        "https://www.korea.kr/multi/visualNewsView.do?newsId=148941577"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 1,
+      "month": 9,
+      "exam_type": "school_mock",
+      "exam_date": "2025-09-03",
+      "organizer": "인천광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 1,
+      "month": 10,
+      "exam_type": "school_mock",
+      "exam_date": "2025-10-14",
+      "organizer": "경기도교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 2,
+      "month": 3,
+      "exam_type": "school_mock",
+      "exam_date": "2025-03-26",
+      "organizer": "서울특별시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 2,
+      "month": 6,
+      "exam_type": "school_mock",
+      "exam_date": "2025-06-04",
+      "organizer": "부산광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs",
+        "https://www.korea.kr/multi/visualNewsView.do?newsId=148941577"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 2,
+      "month": 9,
+      "exam_type": "school_mock",
+      "exam_date": "2025-09-03",
+      "organizer": "인천광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 2,
+      "month": 10,
+      "exam_type": "school_mock",
+      "exam_date": "2025-10-14",
+      "organizer": "경기도교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 3,
+      "exam_type": "school_mock",
+      "exam_date": "2025-03-26",
+      "organizer": "서울특별시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs",
+        "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/his_main_mun_N44UN5N3.pdf"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 5,
+      "exam_type": "school_mock",
+      "exam_date": "2025-05-08",
+      "organizer": "경기도교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs",
+        "https://www.goegy.kr/gmsh-h/na/ntt/selectNttInfo.do?bbsId=843&mi=2419&nttSn=1116436",
+        "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/his_main_hsj_9NDOHJIB.pdf"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 6,
+      "exam_type": "kice_mock",
+      "exam_date": "2025-06-04",
+      "organizer": "한국교육과정평가원",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs",
+        "https://www.korea.kr/multi/visualNewsView.do?newsId=148941577"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 7,
+      "exam_type": "school_mock",
+      "exam_date": "2025-07-10",
+      "organizer": "인천광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs",
+        "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/his_main_mun_P6BHEC4T.pdf"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 9,
+      "exam_type": "kice_mock",
+      "exam_date": "2025-09-03",
+      "organizer": "한국교육과정평가원",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 10,
+      "exam_type": "school_mock",
+      "exam_date": "2025-10-14",
+      "organizer": "서울특별시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    },
+    {
+      "year": 2025,
+      "grade": 3,
+      "month": 11,
+      "exam_type": "csat",
+      "exam_date": "2025-11-13",
+      "organizer": "한국교육과정평가원",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "course_inventory_status": "requires_exam_specific_confirmation",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/ent/enta/retrieveExmSchedRng.ebs"
+      ]
+    }
+  ]
+}

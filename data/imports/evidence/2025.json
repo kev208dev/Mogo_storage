@@ -801,6 +801,696 @@
       "head_status": 200,
       "head_content_type": "application/pdf",
       "slot": "3-11 math/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/his_main_hsj_2C1K8D2V.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 10월 고1 history 정답 해설",
+      "search_title": "1 • 4교시 한국사 영역 • 정답·해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 history/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 2쪽 연결 머리말에 2025학년도 10월 고1 전국연합학력평가; 1쪽 한국사 영역과 정답·해설 본문 확인"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/kor_main_hsj_LUXZAHR7.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 10월 고1 korean 정답 해설",
+      "search_title": "1 • 1교시 국어 영역 • 정답·해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 korean/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 2쪽 연결 머리말에 2025학년도 10월 고1 전국연합학력평가; 1쪽 국어 영역과 정답·해설 본문 확인"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/math_hsj_TB7SZM6U_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 9월 고1 math 정답 해설",
+      "search_title": "고1 정답 및 해설 2025학년도 9월 전국연합학력평가 수학 영역",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 math/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 1쪽에 연도·월·학년·수학 영역·정답 및 해설 모두 확인"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_saeji_hsj_A4HB4ZTU.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 9월 고2 social 정답 해설",
+      "search_title": "고2 정답 및 해설 2025학년도 9월 전국연합학력평가 세계지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-9 social/world-geography solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 1쪽에 연도·월·학년·세계지리·정답 및 해설 모두 확인"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_hanji_hsj_9IVLW41Q.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 9월 고2 social 정답 해설",
+      "search_title": "고2 정답 및 해설 2025학년도 9월 전국연합학력평가 한국지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-9 social/korean-geography solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 1쪽에 연도·월·학년·한국지리·정답 및 해설 모두 확인"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/his_main_hsj_9NDOHJIB.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 history/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 한국사, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/math_main_hsj_MDQC6SUB_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 수학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 math/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 수학, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_saeji_hsj_K16BA783.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 세계지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/world-geography solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 세계지리, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_yrnss_hsj_J5987L53.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 윤리와 사상",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/ethics-and-thought solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 윤리와 사상, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/kor_main_hsj_4R8V482P.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 국어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 korean/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 국어, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_bio1_hsj_8Y841P3J.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 생명과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/life-science-1 solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 생명과학Ⅰ, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_bnj_mun_T59BK2A1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/politics-and-law question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 정치와 법, 문제지 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_eco_mun_HFU99E4H.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/economics question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 경제, 문제지 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/eng_mun_QF7SR4UI_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 english/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 영어 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korB_mun_A9NKF76H_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 언어와 매체",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 korean/language-and-media question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 언어와 매체 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korA_mun_II5D2218_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 화법과 작문",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 korean/speech-and-writing question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 화법과 작문 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/eng_main_hsj_9F17V8QR.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 english/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 영어 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_che1_mun_HP28TZI1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 화학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/chemistry-1 question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 화학Ⅰ 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_ear1_mun_5T642G3X.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 지구과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/earth-science-1 question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 지구과학Ⅰ 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_ear2_mun_8ERUB7DA.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 지구과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/earth-science-2 question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 지구과학Ⅱ 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathB_mun_GA28GGRA_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 미적분",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 math/calculus question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 미적분 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathA_mun_56C5OA73_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 확률과 통계",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 math/probability-and-statistics question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 확률과 통계 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathC_mun_ZZ27C83W_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 기하",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 math/geometry question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 기하 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_ssnyr_mun_7P3Q39S7.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 생활과 윤리 문제지",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 생활과 윤리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/life-and-ethics question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 생활과 윤리, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_ssnyr_hsj_72WW1U95.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 생활과 윤리 정답 및 해설",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 생활과 윤리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/life-and-ethics solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 생활과 윤리, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_hanji_hsj_72KVY4LT.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 한국지리 정답 및 해설",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 한국지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/korean-geography solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 한국지리, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_saeji_mun_7K844F89.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 세계지리 문제지",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 세계지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/world-geography question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 세계지리, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_easta_mun_H8U6Z633.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 동아시아사 문제지",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 동아시아사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/east-asian-history question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 동아시아사, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_sks_mun_LT45867W.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 세계사 문제지",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 세계사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/world-history question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 세계사, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_sks_hsj_3UL7W438.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 세계사 정답 및 해설",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 세계사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/world-history solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 세계사, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_phy1_mun_V31KRCC9.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 물리학Ⅰ 문제지",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 물리학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/physics-1 question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 물리학Ⅰ, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_phy2_mun_V9MHVHZF.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 물리학Ⅱ 문제지",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 물리학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/physics-2 question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 물리학Ⅱ, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_ear1_hsj_6N12OXNG.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 지구과학Ⅰ 정답 및 해설",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 지구과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/earth-science-1 solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 지구과학Ⅰ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_che2_hsj_Y3217E8Q.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 화학Ⅱ 정답 및 해설",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 화학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/chemistry-2 solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 화학Ⅱ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_che2_mun_6674I668.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 화학Ⅱ 문제지",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 화학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/chemistry-2 question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 화학Ⅱ, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_ear2_hsj_QPLYWDPN.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250430/go3/ 2025학년도 5월 지구과학Ⅱ 정답 및 해설",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 지구과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/earth-science-2 solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 지구과학Ⅱ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_phy1_hsj_3A52AD68.pdf",
+      "search_query": "2025학년도 5월 고3 전국연합학력평가 물리학Ⅰ 정답 및 해설 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 물리학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/physics-1 solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 물리학Ⅰ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_phy2_hsj_9C51FA2L.pdf",
+      "search_query": "2025학년도 5월 고3 전국연합학력평가 물리학Ⅱ 정답 및 해설 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 물리학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/physics-2 solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 물리학Ⅱ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_bnj_hsj_W4T6HS2S.pdf",
+      "search_query": "2025학년도 5월 고3 전국연합학력평가 정치와 법 정답 및 해설 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 social/politics-and-law solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 정치와 법, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_che1_hsj_M53MW834.pdf",
+      "search_query": "2025학년도 5월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 화학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/chemistry-1 solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 화학Ⅰ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_bio2_hsj_YHRQ5ZV2.pdf",
+      "search_query": "2025학년도 5월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 생명과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 science/life-science-2 solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 생명과학Ⅱ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/his_main_mun_47X6ME1Q_1.pdf",
+      "search_query": "2025학년도 5월 고3 전국연합학력평가 한국사 영역 문제지 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 5월 고3 전국연합학력평가 문제지 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-5 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가 문제지, 한국사 영역 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/his_main_mun_HUXC317E.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 3월 고2 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 3월 고2 전국연합학력평가와 한국사 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/math_main_mun_3P387AML.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 수학 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 3월 고2 전국연합학력평가 수학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 math/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 3월 고2 전국연합학력평가와 수학 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/his_main_mun_KVMP5Q8Y.pdf",
+      "search_query": "2025학년도 6월 고1 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 6월 고1 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 한국사 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/kor_main_hsj_LL3TWV88_2.pdf",
+      "search_query": "2025학년도 6월 고1 전국연합학력평가 국어 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 6월 고1 전국연합학력평가 국어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 korean/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/math_main_mun_6E4Z19XN_1.pdf",
+      "search_query": "2025학년도 6월 고1 전국연합학력평가 수학 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 6월 고1 전국연합학력평가 수학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 math/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 수학 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/his_main_hsj_E8371JE3_1.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 history/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 한국사 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/his_main_mun_F9J67AC5.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 한국사 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/kor_main_hsj_21JM1LKF_1.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 국어 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 국어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 korean/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 국어 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/eng_main_hsj_3K658M5G.pdf",
+      "search_query": "2025학년도 9월 고1 전국연합학력평가 영어 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 9월 고1 전국연합학력평가 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 english/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 영어 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/his_main_hsj_595VUMDH_1.pdf",
+      "search_query": "2025학년도 9월 고1 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 9월 고1 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 history/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 한국사 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/his_main_mun_7PMF19F6.pdf",
+      "search_query": "2025학년도 9월 고1 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 9월 고1 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 한국사 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/kor_main_hsj_B23YFET9.pdf",
+      "search_query": "2025학년도 9월 고1 전국연합학력평가 국어 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 9월 고1 전국연합학력평가 국어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 korean/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/his_main_mun_LJHX22ZY.pdf",
+      "search_query": "2025학년도 10월 고1 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 10월 고1 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고1 전국연합학력평가와 한국사 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/math_main_hsj_32A7C5C9.pdf",
+      "search_query": "2025학년도 10월 고1 전국연합학력평가 수학 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 10월 고1 전국연합학력평가 수학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 math/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고1 전국연합학력평가와 수학 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/his_main_hsj_W2STJB54.pdf",
+      "search_query": "2025학년도 10월 고2 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 10월 고2 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-10 history/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 한국사 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/his_main_mun_SI1LR68F.pdf",
+      "search_query": "2025학년도 10월 고2 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 10월 고2 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-10 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 한국사 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/math_main_mun_D118477Y.pdf",
+      "search_query": "2025학년도 10월 고2 전국연합학력평가 수학 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 10월 고2 전국연합학력평가 수학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-10 math/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 수학 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_hsj_1V99HKS3.pdf",
+      "search_query": "2025학년도 3월 고1 전국연합학력평가 국어 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 3월 고1 전국연합학력평가 국어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 korean/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 3월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/s_his_mun_EE8QT7XX.pdf",
+      "search_query": "2025학년도 3월 고1 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 3월 고1 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 3월 고1 전국연합학력평가와 한국사 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/eng_1_scr_RHJCR561.pdf",
+      "search_query": "2025학년도 9월 고2 전국연합학력평가 영어 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 9월 고2 전국연합학력평가 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-9 english/ listening_script",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고2 전국연합학력평가와 영어 듣기 대본 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_bnj_hsj_1MM2IY6G.pdf",
+      "search_query": "2025학년도 7월 고3 전국연합학력평가 정치와 법 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 7월 고3 전국연합학력평가 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 social/politics-and-law solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 정치와 법, 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/mathC_1_mun_BPY515AT_1.pdf",
+      "search_query": "2025학년도 7월 고3 전국연합학력평가 기하 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 7월 고3 전국연합학력평가 기하",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 math/geometry question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 기하, 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/his_main_hsj_JW33AO3Z.pdf",
+      "search_query": "2025학년도 7월 고3 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 7월 고3 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 history/ solution",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 한국사, 정답 및 해설 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/his_main_mun_P6BHEC4T.pdf",
+      "search_query": "2025학년도 7월 고3 전국연합학력평가 한국사 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 7월 고3 전국연합학력평가 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 한국사, 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_saeji_mun_ER75688A.pdf",
+      "search_query": "2025학년도 7월 고3 전국연합학력평가 세계지리 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 7월 고3 전국연합학력평가 세계지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 social/world-geography question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 세계지리, 문제지 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/eng_1_scr_AI5MMODB.pdf",
+      "search_query": "2025학년도 7월 고3 전국연합학력평가 영어 듣기 대본 site:wdown.ebsi.co.kr",
+      "search_title": "2025학년도 7월 고3 전국연합학력평가 영어 듣기 대본",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 english/ listening_script",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 영어 듣기 대본, 듣기 대본 확인."
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/his_main_mun_N44UN5N3.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250326/go3/ 2025학년도 3월 고3 한국사 문제지",
+      "search_title": "2025학년도 3월 고3 전국연합학력평가 문제지 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 history/ question",
+      "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
+      "identity_evidence": "PDF 본문에 2025학년도 3월 고3 전국연합학력평가 문제지와 한국사 영역 확인. EBSi 일정의 영역 요약은 한국사를 명시하지 않지만 실제 공식 문제지가 존재함."
     }
   ],
   "held": [

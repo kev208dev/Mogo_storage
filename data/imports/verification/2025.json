@@ -1912,6 +1912,1386 @@
       },
       "result": "approved",
       "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/his_main_hsj_2C1K8D2V.pdf",
+      "slot": "2025 고1 10월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 159164,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:36:41.784118Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "1 • 4교시 한국사 영역 • 정답·해설",
+        "examLineInDocument": "2025학년도 10월 고1 전국연합학력평가",
+        "visual": "PDF 2쪽 연결 머리말에 2025학년도 10월 고1 전국연합학력평가; 1쪽 한국사 영역과 정답·해설 본문 확인"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/kor_main_hsj_LUXZAHR7.pdf",
+      "slot": "2025 고1 10월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 306508,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T12:36:41.784118Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "1 • 1교시 국어 영역 • 정답·해설",
+        "examLineInDocument": "2025학년도 10월 고1 전국연합학력평가",
+        "visual": "PDF 2쪽 연결 머리말에 2025학년도 10월 고1 전국연합학력평가; 1쪽 국어 영역과 정답·해설 본문 확인"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/math_hsj_TB7SZM6U_1.pdf",
+      "slot": "2025 고1 9월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 348189,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T12:36:41.784118Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "고1 정답 및 해설 2025학년도 9월 전국연합학력평가 수학 영역",
+        "examLineInDocument": "2025학년도 9월 고1 전국연합학력평가",
+        "visual": "PDF 1쪽에 연도·월·학년·수학 영역·정답 및 해설 모두 확인"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_saeji_hsj_A4HB4ZTU.pdf",
+      "slot": "2025 고2 9월 school_mock social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 155152,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:36:41.784118Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "고2 정답 및 해설 2025학년도 9월 전국연합학력평가 세계지리",
+        "examLineInDocument": "2025학년도 9월 고2 전국연합학력평가",
+        "visual": "PDF 1쪽에 연도·월·학년·세계지리·정답 및 해설 모두 확인"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/s_hanji_hsj_9IVLW41Q.pdf",
+      "slot": "2025 고2 9월 school_mock social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 164660,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:36:41.784118Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "고2 정답 및 해설 2025학년도 9월 전국연합학력평가 한국지리",
+        "examLineInDocument": "2025학년도 9월 고2 전국연합학력평가",
+        "visual": "PDF 1쪽에 연도·월·학년·한국지리·정답 및 해설 모두 확인"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/his_main_hsj_9NDOHJIB.pdf",
+      "slot": "2025 고3 5월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 160174,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:43:21.824816Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "2025학년도 5월 고3 전국연합학력평가 한국사",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 한국사, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/math_main_hsj_MDQC6SUB_1.pdf",
+      "slot": "2025 고3 5월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 497377,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T12:43:21.824816Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "2025학년도 5월 고3 전국연합학력평가 수학",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 수학, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_saeji_hsj_K16BA783.pdf",
+      "slot": "2025 고3 5월 school_mock social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 143165,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:43:21.824816Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "2025학년도 5월 고3 전국연합학력평가 세계지리",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 세계지리, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_yrnss_hsj_J5987L53.pdf",
+      "slot": "2025 고3 5월 school_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 176193,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:43:21.824816Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "2025학년도 5월 고3 전국연합학력평가 윤리와 사상",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 윤리와 사상, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/kor_main_hsj_4R8V482P.pdf",
+      "slot": "2025 고3 5월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 342556,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T12:43:21.824816Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "2025학년도 5월 고3 전국연합학력평가 국어",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 국어, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_bio1_hsj_8Y841P3J.pdf",
+      "slot": "2025 고3 5월 school_mock science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 168027,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:43:21.824816Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "2025학년도 5월 고3 전국연합학력평가 생명과학Ⅰ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 생명과학Ⅰ, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_bnj_mun_T59BK2A1.pdf",
+      "slot": "2025 고3 5월 school_mock social/politics-and-law question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 359450,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:43:21.824816Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "2025학년도 5월 고3 전국연합학력평가 정치와 법",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 정치와 법, 문제지 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_eco_mun_HFU99E4H.pdf",
+      "slot": "2025 고3 5월 school_mock social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 444852,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:43:21.824816Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer",
+        "page1Header": "2025학년도 5월 고3 전국연합학력평가 경제",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 경제, 문제지 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/eng_mun_QF7SR4UI_1.pdf",
+      "slot": "2025 고3 5월 school_mock english question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 477214,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 8   1번부터 17번까지는 듣고 답하는 문제입니다. 1번부터 15번 까지는 한 번만 들려주고, 16번부터 17번까지는 두 번 들려줍니다.  방송을 잘 듣고 답을 하시기 바랍니다. 1. 다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. ①작품 제출 기한 연장을 알리려고 ②작품 전시 장소 변경을 공지하려고 ③책 삽화 전시회 출품을 독려하려고 ④도서관 운영 프로그램을 홍보하려고 ⑤도서관 확",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 영어 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korB_mun_A9NKF76H_1.pdf",
+      "slot": "2025 고3 5월 school_mock korean/language-and-media question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1159660,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 독서에서 요약하기는 능동적인 독서 방법 중 하나이다. 독자가  글을 요약하며 읽으면, 글의 핵심 정보를 빠르게 파악하고 자신만의  언어로 이해할 수 있다. 이는 글이 주제를 중심으로 하나의 의미  구조를 이루고 있기 때문이다. 이러한 요약하기를 효과적으로 할  수 있는 방법으로 ‘거시규칙’이 있다. 거시규칙은 명제들 사이의 의미적인 포함 관계를 파악하여",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 언어와 매체 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korA_mun_II5D2218_1.pdf",
+      "slot": "2025 고3 5월 school_mock korean/speech-and-writing question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 766960,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 독서에서 요약하기는 능동적인 독서 방법 중 하나이다. 독자가  글을 요약하며 읽으면, 글의 핵심 정보를 빠르게 파악하고 자신만의  언어로 이해할 수 있다. 이는 글이 주제를 중심으로 하나의 의미  구조를 이루고 있기 때문이다. 이러한 요약하기를 효과적으로 할  수 있는 방법으로 ‘거시규칙’이 있다. 거시규칙은 명제들 사이의 의미적인 포함 관계를 파악하여",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 화법과 작문 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/eng_main_hsj_9F17V8QR.pdf",
+      "slot": "2025 고3 5월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 325907,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 3교시 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. 1 ② 2 ⑤ 3 ① 4 ④ 5 ② 6 ③ 7 ① 8 ⑤ 9 ④ 10 ② 11 ⑤ 12 ① 13 ② 14 ① 15 ③ 16 ① 17 ④ 18 ④ 19 ② 20 ⑤ 21 ④ 22 ⑤ 23 ⑤ 24 ② 25 ④ 26 ④ 27 ② 28 ③ 29 ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 영어 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_che1_mun_HP28TZI1.pdf",
+      "slot": "2025 고3 5월 school_mock science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 354845,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "3 32 1. 다음은 일상생활에서 사용하는 제품과 이와 관련된 성분 (가) ~(다)에  대한 자료이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보 기 ㄱ. (가)의 연소 반응은 발열 반응이다. ㄴ. (나)가 증발할 때 주위로부터 열을 흡수한다. ㄷ. (가) ~ (다) 중 탄소 화합물은 2가지이다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ 2. 그림은 화합물 XY",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 화학Ⅰ 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_ear1_mun_5T642G3X.pdf",
+      "slot": "2025 고3 5월 school_mock science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 811822,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "7 32 1. 다음은 어느 해령 부근의 고지자기 줄무늬에 대한 학생 A, B, C의  대화를 나타낸 것이다. 제시한 내용이 옳은 학생만을 있는 대로 고른 것은? ① A  ② B  ③ A, C  ④ B, C ⑤ A, B, C 2. 그림은 X-Y 구간의 지진파 단층 촬영 영상을 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보 기 ㄱ. 지진파의 속도는 ㉠지점보다 ㉡지점에서 느",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 지구과학Ⅰ 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_ear2_mun_8ERUB7DA.pdf",
+      "slot": "2025 고3 5월 school_mock science/earth-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 702834,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "15 32 1. 그림은 지구 진화 과정에서 서로 다른  시기 A와 B일 때 지구의 반지름 크기와  내부 구조를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을  <보기>에서 있는 대로 고른 것은? 보 기 ㄱ. 지구의 표면 온도는 A > B이다. ㄴ. 지구의 중심부 밀도는 A < B이다. ㄷ. B는 A보다 과거의 시기이다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ 2. 다음은 광물 A, B, C",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 지구과학Ⅱ 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathB_mun_GA28GGRA_1.pdf",
+      "slot": "2025 고3 5월 school_mock math/calculus question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 307178,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 20 5지선다형 1.  × 의 값은? [2점] ①   ②   ③  ④  ⑤  2. 함수 에 대하여 lim →  의 값은? [2점] ①  ②  ③  ④  ⑤  3. 첫째항과 공비가 모두 양수 인 등비수열 이     를 만족시킬 때, 의 값은? [3점] ①    ②  ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 미적분 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathA_mun_56C5OA73_1.pdf",
+      "slot": "2025 고3 5월 school_mock math/probability-and-statistics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 334885,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 20 5지선다형 1.  × 의 값은? [2점] ①   ②   ③  ④  ⑤  2. 함수 에 대하여 lim →  의 값은? [2점] ①  ②  ③  ④  ⑤  3. 첫째항과 공비가 모두 양수 인 등비수열 이     를 만족시킬 때, 의 값은? [3점] ①    ②  ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 확률과 통계 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/mathC_mun_ZZ27C83W_1.pdf",
+      "slot": "2025 고3 5월 school_mock math/geometry question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 349651,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T12:46:39.221523Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 20 5지선다형 1.  × 의 값은? [2점] ①   ②   ③  ④  ⑤  2. 함수 에 대하여 lim →  의 값은? [2점] ①  ②  ③  ④  ⑤  3. 첫째항과 공비가 모두 양수 인 등비수열 이     를 만족시킬 때, 의 값은? [3점] ①    ②  ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 기하 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_ssnyr_mun_7P3Q39S7.pdf",
+      "slot": "2025 고3 5월 school_mock social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 405281,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 36 1. (가), (나) 윤리학의 핵심 과제로 가장 적절한 것은? (가) 윤리학은 행위자가 행동이나 성품에 관한 도덕 판단을 내릴 때  적용할 수 있는 도덕규범의 체계를 구축하여, 이를 정당화 하는 데 주력해야 한다. (나) 윤리학은 개인의 생활과 사회의 구조 및 기능과 관련된 도덕  현상을 경험 과학적 방법으로 조사하여, 이를 기술하고 설명 하는 데 주력해야 한다. ① (가): 올바른 삶의 지침이 되는 도덕 원리를 정립하는 것이다. ② (가): 도덕적 성",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 생활과 윤리, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_ssnyr_hsj_72WW1U95.pdf",
+      "slot": "2025 고3 5월 school_mock social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 157965,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 사회탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다. 무단 전재 및 재배포는 금지됩니다. [생활과 윤리] 1 ① 2 ② 3 ⑤ 4 ④ 5 ③ 6 ② 7 ⑤ 8 ① 9 ④ 10 ④ 11 ③ 12 ③ 13 ② 14 ④ 15 ③ 16 ⑤ 17 ① 18 ② 19 ⑤ 20 ③ 1. [출제의도] 이론 윤리학과 기술 윤리학의 입장 비교 하기 (가)는 이론 윤리학, (나)는 기술 윤리학이다. ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 생활과 윤리, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_hanji_hsj_72KVY4LT.pdf",
+      "slot": "2025 고3 5월 school_mock social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 145507,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 사회탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다. 무단 전재 및 재배포는 금지됩니다. [한국지리] 1 ⑤ 2 ⑤ 3 ① 4 ⑤ 5 ③ 6 ② 7 ④ 8 ④ 9 ① 10 ⑤ 11 ④ 12 ② 13 ③ 14 ③ 15 ① 16 ② 17 ① 18 ④ 19 ④ 20 ③ 1. [출제의도] 전통적 국토 인식 비교하기 (가)는 신증동국여지승람, (나)는 택리지이다. 신증 동국여지승람은 조선",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 한국지리, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_saeji_mun_7K844F89.pdf",
+      "slot": "2025 고3 5월 school_mock social/world-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1370759,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "7 36 1. 다음 자료의 (가), (나) 종교에 대한 설명으로 옳은 것은? (단,  (가), (나)는 각각 크리스트교, 힌두교 중 하나임.)   종교는 문화 예술에 영향을 주기도 한다.  유럽의 클래식 음악 작품 ‘슬픔의 성모’는  (가) 의 경전에 등장하는 성모 마리아가  십자가 밑에서 느낀 슬픔을 표현한 것이다.  이 작품은 드보르자크, 로시니, 비발디 등  여러 음악가들에 의해 다양하게 작곡되었고  지금도 세계 여러 곳에서 공연되고 있다.   인도의 영화",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 세계지리, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_easta_mun_H8U6Z633.pdf",
+      "slot": "2025 고3 5월 school_mock social/east-asian-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 877184,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "9 36 1. 밑줄 친 ‘이 지역’을 지도에서 옳게 고른 것은?   오늘은 △△△△에 있는  박물관에 다녀왔다. 박물관 에는 표면에 새끼줄 무늬가  있는 토기뿐 아니라 다양한  형태의 토우 등이 전시되어  있었다. 이를 통하여 조몬 문화가 발달했던 이 지역 사람들의  신석기 시대 생활 모습을 짐작할 수 있었다. [나의 역사 기행]                                         ○월 ○○일 ① (가) ② (나) ③ (다) ④ (라) ⑤ (",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 동아시아사, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_sks_mun_LT45867W.pdf",
+      "slot": "2025 고3 5월 school_mock social/world-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 750847,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "11 36 1. 밑줄 친 ‘이 문명’에 대한 설명으로 옳은 것은? 이것은 티그리스강과 유프라테스강 유역에서 발달한 이 문명의  도시 국가인 라가시의 유물입니다. 이 유물에는 라가시의 지배자와  우루크의 지배자가 의형제를 맺었다는 내용이 쐐기 문자로 기록 되어 있습니다. 이를 통해 당시 두 도시 국가 간의 외교 관계를 엿볼  수 있습니다. ① 콜로세움을 건립하였다. ② 지구라트를 축조하였다. ③ 사자의 서를 제작하였다. ④ 올림피아 제전을 개최하였다. ⑤ 하라파 ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 세계사, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_sks_hsj_3UL7W438.pdf",
+      "slot": "2025 고3 5월 school_mock social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 170292,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 사회탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다. 무단 전재 및 재배포는 금지됩니다. [세계사] 1 ② 2 ④ 3 ③ 4 ⑤ 5 ④ 6 ⑤ 7 ② 8 ⑤ 9 ① 10 ① 11 ③ 12 ① 13 ④ 14 ④ 15 ③ 16 ③ 17 ⑤ 18 ③ 19 ② 20 ② 1. [출제의도] 메소포타미아 문명 파악하기 자료의 밑줄 친 ‘이 문명’은 메소포타미아 문명이다.  메소포타미아 문명은",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 세계사, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_phy1_mun_V31KRCC9.pdf",
+      "slot": "2025 고3 5월 school_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 658314,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 32 1. 그림은 주방에서 전자기파 A, B, C가 이용되는 모습을 나타낸 것이다.  A, B, C는 마이크로파, 자외선, 적외선을 순서 없이 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보 기 ㄱ. A는 자외선이다. ㄴ. 진공에서의 속력은 B와 C가 같다. ㄷ. 진동수는 A가 C보다 크다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ 2. 그림은 광전 효과에 대해 학생 A, B, C가 대화하는 모습을 나타",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 물리학Ⅰ, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_phy2_mun_V9MHVHZF.pdf",
+      "slot": "2025 고3 5월 school_mock science/physics-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 557852,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "9 32 1. 그림은 평면에 힘  ,  를 나타낸 것이다.   의 방향과 크기로 옳은 것은? 방향 크기 방향 크기 ①  2N ②  3N ③  2N ④  3N ⑤  2N 2. 그림과 같이 질량이 인 원판에 중심 O를 향하는 크기가 인 힘이  수평 방향으로 작용하여 원판이 정지해 있다. 수평면이 원판에 작용하는  힘의 크기는  이고, 빗면의 경사각은 60°이다. 는? (단, 중력 가속도는 이고, 원",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 물리학Ⅱ, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_ear1_hsj_6N12OXNG.pdf",
+      "slot": "2025 고3 5월 school_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149133,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 과학탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. [지구과학Ⅰ] 1 ① 2 ① 3 ③ 4 ② 5 ⑤ 6 ① 7 ① 8 ② 9 ④ 10 ② 11 ④ 12 ⑤ 13 ① 14 ③ 15 ③ 16 ④ 17 ⑤ 18 ③ 19 ⑤ 20 ② 1. [출제의도] 해양저 확장설 이해하기 A. 해령 부근의 고지자기 줄무늬는 해령 축을 중심 으로 대칭적으로 분포",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 지구과학Ⅰ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_che2_hsj_Y3217E8Q.pdf",
+      "slot": "2025 고3 5월 school_mock science/chemistry-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 134988,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 과학탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. [화학Ⅱ] 1 ④ 2 ① 3 ⑤ 4 ② 5 ③ 6 ⑤ 7 ⑤ 8 ④ 9 ② 10 ④ 11 ③ 12 ② 13 ④ 14 ③ 15 ① 16 ② 17 ② 18 ③ 19 ⑤ 20 ① 1. [출제의도] 물의 특성과 수소 결합 이해하기 물이 얼음이 될 때 HO 분자 사이의 수소 결합 수 가 증가하여 ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 화학Ⅱ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_che2_mun_6674I668.pdf",
+      "slot": "2025 고3 5월 school_mock science/chemistry-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 442974,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "11 32 1. 다음은 수도관 동파 현상에 대한 설명이다.   물이 얼음이 될 때 부피가  ㉠ 하기 때문에  겨울철에 수도관이 파열된다. 이러한 부피 변화는  HO 분자 사이의  ㉡  결합과 관련이 있다. 다음 중 ㉠과 ㉡으로 가장 적절한 것은? ㉠ ㉡ ㉠ ㉡ ① 감소 공유 ② 증가 공유 ③ 감소 수소 ④ 증가 수소 ⑤ 감소 이온 2. 그림은 철(Fe) 결정의 단위 세포 모형을 나타낸 것이다. Fe의 결정  구조는 면심 입방 구조, 체심 입방 구조 중 하나이다",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 화학Ⅱ, 문제지 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_ear2_hsj_QPLYWDPN.pdf",
+      "slot": "2025 고3 5월 school_mock science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 140057,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:48:32.908039Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 과학탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. [지구과학Ⅱ] 1 ③ 2 ② 3 ③ 4 ⑤ 5 ② 6 ④ 7 ④ 8 ① 9 ② 10 ③ 11 ④ 12 ⑤ 13 ③ 14 ① 15 ⑤ 16 ② 17 ③ 18 ⑤ 19 ① 20 ② 1. [출제의도] 지구 진화 과정 이해하기 ㄱ, ㄴ. 지구 진화 과정에서 마그마 바다가 형성된 이후,  표면 온도",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 지구과학Ⅱ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_phy1_hsj_3A52AD68.pdf",
+      "slot": "2025 고3 5월 school_mock science/physics-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 136271,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:49:54.572683Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 과학탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. [물리학Ⅰ] 1 ⑤ 2 ③ 3 ③ 4 ⑤ 5 ② 6 ② 7 ④ 8 ③ 9 ② 10 ④ 11 ④ 12 ② 13 ① 14 ③ 15 ⑤ 16 ① 17 ④ 18 ⑤ 19 ③ 20 ① 1. [출제의도] 전자기파 자료 분석 및 해석하기 ㄱ. A는 자외선, B는 적외",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 물리학Ⅰ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_phy2_hsj_9C51FA2L.pdf",
+      "slot": "2025 고3 5월 school_mock science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 134336,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:49:54.572683Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 과학탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. [물리학Ⅱ] 1 ① 2 ④ 3 ⑤ 4 ② 5 ③ 6 ③ 7 ⑤ 8 ② 9 ④ 10 ② 11 ⑤ 12 ② 13 ① 14 ③ 15 ① 16 ⑤ 17 ③ 18 ④ 19 ① 20 ② 1. [출제의도] 힘의 합성 이해하기 평행사변형법으로 두 힘을 합성하면  ",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 물리학Ⅱ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_bnj_hsj_W4T6HS2S.pdf",
+      "slot": "2025 고3 5월 school_mock social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 130868,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:49:54.572683Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 사회탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다. 무단 전재 및 재배포는 금지됩니다. [정치와 법] 1 ④ 2 ⑤ 3 ③ 4 ① 5 ③ 6 ① 7 ⑤ 8 ④ 9 ② 10 ① 11 ② 12 ④ 13 ④ 14 ① 15 ③ 16 ④ 17 ① 18 ② 19 ⑤ 20 ③ 1. [출제의도] 정치를 바라보는 관점 이해하기 갑의 관점은 넓은 의미로 정치를",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 정치와 법, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_che1_hsj_M53MW834.pdf",
+      "slot": "2025 고3 5월 school_mock science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 135303,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:49:54.572683Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 과학탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. [화학Ⅰ] 1 ⑤ 2 ③ 3 ③ 4 ② 5 ② 6 ④ 7 ③ 8 ⑤ 9 ④ 10 ⑤ 11 ③ 12 ④ 13 ① 14 ③ 15 ① 16 ① 17 ⑤ 18 ② 19 ④ 20 ④ 1. [출제의도] 화학 물질이 일상생활에 이용되는 사례  이해하기 ㄱ, ㄴ. 뷰테",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 화학Ⅰ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/g_bio2_hsj_YHRQ5ZV2.pdf",
+      "slot": "2025 고3 5월 school_mock science/life-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 155647,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:49:54.572683Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 과학탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. [생명과학Ⅱ] 1 ③ 2 ④ 3 ② 4 ⑤ 5 ⑤ 6 ② 7 ③ 8 ④ 9 ④ 10 ⑤ 11 ⑤ 12 ③ 13 ① 14 ② 15 ② 16 ① 17 ③ 18 ③ 19 ① 20 ⑤ 1. [출제의도] 생명 과학의 역사 이해하기 ㉠은 하비, ㉡은 파스퇴르, ㉢은",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에 2025학년도 5월 고3 전국연합학력평가, 생명과학Ⅱ, 정답 및 해설 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/his_main_mun_47X6ME1Q_1.pdf",
+      "slot": "2025 고3 5월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 668074,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:51:22.138306Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "한국사 영역 2025학년도 5월 고3 전국연합학력평가 문제지",
+        "examLineInDocument": "2025학년도 5월 고3 전국연합학력평가 문제지",
+        "visual": "PDF 본문에서 시험명·학년·월·한국사·문제지 확인"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/his_main_mun_HUXC317E.pdf",
+      "slot": "2025 고2 3월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1555127,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 4 1. (가)에 들어갈 내용으로 적절한 것은? [프로그램 기획안] <체험! ○○○ 시대 삶의 현장> ◦기획 의도 농경과 목축을 시작한 ○○○ 시대 사람들의 생활을 다 양한 활동을 통해 체험할 수 있는 기회를 마련하고자 함. ◦프로그램 예시   - 가락바퀴로 실 뽑아내기   - 복원한 움집에 들어가 내부 살펴보기   - 갈돌과 갈판으로 나무 열매껍질 벗기기   - (가) ① 불국사 퍼즐 맞추기 ② 상평통보로 물건 구매하기 ③ 비파형 동검 거",
+        "examLineInDocument": "2025학년도 3월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 3월 고2 전국연합학력평가와 한국사 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/math_main_mun_3P387AML.pdf",
+      "slot": "2025 고2 3월 school_mock math question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 348546,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 12 5 지선다형 1. 두 다항식 ,    에 대하여 를 간단히 하면? [2점] ①  ②  ③  ④  ⑤  2. 의 값은? (단,  ) [2점] ①  ②  ③  ④  ⑤  3. C의 값은? [2점] ①  ②  ③  ④  ⑤  4. 수직선 위의 ",
+        "examLineInDocument": "2025학년도 3월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 3월 고2 전국연합학력평가와 수학 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/his_main_mun_KVMP5Q8Y.pdf",
+      "slot": "2025 고1 6월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 13377351,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 4 1. 밑줄 친 ‘이 시대’의 사회 모습으로 옳은 것은? 한국사 선생님 이 유물은 이 시대를 대표하는 빗살무늬 토기로  서울 암사동에서 출토되었습니다. 이 시대 사람들의  생활 모습에 대해 댓글을 달아 주세요. #한국사 #선사시대 #유물 #수업 갈돌과 갈판 등 간석기를 사용하였어요. 움집을 짓고 정착 생활을 하였어요. ① 팔관회가 개최되었다. ② 농경과 목축이 시작되었다. ③ 비파형 동검이 제작되었다. ④ 철제 농기구가 사용되었다. ⑤ 영",
+        "examLineInDocument": "2025학년도 6월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 한국사 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/kor_main_hsj_LL3TWV88_2.pdf",
+      "slot": "2025 고1 6월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 329647,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 국어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. 정 답 1 ① 2 ④ 3 ⑤ 4 ② 5 ② 6 ④ 7 ① 8 ④ 9 ⑤ 10 ② 11 ① 12 ② 13 ① 14 ② 15 ⑤ 16 ③ 17 ④ 18 ⑤ 19 ② 20 ① 21 ③ 22 ③ 23 ① 24 ⑤ 25 ① 26 ④ 27 ⑤ 28 ⑤ 29 ③ 30 ② 31 ⑤ 32 ⑤ 33 ",
+        "examLineInDocument": "2025학년도 6월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/math_main_mun_6E4Z19XN_1.pdf",
+      "slot": "2025 고1 6월 school_mock math question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 345801,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 12 5지선다형 1. 의 값은? (단,  ) [2점]  ①  ②  ③  ④  ⑤  2. 다항식 을 로 나눈 나머지는? [2점] ①  ②  ③  ④  ⑤  3. 이차부등식 을 만족시키는 모든 의 값의  범위가 일 때, 의 값은? [2점]  ①  ②  ③  ④  ⑤  4. 두 실수 , 에 대하여  ",
+        "examLineInDocument": "2025학년도 6월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 수학 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/his_main_hsj_E8371JE3_1.pdf",
+      "slot": "2025 고2 6월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 173590,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "2025학년도 6월 전국연합학력평가 정답 및 해설 고2 1 • 한국사 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다. 무단 전재 및 재배포는 금지됩니다. 정 답 1 ⑤ 2 ③ 3 ⑤ 4 ① 5 ① 6 ② 7 ② 8 ① 9 ② 10 ② 11 ④ 12 ③ 13 ③ 14 ④ 15 ④ 16 ④ 17 ① 18 ② 19 ③ 20 ④ 해 설 1. [출제의도] 구석기 시대의 사회 모습 파악하기",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 한국사 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/his_main_mun_F9J67AC5.pdf",
+      "slot": "2025 고2 6월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4807421,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 4 1. (가) 시대에 대한 설명으로 옳은 것은? (가) 시대 체험 프로그램 ○○박물관 (가) 시대의 대표적 유물인  주먹도끼는 어떻게 만들어졌을까요?  다양한 뗀석기 제작 방법에 대해  알아보고 함께 만들어 보아요! # 뗀석기_제작  # 직접떼기  # 모루떼기 # 연천_전곡리   ① 고인돌이 축조되었다.  ② 골품제가 운영되었다.  ③ 빗살무늬 토기가 제작되었다. ④ 철제 농기구로 농사를 지었다. ⑤ 사냥과 채집을 하며 이동 생활을 하였다",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 한국사 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/kor_main_hsj_21JM1LKF_1.pdf",
+      "slot": "2025 고2 6월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 305912,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 국어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다. 무단 전재 및 재배포는 금지됩니다. 정 답 1 ③ 2 ③ 3 ④ 4 ④ 5 ⑤ 6 ① 7 ④ 8 ① 9 ③ 10 ④ 11 ⑤ 12 ③ 13 ③ 14 ① 15 ② 16 ③ 17 ④ 18 ③ 19 ① 20 ⑤ 21 ① 22 ② 23 ① 24 ④ 25 ② 26 ③ 27 ⑤ 28 ⑤ 29 ① 30 ① 31 ② 32 ② 33 ⑤",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 국어 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/eng_main_hsj_3K658M5G.pdf",
+      "slot": "2025 고1 9월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 355608,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "고1 정답 및 해설 2025학년도 9월 전국연합학력평가 10 16 영어 영역 ※ 본전국연합학력평가는17개시도교육청주관으로 시행되며, 해당자료는EBSi에서만제공됩니다. 무단전재및재배포는금지됩니다. 정답 1 ④ 2 ① 3 ⑤ 4 ⑤ 5 ② 6 ④ 7 ② 8 ④ 9 ④ 10 ② 11 ① 12 ⑤ 13 ① 14 ① 15 ① 16 ② 17 ④ 18 ③ 19 ③ 20 ② 21 ① 22 ③ 23 ② 24 ② 25 ⑤ 26 ③ 27 ③ 28 ⑤ 29 ② 30",
+        "examLineInDocument": "2025학년도 9월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 영어 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/his_main_hsj_595VUMDH_1.pdf",
+      "slot": "2025 고1 9월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 182488,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "고1 정답 및 해설 2025학년도 9월 전국연합학력평가 14 16 한국사 영역 ※ 본전국연합학력평가는17개시도교육청주관으로 시행되며, 해당자료는EBSi에서만제공됩니다. 무단전재및재배포는금지됩니다. 정답 1 ⑤ 2 ③ 3 ⑤ 4 ⑤ 5 ② 6 ③ 7 ② 8 ① 9 ③ 10 ③ 11 ② 12 ④ 13 ④ 14 ④ 15 ① 16 ⑤ 17 ② 18 ⑤ 19 ⑤ 20 ① 해설 1. [출제의도] 신석기 시대 이해하기   밑줄 친 ‘이 시대’는 신석기 시대",
+        "examLineInDocument": "2025학년도 9월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 한국사 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/his_main_mun_7PMF19F6.pdf",
+      "slot": "2025 고1 9월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1195252,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "고1 한국사영역 1 1 4 1. 밑줄 친 ‘이 시대’의 사회 모습으로 옳은 것은?    < 박물관 스탬프 투어>   우리 박물관에서는 농경과 목축이 시작된 이 시대의  생활상을 체험할 수 있는 프로그램을 마련하였습니다.  갈돌과 갈판 등 간석기를 사용한 이 시대 사람들의 생활 상을 체험하고 스탬프를 모아 보세요. ---------------- 스탬프 찍는 곳 ---------------- - ○○선사박물관-    ① 골품제가 운영되었다.   ②",
+        "examLineInDocument": "2025학년도 9월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 한국사 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/kor_main_hsj_B23YFET9.pdf",
+      "slot": "2025 고1 9월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 350410,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 16 국어영역 ※ 본전국연합학력평가는17개시도교육청주관으로 시행되며, 해당자료는EBSi에서만제공됩니다. 무단전재및재배포는금지됩니다. 정답 1 ① 2 ④ 3 ⑤ 4 ⑤ 5 ② 6 ③ 7 ④ 8 ③ 9 ① 10 ④ 11 ② 12 ① 13 ④ 14 ④ 15 ③ 16 ⑤ 17 ② 18 ② 19 ② 20 ⑤ 21 ③ 22 ④ 23 ③ 24 ① 25 ① 26 ① 27 ② 28 ⑤ 29 ① 30 ② 31 ② 32 ③ 33 ④ 34 ⑤ 35 ① 36 ④ ",
+        "examLineInDocument": "2025학년도 9월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/his_main_mun_LJHX22ZY.pdf",
+      "slot": "2025 고1 10월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 800050,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 4 1. (가) 국가에 대한 설명으로 옳은 것은? 1부  고이왕이 한강 유역을 장악하다 2부  장수왕이 한성을 함락하다 3부  진흥왕이 북한산에 순수비를 세우다 삼국 항쟁의 중심지 한강 유역   고구려의 장수왕은 평양으로  수도를 옮기고 본격적으로 남진  정책을 펼쳐   (가)  의 수도인  한성을 함락하고 한강 유역을 차 지하였다. 다큐멘터리 3부작 ① 사비로 천도하였다. ② 8조법을 시행하였다. ③ 해동성국으로 불렸다. ④ 6조 직계제를",
+        "examLineInDocument": "2025학년도 10월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 10월 고1 전국연합학력평가와 한국사 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/math_main_hsj_32A7C5C9.pdf",
+      "slot": "2025 고1 10월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 292058,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 2교시 수학 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다. 무단 전재 및 재배포는 금지됩니다. 1 ④ 2 ② 3 ③ 4 ① 5 ① 6 ② 7 ⑤ 8 ③ 9 ⑤ 10 ④ 11 ① 12 ④ 13 ③ 14 ④ 15 ② 16 ⑤ 17 ④ 18 ② 19 ⑤ 20 ③ 21 ① 22 2 23 13 24 6 25 144 26 18 27 20 28 40 29 133 30 16 1. [출",
+        "examLineInDocument": "2025학년도 10월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 10월 고1 전국연합학력평가와 수학 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/his_main_hsj_W2STJB54.pdf",
+      "slot": "2025 고2 10월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 161880,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 4교시 한국사 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다.  무단 전재 및 재배포는 금지됩니다. 1 ② 2 ④ 3 ① 4 ② 5 ⑤ 6 ② 7 ① 8 ③ 9 ③ 10 ④ 11 ⑤ 12 ⑤ 13 ⑤ 14 ① 15 ③ 16 ③ 17 ③ 18 ④ 19 ② 20 ⑤ 1. [출제의도] 신석기 시대 생활 모습 파악하기 자료의 밑줄 친 ‘이 시대’는 신석기 시대이다. 신석기  시대",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 한국사 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/his_main_mun_SI1LR68F.pdf",
+      "slot": "2025 고2 10월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 817960,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 4 1. 밑줄 친 ‘이 시대’의 생활 모습으로 옳은 것은? 대한민국 방방곡곡 – 서울 암사동 유적 한국사 채널   이번에 소개할 서울 암사동 유적은 농경과 목축이 시작된  이 시대에 정착 생활이 이루어졌음을 알 수 있는 곳입니다.  이곳에서는 빗살무늬 토기 등 당시 사람들의 생활 모습을  살펴볼 수 있는 다양한 유물이 출토되었습니다. 이 시대 의 대표적 유적인 서울 암사동 유적을 영상을 통해 만나  보세요. ① 불상을 제작하였다. ② 간석기",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 한국사 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/math_main_mun_D118477Y.pdf",
+      "slot": "2025 고2 10월 school_mock math question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 203611,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 12 5지선다형 1.   의 값은? [2점] ①  ②  ③  ④  ⑤  2. 다항함수 에 대하여 lim →  일 때, ′의 값은? [2점] ①  ②  ③  ④  ⑤  3. 세 수 , , 가 이 순서대로 등비수열을 이룰 때, ×의 값은? [2점] ①  ②  ③  ④  ⑤  4. 함수 의 그래프가 그림과 같다. ",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 수학 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_hsj_1V99HKS3.pdf",
+      "slot": "2025 고1 3월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 314532,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 • 국어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로  시행되며, 해당 자료는 EBSi에서만 제공됩니다. 무단 전재 및 재배포는 금지됩니다. 정 답 1 ③ 2 ① 3 ② 4 ④ 5 ④ 6 ② 7 ① 8 ③ 9 ⑤ 10 ③ 11 ⑤ 12 ① 13 ⑤ 14 ① 15 ② 16 ④ 17 ② 18 ⑤ 19 ③ 20 ② 21 ⑤ 22 ② 23 ① 24 ① 25 ⑤ 26 ④ 27 ⑤ 28 ② 29 ② 30 ③ 31 ③ 32 ⑤ 33 ④ ",
+        "examLineInDocument": "2025학년도 3월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 3월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/s_his_mun_EE8QT7XX.pdf",
+      "slot": "2025 고1 3월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1229051,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "1 4 1. (가) 시대의 사회 모습으로 옳은 것은? 농경과 목축이 시작된  (가)  시대의 유 물이야. 식량을 저장하 거나 음식을 조리하는  데 사용되었어.  내가 만든 빗살 무늬 토기 모형 이야. 어때? 멋지다. 빗살무늬  토기가 뭐예요? ① 간석기가 사용되었다. ② 고인돌이 만들어졌다. ③ 골품제가 운영되었다. ④ 철제 무기가 제작되었다. ⑤ 사찰과 탑이 건립되었다. 2. (가) 국가의 문화유산으로 옳은 것은? [3점] 정답!  벽돌무덤 ",
+        "examLineInDocument": "2025학년도 3월 고1 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 3월 고1 전국연합학력평가와 한국사 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/eng_1_scr_RHJCR561.pdf",
+      "slot": "2025 고2 9월 school_mock english listening_script",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 151614,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T12:55:34.852976Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "- 2025년 9월 3일 실시 -  2025학년도 9월 고2 전국연합학력평가 ○ 영어 영역 듣기 대본",
+        "examLineInDocument": "2025학년도 9월 고2 전국연합학력평가",
+        "visual": "EBSi PDF 전체 본문에서 2025학년도 9월 고2 전국연합학력평가와 영어 듣기 대본 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_bnj_hsj_1MM2IY6G.pdf",
+      "slot": "2025 고3 7월 school_mock social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 157653,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:58:16.306270Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "고3 정답 및 해설 2025학년도 7월 전국연합학력평가 30 39 ※ 본전국연합학력평가는17개시도교육청주관으로 시행되며, 해당자료는EBSi에서만제공됩니다. 무단전재및재배포는금지됩니다. 정치와 법 정답 1 ① 2 ④ 3 ③ 4 ② 5 ④ 6 ① 7 ② 8 ⑤ 9 ③ 10 ③ 11 ④ 12 ⑤ 13 ② 14 ③ 15 ⑤ 16 ② 17 ③ 18 ④ 19 ④ 20 ① 정치와 법 해설 1. [출제의도] 정치를 바라보는 관점 이해하기   갑의 관점은 넓은",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 정치와 법, 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/mathC_1_mun_BPY515AT_1.pdf",
+      "slot": "2025 고3 7월 school_mock math/geometry question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 453767,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T12:58:16.306270Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "고3 수학영역 1 1 20 5지선다형 1.  ×   의 값은? [2점]  ① ② ③ ④ ⑤ 2. 함수 에 대하여 lim →  의 값은? [2점] ①  ② ③  ④ ⑤  3. 모든 항이 양수인 등비수열 에 대하여      ×,     일 때, 의 값은? [3점] ① ② ③ ④ ⑤ 4. 함수         ",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 기하, 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/his_main_hsj_JW33AO3Z.pdf",
+      "slot": "2025 고3 7월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 170963,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T12:58:16.306270Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "고3 정답 및 해설 2025학년도 7월 전국연합학력평가 22 39   한국사 영역 ※ 본전국연합학력평가는17개시도교육청주관으로 시행되며, 해당자료는EBSi에서만제공됩니다. 무단전재및재배포는금지됩니다. 정답 1 ⑤ 2 ② 3 ① 4 ⑤ 5 ① 6 ③ 7 ④ 8 ① 9 ③ 10 ④ 11 ③ 12 ② 13 ① 14 ② 15 ⑤ 16 ⑤ 17 ③ 18 ① 19 ③ 20 ④ 해설 1. [출제의도] 백제 이해하기   밑줄 친 ‘국가’는 백제이다. 백제의 ",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 한국사, 정답 및 해설 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/his_main_mun_P6BHEC4T.pdf",
+      "slot": "2025 고3 7월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 834526,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:58:16.306270Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "고3 한국사영역 1 1 4 1. 밑줄 친 ‘국가’에 대한 설명으로 옳은 것은? [3점]    다음 힌트가 설 명하는 국가를  적어주세요. 고구려에 한성을 빼앗긴 후 웅진 으로 천도하였다. 성왕 때 사비로 수도를 옮겼다. 온조가 한강 유역에서 건국하였다. 한국사 퀴즈 대회 힌트2 힌트3 힌트1      ① 8조법을 마련하였다.   ② 경복궁을 중건하였다.   ③ 팔만대장경을 조판하였다.   ④ 광개토 대왕릉비를 세웠다.   ⑤ 백제 금동 대향로를",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 한국사, 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/s_saeji_mun_ER75688A.pdf",
+      "slot": "2025 고3 7월 school_mock social/world-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 917447,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:58:16.306270Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "고3         사회탐구영역 세계지리  1 7 36 1. (가), (나) 지도의 특징을 그림과 같이 표현할 때, A∼D에  들어갈 질문으로 옳은 것을 <보기>에서 고른 것은?    (가) (나)    <보 기> ㄱ. 유럽이 표현되어 있습니까?  ㄴ. 지도의 위쪽이 북쪽입니까? ㄷ. 중국에서 제작된 지도입니까? ㄹ. 이슬람교 세계관이 반영되어 있습니까?          A B C D ① ㄱ ㄴ ㄷ ㄹ ② ㄱ ㄴ ㄹ ㄷ ③ ㄴ ㄱ ㄷ ㄹ ④ ㄴ",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 세계지리, 문제지 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/eng_1_scr_AI5MMODB.pdf",
+      "slot": "2025 고3 7월 school_mock english listening_script",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 152154,
+        "pdfPages": 18,
+        "checkedAt": "2026-09-25T12:58:16.306270Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "- 2025년 7월 10일 실시 -  2025학년도 7월 고3 전국연합학력평가 ○ 영어 영역 듣기 대본",
+        "examLineInDocument": "2025학년도 7월 고3 전국연합학력평가",
+        "visual": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 영어 듣기 대본, 듣기 대본 확인."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/his_main_mun_N44UN5N3.pdf",
+      "slot": "2025 고3 3월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1224580,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T12:59:02.957158Z"
+      },
+      "evidence": {
+        "method": "web_pdf_viewer_and_full_pdf_text",
+        "page1Header": "2025학년도 3월 고3 전국연합학력평가 한국사 영역 문제지",
+        "examLineInDocument": "2025학년도 3월 고3 전국연합학력평가 문제지",
+        "visual": "PDF 본문에 시험명·학년·월·한국사·문제지 확인"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported",
+      "reason": "운영 DB 연결 권한 없음. CSV 후보 및 PDF 본문 검증 기록만 추가; manual_review 및 게시 미적용"
     }
   ]
 }

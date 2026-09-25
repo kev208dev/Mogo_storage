@@ -12,6 +12,7 @@ describe("exam-specific grading mode", () => {
     expect(gradingMode(current, "english")).toBe("absolute");
     expect(gradingMode(current, "history")).toBe("absolute");
     expect(gradingMode(current, "second_language")).toBe("absolute");
+    expect(gradingMode({ ...current, examType: "school_mock" }, "second_language")).toBe("unknown");
   });
   it("uses each absolute subject's fixed raw-score boundaries, including ninth grade", () => {
     const english = absoluteGradeCuts(current, "english")!;

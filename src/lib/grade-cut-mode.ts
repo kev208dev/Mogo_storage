@@ -25,7 +25,7 @@ export function gradingMode(exam: GradingRegime, subject: Subject): GradingMode 
       : academicYear >= 2018 ? "absolute" : "unknown";
   if (subject === "second_language") {
     if (exam.examType === "school_mock")
-      return exam.grade === 3 && exam.year >= 2021 ? "absolute" : "unknown";
+      return "unknown"; // No verified fixed-score regime for education-office exams.
     return academicYear >= 2022 ? "absolute" : "relative";
   }
   return "unknown";

@@ -1,0 +1,1056 @@
+{
+  "year": 2025,
+  "method": "검색엔진 색인 결과의 url 필드를 그대로 기록 (URL 생성·수정 없음). wdown.ebsi.co.kr(robots.txt 없음)에 HEAD 1회로 존재만 확인.",
+  "imported": [
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_main_hsj_W6D54ZP4_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go1",
+      "search_title": "1 • 영어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/his_main_hsj_461Y98HN.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go1",
+      "search_title": "1 • 한국사영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 history/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_mun_55A7H57F.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go1",
+      "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 여러분, 안녕하세요. 어릴 적 종이비행기를 접어 하늘 높이",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/math_main_mun_1Z1WK7R9_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go1",
+      "search_title": "1 12 5 지선다형 1. ×   의 값은? [2점] ①    ②  ③    ④  ⑤ ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 math/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/math_main_hsj_3P67AC54.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go1",
+      "search_title": "1 • 수학영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 math/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_main_hsj_2FVA49I8_2.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go1",
+      "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고1 1 • 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/his_main_hsj_4538K65W.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go1",
+      "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고1 1 • 한국사 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 history/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/kor_main_mun_PY1V7PAD_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go1",
+      "search_title": "1 16 [1 ～3] 다음은 수업 중 학생의 발표이다. 물음에 답하시오. 안녕하세요, ○○○입니다. 여름철은 물놀이나 캠핑 같은 야외",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/math_main_hsj_74Z57396_2.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go1",
+      "search_title": "1 • 수학 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 math/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/sat_main_mun_936R24LR.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go1",
+      "search_title": "1 6 1. 다음은 온라인 게시판의 일부이다. 질문에 옳게 답한 학생만을 고른 것은? [1.5점] 통합사회 학습방",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 social/integrated-social question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/eng_1_mun_11LNMPIC.pdf",
+      "search_query": "2025학년도 6월 고1 전국연합학력평가 한국사 wdown.ebsi.co.kr",
+      "search_title": "고1 영어영역 1 1 8 1번부터 17번까지는 듣고 답하는 문제입니다. 1번부터",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 english/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/kor_main_mun_77F7745C.pdf",
+      "search_query": "2025학년도 3월 고1 전국연합학력평가 통합사회 wdown.ebsi.co.kr",
+      "search_title": "고1 국어영역 1 1 16 [1~3] 다음은 수업 중 학생의 발표이다. 물음에 답하시오.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/math_main_mun_8KC62N33_1.pdf",
+      "search_query": "2025학년도 3월 고1 전국연합학력평가 통합사회 wdown.ebsi.co.kr",
+      "search_title": "고1 수학영역 1 1 12 5지선다형 1. 두 다항식 , 에 대하여 를 간단히 하면? [2점]",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 math/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/gat_main_mun_66784PDJ.pdf",
+      "search_query": "2025학년도 3월 고1 전국연합학력평가 통합과학 wdown.ebsi.co.kr",
+      "search_title": "고1 과학탐구영역 (통합과학) 1 1 6 1. 다음은 어느 전기차의 상세 정보 중 일부를 나타낸 것이다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 science/integrated-science question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/eng_main_hsj_A4O6G2F5.pdf",
+      "search_query": "20251014 go3 g_che1 wdown.ebsi.co.kr",
+      "search_title": "1 • 3교시 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/kor_main_mun_Y2Y66383.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251014 go2",
+      "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? 지난 시간에 대화의 원리에 대해 배운 것 기억하",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/gat_main_hsj_B9HQ8H65.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251014 go2",
+      "search_title": "1 • 4교시 과학탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 science/integrated-science solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/sat_main_hsj_N751JM45.pdf",
+      "search_query": "20251014 go3 s_ wdown.ebsi.co.kr 사회탐구",
+      "search_title": "1 • 4교시 사회탐구 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 social/integrated-social solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_main_hsj_8RKR7M1W.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go2",
+      "search_title": "1 • 영어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_mun_JBJ4R7WR.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go2",
+      "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요. 여러분은 혹시 ‘국가 중요 농업 유산’이란 말을",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_hsj_9MR565V3.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go2",
+      "search_title": "1 • 국어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_che1_hsj_3Z3EUA27.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go2",
+      "search_title": "1 화학Ⅰ 정답 ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 science/chemistry-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_ear1_hsj_868X54WI.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go2",
+      "search_title": "1 지구과학Ⅰ 정답 ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 science/earth-science-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_bio1_hsj_YS6CK7I6.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go2",
+      "search_title": "1 생명과학Ⅰ 정답 ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 science/life-science-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_yrnss_hsj_1FUMJPZ3.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 윤리와 사상",
+      "search_title": "윤리와 사상 정답 해 설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 social/ethics-and-thought solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/eng_main_hsj_4A53HZ97_1.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 영어",
+      "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고2 1 • 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/kor_main_mun_6WZU5Z12_1.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 문제지 국어",
+      "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? 오늘 발표를 맡은 ○○○입니다. 저는 얼마 전에",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/math_main_hsj_8QV88PI4_1.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 수학",
+      "search_title": "1 • 수학 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 math/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_easta_hsj_3DECJW6P.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 한국사",
+      "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고2 1 • 동아시아사 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/east-asian-history solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_yrnss_hsj_344M4K63.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 문제지 국어",
+      "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고2 1 • 윤리와 사상 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/ethics-and-thought solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_hanji_hsj_JE4VGBT2.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 문제지 국어",
+      "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고2 1 • 한국지리 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/korean-geography solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_samun_hsj_8B84IONP.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 문제지 국어",
+      "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고2 1 • 사회∙문화 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/social-culture solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/eng_main_hsj_868C9E84.pdf",
+      "search_query": "2025학년도 9월 고1 전국연합학력평가 정답 및 해설 수학 wdown.ebsi.co.kr",
+      "search_title": "2025학년도 9월 전국연합학력평가 정답 및 해설 고2 9 27 영어 영역 ※ 본전국연합학력평가는17개시도교육청주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-9 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/his_main_mun_Z12G5685_1.pdf",
+      "search_query": "2025학년도 9월 고2 전국연합학력평가 문제지 정답",
+      "search_title": "고2 한국사영역 1 1 4 1. (가) 시대의 사회 모습으로 옳은 것은? 이곳 서울 암사동 유적은 1925년에 발생한 큰 홍수로 인해 움집",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-9 history/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/kor_main_mun_ZKNW6ZSE.pdf",
+      "search_query": "2025학년도 9월 고2 전국연합학력평가 문제지 정답",
+      "search_title": "고2 국어영역 1 1 16 [1~3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? 저는 며칠 전에 화장의 역사에 관한 책을 읽었",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-9 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/kor_main_hsj_B4X88PV5.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 국어",
+      "search_title": "1 27 국어영역 ※ 본전국연합학력평가는17개시도교육청주관으로 시행되며, 해당자료는EBSi에서만제공됩니다. 무단전재및재배포는금지됩니다. 정답",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-9 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/math_main_hsj_Z95Y88V4_1.pdf",
+      "search_query": "2025학년도 9월 고1 전국연합학력평가 정답 및 해설 수학 wdown.ebsi.co.kr",
+      "search_title": "2025학년도 9월 전국연합학력평가 정답 및 해설 고2 5 27 수학 영역 ※ 본전국연합학력평가는17개시도교육청주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-9 math/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/eng_main_hsj_LS66F3HV.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251014 go2",
+      "search_title": "1 • 3교시 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-10 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/kor_main_mun_43243P8X.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251014 go2",
+      "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? ○○○입니다. 오늘은 독특한 번식 전략을 지닌",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-10 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/kor_main_hsj_CN1Z96XN.pdf",
+      "search_query": "2025학년도 11월 고2 전국연합학력평가 문제지 정답",
+      "search_title": "1 • 1교시 국어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-10 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/math_main_hsj_6DW94788.pdf",
+      "search_query": "2025학년도 고2 전국연합학력평가 한국지리 정답",
+      "search_title": "1 • 2교시 수학 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-10 math/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_main_hsj_66I8PI22.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 사회탐구 정답 및 해설",
+      "search_title": "1 • 영어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/kor_main_hsj_5J8MI931.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 한국사",
+      "search_title": "1 • 국어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_phy1_mun_C172K36V.pdf",
+      "search_query": "wdown.ebsi.co.kr go3 물리학1 문제",
+      "search_title": "1 16 1. 그림은 전자기파 A, B, C가 병원에서 사용되는 모습으로, A,",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 science/physics-1 question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_eco_hsj_9K76CA5W.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 사회탐구 정답 및 해설",
+      "search_title": "경제 정답 해 설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/economics solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_sks_hsj_97E3796O.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 사회탐구 정답 및 해설",
+      "search_title": "세계사 정답 해 설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 social/world-history solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_main_hsj_7E1O8247.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 202505 go3 영어",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 영어 영어 영어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/kor_main_hsj_J154F7J1_2.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go3 his_main",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che1_hsj_4WY39517.pdf",
+      "search_query": "20240604 go3 g_che1",
+      "search_title": "과학탐구영역 화학Ⅰ 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/chemistry-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear1_hsj_FO82JKZW.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250430 go3 지구과학",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 과학탐구 과학탐구 과학탐구영역 영역 영역 지구과학Ⅰ 지구과학Ⅰ 지구과학Ⅰ 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/earth-science-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear2_hsj_F4SP1Q8S.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250604 go2 mp3",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 과학탐구 과학탐구 과학탐구영역 영역 영역 지구과학Ⅱ 지구과학Ⅱ 지구과학Ⅱ 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/earth-science-2 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy1_hsj_6868P113.pdf",
+      "search_query": "20240604 go3 g_phy1",
+      "search_title": "과학탐구영역 물리학Ⅰ 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/physics-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ch_mun_VIR855V1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go3 mun",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 7 36 1. 그림의 발음 기호 중 두 개를 조합하여 만들 수 있는 발음에",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/chinese-1 question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ch_hsj_2ZPB5YRI_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250604 go2 mp3",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 제2외국어/한문 제2외국어/한문 제2외국어/한문영역 영역 영역 중국어Ⅰ 중국어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/chinese-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_han_hsj_IEUC367X.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 제2외국어 한문",
+      "search_title": "학년도 대학수학능력시험 월 모의평가 2026 6 제외국어한문 2 / 제외국어한문 2 / 제외국어한문 2 / 영역 영역 영역한문 Ⅰ 한문 Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/classical-chinese-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ja_hsj_868Z41K2.pdf",
+      "search_query": "2026학년도 6월 모의평가 일본어 정답 및 해설 wdown.ebsi.co.kr",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 제2외국어/한문 제2외국어/한문 제2외국어/한문영역 영역 영역 일본어Ⅰ 일본어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/japanese-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ru_mun_188QC4G1.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250604 go2 mp3",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 11 36 1. 밑줄 친 부분과 발음이 같은 것은? [1점] ①адрес ②отдых",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/russian-1 question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_vit_hsj_F95MB761.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 제2외국어 한문",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 제2외국어/한문 제2외국어/한문 제2외국어/한문영역 영역 영역 베트남어Ⅰ 베트남어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/vietnamese-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_hanji_hsj_B9X85I2O.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250604 go2 mp3",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 한국지리 한국지리 한국지리 정답 및 해설 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/korean-geography solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_ssnyr_hsj_RMN3I722.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250430 go3 생활과 윤리",
+      "search_title": "학년도 대학수학능력시험 월 모의평가 2026 6 사회탐구영역 사회탐구영역 사회탐구영역 생활과 윤리 생활과 윤리 생활과 윤리 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/life-and-ethics solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_samun_hsj_522O36I8.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go3 mun",
+      "search_title": "학년도 대학수학능력시험 월 모의평가 2026 6 사회탐구영역 사회탐구영역 사회탐구영역 사회 ‧ 문화 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/social-culture solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_saeji_hsj_YVJWO279.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250430 go3 세계지리 한국지리",
+      "search_title": "2026학년도 6월 대학수학능력 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 세계지리 세계지리 세계지리 정답 및 해설 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/world-geography solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_gup_hsj_8K4Z7256.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 직업탐구",
+      "search_title": "2026학년도 6월 모의평가 직업탐구 직업탐구 직업탐구영역 영역 영역 공업 일반 공업 일반 공업 일반 정답 및 해설 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/industry-general solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sjl_hsj_2MKRK4Z9_2.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250430 go3 윤리와 사상",
+      "search_title": "2026학년도 6월 모의평가 직업탐구 직업탐구 직업탐구영역 영역 영역 성공적인 직업생활 성공적인 직업생활 성공적인 직업생활 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/successful-career-life solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_mun_3FVD5KG6_1.pdf",
+      "search_query": "2025학년도 10월 고3 전국연합학력평가 한국사 wdown.ebsi.co.kr",
+      "search_title": "고3 국어영역 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 중국의 유학자인 주희는 사물의 이치를 탐구하는 궁리(窮理)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_hsj_BK6Q7H9T.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 영어",
+      "search_title": "2025학년도 7월 전국연합학력평가 정답 및 해설 고3 1 39 국어영역 ※ 본전국연합학력평가는17개시도교육청주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-7 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/his_main_hsj_39JY93S5.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 한국사",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 한국사영역 한국사영역 한국사영역 한국사 한국사 한국사 정답 및 해설 정답 및 해설 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 history/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/kor_main_hsj_2X96S4LB_2.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250903 go2",
+      "search_title": "학년도 대학수학능력시험 월 모의평가 2026 9 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1 독서 [1~3]",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "search_query": "2026학년도 9월 모의평가 국어 문제지 wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 5지선다형 1. ×   의 값은? [2점] ①",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 math/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ch_mun_218426MU.pdf",
+      "search_query": "20250903 go3 korB_1_mun wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 7 36 1. 그림의 발음 기호 중 두 개를 조합하여 만들 수 있는 발음에",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/chinese-1 question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ch_hsj_H97M28D5.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250903 go2",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 제2외국어/한문 제2외국어/한문 제2외국어/한문영역 영역 영역 중국어Ⅰ 중국어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/chinese-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_fr_mun_323L72QZ.pdf",
+      "search_query": "2026학년도 9월 모의평가 물리학Ⅰ 문제지 wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 3 36 1. 밑줄 친 부분과 발음이 같은 것은? ①chose ②étage",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/french-1 question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ru_mun_249Y6EYK.pdf",
+      "search_query": "20250903 go3 mathA_mun wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 11 36 1. 밑줄 친 부분과 발음이 다른 것은? ①вкус ②вдруг",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/russian-1 question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ru_hsj_719YO62X.pdf",
+      "search_query": "2026학년도 9월 모의평가 수학 정답 및 해설 wdown.ebsi.co.kr",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 제2외국어/한문 제2외국어/한문 제2외국어/한문영역 영역 영역 러시아어Ⅰ 러시아어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/russian-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_sp_hsj_H2T6ARY6.pdf",
+      "search_query": "2026학년도 9월 모의평가 영어 듣기 대본 wdown.ebsi.co.kr",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 제2외국어/한문 제2외국어/한문 제2외국어/한문영역 영역 영역 스페인어Ⅰ 스페인어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/spanish-1 solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_vit_mun_GJRW8AAA.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250903 go2",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 15 36 1. □에 들어갈 글자는? [1점] ①b ②g ③h ④r ⑤t □ổ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/vietnamese-1 question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_easta_hsj_6BG3QF54.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 사회탐구 정답 및 해설",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 동아시아사 동아시아사 동아시아사 정답 및 해설 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/east-asian-history solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_yrnss_hsj_662A27B3.pdf",
+      "search_query": "wdown.ebsi.co.kr go3 정치와 법 문제 2025",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 윤리와 사상 윤리와 사상 윤리와 사상 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/ethics-and-thought solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_hanji_hsj_BALI1SG3.pdf",
+      "search_query": "wdown.ebsi.co.kr go3 한국지리 정답 및 해설 2025",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 한국지리 한국지리 한국지리 정답 및 해설 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/korean-geography solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_ssnyr_hsj_KA127C5E.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250430 go3 생활과 윤리",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 생활과 윤리 생활과 윤리 생활과 윤리 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/life-and-ethics solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_bnj_mun_ZM38A99V.pdf",
+      "search_query": "wdown.ebsi.co.kr go3 정치와 법 문제 2025",
+      "search_title": "사회탐구 영역(정치와 법)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/politics-and-law question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_samun_mun_A1AT6KCF.pdf",
+      "search_query": "20250903 go3 mathA_mun wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 사회탐구영역 3 사회･문화 17 36",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/social-culture question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_samun_hsj_15MBA1IN.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 사회탐구 정답 및 해설",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 사회 사회 사회‧‧ 문화 문화 문화 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/social-culture solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_saeji_mun_ACIQ8X17.pdf",
+      "search_query": "wdown.ebsi.co.kr go3 세계지리 정답 및 해설 2025 3월",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 사회탐구영역 3 세계지리 7 36",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/world-geography question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_saeji_hsj_7S852ZYY.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 사회탐구 정답 및 해설",
+      "search_title": "2026학년도 9월 대학수학능력 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 세계지리 세계지리 세계지리 정답 및 해설 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/world-geography solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_sks_hsj_5C7N7Y3A.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 사회탐구 정답 및 해설",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 사회탐구영역 사회탐구영역 사회탐구영역 세계사 세계사 세계사 정답 및 해설 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/world-history solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_nupgi_mun_7A4R24EV.pdf",
+      "search_query": "2026학년도 9월 모의평가 직업탐구 wdown.ebsi.co.kr",
+      "search_title": "직업탐구 영역(농업 기초 기술)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/agriculture-basics question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_susan_mun_F1H33DA8.pdf",
+      "search_query": "2026학년도 9월 모의평가 영어 듣기 대본 wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 직업탐구영역 3 수산･해운산업기초 9 24",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/fisheries-and-shipping question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_inkan_hsj_N3H1B85J.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 직업탐구",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 직업탐구 직업탐구 직업탐구영역 영역 영역 인간 발달 인간 발달 인간 발달 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/human-development solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_gup_hsj_K79X9T3U.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 직업탐구",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 직업탐구 직업탐구 직업탐구영역 영역 영역 공업 일반 공업 일반 공업 일반 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/industry-general solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/eng_main_hsj_MZAA3Z94.pdf",
+      "search_query": "wdown.ebsi.co.kr go3 경제 문제 2025 전국연합학력평가",
+      "search_title": "1 • 영어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-10 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/his_main_mun_DLW4557I.pdf",
+      "search_query": "20251014 go3 g_phy1 wdown.ebsi.co.kr",
+      "search_title": "1 4 1. (가) 국가에 대한 설명으로 옳은 것은? 나는 천제(天帝)이신 환 인의 아들 환웅과 웅녀 사이에서 태어났다. 이곳",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-10 history/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf",
+      "search_query": "2025학년도 10월 고3 전국연합학력평가 국어 정답 wdown.ebsi.co.kr",
+      "search_title": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 인지 심리학에서는 외부 세계를 이미지로 구조화한 정신 표",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-10 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_hsj_39QAF4NE.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251014 go2",
+      "search_title": "1 • 국어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-10 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/math_main_hsj_QFS3UEX9_1.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 수학",
+      "search_title": "2025학년도 10월 고3 전국연합학력평가 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-10 math/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/eng_main_hsj_36WSA734.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 영어 듣기 대본 scr",
+      "search_title": "2026학년도 대학수학능력시험 영어 영어 영어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 english/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/his_main_hsj_13AS7CD6.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 한국사",
+      "search_title": "한국사영역 한국사 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 history/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251113 go3 live_main_paper",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 korean/ question"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/kor_main_hsj_53A2UX7R_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 사회탐구 정답 및 해설",
+      "search_title": "2026학년도 대학수학능력시험 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 korean/ solution"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251113 go3 live_main_paper",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 5지선다형 1.   ×    의 값은? [2점]",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-11 math/ question"
+    }
+  ],
+  "held": [
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/korA_mun_52K1U8L8.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 국어",
+      "search_title": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 독서 동기는 독서 행위를 유발하고 지속시키는 핵심 요인이",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korA' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathA_mun_C3LS7VF1.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 국어",
+      "search_title": "1 20 5 지선다형 1.  ×  의 값은? [2점] ①  ②  ③  ④  ⑤ ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'mathA' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/korB_1_hsj_9LXO251Y_1.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 수학",
+      "search_title": "2025학년도 7월 전국연합학력평가 정답 및 해설 고3 1 39 국어영역 ※ 본전국연합학력평가는17개시도교육청주관으로",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korB' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/mathB_mun_SS558TO2.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 한국사",
+      "search_title": "1 20 5 지선다형 1.  ×  의 값은? [2점] ①  ②  ③  ④  ⑤ ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'mathB' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/korB_1_mun_G4WIZ5UA.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 문제지 수학",
+      "search_title": "고3 국어영역 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 중국의 유학자인 주희는 사물의 이치를 탐구하는 궁리(窮理)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korB' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korB_1_hsj_TLN6OPB4_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250604 go2 mp3",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korB' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korA_1_hsj_K962J13R_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 20250903 go2",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1 [1~3] 독서",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korA' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_answer_1_his_R34FJ561.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 한국사",
+      "search_title": "한국사 영역 정답표 ( 홀수 )형",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "정답표(정답 및 해설 우선)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_answer_1_kor_8ZE3E1XR.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 한국사",
+      "search_title": "2026학년도 대학수학능력시험 국어 영역 정답표 ( 홀수 ) 형 공통 과목 선택 과목 화법과 작문 언어와 매체 문항 번호 정답 배점 문항 번호",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "정답표(정답 및 해설 우선)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/his_main_hsj_9NDOHJIB.pdf",
+      "search_query": "wdown.ebsi.co.kr 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "1 • 4교시 한국사 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "시험 월 미확인 — 경로 날짜 2025-04-30 를 명시한 제목이 없음 (게시일일 수 있음)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/korA_1_mun_178BCS6A.pdf",
+      "search_query": "wdown.ebsi.co.kr 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "고3 국어영역 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 중국의 유학자인 주희는 사물의 이치를 탐구하는 궁리(窮理)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korA' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/eng_main_hsj_9F17V8QR.pdf",
+      "search_query": "wdown.ebsi.co.kr 2025학년도 5월 고3 전국연합학력평가",
+      "search_title": "1 • 3교시 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "시험 월 미확인 — 경로 날짜 2025-04-30 를 명시한 제목이 없음 (게시일일 수 있음)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/kor_main_hsj_4R8V482P.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250430 go3 국어",
+      "search_title": "1교시 국어 영역",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "시험 월 미확인 — 경로 날짜 2025-04-30 를 명시한 제목이 없음 (게시일일 수 있음)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/korA_mun_II5D2218_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250430 go3 국어",
+      "search_title": "국어 영역",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "시험 월 미확인 — 경로 날짜 2025-04-30 를 명시한 제목이 없음 (게시일일 수 있음)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/math_main_hsj_MDQC6SUB_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 math_main 정답 및 해설",
+      "search_title": "정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "시험 월 미확인 — 경로 날짜 2025-04-30 를 명시한 제목이 없음 (게시일일 수 있음)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_answer_2_kor_34S6DJC1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 202506 go3 국어",
+      "search_title": "2026학년도 대학수학능력시험 국어 영역 정답표 ( 짝수 ) 형 공통 과목 선택 과목 화법과 작문 언어와 매체 문항 번호 정답 배점 문항 번호",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "정답표(정답 및 해설 우선)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korB_1_mun_34L3Q845_1.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go3 mun",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korB' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korA_1_mun_PKG5QYBR.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 202509 go3 한국사 mun",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korA' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korB_1_hsj_SVCWW4XL_1.pdf",
+      "search_query": "20250903 go3 korB_1_mun wdown.ebsi.co.kr",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1 [1~3] 독서",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korB' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korB_1_mun_1VK7ZJ83.pdf",
+      "search_query": "20250903 go3 korB_1_mun wdown.ebsi.co.kr",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "'korB' 변형(선택과목 구분 미확인)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_2_kor_942P72J5.pdf",
+      "search_query": "wdown.ebsi.co.kr 20251113 go3 live_main_paper",
+      "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 짝수형 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "짝수형 문제지(홀수형만 게시)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_main_hsj_2L3Y8861.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go1",
+      "search_title": "1 • 국어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 슬롯에 서로 다른 파일 2개 — 운영자 선택 필요"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_hsj_1V99HKS3.pdf",
+      "search_query": "2025학년도 3월 고1 전국연합학력평가 정답 및 해설 수학 wdown.ebsi.co.kr",
+      "search_title": "2025학년도 3월 고1 전국연합학력평가 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 슬롯에 서로 다른 파일 2개 — 운영자 선택 필요"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/kor_hsj_T89VB6SC.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250604 go1",
+      "search_title": "1 • 국어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 슬롯에 서로 다른 파일 2개 — 운영자 선택 필요"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/kor_main_hsj_LL3TWV88_2.pdf",
+      "search_query": "2025학년도 6월 고1 전국연합학력평가 수학 정답 및 해설 wdown.ebsi.co.kr",
+      "search_title": "1 • 국어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 슬롯에 서로 다른 파일 2개 — 운영자 선택 필요"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/eng_main_hsj_LS66F3HV_1.pdf",
+      "search_query": "2025학년도 3월 고2 전국연합학력평가 정답 및 해설 영어",
+      "search_title": "1 • 3교시 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 파일 ID 의 다른 번호 — eng_main_hsj_LS66F3HV 채택"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/kor_main_hsj_21JM1LKF_1.pdf",
+      "search_query": "2025학년도 6월 고2 전국연합학력평가 문제지 국어",
+      "search_title": "2025학년도 6월 고2 전국연합학력평가 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 슬롯에 서로 다른 파일 2개 — 운영자 선택 필요"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/kor_hsj_1D4PC7B2.pdf",
+      "search_query": "2025학년도 고2 전국연합학력평가 윤리와 사상 정답",
+      "search_title": "1 • 국어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 슬롯에 서로 다른 파일 2개 — 운영자 선택 필요"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/kor_main_hsj_2X96S4LB_3.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250515 go3 국어 정답 및 해설",
+      "search_title": "국어영역 정답 및 해설",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 파일 ID 의 다른 번호 — kor_main_hsj_2X96S4LB_2 채택"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/kor_main_hsj_2X96S4LB_5.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250515 go3 수학",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 파일 ID 의 다른 번호 — kor_main_hsj_2X96S4LB_2 채택"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/kor_main_hsj_2X96S4LB_6.pdf",
+      "search_query": "wdown.ebsi.co.kr 01exam 20250326 go3 한국사",
+      "search_title": "2026학년도 대학수학능력시험 9월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "reason": "같은 파일 ID 의 다른 번호 — kor_main_hsj_2X96S4LB_2 채택"
+    }
+  ]
+}

@@ -249,6 +249,7 @@ robots.txt 가 자동 요청을 막는 EBSi·KICE·교육청 자료는 우회하
 - 같은 CSV 를 다시 넣어도 결과는 같습니다 (idempotent). URL 이 바뀐 슬롯만 다시 검토 대기가 됩니다.
 - 샘플 시험에 실제 자료가 승인되면 그 시험의 샘플 파일·문항·등급컷 등을 제거하고 실제 시험으로 전환합니다.
 - 실제 데이터 coverage: `npm run ingest:coverage -- --summary`
+- 현재 입력분: `data/imports/official-urls.csv` (2023~2025년, 309행, 전부 `manual_review`). 수집 방법·근거·누락은 [docs/REAL_DATA_COVERAGE.md](docs/REAL_DATA_COVERAGE.md)
 
 ### 실제 source 검증 (live fixture)
 

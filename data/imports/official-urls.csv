@@ -1,0 +1,310 @@
+year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,official_url,original_file_name,source_label
+2025,1,3,school_mock,2025-03-26,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_main_hsj_W6D54ZP4_1.pdf,eng_main_hsj_W6D54ZP4_1.pdf,EBSi 2025년 3월 고1 학력평가 영어 정답 및 해설
+2025,1,3,school_mock,2025-03-26,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/his_main_hsj_461Y98HN.pdf,his_main_hsj_461Y98HN.pdf,EBSi 2025년 3월 고1 학력평가 한국사 정답 및 해설
+2025,1,3,school_mock,2025-03-26,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_mun_55A7H57F.pdf,kor_mun_55A7H57F.pdf,EBSi 2025년 3월 고1 학력평가 국어 문제
+2025,1,3,school_mock,2025-03-26,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/math_main_mun_1Z1WK7R9_1.pdf,math_main_mun_1Z1WK7R9_1.pdf,EBSi 2025년 3월 고1 학력평가 수학 문제
+2025,1,3,school_mock,2025-03-26,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/math_main_hsj_3P67AC54.pdf,math_main_hsj_3P67AC54.pdf,EBSi 2025년 3월 고1 학력평가 수학 정답 및 해설
+2025,1,6,school_mock,2025-06-04,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_main_hsj_2FVA49I8_2.pdf,eng_main_hsj_2FVA49I8_2.pdf,EBSi 2025년 6월 고1 학력평가 영어 정답 및 해설
+2025,1,6,school_mock,2025-06-04,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/his_main_hsj_4538K65W.pdf,his_main_hsj_4538K65W.pdf,EBSi 2025년 6월 고1 학력평가 한국사 정답 및 해설
+2025,1,6,school_mock,2025-06-04,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/kor_main_mun_PY1V7PAD_1.pdf,kor_main_mun_PY1V7PAD_1.pdf,EBSi 2025년 6월 고1 학력평가 국어 문제
+2025,1,6,school_mock,2025-06-04,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/math_main_hsj_74Z57396_2.pdf,math_main_hsj_74Z57396_2.pdf,EBSi 2025년 6월 고1 학력평가 수학 정답 및 해설
+2025,1,6,school_mock,2025-06-04,,social,integrated-social,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/sat_main_mun_936R24LR.pdf,sat_main_mun_936R24LR.pdf,EBSi 2025년 6월 고1 학력평가 통합사회 문제
+2025,1,9,school_mock,2025-09-03,,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/eng_1_mun_11LNMPIC.pdf,eng_1_mun_11LNMPIC.pdf,EBSi 2025년 9월 고1 학력평가 영어 문제
+2025,1,9,school_mock,2025-09-03,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/kor_main_mun_77F7745C.pdf,kor_main_mun_77F7745C.pdf,EBSi 2025년 9월 고1 학력평가 국어 문제
+2025,1,9,school_mock,2025-09-03,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/math_main_mun_8KC62N33_1.pdf,math_main_mun_8KC62N33_1.pdf,EBSi 2025년 9월 고1 학력평가 수학 문제
+2025,1,9,school_mock,2025-09-03,,science,integrated-science,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/gat_main_mun_66784PDJ.pdf,gat_main_mun_66784PDJ.pdf,EBSi 2025년 9월 고1 학력평가 통합과학 문제
+2025,1,10,school_mock,2025-10-14,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/eng_main_hsj_A4O6G2F5.pdf,eng_main_hsj_A4O6G2F5.pdf,EBSi 2025년 10월 고1 학력평가 영어 정답 및 해설
+2025,1,10,school_mock,2025-10-14,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/kor_main_mun_Y2Y66383.pdf,kor_main_mun_Y2Y66383.pdf,EBSi 2025년 10월 고1 학력평가 국어 문제
+2025,1,10,school_mock,2025-10-14,,science,integrated-science,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/gat_main_hsj_B9HQ8H65.pdf,gat_main_hsj_B9HQ8H65.pdf,EBSi 2025년 10월 고1 학력평가 통합과학 정답 및 해설
+2025,1,10,school_mock,2025-10-14,,social,integrated-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/sat_main_hsj_N751JM45.pdf,sat_main_hsj_N751JM45.pdf,EBSi 2025년 10월 고1 학력평가 통합사회 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_main_hsj_8RKR7M1W.pdf,eng_main_hsj_8RKR7M1W.pdf,EBSi 2025년 3월 고2 학력평가 영어 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_mun_JBJ4R7WR.pdf,kor_main_mun_JBJ4R7WR.pdf,EBSi 2025년 3월 고2 학력평가 국어 문제
+2025,2,3,school_mock,2025-03-26,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_hsj_9MR565V3.pdf,kor_main_hsj_9MR565V3.pdf,EBSi 2025년 3월 고2 학력평가 국어 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_che1_hsj_3Z3EUA27.pdf,g_che1_hsj_3Z3EUA27.pdf,EBSi 2025년 3월 고2 학력평가 화학1 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_ear1_hsj_868X54WI.pdf,g_ear1_hsj_868X54WI.pdf,EBSi 2025년 3월 고2 학력평가 지구과학1 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_bio1_hsj_YS6CK7I6.pdf,g_bio1_hsj_YS6CK7I6.pdf,EBSi 2025년 3월 고2 학력평가 생명과학1 정답 및 해설
+2025,2,3,school_mock,2025-03-26,,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_yrnss_hsj_1FUMJPZ3.pdf,s_yrnss_hsj_1FUMJPZ3.pdf,EBSi 2025년 3월 고2 학력평가 윤리와사상 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/eng_main_hsj_4A53HZ97_1.pdf,eng_main_hsj_4A53HZ97_1.pdf,EBSi 2025년 6월 고2 학력평가 영어 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/kor_main_mun_6WZU5Z12_1.pdf,kor_main_mun_6WZU5Z12_1.pdf,EBSi 2025년 6월 고2 학력평가 국어 문제
+2025,2,6,school_mock,2025-06-04,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/math_main_hsj_8QV88PI4_1.pdf,math_main_hsj_8QV88PI4_1.pdf,EBSi 2025년 6월 고2 학력평가 수학 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_easta_hsj_3DECJW6P.pdf,s_easta_hsj_3DECJW6P.pdf,EBSi 2025년 6월 고2 학력평가 동아시아사 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_yrnss_hsj_344M4K63.pdf,s_yrnss_hsj_344M4K63.pdf,EBSi 2025년 6월 고2 학력평가 윤리와사상 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_hanji_hsj_JE4VGBT2.pdf,s_hanji_hsj_JE4VGBT2.pdf,EBSi 2025년 6월 고2 학력평가 한국지리 정답 및 해설
+2025,2,6,school_mock,2025-06-04,,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_samun_hsj_8B84IONP.pdf,s_samun_hsj_8B84IONP.pdf,EBSi 2025년 6월 고2 학력평가 사회문화 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/eng_main_hsj_868C9E84.pdf,eng_main_hsj_868C9E84.pdf,EBSi 2025년 9월 고2 학력평가 영어 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/his_main_mun_Z12G5685_1.pdf,his_main_mun_Z12G5685_1.pdf,EBSi 2025년 9월 고2 학력평가 한국사 문제
+2025,2,9,school_mock,2025-09-03,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/kor_main_mun_ZKNW6ZSE.pdf,kor_main_mun_ZKNW6ZSE.pdf,EBSi 2025년 9월 고2 학력평가 국어 문제
+2025,2,9,school_mock,2025-09-03,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/kor_main_hsj_B4X88PV5.pdf,kor_main_hsj_B4X88PV5.pdf,EBSi 2025년 9월 고2 학력평가 국어 정답 및 해설
+2025,2,9,school_mock,2025-09-03,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/math_main_hsj_Z95Y88V4_1.pdf,math_main_hsj_Z95Y88V4_1.pdf,EBSi 2025년 9월 고2 학력평가 수학 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/eng_main_hsj_LS66F3HV.pdf,eng_main_hsj_LS66F3HV.pdf,EBSi 2025년 10월 고2 학력평가 영어 정답 및 해설 (같은 파일 ID 2개 중 eng_main_hsj_LS66F3HV)
+2025,2,10,school_mock,2025-10-14,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/kor_main_mun_43243P8X.pdf,kor_main_mun_43243P8X.pdf,EBSi 2025년 10월 고2 학력평가 국어 문제
+2025,2,10,school_mock,2025-10-14,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/kor_main_hsj_CN1Z96XN.pdf,kor_main_hsj_CN1Z96XN.pdf,EBSi 2025년 10월 고2 학력평가 국어 정답 및 해설
+2025,2,10,school_mock,2025-10-14,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/math_main_hsj_6DW94788.pdf,math_main_hsj_6DW94788.pdf,EBSi 2025년 10월 고2 학력평가 수학 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_main_hsj_66I8PI22.pdf,eng_main_hsj_66I8PI22.pdf,EBSi 2025년 3월 고3 학력평가 영어 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/kor_main_hsj_5J8MI931.pdf,kor_main_hsj_5J8MI931.pdf,EBSi 2025년 3월 고3 학력평가 국어 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_phy1_mun_C172K36V.pdf,g_phy1_mun_C172K36V.pdf,EBSi 2025년 3월 고3 학력평가 물리학1 문제
+2025,3,3,school_mock,2025-03-26,,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_eco_hsj_9K76CA5W.pdf,s_eco_hsj_9K76CA5W.pdf,EBSi 2025년 3월 고3 학력평가 경제 정답 및 해설
+2025,3,3,school_mock,2025-03-26,,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_sks_hsj_97E3796O.pdf,s_sks_hsj_97E3796O.pdf,EBSi 2025년 3월 고3 학력평가 세계사 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_main_hsj_7E1O8247.pdf,eng_main_hsj_7E1O8247.pdf,EBSi 2025년 6월 고3 모의평가 영어 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/kor_main_hsj_J154F7J1_2.pdf,kor_main_hsj_J154F7J1_2.pdf,EBSi 2025년 6월 고3 모의평가 국어 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che1_hsj_4WY39517.pdf,g_che1_hsj_4WY39517.pdf,EBSi 2025년 6월 고3 모의평가 화학1 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear1_hsj_FO82JKZW.pdf,g_ear1_hsj_FO82JKZW.pdf,EBSi 2025년 6월 고3 모의평가 지구과학1 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear2_hsj_F4SP1Q8S.pdf,g_ear2_hsj_F4SP1Q8S.pdf,EBSi 2025년 6월 고3 모의평가 지구과학2 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy1_hsj_6868P113.pdf,g_phy1_hsj_6868P113.pdf,EBSi 2025년 6월 고3 모의평가 물리학1 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ch_mun_VIR855V1.pdf,2nd_ch_mun_VIR855V1.pdf,EBSi 2025년 6월 고3 모의평가 중국어1 문제
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ch_hsj_2ZPB5YRI_1.pdf,2nd_ch_hsj_2ZPB5YRI_1.pdf,EBSi 2025년 6월 고3 모의평가 중국어1 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_han_hsj_IEUC367X.pdf,2nd_han_hsj_IEUC367X.pdf,EBSi 2025년 6월 고3 모의평가 한문1 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ja_hsj_868Z41K2.pdf,2nd_ja_hsj_868Z41K2.pdf,EBSi 2025년 6월 고3 모의평가 일본어1 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ru_mun_188QC4G1.pdf,2nd_ru_mun_188QC4G1.pdf,EBSi 2025년 6월 고3 모의평가 러시아어1 문제
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_vit_hsj_F95MB761.pdf,2nd_vit_hsj_F95MB761.pdf,EBSi 2025년 6월 고3 모의평가 베트남어1 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_hanji_hsj_B9X85I2O.pdf,s_hanji_hsj_B9X85I2O.pdf,EBSi 2025년 6월 고3 모의평가 한국지리 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_ssnyr_hsj_RMN3I722.pdf,s_ssnyr_hsj_RMN3I722.pdf,EBSi 2025년 6월 고3 모의평가 생활과윤리 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_samun_hsj_522O36I8.pdf,s_samun_hsj_522O36I8.pdf,EBSi 2025년 6월 고3 모의평가 사회문화 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_saeji_hsj_YVJWO279.pdf,s_saeji_hsj_YVJWO279.pdf,EBSi 2025년 6월 고3 모의평가 세계지리 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,vocational,industry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_gup_hsj_8K4Z7256.pdf,J_gup_hsj_8K4Z7256.pdf,EBSi 2025년 6월 고3 모의평가 공업일반 정답 및 해설
+2025,3,6,kice_mock,2025-06-04,한국교육과정평가원,vocational,successful-career-life,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sjl_hsj_2MKRK4Z9_2.pdf,J_sjl_hsj_2MKRK4Z9_2.pdf,EBSi 2025년 6월 고3 모의평가 성공적인직업생활 정답 및 해설
+2025,3,7,school_mock,2025-07-10,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_mun_3FVD5KG6_1.pdf,kor_main_mun_3FVD5KG6_1.pdf,EBSi 2025년 7월 고3 학력평가 국어 문제
+2025,3,7,school_mock,2025-07-10,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_hsj_BK6Q7H9T.pdf,kor_main_hsj_BK6Q7H9T.pdf,EBSi 2025년 7월 고3 학력평가 국어 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/his_main_hsj_39JY93S5.pdf,his_main_hsj_39JY93S5.pdf,EBSi 2025년 9월 고3 모의평가 한국사 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/kor_main_hsj_2X96S4LB_2.pdf,kor_main_hsj_2X96S4LB_2.pdf,EBSi 2025년 9월 고3 모의평가 국어 정답 및 해설 (같은 파일 ID 4개 중 kor_main_hsj_2X96S4LB_2)
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf,math_main_mun_9A36W91J_1.pdf,EBSi 2025년 9월 고3 모의평가 수학 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ch_mun_218426MU.pdf,2nd_ch_mun_218426MU.pdf,EBSi 2025년 9월 고3 모의평가 중국어1 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ch_hsj_H97M28D5.pdf,2nd_ch_hsj_H97M28D5.pdf,EBSi 2025년 9월 고3 모의평가 중국어1 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_fr_mun_323L72QZ.pdf,2nd_fr_mun_323L72QZ.pdf,EBSi 2025년 9월 고3 모의평가 프랑스어1 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ru_mun_249Y6EYK.pdf,2nd_ru_mun_249Y6EYK.pdf,EBSi 2025년 9월 고3 모의평가 러시아어1 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ru_hsj_719YO62X.pdf,2nd_ru_hsj_719YO62X.pdf,EBSi 2025년 9월 고3 모의평가 러시아어1 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_sp_hsj_H2T6ARY6.pdf,2nd_sp_hsj_H2T6ARY6.pdf,EBSi 2025년 9월 고3 모의평가 스페인어1 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_vit_mun_GJRW8AAA.pdf,2nd_vit_mun_GJRW8AAA.pdf,EBSi 2025년 9월 고3 모의평가 베트남어1 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_easta_hsj_6BG3QF54.pdf,s_easta_hsj_6BG3QF54.pdf,EBSi 2025년 9월 고3 모의평가 동아시아사 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_yrnss_hsj_662A27B3.pdf,s_yrnss_hsj_662A27B3.pdf,EBSi 2025년 9월 고3 모의평가 윤리와사상 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_hanji_hsj_BALI1SG3.pdf,s_hanji_hsj_BALI1SG3.pdf,EBSi 2025년 9월 고3 모의평가 한국지리 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_ssnyr_hsj_KA127C5E.pdf,s_ssnyr_hsj_KA127C5E.pdf,EBSi 2025년 9월 고3 모의평가 생활과윤리 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_bnj_mun_ZM38A99V.pdf,s_bnj_mun_ZM38A99V.pdf,EBSi 2025년 9월 고3 모의평가 정치와법 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_samun_mun_A1AT6KCF.pdf,s_samun_mun_A1AT6KCF.pdf,EBSi 2025년 9월 고3 모의평가 사회문화 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_samun_hsj_15MBA1IN.pdf,s_samun_hsj_15MBA1IN.pdf,EBSi 2025년 9월 고3 모의평가 사회문화 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_saeji_mun_ACIQ8X17.pdf,s_saeji_mun_ACIQ8X17.pdf,EBSi 2025년 9월 고3 모의평가 세계지리 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_saeji_hsj_7S852ZYY.pdf,s_saeji_hsj_7S852ZYY.pdf,EBSi 2025년 9월 고3 모의평가 세계지리 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_sks_hsj_5C7N7Y3A.pdf,s_sks_hsj_5C7N7Y3A.pdf,EBSi 2025년 9월 고3 모의평가 세계사 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,vocational,agriculture-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_nupgi_mun_7A4R24EV.pdf,J_nupgi_mun_7A4R24EV.pdf,EBSi 2025년 9월 고3 모의평가 농업기초기술 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,vocational,fisheries-and-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_susan_mun_F1H33DA8.pdf,J_susan_mun_F1H33DA8.pdf,EBSi 2025년 9월 고3 모의평가 수산해운산업기초 문제
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,vocational,human-development,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_inkan_hsj_N3H1B85J.pdf,J_inkan_hsj_N3H1B85J.pdf,EBSi 2025년 9월 고3 모의평가 인간발달 정답 및 해설
+2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,vocational,industry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_gup_hsj_K79X9T3U.pdf,J_gup_hsj_K79X9T3U.pdf,EBSi 2025년 9월 고3 모의평가 공업일반 정답 및 해설
+2025,3,10,school_mock,2025-10-14,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/eng_main_hsj_MZAA3Z94.pdf,eng_main_hsj_MZAA3Z94.pdf,EBSi 2025년 10월 고3 학력평가 영어 정답 및 해설
+2025,3,10,school_mock,2025-10-14,,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/his_main_mun_DLW4557I.pdf,his_main_mun_DLW4557I.pdf,EBSi 2025년 10월 고3 학력평가 한국사 문제
+2025,3,10,school_mock,2025-10-14,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf,kor_main_mun_1SX526ZF.pdf,EBSi 2025년 10월 고3 학력평가 국어 문제
+2025,3,10,school_mock,2025-10-14,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_hsj_39QAF4NE.pdf,kor_main_hsj_39QAF4NE.pdf,EBSi 2025년 10월 고3 학력평가 국어 정답 및 해설
+2025,3,10,school_mock,2025-10-14,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/math_main_hsj_QFS3UEX9_1.pdf,math_main_hsj_QFS3UEX9_1.pdf,EBSi 2025년 10월 고3 학력평가 수학 정답 및 해설
+2025,3,11,csat,2025-11-13,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/eng_main_hsj_36WSA734.pdf,eng_main_hsj_36WSA734.pdf,EBSi 2025년 11월 고3 수능 영어 정답 및 해설
+2025,3,11,csat,2025-11-13,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/his_main_hsj_13AS7CD6.pdf,his_main_hsj_13AS7CD6.pdf,EBSi 2025년 11월 고3 수능 한국사 정답 및 해설
+2025,3,11,csat,2025-11-13,한국교육과정평가원,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf,live_main_paper_1_kor_352K8BKR.pdf,EBSi 2025년 11월 고3 수능 국어 문제
+2025,3,11,csat,2025-11-13,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/kor_main_hsj_53A2UX7R_1.pdf,kor_main_hsj_53A2UX7R_1.pdf,EBSi 2025년 11월 고3 수능 국어 정답 및 해설
+2025,3,11,csat,2025-11-13,한국교육과정평가원,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf,live_main_paper_1_math_9Q5HR738.pdf,EBSi 2025년 11월 고3 수능 수학 문제
+2024,1,3,school_mock,2024-03-28,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/eng_main_hsj_5OF854ID.pdf,eng_main_hsj_5OF854ID.pdf,EBSi 2024년 3월 고1 학력평가 영어 정답 및 해설
+2024,1,3,school_mock,2024-03-28,,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/his_main_mun_3FQ8IZ5K.pdf,his_main_mun_3FQ8IZ5K.pdf,EBSi 2024년 3월 고1 학력평가 한국사 문제
+2024,1,3,school_mock,2024-03-28,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/kor_main_mun_I53O6E94.pdf,kor_main_mun_I53O6E94.pdf,EBSi 2024년 3월 고1 학력평가 국어 문제
+2024,1,3,school_mock,2024-03-28,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/kor_main_hsj_D242MH3O.pdf,kor_main_hsj_D242MH3O.pdf,EBSi 2024년 3월 고1 학력평가 국어 정답 및 해설
+2024,1,3,school_mock,2024-03-28,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/math_main_mun_CV5REF31.pdf,math_main_mun_CV5REF31.pdf,EBSi 2024년 3월 고1 학력평가 수학 문제
+2024,1,3,school_mock,2024-03-28,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/math_main_hsj_REEG3C39.pdf,math_main_hsj_REEG3C39.pdf,EBSi 2024년 3월 고1 학력평가 수학 정답 및 해설
+2024,1,3,school_mock,2024-03-28,,science,integrated-science,question,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/gat_main_mun_266Y98DR.pdf,gat_main_mun_266Y98DR.pdf,EBSi 2024년 3월 고1 학력평가 통합과학 문제
+2024,1,6,school_mock,2024-06-04,,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/his_main_mun_1XRC9522.pdf,his_main_mun_1XRC9522.pdf,EBSi 2024년 6월 고1 학력평가 한국사 문제
+2024,1,6,school_mock,2024-06-04,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/kor_main_mun_IQ4V881X.pdf,kor_main_mun_IQ4V881X.pdf,EBSi 2024년 6월 고1 학력평가 국어 문제
+2024,1,6,school_mock,2024-06-04,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/kor_main_hsj_BTAKQ5AO.pdf,kor_main_hsj_BTAKQ5AO.pdf,EBSi 2024년 6월 고1 학력평가 국어 정답 및 해설
+2024,1,6,school_mock,2024-06-04,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/math_main_hsj_7A567S56.pdf,math_main_hsj_7A567S56.pdf,EBSi 2024년 6월 고1 학력평가 수학 정답 및 해설
+2024,1,6,school_mock,2024-06-04,,science,integrated-science,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/gat_main_mun_C9PM7A84.pdf,gat_main_mun_C9PM7A84.pdf,EBSi 2024년 6월 고1 학력평가 통합과학 문제
+2024,1,6,school_mock,2024-06-04,,science,integrated-science,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/gat_main_hsj_QFC15N17.pdf,gat_main_hsj_QFC15N17.pdf,EBSi 2024년 6월 고1 학력평가 통합과학 정답 및 해설
+2024,1,6,school_mock,2024-06-04,,social,integrated-social,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/sat_main_mun_Z3V9R89W.pdf,sat_main_mun_Z3V9R89W.pdf,EBSi 2024년 6월 고1 학력평가 통합사회 문제
+2024,1,9,school_mock,2024-09-04,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/eng_main_hsj_QH49KA8V.pdf,eng_main_hsj_QH49KA8V.pdf,EBSi 2024년 9월 고1 학력평가 영어 정답 및 해설
+2024,1,9,school_mock,2024-09-04,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/his_main_hsj_9712EG43.pdf,his_main_hsj_9712EG43.pdf,EBSi 2024년 9월 고1 학력평가 한국사 정답 및 해설
+2024,1,9,school_mock,2024-09-04,,science,integrated-science,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/gat_main_hsj_JI7665J7.pdf,gat_main_hsj_JI7665J7.pdf,EBSi 2024년 9월 고1 학력평가 통합과학 정답 및 해설
+2024,1,9,school_mock,2024-09-04,,social,integrated-social,question,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/sat_main_mun_C71RJ7QW.pdf,sat_main_mun_C71RJ7QW.pdf,EBSi 2024년 9월 고1 학력평가 통합사회 문제
+2024,1,10,school_mock,2024-10-15,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/kor_main_mun_1A87P5PS.pdf,kor_main_mun_1A87P5PS.pdf,EBSi 2024년 10월 고1 학력평가 국어 문제
+2024,1,10,school_mock,2024-10-15,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/math_main_mun_1SC4HVA4.pdf,math_main_mun_1SC4HVA4.pdf,EBSi 2024년 10월 고1 학력평가 수학 문제
+2024,1,10,school_mock,2024-10-15,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/math_main_hsj_89781QVZ.pdf,math_main_hsj_89781QVZ.pdf,EBSi 2024년 10월 고1 학력평가 수학 정답 및 해설
+2024,1,10,school_mock,2024-10-15,,science,integrated-science,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/gat_main_hsj_9965V4NP.pdf,gat_main_hsj_9965V4NP.pdf,EBSi 2024년 10월 고1 학력평가 통합과학 정답 및 해설
+2024,1,10,school_mock,2024-10-15,,social,integrated-social,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/sat_main_mun_4A2PS99A.pdf,sat_main_mun_4A2PS99A.pdf,EBSi 2024년 10월 고1 학력평가 통합사회 문제
+2024,2,3,school_mock,2024-03-28,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/eng_main_hsj_3446KN9J.pdf,eng_main_hsj_3446KN9J.pdf,EBSi 2024년 3월 고2 학력평가 영어 정답 및 해설
+2024,2,3,school_mock,2024-03-28,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/kor_main_hsj_X9SVXB2G.pdf,kor_main_hsj_X9SVXB2G.pdf,EBSi 2024년 3월 고2 학력평가 국어 정답 및 해설
+2024,2,3,school_mock,2024-03-28,,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/s_yrnss_hsj_98F289CI.pdf,s_yrnss_hsj_98F289CI.pdf,EBSi 2024년 3월 고2 학력평가 윤리와사상 정답 및 해설
+2024,2,6,school_mock,2024-06-04,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/eng_main_hsj_155Y969V.pdf,eng_main_hsj_155Y969V.pdf,EBSi 2024년 6월 고2 학력평가 영어 정답 및 해설
+2024,2,6,school_mock,2024-06-04,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/his_main_hsj_H5UYJJ42.pdf,his_main_hsj_H5UYJJ42.pdf,EBSi 2024년 6월 고2 학력평가 한국사 정답 및 해설
+2024,2,6,school_mock,2024-06-04,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/kor_main_mun_34C4848E.pdf,kor_main_mun_34C4848E.pdf,EBSi 2024년 6월 고2 학력평가 국어 문제
+2024,2,6,school_mock,2024-06-04,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/math_main_mun_R2I4456U.pdf,math_main_mun_R2I4456U.pdf,EBSi 2024년 6월 고2 학력평가 수학 문제
+2024,2,6,school_mock,2024-06-04,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/math_main_hsj_2NSJOM37.pdf,math_main_hsj_2NSJOM37.pdf,EBSi 2024년 6월 고2 학력평가 수학 정답 및 해설
+2024,2,6,school_mock,2024-06-04,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/g_ear1_hsj_O73I8655.pdf,g_ear1_hsj_O73I8655.pdf,EBSi 2024년 6월 고2 학력평가 지구과학1 정답 및 해설
+2024,2,6,school_mock,2024-06-04,,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/s_bnj_mun_B1618MAN.pdf,s_bnj_mun_B1618MAN.pdf,EBSi 2024년 6월 고2 학력평가 정치와법 문제
+2024,2,6,school_mock,2024-06-04,,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/s_samun_hsj_UOYU3Z2M.pdf,s_samun_hsj_UOYU3Z2M.pdf,EBSi 2024년 6월 고2 학력평가 사회문화 정답 및 해설
+2024,2,9,school_mock,2024-09-04,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/eng_main_hsj_HA5TYRV4.pdf,eng_main_hsj_HA5TYRV4.pdf,EBSi 2024년 9월 고2 학력평가 영어 정답 및 해설 (같은 파일 ID 2개 중 eng_main_hsj_HA5TYRV4)
+2024,2,9,school_mock,2024-09-04,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/his_main_hsj_6617VHTM.pdf,his_main_hsj_6617VHTM.pdf,EBSi 2024년 9월 고2 학력평가 한국사 정답 및 해설
+2024,2,9,school_mock,2024-09-04,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/kor_main_mun_E162RF46.pdf,kor_main_mun_E162RF46.pdf,EBSi 2024년 9월 고2 학력평가 국어 문제
+2024,2,9,school_mock,2024-09-04,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/kor_main_hsj_G382E2Y2.pdf,kor_main_hsj_G382E2Y2.pdf,EBSi 2024년 9월 고2 학력평가 국어 정답 및 해설
+2024,2,9,school_mock,2024-09-04,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/math_main_mun_XR6P2569.pdf,math_main_mun_XR6P2569.pdf,EBSi 2024년 9월 고2 학력평가 수학 문제
+2024,2,9,school_mock,2024-09-04,,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/s_samun_hsj_4V58RNY1.pdf,s_samun_hsj_4V58RNY1.pdf,EBSi 2024년 9월 고2 학력평가 사회문화 정답 및 해설
+2024,2,10,school_mock,2024-10-15,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/eng_main_hsj_16429H26.pdf,eng_main_hsj_16429H26.pdf,EBSi 2024년 10월 고2 학력평가 영어 정답 및 해설
+2024,2,10,school_mock,2024-10-15,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/kor_main_mun_P8D4GS7W.pdf,kor_main_mun_P8D4GS7W.pdf,EBSi 2024년 10월 고2 학력평가 국어 문제
+2024,2,10,school_mock,2024-10-15,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/math_main_mun_959492W4.pdf,math_main_mun_959492W4.pdf,EBSi 2024년 10월 고2 학력평가 수학 문제
+2024,2,10,school_mock,2024-10-15,,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/g_bio1_hsj_2N49MI6Q.pdf,g_bio1_hsj_2N49MI6Q.pdf,EBSi 2024년 10월 고2 학력평가 생명과학1 정답 및 해설
+2024,2,10,school_mock,2024-10-15,,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/2nd_ch_mun_49VVPT9S.pdf,2nd_ch_mun_49VVPT9S.pdf,EBSi 2024년 10월 고2 학력평가 중국어1 문제
+2024,2,10,school_mock,2024-10-15,,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/2nd_han_mun_2HC6AK3C.pdf,2nd_han_mun_2HC6AK3C.pdf,EBSi 2024년 10월 고2 학력평가 한문1 문제
+2024,2,10,school_mock,2024-10-15,,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/2nd_ja_hsj_JZU9L6AV.pdf,2nd_ja_hsj_JZU9L6AV.pdf,EBSi 2024년 10월 고2 학력평가 일본어1 정답 및 해설
+2024,2,10,school_mock,2024-10-15,,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/2nd_sp_mun_31675PCZ.pdf,2nd_sp_mun_31675PCZ.pdf,EBSi 2024년 10월 고2 학력평가 스페인어1 문제
+2024,2,10,school_mock,2024-10-15,,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/s_ssnyr_hsj_8B6B7HMU.pdf,s_ssnyr_hsj_8B6B7HMU.pdf,EBSi 2024년 10월 고2 학력평가 생활과윤리 정답 및 해설
+2024,2,10,school_mock,2024-10-15,,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/s_saeji_hsj_F4M4RU8Y.pdf,s_saeji_hsj_F4M4RU8Y.pdf,EBSi 2024년 10월 고2 학력평가 세계지리 정답 및 해설
+2024,3,3,school_mock,2024-03-28,,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/eng_mun_H7EDO6O9.pdf,eng_mun_H7EDO6O9.pdf,EBSi 2024년 3월 고3 학력평가 영어 문제
+2024,3,3,school_mock,2024-03-28,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/kor_main_mun_9V8TU3A4.pdf,kor_main_mun_9V8TU3A4.pdf,EBSi 2024년 3월 고3 학력평가 국어 문제
+2024,3,3,school_mock,2024-03-28,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/kor_main_hsj_TXG5R648.pdf,kor_main_hsj_TXG5R648.pdf,EBSi 2024년 3월 고3 학력평가 국어 정답 및 해설
+2024,3,3,school_mock,2024-03-28,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/math_main_mun_2B91H9AG.pdf,math_main_mun_2B91H9AG.pdf,EBSi 2024년 3월 고3 학력평가 수학 문제
+2024,3,3,school_mock,2024-03-28,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/g_ear1_hsj_4N874K3V.pdf,g_ear1_hsj_4N874K3V.pdf,EBSi 2024년 3월 고3 학력평가 지구과학1 정답 및 해설
+2024,3,3,school_mock,2024-03-28,,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/s_yrnss_mun_UE6T3A1H.pdf,s_yrnss_mun_UE6T3A1H.pdf,EBSi 2024년 3월 고3 학력평가 윤리와사상 문제
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/eng_main_hsj_567T9S7T_1.pdf,eng_main_hsj_567T9S7T_1.pdf,EBSi 2024년 6월 고3 모의평가 영어 정답 및 해설 (같은 파일 ID 2개 중 eng_main_hsj_567T9S7T_1)
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/his_main_mun_N68K68HC.pdf,his_main_mun_N68K68HC.pdf,EBSi 2024년 6월 고3 모의평가 한국사 문제
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/kor_main_hsj_2C42VZKT_1.pdf,kor_main_hsj_2C42VZKT_1.pdf,EBSi 2024년 6월 고3 모의평가 국어 정답 및 해설 (같은 파일 ID 4개 중 kor_main_hsj_2C42VZKT_1)
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/math_main_mun_83T1UW89_1.pdf,math_main_mun_83T1UW89_1.pdf,EBSi 2024년 6월 고3 모의평가 수학 문제
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/g_ear2_hsj_52KIM9PL.pdf,g_ear2_hsj_52KIM9PL.pdf,EBSi 2024년 6월 고3 모의평가 지구과학2 정답 및 해설
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/g_bio2_hsj_8738T5HD.pdf,g_bio2_hsj_8738T5HD.pdf,EBSi 2024년 6월 고3 모의평가 생명과학2 정답 및 해설
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/2nd_ch_mun_A4IJ3E7G.pdf,2nd_ch_mun_A4IJ3E7G.pdf,EBSi 2024년 6월 고3 모의평가 중국어1 문제
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/2nd_gr_mun_5417L3I6.pdf,2nd_gr_mun_5417L3I6.pdf,EBSi 2024년 6월 고3 모의평가 독일어1 문제
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/2nd_gr_hsj_MT63KLWQ.pdf,2nd_gr_hsj_MT63KLWQ.pdf,EBSi 2024년 6월 고3 모의평가 독일어1 정답 및 해설
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/2nd_ja_hsj_785EEJ42.pdf,2nd_ja_hsj_785EEJ42.pdf,EBSi 2024년 6월 고3 모의평가 일본어1 정답 및 해설
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/2nd_vit_mun_1AVM966Z.pdf,2nd_vit_mun_1AVM966Z.pdf,EBSi 2024년 6월 고3 모의평가 베트남어1 문제
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/s_easta_hsj_7Y28UCIC.pdf,s_easta_hsj_7Y28UCIC.pdf,EBSi 2024년 6월 고3 모의평가 동아시아사 정답 및 해설
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/s_hanji_hsj_THMUGZA1.pdf,s_hanji_hsj_THMUGZA1.pdf,EBSi 2024년 6월 고3 모의평가 한국지리 정답 및 해설
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/s_samun_hsj_A1247T9H.pdf,s_samun_hsj_A1247T9H.pdf,EBSi 2024년 6월 고3 모의평가 사회문화 정답 및 해설
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/s_sks_hsj_9UKDHWHB.pdf,s_sks_hsj_9UKDHWHB.pdf,EBSi 2024년 6월 고3 모의평가 세계사 정답 및 해설
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,vocational,commercial-economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/J_sangup_mun_NH42XHNS.pdf,J_sangup_mun_NH42XHNS.pdf,EBSi 2024년 6월 고3 모의평가 상업경제 문제
+2024,3,6,kice_mock,2024-06-04,한국교육과정평가원,vocational,industry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/J_gup_hsj_RRYAIE1I.pdf,J_gup_hsj_RRYAIE1I.pdf,EBSi 2024년 6월 고3 모의평가 공업일반 정답 및 해설
+2024,3,7,school_mock,2024-07-11,,english,,listening_script,https://wdown.ebsi.co.kr/W61001/01exam/20240711/go3/eng_1_scr_1C6FWE9T.pdf,eng_1_scr_1C6FWE9T.pdf,EBSi 2024년 7월 고3 학력평가 영어 영어 듣기 대본
+2024,3,7,school_mock,2024-07-11,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240711/go3/eng_main_hsj_5IJS69J3.pdf,eng_main_hsj_5IJS69J3.pdf,EBSi 2024년 7월 고3 학력평가 영어 정답 및 해설
+2024,3,7,school_mock,2024-07-11,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240711/go3/g_ear1_hsj_L26J5847.pdf,g_ear1_hsj_L26J5847.pdf,EBSi 2024년 7월 고3 학력평가 지구과학1 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/his_main_hsj_FYDO1724.pdf,his_main_hsj_FYDO1724.pdf,EBSi 2024년 9월 고3 모의평가 한국사 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/kor_main_hsj_EFE33512_1.pdf,kor_main_hsj_EFE33512_1.pdf,EBSi 2024년 9월 고3 모의평가 국어 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/g_che1_mun_Y26WRJ73.pdf,g_che1_mun_Y26WRJ73.pdf,EBSi 2024년 9월 고3 모의평가 화학1 문제
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/g_ear1_hsj_733F23PS.pdf,g_ear1_hsj_733F23PS.pdf,EBSi 2024년 9월 고3 모의평가 지구과학1 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/g_bio1_mun_32DG4E36.pdf,g_bio1_mun_32DG4E36.pdf,EBSi 2024년 9월 고3 모의평가 생명과학1 문제
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/2nd_han_hsj_Z5F22613.pdf,2nd_han_hsj_Z5F22613.pdf,EBSi 2024년 9월 고3 모의평가 한문1 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/2nd_gr_hsj_Y1TL5P95.pdf,2nd_gr_hsj_Y1TL5P95.pdf,EBSi 2024년 9월 고3 모의평가 독일어1 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/2nd_ja_hsj_EP2Z1386.pdf,2nd_ja_hsj_EP2Z1386.pdf,EBSi 2024년 9월 고3 모의평가 일본어1 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/2nd_vit_hsj_LE89553D.pdf,2nd_vit_hsj_LE89553D.pdf,EBSi 2024년 9월 고3 모의평가 베트남어1 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,social,life-and-ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/s_ssnyr_mun_5S9RG5H5.pdf,s_ssnyr_mun_5S9RG5H5.pdf,EBSi 2024년 9월 고3 모의평가 생활과윤리 문제
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/s_ssnyr_hsj_IS842ND8.pdf,s_ssnyr_hsj_IS842ND8.pdf,EBSi 2024년 9월 고3 모의평가 생활과윤리 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/s_bnj_hsj_ZNB851CD.pdf,s_bnj_hsj_ZNB851CD.pdf,EBSi 2024년 9월 고3 모의평가 정치와법 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/s_samun_hsj_7AEIZRKU_1.pdf,s_samun_hsj_7AEIZRKU_1.pdf,EBSi 2024년 9월 고3 모의평가 사회문화 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/s_saeji_hsj_TFQ32A59.pdf,s_saeji_hsj_TFQ32A59.pdf,EBSi 2024년 9월 고3 모의평가 세계지리 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,vocational,agriculture-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/J_nupgi_hsj_N31HUOG6.pdf,J_nupgi_hsj_N31HUOG6.pdf,EBSi 2024년 9월 고3 모의평가 농업기초기술 정답 및 해설
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,vocational,successful-career-life,question,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/J_sjl_mun_67698C9H.pdf,J_sjl_mun_67698C9H.pdf,EBSi 2024년 9월 고3 모의평가 성공적인직업생활 문제
+2024,3,9,kice_mock,2024-09-04,한국교육과정평가원,vocational,successful-career-life,solution,https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/J_sjl_hsj_G4BJLEXO_1.pdf,J_sjl_hsj_G4BJLEXO_1.pdf,EBSi 2024년 9월 고3 모의평가 성공적인직업생활 정답 및 해설
+2024,3,10,school_mock,2024-10-15,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/eng_main_hsj_4D73AY21.pdf,eng_main_hsj_4D73AY21.pdf,EBSi 2024년 10월 고3 학력평가 영어 정답 및 해설
+2024,3,10,school_mock,2024-10-15,,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/g_che1_hsj_O796Q2PJ.pdf,g_che1_hsj_O796Q2PJ.pdf,EBSi 2024년 10월 고3 학력평가 화학1 정답 및 해설
+2024,3,10,school_mock,2024-10-15,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/g_ear1_hsj_BN84T897.pdf,g_ear1_hsj_BN84T897.pdf,EBSi 2024년 10월 고3 학력평가 지구과학1 정답 및 해설
+2024,3,10,school_mock,2024-10-15,,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/g_ear2_hsj_42Y3ZQPA.pdf,g_ear2_hsj_42Y3ZQPA.pdf,EBSi 2024년 10월 고3 학력평가 지구과학2 정답 및 해설
+2024,3,10,school_mock,2024-10-15,,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/g_phy1_mun_K5E66352.pdf,g_phy1_mun_K5E66352.pdf,EBSi 2024년 10월 고3 학력평가 물리학1 문제
+2024,3,10,school_mock,2024-10-15,,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/2nd_ch_mun_35CT6799.pdf,2nd_ch_mun_35CT6799.pdf,EBSi 2024년 10월 고3 학력평가 중국어1 문제
+2024,3,10,school_mock,2024-10-15,,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/2nd_gr_hsj_KCFUZJIZ.pdf,2nd_gr_hsj_KCFUZJIZ.pdf,EBSi 2024년 10월 고3 학력평가 독일어1 정답 및 해설
+2024,3,10,school_mock,2024-10-15,,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/s_eco_hsj_WCC49K2W.pdf,s_eco_hsj_WCC49K2W.pdf,EBSi 2024년 10월 고3 학력평가 경제 정답 및 해설
+2024,3,10,school_mock,2024-10-15,,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/s_samun_hsj_2I6831D2.pdf,s_samun_hsj_2I6831D2.pdf,EBSi 2024년 10월 고3 학력평가 사회문화 정답 및 해설
+2024,3,10,school_mock,2024-10-15,,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/s_saeji_mun_ADN55B3G.pdf,s_saeji_mun_ADN55B3G.pdf,EBSi 2024년 10월 고3 학력평가 세계지리 문제
+2024,3,10,school_mock,2024-10-15,,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/s_saeji_hsj_TKC4639K.pdf,s_saeji_hsj_TKC4639K.pdf,EBSi 2024년 10월 고3 학력평가 세계지리 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/live_main_paper_1_kor_B6BHZB4D_02.pdf,live_main_paper_1_kor_B6BHZB4D_02.pdf,EBSi 2024년 11월 고3 수능 국어 문제
+2024,3,11,csat,2024-11-14,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/kor_main_hsj_4CZZMF2C_3.pdf,kor_main_hsj_4CZZMF2C_3.pdf,EBSi 2024년 11월 고3 수능 국어 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/math_main_hsj_M17Q9V46.pdf,math_main_hsj_M17Q9V46.pdf,EBSi 2024년 11월 고3 수능 수학 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/g_che1_hsj_W83T1JLD.pdf,g_che1_hsj_W83T1JLD.pdf,EBSi 2024년 11월 고3 수능 화학1 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/g_ear1_hsj_22288OPX.pdf,g_ear1_hsj_22288OPX.pdf,EBSi 2024년 11월 고3 수능 지구과학1 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/2nd_ar_hsj_28ZHADK9.pdf,2nd_ar_hsj_28ZHADK9.pdf,EBSi 2024년 11월 고3 수능 아랍어1 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/2nd_ch_hsj_YA4XWY27.pdf,2nd_ch_hsj_YA4XWY27.pdf,EBSi 2024년 11월 고3 수능 중국어1 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/2nd_ru_hsj_ORR6229O.pdf,2nd_ru_hsj_ORR6229O.pdf,EBSi 2024년 11월 고3 수능 러시아어1 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/2nd_vit_hsj_974BVD1T.pdf,2nd_vit_hsj_974BVD1T.pdf,EBSi 2024년 11월 고3 수능 베트남어1 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/s_eco_hsj_7333FSAA.pdf,s_eco_hsj_7333FSAA.pdf,EBSi 2024년 11월 고3 수능 경제 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/s_sks_hsj_594NJ636.pdf,s_sks_hsj_594NJ636.pdf,EBSi 2024년 11월 고3 수능 세계사 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,vocational,agriculture-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/J_nupgi_hsj_N968TTF3.pdf,J_nupgi_hsj_N968TTF3.pdf,EBSi 2024년 11월 고3 수능 농업기초기술 정답 및 해설
+2024,3,11,csat,2024-11-14,한국교육과정평가원,vocational,fisheries-and-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/J_susan_hsj_W183BEPK.pdf,J_susan_hsj_W183BEPK.pdf,EBSi 2024년 11월 고3 수능 수산해운산업기초 정답 및 해설
+2023,1,3,school_mock,2023-03-23,,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go1/his_main_hsj_T4Y8ZC3T.pdf,his_main_hsj_T4Y8ZC3T.pdf,EBSi 2023년 3월 고1 학력평가 한국사 정답 및 해설
+2023,1,3,school_mock,2023-03-23,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go1/kor_main_mun_5JN7PAR4_1.pdf,kor_main_mun_5JN7PAR4_1.pdf,EBSi 2023년 3월 고1 학력평가 국어 문제
+2023,1,6,school_mock,2023-06-01,,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go1/eng_mun_165EB81D.pdf,eng_mun_165EB81D.pdf,EBSi 2023년 6월 고1 학력평가 영어 문제
+2023,1,9,school_mock,2023-09-06,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/kor_main_mun_A61J27ZC.pdf,kor_main_mun_A61J27ZC.pdf,EBSi 2023년 9월 고1 학력평가 국어 문제
+2023,1,9,school_mock,2023-09-06,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/kor_main_hsj_X76PHBMH.pdf,kor_main_hsj_X76PHBMH.pdf,EBSi 2023년 9월 고1 학력평가 국어 정답 및 해설
+2023,1,9,school_mock,2023-09-06,,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/math_main_mun_GXJ7B173.pdf,math_main_mun_GXJ7B173.pdf,EBSi 2023년 9월 고1 학력평가 수학 문제
+2023,1,9,school_mock,2023-09-06,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/math_main_hsj_96KY8KZ9.pdf,math_main_hsj_96KY8KZ9.pdf,EBSi 2023년 9월 고1 학력평가 수학 정답 및 해설
+2023,1,9,school_mock,2023-09-06,,science,integrated-science,question,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/gat_main_mun_CMHMPM1Z.pdf,gat_main_mun_CMHMPM1Z.pdf,EBSi 2023년 9월 고1 학력평가 통합과학 문제
+2023,2,3,school_mock,2023-03-23,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go2/kor_main_mun_8AP2TU79.pdf,kor_main_mun_8AP2TU79.pdf,EBSi 2023년 3월 고2 학력평가 국어 문제
+2023,2,3,school_mock,2023-03-23,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go2/kor_main_hsj_8288M31R.pdf,kor_main_hsj_8288M31R.pdf,EBSi 2023년 3월 고2 학력평가 국어 정답 및 해설
+2023,2,3,school_mock,2023-03-23,,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go2/g_ear1_mun_23LM6TZI.pdf,g_ear1_mun_23LM6TZI.pdf,EBSi 2023년 3월 고2 학력평가 지구과학1 문제
+2023,2,6,school_mock,2023-06-01,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/kor_main_hsj_X6WNE5J2.pdf,kor_main_hsj_X6WNE5J2.pdf,EBSi 2023년 6월 고2 학력평가 국어 정답 및 해설
+2023,2,6,school_mock,2023-06-01,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/math_main_hsj_D28Q7U39.pdf,math_main_hsj_D28Q7U39.pdf,EBSi 2023년 6월 고2 학력평가 수학 정답 및 해설
+2023,2,6,school_mock,2023-06-01,,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/g_ear1_hsj_V848FX83.pdf,g_ear1_hsj_V848FX83.pdf,EBSi 2023년 6월 고2 학력평가 지구과학1 정답 및 해설
+2023,2,6,school_mock,2023-06-01,,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/g_bio1_mun_A9542EQ8.pdf,g_bio1_mun_A9542EQ8.pdf,EBSi 2023년 6월 고2 학력평가 생명과학1 문제
+2023,2,6,school_mock,2023-06-01,,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/gat_main_mun_3HQ6778T_1.pdf,gat_main_mun_3HQ6778T_1.pdf,EBSi 2023년 6월 고2 학력평가 물리학1 문제
+2023,2,6,school_mock,2023-06-01,,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/s_hanji_mun_HY6L555G.pdf,s_hanji_mun_HY6L555G.pdf,EBSi 2023년 6월 고2 학력평가 한국지리 문제
+2023,2,6,school_mock,2023-06-01,,social,life-and-ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/sat_main_mun_LFA7ZX36.pdf,sat_main_mun_LFA7ZX36.pdf,EBSi 2023년 6월 고2 학력평가 생활과윤리 문제
+2023,2,9,school_mock,2023-09-06,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go2/eng_main_hsj_SB54Y8GO.pdf,eng_main_hsj_SB54Y8GO.pdf,EBSi 2023년 9월 고2 학력평가 영어 정답 및 해설
+2023,2,9,school_mock,2023-09-06,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go2/kor_main_mun_1H4N6ZEC.pdf,kor_main_mun_1H4N6ZEC.pdf,EBSi 2023년 9월 고2 학력평가 국어 문제
+2023,2,9,school_mock,2023-09-06,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go2/math_main_hsj_89TL5M69.pdf,math_main_hsj_89TL5M69.pdf,EBSi 2023년 9월 고2 학력평가 수학 정답 및 해설
+2023,3,3,school_mock,2023-03-23,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/eng_main_hsj_GFX3IXW9.pdf,eng_main_hsj_GFX3IXW9.pdf,EBSi 2023년 3월 고3 학력평가 영어 정답 및 해설
+2023,3,3,school_mock,2023-03-23,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/kor_main_mun_WER9B839.pdf,kor_main_mun_WER9B839.pdf,EBSi 2023년 3월 고3 학력평가 국어 문제
+2023,3,3,school_mock,2023-03-23,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/kor_main_hsj_X6S23E16.pdf,kor_main_hsj_X6S23E16.pdf,EBSi 2023년 3월 고3 학력평가 국어 정답 및 해설
+2023,3,3,school_mock,2023-03-23,,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/math_main_hsj_A82SS311.pdf,math_main_hsj_A82SS311.pdf,EBSi 2023년 3월 고3 학력평가 수학 정답 및 해설
+2023,3,3,school_mock,2023-03-23,,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/s_yrnss_hsj_ICVTPY41.pdf,s_yrnss_hsj_ICVTPY41.pdf,EBSi 2023년 3월 고3 학력평가 윤리와사상 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/eng_main_hsj_A8WUK8UA.pdf,eng_main_hsj_A8WUK8UA.pdf,EBSi 2023년 6월 고3 모의평가 영어 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/his_main_mun_2W157941.pdf,his_main_mun_2W157941.pdf,EBSi 2023년 6월 고3 모의평가 한국사 문제
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/s_his_hsj_73EL54SQ.pdf,s_his_hsj_73EL54SQ.pdf,EBSi 2023년 6월 고3 모의평가 한국사 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/kor_main_mun_78586DW8.pdf,kor_main_mun_78586DW8.pdf,EBSi 2023년 6월 고3 모의평가 국어 문제
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/kor_main_hsj_L65NY8521.pdf,kor_main_hsj_L65NY8521.pdf,EBSi 2023년 6월 고3 모의평가 국어 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_ear1_hsj_7RL2QG85_2.pdf,g_ear1_hsj_7RL2QG85_2.pdf,EBSi 2023년 6월 고3 모의평가 지구과학1 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_ear2_hsj_93O83YH9_2.pdf,g_ear2_hsj_93O83YH9_2.pdf,EBSi 2023년 6월 고3 모의평가 지구과학2 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_bio2_hsj_167E95W3_2.pdf,g_bio2_hsj_167E95W3_2.pdf,EBSi 2023년 6월 고3 모의평가 생명과학2 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_phy2_hsj_18Y87WG71.pdf,g_phy2_hsj_18Y87WG71.pdf,EBSi 2023년 6월 고3 모의평가 물리학2 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_ch_mun_5HUP7VZ6.pdf,2nd_ch_mun_5HUP7VZ6.pdf,EBSi 2023년 6월 고3 모의평가 중국어1 문제
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_ch_hsj_1B235H32.pdf,2nd_ch_hsj_1B235H32.pdf,EBSi 2023년 6월 고3 모의평가 중국어1 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_fr_hsj_2M5QVK57.pdf,2nd_fr_hsj_2M5QVK57.pdf,EBSi 2023년 6월 고3 모의평가 프랑스어1 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_gr_hsj_R8S45JB4_2.pdf,2nd_gr_hsj_R8S45JB4_2.pdf,EBSi 2023년 6월 고3 모의평가 독일어1 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_ja_hsj_W8142RB6.pdf,2nd_ja_hsj_W8142RB6.pdf,EBSi 2023년 6월 고3 모의평가 일본어1 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_ru_hsj_AL6Y4GT3.pdf,2nd_ru_hsj_AL6Y4GT3.pdf,EBSi 2023년 6월 고3 모의평가 러시아어1 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_sp_hsj_9ZH6BE5G.pdf,2nd_sp_hsj_9ZH6BE5G.pdf,EBSi 2023년 6월 고3 모의평가 스페인어1 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_vit_mun_9T58U3BR.pdf,2nd_vit_mun_9T58U3BR.pdf,EBSi 2023년 6월 고3 모의평가 베트남어1 문제
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_vit_hsj_48I1A8VN.pdf,2nd_vit_hsj_48I1A8VN.pdf,EBSi 2023년 6월 고3 모의평가 베트남어1 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/s_ssnyr_hsj_OWR666DA_1.pdf,s_ssnyr_hsj_OWR666DA_1.pdf,EBSi 2023년 6월 고3 모의평가 생활과윤리 정답 및 해설
+2023,3,6,kice_mock,2023-06-01,한국교육과정평가원,vocational,commercial-economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/J_sangup_mun_65M619WK.pdf,J_sangup_mun_65M619WK.pdf,EBSi 2023년 6월 고3 모의평가 상업경제 문제
+2023,3,7,school_mock,2023-07-11,,english,,listening_script,https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/eng_scr_J88734A4.pdf,eng_scr_J88734A4.pdf,EBSi 2023년 7월 고3 학력평가 영어 영어 듣기 대본
+2023,3,7,school_mock,2023-07-11,,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/eng_main_hsj_AO16PA86.pdf,eng_main_hsj_AO16PA86.pdf,EBSi 2023년 7월 고3 학력평가 영어 정답 및 해설
+2023,3,7,school_mock,2023-07-11,,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/his_main_mun_SF3X56WS.pdf,his_main_mun_SF3X56WS.pdf,EBSi 2023년 7월 고3 학력평가 한국사 문제
+2023,3,7,school_mock,2023-07-11,,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/kor_main_mun_ZGJG1D65.pdf,kor_main_mun_ZGJG1D65.pdf,EBSi 2023년 7월 고3 학력평가 국어 문제
+2023,3,7,school_mock,2023-07-11,,social,life-and-ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/s_ssnyr_mun_CUDAZF9Y.pdf,s_ssnyr_mun_CUDAZF9Y.pdf,EBSi 2023년 7월 고3 학력평가 생활과윤리 문제
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/his_main_mun_533AA431.pdf,his_main_mun_533AA431.pdf,EBSi 2023년 9월 고3 모의평가 한국사 문제
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/kor_main_mun_Y314T372.pdf,kor_main_mun_Y314T372.pdf,EBSi 2023년 9월 고3 모의평가 국어 문제
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/kor_main_hsj_CHM3S63I_2.pdf,kor_main_hsj_CHM3S63I_2.pdf,EBSi 2023년 9월 고3 모의평가 국어 정답 및 해설 (같은 파일 ID 2개 중 kor_main_hsj_CHM3S63I_2)
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/math_main_hsj_VU14OSH9_1.pdf,math_main_hsj_VU14OSH9_1.pdf,EBSi 2023년 9월 고3 모의평가 수학 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/g_ear2_hsj_29Q3WZRA.pdf,g_ear2_hsj_29Q3WZRA.pdf,EBSi 2023년 9월 고3 모의평가 지구과학2 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/g_phy1_mun_7B247X68.pdf,g_phy1_mun_7B247X68.pdf,EBSi 2023년 9월 고3 모의평가 물리학1 문제
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_ch_hsj_AJ1DRNAA.pdf,2nd_ch_hsj_AJ1DRNAA.pdf,EBSi 2023년 9월 고3 모의평가 중국어1 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_han_hsj_38E67O7R.pdf,2nd_han_hsj_38E67O7R.pdf,EBSi 2023년 9월 고3 모의평가 한문1 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_gr_hsj_ZUFECP8B.pdf,2nd_gr_hsj_ZUFECP8B.pdf,EBSi 2023년 9월 고3 모의평가 독일어1 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_sp_mun_WC4661N3.pdf,2nd_sp_mun_WC4661N3.pdf,EBSi 2023년 9월 고3 모의평가 스페인어1 문제
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_vit_hsj_227KH546.pdf,2nd_vit_hsj_227KH546.pdf,EBSi 2023년 9월 고3 모의평가 베트남어1 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_yrnss_hsj_TE6U6Y6O.pdf,s_yrnss_hsj_TE6U6Y6O.pdf,EBSi 2023년 9월 고3 모의평가 윤리와사상 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_hanji_hsj_PB99SA8U.pdf,s_hanji_hsj_PB99SA8U.pdf,EBSi 2023년 9월 고3 모의평가 한국지리 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,social,life-and-ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_ssnyr_hsj_23L6N2MZ.pdf,s_ssnyr_hsj_23L6N2MZ.pdf,EBSi 2023년 9월 고3 모의평가 생활과윤리 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_bnj_hsj_41MZP9SM.pdf,s_bnj_hsj_41MZP9SM.pdf,EBSi 2023년 9월 고3 모의평가 정치와법 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_samun_hsj_59749N33_1.pdf,s_samun_hsj_59749N33_1.pdf,EBSi 2023년 9월 고3 모의평가 사회문화 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,vocational,agriculture-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/J_nupgi_hsj_QG7DW3RZ.pdf,J_nupgi_hsj_QG7DW3RZ.pdf,EBSi 2023년 9월 고3 모의평가 농업기초기술 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,vocational,human-development,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/J_inkan_hsj_5FUW6S44.pdf,J_inkan_hsj_5FUW6S44.pdf,EBSi 2023년 9월 고3 모의평가 인간발달 정답 및 해설
+2023,3,9,kice_mock,2023-09-06,한국교육과정평가원,vocational,industry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/J_gup_hsj_8OMWX734.pdf,J_gup_hsj_8OMWX734.pdf,EBSi 2023년 9월 고3 모의평가 공업일반 정답 및 해설
+2023,3,10,school_mock,2023-10-12,,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231012/go3/kor_main_hsj_BSHJ14QP.pdf,kor_main_hsj_BSHJ14QP.pdf,EBSi 2023년 10월 고3 학력평가 국어 정답 및 해설
+2023,3,10,school_mock,2023-10-12,,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20231012/go3/2nd_ch_mun_9BN3L6FF.pdf,2nd_ch_mun_9BN3L6FF.pdf,EBSi 2023년 10월 고3 학력평가 중국어1 문제
+2023,3,11,csat,2023-11-16,한국교육과정평가원,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/eng_1_mun_A3KO1N22.pdf,eng_1_mun_A3KO1N22.pdf,EBSi 2023년 11월 고3 수능 영어 문제
+2023,3,11,csat,2023-11-16,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/eng_1_hsj_YANDRG8A_1.pdf,eng_1_hsj_YANDRG8A_1.pdf,EBSi 2023년 11월 고3 수능 영어 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/his_main_hsj_9M3K3K46.pdf,his_main_hsj_9M3K3K46.pdf,EBSi 2023년 11월 고3 수능 한국사 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/kor_main_hsj_913QDM2N.pdf,kor_main_hsj_913QDM2N.pdf,EBSi 2023년 11월 고3 수능 국어 정답 및 해설 (같은 파일 ID 2개 중 kor_main_hsj_913QDM2N)
+2023,3,11,csat,2023-11-16,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_che1_mun_WLN9X458.pdf,g_che1_mun_WLN9X458.pdf,EBSi 2023년 11월 고3 수능 화학1 문제
+2023,3,11,csat,2023-11-16,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_che1_hsj_48WE1BB3.pdf,g_che1_hsj_48WE1BB3.pdf,EBSi 2023년 11월 고3 수능 화학1 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_ear1_hsj_WZKQQ2JF.pdf,g_ear1_hsj_WZKQQ2JF.pdf,EBSi 2023년 11월 고3 수능 지구과학1 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_ear2_hsj_816ZK5W5.pdf,g_ear2_hsj_816ZK5W5.pdf,EBSi 2023년 11월 고3 수능 지구과학2 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_phy1_mun_79YM8687.pdf,g_phy1_mun_79YM8687.pdf,EBSi 2023년 11월 고3 수능 물리학1 문제
+2023,3,11,csat,2023-11-16,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_phy2_hsj_468WNJ8X.pdf,g_phy2_hsj_468WNJ8X.pdf,EBSi 2023년 11월 고3 수능 물리학2 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/2nd_ch_mun_67U5T2WP.pdf,2nd_ch_mun_67U5T2WP.pdf,EBSi 2023년 11월 고3 수능 중국어1 문제
+2023,3,11,csat,2023-11-16,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/2nd_fr_mun_CQPR2DHE.pdf,2nd_fr_mun_CQPR2DHE.pdf,EBSi 2023년 11월 고3 수능 프랑스어1 문제
+2023,3,11,csat,2023-11-16,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/2nd_sp_hsj_BOU4H47L.pdf,2nd_sp_hsj_BOU4H47L.pdf,EBSi 2023년 11월 고3 수능 스페인어1 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/2nd_vit_hsj_RS41648Q.pdf,2nd_vit_hsj_RS41648Q.pdf,EBSi 2023년 11월 고3 수능 베트남어1 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/s_eco_mun_J1X4X2ZA.pdf,s_eco_mun_J1X4X2ZA.pdf,EBSi 2023년 11월 고3 수능 경제 문제
+2023,3,11,csat,2023-11-16,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/s_hanji_hsj_H7125998.pdf,s_hanji_hsj_H7125998.pdf,EBSi 2023년 11월 고3 수능 한국지리 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/s_saeji_hsj_3D7CDAA4.pdf,s_saeji_hsj_3D7CDAA4.pdf,EBSi 2023년 11월 고3 수능 세계지리 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/s_sks_hsj_1FAWB361.pdf,s_sks_hsj_1FAWB361.pdf,EBSi 2023년 11월 고3 수능 세계사 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,vocational,human-development,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/J_inkan_hsj_6KIG941G.pdf,J_inkan_hsj_6KIG941G.pdf,EBSi 2023년 11월 고3 수능 인간발달 정답 및 해설
+2023,3,11,csat,2023-11-16,한국교육과정평가원,vocational,successful-career-life,solution,https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/J_sjl_hsj_EU5DXQ7W.pdf,J_sjl_hsj_EU5DXQ7W.pdf,EBSi 2023년 11월 고3 수능 성공적인직업생활 정답 및 해설

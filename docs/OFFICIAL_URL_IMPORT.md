@@ -72,3 +72,7 @@ npm run ingest:coverage -- --summary          # 연도별 · 학년별 · 자료
 npm run ingest:coverage -- --year=2025 --grade=3
 npm run ingest:audit -- --json
 ```
+
+## 현재 입력분
+
+`data/imports/official-urls.csv` 에 검색엔진 색인에서 발견된 EBSi 공식 URL 309행(2023~2025년)이 있습니다. 근거와 누락은 [REAL_DATA_COVERAGE.md](REAL_DATA_COVERAGE.md) 를 보세요.

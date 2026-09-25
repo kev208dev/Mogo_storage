@@ -27,7 +27,9 @@ async function main() {
     });
     const c = result.counts;
     console.log(
-      `${result.dryRun ? "[dry-run] " : ""}신규 ${c.created} · 변경 ${c.updated} · 동일 ${c.unchanged} · 오류 ${c.invalid}`,
+      result.dryRun
+        ? `[dry-run] 검사 통과 ${c.unchanged} · 오류 ${c.invalid} (DB 에 쓰지 않음)`
+        : `신규 ${c.created} · 변경 ${c.updated} · 동일 ${c.unchanged} · 오류 ${c.invalid}`,
     );
     for (const r of result.rows.filter((x) => x.status === "invalid"))
       console.log(`  ${r.line}행: ${r.errors?.join("; ")}`);

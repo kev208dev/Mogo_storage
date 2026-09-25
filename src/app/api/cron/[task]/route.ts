@@ -49,11 +49,16 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
             revalidatePath(examPath(key, slot.subject));
             if (slot.courseCode) revalidatePath(examCoursePath(key, slot.subject, slot.courseCode));
           },
-          (event) => console.info(JSON.stringify({ event: "grade_cut_watch.source", ...event })),
+          (source) => console.info(JSON.stringify({
+            event: "grade_cut_watch.tick", exam: source.examId, adapter: source.source,
+            requested_slots: source.requested, collected: source.collected,
+            changed: source.changed, finalized: source.finalized,
+            failures: Number(source.failed), duration_ms: source.durationMs,
+          })),
         ),
       );
       console.info(JSON.stringify({
-        event: "grade_cut_watch.tick", acquired: locked.acquired,
+        event: "grade_cut_watch.summary", acquired: locked.acquired,
         result: locked.acquired ? locked.value : null, durationMs: Date.now() - started,
       }));
       return NextResponse.json(locked.acquired ? { ok: true, result: locked.value } : { skipped: "locked" });

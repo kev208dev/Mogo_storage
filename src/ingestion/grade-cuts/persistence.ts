@@ -1,4 +1,4 @@
-import { and, eq, gte, isNull, lte, ne, sql } from "drizzle-orm";
+import { and, eq, gte, isNull, lte, ne, or, sql } from "drizzle-orm";
 import type { Database } from "../../db/client";
 import {
   courses,
@@ -134,15 +134,18 @@ export function createGradeCutStore(db: Database): WatchStore {
   return {
     async dueExams(now) {
       const today = kstDay(now);
-      const oldest = kstDay(new Date(now.getTime() - 90 * 24 * 3_600_000));
+      const bootstrapSince = kstDay(new Date(now.getTime() - 90 * 24 * 3_600_000));
       const rows = await db
         .select()
         .from(exams)
         .where(
           and(
-            gte(exams.examDate, oldest),
             lte(exams.examDate, today),
             eq(exams.isSample, false),
+            or(
+              gte(exams.examDate, bootstrapSince),
+              sql`exists (select 1 from grade_cut_watch_states w where w.exam_id = ${exams.id} and w.status in ('waiting', 'watching'))`,
+            ),
           ),
         );
       return rows
@@ -311,18 +314,6 @@ export function createGradeCutStore(db: Database): WatchStore {
             ),
           })
           .where(eq(gradeCutWatchStates.id, row.id));
-    },
-    async expire(slot, now) {
-      await db.update(gradeCutWatchStates).set({
-        status: "failed", lastError: "감시 기간 종료: 공식 원점수 컷을 확인하지 못했습니다.",
-        updatedAt: now,
-      }).where(and(
-        eq(gradeCutWatchStates.examId, slot.examId),
-        eq(gradeCutWatchStates.subject, slot.subject),
-        eq(gradeCutWatchStates.slotKey, slot.courseId ?? ""),
-        ne(gradeCutWatchStates.status, "finalized"),
-        ne(gradeCutWatchStates.status, "failed"),
-      ));
     },
   };
 }

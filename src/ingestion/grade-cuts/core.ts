@@ -72,22 +72,13 @@ export function examEndAt(exam: WatchExam): Date {
   return new Date(`${exam.examDate}T${time}:00+09:00`);
 }
 export const POLL_INTERVAL_MS = 5 * 60_000;
-/**
- * Operational cap: active results receive five-minute checks for 48 hours;
- * delayed publication is checked hourly for 30 days.
- */
-export const FAST_WINDOW_MS = 48 * 60 * 60_000;
-export const WATCH_DEADLINE_MS = 30 * 24 * 60 * 60_000;
-export const LATE_POLL_INTERVAL_MS = 60 * 60_000;
 export function isGradeCutDue(exam: WatchExam, slot: WatchSlot, now: Date): boolean {
   const elapsed = now.getTime() - examEndAt(exam).getTime();
-  const interval = elapsed < FAST_WINDOW_MS ? POLL_INTERVAL_MS : LATE_POLL_INTERVAL_MS;
   return (
     slot.status !== "finalized" &&
     slot.status !== "failed" &&
     elapsed >= 0 &&
-    elapsed < WATCH_DEADLINE_MS &&
-    (!slot.lastPolledAt || now.getTime() - slot.lastPolledAt.getTime() >= interval)
+    (!slot.lastPolledAt || now.getTime() - slot.lastPolledAt.getTime() >= POLL_INTERVAL_MS)
   );
 }
 
@@ -102,7 +93,6 @@ export interface WatchStore {
   ): Promise<boolean>;
   markPolled(slot: WatchSlot, now: Date): Promise<void>;
   fail(slot: WatchSlot, source: GradeCutSource, error: unknown): Promise<void>;
-  expire?(slot: WatchSlot, now: Date): Promise<void>;
 }
 export interface WatchResult {
   changed: number;
@@ -131,15 +121,7 @@ export async function runGradeCutWatch(
   const result: WatchResult = { changed: 0, failures: 0, polled: 0 };
   for (const exam of await store.dueExams(now)) {
     if (now < examEndAt(exam)) continue;
-    const candidates = await store.slots(exam);
-    if (now.getTime() - examEndAt(exam).getTime() >= WATCH_DEADLINE_MS) {
-      for (const slot of candidates) {
-        if (slot.status !== "finalized" && slot.status !== "failed")
-          await store.expire?.(slot, now);
-      }
-      continue;
-    }
-    const slots = candidates.filter((slot) => isGradeCutDue(exam, slot, now));
+    const slots = (await store.slots(exam)).filter((slot) => isGradeCutDue(exam, slot, now));
     if (!slots.length) continue;
     // Official sources run first, then finalized slots are removed before estimated adapters run.
     const verified = adapters

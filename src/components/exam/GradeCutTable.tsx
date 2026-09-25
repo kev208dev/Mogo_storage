@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { GRADE_CUT_SOURCES, GRADE_CUT_SOURCE_LABELS, type Subject } from "@/lib/constants";
 import type { GradeCut } from "@/lib/data/types";
 import { cn, formatKoreanDate } from "@/lib/utils";
+import { GradeEstimator } from "./GradeEstimator";
 
 const ABSOLUTE_SUBJECTS: Subject[] = ["english", "history"];
 
@@ -31,6 +32,7 @@ export function GradeCutTable({ gradeCuts, subject }: { gradeCuts: GradeCut[]; s
           절대평가 과목입니다. 원점수 기준으로 등급이 정해집니다.
         </p>
       ) : null}
+      <GradeEstimator gradeCuts={columns} />
       <div className="border-border overflow-x-auto rounded-md border">
         <table className="w-full min-w-[20rem] text-sm tabular-nums">
           <caption className="sr-only">

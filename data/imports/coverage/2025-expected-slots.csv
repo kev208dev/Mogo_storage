@@ -1,6 +1,6 @@
 year,grade,month,exam_type,subject,course_code,file_type,status,reason,count_as_expected,expected_basis,db_status,public_file_id,official_url
 2025,1,3,school_mock,english,,listening_audio,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
-2025,1,3,school_mock,english,,listening_script,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
+2025,1,3,school_mock,english,,listening_script,manual_review,verified_pending_import,confirmed,official_pdf_contents,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_scr_Q8S67L3Y.pdf
 2025,1,3,school_mock,english,,question,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,1,3,school_mock,english,,solution,manual_review,identity_unverifiable,confirmed,official_scope,manual_review,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_main_hsj_W6D54ZP4_1.pdf
 2025,1,3,school_mock,history,,question,manual_review,verified_pending_import,confirmed,official_scope,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/s_his_mun_EE8QT7XX.pdf
@@ -14,7 +14,7 @@ year,grade,month,exam_type,subject,course_code,file_type,status,reason,count_as_
 2025,1,3,school_mock,social,integrated-social,question,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,1,3,school_mock,social,integrated-social,solution,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,1,6,school_mock,english,,listening_audio,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
-2025,1,6,school_mock,english,,listening_script,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
+2025,1,6,school_mock,english,,listening_script,manual_review,verified_pending_import,confirmed,official_pdf_contents,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_1_scr_5KS2R8O8.pdf
 2025,1,6,school_mock,english,,question,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,1,6,school_mock,english,,solution,public_ready,,confirmed,official_scope,ready,8e4bc937-c4cf-4b9b-872e-1f1512d352dd,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_main_hsj_2FVA49I8_2.pdf
 2025,1,6,school_mock,history,,question,manual_review,verified_pending_import,confirmed,official_scope,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/his_main_mun_KVMP5Q8Y.pdf
@@ -56,7 +56,7 @@ year,grade,month,exam_type,subject,course_code,file_type,status,reason,count_as_
 2025,1,10,school_mock,social,integrated-social,question,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,1,10,school_mock,social,integrated-social,solution,public_ready,,confirmed,official_scope,ready,9e5c2bb8-4dd0-4048-acd6-e3f26df17115,https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/sat_main_hsj_N751JM45.pdf
 2025,2,3,school_mock,english,,listening_audio,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
-2025,2,3,school_mock,english,,listening_script,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
+2025,2,3,school_mock,english,,listening_script,manual_review,verified_pending_import,confirmed,official_pdf_contents,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_scr_RD4QHL9N.pdf
 2025,2,3,school_mock,english,,question,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,2,3,school_mock,english,,solution,manual_review,identity_unverifiable,confirmed,official_scope,manual_review,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_main_hsj_8RKR7M1W.pdf
 2025,2,3,school_mock,history,,question,manual_review,verified_pending_import,confirmed,official_scope,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/his_main_mun_HUXC317E.pdf
@@ -226,7 +226,7 @@ year,grade,month,exam_type,subject,course_code,file_type,status,reason,count_as_
 2025,2,10,school_mock,vocational,successful-career-life,question,model_blocked,course_grade_metadata_conflict_and_actual_file_unconfirmed,uncertain,official_scope_grade_model_conflict,,,
 2025,2,10,school_mock,vocational,successful-career-life,solution,model_blocked,course_grade_metadata_conflict_and_actual_file_unconfirmed,uncertain,official_scope_grade_model_conflict,,,
 2025,3,3,school_mock,english,,listening_audio,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
-2025,3,3,school_mock,english,,listening_script,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
+2025,3,3,school_mock,english,,listening_script,manual_review,verified_pending_import,confirmed,official_pdf_contents,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_scr_8O2866EF.pdf
 2025,3,3,school_mock,english,,question,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,3,3,school_mock,english,,solution,manual_review,identity_unverifiable,confirmed,official_scope,manual_review,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_main_hsj_66I8PI22.pdf
 2025,3,3,school_mock,history,,question,manual_review,verified_pending_import,confirmed,official_scope,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/his_main_mun_N44UN5N3.pdf

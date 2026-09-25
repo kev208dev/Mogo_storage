@@ -1692,6 +1692,42 @@
       "head_content_type": "application/pdf",
       "slot": "3-6 math/geometry question",
       "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_scr_Q8S67L3Y.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 3월 고1 영어 영역 듣기평가 대본",
+      "search_title": "2025학년도 전국연합학력평가 영어 영역 듣기평가 대본 3월 고1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 english/ listening_script",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_1_scr_5KS2R8O8.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 6월 고1 영어 영역 듣기평가 대본",
+      "search_title": "2025학년도 전국연합학력평가 영어 영역 듣기평가 대본 6월 고1",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 english/ listening_script",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_scr_RD4QHL9N.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 3월 고2 영어 영역 듣기평가 대본",
+      "search_title": "2025학년도 전국연합학력평가 영어 영역 듣기평가 대본 3월 고2",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-3 english/ listening_script",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_scr_8O2866EF.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/2025 3월 고3 영어 영역 듣기평가 대본",
+      "search_title": "2025학년도 전국연합학력평가 영어 영역 듣기평가 대본 3월 고3",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-3 english/ listening_script",
+      "discovery": "search_engine_indexed_official_url"
     }
   ],
   "held": [

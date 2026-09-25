@@ -3692,6 +3692,82 @@
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_scr_Q8S67L3Y.pdf",
+      "slot": "2025 고1 3월 school_mock english listening_script",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 299539,
+        "pdfPages": 18,
+        "checkedAt": "2026-09-25T15:40:37.064Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 전국연합학력평가 3월 고1",
+        "visual": "렌더링한 표지에 2025학년도 전국연합학력평가, 영어 영역 듣기평가 대본, 3월 고1가 명시됨",
+        "sha256": "b1ab15a7e57f4af45beda657a13ed6482b65ddc7cfca1b810d96c64e8eeb8161"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_1_scr_5KS2R8O8.pdf",
+      "slot": "2025 고1 6월 school_mock english listening_script",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 136845,
+        "pdfPages": 18,
+        "checkedAt": "2026-09-25T15:40:37.064Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 전국연합학력평가 6월 고1",
+        "visual": "렌더링한 표지에 2025학년도 전국연합학력평가, 영어 영역 듣기평가 대본, 6월 고1가 명시됨",
+        "sha256": "c17379319cd01103541dfd92189e81d32178edb452c1be817147e52e3b05de02"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_scr_RD4QHL9N.pdf",
+      "slot": "2025 고2 3월 school_mock english listening_script",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 304544,
+        "pdfPages": 18,
+        "checkedAt": "2026-09-25T15:40:37.064Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 전국연합학력평가 3월 고2",
+        "visual": "렌더링한 표지에 2025학년도 전국연합학력평가, 영어 영역 듣기평가 대본, 3월 고2가 명시됨",
+        "sha256": "a16830102bec19ab84c218712c896513b73ad628420ebb589ab53fe1df18b4d7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_scr_8O2866EF.pdf",
+      "slot": "2025 고3 3월 school_mock english listening_script",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 303080,
+        "pdfPages": 18,
+        "checkedAt": "2026-09-25T15:40:37.064Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2025학년도 전국연합학력평가 3월 고3",
+        "visual": "렌더링한 표지에 2025학년도 전국연합학력평가, 영어 영역 듣기평가 대본, 3월 고3가 명시됨",
+        "sha256": "3e139acbdae85f61801e7f2d928d0484da93560f265dbce461b51441a047f96b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

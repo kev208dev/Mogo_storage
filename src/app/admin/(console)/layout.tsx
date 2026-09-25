@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 const NAV = [
   { href: "/admin", label: "수집 현황" },
   { href: "/admin/review", label: "검토 대기" },
+  { href: "/admin/imports", label: "공식 URL 입력" },
   { href: "/admin/mappings", label: "Source mapping" },
   { href: "/admin/runs", label: "실행 기록" },
   { href: "/admin/reports", label: "오류 신고" },

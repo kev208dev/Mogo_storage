@@ -22,6 +22,8 @@ async function main() {
   }
   // health check 는 disabled source 도 실제로 확인한다 (enable 전 검증 용도)
   const targets = sources
+    // 운영자 입력 source 는 자동 요청 대상이 아니다
+    .filter((s) => s.kind !== "other_official")
     .filter((s) => !only || only.includes(s.id))
     .map((s) => ({ ...s, enabled: true }));
   let broken = 0;

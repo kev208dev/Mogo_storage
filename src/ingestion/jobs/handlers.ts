@@ -19,6 +19,7 @@ import {
   validateArtifact,
   validateArtifactProbe,
 } from "../verify/artifact-validator";
+import { isOperatorImport } from "../manual-import/source";
 import { enqueueJob, type Job } from "./queue";
 
 export class JobError extends IngestionError {}
@@ -147,6 +148,11 @@ export async function handleVerifyArtifact(ctx: IngestionContext, job: Job) {
   const { db, logger } = ctx;
   const now = ctx.now();
   const { artifact, source } = await loadArtifact(ctx, artifactId);
+  // 운영자 입력 자료는 서버가 URL 에 요청하지 않는다 (robots.txt 가 자동 수집을 막는 source). 관리자 브라우저 확인만 인정
+  if (isOperatorImport(artifact.sourceId)) {
+    logger.info("ingestion.skipped", { artifactId, reason: "operator import is never fetched" });
+    return;
+  }
   const previous = artifact;
   await db
     .update(sourceArtifacts)
@@ -355,7 +361,8 @@ export async function handlePublishArtifact(ctx: IngestionContext, job: Job) {
           .where(eq(sourceArtifacts.id, file.sourceArtifactId))
       : [];
     const version = artifact?.contentFingerprint ?? artifact?.sha256;
-    if (artifact && version) {
+    // 단어장 추출은 해설 PDF 를 내려받아야 하므로 운영자 입력(요청 금지) 자료는 대상이 아니다
+    if (artifact && version && !isOperatorImport(artifact.sourceId)) {
       await enqueueJob(ctx.db, {
         runAt: ctx.now(),
         type: "extract_vocabulary",

@@ -68,3 +68,18 @@ export function assertProductionEnv(env: Record<string, string | undefined> = pr
     throw new Error(`invalid production environment: ${errors.length} error(s)`);
   }
 }
+
+/** 검증 실패 시 이유(값 제외)를 남기고 프로세스를 종료한다 (Node 런타임 전용) */
+export function enforceProductionEnv(env: Record<string, string | undefined> = process.env) {
+  try {
+    assertProductionEnv(env);
+  } catch (error) {
+    console.error(
+      JSON.stringify({
+        event: "env.invalid",
+        message: error instanceof Error ? error.message : String(error),
+      }),
+    );
+    process.exit(1);
+  }
+}

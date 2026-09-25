@@ -612,6 +612,31 @@ export const ingestionCheckpoints = pgTable(
 );
 
 /**
+ * 운영자 CSV 입력 기록 (브라우저에서 확인한 공식 파일 URL 대량 입력). 행별 결과를 감사 기록으로 남긴다.
+ */
+export const officialUrlImports = pgTable(
+  "official_url_imports",
+  {
+    id: id(),
+    createdBy: text("created_by").notNull(),
+    fileName: text("file_name"),
+    dryRun: boolean("dry_run").notNull().default(false),
+    rowCount: integer("row_count").notNull().default(0),
+    createdCount: integer("created_count").notNull().default(0),
+    updatedCount: integer("updated_count").notNull().default(0),
+    unchangedCount: integer("unchanged_count").notNull().default(0),
+    invalidCount: integer("invalid_count").notNull().default(0),
+    /** 행별 결과 (줄 번호, 상태, 오류 메시지) */
+    results: jsonb("results")
+      .$type<Array<{ line: number; status: string; errors?: string[]; artifactId?: string }>>()
+      .notNull()
+      .default([]),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("official_url_imports_created_idx").on(t.createdAt)],
+);
+
+/**
  * backfill audit 기록. canary backfill 단계(최근 1년 → 최근 3년 → 전체)를 넓히려면
  * 앞 단계 범위의 audit 이 통과(blocking issue 없음)해야 한다.
  */

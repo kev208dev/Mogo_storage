@@ -1,5 +1,5 @@
 import "server-only";
-import { and, count, desc, eq, gte, inArray, isNull, lte, max } from "drizzle-orm";
+import { and, count, desc, eq, gte, inArray, isNull, lte, max, ne } from "drizzle-orm";
 import type { Database } from "@/db/client";
 import {
   courses,
@@ -11,12 +11,14 @@ import {
   ingestionErrors,
   ingestionRuns,
   jobs,
+  officialUrlImports,
   reports,
   sourceArtifacts,
   sourceExams,
   vocabularyCandidates,
 } from "@/db/schema";
 import { SUBJECT_LABELS, SUBJECTS, type Subject } from "@/lib/constants";
+import { OPERATOR_IMPORT_SOURCE_ID } from "@/ingestion/manual-import/source";
 import { SUBJECT_AREA_LABELS } from "@/lib/courses";
 
 const DAY = 24 * 60 * 60 * 1000;
@@ -239,7 +241,13 @@ export async function reviewData(db: Database) {
       .from(sourceArtifacts)
       .innerJoin(exams, eq(exams.id, sourceArtifacts.examId))
       .innerJoin(examSources, eq(examSources.id, sourceArtifacts.sourceId))
-      .where(eq(sourceArtifacts.status, "manual_review"))
+      .where(
+        and(
+          eq(sourceArtifacts.status, "manual_review"),
+          // 운영자 입력 공식 URL 은 전용 화면(/admin/imports)에서 브라우저 확인 후 승인한다
+          ne(sourceArtifacts.sourceId, OPERATOR_IMPORT_SOURCE_ID),
+        ),
+      )
       .orderBy(desc(sourceArtifacts.updatedAt))
       .limit(100),
     db
@@ -300,4 +308,37 @@ export async function reportsData(db: Database) {
     .innerJoin(exams, eq(exams.id, reports.examId))
     .orderBy(desc(reports.createdAt))
     .limit(200);
+}
+
+/** 운영자 입력 공식 URL: 검토 대기 목록, 상태별 수, 최근 입력 기록 */
+export async function importsData(db: Database) {
+  const [pending, byStatus, recent] = await Promise.all([
+    db
+      .select({ artifact: sourceArtifacts, exam: exams, course: courses })
+      .from(sourceArtifacts)
+      .innerJoin(exams, eq(exams.id, sourceArtifacts.examId))
+      .leftJoin(courses, eq(courses.id, sourceArtifacts.courseId))
+      .where(
+        and(
+          eq(sourceArtifacts.sourceId, OPERATOR_IMPORT_SOURCE_ID),
+          eq(sourceArtifacts.status, "manual_review"),
+        ),
+      )
+      .orderBy(
+        desc(exams.year),
+        exams.grade,
+        exams.month,
+        sourceArtifacts.subject,
+        sourceArtifacts.slotKey,
+        sourceArtifacts.type,
+      )
+      .limit(500),
+    db
+      .select({ status: sourceArtifacts.status, n: count() })
+      .from(sourceArtifacts)
+      .where(eq(sourceArtifacts.sourceId, OPERATOR_IMPORT_SOURCE_ID))
+      .groupBy(sourceArtifacts.status),
+    db.select().from(officialUrlImports).orderBy(desc(officialUrlImports.createdAt)).limit(5),
+  ]);
+  return { pending, byStatus, recent };
 }

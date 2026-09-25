@@ -255,3 +255,72 @@ export function formatCoverage(report: CoverageReport): string {
   );
   return lines.join("\n");
 }
+
+export interface CoverageCounts {
+  exams: number;
+  slots: number;
+  published: number;
+  pending: number;
+  failed: number;
+  missing: number;
+}
+
+export interface CoverageSummary {
+  byYear: Record<string, CoverageCounts>;
+  byGrade: Record<string, CoverageCounts>;
+  byType: Record<string, CoverageCounts>;
+  total: CoverageCounts;
+}
+
+const emptyCounts = (): CoverageCounts => ({
+  exams: 0,
+  slots: 0,
+  published: 0,
+  pending: 0,
+  failed: 0,
+  missing: 0,
+});
+
+/**
+ * 연도별 · 학년별 · 자료 종류별 집계 (누락 = missing + failed).
+ * 영어 대본은 선택 자료라 "없음"을 누락으로 세지 않는다 (formatCoverage 와 같은 규칙).
+ */
+export function summarizeCoverage(report: CoverageReport): CoverageSummary {
+  const summary: CoverageSummary = { byYear: {}, byGrade: {}, byType: {}, total: emptyCounts() };
+  const bucket = (map: Record<string, CoverageCounts>, key: string) => (map[key] ??= emptyCounts());
+  for (const exam of report.exams) {
+    const yearKey = String(exam.year);
+    const gradeKey = `고${exam.grade}`;
+    bucket(summary.byYear, yearKey).exams += 1;
+    bucket(summary.byGrade, gradeKey).exams += 1;
+    summary.total.exams += 1;
+    const slots = exam.subjects.flatMap((s) => [...s.slots, ...s.courses.flatMap((c) => c.slots)]);
+    for (const slot of slots) {
+      if (slot.type === "listening_script" && slot.state === "missing") continue;
+      for (const b of [
+        bucket(summary.byYear, yearKey),
+        bucket(summary.byGrade, gradeKey),
+        bucket(summary.byType, slot.type),
+        summary.total,
+      ]) {
+        b.slots += 1;
+        b[slot.state] += 1;
+      }
+    }
+  }
+  return summary;
+}
+
+export function formatCoverageSummary(summary: CoverageSummary): string {
+  const row = (label: string, c: CoverageCounts) =>
+    `${label.padEnd(14)} 시험 ${String(c.exams).padStart(4)} · 슬롯 ${String(c.slots).padStart(5)} · 게시 ${String(c.published).padStart(5)} · 대기 ${String(c.pending).padStart(4)} · 실패 ${String(c.failed).padStart(4)} · 누락 ${String(c.missing + c.failed).padStart(5)}`;
+  const lines = ["[연도별]"];
+  for (const [k, c] of Object.entries(summary.byYear).sort()) lines.push(row(k, c));
+  lines.push("", "[학년별]");
+  for (const [k, c] of Object.entries(summary.byGrade).sort()) lines.push(row(k, c));
+  lines.push("", "[자료 종류별]");
+  for (const [k, c] of Object.entries(summary.byType))
+    lines.push(row(FILE_TYPE_LABELS[k as FileType] ?? k, { ...c, exams: 0 }));
+  lines.push("", row("합계", summary.total));
+  return lines.join("\n");
+}

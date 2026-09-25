@@ -29,6 +29,11 @@ import {
 } from "@/ingestion/pipeline/sources";
 import { SOURCE_CAPABILITIES, type SourceCapability } from "@/ingestion/constants";
 import { IngestionError } from "@/ingestion/errors";
+import {
+  approveImportedArtifacts,
+  importOfficialUrls,
+  rejectImportedArtifacts,
+} from "@/ingestion/manual-import/import";
 import { createAdapter } from "@/ingestion/sources/registry";
 import { canRun } from "@/ingestion/sources/verification";
 import { REPORT_STATUSES, type ReportStatus } from "@/lib/constants";
@@ -307,4 +312,76 @@ export async function reportStatusAction(form: FormData) {
   await setReportStatus(ctx, id(form), status);
   audit(admin, "report.status", `${id(form)}:${status}`);
   revalidatePath("/admin/reports");
+}
+
+const MAX_CSV_BYTES = 2 * 1024 * 1024;
+
+/**
+ * 공식 URL CSV 입력 (붙여넣기 또는 파일). 서버는 URL 에 요청하지 않는다 — 형식·공식 도메인만 검사하고
+ * 모두 manual_review 로 저장한다. "검사만" 을 체크하면 DB 를 바꾸지 않는다.
+ */
+export async function importOfficialUrlsAction(form: FormData) {
+  const { ctx, admin } = await context();
+  await withNotice("/admin/imports", async () => {
+    const file = form.get("file");
+    let csv = String(form.get("csv") ?? "");
+    let fileName: string | null = null;
+    if (file instanceof File && file.size > 0) {
+      if (file.size > MAX_CSV_BYTES) throw new IngestionError("TOO_LARGE", "CSV 는 2MB 까지입니다");
+      csv = await file.text();
+      fileName = file.name.slice(0, 200);
+    }
+    if (!csv.trim()) throw new IngestionError("EMPTY_CSV", "CSV 를 붙여넣거나 파일을 선택하세요");
+    if (csv.length > MAX_CSV_BYTES) throw new IngestionError("TOO_LARGE", "CSV 는 2MB 까지입니다");
+    const dryRun = form.get("dryRun") === "1";
+    const result = await importOfficialUrls(ctx.db, {
+      csv,
+      admin,
+      fileName,
+      dryRun,
+      now: ctx.now(),
+    });
+    audit(admin, dryRun ? "import.dry_run" : "import.official_urls", JSON.stringify(result.counts));
+    const c = result.counts;
+    const errors = result.rows
+      .filter((r) => r.status === "invalid")
+      .slice(0, 3)
+      .map((r) => `${r.line}행: ${r.errors?.join("; ")}`)
+      .join(" / ");
+    return `${dryRun ? "[검사만] " : ""}신규 ${c.created} · 변경 ${c.updated} · 동일 ${c.unchanged} · 오류 ${c.invalid}${errors ? ` — ${errors}` : ""}`;
+  });
+}
+
+/** 선택한 입력 자료 승인 (브라우저에서 공식 URL 을 열어 확인했다는 체크 필수) → redirect 로 게시 */
+export async function approveImportsAction(form: FormData) {
+  const { ctx, admin } = await context();
+  await withNotice("/admin/imports", async () => {
+    const ids = form
+      .getAll("ids")
+      .map(String)
+      .filter((v) => /^[\w-]{1,64}$/.test(v));
+    if (ids.length === 0) throw new IngestionError("INVALID", "승인할 자료를 선택하세요");
+    const result = await approveImportedArtifacts(ctx, {
+      artifactIds: ids,
+      admin,
+      browserChecked: form.get("browserChecked") === "1",
+    });
+    audit(admin, "import.approve", `${ids.length} selected, ${result.published} published`);
+    return `게시 ${result.published}건${result.skipped.length ? ` · 건너뜀 ${result.skipped.length}건 (${result.skipped[0]!.reason})` : ""}`;
+  });
+}
+
+export async function rejectImportsAction(form: FormData) {
+  const { ctx, admin } = await context();
+  await withNotice("/admin/imports", async () => {
+    const ids = form
+      .getAll("ids")
+      .map(String)
+      .filter((v) => /^[\w-]{1,64}$/.test(v));
+    if (ids.length === 0) throw new IngestionError("INVALID", "거절할 자료를 선택하세요");
+    const reason = String(form.get("reason") ?? "").trim() || "공식 파일이 아니거나 URL 오류";
+    const n = await rejectImportedArtifacts(ctx, { artifactIds: ids, admin, reason });
+    audit(admin, "import.reject", `${n}`);
+    return `거절 ${n}건`;
+  });
 }

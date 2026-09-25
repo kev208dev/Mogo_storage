@@ -20,6 +20,7 @@ import {
   currentParserVersion,
   isLiveVerified,
 } from "@/ingestion/sources/verification";
+import { OPERATOR_IMPORT_SOURCE_ID } from "@/ingestion/manual-import/source";
 import { AdminNotice } from "./notice";
 import { NoDatabase } from "./no-db";
 
@@ -31,6 +32,8 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
   if (!db) return <NoDatabase />;
   const data = await dashboardData(db);
   const failures = data.failedJobs.length + data.failedArtifacts.length;
+  // 운영자 입력 source 는 자동 수집 source 가 아니므로 공식 URL 입력 화면에서 관리한다
+  const autoSources = data.sources.filter((s) => s.id !== OPERATOR_IMPORT_SOURCE_ID);
   const ingestionOn = process.env.INGESTION_ENABLED === "true";
 
   return (
@@ -59,12 +62,12 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
 
       <Panel title="출처 (source)">
         <ul className="divide-border divide-y">
-          {data.sources.length === 0 ? (
+          {autoSources.length === 0 ? (
             <li className="text-muted-foreground py-2 text-sm">
               등록된 source 가 없습니다. npm run ingest:sources 로 동기화하세요.
             </li>
           ) : null}
-          {data.sources.map((s) => {
+          {autoSources.map((s) => {
             const current = currentParserVersion(s.kind);
             const verified = isLiveVerified(s.kind, s);
             const evidenceCurrent =

@@ -1,4 +1,4 @@
-import { and, desc, eq, gte, inArray, lt } from "drizzle-orm";
+import { and, desc, eq, gte, inArray, lt, ne } from "drizzle-orm";
 import { ingestionCheckpoints, ingestionRuns, sourceArtifacts } from "../db/schema";
 import { GRADES, type Grade } from "../lib/constants";
 import type { IngestionContext } from "./context";
@@ -8,6 +8,8 @@ import { urlHash } from "./pipeline/artifacts";
 import { runDiscovery, type DiscoveryResult } from "./pipeline/discovery";
 import { loadSources } from "./pipeline/sources";
 import { canaryGate } from "./audit";
+import { IngestionError } from "./errors";
+import { OPERATOR_IMPORT_SOURCE_ID } from "./manual-import/source";
 import { canRun } from "./sources/verification";
 import type { SourceConfig } from "./types";
 
@@ -162,6 +164,15 @@ async function backfillScope(
 
 /** 관리자 수동 재시도: 실패/사라진 자료를 다시 검증 */
 export async function retryArtifact(ctx: IngestionContext, artifactId: string) {
+  const [row] = await ctx.db
+    .select({ sourceId: sourceArtifacts.sourceId })
+    .from(sourceArtifacts)
+    .where(eq(sourceArtifacts.id, artifactId));
+  if (row && row.sourceId === OPERATOR_IMPORT_SOURCE_ID)
+    throw new IngestionError(
+      "OPERATOR_IMPORT",
+      "운영자 입력 자료는 서버가 다시 확인하지 않습니다. 공식 URL 입력 화면에서 검토하세요.",
+    );
   await ctx.db
     .update(sourceArtifacts)
     .set({ status: "discovered", statusReason: "manual retry", updatedAt: ctx.now() })
@@ -185,7 +196,12 @@ export async function queueRechecks(
     .select({ id: sourceArtifacts.id, sourceUrl: sourceArtifacts.sourceUrl })
     .from(sourceArtifacts)
     .where(
-      and(inArray(sourceArtifacts.status, ["ready"]), lt(sourceArtifacts.lastCheckedAt, cutoff)),
+      and(
+        inArray(sourceArtifacts.status, ["ready"]),
+        lt(sourceArtifacts.lastCheckedAt, cutoff),
+        // 운영자 입력 자료는 서버가 다시 받지 않는다
+        ne(sourceArtifacts.sourceId, OPERATOR_IMPORT_SOURCE_ID),
+      ),
     )
     .limit(limit);
   const day = ctx.now().toISOString().slice(0, 10);

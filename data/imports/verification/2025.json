@@ -3597,6 +3597,101 @@
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_1_mun_B6TBU193.pdf",
+      "slot": "2025 고3 6월 kice_mock english/ question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1592669,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T15:37:33.876Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험 6월 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험 6월 모의평가 문제지, 영어 영역, 제3교시가 명시됨",
+        "sha256": "55ba46646ada079ea781b00986a45877b0dc46f4a423d8c3f26a64e0213921fb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_1_scr_L72GG4E2.pdf",
+      "slot": "2025 고3 6월 kice_mock english/ listening_script",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 284441,
+        "pdfPages": 17,
+        "checkedAt": "2026-09-25T15:37:33.876Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험 6월 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 대학수학능력시험 6월 모의평가 영어 영역 듣기평가 대본이 명시됨",
+        "sha256": "539e0c55af7d61945b4fe9435d208ed753ab43ff909119e4c728df12d81c6d09"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathA_1_mun_37S3Q4A8_1.pdf",
+      "slot": "2025 고3 6월 kice_mock math/probability-and-statistics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1027667,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T15:37:33.876Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험 6월 모의평가",
+        "visual": "렌더링한 1쪽은 공통 문항, 9쪽은 확률과 통계 23번부터 시작하며 시험명이 명시됨",
+        "sha256": "bee879c349e9cbe318f620cdf9fec1793faf5745e0ef5563c68ebd79a8ea239f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathB_1_mun_821MR5A6_1.pdf",
+      "slot": "2025 고3 6월 kice_mock math/calculus question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 857330,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T15:37:33.876Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험 6월 모의평가",
+        "visual": "렌더링한 1쪽은 공통 문항, 9쪽은 미적분 23번부터 시작하며 시험명이 명시됨",
+        "sha256": "2610231dcbbec6205a48fc48d5f99505a62f4b341fe7652c56889814b875f4ee"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathC_1_mun_X67RO4JH_1.pdf",
+      "slot": "2025 고3 6월 kice_mock math/geometry question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 984189,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T15:37:33.876Z"
+      },
+      "evidence": {
+        "method": "official PDF download, PyMuPDF full-document text extraction, and rendered-page visual inspection",
+        "examLineInDocument": "2026학년도 대학수학능력시험 6월 모의평가",
+        "visual": "렌더링한 1쪽은 공통 문항, 9쪽은 기하 23번부터 시작하며 시험명이 명시됨",
+        "sha256": "c80dd62e9feb8709608377119a4117c4eeb76974a5e5b7dc0e0674cefcc73aeb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

@@ -1647,6 +1647,51 @@
         "heading": "기하",
         "sha256": "f54547426a6a08d8cd6d4e4da1ff41a186cb4a7d274190e1ce3afe8f84eafed0"
       }
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_1_mun_B6TBU193.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250604/go3/ \"영어\" \"문제지\"",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 문제지 - 영어 영역",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 english/ question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_1_scr_L72GG4E2.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250604/go3/ \"듣기평가 대본\"",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 영어 영역 듣기평가 대본",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 english/ listening_script",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathA_1_mun_37S3Q4A8_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250604/go3/ \"수학 영역(확률과 통계)\" \"2026학년도\"",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 문제지 - 수학 영역(확률과 통계)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 math/probability-and-statistics question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathB_1_mun_821MR5A6_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250604/go3/ \"수학 영역(미적분)\" \"2026학년도\"",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 문제지 - 수학 영역(미적분)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 math/calculus question",
+      "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathC_1_mun_X67RO4JH_1.pdf",
+      "search_query": "site:wdown.ebsi.co.kr/W61001/01exam/20250604/go3/ \"수학 영역(기하)\" \"2026학년도\"",
+      "search_title": "2026학년도 대학수학능력시험 6월 모의평가 문제지 - 수학 영역(기하)",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 math/geometry question",
+      "discovery": "search_engine_indexed_official_url"
     }
   ],
   "held": [

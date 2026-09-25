@@ -312,8 +312,8 @@ year,grade,month,exam_type,subject,course_code,file_type,status,reason,count_as_
 2025,3,5,school_mock,social,world-history,question,manual_review,verified_pending_import,confirmed,official_scope,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_sks_mun_LT45867W.pdf
 2025,3,5,school_mock,social,world-history,solution,manual_review,verified_pending_import,confirmed,official_scope,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250430/go3/s_sks_hsj_3UL7W438.pdf
 2025,3,6,kice_mock,english,,listening_audio,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
-2025,3,6,kice_mock,english,,listening_script,missing,expected_slot_uncertain,uncertain,official_availability_unconfirmed,,,
-2025,3,6,kice_mock,english,,question,missing,dead_link,confirmed,official_scope,,file_sa_kice_2025h3_06_eng_q,
+2025,3,6,kice_mock,english,,listening_script,manual_review,verified_pending_import,confirmed,official_pdf_contents,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_1_scr_L72GG4E2.pdf
+2025,3,6,kice_mock,english,,question,manual_review,verified_pending_import,confirmed,official_pdf_contents,not_imported,file_sa_kice_2025h3_06_eng_q,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_1_mun_B6TBU193.pdf
 2025,3,6,kice_mock,english,,solution,missing,dead_link,confirmed,official_scope,ready,file_sa_kice_2025h3_06_eng_a,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_main_hsj_7E1O8247.pdf
 2025,3,6,kice_mock,history,,question,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,3,6,kice_mock,history,,solution,missing,official_url_not_found,scope_provisional,official_scope,,,
@@ -322,9 +322,9 @@ year,grade,month,exam_type,subject,course_code,file_type,status,reason,count_as_
 2025,3,6,kice_mock,korean,speech-and-writing,question,missing,official_url_not_found,scope_provisional,official_scope_choice_layout,,,
 2025,3,6,kice_mock,math,,question,missing,dead_link,confirmed,observed_official_file_or_public_slot,,file_sa_kice_2025h3_06_math_q,
 2025,3,6,kice_mock,math,,solution,missing,dead_link,confirmed,official_scope_choice_layout,,file_sa_kice_2025h3_06_math_a,
-2025,3,6,kice_mock,math,calculus,question,missing,official_url_not_found,scope_provisional,official_scope_choice_layout,,,
-2025,3,6,kice_mock,math,geometry,question,missing,official_url_not_found,scope_provisional,official_scope_choice_layout,,,
-2025,3,6,kice_mock,math,probability-and-statistics,question,missing,official_url_not_found,scope_provisional,official_scope_choice_layout,,,
+2025,3,6,kice_mock,math,calculus,question,manual_review,verified_pending_import,confirmed,official_pdf_bundle_contents,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathB_1_mun_821MR5A6_1.pdf
+2025,3,6,kice_mock,math,geometry,question,manual_review,verified_pending_import,confirmed,official_pdf_bundle_contents,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathC_1_mun_X67RO4JH_1.pdf
+2025,3,6,kice_mock,math,probability-and-statistics,question,manual_review,verified_pending_import,confirmed,official_pdf_bundle_contents,not_imported,,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathA_1_mun_37S3Q4A8_1.pdf
 2025,3,6,kice_mock,science,chemistry-1,question,missing,official_url_not_found,scope_provisional,official_scope,,,
 2025,3,6,kice_mock,science,chemistry-1,solution,public_ready,,confirmed,official_scope,ready,051f6f67-aa81-42e7-8cfe-8f3f91dea425,https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che1_hsj_4WY39517.pdf
 2025,3,6,kice_mock,science,chemistry-2,question,missing,official_url_not_found,scope_provisional,official_scope,,,

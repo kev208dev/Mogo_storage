@@ -4053,6 +4053,177 @@
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/math_mun_229I8ERM.pdf",
+      "slot": "2025 고2 6월 school_mock math/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 918637,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 수학, 문제지이 명시됨",
+        "sha256": "7b87948543ac5d6c01ed9abcd8e29a5b9b9ad11f03635579301b32367eb49127"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/eng_1_mun_29E7I1V8.pdf",
+      "slot": "2025 고2 6월 school_mock english/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1001199,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 영어, 문제지이 명시됨",
+        "sha256": "5563e9beb4341abd05e64f94eca990e2039ae77da8afc52965dee9d05d37df40"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_hanji_mun_173JTUIS.pdf",
+      "slot": "2025 고2 6월 school_mock social/korean-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 14061528,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 한국지리, 문제지이 명시됨",
+        "sha256": "931729be61cbec03fae2e4cb9d5c6b68355546fa3e34260757a1790ee11bee06"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_sks_mun_ZA822Q45.pdf",
+      "slot": "2025 고2 6월 school_mock social/world-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 21833753,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 세계사, 문제지이 명시됨",
+        "sha256": "b73c4d387fa9fc92ae1329a2c36999231b59edd6c08e183cd464bb56ce3303a4"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_bnj_mun_TU64Q7Q3.pdf",
+      "slot": "2025 고2 6월 school_mock social/politics-and-law question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 952422,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 정치와 법, 문제지이 명시됨",
+        "sha256": "217ab53c704697deca13aea4c18ea85f31b99ebce7524f9a7536b77728df0f0b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_bnj_hsj_O2N52VQ4.pdf",
+      "slot": "2025 고2 6월 school_mock social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 154517,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 정치와 법, 정답 및 해설이 명시됨",
+        "sha256": "e7dddbf3171c8dcd6e845f2a2d3b4dd52a3f1846205aca4f64c148a0fe4a4193"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_eco_mun_KU1M195F.pdf",
+      "slot": "2025 고2 6월 school_mock social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1125731,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 경제, 문제지이 명시됨",
+        "sha256": "5e03c03c2191df47304d3049d7f702ea9fb8f86337ab2865f5404c2f4c853faf"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_eco_hsj_W82H8H64.pdf",
+      "slot": "2025 고2 6월 school_mock social/economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 143066,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 경제, 정답 및 해설이 명시됨",
+        "sha256": "3edc59e9f664794c4030e33c85a34fd7e6b7710fa746d4a53029fa10952e4b71"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_samun_mun_U548DG59_1.pdf",
+      "slot": "2025 고2 6월 school_mock social/social-culture question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1070732,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T15:56:14.980Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 6월 전국연합학력평가, 사회·문화, 문제지이 명시됨",
+        "sha256": "36e51e811e6cc908d67582bb1136a2a10decadcdfed6f6d9362d2d884fd27ffd"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

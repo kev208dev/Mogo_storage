@@ -1863,6 +1863,87 @@
       "head_content_type": "application/pdf",
       "slot": "2-6 social/world-history solution",
       "discovery": "search_engine_indexed_official_url"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/math_mun_229I8ERM.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 수학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 math/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/eng_1_mun_29E7I1V8.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 english/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_hanji_mun_173JTUIS.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 한국지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/korean-geography question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_sks_mun_ZA822Q45.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 세계사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/world-history question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_bnj_mun_TU64Q7Q3.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/politics-and-law question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_bnj_hsj_O2N52VQ4.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/politics-and-law solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_eco_mun_KU1M195F.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/economics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_eco_hsj_W82H8H64.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/economics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_samun_mun_U548DG59_1.pdf",
+      "search_query": "EBSi 기출문제 > 고2 > 2025 > 6월",
+      "search_title": "2025년 고2 6월 학평 사회·문화",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "2-6 social/social-culture question",
+      "discovery": "official_ebsi_previous_paper_catalog"
     }
   ],
   "held": [

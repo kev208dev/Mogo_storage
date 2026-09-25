@@ -1,6 +1,7 @@
 import type { GradeCutSource } from "../../lib/constants";
 import type { GradeCutEntry } from "../../lib/data/types";
 import type { CanonicalExam } from "../types";
+import type { AdapterStatus } from "./core";
 
 /**
  * 등급컷 수집 정책. 공식/예상 구분은 grade_cuts.isOfficial 로 유지한다.
@@ -15,6 +16,7 @@ export interface GradeCutSourcePolicy {
   isOfficial: boolean;
   policy: GradeCutCollectionPolicy;
   note: string;
+  status: AdapterStatus;
 }
 
 export const GRADE_CUT_SOURCE_POLICIES: Record<GradeCutSource, GradeCutSourcePolicy> = {
@@ -22,24 +24,28 @@ export const GRADE_CUT_SOURCE_POLICIES: Record<GradeCutSource, GradeCutSourcePol
     source: "official",
     isOfficial: true,
     policy: "manual_only",
+    status: "disabled_unverified",
     note: "공식 채점 결과(등급 구분 점수)는 공개 자료로 확인해 입력. 공개 형식 확인 후 automated adapter 추가 가능",
   },
   ebs: {
     source: "ebs",
     isOfficial: false,
     policy: "manual_only",
+    status: "disabled_policy",
     note: "예상 등급컷. 이용조건 확인 전 자동 수집하지 않음",
   },
   megastudy: {
     source: "megastudy",
     isOfficial: false,
     policy: "manual_only",
+    status: "disabled_unverified",
     note: "사교육 업체 예상 등급컷. 자동 scraping 금지 — 공개·허용 범위 확인 후 수동 입력",
   },
   daesung: {
     source: "daesung",
     isOfficial: false,
     policy: "manual_only",
+    status: "disabled_unverified",
     note: "사교육 업체 예상 등급컷. 자동 scraping 금지 — 공개·허용 범위 확인 후 수동 입력",
   },
 };

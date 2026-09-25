@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { GRADE_CUT_SOURCE_LABELS } from "@/lib/constants";
 import type { GradeCut } from "@/lib/data/types";
-import { estimateGrade } from "@/lib/grade-cuts";
+import { estimateGrade, isMutedEstimate, orderGradeCutColumns } from "@/lib/grade-cuts";
 
 export function GradeEstimator({ gradeCuts }: { gradeCuts: GradeCut[] }) {
   const [value, setValue] = useState("");
@@ -14,7 +14,7 @@ export function GradeEstimator({ gradeCuts }: { gradeCuts: GradeCut[] }) {
   const estimates = useMemo(
     () =>
       valid
-        ? gradeCuts
+        ? orderGradeCutColumns(gradeCuts)
             .map((cut) => ({ cut, estimate: estimateGrade(cut.cuts, score) }))
             .filter((x): x is { cut: GradeCut; estimate: NonNullable<ReturnType<typeof estimateGrade>> } =>
               Boolean(x.estimate),
@@ -55,7 +55,7 @@ export function GradeEstimator({ gradeCuts }: { gradeCuts: GradeCut[] }) {
           {estimates.map(({ cut, estimate }) => (
             <div
               key={cut.source}
-              className="border-border bg-background min-w-32 rounded-md border px-3 py-2"
+              className={`border-border min-w-32 rounded-md border px-3 py-2 ${cut.isOfficial ? "bg-primary-soft" : isMutedEstimate(cut, gradeCuts) ? "bg-muted text-muted-foreground" : "bg-background"}`}
             >
               <div className="flex items-center gap-1.5 text-xs">
                 <span className="font-semibold">{GRADE_CUT_SOURCE_LABELS[cut.source]}</span>

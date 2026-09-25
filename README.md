@@ -1,5 +1,21 @@
 # 모의고사 창고
 
+## 등급컷 감시
+
+`/api/cron/grade-cuts`는 `CRON_SECRET` Bearer 인증을 재사용하며 Vercel Cron에서 5분마다 호출합니다.
+`GRADE_CUT_INGESTION_ENABLED=true`를 별도로 설정해야 실행됩니다. 기본값은 꺼짐이며
+`INGESTION_ENABLED`와 무관합니다. 운영 DB가 Supabase migration tracking을 사용한다면
+`drizzle/0009_grade_cut_watch.sql`을 해당 migration 절차로 적용·확인한 뒤 활성화하세요.
+Drizzle 추적 테이블이 없는 DB에 `db:migrate:prod`를 바로 실행하면 이전 migration 재적용 위험이 있습니다.
+
+시험 유형별 KST 보수적 종료 시각 이후, 지난 90일 시험의 과목/세부과목 슬롯을 감시합니다.
+공식컷이 저장된 슬롯은 finalized로 남고 예상컷 adapter에서 제외됩니다.
+수집값의 첫 관측과 변경만 `grade_cut_snapshots`에 기록합니다.
+현재 검증된 자동 adapter는 없으므로 flag를 켜도 외부 페이지 요청은 발생하지 않습니다.
+관리자 `/admin/grade-cuts`의 수동/CSV 보정은 계속 사용할 수 있습니다.
+
+출처별 검증 및 활성화 조건은 [등급컷 출처 조사](docs/GRADE_CUT_SOURCES.md)를 참고하세요.
+
 한국 고등학생이 역대 모의고사 시험지·정답·해설 PDF를 **가장 빠르게 찾고 다운로드**할 수 있는 웹사이트입니다.
 
 > 검색 → `/exam/2025/high2/09` 접속 → 과목 선택 → 시험지/정답·해설 다운로드

@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/grade-cuts",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}

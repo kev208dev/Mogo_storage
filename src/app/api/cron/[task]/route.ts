@@ -5,11 +5,18 @@ import { syncBuiltinSources } from "@/ingestion/pipeline/sources";
 import { runReleaseWatch, runScheduledIngestion } from "@/ingestion/watch";
 import { checkCronAuth } from "@/lib/server/cron-auth";
 import { createAppIngestionContext } from "@/lib/server/ingestion-context";
+import { getDb } from "@/db/client";
+import { withAdvisoryLock } from "@/ingestion/pipeline/locks";
+import { runGradeCutWatch } from "@/ingestion/grade-cuts/core";
+import { createGradeCutStore } from "@/ingestion/grade-cuts/persistence";
+import { verifiedGradeCutAdapters } from "@/ingestion/grade-cuts/adapters";
+import { examCoursePath, examPath } from "@/lib/exam-path";
+import { revalidatePath } from "next/cache";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
 
-const TASKS = ["scheduled", "release-watch", "jobs"] as const;
+const TASKS = ["scheduled", "release-watch", "jobs", "grade-cuts"] as const;
 
 /**
  * scheduler 공통 진입점 (Vercel Cron, GitHub Actions, Cloudflare Cron Trigger, 일반 cron 이 호출)
@@ -26,6 +33,27 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
   const { task } = await ctx.params;
   if (!(TASKS as readonly string[]).includes(task)) {
     return NextResponse.json({ error: "unknown task" }, { status: 404 });
+  }
+  if (task === "grade-cuts") {
+    if (process.env.GRADE_CUT_INGESTION_ENABLED !== "true")
+      return NextResponse.json({ skipped: "GRADE_CUT_INGESTION_ENABLED is not true" });
+    const db = getDb();
+    if (!db) return NextResponse.json({ error: "database not configured" }, { status: 503 });
+    try {
+      const locked = await withAdvisoryLock(db, "ingest:grade-cuts", () =>
+        runGradeCutWatch(createGradeCutStore(db), verifiedGradeCutAdapters, new Date(),
+          async (exam, slot) => {
+            const key = { year: exam.year, grade: exam.grade, month: exam.month };
+            revalidatePath(examPath(key));
+            revalidatePath(examPath(key, slot.subject));
+            if (slot.courseCode) revalidatePath(examCoursePath(key, slot.subject, slot.courseCode));
+          }),
+      );
+      return NextResponse.json(locked.acquired ? { ok: true, result: locked.value } : { skipped: "locked" });
+    } catch (error) {
+      console.error("grade_cut_watch.failed", error);
+      return NextResponse.json({ error: "grade cut watch failed" }, { status: 500 });
+    }
   }
   if (!ingestionEnabled()) {
     return NextResponse.json({ skipped: "INGESTION_ENABLED is not true" });

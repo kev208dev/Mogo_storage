@@ -378,6 +378,49 @@ export const gradeCuts = pgTable(
   ],
 );
 
+/** A slot is finalized independently of the other subjects in the same exam. */
+export const gradeCutWatchStates = pgTable(
+  "grade_cut_watch_states",
+  {
+    id: id(),
+    examId: text("exam_id").notNull().references(() => exams.id, { onDelete: "cascade" }),
+    subject: subjectEnum("subject").notNull(),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
+    slotKey: text("slot_key").notNull().default(""),
+    status: text("status").notNull().default("waiting"),
+    startedAt: timestamp("started_at", { withTimezone: true }),
+    lastPolledAt: timestamp("last_polled_at", { withTimezone: true }),
+    finalizedAt: timestamp("finalized_at", { withTimezone: true }),
+    officialGradeCutId: text("official_grade_cut_id").references(() => gradeCuts.id, { onDelete: "set null" }),
+    failureCount: integer("failure_count").notNull().default(0),
+    lastError: text("last_error"),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("grade_cut_watch_slot_uq").on(t.examId, t.subject, t.slotKey),
+    index("grade_cut_watch_status_idx").on(t.status, t.lastPolledAt),
+    check("grade_cut_watch_status_ck", sql`${t.status} in ('waiting', 'watching', 'finalized', 'failed')`),
+  ],
+);
+
+/** One immutable observation for the first value and every subsequent value change. */
+export const gradeCutSnapshots = pgTable(
+  "grade_cut_snapshots",
+  {
+    id: id(),
+    gradeCutId: text("grade_cut_id").notNull().references(() => gradeCuts.id, { onDelete: "cascade" }),
+    examId: text("exam_id").notNull().references(() => exams.id, { onDelete: "cascade" }),
+    subject: subjectEnum("subject").notNull(),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
+    source: gradeCutSourceEnum("source").notNull(),
+    cuts: jsonb("cuts").$type<GradeCutEntry[]>().notNull(),
+    fingerprint: text("fingerprint").notNull(),
+    sourceUrl: text("source_url"),
+    observedAt: timestamp("observed_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("grade_cut_snapshots_cut_time_idx").on(t.gradeCutId, t.observedAt)],
+);
+
 /** 오류 신고 (로그인 없이 접수) */
 export const reports = pgTable(
   "reports",

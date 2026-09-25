@@ -1,6 +1,7 @@
 import { SampleNotice } from "@/components/layout/SampleNotice";
 import { Badge } from "@/components/ui/badge";
-import { GRADE_CUT_SOURCES, GRADE_CUT_SOURCE_LABELS, type Subject } from "@/lib/constants";
+import { GRADE_CUT_SOURCE_LABELS, type Subject } from "@/lib/constants";
+import { isMutedEstimate, orderGradeCutColumns } from "@/lib/grade-cuts";
 import type { GradeCut } from "@/lib/data/types";
 import { cn, formatKoreanDate } from "@/lib/utils";
 import { GradeEstimator } from "./GradeEstimator";
@@ -15,9 +16,7 @@ export function GradeCutTable({ gradeCuts, subject }: { gradeCuts: GradeCut[]; s
   if (gradeCuts.length === 0) {
     return <p className="text-muted-foreground text-sm">등급컷 자료 준비 중입니다.</p>;
   }
-  const columns = GRADE_CUT_SOURCES.map((source) =>
-    gradeCuts.find((g) => g.source === source),
-  ).filter((g): g is GradeCut => Boolean(g));
+  const columns = orderGradeCutColumns(gradeCuts);
   const grades = [...new Set(columns.flatMap((c) => c.cuts.map((x) => x.grade)))].sort(
     (a, b) => a - b,
   );
@@ -49,11 +48,11 @@ export function GradeCutTable({ gradeCuts, subject }: { gradeCuts: GradeCut[]; s
                   scope="col"
                   className={cn(
                     "px-3 py-2 text-right font-semibold",
-                    c.isOfficial && "bg-primary-soft text-primary-strong",
+                    c.isOfficial ? "bg-primary-soft text-primary-strong" : isMutedEstimate(c, columns) ? "bg-muted text-muted-foreground" : "",
                   )}
                 >
                   <span className="flex flex-col items-end gap-0.5">
-                    {GRADE_CUT_SOURCE_LABELS[c.source]}
+                    {c.isOfficial ? "공식 확정" : `${GRADE_CUT_SOURCE_LABELS[c.source]} 예상`}
                     {c.isOfficial ? (
                       <Badge variant="default">공식</Badge>
                     ) : (
@@ -77,7 +76,7 @@ export function GradeCutTable({ gradeCuts, subject }: { gradeCuts: GradeCut[]; s
                       key={c.source}
                       className={cn(
                         "px-3 py-2 text-right",
-                        c.isOfficial ? "bg-primary-soft/60 font-bold" : "text-muted-foreground",
+                        c.isOfficial ? "bg-primary-soft/60 font-bold" : isMutedEstimate(c, columns) ? "bg-muted/70 text-muted-foreground" : "",
                       )}
                     >
                       {value ?? "-"}

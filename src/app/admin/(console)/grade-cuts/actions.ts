@@ -19,6 +19,7 @@ import {
   parseGradeCutCsv,
 } from "@/ingestion/grade-cuts/input";
 import { requireAdmin } from "@/lib/server/admin-session";
+import { persistGradeCut } from "@/ingestion/grade-cuts/persistence";
 
 const PAGE = "/admin/grade-cuts";
 const MAX_CSV_BYTES = 2 * 1024 * 1024;
@@ -129,47 +130,31 @@ export async function upsertGradeCutAction(form: FormData) {
         throw new GradeCutInputError("이 시험에 등록되지 않은 세부과목입니다.");
     }
 
-    const slot = and(
-      eq(gradeCuts.examId, examId),
-      eq(gradeCuts.subject, subject),
+    const existing = await db.select({ id: gradeCuts.id }).from(gradeCuts).where(and(
+      eq(gradeCuts.examId, examId), eq(gradeCuts.subject, subject),
       courseId ? eq(gradeCuts.courseId, courseId) : isNull(gradeCuts.courseId),
       eq(gradeCuts.source, source),
-    );
-    const [existing] = await db.select({ id: gradeCuts.id }).from(gradeCuts).where(slot).limit(1);
-    const values = {
-      examId,
-      subject,
-      courseId,
-      source,
-      sourceUrl,
-      isOfficial: source === "official",
-      isSample: false,
-      cuts,
-      updatedAt: new Date(),
-    };
-
-    if (existing) {
-      await db.update(gradeCuts).set(values).where(eq(gradeCuts.id, existing.id));
-    } else {
-      await db.insert(gradeCuts).values(values);
-    }
+    )).limit(1);
+    const changed = await persistGradeCut(db, {
+      examId, subject, courseId, source, sourceUrl, cuts, observedAt: new Date(),
+    });
 
     console.info(
       JSON.stringify({
         event: "admin.action",
         admin,
-        action: existing ? "grade_cut.update" : "grade_cut.create",
+        action: existing.length ? "grade_cut.update" : "grade_cut.create",
         target: `${examId}:${subject}:${courseId ?? "-"}:${source}`,
       }),
     );
-    await revalidateExamSlot({
+    if (changed) await revalidateExamSlot({
       year: exam.year,
       grade: exam.grade,
       month: exam.month,
       subject,
       courseCode: course?.code,
     });
-    return `${exam.year} 고${exam.grade} ${exam.month}월 등급컷을 ${existing ? "수정" : "등록"}했습니다.`;
+    return `${exam.year} 고${exam.grade} ${exam.month}월 등급컷을 ${changed ? "저장" : "변경 없이 확인"}했습니다.`;
   });
 }
 
@@ -301,25 +286,15 @@ export async function bulkImportGradeCutsAction(form: FormData) {
         valid += 1;
 
         if (!dryRun) {
-          const values = {
-            examId: exam.id,
-            subject: row.subject,
-            courseId: course?.id ?? null,
-            source: row.source,
-            sourceUrl: row.sourceUrl,
-            isOfficial: row.source === "official",
-            isSample: false,
-            cuts: row.cuts,
-            updatedAt: new Date(),
-          };
-          if (existing) {
-            await db.update(gradeCuts).set(values).where(eq(gradeCuts.id, existing.id));
-            updated += 1;
-          } else {
-            await db.insert(gradeCuts).values(values);
-            created += 1;
+          const changed = await persistGradeCut(db, {
+            examId: exam.id, subject: row.subject, courseId: course?.id ?? null,
+            source: row.source, sourceUrl: row.sourceUrl, cuts: row.cuts, observedAt: new Date(),
+          });
+          if (changed) {
+            if (existing) updated += 1;
+            else created += 1;
           }
-          await revalidateExamSlot({
+          if (changed) await revalidateExamSlot({
             year: exam.year,
             grade: exam.grade,
             month: exam.month,

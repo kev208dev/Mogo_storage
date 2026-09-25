@@ -1,4 +1,15 @@
 import type { GradeCutEntry } from "./data/types";
+import type { GradeCut } from "./data/types";
+import { GRADE_CUT_SOURCES } from "./constants";
+
+export function orderGradeCutColumns(cuts: GradeCut[]): GradeCut[] {
+  return GRADE_CUT_SOURCES.map((source) => cuts.find((cut) => cut.source === source))
+    .filter((cut): cut is GradeCut => Boolean(cut))
+    .sort((a, b) => Number(b.isOfficial) - Number(a.isOfficial));
+}
+export function isMutedEstimate(column: GradeCut, columns: GradeCut[]): boolean {
+  return !column.isOfficial && columns.some((cut) => cut.isOfficial);
+}
 
 export interface GradeEstimate {
   /** 정확한 등급을 판정할 수 있으면 grade, 입력된 최저 컷 아래면 null */

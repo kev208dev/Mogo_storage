@@ -2,7 +2,7 @@ import { desc, eq } from "drizzle-orm";
 import { Badge } from "@/components/ui/badge";
 import { Panel, SmallButton, formatKst } from "@/components/admin/ui";
 import { getDb } from "@/db/client";
-import { courses, exams, gradeCuts } from "@/db/schema";
+import { courses, exams, gradeCuts, gradeCutWatchStates } from "@/db/schema";
 import {
   EXAM_TYPE_LABELS,
   GRADE_CUT_SOURCE_LABELS,
@@ -22,7 +22,7 @@ export default async function GradeCutsPage({ searchParams }: PageProps<"/admin/
   const db = getDb();
   if (!db) return <NoDatabase />;
 
-  const [examRows, courseRows, rows] = await Promise.all([
+  const [examRows, courseRows, rows, watchRows] = await Promise.all([
     db
       .select()
       .from(exams)
@@ -40,6 +40,12 @@ export default async function GradeCutsPage({ searchParams }: PageProps<"/admin/
       .leftJoin(courses, eq(courses.id, gradeCuts.courseId))
       .orderBy(desc(exams.year), desc(exams.month), desc(gradeCuts.updatedAt))
       .limit(500),
+    db.select({ state: gradeCutWatchStates, exam: exams, course: courses })
+      .from(gradeCutWatchStates)
+      .innerJoin(exams, eq(exams.id, gradeCutWatchStates.examId))
+      .leftJoin(courses, eq(courses.id, gradeCutWatchStates.courseId))
+      .orderBy(desc(exams.year), desc(exams.month))
+      .limit(500),
   ]);
 
   return (
@@ -47,10 +53,31 @@ export default async function GradeCutsPage({ searchParams }: PageProps<"/admin/
       <h1 className="text-xl font-bold">등급컷 관리</h1>
       <AdminNotice value={notice} />
       <p className="text-muted-foreground text-sm">
-        공개 자료를 사람이 확인한 뒤 입력합니다. 서버는 출처 URL을 자동 수집하지 않습니다. 같은
-        시험·과목·세부과목·출처를 다시 저장하면 기존 값을 수정합니다.
+        검증된 공개 출처만 자동 수집합니다. 아래 입력은 자동 수집 실패 시 수동 보정용입니다.
       </p>
 
+      <Panel title={`자동 감시 상태 · ${watchRows.length}개 슬롯`}>
+        {watchRows.length === 0 ? <p className="text-muted-foreground text-sm">아직 감시 기록이 없습니다.</p> : (
+          <div className="overflow-x-auto">
+            <table className="min-w-[48rem] w-full text-left text-sm">
+              <thead><tr className="border-b"><th>시험/과목</th><th>상태</th><th>마지막 확인</th><th>공식 확정</th><th>실패</th><th>출처</th><th>마지막 오류</th></tr></thead>
+              <tbody>{watchRows.map(({ state, exam, course }) => {
+                const present = rows.filter(({ cut }) => cut.examId === exam.id && cut.subject === state.subject && cut.courseId === state.courseId);
+                return <tr key={state.id} className="border-b">
+                  <td>{exam.year} 고{exam.grade} {exam.month}월 · {SUBJECT_LABELS[state.subject]}{course ? ` · ${course.name}` : ""}</td>
+                  <td><Badge variant={state.status === "finalized" ? "default" : "warning"}>{state.status}</Badge></td>
+                  <td>{state.lastPolledAt ? formatKst(state.lastPolledAt) : "-"}</td>
+                  <td>{state.finalizedAt ? formatKst(state.finalizedAt) : "-"}</td>
+                  <td>{state.failureCount}</td>
+                  <td>{GRADE_CUT_SOURCES.map((source) => `${GRADE_CUT_SOURCE_LABELS[source]} ${present.some(({ cut }) => cut.source === source) ? "✓" : "–"}`).join(" · ")}</td>
+                  <td className="max-w-xs break-words">{state.lastError ?? "-"}</td>
+                </tr>;
+              })}</tbody>
+            </table>
+          </div>
+        )}
+      </Panel>
+      <h2 className="pt-3 text-lg font-bold">수동 보정</h2>
       <Panel title="CSV 대량 입력">
         <form action={bulkImportGradeCutsAction} className="space-y-2 text-sm">
           <p className="text-muted-foreground text-xs">

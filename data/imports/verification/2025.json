@@ -1,0 +1,1917 @@
+{
+  "year": 2025,
+  "method": "Chromium 으로 공식 URL 을 열어 HTTP·Content-Type·PDF 본문을 확인하고, 1쪽 머리말(텍스트) 또는 브라우저 PDF 뷰어 화면(사람 확인)이 CSV 슬롯과 일치하는 자료만 /admin/imports 승인 폼(브라우저 확인 체크)으로 게시",
+  "records": [
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/eng_main_hsj_A4O6G2F5.pdf",
+      "slot": "2025 고1 10월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 310377,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:22:50.122Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•3교시영어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1②2①3③4④5①6②7②8④9⑤10④11③12③13⑤14②15③16⑤17④18③19②20①2",
+        "examLineInDocument": "2025학년도10월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #11)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/kor_main_mun_Y2Y66383.pdf",
+      "slot": "2025 고1 10월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 770541,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:22:56.939Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116[1~3]다음은학생의발표이다물음에답하시오안녕하세요?지난시간에대화의원리에대해배운것기억하시나요?다양한상황속에서원활하게대화의흐름을이어가기위해서알아야하는것이대화의원리인데요저는대화참여자들이상대의체면을고려하면서대화해야한다",
+        "examLineInDocument": "2025학년도10월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #12)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/gat_main_hsj_B9HQ8H65.pdf",
+      "slot": "2025 고1 10월 school_mock science/integrated-science solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 172916,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T06:23:04.616Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•4교시과학탐구영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다[통합과학]1④2⑤3⑤4①5②6④7①8④9④10⑤11①12③13⑤14③15⑤16②17③18",
+        "examLineInDocument": "2025학년도10월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #13)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/sat_main_hsj_N751JM45.pdf",
+      "slot": "2025 고1 10월 school_mock social/integrated-social solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 197229,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T06:23:12.526Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•4교시사회탐구영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다[통합사회]1④2④3②4③5①6③7③8⑤9④10④11①12①13②14①15②16⑤17②18",
+        "examLineInDocument": "2025학년도10월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #14)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_main_hsj_W6D54ZP4_1.pdf",
+      "slot": "2025 고1 3월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 335537,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:21:30.584Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•영어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1④2⑤3②4③5⑤6③7②8④9③10②11②12④13①14④15④16⑤17③18③19③20②21",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/his_main_hsj_461Y98HN.pdf",
+      "slot": "2025 고1 3월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 129790,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:29:47.176Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•한국사영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1①2④3⑤4④5③6②7①8③9⑤10②11②12②13⑤14③15③16④17①18③19⑤20①해",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_mun_55A7H57F.pdf",
+      "slot": "2025 고1 3월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 715693,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:21:43.181Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116[1~3]다음은학생의발표이다물음에답하시오여러분안녕하세요어릴적종이비행기를접어하늘높이신나게날렸던경험다들있으시죠?그런데이종이비행기날리기가단순한놀이를넘어세계대회까지열린다고합니다(자료1을제시하며)바로이비행기가세계종이비행",
+        "examLineInDocument": "2025학년도3월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #2)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/math_main_mun_1Z1WK7R9_1.pdf",
+      "slot": "2025 고1 3월 school_mock math question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 821677,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T06:10:34.012Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "1125지선다형1×의값은?[2점]①②③④⑤2일차함수의그래프에서기울기와절편의곱은?[2점]①②③④⑤3이차방정식의두",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/math_main_hsj_3P67AC54.pdf",
+      "slot": "2025 고1 3월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 601736,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:21:51.059Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•수학영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1④2②3②4④5③6⑤7③8②9⑤10④11⑤12⑤13①14②15④16①17③18②19①20①21",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_main_hsj_2FVA49I8_2.pdf",
+      "slot": "2025 고1 6월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 331080,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:10:44.527Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2025학년도6월전국연합학력평가정답및해설고11•영어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1③2①3①4⑤5②6④7②8③9④10④11①12⑤13",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/his_main_hsj_4538K65W.pdf",
+      "slot": "2025 고1 6월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 171015,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T06:10:47.801Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2025학년도6월전국연합학력평가정답및해설고11•한국사영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1②2④3②4④5④6②7④8⑤9⑤10③11②12⑤1",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/kor_main_mun_PY1V7PAD_1.pdf",
+      "slot": "2025 고1 6월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1194008,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:21:58.170Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116[1～3]다음은수업중학생의발표이다물음에답하시오안녕하세요○○○입니다여름철은물놀이나캠핑같은야외활동이활발한시기입니다이시기에는자외선강도가높아지므로피부보호에특히신경써야하는데요그래서오늘은자외선이피부에미치는영향과피부를보호하",
+        "examLineInDocument": "2025학년도6월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #4)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/math_main_hsj_74Z57396_2.pdf",
+      "slot": "2025 고1 6월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 698213,
+        "pdfPages": 3,
+        "checkedAt": "2026-09-25T06:22:05.809Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•수학영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1③2⑤3①4③5③6⑤7④8③9②10④11②12①13②14⑤15②16③17①18②19④20②21",
+        "examLineInDocument": "2025학년도6월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #5)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/sat_main_mun_936R24LR.pdf",
+      "slot": "2025 고1 6월 school_mock social/integrated-social question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2914820,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:22:12.832Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "161다음은온라인게시판의일부이다질문에옳게답한학생만을고른것은?[15점]통합사회학습방공간적관점은위치와분포이동과네트워크를중심으로장소와지역지리적상호작용을통해사회현상을살펴보는것입니다공간적관점을중심으로‘A국의플랜테이션농업’에대",
+        "examLineInDocument": "2025학년도6월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #6)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/eng_1_mun_11LNMPIC.pdf",
+      "slot": "2025 고1 9월 school_mock english question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 479901,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:22:21.956Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고1영어영역1181번부터17번까지는듣고답하는문제입니다1번부터15번까지는한번만들려주고16번부터17번까지는두번들려줍니다방송을잘듣고답을하시기바랍니다1다음을듣고여자가하는말의목적으로가장적절한것을고르시오①학부모간담회참석을독려하",
+        "examLineInDocument": "2025학년도9월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #7)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/kor_main_mun_77F7745C.pdf",
+      "slot": "2025 고1 9월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 805946,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:22:29.042Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고1국어영역1116[1~3]다음은수업중학생의발표이다물음에답하시오여러분은얼마전체험학습을갔던전통마을에서본담장이기억나시나요?저는그때보았던담장의문양이인상깊어담장에관심이생겼습니다그래서담장의종류에대해조사해보았어요담장의종류에는여",
+        "examLineInDocument": "2025학년도9월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #8)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/math_main_mun_8KC62N33_1.pdf",
+      "slot": "2025 고1 9월 school_mock math question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 286731,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T06:22:36.235Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고1수학영역11125지선다형1두다항식에대하여를간단히하면?[2점]①②③④⑤2두행렬",
+        "examLineInDocument": "2025학년도9월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #9)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/gat_main_mun_66784PDJ.pdf",
+      "slot": "2025 고1 9월 school_mock science/integrated-science question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 846571,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:22:43.019Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고1과학탐구영역(통합과학)1161다음은어느전기차의상세정보중일부를나타낸것이다제시된정보중기본량으로부터유도된물리량에해당하는것은?[15점]①길이②너비③속력④배터리충전시간⑤완전충전시주행가능거리2다음은규모에대한자료이다자연현상은",
+        "examLineInDocument": "2025학년도9월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #10)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/eng_main_hsj_LS66F3HV.pdf",
+      "slot": "2025 고2 10월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 321108,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:25:11.751Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•3교시영어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1⑤2③3③4④5⑤6②7③8④9⑤10④11②12①13③14②15①16①17④18②19③20②2",
+        "examLineInDocument": "2025학년도10월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #31)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/kor_main_mun_43243P8X.pdf",
+      "slot": "2025 고2 10월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 679718,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:25:18.530Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116[1~3]다음은학생의발표이다물음에답하시오안녕하세요?○○○입니다오늘은독특한번식전략을지닌해양생물들을소개하겠습니다흥미로운내용이많으니귀기울여들어주세요첫번째로심해아귀를소개할게요심해의높은수압과낮은온도를견디며살아가는심해아귀",
+        "examLineInDocument": "2025학년도10월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #32)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/kor_main_hsj_CN1Z96XN.pdf",
+      "slot": "2025 고2 10월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 295620,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:25:25.815Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•1교시국어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1④2④3⑤4⑤5④6⑤7⑤8④9④10④11①12④13②14①15③16②17③18④19⑤20⑤2",
+        "examLineInDocument": "2025학년도10월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #33)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/math_main_hsj_6DW94788.pdf",
+      "slot": "2025 고2 10월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 253212,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:25:32.547Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•2교시수학영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1③2①3④4⑤5①6②7⑤8①9③10④11②12③13②14⑤15③16④17①18⑤19②20③2",
+        "examLineInDocument": "2025학년도10월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #34)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/eng_main_hsj_8RKR7M1W.pdf",
+      "slot": "2025 고2 3월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 335468,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:23:20.940Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•영어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1⑤2①3①4③5②6②7③8④9⑤10②11①12②13⑤14④15③16②17②18⑤19①20③21",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_mun_JBJ4R7WR.pdf",
+      "slot": "2025 고2 3월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 752201,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:23:27.815Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116[1~3]다음은학생의발표이다물음에답하시오안녕하세요여러분은혹시‘국가중요농업유산’이란말을들어보셨나요?(반응을확인하며)대부분잘모르시네요국가중요농업유산은보존해야할가치가높은농업자원을국가에서지정한것입니다저는오늘국가중요농업",
+        "examLineInDocument": "2025학년도3월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #16)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_hsj_9MR565V3.pdf",
+      "slot": "2025 고2 3월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 300389,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:23:35.001Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•국어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1①2⑤3④4②5⑤6②7①8⑤9③10②11③12③13①14④15②16③17④18②19③20⑤21",
+        "examLineInDocument": "2025학년도3월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #17)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_che1_hsj_3Z3EUA27.pdf",
+      "slot": "2025 고2 3월 school_mock science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 115883,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:23:41.839Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1화학1정답※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1①2③3④4③5⑤6②7②8⑤9①10④11⑤12④13①14⑤15③16③17①18⑤19④20②해설1[출",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_ear1_hsj_868X54WI.pdf",
+      "slot": "2025 고2 3월 school_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 127319,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:23:48.320Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1지구과학1정답※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1⑤2⑤3③4③5①6②7①8④9①10①11③12④13⑤14④15①16⑤17②18②19②20②해설1",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_bio1_hsj_YS6CK7I6.pdf",
+      "slot": "2025 고2 3월 school_mock science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 128930,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:23:54.920Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1생명과학1정답※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1⑤2⑤3②4③5③6①7③8②9④10③11④12②13⑤14④15③16①17④18⑤19⑤20①해설1",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/s_yrnss_hsj_1FUMJPZ3.pdf",
+      "slot": "2025 고2 3월 school_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 121523,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:24:01.388Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1윤리와사상정답※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1②2③3①4②5④6⑤7④8⑤9①10⑤11④12③13⑤14④15①16③17⑤18②19④20③해설1",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/eng_main_hsj_4A53HZ97_1.pdf",
+      "slot": "2025 고2 6월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 352321,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:13:10.471Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2025학년도6월전국연합학력평가정답및해설고21•영어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1①2②3⑤4④5⑤6③7①8④9③10②11④12①13",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/kor_main_mun_6WZU5Z12_1.pdf",
+      "slot": "2025 고2 6월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 889830,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:24:07.835Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116[1~3]다음은학생의발표이다물음에답하시오안녕하세요?오늘발표를맡은○○○입니다저는얼마전에한글과관련된책을읽었는데요그책을통해새롭게알게된정보를여러분께알려드리고싶어서(손가락세개를펴며)‘한글과관련된세가지오해’를발표주제로정했",
+        "examLineInDocument": "2025학년도6월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #22)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/math_main_hsj_8QV88PI4_1.pdf",
+      "slot": "2025 고2 6월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1278836,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:24:15.607Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•수학영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1②2③3④4④5④6②7①8⑤9③10①11③12①13②14③15②16④17②18⑤19②20①21",
+        "examLineInDocument": "2025학년도6월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #23)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_easta_hsj_3DECJW6P.pdf",
+      "slot": "2025 고2 6월 school_mock social/east-asian-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 187691,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:24:22.931Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "2025학년도6월전국연합학력평가정답및해설고21•동아시아사•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1⑤2①3⑤4④5①6④7⑤8⑤9②10⑤11④12③1",
+        "examLineInDocument": null,
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #24)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_yrnss_hsj_344M4K63.pdf",
+      "slot": "2025 고2 6월 school_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 183169,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:24:29.680Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "2025학년도6월전국연합학력평가정답및해설고21•윤리와사상•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1④2④3⑤4⑤5④6②7⑤8①9③10④11③12②1",
+        "examLineInDocument": null,
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #25)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_hanji_hsj_JE4VGBT2.pdf",
+      "slot": "2025 고2 6월 school_mock social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 157877,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:24:36.140Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "2025학년도6월전국연합학력평가정답및해설고21•한국지리•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1②2③3①4④5④6①7⑤8②9⑤10④11⑤12②13",
+        "examLineInDocument": null,
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #26)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_samun_hsj_8B84IONP.pdf",
+      "slot": "2025 고2 6월 school_mock social/social-culture solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 147591,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:24:42.598Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "2025학년도6월전국연합학력평가정답및해설고21•사회문화•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1④2①3④4⑤5②6③7③8①9③10①11⑤12②13",
+        "examLineInDocument": null,
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #27)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/eng_main_hsj_868C9E84.pdf",
+      "slot": "2025 고2 9월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 370741,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:13:55.797Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2025학년도9월전국연합학력평가정답및해설고2927영어영역※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1①2⑤3③4⑤5②6③7②8④9④10③11①12②13",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/his_main_mun_Z12G5685_1.pdf",
+      "slot": "2025 고2 9월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1014449,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:24:50.516Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고2한국사영역1141(가)시대의사회모습으로옳은것은?이곳서울암사동유적은1925년에발생한큰홍수로인해움집자리와빗살무늬토기조각등이발견되며세상에알려졌습니다이후발굴조사가여러차례진행되면서농경과정착생활이시작된(가)시대의모습이좀더구",
+        "examLineInDocument": "2025학년도9월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #28)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/kor_main_mun_ZKNW6ZSE.pdf",
+      "slot": "2025 고2 9월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 709846,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:24:57.730Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고2국어영역1116[1~3]다음은학생의발표이다물음에답하시오안녕하세요?저는며칠전에화장의역사에관한책을읽었는데요조선시대여성들이내면과외면의조화로운아름다움을위해자연스러운화장을했다는사실이인상깊었습니다그래서오늘은조선시대화장문화에",
+        "examLineInDocument": "2025학년도9월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #29)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/kor_main_hsj_B4X88PV5.pdf",
+      "slot": "2025 고2 9월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 336220,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:25:04.932Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "127국어영역※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1①2④3③4②5④6④7⑤8③9⑤10②11①12②13②14①15④16⑤17③18②19①20④21",
+        "examLineInDocument": "2025학년도9월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #30)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/math_main_hsj_Z95Y88V4_1.pdf",
+      "slot": "2025 고2 9월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 238045,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:14:20.606Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2025학년도9월전국연합학력평가정답및해설고2527수학영역※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1④2③3⑤4①5②6⑤7②8④9①10①11②12③13",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/eng_main_hsj_MZAA3Z94.pdf",
+      "slot": "2025 고3 10월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 320052,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:27:35.106Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•영어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1②2⑤3①4④5②6⑤7③8④9⑤10④11②12①13③14①15③16①17④18④19②20③21",
+        "examLineInDocument": "2025학년도10월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #48)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/his_main_mun_DLW4557I.pdf",
+      "slot": "2025 고3 10월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 8689187,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:27:41.655Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "141(가)국가에대한설명으로옳은것은?나는천제(天帝)이신환인의아들환웅과웅녀사이에서태어났다이곳아사달에새시대를열어나라를세우노니그이름을(가)(이)라한다①불교를공인하였다②팔만대장경을조판하였다③통리기무아문을설치하였다④9주5소경",
+        "examLineInDocument": "2025학년도10월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #49)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf",
+      "slot": "2025 고3 10월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1992792,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:27:53.490Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "120[1~3]다음글을읽고물음에답하시오인지심리학에서는외부세계를이미지로구조화한정신표상의존재를상정하고이표상이짜임새있게뭉쳐진정도를응집성이라고칭한다정신표상의응집성은독서중글과상호작용하는과정에서높아지는데이는정신표상을구성하는명제",
+        "examLineInDocument": "2025학년도10월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #50)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_hsj_39QAF4NE.pdf",
+      "slot": "2025 고3 10월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 323178,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:28:01.281Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•국어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1③2⑤3②4⑤5⑤6③7①8⑤9③10③11④12①13②14①15②16②17①18③19⑤20②21",
+        "examLineInDocument": "2025학년도10월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #51)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/math_main_hsj_QFS3UEX9_1.pdf",
+      "slot": "2025 고3 10월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 326196,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:28:08.079Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•수학영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1③2⑤3④4①5①6⑤7⑤8②9③10②11③12②13④14①15④161718192",
+        "examLineInDocument": "2025학년도10월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #52)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/eng_main_hsj_36WSA734.pdf",
+      "slot": "2025 고3 11월 csat english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 292775,
+        "pdfPages": 30,
+        "checkedAt": "2026-09-25T06:18:14.790Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험영어영어영어영역영역영역정답및해설정답및해설정답및해설101③02②03①04⑤05①06④07①08⑤09④10④11①12②13②14③15③16①17⑤18②19①20②21②22①23③24②25④26",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/his_main_hsj_13AS7CD6.pdf",
+      "slot": "2025 고3 11월 csat history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 143514,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:18:18.698Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험한국사영역한국사영역한국사영역한국사한국사한국사정답및해설정답및해설정답및해설101③02③03①04⑤05②06⑤07④08⑤09③10①11③12②13④14⑤15③16⑤17②18②19①20④1구석기시",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf",
+      "slot": "2025 고3 11월 csat korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3873553,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:28:15.106Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다홀수형1120",
+        "examLineInDocument": "2026학년도대학수학능력시험",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #53)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/kor_main_hsj_53A2UX7R_1.pdf",
+      "slot": "2025 고3 11월 csat korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 347506,
+        "pdfPages": 35,
+        "checkedAt": "2026-09-25T06:18:29.944Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험국어국어국어영역영역영역정답및해설정답및해설정답및해설1최근수정일:20251117(월)",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
+      "slot": "2025 고3 11월 csat math question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1092019,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:28:23.440Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다홀수형11205지선다형1×의값은?[2점]①②③④⑤2함수에대하여lim→의값은?[2점]①",
+        "examLineInDocument": "2026학년도대학수학능력시험",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #54)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_main_hsj_66I8PI22.pdf",
+      "slot": "2025 고3 3월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 345214,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:25:39.343Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•영어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1④2⑤3⑤4④5②6④7③8④9④10④11①12⑤13①14①15⑤16②17④18②19②20⑤21",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/kor_main_hsj_5J8MI931.pdf",
+      "slot": "2025 고3 3월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 327575,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:25:46.395Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•국어영역•※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다국어정답1②2④3④4②5③6③7②8⑤9①10⑤11④12⑤13③14②15①16①17⑤18④19②20⑤",
+        "examLineInDocument": "2025학년도3월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #36)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_phy1_mun_C172K36V.pdf",
+      "slot": "2025 고3 3월 school_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 698242,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:25:53.585Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1161그림은전자기파ABC가병원에서사용되는모습으로ABC는가시광선적외선X선을순서없이나타낸것이다체온측정을위해체온계에서사용되는A입안을눈으로관찰할때사용되는B인체내부를촬영할때사용되는C이에대한옳은설명만을<보기>에서있는대로고른것",
+        "examLineInDocument": "2025학년도3월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #37)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_eco_hsj_9K76CA5W.pdf",
+      "slot": "2025 고3 3월 school_mock social/economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 104225,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:26:00.530Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1경제정답※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1①2③3④4④5②6①7③8⑤9③10④11⑤12④13⑤14③15②16①17③18①19②20⑤해설1[출제",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/s_sks_hsj_97E3796O.pdf",
+      "slot": "2025 고3 3월 school_mock social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 126447,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:26:06.935Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1세계사정답※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다1②2②3⑤4①5⑤6④7②8④9③10②11③12②13①14⑤15④16④17①18⑤19⑤20③해설1[출",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/eng_main_hsj_7E1O8247.pdf",
+      "slot": "2025 고3 6월 kice_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 291331,
+        "pdfPages": 29,
+        "checkedAt": "2026-09-25T06:04:08.933Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가영어영어영어영역영역영역정답및해설정답및해설정답및해설1",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/kor_main_hsj_J154F7J1_2.pdf",
+      "slot": "2025 고3 6월 kice_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 325675,
+        "pdfPages": 32,
+        "checkedAt": "2026-09-25T06:04:14.099Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가국어국어국어영역영역영역정답및해설정답및해설정답및해설",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che1_hsj_4WY39517.pdf",
+      "slot": "2025 고3 6월 kice_mock science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 172619,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:06:15.975Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가과학탐구과학탐구과학탐구영역영역영역화학1화학1화학1정답및해설정답및해설정답및해설101①02④03⑤04②05④06③07①08⑤09④10③11④12②13①14②15②16③17⑤18③19",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear1_hsj_FO82JKZW.pdf",
+      "slot": "2025 고3 6월 kice_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 153821,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:06:20.953Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가과학탐구과학탐구과학탐구영역영역영역지구과학1지구과학1지구과학1정답및해설정답및해설정답및해설101③02④03②04⑤05④06②07③08①09①10⑤11①12②13③14⑤15①16⑤17",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear2_hsj_F4SP1Q8S.pdf",
+      "slot": "2025 고3 6월 kice_mock science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 145018,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:04:31.453Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가과학탐구과학탐구과학탐구영역영역영역지구과학2지구과학2지구과학2정답및해설정답및해설정답및해설1",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy1_hsj_6868P113.pdf",
+      "slot": "2025 고3 6월 kice_mock science/physics-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 212417,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:06:23.933Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "학년도대학수학능력시험월모의평가20266과학탐구과학탐구과학탐구영역영역영역물리학1물리학1물리학1정답및해설정답및해설정답및해설10102③03④04④05③06②07④08③09②10①⑤1112①13⑤14①15④16②17②18④",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ch_mun_VIR855V1.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2795035,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:26:13.342Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다7361그림의발음기호중두개를조합하여만들수있는발음에해당하는글자는?[1점]hzàiuì①画②坐③在④太⑤岁2밑줄친부분과성조배열이같은것만을<보기>에서고른것은?祝你健康平安!<보기>a",
+        "examLineInDocument": "2026학년도대학수학능력시험6월모의평가",
+        "visual": "2026학년도 대학수학능력시험 6월 모의평가 문제지 / 제2외국어/한문 영역(중국어Ⅰ)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ch_hsj_2ZPB5YRI_1.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 194594,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T06:06:35.473Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역중국어1중국어1중국어1정답및해설정답및해설정답및해설1최근수정일:202569(월)01③02⑤03②04④05④06①07①08⑤09",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_han_hsj_IEUC367X.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/classical-chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 199682,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:06:38.526Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "학년도대학수학능력시험월모의평가20266제외국어한문2/제외국어한문2/제외국어한문2/영역영역영역한문1한문1한문1정답및해설정답및해설정답및해설101020304050607080910①④③②④③①②⑤②11121314151617",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ja_hsj_868Z41K2.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/japanese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 179213,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T06:06:41.473Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역일본어1일본어1일본어1정답및해설정답및해설정답및해설101①02③03④04①05②06④07⑤08②09⑤10③11②12③13④14",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ru_mun_188QC4G1.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/russian-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3252430,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:26:21.064Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다11361밑줄친부분과발음이같은것은?[1점]①адрес②отдых③футбол④студентка⑤выходной2밑줄친부분과발음이같은것은?Сколькостоитэтопаль",
+        "examLineInDocument": "2026학년도대학수학능력시험6월모의평가",
+        "visual": "2026학년도 대학수학능력시험 6월 모의평가 문제지 / 제2외국어/한문 영역(러시아어Ⅰ)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_vit_hsj_F95MB761.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/vietnamese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 139283,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T06:06:52.335Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역베트남어1베트남어1베트남어1정답및해설정답및해설정답및해설101①02③03④04②05④06②07③08⑤09⑤10③11①12①13",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_hanji_hsj_B9X85I2O.pdf",
+      "slot": "2025 고3 6월 kice_mock social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 138252,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:05:25.736Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험6월모의평가사회탐구영역사회탐구영역사회탐구영역한국지리한국지리한국지리정답및해설정답및해설정답및해설1",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_ssnyr_hsj_RMN3I722.pdf",
+      "slot": "2025 고3 6월 kice_mock social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 165832,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:06:56.675Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "학년도대학수학능력시험월모의평가20266사회탐구영역사회탐구영역사회탐구영역생활과윤리생활과윤리생활과윤리정답및해설정답및해설정답및해설101020304050607080910③⑤①④⑤①⑤④④⑤11121314151617181920",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_samun_hsj_522O36I8.pdf",
+      "slot": "2025 고3 6월 kice_mock social/social-culture solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 164425,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:06:59.645Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "학년도대학수학능력시험월모의평가20266사회탐구영역사회탐구영역사회탐구영역사회사회사회문화문화문화정답및해설정답및해설정답및해설101020304050607080910⑤①④⑤④⑤⑤②②⑤11121314151617181920③③②",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_saeji_hsj_YVJWO279.pdf",
+      "slot": "2025 고3 6월 kice_mock social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 131988,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:05:41.685Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도6월대학수학능력모의평가사회탐구영역사회탐구영역사회탐구영역세계지리세계지리세계지리정답및해설정답및해설정답및해설-1-",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_gup_hsj_8K4Z7256.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/industry-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 147424,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:05:44.672Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도6월모의평가직업탐구직업탐구직업탐구영역영역영역공업일반공업일반공업일반정답및해설정답및해설정답및해설1",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sjl_hsj_2MKRK4Z9_2.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/successful-career-life solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 145722,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:05:47.610Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도6월모의평가직업탐구직업탐구직업탐구영역영역영역성공적인직업생활성공적인직업생활성공적인직업생활정답및해설정답및해설정답및해설1",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_mun_3FVD5KG6_1.pdf",
+      "slot": "2025 고3 7월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 952797,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:26:28.759Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고3국어영역1120[1～3]다음글을읽고물음에답하시오중국의유학자인주희는사물의이치를탐구하는궁리(窮理)를배움의방법중제일로꼽으며그궁리의핵심은독서라고하였다하지만무조건읽기만한다고곧바로배움으로이어지는것은아니다주희는배움이일어나려면",
+        "examLineInDocument": "2025학년도7월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #42)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_hsj_BK6Q7H9T.pdf",
+      "slot": "2025 고3 7월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 403266,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:15:33.119Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2025학년도7월전국연합학력평가정답및해설고3139국어영역※본전국연합학력평가는17개시도교육청주관으로시행되며해당자료는EBSi에서만제공됩니다무단전재및재배포는금지됩니다정답1⑤2⑤3③4②5⑤6④7②8⑤9④10①11①12④13",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/his_main_hsj_39JY93S5.pdf",
+      "slot": "2025 고3 9월 kice_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 136514,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:15:36.506Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가한국사영역한국사영역한국사영역한국사한국사한국사정답및해설정답및해설정답및해설101③02①03②04①05①06②07④08⑤09③10③11④12③13④14②15③16①17④18③19④20",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/kor_main_hsj_2X96S4LB_2.pdf",
+      "slot": "2025 고3 9월 kice_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 629276,
+        "pdfPages": 34,
+        "checkedAt": "2026-09-25T06:15:39.454Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "학년도대학수학능력시험월모의평가20269국어국어국어영역영역영역정답및해설정답및해설정답및해설1독서",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
+      "slot": "2025 고3 9월 kice_mock math question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1362723,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:26:36.265Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다11205지선다형1×의값은?[2점]①②③④⑤2함수에대하여lim→의값은?[2점]",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #43)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ch_mun_218426MU.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4365626,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:26:43.976Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다7361그림의발음기호중두개를조합하여만들수있는발음에해당하는글자는?[1점]xjiàoiù①见②笑③先④票⑤球2밑줄친부분과성조배열이같은것만을<보기>에서고른것은?那个公园很漂亮。<보기",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #44)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ch_hsj_H97M28D5.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 204315,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T06:15:55.502Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역중국어1중국어1중국어1정답및해설정답및해설정답및해설101②02③03④04①05④06③07⑤08①09④10⑤11④12⑤13④14",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_fr_mun_323L72QZ.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/french-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2853862,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:26:51.906Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다3361밑줄친부분과발음이같은것은?①chose②étage③garçon④saison⑤surprise2□에들어갈글자를모두조합하여만들수있는낱말은?[1점]ar□ref□aiseoi□",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #45)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ru_mun_249Y6EYK.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/russian-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1329768,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:26:59.625Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다11361밑줄친부분과발음이다른것은?①вкус②вдруг③завтра④остров⑤перерыв2밑줄친부분과발음이같은것만을<보기>에서고른것은?Сегодняяснаяпогод",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #46)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ru_hsj_719YO62X.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/russian-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 140992,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:16:13.551Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역러시아어1러시아어1러시아어1정답및해설정답및해설정답및해설101②02①03⑤04④05①06③07③08②09②10⑤11②12⑤13",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_sp_hsj_H2T6ARY6.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/spanish-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 145186,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T06:16:16.494Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역스페인어1스페인어1스페인어1정답및해설정답및해설정답및해설101③02③03④04③05②06③07②08①09④10④11③12①13",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_vit_mun_GJRW8AAA.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/vietnamese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3093302,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:27:07.108Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다15361□에들어갈글자는?[1점]①b②g③h④r⑤t□ổ2밑줄친부분과발음이같은것은?[1점]ChịđangnghenhạcViệtNam①ghế②hát③ném④ngã⑤nhanh3□",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말이 CSV 기대값과 일치 (sheets2025 #47)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_easta_hsj_6BG3QF54.pdf",
+      "slot": "2025 고3 9월 kice_mock social/east-asian-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149380,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:16:27.258Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역동아시아사동아시아사동아시아사정답및해설정답및해설정답및해설101①02②03④04①05②06③07②08③09①10④11③12③13②14④15②16④17",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_yrnss_hsj_662A27B3.pdf",
+      "slot": "2025 고3 9월 kice_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 167484,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:16:30.341Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역윤리와사상윤리와사상윤리와사상정답및해설정답및해설정답및해설101⑤02②03①04④05②06②07④08④09⑤10③11①12③13①14③15③16③17",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_hanji_hsj_BALI1SG3.pdf",
+      "slot": "2025 고3 9월 kice_mock social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 147995,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:16:33.317Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역한국지리한국지리한국지리정답및해설정답및해설정답및해설1`01⑤02②03①04④05②06③07③08④09⑤10⑤11①12③13④14③15③16②17④1",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_ssnyr_hsj_KA127C5E.pdf",
+      "slot": "2025 고3 9월 kice_mock social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 133898,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:16:37.741Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역생활과윤리생활과윤리생활과윤리정답및해설정답및해설정답및해설101②02①03④04②05③06④07①08②09③10①11④12①13④14③15⑤16⑤17",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_bnj_mun_ZM38A99V.pdf",
+      "slot": "2025 고3 9월 kice_mock social/politics-and-law question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1300469,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:27:14.758Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다사회탐구영역3정치와법15361정치를바라보는관점AB에대한설명으로옳은것은?①A는국가형성이전의정치현상을설명하기에적합하다②B는다양한사회집단에서나타나는현대사회의정치현상을설명하기에적",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_samun_mun_A1AT6KCF.pdf",
+      "slot": "2025 고3 9월 kice_mock social/social-culture question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2161727,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:27:18.625Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다사회탐구영역3사회문화17361밑줄친㉠～㉤과같은현상의일반적인특징에대한설명으로옳은것은?전세계에서노르웨이와우리나라두곳뿐인시드볼트(SeedVault)는㉠식물자원고갈에대비해종자를보",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_samun_hsj_15MBA1IN.pdf",
+      "slot": "2025 고3 9월 kice_mock social/social-culture solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 141271,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:16:55.803Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역사회사회사회문화문화문화정답및해설정답및해설정답및해설101③02④03①04③05④06⑤07②08①09④10②11②12⑤13④14①15⑤16①17④18",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_saeji_mun_ACIQ8X17.pdf",
+      "slot": "2025 고3 9월 kice_mock social/world-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2940002,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:27:22.675Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다사회탐구영역3세계지리7361(가)∼(다)고지도에대한설명으로옳은것은?(단(가)∼(다)는각각곤여만국전도천하도혼일강리역대국도지도중하나임)(가)(나)(다)①(가)는대서양이지도중심",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_saeji_hsj_7S852ZYY.pdf",
+      "slot": "2025 고3 9월 kice_mock social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 142049,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:17:06.498Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도9월대학수학능력모의평가사회탐구영역사회탐구영역사회탐구영역세계지리세계지리세계지리정답및해설정답및해설정답및해설-1-01⑤02①03①04②05⑤06③07④08③09③10②11①12③13⑤14①15③16③17②18",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_sks_hsj_5C7N7Y3A.pdf",
+      "slot": "2025 고3 9월 kice_mock social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 142727,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:17:09.557Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역세계사세계사세계사정답및해설정답및해설정답및해설101③02④03②04⑤05⑤06④07②08①09⑤10④11①12④13①14④15②16②17⑤18③19",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_nupgi_mun_7A4R24EV.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/agriculture-basics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3707734,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:27:26.694Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다직업탐구영역3농업기초기술3241다음은무병주생산실습사례이다[실습과정]에서사용된실습기구로적절한것만을<보기>에서고른것은?학생A는카네이션무병주를생산하기위하여실습과정을수행한후배지안",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_susan_mun_F1H33DA8.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/fisheries-and-shipping question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3151985,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:27:30.920Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "이문제지에관한저작권은한국교육과정평가원에있습니다직업탐구영역3수산해운산업기초9241다음진로탐색을위한인터넷검색결과에서알수있는수산해운분야의직업으로옳은것은?①선장②도선사③선박검사원④선박기관사⑤선박운항관리자2다음인터뷰에서대표가",
+        "examLineInDocument": "2026학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_inkan_hsj_N3H1B85J.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/human-development solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149182,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:17:28.113Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가직업탐구직업탐구직업탐구영역영역영역인간발달인간발달인간발달정답및해설정답및해설정답및해설101④02⑤03③04④05④06②07①08⑤09②10③11③12③13⑤14③15④16②17①18",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_gup_hsj_K79X9T3U.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/industry-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 140950,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:17:31.048Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2026학년도대학수학능력시험9월모의평가직업탐구직업탐구직업탐구영역영역영역공업일반공업일반공업일반정답및해설정답및해설정답및해설101④02⑤03②04①05⑤06①07①08⑤09②10③11④12③13③14④15③16③17⑤18",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    }
+  ]
+}

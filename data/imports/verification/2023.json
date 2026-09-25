@@ -1,0 +1,1758 @@
+{
+  "year": 2023,
+  "method": "Chromium 으로 공식 URL 을 열어 HTTP·Content-Type·PDF 본문을 확인하고, 1쪽 머리말(텍스트) 또는 브라우저 PDF 뷰어 화면(사람 확인)이 CSV 슬롯과 일치하는 자료만 /admin/imports 승인 폼(브라우저 확인 체크)으로 게시",
+  "records": [
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go1/his_main_hsj_T4Y8ZC3T.pdf",
+      "slot": "2023 고1 3월 school_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 132201,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:44:41.987Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•한국사영역•정답1⑤2③3②4②5①6⑤7①8①9①10②11①12③13②14⑤15④16②17④18④19③20③해설1[출제의도]구석기시대의생활모습을파악한다(가)시대는구석기시대이다자료는연천전곡리유적에서출토된주먹도끼에관한",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go1/kor_main_mun_5JN7PAR4_1.pdf",
+      "slot": "2023 고1 3월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1033181,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:44:49.950Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116[1~3]다음은학생의발표이다물음에답하시오안녕하세요?여러분병풍이무엇인지알고계신가요?(청중의반응을살피며)네고개를끄덕이는분들이많으시네요최근한휴대폰제조사에서여러번접을수있는병풍의특징을적용한‘병풍폰’을개발한다는기사를보았습",
+        "examLineInDocument": "2023학년도3월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #2)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go1/eng_mun_165EB81D.pdf",
+      "slot": "2023 고1 6월 school_mock english question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1606384,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:44:58.224Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "181번부터17번까지는듣고답하는문제입니다1번부터15번까지는한번만들려주고16번부터17번까지는두번들려줍니다방송을잘듣고답을하시기바랍니다1다음을듣고여자가하는말의목적으로가장적절한것을고르시오①체육대회종목을소개하려고②대회자원봉사",
+        "examLineInDocument": "2023학년도6월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #3)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/kor_main_mun_A61J27ZC.pdf",
+      "slot": "2023 고1 9월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 693405,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:45:07.151Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고1국어영역1116[1~3]다음은학생의발표이다물음에답하시오안녕하세요?‘생활속전통문화’에대한발표를맡은○○○입니다저는지난주에매듭팔찌를만들며우리전통매듭이참아름답다고생각하여전통매듭에대해조사해보았습니다그래서오늘은제가△△전통문",
+        "examLineInDocument": "2023학년도9월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #4)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/kor_main_hsj_X76PHBMH.pdf",
+      "slot": "2023 고1 9월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 347910,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:45:14.457Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116국어영역정답1⑤2④3⑤4②5④6③7①8②9④10④11⑤12③13①14②15⑤16①17④18②19③20⑤21③22④23⑤24④25②26④27①28⑤29⑤30①31⑤32②33③34③35①36③37②38①39③40②",
+        "examLineInDocument": "2023학년도9월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #5)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/math_main_mun_GXJ7B173.pdf",
+      "slot": "2023 고1 9월 school_mock math question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 518710,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T06:45:21.291Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "고1수학영역11125지선다형1두다항식에대하여를간단히하면?[점]①②③④⑤2등식이에대한항등식",
+        "examLineInDocument": "2023학년도9월고1전국연합학력평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/math_main_hsj_96KY8KZ9.pdf",
+      "slot": "2023 고1 9월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1354435,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:45:24.741Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "고1정답및해설2023학년도9월전국연합학력평가616수학영역정답1④2③3②4④5⑤6③7②8①9③10⑤11②12④13④14⑤15⑤16③17①18①19③20⑤21④222324252627282930",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/gat_main_mun_CMHMPM1Z.pdf",
+      "slot": "2023 고1 9월 school_mock science/integrated-science question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1923720,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:45:28.540Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "381그림은A원자의결합으로이루어진그래핀의구조를나타낸것이다그래핀은휘어지는디스플레이의소재로사용될수있다이에대한설명으로옳은것만을<보기>에서있는대로고른것은?(단A는임의의원소이다)<보기>ㄱA는탄소이다ㄴ그래핀은유연성을가진다ㄷ그래",
+        "examLineInDocument": "2023학년도9월고1전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #6)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go2/kor_main_mun_8AP2TU79.pdf",
+      "slot": "2023 고2 3월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 794421,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:45:36.901Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "116[1~3]다음은학생의발표이다물음에답하시오안녕하세요저는동양의전통문방구인‘먹’에대해발표하고자합니다먹은색의농담번짐등다양한표현이가능하고보존성도뛰어나오랫동안우리의문화를기록하는데에사용되었습니다(사진1제시)이렇게멋진작품들이",
+        "examLineInDocument": "2023학년도3월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #7)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go2/kor_main_hsj_8288M31R.pdf",
+      "slot": "2023 고2 3월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 316343,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:45:44.082Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•국어영역•국어정답1④2⑤3③4③5③6⑤7③8②9②10①11①12①13③14④15②16②17①18⑤19⑤20②21②22③23③24⑤25④26⑤27①28④29⑤30④31①32③33④34②35①36⑤37④38②39③4",
+        "examLineInDocument": "2023학년도3월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #8)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go2/g_ear1_mun_23LM6TZI.pdf",
+      "slot": "2023 고2 3월 school_mock science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1061526,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:45:50.882Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "7161그림은지구시스템의구성요소ABC와상호작용의예를나타낸것이다ABC에해당하는지구시스템의구성요소로적절한것은?ABC①기권수권지권②기권지권수권③수권기권지권④수권지권기권⑤지권기권수권2그림은가로등시설에적용된풍력발전기와태양광발",
+        "examLineInDocument": "2023학년도3월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #9)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/kor_main_hsj_X6WNE5J2.pdf",
+      "slot": "2023 고2 6월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 315008,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:45:58.015Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•국어영역•정답1⑤2④3⑤4①5③6③7④8②9④10①11④12②13②14⑤15②16①17②18②19④20③21④22③23⑤24④25③26⑤27③28⑤29⑤30①31⑤32①33④34⑤35②36①37④38①39②40①",
+        "examLineInDocument": "2023학년도6월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #10)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/math_main_hsj_D28Q7U39.pdf",
+      "slot": "2023 고2 6월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 321497,
+        "pdfPages": 3,
+        "checkedAt": "2026-09-25T06:46:04.782Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•수학영역•정답1③2②3①4④5④6③7②8⑤9④10⑤11①12①13①14③15⑤16⑤17③18④19①20②21⑤222324252627282930해설1[출제의도]지수계산하기",
+        "examLineInDocument": "2023학년도6월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #11)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/g_ear1_hsj_V848FX83.pdf",
+      "slot": "2023 고2 6월 school_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 318710,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:46:11.696Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "2023학년도6월전국연합학력평가정답및해설고213•지구과학1•정답1②2④3②4①5⑤6④7②8①9①10③11①12②13⑤14⑤15④16⑤17③18③19①20④해설1[출제의도]판구조론정립과정이해하기ㄴ맨틀대류설은방사성원소가",
+        "examLineInDocument": null,
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #12)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/g_bio1_mun_A9542EQ8.pdf",
+      "slot": "2023 고2 6월 school_mock science/life-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1747906,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:46:18.381Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "생명과학15161다음은수원청개구리에대한자료이다수원청개구리는우리나라고유종으로몸길이가25~40mm정도로작다4월부터번식하는청개구리와달리수원청개구리는5월부터7월에걸쳐㉠짝짓기를하고알을낳는다또한청개구리와의경쟁을피하기위해대부분논",
+        "examLineInDocument": "2023학년도6월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #13)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/gat_main_mun_3HQ6778T_1.pdf",
+      "slot": "2023 고2 6월 school_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 13251495,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:46:27.017Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "물리학11161그림은관람차A바이킹B기차C의운동에대한설명이다ABC일정한빠르기로회전하는관람차A왕복운동하는바이킹B직선레일에서속력이빨라지는기차CABC중속력과운동방향이모두변하는운동을하는것만을있는대로고른것은?①A②B③AC④BC",
+        "examLineInDocument": "2023학년도6월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #14)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/s_hanji_mun_HY6L555G.pdf",
+      "slot": "2023 고2 6월 school_mock social/korean-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 6080586,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:46:40.499Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "한국지리5361다음은노트필기의일부이다(가)~(다)에들어갈옳은내용을<보기>에서고른것은?◉우리나라의위치와특성1수리적위치북위33°~43°에위치하여(가)동경124°~132°에위치하여(나)2지리적위치유라시아대륙동안에위치하여(",
+        "examLineInDocument": "2023학년도6월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #15)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/sat_main_mun_LFA7ZX36.pdf",
+      "slot": "2023 고2 6월 school_mock social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 36422875,
+        "pdfPages": 36,
+        "checkedAt": "2026-09-25T06:46:48.864Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "생활과윤리1361갑을의입장으로가장적절한것은?갑:윤리학의근본과제는보편적으로적용가능한도덕원리를탐구하여선악을판단하는기준을마련함으로써도덕적으로가치있는삶의방향을제시하는것이다을:윤리학의근본과제는도덕적개념의의미를분석하고도덕명제의",
+        "examLineInDocument": "2023학년도6월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #16)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go2/eng_main_hsj_SB54Y8GO.pdf",
+      "slot": "2023 고2 9월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 352707,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:47:05.829Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "고2정답및해설2023학년도9월전국연합학력평가1028영어영역정답1⑤2③3②4④5①6①7⑤8④9③10②11②12①13①14②15⑤16②17④18⑤19①20⑤21③22④23⑤24③25⑤26③27④28④29②30④31①32",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go2/kor_main_mun_1H4N6ZEC.pdf",
+      "slot": "2023 고2 9월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 961489,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T06:47:10.605Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고2국어영역1116[1~3]다음은수업중학생의발표이다물음에답하시오안녕하세요?발표를맡은○○○입니다지난수업시간에우리는조선시대의전통복식에대해배웠는데요저는전통모자에대한내용이무척흥미로웠어요그래서조선시대양반들이쓰던대표적인모자인흑",
+        "examLineInDocument": "2023학년도9월고2전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #17)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go2/math_main_hsj_89TL5M69.pdf",
+      "slot": "2023 고2 9월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 794588,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:47:18.038Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2023학년도9월전국연합학력평가정답및해설고2528수학영역정답1④2①3⑤4③5⑤6②7④8③9③10②11①12①13④14③15⑤16②17④18④19⑤20②21③222236242425102620277428191295303",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231012/go3/kor_main_hsj_BSHJ14QP.pdf",
+      "slot": "2023 고3 10월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 314664,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:51:19.953Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•국어영역•정답1④2②3②4③5②6⑤7①8⑤9②10⑤11⑤12④13③14①15③16②17②18⑤19②20③21④22③23④24④25①26④27④28①29①30⑤31①32③33③34⑤해설",
+        "examLineInDocument": "2023학년도10월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #38)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231012/go3/2nd_ch_mun_9BN3L6FF.pdf",
+      "slot": "2023 고3 10월 school_mock second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 815657,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:51:26.722Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "7281그림의발음기호중두개를조합하여만들수있는발음에해당하는글자는?[1점]dshɑ̄nɡēnɡ①顶②声③上④等⑤省2밑줄친부분과성조배열이같은것만을<보기>에서고른것은?讨论很重要。<보기>a所有b简单c暑假d晚会①ab②ac③bc④b",
+        "examLineInDocument": "2023학년도10월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #39)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/eng_1_mun_A3KO1N22.pdf",
+      "slot": "2023 고3 11월 csat english question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1637224,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:51:35.472Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "181번부터17번까지는듣고답하는문제입니다1번부터15번까지는한번만들려주고16번부터17번까지는두번들려줍니다방송을잘듣고답을하시기바랍니다1다음을듣고여자가하는말의목적으로가장적절한것을고르시오①축구경기장사용수칙을설명하려고②지역아",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #40)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/eng_1_hsj_YANDRG8A_1.pdf",
+      "slot": "2023 고3 11월 csat english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 290553,
+        "pdfPages": 29,
+        "checkedAt": "2026-09-25T06:51:42.840Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험영어영어영어영역영역영역정답및해설정답및해설정답및해설1*최근수정일:20231117(금)01⑤02①03④04③05②06③07④08③09④10②11⑤12①13⑤14①15①16②17③18①19①20",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/his_main_hsj_9M3K3K46.pdf",
+      "slot": "2023 고3 11월 csat history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 140532,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:51:46.196Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험한국사영역한국사영역한국사영역한국사한국사한국사정답및해설정답및해설정답및해설101⑤02②03⑤04①05②06②07③08①09②10④11③12④13①14④15①16⑤17②18④19⑤20③1청동기시",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/kor_main_hsj_913QDM2N.pdf",
+      "slot": "2023 고3 11월 csat korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 339641,
+        "pdfPages": 36,
+        "checkedAt": "2026-09-25T06:51:49.114Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험국어국어국어영역영역영역정답및해설정답및해설정답및해설1",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_che1_mun_WLN9X458.pdf",
+      "slot": "2023 고3 11월 csat science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 702649,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:51:52.546Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "과학탐구영역3화학I3321다음은일상생활에서사용되고있는물질에대한자료이다㉠에탄올(CHOH)이주성분인손소독제를손에바르면에탄올이증발하면서손이시원해진다손난로를흔들면손난로속에있는㉡철가루(Fe)가산화되면서열을방출한다이에대한설",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #41)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_che1_hsj_48WE1BB3.pdf",
+      "slot": "2023 고3 11월 csat science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 154466,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:51:59.768Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험과학탐구과학탐구과학탐구영역영역영역화학1화학1화학1정답및해설정답및해설정답및해설101③02⑤03④04④05②06②07③08①09⑤10③11①12②13③14⑤15④16①17⑤18②19③20④1생",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_ear1_hsj_WZKQQ2JF.pdf",
+      "slot": "2023 고3 11월 csat science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 219348,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T06:52:02.905Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험과학탐구과학탐구과학탐구영역영역영역지구과학1지구과학1지구과학1정답및해설정답및해설정답및해설101④02⑤03⑤04①05③06④07③08②09①10⑤11③12③13②14①15④16⑤17③18②19",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_ear2_hsj_816ZK5W5.pdf",
+      "slot": "2023 고3 11월 csat science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 152385,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:52:06.073Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험과학탐구과학탐구과학탐구영역영역영역지구과학2지구과학2지구과학2정답및해설정답및해설정답및해설101①02③03⑤04②05①06④07④08②09⑤10①11②12③13③14④15⑤16①17③18⑤19",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_phy1_mun_79YM8687.pdf",
+      "slot": "2023 고3 11월 csat science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1090612,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:52:09.048Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "과학탐구영역3물리학I1321그림은버스에서이용하는전자기파를나타낸것이다이에대한설명으로옳은것만을<보기>에서있는대로고른것은?<보기>ㄱ㉠은가시광선영역에해당한다ㄴ진공에서속력은㉠이㉡보다크다ㄷ진공에서파장은㉡이㉢보다짧다①ㄱ②ㄴ③ㄱㄴ",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #42)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_phy2_hsj_468WNJ8X.pdf",
+      "slot": "2023 고3 11월 csat science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 323336,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:52:16.303Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험과학탐구과학탐구과학탐구영역영역영역물리학2물리학2물리학2정답및해설정답및해설정답및해설101①02④03①04⑤05①06③07③08④09⑤10④11③12②13⑤14⑤15②16④17②18③19⑤20",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/2nd_ch_mun_67U5T2WP.pdf",
+      "slot": "2023 고3 11월 csat second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2127751,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:52:19.498Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "7361그림의발음기호중두개를조합하여만들수있는발음에해당하는글자는?[1점]mgǎiāo①国②买③早④迷⑤来2밑줄친부분과성조배열이같은것만을<보기>에서고른것은?这是我的手机。<보기>a明天b电影c火车d老师①ab②ac③bc④bd⑤c",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #43)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/2nd_fr_mun_CQPR2DHE.pdf",
+      "slot": "2023 고3 11월 csat second_language/french-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1593122,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:52:27.039Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "3361밑줄친부분과같은발음이들어있는낱말은?[1점]Tonprénom?①homme②pomme③saison④automne⑤monsieur2□에들어갈글자를모두조합하여만들수있는낱말은?m□rv□llageca□pagnemont□",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #44)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/2nd_sp_hsj_BOU4H47L.pdf",
+      "slot": "2023 고3 11월 csat second_language/spanish-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 136700,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:52:34.300Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역스페인어1스페인어1스페인어1정답및해설정답및해설정답및해설101④02①03④04①05②06⑤07②08②09⑤10④11③12①13②14⑤15",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/2nd_vit_hsj_RS41648Q.pdf",
+      "slot": "2023 고3 11월 csat second_language/vietnamese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 150629,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T06:52:37.319Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역베트남어1베트남어1베트남어1정답및해설정답및해설정답및해설101⑤02④03③04⑤05①06④07④08⑤09①10④11①12④13②14③15",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/s_eco_mun_J1X4X2ZA.pdf",
+      "slot": "2023 고3 11월 csat social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 848908,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:52:40.256Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "사회탐구영역3경제13361그림은교사의수업장면이다이에대한설명으로옳은것은?(단AB는각각가계기업중하나임)[3점]①A는효용극대화를추구한다②A는(가)시장의수요자이다③B는생산활동의주체이다④물류회사의화물차구입비는㉠에해당한다⑤백화",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #45)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/s_hanji_hsj_H7125998.pdf",
+      "slot": "2023 고3 11월 csat social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 135934,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:52:47.250Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험사회탐구영역사회탐구영역사회탐구영역한국지리한국지리한국지리정답및해설정답및해설정답및해설101④02⑤03②04⑤05①06②07①08④09③10②11⑤12③13④14①15⑤16③17④18①19②20",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/s_saeji_hsj_3D7CDAA4.pdf",
+      "slot": "2023 고3 11월 csat social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 144492,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:52:50.166Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험11월사회탐구영역사회탐구영역사회탐구영역세계지리세계지리세계지리정답및해설정답및해설정답및해설-1-01②02③03②04②05④06①07③08⑤09④10①11⑤12⑤13③14⑤15①16①17④18②",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/s_sks_hsj_1FAWB361.pdf",
+      "slot": "2023 고3 11월 csat social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 147236,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:52:53.088Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험사회탐구영역사회탐구영역사회탐구영역세계사세계사세계사정답및해설정답및해설정답및해설101②02④03⑤04④05⑤06①07⑤08④09②10①11⑤12⑤13③14①15④16③17②18④19②20③1이",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/J_inkan_hsj_6KIG941G.pdf",
+      "slot": "2023 고3 11월 csat vocational/human-development solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 147997,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:52:56.011Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험직업탐구직업탐구직업탐구영역영역영역인간발달인간발달인간발달정답및해설정답및해설정답및해설101④02⑤03②04②05①06④07①08⑤09③10②11③12②13④14③15①16③17⑤18⑤19③20",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/J_sjl_hsj_EU5DXQ7W.pdf",
+      "slot": "2023 고3 11월 csat vocational/successful-career-life solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 136931,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:52:59.018Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험직업탐구직업탐구직업탐구영역영역영역성공적인직업생활성공적인직업생활성공적인직업생활정답및해설정답및해설정답및해설101②02⑤03④04④05①06②07②08④09⑤10①11③12⑤13②14①15④16",
+        "examLineInDocument": "2024학년도대학수학능력시험",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/eng_main_hsj_GFX3IXW9.pdf",
+      "slot": "2023 고3 3월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 333365,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:47:21.793Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•영어영역•정답1③2②3①4③5⑤6④7②8②9④10②11⑤12②13⑤14⑤15②16①17③18①19⑤20①21⑤22③23①24①25③26④27④28④29⑤30②31⑤32①33③34①35④36⑤37③38④39③40④",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/kor_main_mun_WER9B839.pdf",
+      "slot": "2023 고3 3월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1478540,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:47:28.681Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "120[1~3]다음글을읽고물음에답하시오상위인지는어떤과업의성취를보장하는자기규제기제를이용할수있는능력을포함한다자기규제기제를이용한다는것은문제해결에대해스스로점검한다든지자신이시도한행위에대해스스로평가하는것등을의미한다이러한자기규제",
+        "examLineInDocument": "2023학년도3월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #19)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/kor_main_hsj_X6S23E16.pdf",
+      "slot": "2023 고3 3월 school_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 324171,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:47:36.422Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•국어영역•국어정답1③2⑤3④4④5②6⑤7④8①9④10①11②12⑤13①14②15③16⑤17②18④19⑤20③21⑤22①23③24③25②26①27③28①29②30⑤31③32④33②34③해설",
+        "examLineInDocument": "2023학년도3월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #20)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/math_main_hsj_A82SS311.pdf",
+      "slot": "2023 고3 3월 school_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 440081,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:47:43.350Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1•수학영역•수학정답1①2④3①4②5⑤6①7③8⑤9②10②11③12④13④14⑤15③16171819202122해설1[출제의도]지수법칙을이용하여지수를계산한다×",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/s_yrnss_hsj_ICVTPY41.pdf",
+      "slot": "2023 고3 3월 school_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 122648,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T06:47:50.498Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1윤리와사상정답1⑤2⑤3⑤4①5③6③7④8①9④10③11④12②13④14④15①16③17②18③19⑤20②해설1[출제의도]공자가강조한삶의태도를파악한다가상편지를쓴사상가는공자이다공자는이기적인욕망을극복하고자신의신분과지위에",
+        "examLineInDocument": null,
+        "visual": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+      },
+      "result": "held_manual_review",
+      "dbStatus": "manual_review",
+      "reason": "1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/eng_main_hsj_A8WUK8UA.pdf",
+      "slot": "2023 고3 6월 kice_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 371572,
+        "pdfPages": 30,
+        "checkedAt": "2026-09-25T06:47:56.943Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가영어영어영어영역영역영역정답및해설정답및해설정답및해설101⑤02②03①04⑤05①06③07①08④09②10③11⑤12②13③14①15⑤16④17②18①19①20④21③22⑤23④24",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/his_main_mun_2W157941.pdf",
+      "slot": "2023 고3 6월 kice_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4339276,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:48:00.401Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "141(가)시대의사회모습으로옳은것은?①서원이건립되었다②고인돌이축조되었다③상평통보가사용되었다④향부곡소가설치되었다⑤팔관회와연등회가개최되었다2(가)국가의문화유산으로옳은것은?[3점]◦16년봄(가)의왕이도읍을사비로옮기고국호를",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #23)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/s_his_hsj_73EL54SQ.pdf",
+      "slot": "2023 고3 6월 kice_mock history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 160611,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:48:08.290Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가한국사영역한국사영역한국사영역한국사한국사한국사정답및해설정답및해설정답및해설101②02③03⑤04③05②06①07④08①09⑤10②11④12⑤13③14①15⑤16③17②18③19④20",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/kor_main_mun_78586DW8.pdf",
+      "slot": "2023 고3 6월 kice_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3590349,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:48:11.366Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1120[1～3]다음글을읽고물음에답하시오선생님의권유나친구의추천자기계발등우리가독서를하게되는동기는다양하다독서동기는‘독서를이끌어내고지속하는힘’으로정의되는데이정의에는독서의시작과지속이라는두측면이포함되어있다이러한독서동기는슈츠가",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #24)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/kor_main_hsj_L65NY8521.pdf",
+      "slot": "2023 고3 6월 kice_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 358431,
+        "pdfPages": 35,
+        "checkedAt": "2026-09-25T06:48:19.614Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가국어국어국어영역영역영역정답및해설정답및해설정답및해설1",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_ear1_hsj_7RL2QG85_2.pdf",
+      "slot": "2023 고3 6월 kice_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 175815,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:48:23.135Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가과학탐구과학탐구과학탐구영역영역영역지구과학1지구과학1지구과학1정답및해설정답및해설정답및해설101②02①03④04⑤05②06②07④08①09②10④11⑤12③13③14④15①16⑤17",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_ear2_hsj_93O83YH9_2.pdf",
+      "slot": "2023 고3 6월 kice_mock science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 169282,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:48:26.166Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가과학탐구과학탐구과학탐구영역영역영역지구과학2지구과학2지구과학2정답및해설정답및해설정답및해설101⑤02②03⑤04④05①06③07⑤08④09①10①11②12④13③14③15①16②17",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_bio2_hsj_167E95W3_2.pdf",
+      "slot": "2023 고3 6월 kice_mock science/life-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 206770,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:48:29.146Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가과학탐구과학탐구과학탐구영역영역영역생명과학2생명과학2생명과학2정답및해설정답및해설정답및해설101⑤02③03④04⑤05①06③07⑤08③09③10⑤11①12④13②14②15①16①17",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_phy2_hsj_18Y87WG71.pdf",
+      "slot": "2023 고3 6월 kice_mock science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 358458,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T06:48:32.112Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가과학탐구과학탐구과학탐구영역영역영역물리학2물리학2물리학2정답및해설정답및해설정답및해설101④02④03①04⑤05②06⑤07①08③09③10②11⑤12③13④14①15⑤16①17③18",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_ch_mun_5HUP7VZ6.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3967436,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:48:35.393Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "7361그림의발음기호중두개를조합하여만들수있는발음에해당하는글자는?[1점]hnǎióng①红②从③菜④年⑤花2밑줄친부분과성조배열이같은것만을<보기>에서고른것은?我感到很高兴!<보기>a作业b超市c希望d艺术①ab②ac③bc④bd⑤",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #25)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_ch_hsj_1B235H32.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 223172,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T06:48:43.330Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역중국어1중국어1중국어1정답및해설정답및해설정답및해설101①02③03④04⑤05②06④07③08①09④10①11②12③13②14",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_fr_hsj_2M5QVK57.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/french-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 192280,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T06:48:46.423Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역프랑스어1프랑스어1프랑스어1정답및해설정답및해설정답및해설101②02④03①04②05①06⑤07④08③09⑤10⑤11②12③13",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_gr_hsj_R8S45JB4_2.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/german-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 199538,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T06:48:49.402Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역독일어1독일어1독일어1정답및해설정답및해설정답및해설1*최종수정일:20230605(월)01①02③03④04③05②06①07①08",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_ja_hsj_W8142RB6.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/japanese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 189426,
+        "pdfPages": 5,
+        "checkedAt": "2026-09-25T06:48:52.372Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역일본어1일본어1일본어1정답및해설정답및해설정답및해설101④02②03①04②05④06①07③08①09⑤10②11③12①13③14",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_ru_hsj_AL6Y4GT3.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/russian-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 151974,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:48:55.347Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역러시아어1러시아어1러시아어1정답및해설정답및해설정답및해설101②02①03②04②05①06⑤07②08④09③10③11②12⑤13",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_sp_hsj_9ZH6BE5G.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/spanish-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 161515,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:48:58.307Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역스페인어1스페인어1스페인어1정답및해설정답및해설정답및해설101④02②03⑤04③05④06③07③08⑤09⑤10③11②12①13",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_vit_mun_9T58U3BR.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/vietnamese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2583232,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:49:01.248Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "15361□에들어갈글자는?[1점]①b②c③m④p⑤t□óng2밑줄친부분과발음이같은것은?[1점]①bơi②chờ③ghế④ngay⑤vàng3□에들어갈글자의성조표기가옳은것은?①a②à③ạ④ã⑤áb□csĩ4빈칸에들어갈말로알맞은것",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #26)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/2nd_vit_hsj_48I1A8VN.pdf",
+      "slot": "2023 고3 6월 kice_mock second_language/vietnamese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 165964,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:49:08.913Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역베트남어1베트남어1베트남어1정답및해설정답및해설정답및해설101①02③03⑤04①05⑤06②07④08③09⑤10②11⑤12④13",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/s_ssnyr_hsj_OWR666DA_1.pdf",
+      "slot": "2023 고3 6월 kice_mock social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 150241,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T06:49:11.889Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험6월모의평가사회탐구영역사회탐구영역사회탐구영역생활과윤리생활과윤리생활과윤리정답및해설정답및해설정답및해설1*최근수정일:2023072801③02①03④04⑤05⑤06④07④08④09⑤10③11②12",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/J_sangup_mun_65M619WK.pdf",
+      "slot": "2023 고3 6월 kice_mock vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1165735,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:49:14.979Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "직업탐구영역3상업경제7241다음대화장면에나타난상업의기능으로가장적절한것은?①정보불일치해소기능②자금불일치해소기능③시간적불일치해소기능④장소적불일치해소기능⑤경제적손실위험해소기능2다음은○○(주)의경영전략회의결과이다이를모두반영",
+        "examLineInDocument": "2024학년도대학수학능력시험6월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #27)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/eng_scr_J88734A4.pdf",
+      "slot": "2023 고3 7월 school_mock english listening_script",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 159587,
+        "pdfPages": 18,
+        "checkedAt": "2026-09-25T06:49:22.483Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "-2023년7월11일실시-2023학년도7월고3전국연합학력평가○영어영역듣기대본",
+        "examLineInDocument": "2023학년도7월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #28)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/eng_main_hsj_AO16PA86.pdf",
+      "slot": "2023 고3 7월 school_mock english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 344776,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:49:29.053Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2023학년도7월전국연합학력평가정답및해설고31536영어영역정답1①2②3⑤4④5③6④7⑤8④9⑤10②11②12①13⑤14④15④16①17③18③19②20④21①22⑤23①24②25④26②27⑤28②29④30④31①32",
+        "examLineInDocument": null,
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/his_main_mun_SF3X56WS.pdf",
+      "slot": "2023 고3 7월 school_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3446007,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:49:32.384Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고3한국사영역1141밑줄친‘이시대’에대한설명으로옳은것은?이것은사유재산이발생하고계급이분화된이시대의대표적유물인비파형동검입니다[○○박물관]유물로보는이시대조회수4만회2023○○①고인돌이축조되었다②팔관회가개최되었다③상평통보가",
+        "examLineInDocument": "2023학년도7월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #29)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/kor_main_mun_ZGJG1D65.pdf",
+      "slot": "2023 고3 7월 school_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4632134,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:49:39.905Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고3국어영역1120[1~3]다음글을읽고물음에답하시오글을쓰는과정에서필자는글의내용을상세하게기술하기도하지만생략하여표현하기도한다따라서독해과정에서독자는글에제시된정보나자신의배경지식을활용하여생략된내용이나주제필자의의도까지도추론하며",
+        "examLineInDocument": "2023학년도7월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #30)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/s_ssnyr_mun_CUDAZF9Y.pdf",
+      "slot": "2023 고3 7월 school_mock social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 725167,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:49:48.208Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "고3사회탐구영역생활과윤리11361(가)(나)윤리학의입장으로가장적절한것은?(가)윤리학은도덕판단에서사용된도덕적용어의의미를분석하여명료화하고도덕적추론의타당성을검증하는것을핵심과제로삼아야한다(나)윤리학은도덕원리를근거로하여현실의",
+        "examLineInDocument": "2023학년도7월고3전국연합학력평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #31)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/his_main_mun_533AA431.pdf",
+      "slot": "2023 고3 9월 kice_mock history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3964500,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:49:55.347Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "141(가)에들어갈유물로가장적절한것은?①②③빗살무늬토기비파형동검임신서기석④⑤당백전삼국유사2다음가상대화에서밑줄친‘담판’이끼친영향으로가장적절한것은?[3점]①후삼국이통일되었다②대가야가병합되었다③한성조약이체결되었다④사비천도",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #32)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/kor_main_mun_Y314T372.pdf",
+      "slot": "2023 고3 9월 kice_mock korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2978672,
+        "pdfPages": 20,
+        "checkedAt": "2026-09-25T06:50:03.446Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "1120[1～3]다음글을읽고물음에답하시오흔히읽기는듣기말하기와달리영유아가글자를깨치고나서야시작된다고생각한다그러나대부분의읽기발달연구에서는그전에도읽기발달이진행된다고본다이연구들에서는읽기행동의특성이나글에대한이해수준등에따라읽기발",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #33)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/kor_main_hsj_CHM3S63I_2.pdf",
+      "slot": "2023 고3 9월 kice_mock korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 429179,
+        "pdfPages": 35,
+        "checkedAt": "2026-09-25T06:50:11.602Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가국어국어국어영역영역영역정답및해설정답및해설정답및해설1*최근수정일:20230908(금)",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/math_main_hsj_VU14OSH9_1.pdf",
+      "slot": "2023 고3 9월 kice_mock math solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 474610,
+        "pdfPages": 28,
+        "checkedAt": "2026-09-25T06:50:15.085Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가수학영역수학영역수학영역정답및풀이정답및풀이정답및풀이1■[공통:수학1수학2]01⑤02③03②04①05⑤06③07④08④09③10③11⑤12①13③14②15④16617241851942",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #34)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/g_ear2_hsj_29Q3WZRA.pdf",
+      "slot": "2023 고3 9월 kice_mock science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 170212,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:50:22.367Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가과학탐구과학탐구과학탐구영역영역영역지구과학2지구과학2지구과학2정답및해설정답및해설정답및해설101③02②03①04④05④06①07⑤08②09②10③11⑤12③13④14③15①16⑤17",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/g_phy1_mun_7B247X68.pdf",
+      "slot": "2023 고3 9월 kice_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 930425,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:50:25.454Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "과학탐구영역3물리학I1321다음은전자기파A와B를사용하는예에대한설명이다전자레인지에사용되는A는음식물속의물분자를운동시키고물분자가주위의분자와충돌하면서음식물을데운다A보다파장이짧은B는전자레인지가작동하는동안내부를비춰작동여부를눈으",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #35)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_ch_hsj_AJ1DRNAA.pdf",
+      "slot": "2023 고3 9월 kice_mock second_language/chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 231185,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T06:50:32.699Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역중국어1중국어1중국어1정답및해설정답및해설정답및해설101①02②03①04⑤05④06①07④08②09③10④11②12⑤13②14",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_han_hsj_38E67O7R.pdf",
+      "slot": "2023 고3 9월 kice_mock second_language/classical-chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 210227,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:50:35.918Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역한문1한문1한문1정답및해설정답및해설정답및해설101⑤02③03①04③05④06①07④08②09④10⑤11③12⑤13①14③15",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_gr_hsj_ZUFECP8B.pdf",
+      "slot": "2023 고3 9월 kice_mock second_language/german-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 177721,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T06:50:38.873Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역독일어1독일어1독일어1정답및해설정답및해설정답및해설101④02①03⑤04②05③06④07①08③09③10④11⑤12①13②14",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_sp_mun_WC4661N3.pdf",
+      "slot": "2023 고3 9월 kice_mock second_language/spanish-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1605963,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T06:50:41.857Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "5361밑줄친낱말과강세의위치가다른것은?[1점]①amarillo②ensalada③felicidad④pasaporte⑤pantalones2세낱말의겹쳐진부분에공통으로들어갈글자는?[1점]①ca②ma③nu④so⑤ta3밑줄친부",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #36)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/2nd_vit_hsj_227KH546.pdf",
+      "slot": "2023 고3 9월 kice_mock second_language/vietnamese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 167261,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:50:49.956Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가제2외국어/한문제2외국어/한문제2외국어/한문영역영역영역베트남어1베트남어1베트남어1정답및해설정답및해설정답및해설101④02③03④04②05③06⑤07①08⑤09②10④11①12③13",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_yrnss_hsj_TE6U6Y6O.pdf",
+      "slot": "2023 고3 9월 kice_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 186748,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:50:52.873Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역윤리와사상윤리와사상윤리와사상정답및해설정답및해설정답및해설101④02①03②04③05②06③07③08③09⑤10⑤11④12⑤13③14②15④16④17",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_hanji_hsj_PB99SA8U.pdf",
+      "slot": "2023 고3 9월 kice_mock social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 154996,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:50:55.808Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역한국지리한국지리한국지리정답및해설정답및해설정답및해설101④02①03②04③05⑤06⑤07②08②09④10①11③12⑤13④14⑤15④16④17②18",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_ssnyr_hsj_23L6N2MZ.pdf",
+      "slot": "2023 고3 9월 kice_mock social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 167117,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T06:50:58.738Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역생활과윤리생활과윤리생활과윤리정답및해설정답및해설정답및해설101④02④03②04⑤05④06①07①08③09③10③11④12⑤13①14⑤15⑤16⑤17",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_bnj_hsj_41MZP9SM.pdf",
+      "slot": "2023 고3 9월 kice_mock social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149361,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:51:01.652Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가사회탐구영역사회탐구영역사회탐구영역정치와법정치와법정치와법정답및해설정답및해설정답및해설101⑤02①03①04②05②06④07③08②09④10⑤11④12④13③14③15③16⑤17②18",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/s_samun_hsj_59749N33_1.pdf",
+      "slot": "2023 고3 9월 kice_mock social/social-culture solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 169523,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T06:51:04.562Z"
+      },
+      "evidence": {
+        "method": "visual",
+        "page1Header": "2024학년도대학수학능력시험９월모의평가사회탐구영역사회탐구영역사회탐구영역사회문화사회문화사회문화정답및해설정답및해설정답및해설1*최근수정일:20230908(금)01③02⑤03④04①05②06⑤07②08①09④10③11③12",
+        "examLineInDocument": null,
+        "visual": "브라우저 PDF 뷰어 1쪽 머리말(및 1쪽 과목 표기)이 CSV 기대값과 일치 (sheets2023 #37)"
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/J_nupgi_hsj_QG7DW3RZ.pdf",
+      "slot": "2023 고3 9월 kice_mock vocational/agriculture-basics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 176090,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:51:11.020Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가직업탐구직업탐구직업탐구영역영역영역농업기초기술농업기초기술농업기초기술정답및해설정답및해설정답및해설101③02②03②04④05⑤06①07④08①09①10③11④12⑤13⑤14⑤15⑤16",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/J_inkan_hsj_5FUW6S44.pdf",
+      "slot": "2023 고3 9월 kice_mock vocational/human-development solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 170470,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:51:14.068Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가직업탐구직업탐구직업탐구영역영역영역인간발달인간발달인간발달정답및해설정답및해설정답및해설101④02⑤03⑤04①05③06②07②08③09③10④11⑤12②13①14②15③16④17③18",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/J_gup_hsj_8OMWX734.pdf",
+      "slot": "2023 고3 9월 kice_mock vocational/industry-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 171175,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T06:51:17.015Z"
+      },
+      "evidence": {
+        "method": "text",
+        "page1Header": "2024학년도대학수학능력시험9월모의평가직업탐구직업탐구직업탐구영역영역영역공업일반공업일반공업일반정답및해설정답및해설정답및해설101①02②03③04④05②06⑤07①08②09③10⑤11④12⑤13④14②15③16⑤17④18",
+        "examLineInDocument": "2024학년도대학수학능력시험9월모의평가",
+        "visual": null
+      },
+      "result": "approved",
+      "dbStatus": "ready"
+    }
+  ]
+}

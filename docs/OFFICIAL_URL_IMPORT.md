@@ -75,4 +75,4 @@ npm run ingest:audit -- --json
 
 ## 현재 입력분
 
-`data/imports/official-urls.csv` 에 검색엔진 색인에서 발견된 EBSi 공식 URL 309행(2023~2025년)이 있습니다. 근거와 누락은 [REAL_DATA_COVERAGE.md](REAL_DATA_COVERAGE.md) 를 보세요.
+`data/imports/official-urls.csv` 에 검색엔진 색인에서 발견된 EBSi 공식 URL 309행(2023~2025년)이 있습니다. 브라우저 검증 도구는 `scripts/official-url-search/verify-browser.mts`(검증) · `contact-sheet.mts`(육안 대조용 캡처 모음) · `approve-admin.mts`(관리자 승인 폼으로 게시)입니다. 근거와 누락은 [REAL_DATA_COVERAGE.md](REAL_DATA_COVERAGE.md) 를 보세요.

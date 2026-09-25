@@ -1,8 +1,64 @@
 # 실제 데이터 coverage (운영자 CSV 입력)
 
-작성: 2026-09-25 · 대상: 2023·2024·2025년 시행 고1·고2·고3 시험 · 상태: **전부 `manual_review` (미게시)**
+작성: 2026-09-25 · 대상: 2023·2024·2025년 시행 고1·고2·고3 시험 · 상태: **288건 게시 (브라우저 검증 후 관리자 승인) · 21건 `manual_review`**
 
-## 방법
+## 승인 결과 (2026-09-25)
+
+| 연도     |  CSV 행 | 브라우저 검증 후 게시 | 보류 (`manual_review`) |
+| -------- | ------: | --------------------: | ---------------------: |
+| 2025     |     100 |                    89 |                     11 |
+| 2024     |     117 |                   111 |                      6 |
+| 2023     |      92 |                    88 |                      4 |
+| **합계** | **309** |               **288** |                 **21** |
+
+- **방법:**
+  1. 각 공식 URL 을 Chromium(`scripts/official-url-search/verify-browser.mts`)으로 열어 HTTP 200 · `application/pdf` · `%PDF` 본문 · 페이지 수를 확인했다.
+  2. 1쪽 머리말 텍스트가 CSV 의 학년도·시험(학평/모평/수능)·학년·월·영역·세부과목·문제/해설과 모두 맞으면 확인으로 본다.
+  3. 머리말이 그림이라 텍스트로 확인할 수 없으면, 브라우저 PDF 뷰어에 렌더링된 1쪽 화면을 사람이 직접 보고 대조했다(`contact-sheet.mts`).
+  4. 확인된 자료만 `/admin/imports` 승인 폼으로 게시했다: 해당 행 선택 → "브라우저 확인" 체크 → [선택 승인 · 게시] (`approve-admin.mts`).
+  5. DB 의 status 를 직접 바꾸지 않았다. 게시된 288건은 모두 `verification_mode=operator_browser`, `exam_files.delivery_type=redirect` 이다.
+- **canary:** 2025 고3 6월 5건을 먼저 승인하고 확인했다.
+  - 공개 시험 페이지의 다운로드 링크가 302 로 공식 URL 을 가리킨다.
+  - 브라우저로 링크를 누르면 EBSi 공식 PDF(200, application/pdf)에 도착한다.
+  - 이후 2025 → 2024 → 2023 순서로 진행했다. 최종적으로 게시 288건 전부 `/api/files/<id>/download` 가 302 로 정확한 공식 URL 을 가리킨다.
+- **근거:** URL 마다 브라우저 결과·1쪽 머리말·문서 안 시험 문구·육안 확인 내용·결과가 `data/imports/verification/<연도>.json` 에 있다.
+
+### 보류 21건과 사유
+
+- 20건은 학평 **정답 및 해설** PDF 이다. 1쪽과 문서 어디에도 시행 연도·월·학년이 적혀 있지 않다(1쪽에 "• 영어 영역 • … 정답" 만 있음). EBSi 경로 날짜 말고는 어느 시험인지 확인할 방법이 없어 승인하지 않았다.
+- 1건은 과목 불일치다. 2024 고1 3월 과학 문제지의 표기는 "탐구 영역(과학)" 이다. 고1 3월은 중학 과정 시험이라 CSV 의 통합과학(`integrated-science`)과 다르다.
+
+| 슬롯                                                         | 파일                          | 사유                                                                                                           |
+| ------------------------------------------------------------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| 2023 고1 3월 school_mock history solution                    | `his_main_hsj_T4Y8ZC3T.pdf`   | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2023 고3 3월 school_mock english solution                    | `eng_main_hsj_GFX3IXW9.pdf`   | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2023 고3 3월 school_mock math solution                       | `math_main_hsj_A82SS311.pdf`  | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2023 고3 3월 school_mock social/ethics-and-thought solution  | `s_yrnss_hsj_ICVTPY41.pdf`    | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2024 고1 3월 school_mock english solution                    | `eng_main_hsj_5OF854ID.pdf`   | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2024 고1 3월 school_mock math solution                       | `math_main_hsj_REEG3C39.pdf`  | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2024 고1 3월 school_mock science/integrated-science question | `gat_main_mun_266Y98DR.pdf`   | 과목 불일치: 문제지 표기 '탐구 영역(과학)' (고1 3월은 중학 과정) — CSV 의 통합과학(integrated-science) 과 다름 |
+| 2024 고2 3월 school_mock english solution                    | `eng_main_hsj_3446KN9J.pdf`   | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2024 고2 3월 school_mock social/ethics-and-thought solution  | `s_yrnss_hsj_98F289CI.pdf`    | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2024 고3 3월 school_mock science/earth-science-1 solution    | `g_ear1_hsj_4N874K3V.pdf`     | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고1 3월 school_mock english solution                    | `eng_main_hsj_W6D54ZP4_1.pdf` | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고1 3월 school_mock history solution                    | `his_main_hsj_461Y98HN.pdf`   | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고1 3월 school_mock math solution                       | `math_main_hsj_3P67AC54.pdf`  | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고2 3월 school_mock english solution                    | `eng_main_hsj_8RKR7M1W.pdf`   | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고2 3월 school_mock science/chemistry-1 solution        | `g_che1_hsj_3Z3EUA27.pdf`     | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고2 3월 school_mock science/earth-science-1 solution    | `g_ear1_hsj_868X54WI.pdf`     | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고2 3월 school_mock science/life-science-1 solution     | `g_bio1_hsj_YS6CK7I6.pdf`     | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고2 3월 school_mock social/ethics-and-thought solution  | `s_yrnss_hsj_1FUMJPZ3.pdf`    | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고3 3월 school_mock english solution                    | `eng_main_hsj_66I8PI22.pdf`   | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고3 3월 school_mock social/economics solution           | `s_eco_hsj_9K76CA5W.pdf`      | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+| 2025 고3 3월 school_mock social/world-history solution       | `s_sks_hsj_97E3796O.pdf`      | 1쪽·문서 전체에 시행 연도·월·학년 표기 없음 (영역·정답만 보임)                                                 |
+
+### 참고
+
+- 2024년 10월 **고2** 제2외국어/한문(중국어Ⅰ·한문Ⅰ·스페인어Ⅰ·일본어Ⅰ)은 문제지에 "2024학년도 10월 고2 전국연합학력평가 … 제2외국어/한문 영역" 이 명시되어 있다. 따라서 게시했다.
+  - 과목 카탈로그는 제2외국어를 고3 전용으로 두고 있다. 카탈로그를 고칠지는 별도 결정이다.
+- 이 샌드박스의 Chromium 은 NSS 인증서 저장소가 비어 있었다. 환경 프록시 CA(`/root/.ccr/ca-bundle.crt` 의 Anthropic CA)를 `certutil` 로 등록해 TLS 검증을 켠 채로 사용했다.
+
+## 수집 방법
 
 - robots.txt 가 막는 페이지(EBSi `.ajax`, KICE/수능 전체)는 요청하지 않았다.
 - 검색엔진이 공개 색인한 결과의 `url` 필드만 기록했다. URL 을 만들거나 고치지 않았다. 모든 URL 은 EBSi 공식 다운로드 호스트 `wdown.ebsi.co.kr` 이다.

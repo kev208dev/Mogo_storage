@@ -1944,6 +1944,150 @@
       "head_content_type": "application/pdf",
       "slot": "2-6 social/social-culture question",
       "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/math_mun_84GC4OM3.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 10월",
+      "search_title": "고1 10월 학평(경기) 수학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 math/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/eng_1_mun_DUBNHSWI.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 10월",
+      "search_title": "고1 10월 학평(경기) 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 english/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/s_soc_mun_B2LWS32Q_1.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 10월",
+      "search_title": "고1 10월 학평(경기) 통합사회",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 social/integrated-social question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/g_sci_mun_E55AW383.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 10월",
+      "search_title": "고1 10월 학평(경기) 통합과학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-10 science/integrated-science question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/s_soc_mun_D21CIK67_1.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 9월",
+      "search_title": "고1 9월 학평(인천) 통합사회",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 social/integrated-social question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/s_soc_hsj_81697BTR_1.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 9월",
+      "search_title": "고1 9월 학평(인천) 통합사회",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 social/integrated-social solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/g_sci_hsj_8P7RA2O4_1.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 9월",
+      "search_title": "고1 9월 학평(인천) 통합과학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-9 science/integrated-science solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_1_mun_DMO2Z7PD.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 6월",
+      "search_title": "고1 6월 학평(부산) 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 english/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/s_soc_hsj_R9XFK188.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 6월",
+      "search_title": "고1 6월 학평(부산) 통합사회",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 social/integrated-social solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/g_sci_mun_K8H97769.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 6월",
+      "search_title": "고1 6월 학평(부산) 통합과학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 science/integrated-science question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/g_sci_hsj_2OC55L9Z.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 6월",
+      "search_title": "고1 6월 학평(부산) 통합과학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-6 science/integrated-science solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_mun_WH6N75BN.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 3월",
+      "search_title": "고1 3월 학평(서울) 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 english/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/s_soc_mun_853LV882.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 3월",
+      "search_title": "고1 3월 학평(서울) 통합사회",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 social/integrated-social question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/s_soc_hsj_F8FAU198.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 3월",
+      "search_title": "고1 3월 학평(서울) 통합사회",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 social/integrated-social solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/g_sci_mun_NA5L3D8R.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 3월",
+      "search_title": "고1 3월 학평(서울) 통합과학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 science/integrated-science question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/g_sci_hsj_M8L14DEN.pdf",
+      "search_query": "EBSi 기출문제 > 고1 > 2025 > 3월",
+      "search_title": "고1 3월 학평(서울) 통합과학",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "1-3 science/integrated-science solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
     }
   ],
   "held": [

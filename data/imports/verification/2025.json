@@ -4224,6 +4224,310 @@
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/math_mun_84GC4OM3.pdf",
+      "slot": "2025 고1 10월 school_mock math/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 184829,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 10월 전국연합학력평가, 수학, 문제지이 명시됨",
+        "sha256": "f0a9e73d49df0a77ce5c1aad3fd768c29af4595a0796f83321af74e1b67f962c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/eng_1_mun_DUBNHSWI.pdf",
+      "slot": "2025 고1 10월 school_mock english/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 604732,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 10월 전국연합학력평가, 영어, 문제지이 명시됨",
+        "sha256": "72515c10149c40591a9f679289fd563f49b60735e44d69332f02058b27c84328"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/s_soc_mun_B2LWS32Q_1.pdf",
+      "slot": "2025 고1 10월 school_mock social/integrated-social question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1859501,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 10월 전국연합학력평가, 통합사회, 문제지이 명시됨",
+        "sha256": "3945a738e480b8bbae901f3216b016568ab9471c28606f70ad7ca2220b2689a4"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/g_sci_mun_E55AW383.pdf",
+      "slot": "2025 고1 10월 school_mock science/integrated-science question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 850668,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 10월 전국연합학력평가, 통합과학, 문제지이 명시됨",
+        "sha256": "978007ad693bf2d0969bee02fd25e8ff5dc43b36829b17398025118dd1bdba8d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/s_soc_mun_D21CIK67_1.pdf",
+      "slot": "2025 고1 9월 school_mock social/integrated-social question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 852485,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 9월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 9월 전국연합학력평가, 통합사회, 문제지이 명시됨",
+        "sha256": "7555a781e62d7b45030559cf1b04c491d0bce9fed28c9aec1267e456262feaaf"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/s_soc_hsj_81697BTR_1.pdf",
+      "slot": "2025 고1 9월 school_mock social/integrated-social solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 175771,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 9월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 9월 전국연합학력평가, 통합사회, 정답 및 해설이 명시됨",
+        "sha256": "61876adaf59d2e78bb8fcdaf2442a603c9e4d386b7986fe199296faf48d98815"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/g_sci_hsj_8P7RA2O4_1.pdf",
+      "slot": "2025 고1 9월 school_mock science/integrated-science solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 190758,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 9월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 9월 전국연합학력평가, 통합과학, 정답 및 해설이 명시됨",
+        "sha256": "e3af5c785ef587a3c39663aabc662841a5df3b671e720a5a68930488f413f3df"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_1_mun_DMO2Z7PD.pdf",
+      "slot": "2025 고1 6월 school_mock english/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 895473,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 6월 전국연합학력평가, 영어, 문제지이 명시됨",
+        "sha256": "a54bc0f378f1aa43d4a30e6bc6229f0f2157edc2b9e8393519cb7c52b42efce6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/s_soc_hsj_R9XFK188.pdf",
+      "slot": "2025 고1 6월 school_mock social/integrated-social solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 215066,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 6월 전국연합학력평가, 통합사회, 정답 및 해설이 명시됨",
+        "sha256": "654fa56e89597dbe2e7a4bfa7a69b72ee7ededec4b71d2cfb9daf685fa92cc7f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/g_sci_mun_K8H97769.pdf",
+      "slot": "2025 고1 6월 school_mock science/integrated-science question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1655648,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 6월 전국연합학력평가, 통합과학, 문제지이 명시됨",
+        "sha256": "37270f81d96fe2713e8d4e6a065d0eb350559b87f74d173eb62426618d2ac84c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/g_sci_hsj_2OC55L9Z.pdf",
+      "slot": "2025 고1 6월 school_mock science/integrated-science solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 152291,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 6월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 6월 전국연합학력평가, 통합과학, 정답 및 해설이 명시됨",
+        "sha256": "44ba872a6fa2740b166e962dca1c1f1e2665353379109968dd79921dfaa10579"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/eng_mun_WH6N75BN.pdf",
+      "slot": "2025 고1 3월 school_mock english/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 521856,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 3월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 3월 전국연합학력평가, 영어, 문제지이 명시됨",
+        "sha256": "fcf401d1f5ce07e535ad863aca3ab966254fbcf1a60b2ea3b673e5e474503fb8"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/s_soc_mun_853LV882.pdf",
+      "slot": "2025 고1 3월 school_mock social/integrated-social question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1141139,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 3월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 3월 전국연합학력평가, 통합사회, 문제지이 명시됨",
+        "sha256": "1b7c30d4ddc4ad6cd1fe8cf70b1393c773bfa762b06a3a0ae34993b46c40f710"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/s_soc_hsj_F8FAU198.pdf",
+      "slot": "2025 고1 3월 school_mock social/integrated-social solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 158466,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 3월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 3월 전국연합학력평가, 통합사회, 정답 및 해설이 명시됨",
+        "sha256": "3ad04ed0af78f8512e84912745d8d86dbf8ed67dbf380c82aad00244545fbb60"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/g_sci_mun_NA5L3D8R.pdf",
+      "slot": "2025 고1 3월 school_mock science/integrated-science question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1252953,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 3월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 3월 전국연합학력평가, 통합과학, 문제지이 명시됨",
+        "sha256": "ab89c7c6d14dc0b16c5a1acc1a83f99d1fce0ea72082e5c9a422b57d510adc35"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/g_sci_hsj_M8L14DEN.pdf",
+      "slot": "2025 고1 3월 school_mock science/integrated-science solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 154837,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:00:15.926Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 3월 고1 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고1, 2025학년도 3월 전국연합학력평가, 통합과학, 정답 및 해설이 명시됨",
+        "sha256": "2cc1b3ff4c420e72aea0b701f64f7a7d1af1e676ec9ed8a610069701b5be38ce"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

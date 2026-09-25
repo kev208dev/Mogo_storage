@@ -12489,6 +12489,500 @@
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_nupgi_mun_NXBY6713.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/agriculture-basics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 704035,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 농업 기초 기술, 문제지이 명시됨",
+        "sha256": "e60e76850169e6c60b706b2b4d975225b9d151a5840949ba4511ae4e2a83879a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_nupgi_hsj_81AU6NRW.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/agriculture-basics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 176237,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 농업 기초 기술, 정답 및 해설이 명시됨",
+        "sha256": "ed3e910b3e4517e8e2fea61366a8ccc07311aec15dd4c81be4f280e5aa375ca3"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_gup_mun_3RM5VEKD.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/industry-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 752884,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 공업 일반, 문제지이 명시됨",
+        "sha256": "a976e38d7fb55b8e7896ae16ee72d760263c05c5a50f697f4be90e3aeb9fddb9"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_gup_hsj_Q9S9UPUV.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/industry-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 163174,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 공업 일반, 정답 및 해설이 명시됨",
+        "sha256": "cad6860ef02abcccc49ebe6fcfef9e98c7e1590485e4b3fb2c4d9cf95feb1016"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_sangup_mun_4W61U4MX.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 677872,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 상업 경제, 문제지이 명시됨",
+        "sha256": "73200b5f235891d77393c256b56ff035c412d8aa9a75f5f8070fea561f0bcd04"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_sangup_hsj_7XAD113P.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/commercial-economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 147548,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 상업 경제, 정답 및 해설이 명시됨",
+        "sha256": "76b3a3a9d521c8d338b4c6b81cb3c324df11a3a081e943ad2ba9fdc5598faa39"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_susan_mun_3WW14L3A.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/fisheries-and-shipping question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 526129,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 수산·해운 산업 기초, 문제지이 명시됨",
+        "sha256": "8fbab87496d65416bf16ef2d571e542b041fc0df4c4f30dc7c9b0e9926f5d48b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_susan_hsj_ONMX6UW7.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/fisheries-and-shipping solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 179001,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 수산·해운 산업 기초, 정답 및 해설이 명시됨",
+        "sha256": "74122573c704e2a2372be5e9bcbd0a9db9d5d74ebb95b0bb9c51f54cd96fae99"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_inkan_mun_23V18235.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/human-development question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 570575,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 인간 발달, 문제지이 명시됨",
+        "sha256": "e0f27a2b058acaca31765dd428ae6e4b1d79a1f8476037afb5e3cff89701f658"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_inkan_hsj_9L1K1274.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/human-development solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 162922,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 인간 발달, 정답 및 해설이 명시됨",
+        "sha256": "11106c76a54fdbbda1d6fa7782f5b987f8d98dd82929b57666ca1ca026e06e1f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_sjl_mun_YW1VQI1K.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/successful-career-life question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 641850,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 성공적인 직업 생활, 문제지이 명시됨",
+        "sha256": "5cfababac774ca394d98628f3c2b92540d92e8692a1a6a6073bff9adb51e1d08"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/J_sjl_hsj_VGNKNL29.pdf",
+      "slot": "2025 고2 10월 school_mock vocational/successful-career-life solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 153895,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 성공적인 직업 생활, 정답 및 해설이 명시됨",
+        "sha256": "f5cbf5d5435d532311004989c27f4d1c812cb5487804017e9b5ab52c9967d523"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_gr_mun_K276AS82.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/german-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 657765,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 독일어Ⅰ, 문제지이 명시됨",
+        "sha256": "a71ff346b93c17cba5970d35cd0e7d122808bb21cd615061a0804c6d7352fe54"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_gr_hsj_O2OAS87K.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/german-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 194995,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 독일어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "cfb421413f96c0e4e2804784a2e74a12a4eede938655ce48015a6f2432f9a434"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_fr_mun_124J937M.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/french-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 544223,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 프랑스어Ⅰ, 문제지이 명시됨",
+        "sha256": "f03abb8ba1fc3f1039d2e6b37c9efc06950ace7d95697f96590d8ebe2649500c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_fr_hsj_N4C958M7.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/french-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 187296,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 프랑스어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "0ccb279a31e6c6164bbd9228387e3e020040575d53e6f7bed050b0ffab1bd4c1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_sp_mun_YL3D5F88.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/spanish-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 674009,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 스페인어Ⅰ, 문제지이 명시됨",
+        "sha256": "b668f0ed33ff17d558aec67c666822c9709968c13ed038aa9379bb1524fc1328"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_sp_hsj_M1HH8333.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/spanish-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 197816,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 스페인어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "997b4ebcf340dec696d1a7f5a71f7a2dc4db7b3be48abc99d9089e384751daca"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_ch_mun_6127OPVA.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1057314,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 중국어Ⅰ, 문제지이 명시됨",
+        "sha256": "1bd8def6e45623ebf156f415ee8213d80ceab0dbcd14db1d347a8ff9a3347544"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_ch_hsj_YIH5G6D8.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 203012,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 중국어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "098b507e508573f1ffcd532534d42db71e4c8e4e7f1acede280c6f7b892eb8fb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_ja_mun_I47LB75K.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/japanese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1054098,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 일본어Ⅰ, 문제지이 명시됨",
+        "sha256": "19f382d0ecd1819205a91893b4bf798647f0097a6e6822d2527c9c0bf6784e4d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_ja_hsj_DJABL58A.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/japanese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 198464,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 일본어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "e2b21a788783bd6f7996ca5ebce74a07fa8b74613c677047eddc261a5989e76d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_ru_mun_886811Y4.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/russian-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1141918,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 러시아어Ⅰ, 문제지이 명시됨",
+        "sha256": "b693a30593b964b527a48bf3eb67bb66c3f4ea3233f65b995dadc0af15536c57"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_ru_hsj_217R6V7I.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/russian-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 180443,
+        "pdfPages": 2,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 러시아어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "a2570edbf30bed92ac82c0c0b5b037a425a90725040f9d78610370931bc3dbf5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_han_mun_885ASY31.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/classical-chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1015437,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 한문Ⅰ, 문제지이 명시됨",
+        "sha256": "836133dd58583d4bb78999db9380d4aa7101d5a5e87690d5eb078c9177df6747"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/2nd_han_hsj_D32PGY26.pdf",
+      "slot": "2025 고2 10월 school_mock second_language/classical-chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 177883,
+        "pdfPages": 1,
+        "checkedAt": "2026-09-25T16:17:50.703Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2025학년도 10월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽에 고2, 2025학년도 10월 전국연합학력평가, 한문Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "8663748f1e5603a645ee1618a69a6c3709dfda3205f129ab7558a43b9fcc563c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

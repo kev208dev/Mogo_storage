@@ -58,8 +58,9 @@ describe("시험 체제 (regime)", () => {
     expect(coursesForExam("science", exam(2027, 3)).map((c) => c.code)).toEqual([
       "integrated-science",
     ]);
-    expect(coursesForExam("second_language", exam(2025, 2))).toEqual([]);
+    expect(coursesForExam("second_language", exam(2025, 2))).toHaveLength(9);
     expect(coursesForExam("second_language", exam(2025, 3))).toHaveLength(9);
+    expect(coursesForExam("vocational", exam(2025, 2))).toHaveLength(6);
   });
 });
 
@@ -123,14 +124,14 @@ describe("직업탐구 / 제2외국어·한문", () => {
     });
   });
 
-  it("고2 시험에서 발견된 제2외국어 세부과목은 체제 검증으로 검토 대상", () => {
+  it("공식 기출에서 확인된 고2·고3 제2외국어 세부과목을 확정한다", () => {
     const r = classifyArtifact({
       subjectLabel: "제2외국어",
       linkLabel: "일본어Ⅰ 문제",
       url: "https://wdown.ebsi.co.kr/x.pdf",
     });
     if (!r.ok) throw new Error("classify failed");
-    expect(finalCourseResolution(r.artifact, "ebsi", [], exam(2025, 2)).status).toBe("ambiguous");
+    expect(finalCourseResolution(r.artifact, "ebsi", [], exam(2025, 2)).status).toBe("resolved");
     expect(finalCourseResolution(r.artifact, "ebsi", [], exam(2025, 3)).status).toBe("resolved");
   });
 });

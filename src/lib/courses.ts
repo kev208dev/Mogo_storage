@@ -23,8 +23,8 @@ export interface CourseDefinition {
 
 /** 2015 개정 교육과정 수능 선택과목 (2022~2027학년도 체제), 고2·고3 시험 */
 const R2022_ELECTIVE: CourseDefinition["regimes"] = [{ regime: "csat_2022", grades: [2, 3] }];
-/** 직업탐구·제2외국어/한문: 고3 시험에만 */
-const R2022_G3: CourseDefinition["regimes"] = [{ regime: "csat_2022", grades: [3] }];
+/** 직업탐구·제2외국어/한문: 공식 EBSi 기출 목록에서 확인된 고2·고3 시험 */
+const R2022_UPPER: CourseDefinition["regimes"] = [{ regime: "csat_2022", grades: [2, 3] }];
 
 export const COURSE_CATALOG: CourseDefinition[] = [
   // ── 국어 선택 ──
@@ -247,7 +247,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     abbreviations: ["지2"],
     regimes: R2022_ELECTIVE,
   },
-  // ── 직업탐구 (2022~2027학년도 체제, 고3) ──
+  // ── 직업탐구 (2022~2027학년도 체제, 고2·고3) ──
   {
     code: "agriculture-basics",
     name: "농업 기초 기술",
@@ -255,7 +255,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 10,
     aliases: ["농업기초기술"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "industry-general",
@@ -264,7 +264,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 20,
     aliases: ["공업일반"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "commercial-economics",
@@ -273,7 +273,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 30,
     aliases: ["상업경제"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "fisheries-and-shipping",
@@ -282,7 +282,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 40,
     aliases: ["수산해운산업기초"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "human-development",
@@ -291,7 +291,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 50,
     aliases: ["인간발달"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "successful-career-life",
@@ -301,9 +301,9 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     aliases: ["성공적인직업생활"],
     abbreviations: [],
     // 2028 체제의 직업탐구 구성은 확정 자료(실제 시험)로 확인되지 않아 포함하지 않는다 → 발견 시 manual_review
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
-  // ── 제2외국어/한문 (2022~2027학년도 체제, 고3) ──
+  // ── 제2외국어/한문 (2022~2027학년도 체제, 고2·고3) ──
   ...(
     [
       ["german-1", "독일어 I", "독일어1"],
@@ -323,7 +323,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: (i + 1) * 10,
     aliases: [alias],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   })),
 ];
 

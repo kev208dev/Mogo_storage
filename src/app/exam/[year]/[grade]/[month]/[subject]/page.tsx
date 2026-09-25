@@ -7,6 +7,7 @@ import { buildExamMetadata, upcomingDate } from "@/lib/exam-metadata";
 import {
   examPath,
   gradeSegment,
+  legacySubjectSegmentRedirect,
   monthSegment,
   parseExamParams,
   parseSubjectSegment,
@@ -54,6 +55,9 @@ export default async function ExamSubjectPage({
   params,
 }: PageProps<"/exam/[year]/[grade]/[month]/[subject]">) {
   const p = await params;
+  const legacy = legacySubjectSegmentRedirect(p.subject);
+  // DB enum 표기(second_language)는 URL 이 아니다 → canonical segment(second-language)로 영구 이동
+  if (legacy) permanentRedirect(`/exam/${p.year}/${p.grade}/${p.month}/${legacy}`);
   const subject = parseSubjectSegment(p.subject);
   if (!subject) notFound();
   const key = resolveExamKey(p, subject);

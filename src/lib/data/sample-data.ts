@@ -11,6 +11,7 @@
 import {
   GRADES,
   CORE_SUBJECTS,
+  SUBJECT_SEGMENTS,
   type ExamType,
   type FileType,
   type Grade,
@@ -172,7 +173,8 @@ function makeFile(
 ): ExamFile {
   const base = `exams/${exam.year}/high${exam.grade}/${monthSegment(exam.month)}/${subject}${courseCode ? `/${courseCode}` : ""}`;
   return {
-    id: `file_${exam.id.replace("exam_", "")}_${subject}${courseCode ? `_${courseCode.replace(/-/g, "_")}` : ""}_${type}`,
+    // id 는 다운로드 URL(/api/files/{id}/download)에 노출되므로 DB enum 대신 URL segment 를 쓴다
+    id: `file_${exam.id.replace("exam_", "")}_${SUBJECT_SEGMENTS[subject]}${courseCode ? `_${courseCode.replace(/-/g, "_")}` : ""}_${type}`,
     examId: exam.id,
     subject,
     courseId: courseCode,

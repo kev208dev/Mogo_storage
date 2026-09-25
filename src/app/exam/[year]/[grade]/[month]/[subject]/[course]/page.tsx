@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ExamSubjectView } from "@/components/exam/ExamSubjectView";
 import { isCourseCode } from "@/lib/courses";
 import { getExam, getExamSubjects, getRepository, getSubjectDetail } from "@/lib/data";
 import { buildExamMetadata, upcomingDate } from "@/lib/exam-metadata";
 import {
   gradeSegment,
+  legacySubjectSegmentRedirect,
   monthSegment,
   parseExamParams,
   parseSubjectSegment,
@@ -46,6 +47,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ExamCoursePage({ params }: Props) {
   const p = await params;
+  const legacy = legacySubjectSegmentRedirect(p.subject);
+  // DB enum 표기(second_language)는 URL 이 아니다 → /second-language/<course> 로 영구 이동
+  if (legacy && isCourseCode(p.course))
+    permanentRedirect(`/exam/${p.year}/${p.grade}/${p.month}/${legacy}/${p.course}`);
   const subject = parseSubjectSegment(p.subject);
   if (!subject || !isCourseCode(p.course)) notFound();
   const key = resolveExamKey(p);

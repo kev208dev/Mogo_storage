@@ -37,6 +37,35 @@ test.describe("고3 선택과목 · 제2외국어 · 검색 · 영어 듣기", (
     expect(res.status()).toBe(302);
   });
 
+  test("URL 은 /second-language/japanese-1 — DB enum(second_language) 은 어떤 링크에도 없고, enum 주소는 308", async ({
+    page,
+    request,
+  }) => {
+    for (const path of [
+      "/exam/2025/high3/07",
+      "/exam/2025/high3/07/second-language",
+      "/exam/2025/high3/07/second-language/japanese-1",
+    ]) {
+      await page.goto(path);
+      const hrefs = await page
+        .locator("a[href]")
+        .evaluateAll((els) => els.map((e) => e.getAttribute("href") ?? ""));
+      expect(hrefs.filter((h) => h.includes("second_language"))).toEqual([]);
+      const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
+      expect(canonical ?? "").not.toContain("second_language");
+    }
+    const course = await request.get("/exam/2025/high3/07/second_language/japanese-1", {
+      maxRedirects: 0,
+    });
+    expect(course.status()).toBe(308);
+    expect(course.headers().location).toMatch(
+      /\/exam\/2025\/high3\/07\/second-language\/japanese-1$/,
+    );
+    const area = await request.get("/exam/2025/high3/07/second_language", { maxRedirects: 0 });
+    expect(area.status()).toBe(308);
+    expect(area.headers().location).toMatch(/\/second-language$/);
+  });
+
   test("과목 탭은 시험에 실제로 있는 영역만 (다른 시험에는 제2외국어 탭 없음)", async ({
     page,
   }) => {

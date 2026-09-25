@@ -82,6 +82,16 @@ export function subjectSegment(subject: Subject): string {
   return SUBJECT_SEGMENTS[subject];
 }
 
+/**
+ * enum 표기로 들어온 잘못된 segment ("second_language") → canonical segment ("second-language").
+ * canonical 과 같거나 영역이 아니면 null. route 에서 308 redirect 에 쓴다.
+ */
+export function legacySubjectSegmentRedirect(segment: string): string | null {
+  if (!isSubject(segment)) return null;
+  const canonical = subjectSegment(segment);
+  return canonical === segment ? null : canonical;
+}
+
 /** URL segment → 영역 ("second-language" → second_language). enum 표기("second_language")는 받지 않는다 */
 export function parseSubjectSegment(segment: string): Subject | null {
   return SUBJECTS.find((s) => SUBJECT_SEGMENTS[s] === segment) ?? null;

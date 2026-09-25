@@ -6941,6 +6941,2096 @@
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korB_1_mun_1VK7ZJ83.pdf",
+      "slot": "2025 고3 9월 kice_mock korean/language-and-media question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3877974,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 언어와 매체, 문제지이 명시됨",
+        "sha256": "cb6857af1a7ee6f85ae12c90ff99f4a9ad90d4ba21f23a56e46123b9f80d2515"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korB_1_hsj_SVCWW4XL_3.pdf",
+      "slot": "2025 고3 9월 kice_mock korean/language-and-media solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 295903,
+        "pdfPages": 28,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 언어와 매체, 정답 및 해설이 명시됨",
+        "sha256": "870651266d930543e2af4c2a448f5559e76714cc88e4cbfc44470444ccf31035"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korA_1_mun_PKG5QYBR.pdf",
+      "slot": "2025 고3 9월 kice_mock korean/speech-and-writing question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1352267,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 화법과 작문, 문제지이 명시됨",
+        "sha256": "1b600adbe3a7d93ce7d337148ae2b154127792b8d7c497950fa5d267f96164b4"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korA_1_hsj_K962J13R_3.pdf",
+      "slot": "2025 고3 9월 kice_mock korean/speech-and-writing solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 295564,
+        "pdfPages": 29,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 화법과 작문, 정답 및 해설이 명시됨",
+        "sha256": "0482dcc48584f2ce4eb6ce03605ab66ff8ae8b0229b1e7d0e7adc634f9679718"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/mathC_1_hsj_98YI7A3R_1.pdf",
+      "slot": "2025 고3 9월 kice_mock math/geometry solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 420822,
+        "pdfPages": 19,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 기하, 정답 및 해설이 명시됨",
+        "sha256": "221e7a6630b52b5cc4501f4d52185f810b3def2d454949062fd4615e6dc4310c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/mathA_1_hsj_88Z6CWK1_1.pdf",
+      "slot": "2025 고3 9월 kice_mock math/probability-and-statistics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 347747,
+        "pdfPages": 17,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 확률과 통계, 정답 및 해설이 명시됨",
+        "sha256": "957cdf225aaec2e85fe6747080957054dfaff1b526d92ebb64935bb876869da6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/mathB_1_hsj_2IX77NAG_1.pdf",
+      "slot": "2025 고3 9월 kice_mock math/calculus solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 357728,
+        "pdfPages": 19,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 미적분, 정답 및 해설이 명시됨",
+        "sha256": "8a1c7c3783eca1c81761ec2ea9a8ce88c4dad071a830242d0fde20008c33b665"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/eng_1_mun_5Y1AF5I8.pdf",
+      "slot": "2025 고3 9월 kice_mock english/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1335041,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 영어, 문제지이 명시됨",
+        "sha256": "4fdb1e11fc03a3dcb2f9798c0503652264548065583bd2e931438964334b8bf3"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/eng_1_hsj_1P59S4P5.pdf",
+      "slot": "2025 고3 9월 kice_mock english/- solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 284854,
+        "pdfPages": 30,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 영어, 정답 및 해설이 명시됨",
+        "sha256": "ad93da03dc9552769d1730c7e590d7a0f3e42473352e1af88bbe883e2faae198"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_his_1_mun_YWL8H37Z.pdf",
+      "slot": "2025 고3 9월 kice_mock history/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4171772,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 한국사, 문제지이 명시됨",
+        "sha256": "67600685ef1fcdfd6ccfdcba1c4491266f0c676df4ad17737054cc2e398ddd6a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_ssnyr_mun_6M5D497U.pdf",
+      "slot": "2025 고3 9월 kice_mock social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1298789,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 생활과윤리, 문제지이 명시됨",
+        "sha256": "4db990385991f744f01e059dba259206dd68e51ca89fc9864cdd51e1fe6c0878"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_yrnss_mun_ZQB7B812.pdf",
+      "slot": "2025 고3 9월 kice_mock social/ethics-and-thought question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1485865,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 윤리와사상, 문제지이 명시됨",
+        "sha256": "03f78faef00084d02983905313dd7eb5bb2841f94168253572e59860579b323b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_hanji_mun_R689IVA1.pdf",
+      "slot": "2025 고3 9월 kice_mock social/korean-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3644395,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 한국지리, 문제지이 명시됨",
+        "sha256": "3c36d1234a7ddceb8d731068d68446afc63f2a487c1fd5d45dc80770c4086472"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_easta_mun_85448J66.pdf",
+      "slot": "2025 고3 9월 kice_mock social/east-asian-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3881039,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 동아시아사, 문제지이 명시됨",
+        "sha256": "b6b447da692edfcbeca681e7bb5450e830cef75e82c9e5303804f2b4dc8755db"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_sks_mun_MNR7O9AO.pdf",
+      "slot": "2025 고3 9월 kice_mock social/world-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3960537,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 세계사, 문제지이 명시됨",
+        "sha256": "5b9929da053a4cfac009e66c0a6321836618dc152e0edf056e21b80c72ad71ee"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_bnj_hsj_L7A6EQUA.pdf",
+      "slot": "2025 고3 9월 kice_mock social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 126101,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 정치와 법, 정답 및 해설이 명시됨",
+        "sha256": "1b55d5f71db08309fbe24386cb096b382b05df3b3f1aaa814078898636e4f1cc"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_eco_mun_672FY93E.pdf",
+      "slot": "2025 고3 9월 kice_mock social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1246614,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 경제, 문제지이 명시됨",
+        "sha256": "82d1ea58e00995c0a02740c1429fe5e52c17e3e17b42bb24c3a791fa8f4d9fcb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_eco_hsj_9PG759V9.pdf",
+      "slot": "2025 고3 9월 kice_mock social/economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 167808,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 경제, 정답 및 해설이 명시됨",
+        "sha256": "c2162f6e0d23b578a75affe35644b87e68345ebd12a978340e065144496d2523"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_phy1_mun_48Q711X5.pdf",
+      "slot": "2025 고3 9월 kice_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2496803,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 물리학Ⅰ, 문제지이 명시됨",
+        "sha256": "61197f1bcc720aef13abd602f71a006d191ac5f48af6574cd43a43962c8485a6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_phy1_hsj_XKAJ921Y.pdf",
+      "slot": "2025 고3 9월 kice_mock science/physics-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 280428,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 물리학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "42b9e06850d3f598655d53e2fb273af46f4b2237f685dd3927cd970cfe8f1f06"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_phy2_mun_313Y8P6W.pdf",
+      "slot": "2025 고3 9월 kice_mock science/physics-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1400384,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 물리학Ⅱ, 문제지이 명시됨",
+        "sha256": "e765c9f99dcc2d0787d3e733a40ed30aacd81c24a46bfd3aada92c49e74d42e0"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_phy2_hsj_9RI67Y3N.pdf",
+      "slot": "2025 고3 9월 kice_mock science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 368653,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 물리학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "7c719a542f6426eb6002d509129161c9a0fbfb6212443c63949940823129faa5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_che1_mun_7TMP9829.pdf",
+      "slot": "2025 고3 9월 kice_mock science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 863368,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 화학Ⅰ, 문제지이 명시됨",
+        "sha256": "659ab4ea01c81256fd03606ced640097ffd56348437b940d4b1ab5e1fb08c21f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_che1_hsj_3HY72F23.pdf",
+      "slot": "2025 고3 9월 kice_mock science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 154552,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 화학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "02d511638bf78d1fee0a606fa34aab08298d3679dd95e7f547ef3a5fa2655321"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_che2_mun_7RS63JH5.pdf",
+      "slot": "2025 고3 9월 kice_mock science/chemistry-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 915777,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 화학Ⅱ, 문제지이 명시됨",
+        "sha256": "e0e7812f20ca2bbac9aeec3010c0b93a95d9edaa40eda226f4489eb8fec79609"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_che2_hsj_O14YF7MD.pdf",
+      "slot": "2025 고3 9월 kice_mock science/chemistry-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 226351,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 화학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "4cbc415ed90456eda51b868d402f12fe0c6a56795e627dd7c7b497394fee218f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_bio1_mun_114SW4GA.pdf",
+      "slot": "2025 고3 9월 kice_mock science/life-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 953974,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 생명과학Ⅰ, 문제지이 명시됨",
+        "sha256": "8c6edb1e4f704136e4c32ece89d72240ade9281d6556f6d40237e10a0b9e4ebd"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_bio1_hsj_MK3D3UQ7_1.pdf",
+      "slot": "2025 고3 9월 kice_mock science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 328378,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 생명과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "0413ee097f1d3693d52b62947f2de700cf1788167a23a6616800777c3af9f1c4"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_bio2_mun_NK7MAGR4.pdf",
+      "slot": "2025 고3 9월 kice_mock science/life-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1046745,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 생명과학Ⅱ, 문제지이 명시됨",
+        "sha256": "6911e470329ffbfa2b7d2643696b600d511224803772aa0bdfe2330b9f8f6c5f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_bio2_hsj_5B255X86.pdf",
+      "slot": "2025 고3 9월 kice_mock science/life-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 232474,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 생명과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "8dd13c7ecede04ebaa61d783b35ef2a0e7276642cddb25f3b483aee23e01233b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_ear1_mun_D869799V.pdf",
+      "slot": "2025 고3 9월 kice_mock science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2944629,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 지구과학Ⅰ, 문제지이 명시됨",
+        "sha256": "6c09b48386fdf378776cffe9ee1a5744787d17d2ac49e13286ac9695543ef5f8"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_ear1_hsj_39IHFIJF.pdf",
+      "slot": "2025 고3 9월 kice_mock science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 156515,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 지구과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "35fb9ed1b2199201508e1b8319c3b1607fc6f7d80bf343ca26517e18f98e5362"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_ear2_mun_8VY74M73.pdf",
+      "slot": "2025 고3 9월 kice_mock science/earth-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3207157,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 지구과학Ⅱ, 문제지이 명시됨",
+        "sha256": "a5d23b91ddd19397b0d68abd702786e41c02fab1f995ffd302896a11f30bbad1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_ear2_hsj_C56DMV22.pdf",
+      "slot": "2025 고3 9월 kice_mock science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 148996,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 지구과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "b22a0eb2bfb4c1e2e51b8c5e16cf0b91b0a433917292dae497fd249f059aa40f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_nupgi_hsj_882S683O.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/agriculture-basics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 158141,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 농업 기초 기술, 정답 및 해설이 명시됨",
+        "sha256": "7cdb0e03741d292d6ee88322738b806f987f6a6d626787eeea10b54f1109e7c1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_gup_mun_2Z3Y7D9Y.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/industry-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2340513,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 공업 일반, 문제지이 명시됨",
+        "sha256": "524658b117f6d99175c79d9867ffc4e4f6a397af390c5ad4e84b7b34458a9068"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_sangup_mun_P25D6I12.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1771637,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 상업 경제, 문제지이 명시됨",
+        "sha256": "4b605559a87a70ef89ef655ee2222f2e1672c23b999c42f44295bf120fd1c62c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_sangup_hsj_G33Z2A6O.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/commercial-economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 171347,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 상업 경제, 정답 및 해설이 명시됨",
+        "sha256": "ba100851ee93c0f6406e37ba7df8c8c30990098cde63654c3f785a046cc78e4f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_susan_hsj_28LP1S89.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/fisheries-and-shipping solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 141012,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 수산·해운 산업 기초, 정답 및 해설이 명시됨",
+        "sha256": "240df1398649012a0a8b1edb64a67e837361c550119c2cbc1d7d91e17f91edb5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_inkan_mun_11P76595.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/human-development question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 774030,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 인간 발달, 문제지이 명시됨",
+        "sha256": "08133ae6c41e905a2f961839637b79eb7b1e45c3c8fc46ba128cf84f0dc79a31"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_sjl_mun_677ZXB1Y.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/successful-career-life question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2243290,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 성공적인 직업 생활, 문제지이 명시됨",
+        "sha256": "aeaa82ba07e6d8ecf966bd8ca3b528e40e2165d831ffb134edfed99a1bd5e99d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_sjl_hsj_8EFR615E.pdf",
+      "slot": "2025 고3 9월 kice_mock vocational/successful-career-life solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 135605,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 성공적인 직업 생활, 정답 및 해설이 명시됨",
+        "sha256": "d6af359c374dc269b0668f7a056f53db83a1ec2325afa5edbb5a414b5ac024bf"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_gr_mun_3E8473WT.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/german-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3806446,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 독일어Ⅰ, 문제지이 명시됨",
+        "sha256": "be4a6e790f38eaf34460037853722d069a013af19962a36696cf6b791223736c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_gr_hsj_C16AUJE9.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/german-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 158568,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 독일어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "c33499c2a3518105bc00bb73c67cc08da4a7d04ccf91c080c275ece40a467952"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_fr_hsj_R1T8SC94.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/french-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 170106,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 프랑스어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "dbd2cd3fd85fad06afc1046ac356453f8e6acb0c65e76183938038007149a24c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_sp_mun_67M63CK6.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/spanish-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1246781,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 스페인어Ⅰ, 문제지이 명시됨",
+        "sha256": "7f6bafebc163d0253e5f888d8f55caa6549fd48fdd7a732efe1b8e3ba6015f1a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ja_mun_1J4XAM7A.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/japanese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4263089,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 일본어Ⅰ, 문제지이 명시됨",
+        "sha256": "c41bb61c1dabdc39ff0f16cd59d2158a5f8e1723812600893788d6c67f5f7cec"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ja_hsj_361P46P4.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/japanese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 186460,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 일본어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "1f6912ad4976aa883ae02e999274879d92b195fd32340d82e357d7b0b8d437b9"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ar_mun_918KEO1P.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/arabic-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2882939,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 아랍어Ⅰ, 문제지이 명시됨",
+        "sha256": "3449bc62a54e25366a8685adc1a4e68bdd86f0a72068ba114ed0110332663c7a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ar_hsj_ZM226J3M.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/arabic-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 304797,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 아랍어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "203247d0051843356d3a144124eece8d70566f1b98ddc26ab700c4a005844ed5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_vit_hsj_A41IC56T.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/vietnamese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 143217,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 베트남어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "e26a8af48d558ae0a46d0c1256c3b900a540bc7ec3bf598edb605920b3d7b771"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_han_mun_9M66JG62.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/classical-chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3421355,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 한문Ⅰ, 문제지이 명시됨",
+        "sha256": "800d0dd1a0406024cd3ab4785a7892cc6c0658c6744ff3b82484af3eedf677ab"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_han_hsj_K3KCZ3R2_1.pdf",
+      "slot": "2025 고3 9월 kice_mock second_language/classical-chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 188895,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 9월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 9월 고3 모의평가, 한문Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "5230e13e38cb52f7392054d9c9ea400c23f0b021be8c170e7da2c034eac07454"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korB_1_mun_34L3Q845_1.pdf",
+      "slot": "2025 고3 6월 kice_mock korean/language-and-media question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3855518,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 언어와 매체, 문제지이 명시됨",
+        "sha256": "0f19de3c71f5d30223f427db697b55855f2541c6880803bbeaceda6fb655db43"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korB_1_hsj_TLN6OPB4_2.pdf",
+      "slot": "2025 고3 6월 kice_mock korean/language-and-media solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 293310,
+        "pdfPages": 26,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 언어와 매체, 정답 및 해설이 명시됨",
+        "sha256": "5ee72d951aebbb62dafb773f91255927b8385b35673dec333ca2f1aac4aca067"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korA_1_mun_N8NYU3TH_3.pdf",
+      "slot": "2025 고3 6월 kice_mock korean/speech-and-writing question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1670260,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 화법과 작문, 문제지이 명시됨",
+        "sha256": "df26824312ebb62a7ef9cd3142ef426ed818d18092d65d66d5a617a8a1333a59"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korA_1_hsj_P951F819_2.pdf",
+      "slot": "2025 고3 6월 kice_mock korean/speech-and-writing solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 283764,
+        "pdfPages": 26,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 화법과 작문, 정답 및 해설이 명시됨",
+        "sha256": "d92a411149bb90855d3996375bcd54e0a6fe92318706d22786d4ab6d786686a7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathC_1_hsj_EB22A192_2.pdf",
+      "slot": "2025 고3 6월 kice_mock math/geometry solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 568974,
+        "pdfPages": 29,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 기하, 정답 및 해설이 명시됨",
+        "sha256": "1dcebe7f5d701a0ecfcb7eb791331fc495b08e1be7b93818c0f5eaffe7be7454"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathA_1_hsj_TY2UJ349_2.pdf",
+      "slot": "2025 고3 6월 kice_mock math/probability-and-statistics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 568974,
+        "pdfPages": 29,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 확률과 통계, 정답 및 해설이 명시됨",
+        "sha256": "1dcebe7f5d701a0ecfcb7eb791331fc495b08e1be7b93818c0f5eaffe7be7454"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathB_1_hsj_W5938829_2.pdf",
+      "slot": "2025 고3 6월 kice_mock math/calculus solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 568974,
+        "pdfPages": 29,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 미적분, 정답 및 해설이 명시됨",
+        "sha256": "1dcebe7f5d701a0ecfcb7eb791331fc495b08e1be7b93818c0f5eaffe7be7454"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_his_1_mun_62236256.pdf",
+      "slot": "2025 고3 6월 kice_mock history/- question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4902445,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 한국사, 문제지이 명시됨",
+        "sha256": "0d8521a45111d30f4e6f9555f5f0add05cd531047161b4e5213a1d4700ded785"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_his_1_hsj_86ZMI796.pdf",
+      "slot": "2025 고3 6월 kice_mock history/- solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 133741,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 한국사, 정답 및 해설이 명시됨",
+        "sha256": "aab35e956fbeee5641d0a10caed52957351ab1978bc0d0812d8bd75b945dc2fa"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_ssnyr_mun_UN977LP2.pdf",
+      "slot": "2025 고3 6월 kice_mock social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1138865,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 생활과윤리, 문제지이 명시됨",
+        "sha256": "0c30a111bb42216b90d1e75aa1d0092db2870ebbb456598c0722051dae537b2c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_yrnss_mun_LN19ZTHL.pdf",
+      "slot": "2025 고3 6월 kice_mock social/ethics-and-thought question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1852510,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 윤리와사상, 문제지이 명시됨",
+        "sha256": "5f02eab628d95d6e672891d735eda0fea204aec472418044308062340735451c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_yrnss_hsj_3HF35C61.pdf",
+      "slot": "2025 고3 6월 kice_mock social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 134864,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 윤리와사상, 정답 및 해설이 명시됨",
+        "sha256": "024345ee9b3c1f797d3d0b7f4a9e8cf9cf714a1b448ba0f5491de344acd45871"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_hanji_mun_P564H72Q.pdf",
+      "slot": "2025 고3 6월 kice_mock social/korean-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 5106160,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 한국지리, 문제지이 명시됨",
+        "sha256": "60aedcffe1ff03787d01b276977d6e10e555d10a9a0a6d20a692a9b4903c606a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_saeji_mun_82N5CS8O.pdf",
+      "slot": "2025 고3 6월 kice_mock social/world-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3970541,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 세계지리, 문제지이 명시됨",
+        "sha256": "db667e49a490544384c237bb8ed53d2e3b886ba1ba840640bef0a966cb065e4f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_easta_mun_S27E1QN3.pdf",
+      "slot": "2025 고3 6월 kice_mock social/east-asian-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4771543,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 동아시아사, 문제지이 명시됨",
+        "sha256": "b0b028cb3519676ef4c7e744ffd294b4773505407b3bfdb8a043c19619352ea9"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_easta_hsj_47O35512.pdf",
+      "slot": "2025 고3 6월 kice_mock social/east-asian-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 141457,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 동아시아사, 정답 및 해설이 명시됨",
+        "sha256": "1ae0a50c570c80de27dc20045d17d857cd5ae5760e6d6564c5f686bcd181a74d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_sks_mun_61JT3E2O.pdf",
+      "slot": "2025 고3 6월 kice_mock social/world-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4179361,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 세계사, 문제지이 명시됨",
+        "sha256": "96858181ff3a130e745d032b84409fd1c38592fab8069fe9527041c258f1000f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_sks_hsj_758C81A6.pdf",
+      "slot": "2025 고3 6월 kice_mock social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 140840,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 세계사, 정답 및 해설이 명시됨",
+        "sha256": "fa5c78709235ee0d838cdac437b622ca450b5f169992964e461f1fd78fe23b1c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_bnj_mun_NAE1683U.pdf",
+      "slot": "2025 고3 6월 kice_mock social/politics-and-law question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1033504,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 정치와 법, 문제지이 명시됨",
+        "sha256": "26924f38155e0b6686c0a10231621c74fe86b3f055203945985c8f6a74af8dc5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_bnj_hsj_ZOE5A22A.pdf",
+      "slot": "2025 고3 6월 kice_mock social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 147755,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 정치와 법, 정답 및 해설이 명시됨",
+        "sha256": "57f1a44fd076e75bad5230ea4932068e41358663680d22c08df5e8931e2a4790"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_eco_mun_65O3OPG6.pdf",
+      "slot": "2025 고3 6월 kice_mock social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1109861,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 경제, 문제지이 명시됨",
+        "sha256": "4bd90dd535af4ed11f1c6eda31e76d1f10baebc6712a77805013784b78c08433"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_eco_hsj_A5GL2JE5.pdf",
+      "slot": "2025 고3 6월 kice_mock social/economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 179145,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 경제, 정답 및 해설이 명시됨",
+        "sha256": "b8bb07aad817e64e3c26564722c1dbdd0564c8781ae925a93eedf6a7ec9abfbc"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_samun_mun_6W95K32Y.pdf",
+      "slot": "2025 고3 6월 kice_mock social/social-culture question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1541736,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 사회·문화, 문제지이 명시됨",
+        "sha256": "e56c8c1ce15cf9161b75553d8fc1ffb63899bcf4cc993a5bedcaabf2fc3b6b29"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy1_mun_2HLBT82U.pdf",
+      "slot": "2025 고3 6월 kice_mock science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1597518,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 물리학Ⅰ, 문제지이 명시됨",
+        "sha256": "c3b3edf6c28c771b22292a9ab5f4b9567493a0c35f8f752639fbb08656ed8602"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy2_mun_1N4Y63GZ.pdf",
+      "slot": "2025 고3 6월 kice_mock science/physics-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1262823,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 물리학Ⅱ, 문제지이 명시됨",
+        "sha256": "26df04f36bde6b651c8c19708c543ad49b115d529db90c1c430a783e873f0a61"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy2_hsj_JH3RYZ8X.pdf",
+      "slot": "2025 고3 6월 kice_mock science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 278826,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 물리학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "5305a7546cbceb97743b0865f72d0d0ff58ffe4145aaaa115ae78b15eb28c6ab"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che1_mun_JRQWJDEI.pdf",
+      "slot": "2025 고3 6월 kice_mock science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1347600,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 화학Ⅰ, 문제지이 명시됨",
+        "sha256": "6bde2e974e02a5a087206210a7b7b607bb1883c7fa570be6e408a45f5060f3cd"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che2_mun_AP63GDA1.pdf",
+      "slot": "2025 고3 6월 kice_mock science/chemistry-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1167620,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 화학Ⅱ, 문제지이 명시됨",
+        "sha256": "9be43fca988c33d552e8758437eefa5fb5062e10fe2e79249cd39aeaa3060982"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che2_hsj_P2JAGJ44.pdf",
+      "slot": "2025 고3 6월 kice_mock science/chemistry-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 198716,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 화학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "3cab43ae13ab72b82483b8b1249caa9f71655497fe9f9d45fef3e96f4290d26d"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_bio1_mun_P1T4GAQ4.pdf",
+      "slot": "2025 고3 6월 kice_mock science/life-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 914452,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 생명과학Ⅰ, 문제지이 명시됨",
+        "sha256": "e552f53a3eee55e64770d1e36f74e4feb94fe10427b81f19d010eb3894ab2641"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_bio1_hsj_8P1XEYDT_1.pdf",
+      "slot": "2025 고3 6월 kice_mock science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 195930,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 생명과학Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "a4ca022ca4618ae200f5f78a5346a5cbbddb853aba7591c08998d6d3d13a468f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_bio2_mun_19LY2738.pdf",
+      "slot": "2025 고3 6월 kice_mock science/life-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1143255,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 생명과학Ⅱ, 문제지이 명시됨",
+        "sha256": "dee0f6cb77a93248474f06c5d69420a168a7eabb5d10ecde7d3b9f4afe6dfad1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_bio2_hsj_WFI8375X.pdf",
+      "slot": "2025 고3 6월 kice_mock science/life-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 285726,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 생명과학Ⅱ, 정답 및 해설이 명시됨",
+        "sha256": "5f902ddc4a11fabb85fcb6eaa05f8b4f3315d88d2f4a681c0b5e5314bd4c611f"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear1_mun_AML9K987.pdf",
+      "slot": "2025 고3 6월 kice_mock science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2396296,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 지구과학Ⅰ, 문제지이 명시됨",
+        "sha256": "4c0de68aa15065080919c988ead4fb16ca1edc36e1a0252968737974768228c6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear2_mun_863J9EAL.pdf",
+      "slot": "2025 고3 6월 kice_mock science/earth-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4099095,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 지구과학Ⅱ, 문제지이 명시됨",
+        "sha256": "6f12c31cd5a211ed7e0a691d7560ae3a0fbd98c330131016028a4438a6914f64"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_nupgi_mun_J9H364PP.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/agriculture-basics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2641161,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 농업 기초 기술, 문제지이 명시됨",
+        "sha256": "1a71d9904d8b0f1529655022c1598bbd257ed8583fed6ab8f99e1dcd68f6c365"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_nupgi_hsj_P118P15R.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/agriculture-basics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 157987,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 농업 기초 기술, 정답 및 해설이 명시됨",
+        "sha256": "ca131efac6f30efaf377d3e5e5e06a95be20ec28279a7050bf82a6e66ea0bc37"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_gup_mun_984C7AK2.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/industry-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2022961,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 공업 일반, 문제지이 명시됨",
+        "sha256": "21da8d09c8e41a5f06e318dc9ca4d59d7887f7bc5ea163b2e923b60c743af839"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sangup_mun_3W71J1D9.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1955774,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 상업 경제, 문제지이 명시됨",
+        "sha256": "9d61d67e92e3b68df5bb8a7f707fc7b883d9daf9c7c57ed6ba7c7c316206cb6c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sangup_hsj_G9V12S36_4.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/commercial-economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 157774,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 상업 경제, 정답 및 해설이 명시됨",
+        "sha256": "49ff0b7a47f4bdcfcf8162dcdb28992aaed4247c3a57b56e1ad9c852277819ae"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_susan_mun_6IJ7QN1W.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/fisheries-and-shipping question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1904471,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 수산·해운 산업 기초, 문제지이 명시됨",
+        "sha256": "ef45e1bd0f534c8c55ff8ea15a461edc522fc1e2502e92d8dede9d974e3f16c5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_susan_hsj_36MA6N9F.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/fisheries-and-shipping solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 137531,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 수산·해운 산업 기초, 정답 및 해설이 명시됨",
+        "sha256": "11c5c298cd84b7bf7de20ef98df9dddeaf62364ba9afd8364e7b5177c03ab569"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_inkan_mun_1T597B58.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/human-development question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2128253,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 인간 발달, 문제지이 명시됨",
+        "sha256": "2dd1f57495333502ec8af4a0e2d76feee07161b04babedcfc2709de01622706b"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_inkan_hsj_4HF2QX6A.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/human-development solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149701,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 인간 발달, 정답 및 해설이 명시됨",
+        "sha256": "f7731969381fb6cae0c61fcd88bbf41531af36828cfcb6d7668aeaba8045c11a"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sjl_mun_896P835Z.pdf",
+      "slot": "2025 고3 6월 kice_mock vocational/successful-career-life question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1267083,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 성공적인 직업 생활, 문제지이 명시됨",
+        "sha256": "321feb74612739d4195ae48f40c3edcf911c29b0eeffbd6028d769f49311fb5c"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_gr_mun_4543A8FQ.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/german-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4614126,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 독일어Ⅰ, 문제지이 명시됨",
+        "sha256": "48b95c471921f7a865cba48ceb82c4a33192f83da9076310d5b1ae6ca575f364"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_gr_hsj_637556G3.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/german-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 154348,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 독일어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "349a170ba5befa3e6b351f312d891e5092252266389f1017de7b56e3e2728c35"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_fr_mun_T68KO73Q.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/french-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3739599,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 프랑스어Ⅰ, 문제지이 명시됨",
+        "sha256": "3ecfddc6818faeba718571dd8f4380984615f5d6de9d427bc38aaf10d3fe4755"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_fr_hsj_4X5KA4K2.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/french-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 160477,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 프랑스어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "6005c738ff7fb8830f5c2bd9bdff74fbdcba97ff1d2e25579b224db3ea0624fb"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_sp_mun_155QSDLL.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/spanish-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1948076,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 스페인어Ⅰ, 문제지이 명시됨",
+        "sha256": "d89eea85e0c0b35d90d843c288d9b42c4f0d52b671cf83f432f05827926f7f40"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_sp_hsj_38I5856L.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/spanish-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 137764,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 스페인어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "3d47fdc24f3684ac8d9b45903598550f9255c90e871da04921dc85af62b2a0c6"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ja_mun_B345FJ64.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/japanese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4573580,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 일본어Ⅰ, 문제지이 명시됨",
+        "sha256": "d3fc8b4105c57f964c3a4df5d83b4c66913c99e8aa231124b3802257c8553300"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ru_hsj_R58116AR.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/russian-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 150200,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 러시아어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "7cd897fe96312c84e62456b9fe4b04a24eecbe6629e8b1c48ee27857ba2a17e5"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ar_mun_DXWP68AO.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/arabic-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4142849,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 아랍어Ⅰ, 문제지이 명시됨",
+        "sha256": "86822021f9dea0b16a32a5b583c3cd2625e6595d7470d1f35e5f215329c5ba27"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ar_hsj_A26R4V1B.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/arabic-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 383761,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 아랍어Ⅰ, 정답 및 해설이 명시됨",
+        "sha256": "2b1b92ac4d063f8d601acb792f221154cd65af123c4636cfc70595b8890b6985"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_vit_mun_214KBFV7.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/vietnamese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3807509,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 베트남어Ⅰ, 문제지이 명시됨",
+        "sha256": "0dad1c7d5e8a6eeb5bb1dd99c9876b7dd6c886b18c3d456fc96e2ced682c0a28"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_han_mun_3E36P1ZL.pdf",
+      "slot": "2025 고3 6월 kice_mock second_language/classical-chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4480357,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-25T16:11:35.467Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, and rendered first-page visual inspection",
+        "examLineInDocument": "2026학년도 6월 고3 모의평가",
+        "visual": "렌더링한 1쪽에 2026학년도 6월 고3 모의평가, 한문Ⅰ, 문제지이 명시됨",
+        "sha256": "fc8b4c36dc726e1385adae6699ffd653f3b66c9b9c0f2ae2ad2dd5557cd65b5e"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
     }
   ]
 }

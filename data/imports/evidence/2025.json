@@ -3231,6 +3231,996 @@
       "head_content_type": "application/pdf",
       "slot": "3-3 science/earth-science-1 solution",
       "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korB_1_mun_1VK7ZJ83.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 언어와 매체",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 korean/language-and-media question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korB_1_hsj_SVCWW4XL_3.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 언어와 매체",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 korean/language-and-media solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korA_1_mun_PKG5QYBR.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 화법과 작문",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 korean/speech-and-writing question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/korA_1_hsj_K962J13R_3.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 화법과 작문",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 korean/speech-and-writing solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/mathC_1_hsj_98YI7A3R_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 기하",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 math/geometry solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/mathA_1_hsj_88Z6CWK1_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 확률과 통계",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 math/probability-and-statistics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/mathB_1_hsj_2IX77NAG_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 미적분",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 math/calculus solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/eng_1_mun_5Y1AF5I8.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 english/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/eng_1_hsj_1P59S4P5.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 영어",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 english/- solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_his_1_mun_YWL8H37Z.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 history/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_ssnyr_mun_6M5D497U.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 생활과윤리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/life-and-ethics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_yrnss_mun_ZQB7B812.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 윤리와사상",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/ethics-and-thought question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_hanji_mun_R689IVA1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 한국지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/korean-geography question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_easta_mun_85448J66.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 동아시아사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/east-asian-history question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_sks_mun_MNR7O9AO.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 세계사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/world-history question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_bnj_hsj_L7A6EQUA.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/politics-and-law solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_eco_mun_672FY93E.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/economics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/s_eco_hsj_9PG759V9.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 social/economics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_phy1_mun_48Q711X5.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 물리학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/physics-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_phy1_hsj_XKAJ921Y.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 물리학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/physics-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_phy2_mun_313Y8P6W.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 물리학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/physics-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_phy2_hsj_9RI67Y3N.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 물리학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/physics-2 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_che1_mun_7TMP9829.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 화학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/chemistry-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_che1_hsj_3HY72F23.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 화학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/chemistry-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_che2_mun_7RS63JH5.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 화학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/chemistry-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_che2_hsj_O14YF7MD.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 화학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/chemistry-2 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_bio1_mun_114SW4GA.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 생명과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/life-science-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_bio1_hsj_MK3D3UQ7_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 생명과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/life-science-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_bio2_mun_NK7MAGR4.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 생명과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/life-science-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_bio2_hsj_5B255X86.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 생명과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/life-science-2 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_ear1_mun_D869799V.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 지구과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/earth-science-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_ear1_hsj_39IHFIJF.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 지구과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/earth-science-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_ear2_mun_8VY74M73.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 지구과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/earth-science-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/g_ear2_hsj_C56DMV22.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 지구과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 science/earth-science-2 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_nupgi_hsj_882S683O.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 농업 기초 기술",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/agriculture-basics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_gup_mun_2Z3Y7D9Y.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 공업 일반",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/industry-general question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_sangup_mun_P25D6I12.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 상업 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/commercial-economics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_sangup_hsj_G33Z2A6O.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 상업 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/commercial-economics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_susan_hsj_28LP1S89.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 수산·해운 산업 기초",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/fisheries-and-shipping solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_inkan_mun_11P76595.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 인간 발달",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/human-development question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_sjl_mun_677ZXB1Y.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 성공적인 직업 생활",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/successful-career-life question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/J_sjl_hsj_8EFR615E.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 성공적인 직업 생활",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 vocational/successful-career-life solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_gr_mun_3E8473WT.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 독일어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/german-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_gr_hsj_C16AUJE9.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 독일어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/german-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_fr_hsj_R1T8SC94.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 프랑스어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/french-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_sp_mun_67M63CK6.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 스페인어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/spanish-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ja_mun_1J4XAM7A.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 일본어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/japanese-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ja_hsj_361P46P4.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 일본어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/japanese-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ar_mun_918KEO1P.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 아랍어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/arabic-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ar_hsj_ZM226J3M.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 아랍어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/arabic-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_vit_hsj_A41IC56T.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 베트남어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/vietnamese-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_han_mun_9M66JG62.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 한문Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/classical-chinese-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_han_hsj_K3KCZ3R2_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 9월",
+      "search_title": "고3 9월 모평(평가원) 한문Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-9 second_language/classical-chinese-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korB_1_mun_34L3Q845_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 언어와 매체",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 korean/language-and-media question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korB_1_hsj_TLN6OPB4_2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 언어와 매체",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 korean/language-and-media solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korA_1_mun_N8NYU3TH_3.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 화법과 작문",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 korean/speech-and-writing question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/korA_1_hsj_P951F819_2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 화법과 작문",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 korean/speech-and-writing solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathC_1_hsj_EB22A192_2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 기하",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 math/geometry solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathA_1_hsj_TY2UJ349_2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 확률과 통계",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 math/probability-and-statistics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/mathB_1_hsj_W5938829_2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 미적분",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 math/calculus solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_his_1_mun_62236256.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 history/- question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_his_1_hsj_86ZMI796.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 한국사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 history/- solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_ssnyr_mun_UN977LP2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 생활과윤리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/life-and-ethics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_yrnss_mun_LN19ZTHL.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 윤리와사상",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/ethics-and-thought question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_yrnss_hsj_3HF35C61.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 윤리와사상",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/ethics-and-thought solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_hanji_mun_P564H72Q.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 한국지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/korean-geography question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_saeji_mun_82N5CS8O.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 세계지리",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/world-geography question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_easta_mun_S27E1QN3.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 동아시아사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/east-asian-history question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_easta_hsj_47O35512.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 동아시아사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/east-asian-history solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_sks_mun_61JT3E2O.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 세계사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/world-history question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_sks_hsj_758C81A6.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 세계사",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/world-history solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_bnj_mun_NAE1683U.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/politics-and-law question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_bnj_hsj_ZOE5A22A.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 정치와 법",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/politics-and-law solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_eco_mun_65O3OPG6.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/economics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_eco_hsj_A5GL2JE5.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/economics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/s_samun_mun_6W95K32Y.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 사회·문화",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 social/social-culture question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy1_mun_2HLBT82U.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 물리학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/physics-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy2_mun_1N4Y63GZ.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 물리학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/physics-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_phy2_hsj_JH3RYZ8X.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 물리학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/physics-2 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che1_mun_JRQWJDEI.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 화학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/chemistry-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che2_mun_AP63GDA1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 화학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/chemistry-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che2_hsj_P2JAGJ44.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 화학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/chemistry-2 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_bio1_mun_P1T4GAQ4.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 생명과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/life-science-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_bio1_hsj_8P1XEYDT_1.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 생명과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/life-science-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_bio2_mun_19LY2738.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 생명과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/life-science-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_bio2_hsj_WFI8375X.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 생명과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/life-science-2 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear1_mun_AML9K987.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 지구과학Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/earth-science-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_ear2_mun_863J9EAL.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 지구과학Ⅱ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 science/earth-science-2 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_nupgi_mun_J9H364PP.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 농업 기초 기술",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/agriculture-basics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_nupgi_hsj_P118P15R.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 농업 기초 기술",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/agriculture-basics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_gup_mun_984C7AK2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 공업 일반",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/industry-general question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sangup_mun_3W71J1D9.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 상업 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/commercial-economics question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sangup_hsj_G9V12S36_4.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 상업 경제",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/commercial-economics solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_susan_mun_6IJ7QN1W.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 수산·해운 산업 기초",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/fisheries-and-shipping question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_susan_hsj_36MA6N9F.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 수산·해운 산업 기초",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/fisheries-and-shipping solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_inkan_mun_1T597B58.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 인간 발달",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/human-development question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_inkan_hsj_4HF2QX6A.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 인간 발달",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/human-development solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/J_sjl_mun_896P835Z.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 성공적인 직업 생활",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 vocational/successful-career-life question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_gr_mun_4543A8FQ.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 독일어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/german-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_gr_hsj_637556G3.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 독일어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/german-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_fr_mun_T68KO73Q.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 프랑스어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/french-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_fr_hsj_4X5KA4K2.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 프랑스어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/french-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_sp_mun_155QSDLL.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 스페인어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/spanish-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_sp_hsj_38I5856L.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 스페인어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/spanish-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ja_mun_B345FJ64.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 일본어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/japanese-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ru_hsj_R58116AR.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 러시아어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/russian-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ar_mun_DXWP68AO.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 아랍어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/arabic-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_ar_hsj_A26R4V1B.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 아랍어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/arabic-1 solution",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_vit_mun_214KBFV7.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 베트남어Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/vietnamese-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/2nd_han_mun_3E36P1ZL.pdf",
+      "search_query": "EBSi 기출문제 > 고3 > 2025 > 6월",
+      "search_title": "고3 6월 모평(평가원) 한문Ⅰ",
+      "head_status": 200,
+      "head_content_type": "application/pdf",
+      "slot": "3-6 second_language/classical-chinese-1 question",
+      "discovery": "official_ebsi_previous_paper_catalog"
     }
   ],
   "held": [

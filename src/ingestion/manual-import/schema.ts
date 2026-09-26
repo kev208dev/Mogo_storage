@@ -174,6 +174,7 @@ export const importRowSchema = z
       "geography-general", "general-social", "life-and-ethics-general", "social-studies",
       "science-studies", "physics-general", "chemistry-general", "life-science-general", "earth-science-general",
       "social-science-studies",
+      "korean-a", "korean-b", "morality", "agriculture-bio-industry", "industry", "commerce-information", "fisheries-shipping", "home-economics-industry",
     ]);
     if (row.course_code && !legacyCourseCodes.has(row.course_code)) {
       const course = courseByCode(row.course_code);

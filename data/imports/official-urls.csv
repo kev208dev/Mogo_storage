@@ -7752,3 +7752,689 @@ year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,off
 2015,3,11,csat,2015-11-12,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20151112/go3/okLQ8aZR_2nd_sp1_hsj.pdf,okLQ8aZR_2nd_sp1_hsj.pdf,EBSi 2015년 11월 고3 대학수학능력시험 스페인어Ⅰ 정답 및 해설
 2015,3,11,csat,2015-11-12,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20151112/go3/tQvAauNj_2nd_vit_mun.pdf,tQvAauNj_2nd_vit_mun.pdf,EBSi 2015년 11월 고3 대학수학능력시험 기초베트남어Ⅰ 문제
 2015,3,11,csat,2015-11-12,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20151112/go3/tMVhEUse_2nd_vit_hsj.pdf,tMVhEUse_2nd_vit_hsj.pdf,EBSi 2015년 11월 고3 대학수학능력시험 기초베트남어Ⅰ 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/kor_mun.pdf,kor_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 국어 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/kor_hsj.pdf,kor_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 국어 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/math_mun.pdf,math_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 수학 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/math_hsj.pdf,math_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 수학 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/eng_mun.pdf,eng_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 영어 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/eng_hsj.pdf,eng_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 영어 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_his_mun.pdf,s_his_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 한국사 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 한국사 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,social,general-social,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 일반사회 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,social,general-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 일반사회 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,social,geography-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_jiri_mun.pdf,s_jiri_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 지리 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,social,geography-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_jiri_hsj.pdf,s_jiri_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 지리 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,social,morality,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 도덕 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,social,morality,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 도덕 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,science,chemistry-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/g_che_mun.pdf,g_che_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 화학 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,science,chemistry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/g_che_hsj.pdf,g_che_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 화학 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,science,earth-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/g_ear_mun.pdf,g_ear_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 지구과학 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,science,earth-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/g_ear_hsj.pdf,g_ear_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 지구과학 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,science,life-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/g_bio_mun.pdf,g_bio_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 생명과학 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,science,life-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/g_bio_hsj.pdf,g_bio_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 생명과학 정답 및 해설
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,science,physics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201403121/g_phy_mun.pdf,g_phy_mun.pdf,EBSi 2014년 3월 고1 전국연합학력평가 물리 문제
+2014,1,3,school_mock,2014-03-12,서울특별시교육청,science,physics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403121/g_phy_hsj.pdf,g_phy_hsj.pdf,EBSi 2014년 3월 고1 전국연합학력평가 물리 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/kor_mun.pdf,kor_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 국어 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/kor_hsj.pdf,kor_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 국어 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/math_mun.pdf,math_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 수학 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/math_hsj.pdf,math_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 수학 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/eng_mun.pdf,eng_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 영어 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/eng_hsj.pdf,eng_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 영어 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_his_mun.pdf,s_his_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 한국사 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 한국사 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,social,general-social,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_sahoe_mun.pdf,s_sahoe_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 일반사회 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,social,general-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_sahoe_hsj.pdf,s_sahoe_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 일반사회 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,social,geography-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_jiri_mun.pdf,s_jiri_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 지리 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,social,geography-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_jiri_hsj.pdf,s_jiri_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 지리 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,social,morality,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 도덕 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,social,morality,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 도덕 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,science,chemistry-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/g_che_mun.pdf,g_che_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 화학 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,science,chemistry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/g_che_hsj.pdf,g_che_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 화학 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,science,earth-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/g_ear_mun.pdf,g_ear_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 지구과학 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,science,earth-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/g_ear_hsj.pdf,g_ear_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 지구과학 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,science,life-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/g_bio_mun.pdf,g_bio_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 생명과학 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,science,life-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/g_bio_hsj.pdf,g_bio_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 생명과학 정답 및 해설
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,science,physics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201406121/g_phy_mun.pdf,g_phy_mun.pdf,EBSi 2014년 6월 고1 전국연합학력평가 물리 문제
+2014,1,6,school_mock,2014-06-12,부산광역시교육청,science,physics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406121/g_phy_hsj.pdf,g_phy_hsj.pdf,EBSi 2014년 6월 고1 전국연합학력평가 물리 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/nqqKgWRj_h1_kor_mun.pdf,nqqKgWRj_h1_kor_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 국어 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/fXr6nbb3_h1_kor_hsj.pdf,fXr6nbb3_h1_kor_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 국어 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/MOsvGhcI_h1_math_mun.pdf,MOsvGhcI_h1_math_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 수학 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/SPim9Oci_h1_math_hsj.pdf,SPim9Oci_h1_math_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 수학 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/PXkmCJiL_h1_eng_mun.pdf,PXkmCJiL_h1_eng_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 영어 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/Pv00J6gX_h1_eng_hsj.pdf,Pv00J6gX_h1_eng_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 영어 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/2XdoYfYo_h1_s_his_mun.pdf,2XdoYfYo_h1_s_his_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 한국사 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/iB5ANH2c_h1_s_his_hsj.pdf,iB5ANH2c_h1_s_his_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 한국사 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,social,general-social,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/NwiGnSqJ_h1_s_sahoe_mun.pdf,NwiGnSqJ_h1_s_sahoe_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 일반사회 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,social,general-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/Ic0y82gv_h1_s_sahoe_hsj.pdf,Ic0y82gv_h1_s_sahoe_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 일반사회 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,social,geography-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/TjtRpeVP_h1_s_jiri_mun.pdf,TjtRpeVP_h1_s_jiri_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 지리 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,social,geography-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/OEcyhJzq_h1_s_jiri_hsj.pdf,OEcyhJzq_h1_s_jiri_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 지리 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,social,morality,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/v0aGltFB_h1_s_ssnyr_mun.pdf,v0aGltFB_h1_s_ssnyr_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 도덕 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,social,morality,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/NlJbSorx_h1_s_ssnyr_hsj.pdf,NlJbSorx_h1_s_ssnyr_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 도덕 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,science,chemistry-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/P1A83xiD_h1_g__g_che_mun.pdf,P1A83xiD_h1_g__g_che_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 화학 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,science,chemistry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/d9D9DQVX_h1_g_che_hsj.pdf,d9D9DQVX_h1_g_che_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 화학 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,science,earth-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/Wd8T408O_h1_g_ear_mun.pdf,Wd8T408O_h1_g_ear_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 지구과학 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,science,earth-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/h1pMuBeZ_h1_g_ear_hsj.pdf,h1pMuBeZ_h1_g_ear_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 지구과학 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,science,life-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/wR1IM9QX_h1_g_bio_mun.pdf,wR1IM9QX_h1_g_bio_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 생명과학 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,science,life-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/2CTp2hFO_h1_g_bio_hsj.pdf,2CTp2hFO_h1_g_bio_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 생명과학 정답 및 해설
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,science,physics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201409031/5Gmz8Phg_h1_g_phy_mun.pdf,5Gmz8Phg_h1_g_phy_mun.pdf,EBSi 2014년 9월 고1 전국연합학력평가 물리 문제
+2014,1,9,school_mock,2014-09-03,인천광역시교육청,science,physics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409031/8VMb5UWg_h1_g_phy_hsj.pdf,8VMb5UWg_h1_g_phy_hsj.pdf,EBSi 2014년 9월 고1 전국연합학력평가 물리 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/nqqKgWRj_h1_kor_mun.pdf,nqqKgWRj_h1_kor_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 국어 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/fXr6nbb3_h1_kor_hsj.pdf,fXr6nbb3_h1_kor_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 국어 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/MOsvGhcI_h1_math_mun.pdf,MOsvGhcI_h1_math_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 수학 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/SPim9Oci_h1_math_hsj.pdf,SPim9Oci_h1_math_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 수학 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/PXkmCJiL_h1_eng_mun.pdf,PXkmCJiL_h1_eng_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 영어 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/Pv00J6gX_h1_eng_hsj.pdf,Pv00J6gX_h1_eng_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 영어 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/2XdoYfYo_h1_s_his_mun.pdf,2XdoYfYo_h1_s_his_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 한국사 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/iB5ANH2c_h1_s_his_hsj.pdf,iB5ANH2c_h1_s_his_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 한국사 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,social,general-social,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/NwiGnSqJ_h1_s_sahoe_mun.pdf,NwiGnSqJ_h1_s_sahoe_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 일반사회 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,social,general-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/Ic0y82gv_h1_s_sahoe_hsj.pdf,Ic0y82gv_h1_s_sahoe_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 일반사회 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,social,geography-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/TjtRpeVP_h1_s_jiri_mun.pdf,TjtRpeVP_h1_s_jiri_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 지리 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,social,geography-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/OEcyhJzq_h1_s_jiri_hsj.pdf,OEcyhJzq_h1_s_jiri_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 지리 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,social,morality,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/v0aGltFB_h1_s_ssnyr_mun.pdf,v0aGltFB_h1_s_ssnyr_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 도덕 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,social,morality,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/NlJbSorx_h1_s_ssnyr_hsj.pdf,NlJbSorx_h1_s_ssnyr_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 도덕 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,science,chemistry-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/P1A83xiD_h1_g__g_che_mun.pdf,P1A83xiD_h1_g__g_che_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 화학 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,science,chemistry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/d9D9DQVX_h1_g_che_hsj.pdf,d9D9DQVX_h1_g_che_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 화학 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,science,earth-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/Wd8T408O_h1_g_ear_mun.pdf,Wd8T408O_h1_g_ear_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 지구과학 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,science,earth-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/h1pMuBeZ_h1_g_ear_hsj.pdf,h1pMuBeZ_h1_g_ear_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 지구과학 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,science,life-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/wR1IM9QX_h1_g_bio_mun.pdf,wR1IM9QX_h1_g_bio_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 생명과학 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,science,life-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/2CTp2hFO_h1_g_bio_hsj.pdf,2CTp2hFO_h1_g_bio_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 생명과학 정답 및 해설
+2014,1,11,school_mock,2014-11-18,경기도교육청,science,physics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201411181/5Gmz8Phg_h1_g_phy_mun.pdf,5Gmz8Phg_h1_g_phy_mun.pdf,EBSi 2014년 11월 고1 전국연합학력평가 물리 문제
+2014,1,11,school_mock,2014-11-18,경기도교육청,science,physics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411181/8VMb5UWg_h1_g_phy_hsj.pdf,8VMb5UWg_h1_g_phy_hsj.pdf,EBSi 2014년 11월 고1 전국연합학력평가 물리 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/kora_mun.pdf,kora_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 국어A형 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/kora_hsj.pdf,kora_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 국어A형 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/korb_mun.pdf,korb_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 국어B형 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/korb_hsj.pdf,korb_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 국어B형 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/matha_mun.pdf,matha_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 수학A 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/matha_hsj.pdf,matha_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 수학A 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/mathb_mun.pdf,mathb_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 수학B 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 수학B 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/eng_mun.pdf,eng_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 영어 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/eng_hsj.pdf,eng_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 영어 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_his_mun.pdf,s_his_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 한국사 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 한국사 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 동아시아사 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 동아시아사 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 경제 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 경제 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 윤리와 사상 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 윤리와 사상 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 한국지리 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 한국지리 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 생활과 윤리 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 생활과 윤리 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 법과정치 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 법과정치 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 사회문화 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 사회문화 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 세계지리 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 세계지리 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 세계사 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 세계사 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 화학Ⅰ 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201403122/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2014년 3월 고2 전국연합학력평가 물리Ⅰ 문제
+2014,2,3,school_mock,2014-03-12,서울특별시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403122/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2014년 3월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/kora_mun.pdf,kora_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 국어A형 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/kora_hsj.pdf,kora_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 국어A형 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/korb_mun.pdf,korb_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 국어B형 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/korb_hsj.pdf,korb_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 국어B형 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/matha_mun.pdf,matha_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 수학A 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/matha_hsj.pdf,matha_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 수학A 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/mathb_mun.pdf,mathb_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 수학B 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 수학B 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/eng_mun.pdf,eng_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 영어 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/eng_hsj.pdf,eng_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 영어 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_his_mun.pdf,s_his_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 한국사 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 한국사 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 동아시아사 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 동아시아사 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 경제 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 경제 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 윤리와 사상 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 윤리와 사상 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 한국지리 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 한국지리 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 생활과 윤리 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 생활과 윤리 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 법과정치 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 법과정치 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 사회문화 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 사회문화 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 세계지리 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 세계지리 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 세계사 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 세계사 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 화학Ⅰ 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406122/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2014년 6월 고2 전국연합학력평가 물리Ⅰ 문제
+2014,2,6,school_mock,2014-06-12,부산광역시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406122/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2014년 6월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/Uf65Y5Qc_h2_kora_mun.pdf,Uf65Y5Qc_h2_kora_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 국어A형 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/32om1joK_h2_kora_hsj.pdf,32om1joK_h2_kora_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 국어A형 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/IB5i5Qy2_h2_korb_mun.pdf,IB5i5Qy2_h2_korb_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 국어B형 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/LfHxwgxS_h2_korb_hsj.pdf,LfHxwgxS_h2_korb_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 국어B형 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/c6pT0giS_h2_matha_mun.pdf,c6pT0giS_h2_matha_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 수학A 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/ftNtzsG0_h2_matha_hsj.pdf,ftNtzsG0_h2_matha_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 수학A 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/6vdGg1fD_h2_mathb_mun.pdf,6vdGg1fD_h2_mathb_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 수학B 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/c5DYge2Q_h2_mathb_hsj.pdf,c5DYge2Q_h2_mathb_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 수학B 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/w4hVJbrz_h2_enga_mun.pdf,w4hVJbrz_h2_enga_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 영어 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/JrzF5ldf_h2_enga_hsj.pdf,JrzF5ldf_h2_enga_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 영어 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/ou2Vythh_h2_s_his_mun.pdf,ou2Vythh_h2_s_his_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 한국사 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/OjcdEc83_h2_s_his_hsj.pdf,OjcdEc83_h2_s_his_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 한국사 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/EEi8TywM_h2_s_easta_mun.pdf,EEi8TywM_h2_s_easta_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 동아시아사 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/fgZUr3Cr_h2_s_easta_hsj.pdf,fgZUr3Cr_h2_s_easta_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 동아시아사 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/g4pXX50y_h2_s_eco_mun.pdf,g4pXX50y_h2_s_eco_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 경제 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/ki4jsGvs_h2_s_eco_hsj.pdf,ki4jsGvs_h2_s_eco_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 경제 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/AH2JZZJf_h2_s_yrnss_mun.pdf,AH2JZZJf_h2_s_yrnss_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 윤리와 사상 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/wTXSRdZq_h2_s_yrnss_hsj.pdf,wTXSRdZq_h2_s_yrnss_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 윤리와 사상 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/LUEM7RAl_h2_s_hanji_mun.pdf,LUEM7RAl_h2_s_hanji_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 한국지리 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/uo3npvqn_h2_s_hanji_hsj.pdf,uo3npvqn_h2_s_hanji_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 한국지리 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/ZWjSeKg1_h2_s_ssnyr_mun.pdf,ZWjSeKg1_h2_s_ssnyr_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 생활과 윤리 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/bzuDwP6S_h2_s_ssnyr_hsj.pdf,bzuDwP6S_h2_s_ssnyr_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 생활과 윤리 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/46YiufL0_h2_s_bnj_mun.pdf,46YiufL0_h2_s_bnj_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 법과정치 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/xJdQdSe9_h2_s_bnj_hsj.pdf,xJdQdSe9_h2_s_bnj_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 법과정치 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/0Qzfud7b_h2_s_samun_mun.pdf,0Qzfud7b_h2_s_samun_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 사회문화 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/qV0tpw4S_h2_s_samun_hsj.pdf,qV0tpw4S_h2_s_samun_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 사회문화 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/JNeO925B_h2_s_saeji_mun.pdf,JNeO925B_h2_s_saeji_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 세계지리 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/76WE7P5I_h2_s_saeji_hsj.pdf,76WE7P5I_h2_s_saeji_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 세계지리 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/JRxKZMqA_h2_s_sks_mun.pdf,JRxKZMqA_h2_s_sks_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 세계사 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/4dxfE9oh_h2_s_sks_hsj.pdf,4dxfE9oh_h2_s_sks_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 세계사 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/cSN00ktm_h2_g_che1_mun.pdf,cSN00ktm_h2_g_che1_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 화학Ⅰ 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/zmVBCOWH_h2_g_che1_hsj.pdf,zmVBCOWH_h2_g_che1_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/3wFDxchd_h2_g_ear1_mun.pdf,3wFDxchd_h2_g_ear1_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/pqpEq8hZ_h2_g_ear1_hsj.pdf,pqpEq8hZ_h2_g_ear1_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/JVkl4AU1_h2_g_bio1_mun.pdf,JVkl4AU1_h2_g_bio1_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/O6YalkXh_h2_g_bio1_hsj.pdf,O6YalkXh_h2_g_bio1_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409032/vcDfSDGA_h2_g_phy1_mun.pdf,vcDfSDGA_h2_g_phy1_mun.pdf,EBSi 2014년 9월 고2 전국연합학력평가 물리Ⅰ 문제
+2014,2,9,school_mock,2014-09-03,인천광역시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409032/IXWb9DYc_h2_g_phy1_hsj.pdf,IXWb9DYc_h2_g_phy1_hsj.pdf,EBSi 2014년 9월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/Uf65Y5Qc_h2_kora_mun.pdf,Uf65Y5Qc_h2_kora_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 국어A형 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/32om1joK_h2_kora_hsj.pdf,32om1joK_h2_kora_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 국어A형 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/IB5i5Qy2_h2_korb_mun.pdf,IB5i5Qy2_h2_korb_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 국어B형 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/LfHxwgxS_h2_korb_hsj.pdf,LfHxwgxS_h2_korb_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 국어B형 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/c6pT0giS_h2_matha_mun.pdf,c6pT0giS_h2_matha_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 수학A 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/ftNtzsG0_h2_matha_hsj.pdf,ftNtzsG0_h2_matha_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 수학A 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/6vdGg1fD_h2_mathb_mun.pdf,6vdGg1fD_h2_mathb_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 수학B 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/c5DYge2Q_h2_mathb_hsj.pdf,c5DYge2Q_h2_mathb_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 수학B 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/w4hVJbrz_h2_enga_mun.pdf,w4hVJbrz_h2_enga_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 영어 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/JrzF5ldf_h2_enga_hsj.pdf,JrzF5ldf_h2_enga_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 영어 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/ou2Vythh_h2_s_his_mun.pdf,ou2Vythh_h2_s_his_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 한국사 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/OjcdEc83_h2_s_his_hsj.pdf,OjcdEc83_h2_s_his_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 한국사 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/EEi8TywM_h2_s_easta_mun.pdf,EEi8TywM_h2_s_easta_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 동아시아사 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/fgZUr3Cr_h2_s_easta_hsj.pdf,fgZUr3Cr_h2_s_easta_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 동아시아사 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/g4pXX50y_h2_s_eco_mun.pdf,g4pXX50y_h2_s_eco_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 경제 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/ki4jsGvs_h2_s_eco_hsj.pdf,ki4jsGvs_h2_s_eco_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 경제 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/AH2JZZJf_h2_s_yrnss_mun.pdf,AH2JZZJf_h2_s_yrnss_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 윤리와 사상 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/wTXSRdZq_h2_s_yrnss_hsj.pdf,wTXSRdZq_h2_s_yrnss_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 윤리와 사상 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/LUEM7RAl_h2_s_hanji_mun.pdf,LUEM7RAl_h2_s_hanji_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 한국지리 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/uo3npvqn_h2_s_hanji_hsj.pdf,uo3npvqn_h2_s_hanji_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 한국지리 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/ZWjSeKg1_h2_s_ssnyr_mun_1.pdf,ZWjSeKg1_h2_s_ssnyr_mun_1.pdf,EBSi 2014년 11월 고2 전국연합학력평가 생활과 윤리 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/bzuDwP6S_h2_s_ssnyr_hsj.pdf,bzuDwP6S_h2_s_ssnyr_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 생활과 윤리 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/46YiufL0_h2_s_bnj_mun.pdf,46YiufL0_h2_s_bnj_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 법과정치 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/xJdQdSe9_h2_s_bnj_hsj.pdf,xJdQdSe9_h2_s_bnj_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 법과정치 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/0Qzfud7b_h2_s_samun_mun.pdf,0Qzfud7b_h2_s_samun_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 사회문화 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/qV0tpw4S_h2_s_samun_hsj.pdf,qV0tpw4S_h2_s_samun_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 사회문화 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/JNeO925B_h2_s_saeji_mun.pdf,JNeO925B_h2_s_saeji_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 세계지리 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/76WE7P5I_h2_s_saeji_hsj.pdf,76WE7P5I_h2_s_saeji_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 세계지리 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/JRxKZMqA_h2_s_sks_mun.pdf,JRxKZMqA_h2_s_sks_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 세계사 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/4dxfE9oh_h2_s_sks_hsj.pdf,4dxfE9oh_h2_s_sks_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 세계사 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/cSN00ktm_h2_g_che1_mun.pdf,cSN00ktm_h2_g_che1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 화학Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/zmVBCOWH_h2_g_che1_hsj.pdf,zmVBCOWH_h2_g_che1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/3wFDxchd_h2_g_ear1_mun.pdf,3wFDxchd_h2_g_ear1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/pqpEq8hZ_h2_g_ear1_hsj.pdf,pqpEq8hZ_h2_g_ear1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/JVkl4AU1_h2_g_bio1_mun.pdf,JVkl4AU1_h2_g_bio1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/O6YalkXh_h2_g_bio1_hsj.pdf,O6YalkXh_h2_g_bio1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/vcDfSDGA_h2_g_phy1_mun.pdf,vcDfSDGA_h2_g_phy1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 물리Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/IXWb9DYc_h2_g_phy1_hsj.pdf,IXWb9DYc_h2_g_phy1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/4MswoZf4_h2_J_nsmsup_mun.pdf,4MswoZf4_h2_J_nsmsup_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 농생명산업 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/zydiVvqX_h2_J_nsmsup_hsj.pdf,zydiVvqX_h2_J_nsmsup_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 농생명산업 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/SCe837g7_h2_J_supjb_mun.pdf,SCe837g7_h2_J_supjb_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 상업정보 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/RFlz43dW_h2_J_supjb_hsj.pdf,RFlz43dW_h2_J_supjb_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 상업정보 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/I5KBTl2X_h2_J_ssnhw_mun.pdf,I5KBTl2X_h2_J_ssnhw_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 수산해운 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/TRWJFa6w_h2_J_ssnhw_hsj.pdf,TRWJFa6w_h2_J_ssnhw_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 수산해운 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/gxgoNrRJ_h2_J_gsnsup_mun.pdf,gxgoNrRJ_h2_J_gsnsup_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 가사실업 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/BJ1qCVxq_h2_J_gsnsup_hsj.pdf,BJ1qCVxq_h2_J_gsnsup_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 가사실업 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/OprI6XTL_h2_J_gup_mun.pdf,OprI6XTL_h2_J_gup_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 공업 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/uaNdwmkQ_h2_J_gup_hsj.pdf,uaNdwmkQ_h2_J_gup_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 공업 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/cFXvmBUC_h2_2nd_ch1_mun.pdf,cFXvmBUC_h2_2nd_ch1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 중국어Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/sQrU6Wbu_h2_2nd_ch1_hsj.pdf,sQrU6Wbu_h2_2nd_ch1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 중국어Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/abpAprqF_h2_2nd_han_mun.pdf,abpAprqF_h2_2nd_han_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 한문 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/pyJUNsfN_h2_2nd_han_hsj.pdf,pyJUNsfN_h2_2nd_han_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 한문 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/tWva7DYa_h2_2nd_fr1_mun.pdf,tWva7DYa_h2_2nd_fr1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 프랑스어Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/OqlOQq2v_h2_2nd_fr1_hsj.pdf,OqlOQq2v_h2_2nd_fr1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 프랑스어Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/Y4tbqBTN_h2_2nd_gr1_mun.pdf,Y4tbqBTN_h2_2nd_gr1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 독일어Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/kO3C9vBG_h2_2nd_gr1_hsj.pdf,kO3C9vBG_h2_2nd_gr1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 독일어Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/RenU6Ny5_h2_2nd_ja1_mun.pdf,RenU6Ny5_h2_2nd_ja1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 일본어Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/Zrc8BkeD_h2_2nd_ja1_hsj.pdf,Zrc8BkeD_h2_2nd_ja1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 일본어Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/XqZAmN0o_h2_2nd_ru1_mun.pdf,XqZAmN0o_h2_2nd_ru1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 러시아어Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/G7mlegh0_h2_2nd_ru1_hsj.pdf,G7mlegh0_h2_2nd_ru1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 러시아어Ⅰ 정답 및 해설
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411182/YCaRW5ER_h2_2nd_sp1_mun.pdf,YCaRW5ER_h2_2nd_sp1_mun.pdf,EBSi 2014년 11월 고2 전국연합학력평가 스페인어Ⅰ 문제
+2014,2,11,school_mock,2014-11-18,경기도교육청,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411182/8Q9eqwZ2_h2_2nd_sp1_hsj.pdf,8Q9eqwZ2_h2_2nd_sp1_hsj.pdf,EBSi 2014년 11월 고2 전국연합학력평가 스페인어Ⅰ 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/kora_mun.pdf,kora_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 국어A형 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/kora_hsj.pdf,kora_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 국어A형 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/korb_mun.pdf,korb_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 국어B형 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/korb_hsj.pdf,korb_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 국어B형 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/matha_mun.pdf,matha_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 수학A 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/matha_hsj.pdf,matha_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 수학A 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/mathb_mun.pdf,mathb_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 수학B 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 수학B 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/eng_mun.pdf,eng_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 영어 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/eng_hsj.pdf,eng_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 영어 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_his_mun.pdf,s_his_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 한국사 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 한국사 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 동아시아사 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 동아시아사 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 경제 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 경제 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 윤리와 사상 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 윤리와 사상 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 한국지리 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 한국지리 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 생활과 윤리 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 생활과 윤리 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 법과정치 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 법과정치 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 사회문화 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 사회문화 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 세계지리 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 세계지리 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 세계사 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 세계사 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 화학Ⅰ 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201403123/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2014년 3월 고3 전국연합학력평가 물리Ⅰ 문제
+2014,3,3,school_mock,2014-03-12,서울특별시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201403123/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2014년 3월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/kora_mun.pdf,kora_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 국어A형 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/kora_hsj.pdf,kora_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 국어A형 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/korb_mun.pdf,korb_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 국어B형 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/korb_hsj.pdf,korb_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 국어B형 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/matha_mun.pdf,matha_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 수학A 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/matha_hsj.pdf,matha_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 수학A 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/mathb_mun.pdf,mathb_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 수학B 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 수학B 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/eng_mun.pdf,eng_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 영어 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/eng_hsj.pdf,eng_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 영어 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_his_mun.pdf,s_his_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 한국사 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 한국사 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 동아시아사 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 동아시아사 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 경제 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 경제 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 윤리와 사상 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 윤리와 사상 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 한국지리 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 한국지리 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 생활과 윤리 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 생활과 윤리 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 법과정치 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 법과정치 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 사회문화 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 사회문화 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 세계지리 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 세계지리 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 세계사 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 세계사 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 화학Ⅰ 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 화학Ⅱ 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 화학Ⅱ 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 지구과학Ⅱ 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 지구과학Ⅱ 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 생명과학Ⅱ 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 물리Ⅰ 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2014년 4월 고3 전국연합학력평가 물리Ⅱ 문제
+2014,3,4,school_mock,2014-04-10,경기도교육청,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201404103/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2014년 4월 고3 전국연합학력평가 물리Ⅱ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/kora_mun.pdf,kora_mun.pdf,EBSi 2014년 6월 고3 모의평가 국어A형 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/kora_hsj.pdf,kora_hsj.pdf,EBSi 2014년 6월 고3 모의평가 국어A형 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/korb_mun.pdf,korb_mun.pdf,EBSi 2014년 6월 고3 모의평가 국어B형 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/korb_hsj_2.pdf,korb_hsj_2.pdf,EBSi 2014년 6월 고3 모의평가 국어B형 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/matha_mun.pdf,matha_mun.pdf,EBSi 2014년 6월 고3 모의평가 수학A 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/matha_hsj.pdf,matha_hsj.pdf,EBSi 2014년 6월 고3 모의평가 수학A 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/mathb_mun.pdf,mathb_mun.pdf,EBSi 2014년 6월 고3 모의평가 수학B 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2014년 6월 고3 모의평가 수학B 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/eng_mun.pdf,eng_mun.pdf,EBSi 2014년 6월 고3 모의평가 영어 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/eng_hsj.pdf,eng_hsj.pdf,EBSi 2014년 6월 고3 모의평가 영어 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_his_mun.pdf,s_his_mun.pdf,EBSi 2014년 6월 고3 모의평가 한국사 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2014년 6월 고3 모의평가 한국사 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2014년 6월 고3 모의평가 동아시아사 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2014년 6월 고3 모의평가 동아시아사 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2014년 6월 고3 모의평가 경제 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2014년 6월 고3 모의평가 경제 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2014년 6월 고3 모의평가 윤리와 사상 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2014년 6월 고3 모의평가 윤리와 사상 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2014년 6월 고3 모의평가 한국지리 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2014년 6월 고3 모의평가 한국지리 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2014년 6월 고3 모의평가 생활과 윤리 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2014년 6월 고3 모의평가 생활과 윤리 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2014년 6월 고3 모의평가 법과정치 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2014년 6월 고3 모의평가 법과정치 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2014년 6월 고3 모의평가 사회문화 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2014년 6월 고3 모의평가 사회문화 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2014년 6월 고3 모의평가 세계지리 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2014년 6월 고3 모의평가 세계지리 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2014년 6월 고3 모의평가 세계사 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2014년 6월 고3 모의평가 세계사 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2014년 6월 고3 모의평가 화학Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 화학Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2014년 6월 고3 모의평가 화학Ⅱ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2014년 6월 고3 모의평가 화학Ⅱ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2014년 6월 고3 모의평가 지구과학Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 지구과학Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2014년 6월 고3 모의평가 지구과학Ⅱ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2014년 6월 고3 모의평가 지구과학Ⅱ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2014년 6월 고3 모의평가 생명과학Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 생명과학Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2014년 6월 고3 모의평가 생명과학Ⅱ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2014년 6월 고3 모의평가 생명과학Ⅱ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2014년 6월 고3 모의평가 물리Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 물리Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2014년 6월 고3 모의평가 물리Ⅱ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2014년 6월 고3 모의평가 물리Ⅱ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2014년 6월 고3 모의평가 농생명산업 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2014년 6월 고3 모의평가 농생명산업 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2014년 6월 고3 모의평가 상업정보 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2014년 6월 고3 모의평가 상업정보 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2014년 6월 고3 모의평가 수산해운 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2014년 6월 고3 모의평가 수산해운 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2014년 6월 고3 모의평가 가사실업 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2014년 6월 고3 모의평가 가사실업 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2014년 6월 고3 모의평가 공업 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2014년 6월 고3 모의평가 공업 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_ar1_mun.pdf,2nd_ar1_mun.pdf,EBSi 2014년 6월 고3 모의평가 아랍어Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_ar1_hsj.pdf,2nd_ar1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 아랍어Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2014년 6월 고3 모의평가 중국어Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 중국어Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2014년 6월 고3 모의평가 한문 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2014년 6월 고3 모의평가 한문 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2014년 6월 고3 모의평가 프랑스어Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 프랑스어Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2014년 6월 고3 모의평가 독일어Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 독일어Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2014년 6월 고3 모의평가 일본어Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 일본어Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2014년 6월 고3 모의평가 러시아어Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 러시아어Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2014년 6월 고3 모의평가 스페인어Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2014년 6월 고3 모의평가 스페인어Ⅰ 정답 및 해설
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_vit_mun.pdf,2nd_vit_mun.pdf,EBSi 2014년 6월 고3 모의평가 기초베트남어Ⅰ 문제
+2014,3,6,kice_mock,2014-06-12,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201406123/2nd_vit_hsj.pdf,2nd_vit_hsj.pdf,EBSi 2014년 6월 고3 모의평가 기초베트남어Ⅰ 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/sqsLwy5s_kora_mun.pdf,sqsLwy5s_kora_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 국어A형 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/cK8t859I_kora_hsj.pdf,cK8t859I_kora_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 국어A형 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/09Ek8fIp_korb_mun.pdf,09Ek8fIp_korb_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 국어B형 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/WIgRLNTa_korb_hsj.pdf,WIgRLNTa_korb_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 국어B형 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/FagA34pf_matha_mun.pdf,FagA34pf_matha_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 수학A 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/RS8LbyiD_matha_hsj.pdf,RS8LbyiD_matha_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 수학A 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/FkBfMPAF_mathb_mun.pdf,FkBfMPAF_mathb_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 수학B 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/cdnksMhG_mathb_hsj.pdf,cdnksMhG_mathb_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 수학B 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/4YdlbEwP_enga_mun.pdf,4YdlbEwP_enga_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 영어 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/wgnOsjdx_enga_hsj.pdf,wgnOsjdx_enga_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 영어 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/83sntGWI_s_his_mun.pdf,83sntGWI_s_his_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 한국사 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/xd3SiSkC_s_his_hsj.pdf,xd3SiSkC_s_his_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 한국사 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/k1Ixzl4a_s_easta_mun.pdf,k1Ixzl4a_s_easta_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 동아시아사 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/nSs21Ud9_s_easta_hsj.pdf,nSs21Ud9_s_easta_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 동아시아사 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/Dx2I5L40_s_eco_mun.pdf,Dx2I5L40_s_eco_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 경제 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/sP2Bk87w_s_eco_hsj.pdf,sP2Bk87w_s_eco_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 경제 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/ASeOxV2R_s_yrnss_mun.pdf,ASeOxV2R_s_yrnss_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 윤리와 사상 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/QHtQlGpf_s_yrnss_hsj.pdf,QHtQlGpf_s_yrnss_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 윤리와 사상 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/s8SlIZao_s_hanji_mun.pdf,s8SlIZao_s_hanji_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 한국지리 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/RdITblCB_s_hanji_hsj.pdf,RdITblCB_s_hanji_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 한국지리 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/yscXIW6J_s_ssnyr_mun.pdf,yscXIW6J_s_ssnyr_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 생활과 윤리 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/m3pHToG3_s_ssnyr_hsj.pdf,m3pHToG3_s_ssnyr_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 생활과 윤리 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/hY55ZodT_s_bnj_mun.pdf,hY55ZodT_s_bnj_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 법과정치 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/WaSOiz8J_s_bnj_hsj.pdf,WaSOiz8J_s_bnj_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 법과정치 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/4NBMmCa1_s_samun_mun.pdf,4NBMmCa1_s_samun_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 사회문화 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/kt2ireTU_s_samun_hsj.pdf,kt2ireTU_s_samun_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 사회문화 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/A7x5FRpQ_s_saeji_mun.pdf,A7x5FRpQ_s_saeji_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 세계지리 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/hjzyAmbn_s_saeji_hsj.pdf,hjzyAmbn_s_saeji_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 세계지리 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/mTP2vZXq_s_sks_mun.pdf,mTP2vZXq_s_sks_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 세계사 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/imrMh0R1_s_sks_hsj.pdf,imrMh0R1_s_sks_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 세계사 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/krbUpm0R_g_che1_mun.pdf,krbUpm0R_g_che1_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 화학Ⅰ 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/nzXotJAa_g_che1_hsj.pdf,nzXotJAa_g_che1_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/dVe5HXC9_g_che2_mun.pdf,dVe5HXC9_g_che2_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 화학Ⅱ 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/xubfedlM_g_che2_hsj.pdf,xubfedlM_g_che2_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 화학Ⅱ 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/0cIUP3Vk_g_ear1_mun.pdf,0cIUP3Vk_g_ear1_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/ifffEkZN_g_ear1_hsj.pdf,ifffEkZN_g_ear1_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/rSClxnp3_g_ear2_mun.pdf,rSClxnp3_g_ear2_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 지구과학Ⅱ 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/yd6eiCdL_g_ear2_hsj.pdf,yd6eiCdL_g_ear2_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 지구과학Ⅱ 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/AUGYbhfB_g_bio1_mun.pdf,AUGYbhfB_g_bio1_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/WF84KtG4_g_bio1_hsj.pdf,WF84KtG4_g_bio1_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/7kcO8O7T_g_bio2_mun.pdf,7kcO8O7T_g_bio2_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 생명과학Ⅱ 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/RURqYYrX_g_bio2_hsj.pdf,RURqYYrX_g_bio2_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/gAHbx4Rr_g_phy1_mun.pdf,gAHbx4Rr_g_phy1_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 물리Ⅰ 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/nu2CCbJz_g_phy1_hsj.pdf,nu2CCbJz_g_phy1_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201407103/9KeQvdzh_g_phy2_mun.pdf,9KeQvdzh_g_phy2_mun.pdf,EBSi 2014년 7월 고3 전국연합학력평가 물리Ⅱ 문제
+2014,3,7,school_mock,2014-07-10,인천광역시교육청,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201407103/s1eAjT43_g_phy2_hsj.pdf,s1eAjT43_g_phy2_hsj.pdf,EBSi 2014년 7월 고3 전국연합학력평가 물리Ⅱ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/QPyJGSS2_h3_kora_mun.pdf,QPyJGSS2_h3_kora_mun.pdf,EBSi 2014년 9월 고3 모의평가 국어A형 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/tR6j5Brr_h3_kora_hsj.pdf,tR6j5Brr_h3_kora_hsj.pdf,EBSi 2014년 9월 고3 모의평가 국어A형 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/d58ircfI_h3_korb_mun.pdf,d58ircfI_h3_korb_mun.pdf,EBSi 2014년 9월 고3 모의평가 국어B형 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/7hiSkS7g_h3_korb_hsj.pdf,7hiSkS7g_h3_korb_hsj.pdf,EBSi 2014년 9월 고3 모의평가 국어B형 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/Rzaha5mE_h3_matha_mun.pdf,Rzaha5mE_h3_matha_mun.pdf,EBSi 2014년 9월 고3 모의평가 수학A 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/KYQUgbU7_h3_matha_hsj.pdf,KYQUgbU7_h3_matha_hsj.pdf,EBSi 2014년 9월 고3 모의평가 수학A 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/6j1KQj3K_h3_mathb_mun.pdf,6j1KQj3K_h3_mathb_mun.pdf,EBSi 2014년 9월 고3 모의평가 수학B 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/nOdFicTz_h3_mathb_hsj_1.pdf,nOdFicTz_h3_mathb_hsj_1.pdf,EBSi 2014년 9월 고3 모의평가 수학B 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/CKizm40T_h3_enga_mun.pdf,CKizm40T_h3_enga_mun.pdf,EBSi 2014년 9월 고3 모의평가 영어 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/bUu2o8q3_h3_enga_hsj.pdf,bUu2o8q3_h3_enga_hsj.pdf,EBSi 2014년 9월 고3 모의평가 영어 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/foTiQKYh_h3_s_his_mun.pdf,foTiQKYh_h3_s_his_mun.pdf,EBSi 2014년 9월 고3 모의평가 한국사 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/Dtgvux74_h3_s_his_hsj.pdf,Dtgvux74_h3_s_his_hsj.pdf,EBSi 2014년 9월 고3 모의평가 한국사 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/ABtvNLep_h3_s_easta_mun.pdf,ABtvNLep_h3_s_easta_mun.pdf,EBSi 2014년 9월 고3 모의평가 동아시아사 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/TyaGWpWr_h3_s_easta_hsj.pdf,TyaGWpWr_h3_s_easta_hsj.pdf,EBSi 2014년 9월 고3 모의평가 동아시아사 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/oHW8Tf1I_h3_s_eco_mun.pdf,oHW8Tf1I_h3_s_eco_mun.pdf,EBSi 2014년 9월 고3 모의평가 경제 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/mxoKYUVs_h3_s_eco_hsj.pdf,mxoKYUVs_h3_s_eco_hsj.pdf,EBSi 2014년 9월 고3 모의평가 경제 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/UYPuj1Dc_h3_s_yrnss_mun.pdf,UYPuj1Dc_h3_s_yrnss_mun.pdf,EBSi 2014년 9월 고3 모의평가 윤리와 사상 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/YAiG6HSp_h3_s_yrnss_hsj.pdf,YAiG6HSp_h3_s_yrnss_hsj.pdf,EBSi 2014년 9월 고3 모의평가 윤리와 사상 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/kd45M4ky_h3_s_hanji_mun.pdf,kd45M4ky_h3_s_hanji_mun.pdf,EBSi 2014년 9월 고3 모의평가 한국지리 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/Md5kZxXC_h3_s_hanji_hsj.pdf,Md5kZxXC_h3_s_hanji_hsj.pdf,EBSi 2014년 9월 고3 모의평가 한국지리 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/p9PcwDYW_h3_s_ssnyr_mun.pdf,p9PcwDYW_h3_s_ssnyr_mun.pdf,EBSi 2014년 9월 고3 모의평가 생활과 윤리 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/WxiO9oRd_h3_s_ssnyr_hsj_01.pdf,WxiO9oRd_h3_s_ssnyr_hsj_01.pdf,EBSi 2014년 9월 고3 모의평가 생활과 윤리 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/HKgGcaJC_h3_s_bnj_mun.pdf,HKgGcaJC_h3_s_bnj_mun.pdf,EBSi 2014년 9월 고3 모의평가 법과정치 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/kjbZpLdn_h3_s_bnj_hsj.pdf,kjbZpLdn_h3_s_bnj_hsj.pdf,EBSi 2014년 9월 고3 모의평가 법과정치 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/kHZAPZQP_h3_s_samun_mun.pdf,kHZAPZQP_h3_s_samun_mun.pdf,EBSi 2014년 9월 고3 모의평가 사회문화 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/Kv40d7Kc_h3_s_samun_hsj.pdf,Kv40d7Kc_h3_s_samun_hsj.pdf,EBSi 2014년 9월 고3 모의평가 사회문화 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/j303wxNa_h3_s_saeji_mun.pdf,j303wxNa_h3_s_saeji_mun.pdf,EBSi 2014년 9월 고3 모의평가 세계지리 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/JkGuSKqG_h3_s_saeji_hsj.pdf,JkGuSKqG_h3_s_saeji_hsj.pdf,EBSi 2014년 9월 고3 모의평가 세계지리 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/Z3YAbek2_h3_s_sks_mun.pdf,Z3YAbek2_h3_s_sks_mun.pdf,EBSi 2014년 9월 고3 모의평가 세계사 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/lisuJnOV_h3_s_sks_hsj.pdf,lisuJnOV_h3_s_sks_hsj.pdf,EBSi 2014년 9월 고3 모의평가 세계사 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/PHiNKyKJ_h3_g_ear1_mun.pdf,PHiNKyKJ_h3_g_ear1_mun.pdf,EBSi 2014년 9월 고3 모의평가 화학Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/WjewZkYX_h3_g_ear1_hsj.pdf,WjewZkYX_h3_g_ear1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 화학Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/mqbAhKW2_h3_g_ear2_mun.pdf,mqbAhKW2_h3_g_ear2_mun.pdf,EBSi 2014년 9월 고3 모의평가 화학Ⅱ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/LwZlpPs5_h3_g_ear2_hsj.pdf,LwZlpPs5_h3_g_ear2_hsj.pdf,EBSi 2014년 9월 고3 모의평가 화학Ⅱ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/uiMbt7hv_h3_g_bio1_mun.pdf,uiMbt7hv_h3_g_bio1_mun.pdf,EBSi 2014년 9월 고3 모의평가 지구과학Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/vFCorX9B_h3_g_bio1_hsj.pdf,vFCorX9B_h3_g_bio1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 지구과학Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/0kY8fNp0_h3_g_bio2_mun.pdf,0kY8fNp0_h3_g_bio2_mun.pdf,EBSi 2014년 9월 고3 모의평가 지구과학Ⅱ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/VatC6ZUb_h3_g_bio2_hsj.pdf,VatC6ZUb_h3_g_bio2_hsj.pdf,EBSi 2014년 9월 고3 모의평가 지구과학Ⅱ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/MM7X4rBg_h3_g_che1_mun.pdf,MM7X4rBg_h3_g_che1_mun.pdf,EBSi 2014년 9월 고3 모의평가 생명과학Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/PD7Fjm0f_h3_g_che1_hsj.pdf,PD7Fjm0f_h3_g_che1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 생명과학Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/wYdka0fI_h3_g_che2_mun.pdf,wYdka0fI_h3_g_che2_mun.pdf,EBSi 2014년 9월 고3 모의평가 생명과학Ⅱ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/QTrM4PGo_h3_g_che2_hsj.pdf,QTrM4PGo_h3_g_che2_hsj.pdf,EBSi 2014년 9월 고3 모의평가 생명과학Ⅱ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/PfTlHAUc_h3_g_phy1_mun.pdf,PfTlHAUc_h3_g_phy1_mun.pdf,EBSi 2014년 9월 고3 모의평가 물리Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/gw8yTZza_h3_g_phy1_hsj.pdf,gw8yTZza_h3_g_phy1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 물리Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/pQA8U6Cu_h3_g_phy2_mun.pdf,pQA8U6Cu_h3_g_phy2_mun.pdf,EBSi 2014년 9월 고3 모의평가 물리Ⅱ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/yzC0bHwr_h3_g_phy2_hsj.pdf,yzC0bHwr_h3_g_phy2_hsj.pdf,EBSi 2014년 9월 고3 모의평가 물리Ⅱ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/Yfu2hRM1_h3_J_nsmsup_mun_1.pdf,Yfu2hRM1_h3_J_nsmsup_mun_1.pdf,EBSi 2014년 9월 고3 모의평가 농생명산업 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/YBTUA93N_h3_J_nsmsup_hsj.pdf,YBTUA93N_h3_J_nsmsup_hsj.pdf,EBSi 2014년 9월 고3 모의평가 농생명산업 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/a6rbmNmg_h3_J_supjb_mun_1.pdf,a6rbmNmg_h3_J_supjb_mun_1.pdf,EBSi 2014년 9월 고3 모의평가 상업정보 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/HvnRQguk_h3_J_supjb_hsj.pdf,HvnRQguk_h3_J_supjb_hsj.pdf,EBSi 2014년 9월 고3 모의평가 상업정보 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/fMHTs2FZ_h3_J_ssnhw_mun_1.pdf,fMHTs2FZ_h3_J_ssnhw_mun_1.pdf,EBSi 2014년 9월 고3 모의평가 수산해운 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/QTGQUEYv_h3_J_ssnhw_hsj.pdf,QTGQUEYv_h3_J_ssnhw_hsj.pdf,EBSi 2014년 9월 고3 모의평가 수산해운 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/ZmDvHbYx_h3_J_gsnsup_mun_1.pdf,ZmDvHbYx_h3_J_gsnsup_mun_1.pdf,EBSi 2014년 9월 고3 모의평가 가사실업 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/PoLMOEYz_h3_J_gsnsup_hsj.pdf,PoLMOEYz_h3_J_gsnsup_hsj.pdf,EBSi 2014년 9월 고3 모의평가 가사실업 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/ii59RkIM_h3_J_gup_mun_1.pdf,ii59RkIM_h3_J_gup_mun_1.pdf,EBSi 2014년 9월 고3 모의평가 공업 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/7XANazaf_h3_J_gup_hsj.pdf,7XANazaf_h3_J_gup_hsj.pdf,EBSi 2014년 9월 고3 모의평가 공업 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/8lmnHOBv_h3_2nd_ar1_mun.pdf,8lmnHOBv_h3_2nd_ar1_mun.pdf,EBSi 2014년 9월 고3 모의평가 아랍어Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/xb9iJCAg_h3_2nd_ar1_hsj_1.pdf,xb9iJCAg_h3_2nd_ar1_hsj_1.pdf,EBSi 2014년 9월 고3 모의평가 아랍어Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/oX2gAb8f_h3_2nd_ch1_mun.pdf,oX2gAb8f_h3_2nd_ch1_mun.pdf,EBSi 2014년 9월 고3 모의평가 중국어Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/yYI7GVHA_h3_2nd_ch1_hsj_1.pdf,yYI7GVHA_h3_2nd_ch1_hsj_1.pdf,EBSi 2014년 9월 고3 모의평가 중국어Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/3zZxKuMT_h3_2nd_han_mun.pdf,3zZxKuMT_h3_2nd_han_mun.pdf,EBSi 2014년 9월 고3 모의평가 한문 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/ueD0WeOn_h3_2nd_han_hsj.pdf,ueD0WeOn_h3_2nd_han_hsj.pdf,EBSi 2014년 9월 고3 모의평가 한문 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/8rkRyyFL_h3_2nd_fr1_mun.pdf,8rkRyyFL_h3_2nd_fr1_mun.pdf,EBSi 2014년 9월 고3 모의평가 프랑스어Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/Qrsutplh_h3_2nd_fr1_hsj.pdf,Qrsutplh_h3_2nd_fr1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 프랑스어Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/k8TRAzTF_h3_2nd_gr1_mun.pdf,k8TRAzTF_h3_2nd_gr1_mun.pdf,EBSi 2014년 9월 고3 모의평가 독일어Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/673jbAlZ_h3_2nd_gr1_hsj.pdf,673jbAlZ_h3_2nd_gr1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 독일어Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/lTWRk48o_h3_2nd_ja1_mun.pdf,lTWRk48o_h3_2nd_ja1_mun.pdf,EBSi 2014년 9월 고3 모의평가 일본어Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/ryEuJcau_h3_2nd_ja1_hsj.pdf,ryEuJcau_h3_2nd_ja1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 일본어Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/R1PDGNZz_h3_2nd_ru1_mun.pdf,R1PDGNZz_h3_2nd_ru1_mun.pdf,EBSi 2014년 9월 고3 모의평가 러시아어Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/ahL7szm8_h3_2nd_ru1_hsj.pdf,ahL7szm8_h3_2nd_ru1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 러시아어Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/xd8w5A8z_h3_2nd_sp1_mun.pdf,xd8w5A8z_h3_2nd_sp1_mun.pdf,EBSi 2014년 9월 고3 모의평가 스페인어Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/WkJqjNVt_h3_2nd_sp1_hsj.pdf,WkJqjNVt_h3_2nd_sp1_hsj.pdf,EBSi 2014년 9월 고3 모의평가 스페인어Ⅰ 정답 및 해설
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201409033/n5yIVqVW_h3_2nd_vit_mun.pdf,n5yIVqVW_h3_2nd_vit_mun.pdf,EBSi 2014년 9월 고3 모의평가 기초베트남어Ⅰ 문제
+2014,3,9,kice_mock,2014-09-03,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201409033/rx5zAa6l_h3_2nd_vit_hsj.pdf,rx5zAa6l_h3_2nd_vit_hsj.pdf,EBSi 2014년 9월 고3 모의평가 기초베트남어Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/DQ6on7gz_h3_kora_mun.pdf,DQ6on7gz_h3_kora_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 국어A형 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/3FB1FxQF_h3_kora_hsj.pdf,3FB1FxQF_h3_kora_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 국어A형 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/M83UV8wA_h3_korb_mun.pdf,M83UV8wA_h3_korb_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 국어B형 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/ddX47sFo_h3_korb_hsj.pdf,ddX47sFo_h3_korb_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 국어B형 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/ai8XKPl5_h3_matha_mun.pdf,ai8XKPl5_h3_matha_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 수학A 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/GDrPixj6_h3_matha_hsj.pdf,GDrPixj6_h3_matha_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 수학A 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/ZTCVk8xZ_h3_mathb_mun.pdf,ZTCVk8xZ_h3_mathb_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 수학B 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/zBbBdR9y_h3_mathb_hsj.pdf,zBbBdR9y_h3_mathb_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 수학B 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/dqsyWVLE_h3_eng_mun.pdf,dqsyWVLE_h3_eng_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 영어 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/WP5RvITt_h3_eng_hsj.pdf,WP5RvITt_h3_eng_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 영어 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/Vvm24Tzm_h3_s_his_mun.pdf,Vvm24Tzm_h3_s_his_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 한국사 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/KYTgetZ3_h3_s_his_hsj.pdf,KYTgetZ3_h3_s_his_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 한국사 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/hA53ZpEV_h3_s_easta_mun.pdf,hA53ZpEV_h3_s_easta_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 동아시아사 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/mkWFBXZG_h3_s_easta_hsj.pdf,mkWFBXZG_h3_s_easta_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 동아시아사 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/lWdtaGzW_h3_s_eco_mun01.pdf,lWdtaGzW_h3_s_eco_mun01.pdf,EBSi 2014년 10월 고3 전국연합학력평가 경제 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/3yZty1sh_h3_s_eco_hsj.pdf,3yZty1sh_h3_s_eco_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 경제 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/8b9ezf9C_h3_s_yrnss_mun.pdf,8b9ezf9C_h3_s_yrnss_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 윤리와 사상 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/IElR3n4D_h3_s_yrnss_hsj.pdf,IElR3n4D_h3_s_yrnss_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 윤리와 사상 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/G9yTWpRn_h3_s_hanji_mun.pdf,G9yTWpRn_h3_s_hanji_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 한국지리 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/zh0Cpg0R_h3_s_hanji_hsj.pdf,zh0Cpg0R_h3_s_hanji_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 한국지리 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/7Qs6hvfP_h3_s_ssnyr_mun.pdf,7Qs6hvfP_h3_s_ssnyr_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 생활과 윤리 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/AZScXrbw_h3_s_ssnyr_hsj.pdf,AZScXrbw_h3_s_ssnyr_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 생활과 윤리 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/Zt0p5a2r_h3_s_bnj_mun.pdf,Zt0p5a2r_h3_s_bnj_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 법과정치 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/8gPAAIwp_h3_s_bnj_hsj.pdf,8gPAAIwp_h3_s_bnj_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 법과정치 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/4AsK6ExU_h3_s_samun_mun.pdf,4AsK6ExU_h3_s_samun_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 사회문화 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/8raUMTzF_h3_s_samun_hsj.pdf,8raUMTzF_h3_s_samun_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 사회문화 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/nLJm2ZBN_h3_s_saeji_mun.pdf,nLJm2ZBN_h3_s_saeji_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 세계지리 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/CogiwHsq_h3_s_saeji_hsj.pdf,CogiwHsq_h3_s_saeji_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 세계지리 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/YmXvmmKt_h3_s_sks_mun.pdf,YmXvmmKt_h3_s_sks_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 세계사 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/rM0mkhcQ_h3_s_sks_hsj.pdf,rM0mkhcQ_h3_s_sks_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 세계사 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/BxT18j7n_h3_g_che1_mun.pdf,BxT18j7n_h3_g_che1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 화학Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/qqKgWRjf_h3_g_che1_hsj.pdf,qqKgWRjf_h3_g_che1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/Xr6nbb3M_h3_g_che2_mun.pdf,Xr6nbb3M_h3_g_che2_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 화학Ⅱ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/OsvGhcIS_h3_g_che2_hsj.pdf,OsvGhcIS_h3_g_che2_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 화학Ⅱ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/v00J6gX2_h3_g_ear1_mun.pdf,v00J6gX2_h3_g_ear1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/XdoYfYoi_h3_g_ear1_hsj.pdf,XdoYfYoi_h3_g_ear1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/B5ANH2cv_h3_g_ear2_mun.pdf,B5ANH2cv_h3_g_ear2_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 지구과학Ⅱ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/0aGltFBN_h3_g_ear2_hsj.pdf,0aGltFBN_h3_g_ear2_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 지구과학Ⅱ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/Pim9OciP_h3_g_bio1_mun.pdf,Pim9OciP_h3_g_bio1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/XkmCJiLy_h3_g_bio1_hsj.pdf,XkmCJiLy_h3_g_bio1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/NfHgIu3q_h3_g_bio2_mun.pdf,NfHgIu3q_h3_g_bio2_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 생명과학Ⅱ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/1vblaLJP_h3_g_bio2_hsj.pdf,1vblaLJP_h3_g_bio2_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/m15k4R9x_h3_g_phy1_mun.pdf,m15k4R9x_h3_g_phy1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 물리Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/C2pKFRyq_h3_g_phy1_hsj.pdf,C2pKFRyq_h3_g_phy1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/wdpOTziw_h3_g_phy2_mun.pdf,wdpOTziw_h3_g_phy2_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 물리Ⅱ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/i7Qf4vKh_h3_g_phy2_hsj.pdf,i7Qf4vKh_h3_g_phy2_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 물리Ⅱ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/cYTjr8cU_h3_J_nsmsup_mun.pdf,cYTjr8cU_h3_J_nsmsup_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 농생명산업 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/6xfPTeip_h3_J_nsmsup_hsj.pdf,6xfPTeip_h3_J_nsmsup_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 농생명산업 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/d2VqKwRP_h3_J_supjb_mun.pdf,d2VqKwRP_h3_J_supjb_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 상업정보 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/QIWDO3hR_h3_J_supjb_hsj.pdf,QIWDO3hR_h3_J_supjb_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 상업정보 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/DT6Z3Lst_h3_J_ssnhw_mun.pdf,DT6Z3Lst_h3_J_ssnhw_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 수산해운 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/PGtPrPrv_h3_J_ssnhw_hsj.pdf,PGtPrPrv_h3_J_ssnhw_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 수산해운 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/CWO6hm8U_h3_J_gsnsup_mun.pdf,CWO6hm8U_h3_J_gsnsup_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 가사실업 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/a8d9Ee4z_h3_J_gsnsup_hsj.pdf,a8d9Ee4z_h3_J_gsnsup_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 가사실업 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/68V8zDv6_h3_J_gup_mun.pdf,68V8zDv6_h3_J_gup_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 공업 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/0gxapzha_h3_J_gup_hsj.pdf,0gxapzha_h3_J_gup_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 공업 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/9D9DQVXw_h3_2nd_ch1_mun.pdf,9D9DQVXw_h3_2nd_ch1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 중국어Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/R1IM9QX2_h3_2nd_ch1_hsj.pdf,R1IM9QX2_h3_2nd_ch1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 중국어Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/CvY3PUKI_h3_2nd_han_mun.pdf,CvY3PUKI_h3_2nd_han_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 한문 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/Ys5CRTYB_h3_2nd_han_hsj.pdf,Ys5CRTYB_h3_2nd_han_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 한문 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/EcyhJzqN_h3_2nd_fr1_mun.pdf,EcyhJzqN_h3_2nd_fr1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 프랑스어Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/wiGnSqJI_h3_2nd_fr1_hsj.pdf,wiGnSqJI_h3_2nd_fr1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 프랑스어Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/lJbSorxT_h3_2nd_gr1_mun.pdf,lJbSorxT_h3_2nd_gr1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 독일어Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/jtRpeVPO_h3_2nd_gr1_hsj.pdf,jtRpeVPO_h3_2nd_gr1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 독일어Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/CTp2hFOW_h3_2nd_ja1_mun.pdf,CTp2hFOW_h3_2nd_ja1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 일본어Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/d8T408Oh_h3_2nd_ja1_hsj.pdf,d8T408Oh_h3_2nd_ja1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 일본어Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/c0y82gv5_h3_2nd_ru1_mun.pdf,c0y82gv5_h3_2nd_ru1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 러시아어Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/Gmz8Phg8_h3_2nd_ru1_hsj.pdf,Gmz8Phg8_h3_2nd_ru1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 러시아어Ⅰ 정답 및 해설
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201410073/VMb5UWgP_h3_2nd_sp1_mun.pdf,VMb5UWgP_h3_2nd_sp1_mun.pdf,EBSi 2014년 10월 고3 전국연합학력평가 스페인어Ⅰ 문제
+2014,3,10,school_mock,2014-10-07,서울특별시교육청,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201410073/1A83xiDd_h3_2nd_sp1_hsj.pdf,1A83xiDd_h3_2nd_sp1_hsj.pdf,EBSi 2014년 10월 고3 전국연합학력평가 스페인어Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Vc5gm6qv_h3_kora1_mun.pdf,Vc5gm6qv_h3_kora1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 국어A형 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/NDa2lD4P_h3_kora1_hsj.pdf,NDa2lD4P_h3_kora1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 국어A형 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/F53xqSHP_h3_korb1_mun.pdf,F53xqSHP_h3_korb1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 국어B형 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/GiqgqGMF_h3_korb1_hsj_1.pdf,GiqgqGMF_h3_korb1_hsj_1.pdf,EBSi 2014년 11월 고3 대학수학능력시험 국어B형 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/nXGThLvY_h3_matha1_mun.pdf,nXGThLvY_h3_matha1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 수학A 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/E4G6A5ISB_h3_matha1_hsj.pdf,E4G6A5ISB_h3_matha1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 수학A 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/woRRMcA9_h3_mathb1_mun.pdf,woRRMcA9_h3_mathb1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 수학B 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Nl9lSPsr_h3_mathb1_hs_1.pdf,Nl9lSPsr_h3_mathb1_hs_1.pdf,EBSi 2014년 11월 고3 대학수학능력시험 수학B 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/xPx83BcT_h3_enga1_mun.pdf,xPx83BcT_h3_enga1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 영어 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/JKsEbUM5_h3_enga1_hsj_2.pdf,JKsEbUM5_h3_enga1_hsj_2.pdf,EBSi 2014년 11월 고3 대학수학능력시험 영어 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/LktrLEzd_h3_s_his_mun.pdf,LktrLEzd_h3_s_his_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 한국사 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/5QKLWXGV_h3_s_his_hsj.pdf,5QKLWXGV_h3_s_his_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 한국사 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/VrEIlOAP_h3_s_easta_mun.pdf,VrEIlOAP_h3_s_easta_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 동아시아사 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/8keTBEbE_h3_s_easta_hsj.pdf,8keTBEbE_h3_s_easta_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 동아시아사 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/UzgsS783_h3_s_eco_mun.pdf,UzgsS783_h3_s_eco_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 경제 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/6kAX6Irb_h3_s_eco_hsj.pdf,6kAX6Irb_h3_s_eco_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 경제 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/pf6dKy43_h3_s_yrnss_mun.pdf,pf6dKy43_h3_s_yrnss_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 윤리와 사상 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/DCOTSt39_h3_s_yrnss_hsj.pdf,DCOTSt39_h3_s_yrnss_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 윤리와 사상 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/VreImjVT_h3_s_hanji_mun.pdf,VreImjVT_h3_s_hanji_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 한국지리 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/4IUHOr0G_h3_s_hanji_hsj_2.pdf,4IUHOr0G_h3_s_hanji_hsj_2.pdf,EBSi 2014년 11월 고3 대학수학능력시험 한국지리 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/l8v505vy_h3_s_ssnyr_mun.pdf,l8v505vy_h3_s_ssnyr_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 생활과 윤리 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/QEwGlyrg_h3_s_ssnyr_hsj.pdf,QEwGlyrg_h3_s_ssnyr_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 생활과 윤리 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/0gmkLGeq_h3_s_bnj_mun.pdf,0gmkLGeq_h3_s_bnj_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 법과정치 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Jy8JZYPf_h3_s_bnj_hsj_2.pdf,Jy8JZYPf_h3_s_bnj_hsj_2.pdf,EBSi 2014년 11월 고3 대학수학능력시험 법과정치 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/h1VqQdoA_h3_s_samun_mun.pdf,h1VqQdoA_h3_s_samun_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 사회문화 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/nRtU4RFu_h3_s_samun_hsj.pdf,nRtU4RFu_h3_s_samun_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 사회문화 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/tgBQZfv4_h3_s_saeji_mun.pdf,tgBQZfv4_h3_s_saeji_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 세계지리 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/jl4OsXYs_h3_s_saeji_hsj_1.pdf,jl4OsXYs_h3_s_saeji_hsj_1.pdf,EBSi 2014년 11월 고3 대학수학능력시험 세계지리 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Xnp7lzFL_h3_s_sks_mun.pdf,Xnp7lzFL_h3_s_sks_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 세계사 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/zWhOuUaJ_h3_s_sks_hsj.pdf,zWhOuUaJ_h3_s_sks_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 세계사 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/FY1R1ybS_h3_g_che1_mun.pdf,FY1R1ybS_h3_g_che1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 화학Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Fz6Tt6Zp_h3_g_che1_hsj.pdf,Fz6Tt6Zp_h3_g_che1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 화학Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/ykxwFLnD_h3_g_che2_mun.pdf,ykxwFLnD_h3_g_che2_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 화학Ⅱ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/FgkASNpl_h3_g_che2_hsj.pdf,FgkASNpl_h3_g_che2_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 화학Ⅱ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/G0DpWhkR_h3_g_ear1_mun.pdf,G0DpWhkR_h3_g_ear1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 지구과학Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/r6gz1Lz7_h3_g_ear1_hsj.pdf,r6gz1Lz7_h3_g_ear1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 지구과학Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/ccDoXlFg_h3_g_ear2_mun.pdf,ccDoXlFg_h3_g_ear2_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 지구과학Ⅱ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/bIAMNZFl_h3_g_ear2_hsj.pdf,bIAMNZFl_h3_g_ear2_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 지구과학Ⅱ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Kci4xxtR_h3_g_bio1_mun.pdf,Kci4xxtR_h3_g_bio1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 생명과학Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/XX8jvJvX_h3_g_bio1_hsj_1.pdf,XX8jvJvX_h3_g_bio1_hsj_1.pdf,EBSi 2014년 11월 고3 대학수학능력시험 생명과학Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/qtFpsTfQ_h3_g_bio2_mun.pdf,qtFpsTfQ_h3_g_bio2_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 생명과학Ⅱ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/KOWO4fxU_h3_g_bio2_hsj_1.pdf,KOWO4fxU_h3_g_bio2_hsj_1.pdf,EBSi 2014년 11월 고3 대학수학능력시험 생명과학Ⅱ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/iP3ih1oV_h3_g_phy1_mun.pdf,iP3ih1oV_h3_g_phy1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 물리Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/xYi2zQzG_h3_g_phy1_hsj.pdf,xYi2zQzG_h3_g_phy1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 물리Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/zfYJlTFD_h3_g_phy2_mun.pdf,zfYJlTFD_h3_g_phy2_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 물리Ⅱ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/NXSqVdus_h3_g_phy2_hsj.pdf,NXSqVdus_h3_g_phy2_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 물리Ⅱ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/H78TI2vG_h3_J_nsmsup_mun.pdf,H78TI2vG_h3_J_nsmsup_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 농생명산업 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/J2IKkVmk_h3_J_nsmsup_hsj.pdf,J2IKkVmk_h3_J_nsmsup_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 농생명산업 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/PUR4UV6r_h3_J_supjb_mun.pdf,PUR4UV6r_h3_J_supjb_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 상업정보 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/jchLlG0J_h3_J_supjb_hsj.pdf,jchLlG0J_h3_J_supjb_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 상업정보 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/adWd7Kki_h3_J_ssnhw_mun.pdf,adWd7Kki_h3_J_ssnhw_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 수산해운 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/82H6hm0a_h3_J_ssnhw_hsj.pdf,82H6hm0a_h3_J_ssnhw_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 수산해운 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/3Q8qeRny_h3_J_gsnsup_mun.pdf,3Q8qeRny_h3_J_gsnsup_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 가사실업 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/c0xJK5Ou_h3_J_gsnsup_hsj.pdf,c0xJK5Ou_h3_J_gsnsup_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 가사실업 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Lb8bAyjS_h3_J_gup_mun.pdf,Lb8bAyjS_h3_J_gup_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 공업 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/y6aC26VM_h3_J_gup_hsj.pdf,y6aC26VM_h3_J_gup_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 공업 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/8z2etaV4_h3_2nd_ar1_mun.pdf,8z2etaV4_h3_2nd_ar1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 아랍어Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/ThYxtUOw_h3_2nd_ar1_hsj.pdf,ThYxtUOw_h3_2nd_ar1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 아랍어Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/27yqY2uL_h3_2nd_ch1_mun.pdf,27yqY2uL_h3_2nd_ch1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 중국어Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Oe5OW7n1_h3_2nd_ch1_hsj.pdf,Oe5OW7n1_h3_2nd_ch1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 중국어Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/aZjPg3qQ_h3_2nd_han_mun.pdf,aZjPg3qQ_h3_2nd_han_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 한문 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/WfqvaHUh_h3_2nd_han_hsj.pdf,WfqvaHUh_h3_2nd_han_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 한문 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/tt5Imwix_h3_2nd_fr1_mun.pdf,tt5Imwix_h3_2nd_fr1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 프랑스어Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/DHstgNog_h3_2nd_fr1_hsj.pdf,DHstgNog_h3_2nd_fr1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 프랑스어Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/LIDAs3zz_h3_2nd_gr1_mun.pdf,LIDAs3zz_h3_2nd_gr1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 독일어Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/7Y2m8DlK_h3_2nd_gr1_hsj.pdf,7Y2m8DlK_h3_2nd_gr1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 독일어Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/UeHStryx_h3_2nd_ja1_mun.pdf,UeHStryx_h3_2nd_ja1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 일본어Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/F5Bwhpdf_h3_2nd_ja1_hsj.pdf,F5Bwhpdf_h3_2nd_ja1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 일본어Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/S4MVIGcC_h3_2nd_ru1_mun.pdf,S4MVIGcC_h3_2nd_ru1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 러시아어Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/Gc8X3gjv_h3_2nd_ru1_hsj.pdf,Gc8X3gjv_h3_2nd_ru1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 러시아어Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/5Or55JP7_h3_2nd_sp1_mun.pdf,5Or55JP7_h3_2nd_sp1_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 스페인어Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/IOFUHopH_h3_2nd_sp1_hsj.pdf,IOFUHopH_h3_2nd_sp1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 스페인어Ⅰ 정답 및 해설
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/C2hB4dpz_h3_2nd_vit_mun.pdf,C2hB4dpz_h3_2nd_vit_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 기초베트남어Ⅰ 문제
+2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/vvKINiyJ_h3_2nd_vit_hsj.pdf,vvKINiyJ_h3_2nd_vit_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 기초베트남어Ⅰ 정답 및 해설

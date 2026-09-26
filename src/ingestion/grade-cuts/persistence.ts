@@ -14,12 +14,12 @@ import type { GradeCutEntry } from "../../lib/data/types";
 import { gradingMode } from "../../lib/grade-cut-mode";
 import {
   cutsFingerprint,
-  normalizeCuts,
   type CollectedGradeCut,
   type WatchExam,
   type WatchSlot,
   type WatchStore,
 } from "./core";
+import { checkCuts, checkSourceUrl } from "./validate";
 
 export interface CutInput {
   examId: string;
@@ -45,16 +45,11 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
     .limit(1);
   if (!exam || gradingMode(exam, input.subject) !== "relative")
     throw new Error("fixed or unverified grading mode does not accept grade-cut rows");
-  const cuts = normalizeCuts(input.cuts);
+  // 만점 초과 · 형식 오류 · 공식 출처 도메인 아님 → 저장하지 않는다 (공식 여부는 출처로만 정함)
+  const cuts = checkCuts(input.subject, input.cuts);
   const fingerprint = cutsFingerprint(cuts);
-  const url = new URL(input.sourceUrl);
-  if (
-    url.protocol !== "https:" ||
-    url.username ||
-    url.password ||
-    !Number.isFinite(input.observedAt.getTime())
-  )
-    throw new Error("invalid grade cut provenance");
+  const url = checkSourceUrl(input.source, input.sourceUrl);
+  if (!Number.isFinite(input.observedAt.getTime())) throw new Error("invalid grade cut provenance");
   return db.transaction(async (tx) => {
     const slot = and(
       eq(gradeCuts.examId, input.examId),

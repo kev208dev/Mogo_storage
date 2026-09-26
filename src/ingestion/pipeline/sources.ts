@@ -7,6 +7,7 @@ import type { SourceHealth, SourceConfig } from "../types";
 import { BUILTIN_SOURCES, DEFAULT_SOURCE_PRIORITIES } from "../sources/config";
 import { envEnabled } from "../sources/registry";
 import { activationBlockers, currentParserVersion, isLiveVerified } from "../sources/verification";
+import { isCapabilityPolicyBlocked, policyBlockers } from "../sources/policy";
 import { IngestionError } from "../errors";
 import { syncCourseCatalog } from "./course-aliases";
 
@@ -170,7 +171,7 @@ export async function setSourceEnabled(
   const [row] = await db.select().from(examSources).where(eq(examSources.id, sourceId));
   if (!row) throw new IngestionError("NOT_FOUND", `source ${sourceId} not found`);
   if (enabled) {
-    const blockers = activationBlockers(row, now);
+    const blockers = [...policyBlockers(row.id), ...activationBlockers(row, now)];
     if (blockers.length) {
       throw new IngestionError(
         "SOURCE_NOT_VERIFIED",
@@ -213,6 +214,11 @@ export async function setSourceCapability(
 ) {
   const [row] = await db.select().from(examSources).where(eq(examSources.id, sourceId));
   if (!row) throw new IngestionError("NOT_FOUND", `source ${sourceId} not found`);
+  if (on && isCapabilityPolicyBlocked(row.id, capability))
+    throw new IngestionError(
+      "SOURCE_NOT_VERIFIED",
+      `${row.name}: ${capability} 는 정책상 자동화할 수 없습니다 (robots/이용조건 — docs/SOURCE_SURVEY.md).`,
+    );
   if (on) {
     if (!row.enabled || !isLiveVerified(row.kind, row)) {
       throw new IngestionError(

@@ -65,6 +65,47 @@ year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,off
 실제 시험(`is_sample=false`)으로 전환합니다. 승인 전에는 샘플 페이지가 그대로이고, 입력된 URL 은 공개되지 않습니다.
 운영 DB 에는 `npm run db:seed`(샘플)를 실행하지 않는 것을 권장합니다.
 
+### 보류 사유 · 근거 · 충돌 · 짝 추천
+
+검토 대기 행마다 다음이 함께 보입니다 (`artifact_review_notes`, 상태는 바꾸지 않음).
+
+- **보류 사유** (`no_exam_identity` · `grade_ambiguous` · `course_ambiguous` · `slot_conflict` · `url_check_failed` · `duplicate_file` …) 와 근거 목록
+  (검색 결과 제목, URL 확인 결과, 브라우저 확인, 1쪽 머리말, 문서 안 시험 문구, 분류 경로·점수).
+- **충돌:** 같은 URL 이 다른 슬롯에도 연결됨(빨강) · 이 슬롯에 다른 URL 이 이미 게시됨(노랑) · 같은 URL 이 이미 게시됨(확정적 중복).
+- **짝 자료:** 같은 시험·슬롯의 문제↔정답·해설 상태.
+
+자동 정리는 **확정적인 경우만** 합니다: [확정적 중복 정리] 는 같은 슬롯에 같은 URL 이 이미 게시된 검토 대기 행만 `failed(duplicate)` 로 닫습니다.
+그 외(다른 URL, 다른 슬롯)는 사람이 판단하도록 남깁니다 — 검토 대기 수를 억지로 0 으로 만들지 않습니다.
+
+근거 파일 붙이기 (브라우저 검증 기록 `{records:[…]}` 또는 `[{url, reasonCode?, reason?, evidence:[…]}]`):
+
+```bash
+npm run import:official-urls -- --evidence=verification.json --admin=ops@example.com   # CSV 없이 근거만
+```
+
+### 승인에서 배우는 매핑 규칙
+
+EBSi 파일명 코드(예: `s_samun` → 사회·문화)가 승인되면 `review_mapping_rules` 에 규칙이 쌓입니다(승인 횟수 기록).
+같은 코드가 다른 과목으로 승인되면 규칙은 확정적이지 않으므로 **삭제**됩니다.
+공통 과목 코드, 학년에 따라 뜻이 바뀌는 코드(`sat`/`gat`), 짝수형/홀수형 등 변형, 고1 3월 자료는 규칙을 만들지 않습니다.
+
+## 4-1. 후보 자동 생성 (공개 색인 결과 → CSV)
+
+공개 검색 색인에서 모은 `[{url, title, query}]` JSON 으로 CSV 후보를 만듭니다. URL 을 만들거나 추측하지 않고, 입력 URL 만 분류합니다.
+
+```bash
+npm run import:candidates -- --in=found.json --out=data/imports/candidates.csv [--year=2025] [--check-urls]
+npm run import:official-urls -- --file=data/imports/candidates.csv --admin=<email> --evidence=data/imports/candidates.csv.evidence.json
+```
+
+- 제목의 시험(연도·월·학년)·과목을 확인하고, 제목에 과목이 없으면 승인된 매핑 규칙 → 파일명 코드 순으로 분류합니다.
+  확실하지 않으면 CSV 에 넣지 않고 `<out>.held.json` 에 사유와 함께 남깁니다 (과목 불일치 · 학년 모호 · 슬롯 충돌 · 변형 파일 …).
+- 점수는 근거 강도(제목 확인 / 승인 규칙 / 코드 추정)이며, 어떤 점수든 **자동 게시하지 않습니다**. 모든 행은 검토 대기로 들어갑니다.
+- `--check-urls`: 정책상 파일 요청이 허용된 호스트(현재 robots.txt 제한이 없는 `wdown.ebsi.co.kr`)만 SafeFetcher 로 앞 1KB 를 받아
+  HTTP 200 · PDF 서명 · 오디오 형식을 확인합니다 (https · allowlist · redirect 재검증 · 사설 IP 차단 · 요청 간격). 실패하면 보류합니다.
+  KICE·교육청 URL 은 요청하지 않습니다. 서버(웹 앱)는 여전히 입력 URL 에 요청하지 않습니다.
+- `DATABASE_URL` 이 있으면 승인된 매핑 규칙을 재사용합니다.
+
 ## 5. 확인
 
 ```bash

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ExamSubjectView } from "@/components/exam/ExamSubjectView";
 import { isCourseCode } from "@/lib/courses";
-import { getExam, getExamSubjects, getRepository, getSubjectDetail } from "@/lib/data";
+import { getExam, getExamSubjects, getSubjectDetail } from "@/lib/data";
 import { buildExamMetadata, upcomingDate } from "@/lib/exam-metadata";
 import {
   gradeSegment,
@@ -15,17 +15,13 @@ import {
 import { resolveExamKey } from "@/lib/exam-route";
 
 // 세부과목 페이지: /exam/2026/high3/09/social/social-culture
+// 전체 세부과목을 빌드 시 미리 생성하면 수천 페이지가 되어 Vercel build timeout을 초과한다.
+// 빈 static params + ISR로 요청된 경로만 최초 접근 시 생성하고 이후 1시간 재사용한다.
 export const revalidate = 3600;
+export const dynamicParams = true;
 
-export async function generateStaticParams() {
-  const paths = await getRepository().listExamCoursePaths();
-  return paths.map(({ exam, course }) => ({
-    year: String(exam.year),
-    grade: gradeSegment(exam.grade),
-    month: monthSegment(exam.month),
-    subject: subjectSegment(course.subject),
-    course: course.code,
-  }));
+export function generateStaticParams() {
+  return [];
 }
 
 type Props = PageProps<"/exam/[year]/[grade]/[month]/[subject]/[course]">;

@@ -142,12 +142,23 @@ async function runTask(task: Task): Promise<TaskOutcome> {
                   collected: source.collected,
                   changed: source.changed,
                   finalized: source.finalized,
+                  rejected: source.rejected,
                   failures: Number(source.failed),
                   duration_ms: source.durationMs,
                 }),
               ),
             (current) => {
               progress = current;
+              if (current.stage === "reject_cut")
+                console.warn(
+                  JSON.stringify({
+                    event: "grade_cut_watch.rejected",
+                    exam: current.exam,
+                    subject: current.subject,
+                    course: current.course,
+                    reason: current.reason,
+                  }),
+                );
             },
           ),
         (stage) => {

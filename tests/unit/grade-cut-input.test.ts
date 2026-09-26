@@ -53,8 +53,8 @@ describe("grade cut bulk csv", () => {
   it("parses multiple rows without fetching source URLs", () => {
     const csv = [
       "year,grade,month,subject,course_code,source,source_url,cuts",
-      '2025,3,9,korean,,official,https://example.com/a,"1:88;2:80;3:72"',
-      '2025,3,9,math,calculus,megastudy,https://example.com/b,"1:92;2:84"',
+      '2025,3,9,korean,,official,https://www.suneung.re.kr/a,"1:88;2:80;3:72"',
+      '2025,3,9,math,calculus,megastudy,https://m.megastudy.net/b,"1:92;2:84"',
     ].join("\n");
     const result = parseGradeCutCsv(csv);
     expect(result.invalid).toEqual([]);
@@ -70,8 +70,8 @@ describe("grade cut bulk csv", () => {
   it("reports invalid rows while keeping valid rows", () => {
     const csv = [
       "year,grade,month,subject,course_code,source,source_url,cuts",
-      '2025,3,9,korean,,official,https://example.com/a,"1:88;2:80"',
-      '2025,4,9,korean,,official,https://example.com/b,"1:88"',
+      '2025,3,9,korean,,official,https://www.suneung.re.kr/a,"1:88;2:80"',
+      '2025,4,9,korean,,official,https://www.suneung.re.kr/b,"1:88"',
     ].join("\n");
     const result = parseGradeCutCsv(csv);
     expect(result.rows).toHaveLength(1);

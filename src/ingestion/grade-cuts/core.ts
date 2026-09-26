@@ -1,6 +1,7 @@
 import type { ExamType, GradeCutSource, Subject } from "../../lib/constants";
 import type { GradeCutEntry } from "../../lib/data/types";
 import { gradingMode } from "../../lib/grade-cut-mode";
+import { dedupeCollected, GradeCutValidationError, validateGradeCut } from "./validate";
 
 export type AdapterStatus = "automated_verified" | "disabled_unverified" | "disabled_policy";
 export type WatchStatus = "waiting" | "watching" | "finalized" | "failed";
@@ -108,6 +109,8 @@ export interface WatchSourceEvent {
   collected: number;
   changed: number;
   finalized: number;
+  /** 검증 실패(만점 초과 · 출처 도메인 불일치 · 관측 시각 등)나 같은 슬롯 모순으로 버린 값 */
+  rejected: number;
   failed: boolean;
   durationMs: number;
 }
@@ -116,6 +119,7 @@ export type WatchStage =
   | "load_slots"
   | "adapter_collect"
   | "source_failure"
+  | "reject_cut"
   | "persist_cut"
   | "revalidate"
   | "source_event"
@@ -125,6 +129,7 @@ export interface WatchProgress {
   exam?: string;
   subject?: Subject;
   course?: string | null;
+  reason?: string;
 }
 
 /** Adapter errors are isolated; persistence errors still surface so a broken DB is visible to operations. */
@@ -183,6 +188,7 @@ export async function runGradeCutWatch(
           collected: 0,
           changed: 0,
           finalized: 0,
+          rejected: 0,
           failed: true,
           durationMs: Date.now() - started,
         });
@@ -191,11 +197,44 @@ export async function runGradeCutWatch(
       for (const slot of requested) polled.add(slotKey(slot));
       let changedCount = 0;
       let finalizedCount = 0;
+      let rejectedCount = 0;
       const requestedKeys = new Set(requested.map(slotKey));
-      for (const value of collected) {
-        if (!requestedKeys.has(slotKey(value))) continue;
-        const slot = active.get(slotKey(value));
+      // 한 번의 수집에서 같은 슬롯 값이 서로 다르면 어느 쪽도 저장하지 않는다
+      const { kept, conflicting } = dedupeCollected(collected, slotKey);
+      for (const key of conflicting) {
+        rejectedCount++;
+        onProgress?.({ stage: "reject_cut", exam: exam.id, reason: `conflict:${key}` });
+      }
+      for (const raw of kept) {
+        if (!requestedKeys.has(slotKey(raw))) continue;
+        const slot = active.get(slotKey(raw));
         if (!slot) continue; // wrong course or exam mapping must never create a DB row
+        let value: CollectedGradeCut;
+        try {
+          value = {
+            ...raw,
+            ...validateGradeCut({
+              exam,
+              subject: slot.subject,
+              source: adapter.source,
+              sourceUrl: raw.sourceUrl,
+              cuts: raw.cuts,
+              observedAt: raw.observedAt,
+              now,
+            }),
+          };
+        } catch (error) {
+          if (!(error instanceof GradeCutValidationError)) throw error;
+          rejectedCount++;
+          onProgress?.({
+            stage: "reject_cut",
+            exam: exam.id,
+            subject: slot.subject,
+            course: slot.courseCode,
+            reason: error.problem,
+          });
+          continue;
+        }
         onProgress?.({
           stage: "persist_cut",
           exam: exam.id,
@@ -227,6 +266,7 @@ export async function runGradeCutWatch(
         collected: collected.length,
         changed: changedCount,
         finalized: finalizedCount,
+        rejected: rejectedCount,
         failed: false,
         durationMs: Date.now() - started,
       });

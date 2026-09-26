@@ -59,6 +59,12 @@ function mockStore(initial: WatchSlot[]) {
   };
   return { store, slots, values, snapshots };
 }
+const URLS: Record<GradeCutAdapter["source"], string> = {
+  official: "https://www.suneung.re.kr/cut",
+  megastudy: "https://m.megastudy.net/cut",
+  daesung: "https://www.mimacstudy.com/cut",
+  ebs: "https://www.ebsi.co.kr/cut",
+};
 function adapter(
   source: GradeCutAdapter["source"],
   subject: WatchSlot["subject"],
@@ -73,7 +79,7 @@ function adapter(
         courseCode: null,
         cuts: [{ grade: 1, rawScore: score }],
         observedAt: after,
-        sourceUrl: "https://example.org/cut",
+        sourceUrl: URLS[source],
       },
     ]),
   };
@@ -152,7 +158,7 @@ describe("grade cut watch", () => {
           courseCode: slot.courseCode,
           cuts: [{ grade: 1, rawScore: 47 }],
           observedAt: after,
-          sourceUrl: "https://example.org/cut",
+          sourceUrl: URLS.megastudy,
         })),
       ),
     };
@@ -268,7 +274,7 @@ describe("grade cut watch", () => {
           subject: "social",
           courseCode: "wrong",
           cuts: [{ grade: 1, rawScore: 85 }],
-          sourceUrl: "https://example.org",
+          sourceUrl: URLS.megastudy,
           observedAt: after,
         },
       ],

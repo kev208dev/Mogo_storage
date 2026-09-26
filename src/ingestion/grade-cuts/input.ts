@@ -6,13 +6,9 @@ import {
   type Subject,
 } from "../../lib/constants";
 import { parseCsv } from "../manual-import/csv";
+import { checkCuts, checkSourceUrl, GradeCutInputError } from "./validate";
 
-export class GradeCutInputError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "GradeCutInputError";
-  }
-}
+export { GradeCutInputError } from "./validate";
 
 /**
  * 관리자 입력용 등급컷 parser.
@@ -155,8 +151,11 @@ export function parseGradeCutCsv(text: string): {
         subject: subjectRaw as Subject,
         courseCode: courseRaw || null,
         source: sourceRaw as GradeCutSource,
-        sourceUrl: parseGradeCutSourceUrl(urlRaw ?? ""),
-        cuts: parseGradeCutEntries(cutsRaw ?? ""),
+        sourceUrl: checkSourceUrl(
+          sourceRaw as GradeCutSource,
+          parseGradeCutSourceUrl(urlRaw ?? ""),
+        ).toString(),
+        cuts: checkCuts(subjectRaw as Subject, parseGradeCutEntries(cutsRaw ?? "")),
       });
     } catch (error) {
       invalid.push({

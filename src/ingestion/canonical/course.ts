@@ -114,6 +114,11 @@ export function resolveCourse(
 
   // 2) 카탈로그 (가장 긴 일치)
   const candidates = CATALOG_ENTRIES.filter((e) => inSubject(e.code))
+    .filter((e) => {
+      const course = COURSE_CATALOG.find((c) => c.code === e.code);
+      const legacyOnly = course?.regimes.every((r) => r.regime === "legacy");
+      return !legacyOnly || options.regime === "legacy";
+    })
     .filter((e) => (e.kind === "alias" ? stripped.includes(e.key) : stripped === e.key))
     .sort((a, b) => b.key.length - a.key.length);
   const best = candidates[0];

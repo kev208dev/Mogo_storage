@@ -4,7 +4,7 @@
   "records": [
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090311/kor_mun.pdf",
-      "slot": "2009 고1 3월 school_mock korean/ question",
+      "slot": "2009 고1 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -24,7 +24,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090311/kor_hsj.pdf",
-      "slot": "2009 고1 3월 school_mock korean/ solution",
+      "slot": "2009 고1 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -44,7 +44,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090311/math_mun.pdf",
-      "slot": "2009 고1 3월 school_mock math/ question",
+      "slot": "2009 고1 3월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -64,7 +64,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090311/math_hsj.pdf",
-      "slot": "2009 고1 3월 school_mock math/ solution",
+      "slot": "2009 고1 3월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -84,7 +84,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090311/eng_mun.pdf",
-      "slot": "2009 고1 3월 school_mock english/ question",
+      "slot": "2009 고1 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -104,7 +104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090311/eng_hsj.pdf",
-      "slot": "2009 고1 3월 school_mock english/ solution",
+      "slot": "2009 고1 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -164,7 +164,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090617/kor_mun.pdf",
-      "slot": "2009 고1 6월 school_mock korean/ question",
+      "slot": "2009 고1 6월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -184,7 +184,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090617/kor_hsj.pdf",
-      "slot": "2009 고1 6월 school_mock korean/ solution",
+      "slot": "2009 고1 6월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -204,7 +204,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090617/math_mun.pdf",
-      "slot": "2009 고1 6월 school_mock math/ question",
+      "slot": "2009 고1 6월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -224,7 +224,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090617/math_hsj.pdf",
-      "slot": "2009 고1 6월 school_mock math/ solution",
+      "slot": "2009 고1 6월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -244,7 +244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090617/eng_mun.pdf",
-      "slot": "2009 고1 6월 school_mock english/ question",
+      "slot": "2009 고1 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -264,7 +264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090617/eng_hsj.pdf",
-      "slot": "2009 고1 6월 school_mock english/ solution",
+      "slot": "2009 고1 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -324,7 +324,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090917/kor_mun.pdf",
-      "slot": "2009 고1 9월 school_mock korean/ question",
+      "slot": "2009 고1 9월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -344,7 +344,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090917/kor_hsj.pdf",
-      "slot": "2009 고1 9월 school_mock korean/ solution",
+      "slot": "2009 고1 9월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -364,7 +364,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090917/math_mun.pdf",
-      "slot": "2009 고1 9월 school_mock math/ question",
+      "slot": "2009 고1 9월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -384,7 +384,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090917/math_hsj.pdf",
-      "slot": "2009 고1 9월 school_mock math/ solution",
+      "slot": "2009 고1 9월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -404,7 +404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090917/eng_mun.pdf",
-      "slot": "2009 고1 9월 school_mock english/ question",
+      "slot": "2009 고1 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -424,7 +424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090917/eng_hsj.pdf",
-      "slot": "2009 고1 9월 school_mock english/ solution",
+      "slot": "2009 고1 9월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -484,7 +484,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091118/kor_mun.pdf",
-      "slot": "2009 고1 11월 school_mock korean/ question",
+      "slot": "2009 고1 11월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -504,7 +504,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091118/kor_hsj.pdf",
-      "slot": "2009 고1 11월 school_mock korean/ solution",
+      "slot": "2009 고1 11월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -524,7 +524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091118/math_mun.pdf",
-      "slot": "2009 고1 11월 school_mock math/ question",
+      "slot": "2009 고1 11월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -544,7 +544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091118/math_hsj.pdf",
-      "slot": "2009 고1 11월 school_mock math/ solution",
+      "slot": "2009 고1 11월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -564,7 +564,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091118/eng_mun.pdf",
-      "slot": "2009 고1 11월 school_mock english/ question",
+      "slot": "2009 고1 11월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -584,7 +584,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091118/eng_hsj.pdf",
-      "slot": "2009 고1 11월 school_mock english/ solution",
+      "slot": "2009 고1 11월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -924,7 +924,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090618/s_his_mun.pdf",
-      "slot": "2009 고2 6월 school_mock history/ question",
+      "slot": "2009 고2 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -944,7 +944,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090618/s_his_hsj.pdf",
-      "slot": "2009 고2 6월 school_mock history/ solution",
+      "slot": "2009 고2 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1684,7 +1684,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090918/s_his_mun.pdf",
-      "slot": "2009 고2 9월 school_mock history/ question",
+      "slot": "2009 고2 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1704,7 +1704,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090918/s_his_hsj.pdf",
-      "slot": "2009 고2 9월 school_mock history/ solution",
+      "slot": "2009 고2 9월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2444,7 +2444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/s_his_mun.pdf",
-      "slot": "2009 고2 11월 school_mock history/ question",
+      "slot": "2009 고2 11월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2464,7 +2464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/s_his_hsj.pdf",
-      "slot": "2009 고2 11월 school_mock history/ solution",
+      "slot": "2009 고2 11월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4044,7 +4044,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090313/s_his_mun.pdf",
-      "slot": "2009 고3 3월 school_mock history/ question",
+      "slot": "2009 고3 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4064,7 +4064,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090313/s_his_hsj.pdf",
-      "slot": "2009 고3 3월 school_mock history/ solution",
+      "slot": "2009 고3 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4804,7 +4804,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090415/s_his_mun.pdf",
-      "slot": "2009 고3 4월 school_mock history/ question",
+      "slot": "2009 고3 4월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4824,7 +4824,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090415/s_his_hsj.pdf",
-      "slot": "2009 고3 4월 school_mock history/ solution",
+      "slot": "2009 고3 4월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5724,7 +5724,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090604/s_his_mun.pdf",
-      "slot": "2009 고3 6월 kice_mock history/ question",
+      "slot": "2009 고3 6월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5744,7 +5744,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090604/s_his_hsj.pdf",
-      "slot": "2009 고3 6월 kice_mock history/ solution",
+      "slot": "2009 고3 6월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7604,7 +7604,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090714/s_his_mun.pdf",
-      "slot": "2009 고3 7월 school_mock history/ question",
+      "slot": "2009 고3 7월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7624,7 +7624,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090714/s_his_hsj.pdf",
-      "slot": "2009 고3 7월 school_mock history/ solution",
+      "slot": "2009 고3 7월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8524,7 +8524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090903/s_his_mun.pdf",
-      "slot": "2009 고3 9월 kice_mock history/ question",
+      "slot": "2009 고3 9월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8544,7 +8544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090903/s_his_hsj.pdf",
-      "slot": "2009 고3 9월 kice_mock history/ solution",
+      "slot": "2009 고3 9월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10404,7 +10404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091015/s_his_mun.pdf",
-      "slot": "2009 고3 10월 school_mock history/ question",
+      "slot": "2009 고3 10월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10424,7 +10424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091015/s_his_hsj.pdf",
-      "slot": "2009 고3 10월 school_mock history/ solution",
+      "slot": "2009 고3 10월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12244,7 +12244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091112/s_his_mun.pdf",
-      "slot": "2009 고3 11월 csat history/ question",
+      "slot": "2009 고3 11월 csat history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12264,7 +12264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091112/s_his_hsj.pdf",
-      "slot": "2009 고3 11월 csat history/ solution",
+      "slot": "2009 고3 11월 csat history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -13958,6 +13958,270 @@
         "visual": "렌더링한 1쪽이 EBSi 목록의 고3 11월 스페인어Ⅰ 정답 및 해설와 일치",
         "firstPageText": "2010년도 대학수학능력시험 제2외국어/ 한문 영역(스페인어Ⅰ) 정답 및 해설 <정답> 1 ⑤ 2 ① 3 ④ 4 ③ 5 ④ 6 ① 7 ③ 8 ⑤ 9 ④ 10 ⑤ 11 ② 12 ③ 13 ⑤ 14 ④ 15 ② 16 ② 17 ⑤ 18 ① 19 ⑤ 20 ④ 21 ① 22 ③ 23 ③ 24 ② 25 ④ 26 ② 27 ④ 28 ② 29 ① 30 ⑤ <해설> 1. 발음 문제 A: ¿Cómo está Ramón González? /ㄱ/ B: Así, así. Ahora está en Chile. ➀ gato ② gritar ③ guante ④ guerra ⑤ general /ㄱ/ /ㄱ/ /ㄱ/ /ㄱ/ /ㅎ/ 2. 철자 문제 : \"집(casa)\"의 철자 이렇게 \"k\"로 되면 되나요? 아니, c 로 되는거야. 3. 강세 문제 : 복수가 되면서 강세 탈락 다빋은 영국 학생인데, 다른 영국 학생들도 있어. inglés ingleses ① árbol - árboles ② azúcar - azúcares ③",
         "sha256": "641353c3509f184f89a40813336f7fce81075902068cd0b8fcf564aabdec3086"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/J_nsmsup_mun.pdf",
+      "slot": "2009 고2 11월 school_mock vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 872974,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2009학년도 11월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고2 11월 농업이해 문제지와 일치",
+        "firstPageText": "2009학년도 11월 고2 전국연합학력평가 문제지 1 농업이해 직업탐구 영역 제 4 교시 직업탐구 영역 (농업이해) 성명 수험번호 2 1. 다음은 새로운 농업 상품에 관한 신문 기사이다. 기사 내용과 가장 3. 그림은 농산물의 품질에 관련된 인증 마크이다. (가), (나)에 대한 밀접한 관련이 있는 농업 과학 기술로 알맞은 것은? 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? [3점] 한입 머금으면 온몸이 짜릿~ 한여름에 출하되는 얼음 홍시는 틈새시장을 노린 대표적인 아이디어 상품이다. 일명 ‘홍시 셔벗’을 개발한 충북 영동의 김씨는 지역에서 ‘콜럼버스 감박사’로 통한다. (가) (나) 가을에 감을 수확해 냉동 저장했다가 한여름에 꺼내 파는 일이 말처럼 쉽지만은 않았다. 그래서 김씨는 해동을 거치면서도 홍시 보기 본래의 맛과 질감을 그대로 유지하는 기술을 개발하기 위해 많은 ㄱ. (가)는 친환경 농산물임을 나타내는 것이다. 노력과 시간을 투자해야만 했다. ㄴ. (나)는 농",
+        "sha256": "520e8eabc2ae27094b13d4ce3c17f9c947de5df4c45a47ed567913da182c7aab",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/J_nsmsup_hsj.pdf",
+      "slot": "2009 고2 11월 school_mock vocational/commercial-economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 467109,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2009학년도 11월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고2 11월 농업이해 정답 및 해설와 일치",
+        "firstPageText": "2009학년도 11월 고2 전국연합학력평가 정답 및 해설 맞는 성분별 시비량 등을 알려주어 잘못된 시비방법 ○×○이므로 A는 정답, B와 C는 오답이다. 따라서 을 개선해주는 농업 정보 시스템이다. [조건]에 의해 논리값을 배열하면 100이 된다. • 4교시 직업탐구 영역 • 12. [출제의도] 농업 정보화 사업의 문제점 이해하기 3. [출제의도] 뉴 미디어 통신 서비스 이해하기 농업 정보화 시스템은 사용자 중심 시스템 개발 및 달리는 기차 내에서 실시간 방송 시청을 위해서는 [농업정보관리] 시스템에 대한 지속적인 현장 교육을 통해 농민들이 와이브로나 DMB 기능이 필요하다. 1 ④ 2 ③ 3 ④ 4 ② 5 ① 쉽게 사용할 수 있도록 해야 한다. 멀티미디어를 사 4. [출제의도] 중앙 처리 장치의 구성 파악하기 6 ③ 7 ⑤ 8 ② 9 ③ 10 ③ 용한 설명서는 이해력을 높인다. 컴퓨터 사양이 높다 제어 장치는 주기억 장치에서 읽어 온 명령을 해독 11 ① 12 ② 13 ⑤ 14 ④",
+        "sha256": "28efd01584b1b18fc729a62612e159eccb25eb1f25fc9e6c314cd2f0b0b43218",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/J_ssnw_mun.pdf",
+      "slot": "2009 고2 11월 school_mock vocational/ocean-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 806661,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2009학년도 11월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고2 11월 수산해운정보처리 문제지와 일치",
+        "firstPageText": "2009학년도 11월 고2 전국연합학력평가 문제지 1 해양일반 직업탐구 영역 제 4 교시 직업탐구 영역 (해양일반) 성명 수험번호 2 1. 다음의 기사 내용에 대한 설명으로 옳은 것을 <보기>에서 고른 3. 그림은 선박 GPS의 구성도이다. (가)를 구성하는 요소로 옳은 것을 것은? <보기>에서 고른 것은? 보기 ㄱ. 위성 ㄴ. 안테나 ㄷ. GPS 수신기 ㄹ. 감지 기지 ㅁ. 표시 장치 ① ㄱ, ㄴ, ㄷ ② ㄱ, ㄴ, ㄹ ③ ㄱ, ㄹ, ㅁ ④ ㄴ, ㄷ, ㅁ ⑤ ㄷ, ㄹ, ㅁ 보기 ㄱ. 조류를 이용하여 발전한다. ㄴ. 환경 파괴가 거의 없는 친환경 발전소이다. ㄷ. 조석의 위치에너지를 운동에너지로 바꾸어 발전한다. 4. 다음은 조석표의 일부이다. ○○도에 대한 설명으로 옳은 것을 ㄹ. 충남 가로림만과 같은 곳에 건설하기 적합한 발전소이다. <보기>에서 고른 것은? [3점] 개정수 평균 평균 ① ㄱ, ㄴ ② ㄱ, ㄷ ③ ㄱ, ㄹ 고조 대조승 소조승 지명 표준항 조시차 조고비 해면 ④ ㄴ",
+        "sha256": "a7ad7193141bcfd2d427a164fb7bc6713a1a7a1ac544fc64950741a9756ecbd6",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/J_ssnw_hsj.pdf",
+      "slot": "2009 고2 11월 school_mock vocational/ocean-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 467109,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2009학년도 11월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고2 11월 수산해운정보처리 정답 및 해설와 일치",
+        "firstPageText": "2009학년도 11월 고2 전국연합학력평가 정답 및 해설 맞는 성분별 시비량 등을 알려주어 잘못된 시비방법 ○×○이므로 A는 정답, B와 C는 오답이다. 따라서 을 개선해주는 농업 정보 시스템이다. [조건]에 의해 논리값을 배열하면 100이 된다. • 4교시 직업탐구 영역 • 12. [출제의도] 농업 정보화 사업의 문제점 이해하기 3. [출제의도] 뉴 미디어 통신 서비스 이해하기 농업 정보화 시스템은 사용자 중심 시스템 개발 및 달리는 기차 내에서 실시간 방송 시청을 위해서는 [농업정보관리] 시스템에 대한 지속적인 현장 교육을 통해 농민들이 와이브로나 DMB 기능이 필요하다. 1 ④ 2 ③ 3 ④ 4 ② 5 ① 쉽게 사용할 수 있도록 해야 한다. 멀티미디어를 사 4. [출제의도] 중앙 처리 장치의 구성 파악하기 6 ③ 7 ⑤ 8 ② 9 ③ 10 ③ 용한 설명서는 이해력을 높인다. 컴퓨터 사양이 높다 제어 장치는 주기억 장치에서 읽어 온 명령을 해독 11 ① 12 ② 13 ⑤ 14 ④",
+        "sha256": "28efd01584b1b18fc729a62612e159eccb25eb1f25fc9e6c314cd2f0b0b43218",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090604/J_ssnw_mun.pdf",
+      "slot": "2009 고3 6월 kice_mock vocational/ocean-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1194260,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2010학년도 대학수학능력시험 6월 모의평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 6월 수산해운정보처리 문제지와 일치",
+        "firstPageText": "1. 3. 3 200 m 2009 3 16 7.5 2. A B A D B C B D C D 4. A",
+        "sha256": "8003b7387a1e585824cf7767293fbb0ed219f2fee50d301b716e741cc77c0e40",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090604/J_ssnw_hsj.pdf",
+      "slot": "2009 고3 6월 kice_mock vocational/ocean-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 125947,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2010학년도 대학수학능력시험 6월 모의평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 6월 수산해운정보처리 정답 및 해설와 일치",
+        "firstPageText": "2010학년도 대학수학능력시험 6월 모의평가 직업탐구영역 ( 해양일반 )해설지 문제는 붙이지 마시고, 정답 번호와 해설만 적어주시면 됩니다. 글씨체 : 바탕 글자크기 : 11 줄간격 : 160% 여백 : 위쪽-20mm 아래쪽-15mm 왼․오른쪽-30mm 머리․꼬리말-15mm 지겨주시면 감사드리겠습니다 [정답] 1. ④ 2. ④ 3. ③ 4. ③ 5. ④ 6. ② 7. ① 8. ① 9. ③ 10. ① 11. ⑤ 12. ② 13. ⑤ 14. ⑤ 15. ④ 16. ② 17. ① 18. ② 19. ① 20. ④ [해설] 1. [출제의도] 대륙붕의 특징 이해 [정답] ④ [해설] 대륙붕에는 조간대가 속하고 전 세계 해저 면적의 7.5%를 차지한다. 해구 는 대륙사면에 끝나는 지점에, 특히 태평양 주변에서 많이 발견되는 지형이다. 화산 활동은 대양저 산맥에서 활발히 일어난다. 2. [출제의도] 해양 지질 조사 기기 및 특성 이해 [정답] ④ [해설] (가)는 드레지, (나)는 피스톤식 주상 시",
+        "sha256": "5fc8b4da7fbe6d5b0dbdd6b3e0a121bcbc881f7bf5af8d9a6b8d7b4b6f2210a9",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090903/J_ssnw_mun.pdf",
+      "slot": "2009 고3 9월 kice_mock vocational/ocean-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 569619,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2010학년도 대학수학능력시험 9월 모의평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 9월 수산해운정보처리 문제지와 일치",
+        "firstPageText": "2010학년도 대학수학능력시험 9월 모의평가 문제지 1 제`4`교시 직 업 탐 구`영역 ( 해양 일 반) 성명 수험`번호 1. 다음 수업 중 대화에서 (가)에 속하는 생물을 <보기>에서 고른 3. 다음 (가)에 들어갈 내용으로 적절한 것만을 <보기>에서 있는 것은?�3점� 대로 고른 것은? 해양에서 중요한� 과제 보고서 기초 생산의� 서식 해역이 � 생산자인 (가) 의� 넓고, 그 분포는� 대부분을� 특징에 대해� 담당합니다. 수평, 수직적 변동을� �제 목 : 해양 생물 채집 장비 조사 말해 볼까요? 보입니다. �일 자 : 2009년 �월 �일 선생님 채 집 장 비 엽록소를 가지고� 용 도 (가) 광합성을 합니다. <`보 기`> <`보 기`> ㄱ. 저서 어류를 유인하여 채집하는 데 사용된다. ㄱ. 요각류 ㄴ. 피낭류 ㄷ. 돌말류 ㄹ. 와편모조류 ㄴ. 저서 생물을 대량으로 채집하는 데 사용된다. ㄷ. 각 수심별 서식 생물을 채집하는 데 사용된다. ① ㄱ, ㄴ ② ㄱ, ㄷ ③ ㄴ, ㄷ",
+        "sha256": "31f5f1072d903fd49c3557bc080c4cc546e0b19ea5e345241a826a7e0c1891e6",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090903/J_ssnw_hsj.pdf",
+      "slot": "2009 고3 9월 kice_mock vocational/ocean-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 153098,
+        "pdfPages": 3,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2010학년도 대학수학능력시험 9월 모의평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 9월 수산해운정보처리 정답 및 해설와 일치",
+        "firstPageText": "2009학년도 대학수학능력시험 9월 모의평가 정답 및 해설 (직업탐구 : 해양일반) 문항 문항 문항 문항 정답 배점 정답 배점 정답 배점 정답 배점 번호 반호 번호 번호 1 ⑤ 3 6 ② 2 11 ① 2 16 ② 2 2 ④ 3 7 ③ 3 12 ③ 2 17 ② 2 3 ② 2 8 ② 2 13 ⑤ 3 18 ① 2 4 ④ 2 9 ④ 3 14 ③ 3 19 ⑤ 3 5 ① 2 10 ⑤ 3 15 ① 3 20 ③ 3 1. [출제의도] 기초 생산자의 종류 파악하기 [해설] 학생들이 발표한 내용은 해양 생태계에서 기초 생산자인 식물 플랑크톤이다. 식물 플랑크톤 종류로는 돌말류와 와편모조류가 해당된다. 요각류는 절지동물에 속하며 해양 생 태계에서 아주 중요한 1차 소비자이다. 피낭류는 척색동물에 속하며 종류로는 우렁쉥이와 살파가 해당된다. 2. [출제의도] 지상 일기도 분석하기 [해설] (가)는 간격이 넓을수록 기압경도력이 작아져 풍속이 약해지고 (나)에서는 풍향과 풍 속, 구름의 양을 파악할 수 있고 ",
+        "sha256": "fa78ff62ff52124b35f5bd5b7c2d6e8d127cc39e1ea61d5f1add6baf82be9dfe",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091015/J_ssnw_mun.pdf",
+      "slot": "2009 고3 10월 school_mock vocational/ocean-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 426824,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2009학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 10월 수산해운정보처리 문제지와 일치",
+        "firstPageText": "2009학년도 10월 고3 전국연합학력평가 문제지 제 4 교시 직업탐구 영역(해양 일반) 성명 수험번호 3 1 1. 그림은 해양 에너지를 이용한 발전 방식이다. 이에 대한 조건 3. 다음은 어류의 기관에 대한 설명이다. (가), (나)의 설명과 으로 옳은 것을 <보기>에서 고른 것은? 가장 관련이 깊은 것을 바르게 연결한 것은? (가) 공기로 채워져 있으며, 부력을 변화시켜 원하는 수심으 로 이동하는 데 주요 역할을 한다. (나) 물체, 다른 생물, 수류의 변화 등을 감지하는 촉각 기관 으로, 미세한 온도 변화도 감지한다. (가) (나) ① 부레 신장 ② 부레 옆줄 < 보 기 > ③ 이석 비강 ㄱ. 조석 간만의 차가 충분히 커야 한다. ④ 아가미 신장 ㄴ. 연중 파랑 에너지가 큰 곳이어야 한다. ⑤ 아가미 옆줄 ㄷ. 표층과 심층 사이의 온도차가 있어야 한다. ㄹ. 많은 유량을 확보하기 위한 저수 공간이 필요하다. ① ㄱ, ㄴ ② ㄱ, ㄹ ③ ㄴ, ㄷ ④ ㄴ, ㄹ ⑤ ㄷ, ㄹ 4. 다",
+        "sha256": "c2b68e236df0593579f89cb3e22f06902c97faa3414af8540807627866c4dcaf",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091015/J_ssnw_hsj.pdf",
+      "slot": "2009 고3 10월 school_mock vocational/ocean-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 494578,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2009학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 10월 수산해운정보처리 정답 및 해설와 일치",
+        "firstPageText": "2010학년도 대학수학능력시험 대비 2009년도 10월 고3 전국연합학력평가 정답 및 해설 10. [출제의도] 최근 많이 발생하고 있는 인터넷 침해 20. [출제의도] 워드프로세서(한글2002)의 문서 작성 • 직업탐구 영역 • 사고를 묻는 문제이다. 기능 중 한자 변환에 관한 문제이다. [오답풀이] 트로이 목마는 상대편이 눈치를 채지 못 ④ ‘ ’을 클릭하면 ‘情報(정보)’라고 입력된다. 하게 침입하여 자료를 삭제하고 정보를 탈취하는 악 농업 정보 관리 정답 성 프로그램이다. 애드웨어는 사용자의 동의 없이 침 입하여 지속적으로 광고, 선전을 하는 악성 프로그램 1 ② 2 ② 3 ③ 4 ⑤ 5 ① 이다. 6 ③ 7 ⑤ 8 ④ 9 ③ 10 ① 11. [출제의도] 근거리 통신망에서 허브의 역할을 묻는 11 ② 12 ① 13 ④ 14 ⑤ 15 ④ 문제이다. 16 ② 17 ① 18 ② 19 ④ 20 ④ 허브는 네트워크 회선에 여러 대의 컴퓨터를 1:1로 연결할 수 있도록 하는 장비이다. 해",
+        "sha256": "28b28167042b4aa42d2484a2a5b2d0d655a07455d1cdafae6a37047b0bf8314e",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091112/J_ssnw_mun.pdf",
+      "slot": "2009 고3 11월 csat vocational/ocean-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1387214,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2010학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 11월 수산해운정보처리 문제지와 일치",
+        "firstPageText": "1. 3. 4. 2. 3 5. A B 3 A B A B B A",
+        "sha256": "0590c3762cc1e8f9432abbb619bc0cf65b1a3742a75cca263175aa3dc1237420",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091112/J_ssnw_hsj.pdf",
+      "slot": "2009 고3 11월 csat vocational/ocean-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 211503,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T01:52:13.431Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2010학년도 대학수학능력시험",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 11월 수산해운정보처리 정답 및 해설와 일치",
+        "firstPageText": "2010학년도 대학수학능력시험 정답 및 해설 (직업탐구 : 해양일반) 문항 문항 문항 문항 정답 배점 정답 배점 정답 배점 정답 배점 번호 반호 번호 번호 1 ① 2 6 ⑤ 2 11 ② 3 16 ④ 3 2 ③ 3 7 ④ 3 12 ⑤ 3 17 ⑤ 3 3 ① 2 8 ③ 2 13 ④ 2 18 ② 2 4 ① 2 9 ② 3 14 ⑤ 3 19 ① 2 5 ② 3 10 ② 2 15 ③ 2 20 ③ 3 1. [출제의도] 해양 생물 조사 시에 필요한 기기의 종류 및 특성을 파악하기 [해설] (가) 장비는 저서생물을 채집할 때 사용되며, 펄이나 모래 저질에 사용하며 특정한 지점의 해저 생물을 채집할 수 있는 장비는 그래브이다. (나) 장비는 수평으 로 끌어서 채집하며 동시에 두 그룹을 채집할 수 있는 것이다. 이러한 장비는 봉고 네트이다. ∙‘ㄱ’은 그래브로서 장비는 저서생물을 채집할 때 사용되며, 펄이나 모래 저질에 사용하며 특정한 지점의 해저 생물을 채집할 수 있는 장비이므로 정선택지 이다. ∙‘ ",
+        "sha256": "bb4b3c9ae74816fa2577353bf79b1e0e54891f22b686eae732d59583a7e9296c",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"

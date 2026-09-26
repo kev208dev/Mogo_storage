@@ -4,7 +4,7 @@
   "records": [
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403121/kor_mun.pdf",
-      "slot": "2014 고1 3월 school_mock korean/ question",
+      "slot": "2014 고1 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -24,7 +24,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403121/kor_hsj.pdf",
-      "slot": "2014 고1 3월 school_mock korean/ solution",
+      "slot": "2014 고1 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -44,7 +44,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403121/math_mun.pdf",
-      "slot": "2014 고1 3월 school_mock math/ question",
+      "slot": "2014 고1 3월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -64,7 +64,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403121/math_hsj.pdf",
-      "slot": "2014 고1 3월 school_mock math/ solution",
+      "slot": "2014 고1 3월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -84,7 +84,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403121/eng_mun.pdf",
-      "slot": "2014 고1 3월 school_mock english/ question",
+      "slot": "2014 고1 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -104,7 +104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403121/eng_hsj.pdf",
-      "slot": "2014 고1 3월 school_mock english/ solution",
+      "slot": "2014 고1 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -124,7 +124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_his_mun.pdf",
-      "slot": "2014 고1 3월 school_mock history/ question",
+      "slot": "2014 고1 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -144,7 +144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403121/s_his_hsj.pdf",
-      "slot": "2014 고1 3월 school_mock history/ solution",
+      "slot": "2014 고1 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -444,7 +444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406121/kor_mun.pdf",
-      "slot": "2014 고1 6월 school_mock korean/ question",
+      "slot": "2014 고1 6월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -464,7 +464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406121/kor_hsj.pdf",
-      "slot": "2014 고1 6월 school_mock korean/ solution",
+      "slot": "2014 고1 6월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -484,7 +484,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406121/math_mun.pdf",
-      "slot": "2014 고1 6월 school_mock math/ question",
+      "slot": "2014 고1 6월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -504,7 +504,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406121/math_hsj.pdf",
-      "slot": "2014 고1 6월 school_mock math/ solution",
+      "slot": "2014 고1 6월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -524,7 +524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406121/eng_mun.pdf",
-      "slot": "2014 고1 6월 school_mock english/ question",
+      "slot": "2014 고1 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -544,7 +544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406121/eng_hsj.pdf",
-      "slot": "2014 고1 6월 school_mock english/ solution",
+      "slot": "2014 고1 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -564,7 +564,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_his_mun.pdf",
-      "slot": "2014 고1 6월 school_mock history/ question",
+      "slot": "2014 고1 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -584,7 +584,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406121/s_his_hsj.pdf",
-      "slot": "2014 고1 6월 school_mock history/ solution",
+      "slot": "2014 고1 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -884,7 +884,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409031/nqqKgWRj_h1_kor_mun.pdf",
-      "slot": "2014 고1 9월 school_mock korean/ question",
+      "slot": "2014 고1 9월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -904,7 +904,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409031/fXr6nbb3_h1_kor_hsj.pdf",
-      "slot": "2014 고1 9월 school_mock korean/ solution",
+      "slot": "2014 고1 9월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -924,7 +924,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409031/MOsvGhcI_h1_math_mun.pdf",
-      "slot": "2014 고1 9월 school_mock math/ question",
+      "slot": "2014 고1 9월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -944,7 +944,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409031/SPim9Oci_h1_math_hsj.pdf",
-      "slot": "2014 고1 9월 school_mock math/ solution",
+      "slot": "2014 고1 9월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -964,7 +964,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409031/PXkmCJiL_h1_eng_mun.pdf",
-      "slot": "2014 고1 9월 school_mock english/ question",
+      "slot": "2014 고1 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -984,7 +984,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409031/Pv00J6gX_h1_eng_hsj.pdf",
-      "slot": "2014 고1 9월 school_mock english/ solution",
+      "slot": "2014 고1 9월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1004,7 +1004,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409031/2XdoYfYo_h1_s_his_mun.pdf",
-      "slot": "2014 고1 9월 school_mock history/ question",
+      "slot": "2014 고1 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1024,7 +1024,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409031/iB5ANH2c_h1_s_his_hsj.pdf",
-      "slot": "2014 고1 9월 school_mock history/ solution",
+      "slot": "2014 고1 9월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1324,7 +1324,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411181/nqqKgWRj_h1_kor_mun.pdf",
-      "slot": "2014 고1 11월 school_mock korean/ question",
+      "slot": "2014 고1 11월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1344,7 +1344,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411181/fXr6nbb3_h1_kor_hsj.pdf",
-      "slot": "2014 고1 11월 school_mock korean/ solution",
+      "slot": "2014 고1 11월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1364,7 +1364,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411181/MOsvGhcI_h1_math_mun.pdf",
-      "slot": "2014 고1 11월 school_mock math/ question",
+      "slot": "2014 고1 11월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1384,7 +1384,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411181/SPim9Oci_h1_math_hsj.pdf",
-      "slot": "2014 고1 11월 school_mock math/ solution",
+      "slot": "2014 고1 11월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1404,7 +1404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411181/PXkmCJiL_h1_eng_mun.pdf",
-      "slot": "2014 고1 11월 school_mock english/ question",
+      "slot": "2014 고1 11월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1424,7 +1424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411181/Pv00J6gX_h1_eng_hsj.pdf",
-      "slot": "2014 고1 11월 school_mock english/ solution",
+      "slot": "2014 고1 11월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1444,7 +1444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411181/2XdoYfYo_h1_s_his_mun.pdf",
-      "slot": "2014 고1 11월 school_mock history/ question",
+      "slot": "2014 고1 11월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1464,7 +1464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411181/iB5ANH2c_h1_s_his_hsj.pdf",
-      "slot": "2014 고1 11월 school_mock history/ solution",
+      "slot": "2014 고1 11월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1924,7 +1924,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403122/eng_mun.pdf",
-      "slot": "2014 고2 3월 school_mock english/ question",
+      "slot": "2014 고2 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1944,7 +1944,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403122/eng_hsj.pdf",
-      "slot": "2014 고2 3월 school_mock english/ solution",
+      "slot": "2014 고2 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1964,7 +1964,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_his_mun.pdf",
-      "slot": "2014 고2 3월 school_mock history/ question",
+      "slot": "2014 고2 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1984,7 +1984,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403122/s_his_hsj.pdf",
-      "slot": "2014 고2 3월 school_mock history/ solution",
+      "slot": "2014 고2 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2684,7 +2684,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406122/eng_mun.pdf",
-      "slot": "2014 고2 6월 school_mock english/ question",
+      "slot": "2014 고2 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2704,7 +2704,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406122/eng_hsj.pdf",
-      "slot": "2014 고2 6월 school_mock english/ solution",
+      "slot": "2014 고2 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2724,7 +2724,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_his_mun.pdf",
-      "slot": "2014 고2 6월 school_mock history/ question",
+      "slot": "2014 고2 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2744,7 +2744,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406122/s_his_hsj.pdf",
-      "slot": "2014 고2 6월 school_mock history/ solution",
+      "slot": "2014 고2 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3444,7 +3444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409032/w4hVJbrz_h2_enga_mun.pdf",
-      "slot": "2014 고2 9월 school_mock english/ question",
+      "slot": "2014 고2 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3464,7 +3464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409032/JrzF5ldf_h2_enga_hsj.pdf",
-      "slot": "2014 고2 9월 school_mock english/ solution",
+      "slot": "2014 고2 9월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3484,7 +3484,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409032/ou2Vythh_h2_s_his_mun.pdf",
-      "slot": "2014 고2 9월 school_mock history/ question",
+      "slot": "2014 고2 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3504,7 +3504,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409032/OjcdEc83_h2_s_his_hsj.pdf",
-      "slot": "2014 고2 9월 school_mock history/ solution",
+      "slot": "2014 고2 9월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4204,7 +4204,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411182/w4hVJbrz_h2_enga_mun.pdf",
-      "slot": "2014 고2 11월 school_mock english/ question",
+      "slot": "2014 고2 11월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4224,7 +4224,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411182/JrzF5ldf_h2_enga_hsj.pdf",
-      "slot": "2014 고2 11월 school_mock english/ solution",
+      "slot": "2014 고2 11월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4244,7 +4244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411182/ou2Vythh_h2_s_his_mun.pdf",
-      "slot": "2014 고2 11월 school_mock history/ question",
+      "slot": "2014 고2 11월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4264,7 +4264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411182/OjcdEc83_h2_s_his_hsj.pdf",
-      "slot": "2014 고2 11월 school_mock history/ solution",
+      "slot": "2014 고2 11월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5444,7 +5444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403123/eng_mun.pdf",
-      "slot": "2014 고3 3월 school_mock english/ question",
+      "slot": "2014 고3 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5464,7 +5464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403123/eng_hsj.pdf",
-      "slot": "2014 고3 3월 school_mock english/ solution",
+      "slot": "2014 고3 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5484,7 +5484,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_his_mun.pdf",
-      "slot": "2014 고3 3월 school_mock history/ question",
+      "slot": "2014 고3 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5504,7 +5504,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201403123/s_his_hsj.pdf",
-      "slot": "2014 고3 3월 school_mock history/ solution",
+      "slot": "2014 고3 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6204,7 +6204,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201404103/eng_mun.pdf",
-      "slot": "2014 고3 4월 school_mock english/ question",
+      "slot": "2014 고3 4월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6224,7 +6224,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201404103/eng_hsj.pdf",
-      "slot": "2014 고3 4월 school_mock english/ solution",
+      "slot": "2014 고3 4월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6244,7 +6244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_his_mun.pdf",
-      "slot": "2014 고3 4월 school_mock history/ question",
+      "slot": "2014 고3 4월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6264,7 +6264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201404103/s_his_hsj.pdf",
-      "slot": "2014 고3 4월 school_mock history/ solution",
+      "slot": "2014 고3 4월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7124,7 +7124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406123/eng_mun.pdf",
-      "slot": "2014 고3 6월 kice_mock english/ question",
+      "slot": "2014 고3 6월 kice_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7144,7 +7144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406123/eng_hsj.pdf",
-      "slot": "2014 고3 6월 kice_mock english/ solution",
+      "slot": "2014 고3 6월 kice_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7164,7 +7164,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_his_mun.pdf",
-      "slot": "2014 고3 6월 kice_mock history/ question",
+      "slot": "2014 고3 6월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7184,7 +7184,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201406123/s_his_hsj.pdf",
-      "slot": "2014 고3 6월 kice_mock history/ solution",
+      "slot": "2014 고3 6월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8604,7 +8604,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201407103/4YdlbEwP_enga_mun.pdf",
-      "slot": "2014 고3 7월 school_mock english/ question",
+      "slot": "2014 고3 7월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8624,7 +8624,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201407103/wgnOsjdx_enga_hsj.pdf",
-      "slot": "2014 고3 7월 school_mock english/ solution",
+      "slot": "2014 고3 7월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8644,7 +8644,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201407103/83sntGWI_s_his_mun.pdf",
-      "slot": "2014 고3 7월 school_mock history/ question",
+      "slot": "2014 고3 7월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8664,7 +8664,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201407103/xd3SiSkC_s_his_hsj.pdf",
-      "slot": "2014 고3 7월 school_mock history/ solution",
+      "slot": "2014 고3 7월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9524,7 +9524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409033/CKizm40T_h3_enga_mun.pdf",
-      "slot": "2014 고3 9월 kice_mock english/ question",
+      "slot": "2014 고3 9월 kice_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9544,7 +9544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409033/bUu2o8q3_h3_enga_hsj.pdf",
-      "slot": "2014 고3 9월 kice_mock english/ solution",
+      "slot": "2014 고3 9월 kice_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9564,7 +9564,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409033/foTiQKYh_h3_s_his_mun.pdf",
-      "slot": "2014 고3 9월 kice_mock history/ question",
+      "slot": "2014 고3 9월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9584,7 +9584,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201409033/Dtgvux74_h3_s_his_hsj.pdf",
-      "slot": "2014 고3 9월 kice_mock history/ solution",
+      "slot": "2014 고3 9월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11004,7 +11004,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201410073/dqsyWVLE_h3_eng_mun.pdf",
-      "slot": "2014 고3 10월 school_mock english/ question",
+      "slot": "2014 고3 10월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11024,7 +11024,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201410073/WP5RvITt_h3_eng_hsj.pdf",
-      "slot": "2014 고3 10월 school_mock english/ solution",
+      "slot": "2014 고3 10월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11044,7 +11044,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201410073/Vvm24Tzm_h3_s_his_mun.pdf",
-      "slot": "2014 고3 10월 school_mock history/ question",
+      "slot": "2014 고3 10월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11064,7 +11064,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201410073/KYTgetZ3_h3_s_his_hsj.pdf",
-      "slot": "2014 고3 10월 school_mock history/ solution",
+      "slot": "2014 고3 10월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12404,7 +12404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411133/xPx83BcT_h3_enga1_mun.pdf",
-      "slot": "2014 고3 11월 csat english/ question",
+      "slot": "2014 고3 11월 csat english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12424,7 +12424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411133/JKsEbUM5_h3_enga1_hsj_2.pdf",
-      "slot": "2014 고3 11월 csat english/ solution",
+      "slot": "2014 고3 11월 csat english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12444,7 +12444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411133/LktrLEzd_h3_s_his_mun.pdf",
-      "slot": "2014 고3 11월 csat history/ question",
+      "slot": "2014 고3 11월 csat history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12464,7 +12464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/201411133/5QKLWXGV_h3_s_his_hsj.pdf",
-      "slot": "2014 고3 11월 csat history/ solution",
+      "slot": "2014 고3 11월 csat history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",

@@ -1,14 +1,14 @@
 {
   "ebsi": {
-    "version": "ebsi-v4",
-    "hash": "9cfcb4e330f61093"
+    "version": "ebsi-v7",
+    "hash": "19a201cb85d0d253"
   },
   "kice": {
-    "version": "kice-v4",
-    "hash": "273ca429a28c78c6"
+    "version": "kice-v7",
+    "hash": "e8161adb2229a76e"
   },
   "education_office": {
-    "version": "education_office-v5",
-    "hash": "7082cc590e038fc4"
+    "version": "education_office-v8",
+    "hash": "74b1457d3e36d547"
   }
 }

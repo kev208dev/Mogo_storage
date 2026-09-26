@@ -8,7 +8,7 @@
       "search_title": "1 • 한국사영역 • 정 답 1 ⑤ 2 ③ 3 ② 4 ② 5 ① 6 ⑤ 7 ① 8 ① 9 ① 10 ② 11 ① 12 ③ 13 ② 14 ⑤ 15",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 history/ solution"
+      "slot": "1-3 history solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go1/kor_main_mun_5JN7PAR4_1.pdf",
@@ -16,7 +16,7 @@
       "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? 여러분, 병풍이 무엇인지 알고 계신가요? (청중",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 korean/ question"
+      "slot": "1-3 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go1/eng_mun_165EB81D.pdf",
@@ -24,7 +24,7 @@
       "search_title": "영어 영역",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 english/ question"
+      "slot": "1-6 english question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/kor_main_mun_A61J27ZC.pdf",
@@ -32,7 +32,7 @@
       "search_title": "고1 국어영역 1 1 16 [1~3] 다음은 학생의 발표이다. 물음에 답하시오.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 korean/ question"
+      "slot": "1-9 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/kor_main_hsj_X76PHBMH.pdf",
@@ -40,7 +40,7 @@
       "search_title": "정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 korean/ solution"
+      "slot": "1-9 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/math_main_mun_GXJ7B173.pdf",
@@ -48,7 +48,7 @@
       "search_title": "고1 수학영역 1 1 12 5지선다형 1. 두 다항식 , 에 대하여 를 간단히 하면? [점]",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 math/ question"
+      "slot": "1-9 math question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/math_main_hsj_96KY8KZ9.pdf",
@@ -56,7 +56,7 @@
       "search_title": "고1 정답 및 해설 2023학년도 9월 전국연합학력평가 6 16 수학 영역 정답 1 ④ 2 ③ 3 ② 4 ④ 5 ⑤ 6 ③ 7 ② 8 ① 9",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 math/ solution"
+      "slot": "1-9 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go1/gat_main_mun_CMHMPM1Z.pdf",
@@ -72,7 +72,7 @@
       "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요. 저는 동양의 전통 문방구인 ‘먹’에 대해 발표하",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 korean/ question"
+      "slot": "2-3 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go2/kor_main_hsj_8288M31R.pdf",
@@ -80,7 +80,7 @@
       "search_title": "2023학년도 3월 고2 전국연합학력평가 정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 korean/ solution"
+      "slot": "2-3 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go2/g_ear1_mun_23LM6TZI.pdf",
@@ -96,7 +96,7 @@
       "search_title": "1 • 국어 영역 • 정 답 1 ⑤ 2 ④ 3 ⑤ 4 ① 5 ③ 6 ③ 7 ④ 8 ② 9 ④ 10 ① 11 ④ 12 ② 13 ② 14 ⑤ 15",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 korean/ solution"
+      "slot": "2-6 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/math_main_hsj_D28Q7U39.pdf",
@@ -104,7 +104,7 @@
       "search_title": "2023학년도 6월 고2 전국연합학력평가 정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 math/ solution"
+      "slot": "2-6 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go2/g_ear1_hsj_V848FX83.pdf",
@@ -152,7 +152,7 @@
       "search_title": "고2 정답 및 해설 2023학년도 9월 전국연합학력평가 10 28 영어 영역 정답 1 ⑤ 2 ③ 3 ② 4 ④ 5 ① 6 ① 7 ⑤ 8 ④ 9",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 english/ solution"
+      "slot": "2-9 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go2/kor_main_mun_1H4N6ZEC.pdf",
@@ -160,7 +160,7 @@
       "search_title": "고2 국어영역 1 1 16 [1~3] 다음은 수업 중 학생의 발표이다. 물음에 답하시오.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 korean/ question"
+      "slot": "2-9 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go2/math_main_hsj_89TL5M69.pdf",
@@ -168,7 +168,7 @@
       "search_title": "정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 math/ solution"
+      "slot": "2-9 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/eng_main_hsj_GFX3IXW9.pdf",
@@ -176,7 +176,7 @@
       "search_title": "영어영역",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 english/ solution"
+      "slot": "3-3 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/kor_main_mun_WER9B839.pdf",
@@ -184,7 +184,7 @@
       "search_title": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 상위 인지는 어떤 과업의 성취를 보장하는 자기 규제 기제",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 korean/ question"
+      "slot": "3-3 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/kor_main_hsj_X6S23E16.pdf",
@@ -192,7 +192,7 @@
       "search_title": "1 • 국어영역 • 국어 정답 1 ③ 2 ⑤ 3 ④ 4 ④ 5 ② 6 ⑤ 7 ④ 8 ① 9 ④ 10 ① 11 ② 12 ⑤ 13 ① 14 ②",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 korean/ solution"
+      "slot": "3-3 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/math_main_hsj_A82SS311.pdf",
@@ -200,7 +200,7 @@
       "search_title": "수학영역",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 math/ solution"
+      "slot": "3-3 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230323/go3/s_yrnss_hsj_ICVTPY41.pdf",
@@ -216,7 +216,7 @@
       "search_title": "2024학년도 대학수학능력시험 6월 모의평가 영어 영어 영어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 english/ solution"
+      "slot": "3-6 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/his_main_mun_2W157941.pdf",
@@ -224,7 +224,7 @@
       "search_title": "1 4 1. (가) 시대의 사회 모습으로 옳은 것은? ①서원이 건립되었다. ②고인돌이 축조되었다. ③상평통보가 사용되었다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 history/ question"
+      "slot": "3-6 history question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/s_his_hsj_73EL54SQ.pdf",
@@ -232,7 +232,7 @@
       "search_title": "2024학년도 대학수학능력시험 6월 모의평가 한국사영역 한국사영역 한국사영역 한국사 한국사 한국사 정답 및 해설 정답 및 해설 정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 history/ solution"
+      "slot": "3-6 history solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/kor_main_mun_78586DW8.pdf",
@@ -240,7 +240,7 @@
       "search_title": "1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 선생님의 권유나 친구의 추천, 자기 계발 등 우리가 독서를",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 korean/ question"
+      "slot": "3-6 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/kor_main_hsj_L65NY8521.pdf",
@@ -248,7 +248,7 @@
       "search_title": "2024학년도 대학수학능력시험 6월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1 [1~3] 독서",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 korean/ solution"
+      "slot": "3-6 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230601/go3/g_ear1_hsj_7RL2QG85_2.pdf",
@@ -376,7 +376,7 @@
       "search_title": "○ 영어 영역 듣기 대본",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 english/ listening_script"
+      "slot": "3-7 english listening_script"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/eng_main_hsj_AO16PA86.pdf",
@@ -384,7 +384,7 @@
       "search_title": "정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 english/ solution"
+      "slot": "3-7 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/his_main_mun_SF3X56WS.pdf",
@@ -392,7 +392,7 @@
       "search_title": "고3 한국사영역 1 1 4 1. 밑줄 친 ‘이 시대’에 대한 설명으로 옳은 것은? 이것은 사유 재산이 발생하고 계급이 분화된",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 history/ question"
+      "slot": "3-7 history question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/kor_main_mun_ZGJG1D65.pdf",
@@ -400,7 +400,7 @@
       "search_title": "고3 국어영역 1 1 20 [1~3] 다음 글을 읽고 물음에 답하시오. 글을 쓰는 과정에서 필자는 글의 내용을 상세하게 기술하기",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 korean/ question"
+      "slot": "3-7 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230711/go3/s_ssnyr_mun_CUDAZF9Y.pdf",
@@ -416,7 +416,7 @@
       "search_title": "1 4 1. (가)에 들어갈 유물로 가장 적절한 것은? ① ② ③ 빗살무늬 토기 비파형 동검 임신서기석 ④ ⑤ 당백전 삼국유사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 history/ question"
+      "slot": "3-9 history question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/kor_main_mun_Y314T372.pdf",
@@ -424,7 +424,7 @@
       "search_title": "1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 흔히 읽기는 듣기・말하기와 달리 영・유아가 글자를 깨치고",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 korean/ question"
+      "slot": "3-9 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/kor_main_hsj_CHM3S63I_2.pdf",
@@ -432,7 +432,7 @@
       "search_title": "2024학년도 대학수학능력시험 9월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 korean/ solution"
+      "slot": "3-9 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/math_main_hsj_VU14OSH9_1.pdf",
@@ -440,7 +440,7 @@
       "search_title": "2024학년도 대학수학능력시험 9월 모의평가",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 math/ solution"
+      "slot": "3-9 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20230906/go3/g_ear2_hsj_29Q3WZRA.pdf",
@@ -568,7 +568,7 @@
       "search_title": "1 • 국어영역 • 정 답 1 ④ 2 ② 3 ② 4 ③ 5 ② 6 ⑤ 7 ① 8 ⑤ 9 ② 10 ⑤ 11 ⑤ 12 ④ 13 ③ 14 ① 15",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 korean/ solution"
+      "slot": "3-10 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231012/go3/2nd_ch_mun_9BN3L6FF.pdf",
@@ -584,7 +584,7 @@
       "search_title": "1 8 1번부터 17번까지는 듣고 답하는 문제입니다. 1번부터 15번까지는 한 번만 들려주고, 16번부터 17번까지는 두 번",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 english/ question"
+      "slot": "3-11 english question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/eng_1_hsj_YANDRG8A_1.pdf",
@@ -592,7 +592,7 @@
       "search_title": "영어영역 정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 english/ solution"
+      "slot": "3-11 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/his_main_hsj_9M3K3K46.pdf",
@@ -600,7 +600,7 @@
       "search_title": "2024학년도 대학수학능력시험 한국사영역 한국사영역 한국사영역 한국사 한국사 한국사 정답 및 해설 정답 및 해설 정답 및 해설 1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 history/ solution"
+      "slot": "3-11 history solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/kor_main_hsj_913QDM2N.pdf",
@@ -608,7 +608,7 @@
       "search_title": "2024학년도 대학수학능력시험 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1 [1~3] 독서",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 korean/ solution"
+      "slot": "3-11 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20231116/go3/g_che1_mun_WLN9X458.pdf",
@@ -744,7 +744,7 @@
       "search_title": "고1 3월 학평(서울) 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 korean/ solution",
+      "slot": "1-3 korean solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 309354,
       "pdf_pages": 5,
@@ -756,7 +756,7 @@
       "search_title": "고1 3월 학평(서울) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 math/ question",
+      "slot": "1-3 math question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 757754,
       "pdf_pages": 12,
@@ -768,7 +768,7 @@
       "search_title": "고1 3월 학평(서울) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 math/ solution",
+      "slot": "1-3 math solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 521542,
       "pdf_pages": 5,
@@ -780,7 +780,7 @@
       "search_title": "고1 3월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 english/ question",
+      "slot": "1-3 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 535566,
       "pdf_pages": 8,
@@ -792,7 +792,7 @@
       "search_title": "고1 3월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 english/ solution",
+      "slot": "1-3 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 313618,
       "pdf_pages": 6,
@@ -804,7 +804,7 @@
       "search_title": "고1 3월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 history/ question",
+      "slot": "1-3 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 2661325,
       "pdf_pages": 4,
@@ -864,7 +864,7 @@
       "search_title": "고1 6월 학평(부산) 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 korean/ question",
+      "slot": "1-6 korean question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 1017088,
       "pdf_pages": 16,
@@ -876,7 +876,7 @@
       "search_title": "고1 6월 학평(부산) 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 korean/ solution",
+      "slot": "1-6 korean solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 294137,
       "pdf_pages": 4,
@@ -888,7 +888,7 @@
       "search_title": "고1 6월 학평(부산) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 math/ question",
+      "slot": "1-6 math question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 410782,
       "pdf_pages": 12,
@@ -900,7 +900,7 @@
       "search_title": "고1 6월 학평(부산) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 math/ solution",
+      "slot": "1-6 math solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 279943,
       "pdf_pages": 3,
@@ -912,7 +912,7 @@
       "search_title": "고1 6월 학평(부산) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 english/ solution",
+      "slot": "1-6 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 332761,
       "pdf_pages": 5,
@@ -924,7 +924,7 @@
       "search_title": "고1 6월 학평(부산) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 history/ question",
+      "slot": "1-6 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 3079994,
       "pdf_pages": 4,
@@ -936,7 +936,7 @@
       "search_title": "고1 6월 학평(부산) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 history/ solution",
+      "slot": "1-6 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 163758,
       "pdf_pages": 1,
@@ -996,7 +996,7 @@
       "search_title": "고1 9월 학평(인천) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 english/ question",
+      "slot": "1-9 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 399990,
       "pdf_pages": 8,
@@ -1008,7 +1008,7 @@
       "search_title": "고1 9월 학평(인천) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 english/ solution",
+      "slot": "1-9 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 308388,
       "pdf_pages": 4,
@@ -1020,7 +1020,7 @@
       "search_title": "고1 9월 학평(인천) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 history/ question",
+      "slot": "1-9 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 4577662,
       "pdf_pages": 4,
@@ -1032,7 +1032,7 @@
       "search_title": "고1 9월 학평(인천) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 history/ solution",
+      "slot": "1-9 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 148578,
       "pdf_pages": 1,
@@ -1080,7 +1080,7 @@
       "search_title": "고1 11월 학평(경기)_12.19 시행 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-11 korean/ question",
+      "slot": "1-11 korean question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 879087,
       "pdf_pages": 16,
@@ -1092,7 +1092,7 @@
       "search_title": "고1 11월 학평(경기)_12.19 시행 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-11 korean/ solution",
+      "slot": "1-11 korean solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 454953,
       "pdf_pages": 5,
@@ -1104,7 +1104,7 @@
       "search_title": "고1 11월 학평(경기)_12.19 시행 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-11 math/ question",
+      "slot": "1-11 math question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 187982,
       "pdf_pages": 12,
@@ -1116,7 +1116,7 @@
       "search_title": "고1 11월 학평(경기)_12.19 시행 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-11 math/ solution",
+      "slot": "1-11 math solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 492306,
       "pdf_pages": 4,
@@ -1128,7 +1128,7 @@
       "search_title": "고1 11월 학평(경기)_12.19 시행 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-11 english/ question",
+      "slot": "1-11 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 733507,
       "pdf_pages": 8,
@@ -1140,7 +1140,7 @@
       "search_title": "고1 11월 학평(경기)_12.19 시행 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-11 english/ solution",
+      "slot": "1-11 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 403528,
       "pdf_pages": 4,
@@ -1152,7 +1152,7 @@
       "search_title": "고1 11월 학평(경기)_12.19 시행 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-11 history/ question",
+      "slot": "1-11 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 2362665,
       "pdf_pages": 4,
@@ -1164,7 +1164,7 @@
       "search_title": "고1 11월 학평(경기)_12.19 시행 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-11 history/ solution",
+      "slot": "1-11 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 2638922,
       "pdf_pages": 1,
@@ -1224,7 +1224,7 @@
       "search_title": "고2 3월 학평(서울) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 math/ question",
+      "slot": "2-3 math question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 338943,
       "pdf_pages": 12,
@@ -1236,7 +1236,7 @@
       "search_title": "고2 3월 학평(서울) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 math/ solution",
+      "slot": "2-3 math solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 414021,
       "pdf_pages": 5,
@@ -1248,7 +1248,7 @@
       "search_title": "고2 3월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 english/ question",
+      "slot": "2-3 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 506856,
       "pdf_pages": 8,
@@ -1260,7 +1260,7 @@
       "search_title": "고2 3월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 english/ solution",
+      "slot": "2-3 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 338601,
       "pdf_pages": 6,
@@ -1272,7 +1272,7 @@
       "search_title": "고2 3월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 history/ question",
+      "slot": "2-3 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 1657548,
       "pdf_pages": 4,
@@ -1284,7 +1284,7 @@
       "search_title": "고2 3월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 history/ solution",
+      "slot": "2-3 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 125523,
       "pdf_pages": 1,
@@ -1596,7 +1596,7 @@
       "search_title": "고2 6월 학평(부산) 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 korean/ question",
+      "slot": "2-6 korean question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 1387825,
       "pdf_pages": 16,
@@ -1608,7 +1608,7 @@
       "search_title": "고2 6월 학평(부산) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 math/ question",
+      "slot": "2-6 math question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 425522,
       "pdf_pages": 12,
@@ -1620,7 +1620,7 @@
       "search_title": "고2 6월 학평(부산) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 english/ question",
+      "slot": "2-6 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 876563,
       "pdf_pages": 8,
@@ -1632,7 +1632,7 @@
       "search_title": "고2 6월 학평(부산) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 english/ solution",
+      "slot": "2-6 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 340080,
       "pdf_pages": 5,
@@ -1644,7 +1644,7 @@
       "search_title": "고2 6월 학평(부산) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 history/ question",
+      "slot": "2-6 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 3371143,
       "pdf_pages": 4,
@@ -1656,7 +1656,7 @@
       "search_title": "고2 6월 학평(부산) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 history/ solution",
+      "slot": "2-6 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 168948,
       "pdf_pages": 1,
@@ -1920,7 +1920,7 @@
       "search_title": "고2 9월 학평(인천) 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 korean/ solution",
+      "slot": "2-9 korean solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 317707,
       "pdf_pages": 4,
@@ -1932,7 +1932,7 @@
       "search_title": "고2 9월 학평(인천) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 math/ question",
+      "slot": "2-9 math question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 649639,
       "pdf_pages": 12,
@@ -1944,7 +1944,7 @@
       "search_title": "고2 9월 학평(인천) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 english/ question",
+      "slot": "2-9 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 927177,
       "pdf_pages": 8,
@@ -1956,7 +1956,7 @@
       "search_title": "고2 9월 학평(인천) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 history/ question",
+      "slot": "2-9 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 4882017,
       "pdf_pages": 4,
@@ -1968,7 +1968,7 @@
       "search_title": "고2 9월 학평(인천) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 history/ solution",
+      "slot": "2-9 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 158069,
       "pdf_pages": 1,
@@ -2292,7 +2292,7 @@
       "search_title": "고2 11월 학평(경기)_12.19 시행 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-11 korean/ question",
+      "slot": "2-11 korean question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 724737,
       "pdf_pages": 16,
@@ -2304,7 +2304,7 @@
       "search_title": "고2 11월 학평(경기)_12.19 시행 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-11 korean/ solution",
+      "slot": "2-11 korean solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 451980,
       "pdf_pages": 4,
@@ -2316,7 +2316,7 @@
       "search_title": "고2 11월 학평(경기)_12.19 시행 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-11 math/ question",
+      "slot": "2-11 math question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 170240,
       "pdf_pages": 12,
@@ -2328,7 +2328,7 @@
       "search_title": "고2 11월 학평(경기)_12.19 시행 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-11 math/ solution",
+      "slot": "2-11 math solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 587578,
       "pdf_pages": 4,
@@ -2340,7 +2340,7 @@
       "search_title": "고2 11월 학평(경기)_12.19 시행 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-11 english/ question",
+      "slot": "2-11 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 783038,
       "pdf_pages": 8,
@@ -2352,7 +2352,7 @@
       "search_title": "고2 11월 학평(경기)_12.19 시행 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-11 english/ solution",
+      "slot": "2-11 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 473843,
       "pdf_pages": 5,
@@ -2364,7 +2364,7 @@
       "search_title": "고2 11월 학평(경기)_12.19 시행 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-11 history/ question",
+      "slot": "2-11 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 1561951,
       "pdf_pages": 4,
@@ -2376,7 +2376,7 @@
       "search_title": "고2 11월 학평(경기)_12.19 시행 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-11 history/ solution",
+      "slot": "2-11 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 425660,
       "pdf_pages": 1,
@@ -3132,7 +3132,7 @@
       "search_title": "고3 3월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 english/ question",
+      "slot": "3-3 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 499343,
       "pdf_pages": 8,
@@ -3144,7 +3144,7 @@
       "search_title": "고3 3월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 history/ question",
+      "slot": "3-3 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 1078573,
       "pdf_pages": 4,
@@ -3156,7 +3156,7 @@
       "search_title": "고3 3월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 history/ solution",
+      "slot": "3-3 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 125088,
       "pdf_pages": 1,
@@ -3588,7 +3588,7 @@
       "search_title": "고3 4월 학평(경기) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-4 english/ question",
+      "slot": "3-4 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 714585,
       "pdf_pages": 8,
@@ -3600,7 +3600,7 @@
       "search_title": "고3 4월 학평(경기) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-4 english/ solution",
+      "slot": "3-4 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 335365,
       "pdf_pages": 5,
@@ -3612,7 +3612,7 @@
       "search_title": "고3 4월 학평(경기) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-4 history/ question",
+      "slot": "3-4 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 2686113,
       "pdf_pages": 4,
@@ -3624,7 +3624,7 @@
       "search_title": "고3 4월 학평(경기) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-4 history/ solution",
+      "slot": "3-4 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 160264,
       "pdf_pages": 1,
@@ -4164,7 +4164,7 @@
       "search_title": "고3 6월 모평(평가원) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 english/ question",
+      "slot": "3-6 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 1794215,
       "pdf_pages": 8,
@@ -4884,7 +4884,7 @@
       "search_title": "고3 7월 학평(인천) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 english/ question",
+      "slot": "3-7 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 873610,
       "pdf_pages": 8,
@@ -4896,7 +4896,7 @@
       "search_title": "고3 7월 학평(인천) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 history/ solution",
+      "slot": "3-7 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 160584,
       "pdf_pages": 1,
@@ -5424,7 +5424,7 @@
       "search_title": "고3 9월 모평(평가원) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 english/ question",
+      "slot": "3-9 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 1774170,
       "pdf_pages": 8,
@@ -5436,7 +5436,7 @@
       "search_title": "고3 9월 모평(평가원) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 english/ solution",
+      "slot": "3-9 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 377302,
       "pdf_pages": 30,
@@ -5448,7 +5448,7 @@
       "search_title": "고3 9월 모평(평가원) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 history/ solution",
+      "slot": "3-9 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 161344,
       "pdf_pages": 7,
@@ -6168,7 +6168,7 @@
       "search_title": "고3 10월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 english/ question",
+      "slot": "3-10 english question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 436412,
       "pdf_pages": 8,
@@ -6180,7 +6180,7 @@
       "search_title": "고3 10월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 english/ solution",
+      "slot": "3-10 english solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 310875,
       "pdf_pages": 4,
@@ -6192,7 +6192,7 @@
       "search_title": "고3 10월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 history/ question",
+      "slot": "3-10 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 1168865,
       "pdf_pages": 4,
@@ -6204,7 +6204,7 @@
       "search_title": "고3 10월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 history/ solution",
+      "slot": "3-10 history solution",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 126794,
       "pdf_pages": 1,
@@ -7044,7 +7044,7 @@
       "search_title": "2024학년도 대학수학능력시험 한국사 홀수형",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 history/ question",
+      "slot": "3-11 history question",
       "discovery": "official_ebsi_previous_paper_catalog",
       "bytes": 3626481,
       "pdf_pages": 4,

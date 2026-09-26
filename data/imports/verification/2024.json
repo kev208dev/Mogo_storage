@@ -2233,7 +2233,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/eng_mun_1SJXFCM9.pdf",
-      "slot": "2024 고1 3월 school_mock english/ question",
+      "slot": "2024 고1 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2253,7 +2253,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go1/s_his_hsj_62SSXP51.pdf",
-      "slot": "2024 고1 3월 school_mock history/ solution",
+      "slot": "2024 고1 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2333,7 +2333,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/math_mun_TV68W359.pdf",
-      "slot": "2024 고1 6월 school_mock math/ question",
+      "slot": "2024 고1 6월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2353,7 +2353,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/eng_mun_659MN5Z2.pdf",
-      "slot": "2024 고1 6월 school_mock english/ question",
+      "slot": "2024 고1 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2373,7 +2373,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/eng_hsj_Q99QR69A.pdf",
-      "slot": "2024 고1 6월 school_mock english/ solution",
+      "slot": "2024 고1 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2393,7 +2393,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go1/s_his_hsj_M57S8J5X.pdf",
-      "slot": "2024 고1 6월 school_mock history/ solution",
+      "slot": "2024 고1 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2433,7 +2433,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/kor_mun_76DL7ZJ6.pdf",
-      "slot": "2024 고1 9월 school_mock korean/ question",
+      "slot": "2024 고1 9월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2453,7 +2453,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/kor_hsj_W74UM25M.pdf",
-      "slot": "2024 고1 9월 school_mock korean/ solution",
+      "slot": "2024 고1 9월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2473,7 +2473,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/math_mun_OFN9IRIA.pdf",
-      "slot": "2024 고1 9월 school_mock math/ question",
+      "slot": "2024 고1 9월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2493,7 +2493,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/math_hsj_4Y8289B8.pdf",
-      "slot": "2024 고1 9월 school_mock math/ solution",
+      "slot": "2024 고1 9월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2513,7 +2513,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/eng_1_mun_74BN67EO.pdf",
-      "slot": "2024 고1 9월 school_mock english/ question",
+      "slot": "2024 고1 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2533,7 +2533,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go1/s_his_1_mun_1IEM74OA.pdf",
-      "slot": "2024 고1 9월 school_mock history/ question",
+      "slot": "2024 고1 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2593,7 +2593,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/kor_hsj_M4258A7J.pdf",
-      "slot": "2024 고1 10월 school_mock korean/ solution",
+      "slot": "2024 고1 10월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2613,7 +2613,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/eng_1_mun_JE17ML5L.pdf",
-      "slot": "2024 고1 10월 school_mock english/ question",
+      "slot": "2024 고1 10월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2633,7 +2633,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/eng_1_hsj_9HYL39WL.pdf",
-      "slot": "2024 고1 10월 school_mock english/ solution",
+      "slot": "2024 고1 10월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2653,7 +2653,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/s_his_1_mun_PM88KQ72.pdf",
-      "slot": "2024 고1 10월 school_mock history/ question",
+      "slot": "2024 고1 10월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2673,7 +2673,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go1/s_his_1_hsj_664KMLSL.pdf",
-      "slot": "2024 고1 10월 school_mock history/ solution",
+      "slot": "2024 고1 10월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2733,7 +2733,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/kor_mun_28P1134K.pdf",
-      "slot": "2024 고2 3월 school_mock korean/ question",
+      "slot": "2024 고2 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2753,7 +2753,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/math_mun_8JACA7D6.pdf",
-      "slot": "2024 고2 3월 school_mock math/ question",
+      "slot": "2024 고2 3월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2773,7 +2773,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/math_hsj_SOANMMVV.pdf",
-      "slot": "2024 고2 3월 school_mock math/ solution",
+      "slot": "2024 고2 3월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2793,7 +2793,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/eng_mun_HA42YF48.pdf",
-      "slot": "2024 고2 3월 school_mock english/ question",
+      "slot": "2024 고2 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2813,7 +2813,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/s_his_mun_FGMHIT26.pdf",
-      "slot": "2024 고2 3월 school_mock history/ question",
+      "slot": "2024 고2 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2833,7 +2833,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go2/s_his_hsj_9489SQDK.pdf",
-      "slot": "2024 고2 3월 school_mock history/ solution",
+      "slot": "2024 고2 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3353,7 +3353,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/kor_hsj_K5T5L1W7.pdf",
-      "slot": "2024 고2 6월 school_mock korean/ solution",
+      "slot": "2024 고2 6월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3373,7 +3373,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/eng_mun_K2745X79.pdf",
-      "slot": "2024 고2 6월 school_mock english/ question",
+      "slot": "2024 고2 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3393,7 +3393,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go2/s_his_mun_87PAU485.pdf",
-      "slot": "2024 고2 6월 school_mock history/ question",
+      "slot": "2024 고2 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3873,7 +3873,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/math_hsj_C52AP42O.pdf",
-      "slot": "2024 고2 9월 school_mock math/ solution",
+      "slot": "2024 고2 9월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3893,7 +3893,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/eng_1_mun_6C3QQF3B.pdf",
-      "slot": "2024 고2 9월 school_mock english/ question",
+      "slot": "2024 고2 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3913,7 +3913,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go2/s_his_1_mun_789339GN.pdf",
-      "slot": "2024 고2 9월 school_mock history/ question",
+      "slot": "2024 고2 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4433,7 +4433,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/kor_hsj_H2P1DE49.pdf",
-      "slot": "2024 고2 10월 school_mock korean/ solution",
+      "slot": "2024 고2 10월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4453,7 +4453,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/math_hsj_Z59J87FB.pdf",
-      "slot": "2024 고2 10월 school_mock math/ solution",
+      "slot": "2024 고2 10월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4473,7 +4473,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/eng_1_mun_7198AL2W.pdf",
-      "slot": "2024 고2 10월 school_mock english/ question",
+      "slot": "2024 고2 10월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4493,7 +4493,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/s_his_1_mun_O6B68MYY.pdf",
-      "slot": "2024 고2 10월 school_mock history/ question",
+      "slot": "2024 고2 10월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4513,7 +4513,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go2/s_his_1_hsj_7K217Z98.pdf",
-      "slot": "2024 고2 10월 school_mock history/ solution",
+      "slot": "2024 고2 10월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5633,7 +5633,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/eng_hsj_3AK79UG6.pdf",
-      "slot": "2024 고3 3월 school_mock english/ solution",
+      "slot": "2024 고3 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5653,7 +5653,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/s_his_mun_1KP1QO86.pdf",
-      "slot": "2024 고3 3월 school_mock history/ question",
+      "slot": "2024 고3 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5673,7 +5673,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240328/go3/s_his_hsj_56881N5A.pdf",
-      "slot": "2024 고3 3월 school_mock history/ solution",
+      "slot": "2024 고3 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6373,7 +6373,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240430/go3/eng_mun_L56V751B.pdf",
-      "slot": "2024 고3 5월 school_mock english/ question",
+      "slot": "2024 고3 5월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6393,7 +6393,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240430/go3/eng_hsj_8BHI52ON.pdf",
-      "slot": "2024 고3 5월 school_mock english/ solution",
+      "slot": "2024 고3 5월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6413,7 +6413,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240430/go3/s_his_mun_P25G7LKA.pdf",
-      "slot": "2024 고3 5월 school_mock history/ question",
+      "slot": "2024 고3 5월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6433,7 +6433,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240430/go3/s_his_hsj_B25294TQ.pdf",
-      "slot": "2024 고3 5월 school_mock history/ solution",
+      "slot": "2024 고3 5월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7333,7 +7333,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/eng_mun_9NH1T355.pdf",
-      "slot": "2024 고3 6월 kice_mock english/ question",
+      "slot": "2024 고3 6월 kice_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7353,7 +7353,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240604/go3/s_his_hsj_864QR8RF.pdf",
-      "slot": "2024 고3 6월 kice_mock history/ solution",
+      "slot": "2024 고3 6월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8593,7 +8593,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240711/go3/eng_1_mun_E37P4JAZ.pdf",
-      "slot": "2024 고3 7월 school_mock english/ question",
+      "slot": "2024 고3 7월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8613,7 +8613,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240711/go3/s_his_1_mun_GR33432R.pdf",
-      "slot": "2024 고3 7월 school_mock history/ question",
+      "slot": "2024 고3 7월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8633,7 +8633,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240711/go3/s_his_1_hsj_34B6W46O.pdf",
-      "slot": "2024 고3 7월 school_mock history/ solution",
+      "slot": "2024 고3 7월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9513,7 +9513,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/eng_1_mun_7A2L4V1X.pdf",
-      "slot": "2024 고3 9월 kice_mock english/ question",
+      "slot": "2024 고3 9월 kice_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9533,7 +9533,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/eng_main_hsj_N5791Z56_1.pdf",
-      "slot": "2024 고3 9월 kice_mock english/ solution",
+      "slot": "2024 고3 9월 kice_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9553,7 +9553,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20240904/go3/s_his_1_mun_Z655M233.pdf",
-      "slot": "2024 고3 9월 kice_mock history/ question",
+      "slot": "2024 고3 9월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10753,7 +10753,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/eng_1_mun_4AYRN8Z8.pdf",
-      "slot": "2024 고3 10월 school_mock english/ question",
+      "slot": "2024 고3 10월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10773,7 +10773,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/s_his_1_mun_UYB85395.pdf",
-      "slot": "2024 고3 10월 school_mock history/ question",
+      "slot": "2024 고3 10월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10793,7 +10793,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241015/go3/s_his_1_hsj_4Y27611H.pdf",
-      "slot": "2024 고3 10월 school_mock history/ solution",
+      "slot": "2024 고3 10월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12013,7 +12013,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/eng_1_mun_ZAJ67FV9_1.pdf",
-      "slot": "2024 고3 11월 csat english/ question",
+      "slot": "2024 고3 11월 csat english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12033,7 +12033,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/eng_1_hsj_A2H869V6_3.pdf",
-      "slot": "2024 고3 11월 csat english/ solution",
+      "slot": "2024 고3 11월 csat english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12053,7 +12053,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/s_his_1_mun_Z22E43F4.pdf",
-      "slot": "2024 고3 11월 csat history/ question",
+      "slot": "2024 고3 11월 csat history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12073,7 +12073,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20241114/go3/s_his_1_hsj_OORJLDN6.pdf",
-      "slot": "2024 고3 11월 csat history/ solution",
+      "slot": "2024 고3 11월 csat history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",

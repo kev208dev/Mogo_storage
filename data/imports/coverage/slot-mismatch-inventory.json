@@ -1,0 +1,1326 @@
+{
+  "total": 164,
+  "byYear": {
+    "2020": 82,
+    "2011": 29,
+    "2010": 12,
+    "2009": 12,
+    "2008": 12,
+    "2007": 5,
+    "2006": 12
+  },
+  "rows": [
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat korean question",
+      "verification_slot": "2020 고3 12월 school_mock korean question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/kor_mun_R624XS12.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat korean solution",
+      "verification_slot": "2020 고3 12월 school_mock korean solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/kor_hsj_1CPB7Y97.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat math/math-a question",
+      "verification_slot": "2020 고3 12월 school_mock math/math-a question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/matha_mun_LOTW4UYI_1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat math/math-a solution",
+      "verification_slot": "2020 고3 12월 school_mock math/math-a solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/matha_hsj_1LP8AOBL_4.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat math/math-b question",
+      "verification_slot": "2020 고3 12월 school_mock math/math-b question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/mathb_mun_2711196D.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat math/math-b solution",
+      "verification_slot": "2020 고3 12월 school_mock math/math-b solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/mathb_hsj_N7254BR1_6.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat english question",
+      "verification_slot": "2020 고3 12월 school_mock english question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/eng_mun_8JGC8T6P.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat english solution",
+      "verification_slot": "2020 고3 12월 school_mock english solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/eng_hsj_P1H5NJC3_3.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat history question",
+      "verification_slot": "2020 고3 12월 school_mock history question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_his_mun_769F47T4.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat history solution",
+      "verification_slot": "2020 고3 12월 school_mock history solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_his_hsj_MMB5369P.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/east-asian-history question",
+      "verification_slot": "2020 고3 12월 school_mock social/east-asian-history question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_easta_mun_W2E91V2S.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/east-asian-history solution",
+      "verification_slot": "2020 고3 12월 school_mock social/east-asian-history solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_easta_hsj_JV3J3A55_1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/economics question",
+      "verification_slot": "2020 고3 12월 school_mock social/economics question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_eco_mun_NYE9297N.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/economics solution",
+      "verification_slot": "2020 고3 12월 school_mock social/economics solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_eco_hsj_H82DNDVE.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/ethics-and-thought question",
+      "verification_slot": "2020 고3 12월 school_mock social/ethics-and-thought question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_yrnss_mun_ZDSGTC12.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/ethics-and-thought solution",
+      "verification_slot": "2020 고3 12월 school_mock social/ethics-and-thought solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_yrnss_hsj_219C5826.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/korean-geography question",
+      "verification_slot": "2020 고3 12월 school_mock social/korean-geography question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_hanji_mun_6379T27T.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/korean-geography solution",
+      "verification_slot": "2020 고3 12월 school_mock social/korean-geography solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_hanji_hsj_7VFB5H49.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/life-and-ethics question",
+      "verification_slot": "2020 고3 12월 school_mock social/life-and-ethics question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_ssnyr_mun_17OM3PI7.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/life-and-ethics solution",
+      "verification_slot": "2020 고3 12월 school_mock social/life-and-ethics solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_ssnyr_hsj_F5P7Y27Q_1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/politics-and-law question",
+      "verification_slot": "2020 고3 12월 school_mock social/politics-and-law question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_bnj_mun_7R8HZ8X7.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/politics-and-law solution",
+      "verification_slot": "2020 고3 12월 school_mock social/politics-and-law solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_bnj_hsj_11SGE54S.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/social-culture question",
+      "verification_slot": "2020 고3 12월 school_mock social/social-culture question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_samun_mun_493B8957.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/social-culture solution",
+      "verification_slot": "2020 고3 12월 school_mock social/social-culture solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_samun_hsj_VS6AWEZF_1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/world-geography question",
+      "verification_slot": "2020 고3 12월 school_mock social/world-geography question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_saeji_mun_8LG2IM6I_1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/world-geography solution",
+      "verification_slot": "2020 고3 12월 school_mock social/world-geography solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_saeji_hsj_9VB7R9RW.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/world-history question",
+      "verification_slot": "2020 고3 12월 school_mock social/world-history question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_sks_mun_H64EU61E.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat social/world-history solution",
+      "verification_slot": "2020 고3 12월 school_mock social/world-history solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_sks_hsj_OT1ZN175_1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/chemistry-1 question",
+      "verification_slot": "2020 고3 12월 school_mock science/chemistry-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_che1_mun_S1N55N87.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/chemistry-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock science/chemistry-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_che1_hsj_I3HF54XN.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/chemistry-2 question",
+      "verification_slot": "2020 고3 12월 school_mock science/chemistry-2 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_che2_mun_864969QU.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/chemistry-2 solution",
+      "verification_slot": "2020 고3 12월 school_mock science/chemistry-2 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_che2_hsj_7NMZ1A4X.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/earth-science-1 question",
+      "verification_slot": "2020 고3 12월 school_mock science/earth-science-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_ear1_mun_14OTQ445.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/earth-science-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock science/earth-science-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_ear1_hsj_2C441P31.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/earth-science-2 question",
+      "verification_slot": "2020 고3 12월 school_mock science/earth-science-2 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_ear2_mun_F9VPF158.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/earth-science-2 solution",
+      "verification_slot": "2020 고3 12월 school_mock science/earth-science-2 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_ear2_hsj_61N181Z1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/life-science-1 question",
+      "verification_slot": "2020 고3 12월 school_mock science/life-science-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_bio1_mun_238Z8T3Y.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/life-science-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock science/life-science-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_bio1_hsj_2GGY4PA2_2.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/life-science-2 question",
+      "verification_slot": "2020 고3 12월 school_mock science/life-science-2 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_bio2_mun_9YTGNG68.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/life-science-2 solution",
+      "verification_slot": "2020 고3 12월 school_mock science/life-science-2 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_bio2_hsj_91876MPU.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/physics-1 question",
+      "verification_slot": "2020 고3 12월 school_mock science/physics-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_phy1_mun_516VJ441.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/physics-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock science/physics-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_phy1_hsj_I7J7WGT3.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/physics-2 question",
+      "verification_slot": "2020 고3 12월 school_mock science/physics-2 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_phy2_mun_F82VD5I4.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat science/physics-2 solution",
+      "verification_slot": "2020 고3 12월 school_mock science/physics-2 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_phy2_hsj_Z96Z4KI8.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/accounting-principles question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/accounting-principles question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_one_mun_25E3H1RG.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/accounting-principles solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_one_hsj_H69E7TFH.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/agriculture-basics question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/agriculture-basics question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_nupgi_mun_2GX2N749.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/agriculture-basics solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/agriculture-basics solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_nupgi_hsj_1X5471AX.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/agriculture-understanding question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/agriculture-understanding question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_nup_mun_ANN34973.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/agriculture-understanding solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/agriculture-understanding solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_nup_hsj_393I4ISJ.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/basic-drafting question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/basic-drafting question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_kicho_mun_3RF999UH.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/basic-drafting solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/basic-drafting solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_kicho_hsj_J2IBSQG5.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/commercial-economics question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/commercial-economics question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_sangup_mun_963M5MDP.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/commercial-economics solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/commercial-economics solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_sangup_hsj_W5M1YJ93.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/fisheries-and-shipping question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/fisheries-and-shipping question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_susan_mun_282XN1SW.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/fisheries-and-shipping solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/fisheries-and-shipping solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_susan_hsj_MPXR5395.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/human-development question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/human-development question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_inkan_mun_K68IB71I.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/human-development solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/human-development solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_inkan_hsj_9Q4TED7V.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/industry-general question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/industry-general question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_gup_mun_68NJ75E3.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/industry-general solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/industry-general solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_gup_hsj_T97S2NE6.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/ocean-understanding question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/ocean-understanding question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_hae_mun_RO743A54.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/ocean-understanding solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/ocean-understanding solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_hae_hsj_PH3S7371.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/service-industry-understanding question",
+      "verification_slot": "2020 고3 12월 school_mock vocational/service-industry-understanding question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_ser_mun_8OQ81W37.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat vocational/service-industry-understanding solution",
+      "verification_slot": "2020 고3 12월 school_mock vocational/service-industry-understanding solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_ser_hsj_J1W4KIV8.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/arabic-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/arabic-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ar_mun_1A48H2M5.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/arabic-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/arabic-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ar_hsj_W1HX5A6P.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/chinese-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/chinese-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ch_mun_R94L7EE5.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/chinese-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/chinese-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ch_hsj_3DH59S9Z.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/classical-chinese-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/classical-chinese-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_han_mun_O717J9I1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/classical-chinese-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/classical-chinese-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_han_hsj_4E1T221Y_1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/french-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/french-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_fr_mun_63D5L24H.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/french-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/french-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_fr_hsj_D2ZAB386.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/german-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/german-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_gr_mun_B3496R8P.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/german-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/german-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_gr_hsj_59SI32G6.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/japanese-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/japanese-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ja_mun_6FT68J17.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/japanese-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/japanese-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ja_hsj_U8HZ4MMT.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/russian-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/russian-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ru_mun_4C6P18Q2.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/russian-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/russian-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ru_hsj_59193NQ3_1.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/spanish-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/spanish-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_sp_mun_5T463C42.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/spanish-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/spanish-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_sp_hsj_O6QGJ41M.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/vietnamese-1 question",
+      "verification_slot": "2020 고3 12월 school_mock second_language/vietnamese-1 question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_vit_mun_OHNN43KK.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2020",
+      "csv_slot": "2020 고3 12월 csat second_language/vietnamese-1 solution",
+      "verification_slot": "2020 고3 12월 school_mock second_language/vietnamese-1 solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_vit_hsj_GAI6966I.pdf",
+      "cause": "verification_wrong",
+      "decision": "verification_wrong"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고1 3월 school_mock math solution",
+      "verification_slot": "2011 고1 3월 school_mock korean solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201103101/saga_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고1 3월 school_mock english solution",
+      "verification_slot": "2011 고1 3월 school_mock korean solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201103101/saga_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고1 3월 school_mock social/social-science-studies solution",
+      "verification_slot": "2011 고1 3월 school_mock korean solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201103101/saga_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/agriculture-basics solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/agriculture-information solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/agriculture-understanding solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/basic-drafting solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/commercial-economics solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/computer-general solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/design-general solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/fisheries-general solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/fisheries-shipping-information solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/food-and-nutrition solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/human-development solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/industry-intro solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/information-technology-basics solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/maritime-general solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고2 11월 school_mock vocational/programming solution",
+      "verification_slot": "2011 고2 11월 school_mock vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111152/J_all_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/agriculture-understanding question",
+      "verification_slot": "2011 고3 11월 csat vocational/agriculture-basics question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_nsmsup_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/agriculture-understanding solution",
+      "verification_slot": "2011 고3 11월 csat vocational/agriculture-basics solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_nsmsup_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/commercial-economics question",
+      "verification_slot": "2011 고3 11월 csat vocational/accounting-principles question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_supjb_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/commercial-economics solution",
+      "verification_slot": "2011 고3 11월 csat vocational/accounting-principles solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_supjb_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/human-development question",
+      "verification_slot": "2011 고3 11월 csat vocational/computer-general question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_gsnsup_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/human-development solution",
+      "verification_slot": "2011 고3 11월 csat vocational/computer-general solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_gsnsup_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/industry-intro question",
+      "verification_slot": "2011 고3 11월 csat vocational/basic-drafting question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_gup_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/industry-intro solution",
+      "verification_slot": "2011 고3 11월 csat vocational/basic-drafting solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_gup_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/ocean-general question",
+      "verification_slot": "2011 고3 11월 csat vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2011",
+      "csv_slot": "2011 고3 11월 csat vocational/ocean-general solution",
+      "verification_slot": "2011 고3 11월 csat vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/201111103/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고2 11월 school_mock vocational/commercial-economics question",
+      "verification_slot": "2010 고2 11월 school_mock vocational/agriculture-understanding question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20101124/J_nsmsup_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고2 11월 school_mock vocational/commercial-economics solution",
+      "verification_slot": "2010 고2 11월 school_mock vocational/agriculture-understanding solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20101124/J_nsmsup_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고2 11월 school_mock vocational/ocean-general question",
+      "verification_slot": "2010 고2 11월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20101124/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고2 11월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2010 고2 11월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20101124/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고3 6월 kice_mock vocational/ocean-general question",
+      "verification_slot": "2010 고3 6월 kice_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20100610/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고3 6월 kice_mock vocational/ocean-general solution",
+      "verification_slot": "2010 고3 6월 kice_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20100610/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고3 9월 kice_mock vocational/ocean-general question",
+      "verification_slot": "2010 고3 9월 kice_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20100902/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고3 9월 kice_mock vocational/ocean-general solution",
+      "verification_slot": "2010 고3 9월 kice_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20100902/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고3 10월 school_mock vocational/ocean-general question",
+      "verification_slot": "2010 고3 10월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20101012/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고3 10월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2010 고3 10월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20101012/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고3 11월 csat vocational/ocean-general question",
+      "verification_slot": "2010 고3 11월 csat vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20101118/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2010",
+      "csv_slot": "2010 고3 11월 csat vocational/ocean-general solution",
+      "verification_slot": "2010 고3 11월 csat vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20101118/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고2 11월 school_mock vocational/commercial-economics question",
+      "verification_slot": "2009 고2 11월 school_mock vocational/agriculture-understanding question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/J_nsmsup_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고2 11월 school_mock vocational/commercial-economics solution",
+      "verification_slot": "2009 고2 11월 school_mock vocational/agriculture-understanding solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/J_nsmsup_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고2 11월 school_mock vocational/ocean-general question",
+      "verification_slot": "2009 고2 11월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고2 11월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2009 고2 11월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091117/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고3 6월 kice_mock vocational/ocean-general question",
+      "verification_slot": "2009 고3 6월 kice_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090604/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고3 6월 kice_mock vocational/ocean-general solution",
+      "verification_slot": "2009 고3 6월 kice_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090604/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고3 9월 kice_mock vocational/ocean-general question",
+      "verification_slot": "2009 고3 9월 kice_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090903/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고3 9월 kice_mock vocational/ocean-general solution",
+      "verification_slot": "2009 고3 9월 kice_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090903/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고3 10월 school_mock vocational/ocean-general question",
+      "verification_slot": "2009 고3 10월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091015/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고3 10월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2009 고3 10월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091015/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고3 11월 csat vocational/ocean-general question",
+      "verification_slot": "2009 고3 11월 csat vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091112/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2009",
+      "csv_slot": "2009 고3 11월 csat vocational/ocean-general solution",
+      "verification_slot": "2009 고3 11월 csat vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20091112/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고2 11월 school_mock vocational/commercial-economics question",
+      "verification_slot": "2008 고2 11월 school_mock vocational/agriculture-understanding question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20081119/J_nsmsup_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고2 11월 school_mock vocational/commercial-economics solution",
+      "verification_slot": "2008 고2 11월 school_mock vocational/agriculture-understanding solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20081119/J_nsmsup_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고2 11월 school_mock vocational/ocean-general question",
+      "verification_slot": "2008 고2 11월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20081119/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고2 11월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2008 고2 11월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20081119/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고3 6월 kice_mock vocational/ocean-general question",
+      "verification_slot": "2008 고3 6월 kice_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20080604/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고3 6월 kice_mock vocational/ocean-general solution",
+      "verification_slot": "2008 고3 6월 kice_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20080604/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고3 9월 kice_mock vocational/ocean-general question",
+      "verification_slot": "2008 고3 9월 kice_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20080904/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고3 9월 kice_mock vocational/ocean-general solution",
+      "verification_slot": "2008 고3 9월 kice_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20080904/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고3 10월 school_mock vocational/ocean-general question",
+      "verification_slot": "2008 고3 10월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20081016/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고3 10월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2008 고3 10월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20081016/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고3 11월 csat vocational/ocean-general question",
+      "verification_slot": "2008 고3 11월 csat vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20081113/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2008",
+      "csv_slot": "2008 고3 11월 csat vocational/ocean-general solution",
+      "verification_slot": "2008 고3 11월 csat vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20081113/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2007",
+      "csv_slot": "2007 고2 11월 school_mock vocational/commercial-economics question",
+      "verification_slot": "2007 고2 11월 school_mock vocational/agriculture-understanding question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071123/J_nsmsup_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2007",
+      "csv_slot": "2007 고2 11월 school_mock vocational/commercial-economics solution",
+      "verification_slot": "2007 고2 11월 school_mock vocational/agriculture-understanding solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071123/J_nsmsup_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2007",
+      "csv_slot": "2007 고2 11월 school_mock vocational/fisheries-shipping-information solution",
+      "verification_slot": "2007 고2 11월 school_mock vocational/basic-drafting solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071123/j_jic11_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2007",
+      "csv_slot": "2007 고3 10월 school_mock vocational/ocean-general question",
+      "verification_slot": "2007 고3 10월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071010/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2007",
+      "csv_slot": "2007 고3 10월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2007 고3 10월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071010/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고2 11월 school_mock vocational/commercial-economics question",
+      "verification_slot": "2006 고2 11월 school_mock vocational/agriculture-understanding question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_nsmsup_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고2 11월 school_mock vocational/commercial-economics solution",
+      "verification_slot": "2006 고2 11월 school_mock vocational/agriculture-understanding solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_nsmsup_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고2 11월 school_mock vocational/ocean-general question",
+      "verification_slot": "2006 고2 11월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고2 11월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2006 고2 11월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고3 6월 kice_mock vocational/ocean-general question",
+      "verification_slot": "2006 고3 6월 kice_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고3 6월 kice_mock vocational/ocean-general solution",
+      "verification_slot": "2006 고3 6월 kice_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고3 9월 kice_mock vocational/ocean-general question",
+      "verification_slot": "2006 고3 9월 kice_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고3 9월 kice_mock vocational/ocean-general solution",
+      "verification_slot": "2006 고3 9월 kice_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고3 10월 school_mock vocational/ocean-general question",
+      "verification_slot": "2006 고3 10월 school_mock vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고3 10월 school_mock vocational/ocean-general solution",
+      "verification_slot": "2006 고3 10월 school_mock vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고3 11월 csat vocational/ocean-general question",
+      "verification_slot": "2006 고3 11월 csat vocational/fisheries-shipping-information question",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_ssnw_mun.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    },
+    {
+      "year": "2006",
+      "csv_slot": "2006 고3 11월 csat vocational/ocean-general solution",
+      "verification_slot": "2006 고3 11월 csat vocational/fisheries-shipping-information solution",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_ssnw_hsj.pdf",
+      "cause": "source_bundle_multi_slot",
+      "decision": "both_valid_bundle"
+    }
+  ]
+}

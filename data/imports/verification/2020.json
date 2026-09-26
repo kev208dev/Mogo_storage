@@ -4,7 +4,7 @@
   "records": [
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go1/kor_mun_ZZ1Q9Q89.pdf",
-      "slot": "2020 고1 3월 school_mock korean/ question",
+      "slot": "2020 고1 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -24,7 +24,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go1/kor_hsj_1UA7O83Q.pdf",
-      "slot": "2020 고1 3월 school_mock korean/ solution",
+      "slot": "2020 고1 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -44,7 +44,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go1/math_mun_63B835EG.pdf",
-      "slot": "2020 고1 3월 school_mock math/ question",
+      "slot": "2020 고1 3월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -64,7 +64,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go1/math_hsj_24B5G8RF.pdf",
-      "slot": "2020 고1 3월 school_mock math/ solution",
+      "slot": "2020 고1 3월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -84,7 +84,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go1/eng_mun_3SC83WHD.pdf",
-      "slot": "2020 고1 3월 school_mock english/ question",
+      "slot": "2020 고1 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -104,7 +104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go1/eng_hsj_XO9287RS.pdf",
-      "slot": "2020 고1 3월 school_mock english/ solution",
+      "slot": "2020 고1 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -124,7 +124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go1/s_his_mun_997NC7NO.pdf",
-      "slot": "2020 고1 3월 school_mock history/ question",
+      "slot": "2020 고1 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -144,7 +144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go1/s_his_hsj_3D2P4B4B.pdf",
-      "slot": "2020 고1 3월 school_mock history/ solution",
+      "slot": "2020 고1 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -244,7 +244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go1/kor_mun_8R76G1AH.pdf",
-      "slot": "2020 고1 6월 school_mock korean/ question",
+      "slot": "2020 고1 6월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -264,7 +264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go1/kor_hsj_9R12X9YS.pdf",
-      "slot": "2020 고1 6월 school_mock korean/ solution",
+      "slot": "2020 고1 6월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -284,7 +284,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go1/math_mun_K6U76P63.pdf",
-      "slot": "2020 고1 6월 school_mock math/ question",
+      "slot": "2020 고1 6월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -304,7 +304,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go1/math_hsj_T586SHTI.pdf",
-      "slot": "2020 고1 6월 school_mock math/ solution",
+      "slot": "2020 고1 6월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -324,7 +324,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go1/eng_mun_TO5WU7I7.pdf",
-      "slot": "2020 고1 6월 school_mock english/ question",
+      "slot": "2020 고1 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -344,7 +344,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go1/eng_hsj_WW78MNI8.pdf",
-      "slot": "2020 고1 6월 school_mock english/ solution",
+      "slot": "2020 고1 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -364,7 +364,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go1/s_his_mun_7AB91DX1.pdf",
-      "slot": "2020 고1 6월 school_mock history/ question",
+      "slot": "2020 고1 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -384,7 +384,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go1/s_his_hsj_1I1T88PT.pdf",
-      "slot": "2020 고1 6월 school_mock history/ solution",
+      "slot": "2020 고1 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -484,7 +484,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go1/kor_mun_V2S9PJA8.pdf",
-      "slot": "2020 고1 9월 school_mock korean/ question",
+      "slot": "2020 고1 9월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -504,7 +504,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go1/kor_hsj_6UA4QA9D.pdf",
-      "slot": "2020 고1 9월 school_mock korean/ solution",
+      "slot": "2020 고1 9월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -524,7 +524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go1/math_mun_CA72Q92V.pdf",
-      "slot": "2020 고1 9월 school_mock math/ question",
+      "slot": "2020 고1 9월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -544,7 +544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go1/math_hsj_68K7ED66.pdf",
-      "slot": "2020 고1 9월 school_mock math/ solution",
+      "slot": "2020 고1 9월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -564,7 +564,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go1/eng_mun_F4HUEQQ3.pdf",
-      "slot": "2020 고1 9월 school_mock english/ question",
+      "slot": "2020 고1 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -584,7 +584,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go1/eng_hsj_2NF33P85.pdf",
-      "slot": "2020 고1 9월 school_mock english/ solution",
+      "slot": "2020 고1 9월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -604,7 +604,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go1/s_his_mun_N5RUB9HL.pdf",
-      "slot": "2020 고1 9월 school_mock history/ question",
+      "slot": "2020 고1 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -624,7 +624,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go1/s_his_hsj_36Q4A717.pdf",
-      "slot": "2020 고1 9월 school_mock history/ solution",
+      "slot": "2020 고1 9월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -724,7 +724,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go1/kor_mun_ZJ7LEZ44.pdf",
-      "slot": "2020 고1 11월 school_mock korean/ question",
+      "slot": "2020 고1 11월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -744,7 +744,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go1/kor_hsj_XE4LPYRX.pdf",
-      "slot": "2020 고1 11월 school_mock korean/ solution",
+      "slot": "2020 고1 11월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -764,7 +764,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go1/math_mun_78T7MF35.pdf",
-      "slot": "2020 고1 11월 school_mock math/ question",
+      "slot": "2020 고1 11월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -784,7 +784,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go1/math_hsj_S1GBJGAY.pdf",
-      "slot": "2020 고1 11월 school_mock math/ solution",
+      "slot": "2020 고1 11월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -804,7 +804,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go1/eng_mun_8Q38Y772.pdf",
-      "slot": "2020 고1 11월 school_mock english/ question",
+      "slot": "2020 고1 11월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -824,7 +824,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go1/eng_hsj_A833T4N5.pdf",
-      "slot": "2020 고1 11월 school_mock english/ solution",
+      "slot": "2020 고1 11월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -844,7 +844,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go1/s_his_mun_9RFES535.pdf",
-      "slot": "2020 고1 11월 school_mock history/ question",
+      "slot": "2020 고1 11월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -864,7 +864,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go1/s_his_hsj_73TYC4K8.pdf",
-      "slot": "2020 고1 11월 school_mock history/ solution",
+      "slot": "2020 고1 11월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -964,7 +964,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go2/kor_mun_69472F1A.pdf",
-      "slot": "2020 고2 3월 school_mock korean/ question",
+      "slot": "2020 고2 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -984,7 +984,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go2/kor_hsj_898HQQB9.pdf",
-      "slot": "2020 고2 3월 school_mock korean/ solution",
+      "slot": "2020 고2 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1004,7 +1004,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go2/math_mun_OFM9GV2E.pdf",
-      "slot": "2020 고2 3월 school_mock math/ question",
+      "slot": "2020 고2 3월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1024,7 +1024,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go2/math_hsj_94AXV97Q.pdf",
-      "slot": "2020 고2 3월 school_mock math/ solution",
+      "slot": "2020 고2 3월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1044,7 +1044,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go2/eng_mun_861PVDOX.pdf",
-      "slot": "2020 고2 3월 school_mock english/ question",
+      "slot": "2020 고2 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1064,7 +1064,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go2/eng_hsj_1GKB4679.pdf",
-      "slot": "2020 고2 3월 school_mock english/ solution",
+      "slot": "2020 고2 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1084,7 +1084,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go2/s_his_mun_3U28CK41.pdf",
-      "slot": "2020 고2 3월 school_mock history/ question",
+      "slot": "2020 고2 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1104,7 +1104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go2/s_his_hsj_J4H1GGG7.pdf",
-      "slot": "2020 고2 3월 school_mock history/ solution",
+      "slot": "2020 고2 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1644,7 +1644,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go2/kor_mun_V9THC465.pdf",
-      "slot": "2020 고2 6월 school_mock korean/ question",
+      "slot": "2020 고2 6월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1664,7 +1664,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go2/kor_hsj_81Z7311Y.pdf",
-      "slot": "2020 고2 6월 school_mock korean/ solution",
+      "slot": "2020 고2 6월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1684,7 +1684,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go2/math_mun_682SH89M.pdf",
-      "slot": "2020 고2 6월 school_mock math/ question",
+      "slot": "2020 고2 6월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1704,7 +1704,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go2/math_hsj_PIVI3ICA.pdf",
-      "slot": "2020 고2 6월 school_mock math/ solution",
+      "slot": "2020 고2 6월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1724,7 +1724,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go2/eng_mun_K56Q212Z.pdf",
-      "slot": "2020 고2 6월 school_mock english/ question",
+      "slot": "2020 고2 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1744,7 +1744,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go2/eng_hsj_6Q891Q37.pdf",
-      "slot": "2020 고2 6월 school_mock english/ solution",
+      "slot": "2020 고2 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1764,7 +1764,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go2/s_his_mun_L34A41V6.pdf",
-      "slot": "2020 고2 6월 school_mock history/ question",
+      "slot": "2020 고2 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1784,7 +1784,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go2/s_his_hsj_FA3XX35G.pdf",
-      "slot": "2020 고2 6월 school_mock history/ solution",
+      "slot": "2020 고2 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2324,7 +2324,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go2/kor_mun_3FAYOUHC.pdf",
-      "slot": "2020 고2 9월 school_mock korean/ question",
+      "slot": "2020 고2 9월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2344,7 +2344,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go2/kor_hsj_G18AKQCY.pdf",
-      "slot": "2020 고2 9월 school_mock korean/ solution",
+      "slot": "2020 고2 9월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2364,7 +2364,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go2/math_mun_9169A11V.pdf",
-      "slot": "2020 고2 9월 school_mock math/ question",
+      "slot": "2020 고2 9월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2384,7 +2384,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go2/math_hsj_S28872N9.pdf",
-      "slot": "2020 고2 9월 school_mock math/ solution",
+      "slot": "2020 고2 9월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2404,7 +2404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go2/eng_mun_33YL7Z65.pdf",
-      "slot": "2020 고2 9월 school_mock english/ question",
+      "slot": "2020 고2 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2424,7 +2424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go2/eng_hsj_MREOLP11.pdf",
-      "slot": "2020 고2 9월 school_mock english/ solution",
+      "slot": "2020 고2 9월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2444,7 +2444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go2/s_his_mun_IC1G9F8W_1.pdf",
-      "slot": "2020 고2 9월 school_mock history/ question",
+      "slot": "2020 고2 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2464,7 +2464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go2/s_his_hsj_RC96R87C_1.pdf",
-      "slot": "2020 고2 9월 school_mock history/ solution",
+      "slot": "2020 고2 9월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3004,7 +3004,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go2/kor_mun_A4D9CHAL.pdf",
-      "slot": "2020 고2 11월 school_mock korean/ question",
+      "slot": "2020 고2 11월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3024,7 +3024,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go2/kor_hsj_79H3V79D.pdf",
-      "slot": "2020 고2 11월 school_mock korean/ solution",
+      "slot": "2020 고2 11월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3044,7 +3044,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go2/math_mun_4C96T2TE.pdf",
-      "slot": "2020 고2 11월 school_mock math/ question",
+      "slot": "2020 고2 11월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3064,7 +3064,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go2/math_hsj_P8N9QXBA.pdf",
-      "slot": "2020 고2 11월 school_mock math/ solution",
+      "slot": "2020 고2 11월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3084,7 +3084,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go2/eng_mun_53P17K1B.pdf",
-      "slot": "2020 고2 11월 school_mock english/ question",
+      "slot": "2020 고2 11월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3104,7 +3104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go2/eng_hsj_92UA4755.pdf",
-      "slot": "2020 고2 11월 school_mock english/ solution",
+      "slot": "2020 고2 11월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3124,7 +3124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go2/s_his_mun_61388316.pdf",
-      "slot": "2020 고2 11월 school_mock history/ question",
+      "slot": "2020 고2 11월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3144,7 +3144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201118/go2/s_his_hsj_O1RY2459.pdf",
-      "slot": "2020 고2 11월 school_mock history/ solution",
+      "slot": "2020 고2 11월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4204,7 +4204,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go3/kor_mun_81EE1418.pdf",
-      "slot": "2020 고3 3월 school_mock korean/ question",
+      "slot": "2020 고3 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4224,7 +4224,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go3/kor_hsj_N4OTYY7O.pdf",
-      "slot": "2020 고3 3월 school_mock korean/ solution",
+      "slot": "2020 고3 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4324,7 +4324,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go3/eng_mun_N8AY61K8.pdf",
-      "slot": "2020 고3 3월 school_mock english/ question",
+      "slot": "2020 고3 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4344,7 +4344,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go3/eng_hsj_NB64Y68X.pdf",
-      "slot": "2020 고3 3월 school_mock english/ solution",
+      "slot": "2020 고3 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4364,7 +4364,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go3/s_his_mun_4S1FETN3.pdf",
-      "slot": "2020 고3 3월 school_mock history/ question",
+      "slot": "2020 고3 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4384,7 +4384,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200312/go3/s_his_hsj_978F7FM8.pdf",
-      "slot": "2020 고3 3월 school_mock history/ solution",
+      "slot": "2020 고3 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4924,7 +4924,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200512/go3/kor_mun_TM1QUF51_1.pdf",
-      "slot": "2020 고3 4월 school_mock korean/ question",
+      "slot": "2020 고3 4월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4944,7 +4944,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200512/go3/kor_hsj_VVBH98RH.pdf",
-      "slot": "2020 고3 4월 school_mock korean/ solution",
+      "slot": "2020 고3 4월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5044,7 +5044,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200512/go3/eng_mun_VQ178364.pdf",
-      "slot": "2020 고3 4월 school_mock english/ question",
+      "slot": "2020 고3 4월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5064,7 +5064,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200512/go3/eng_hsj_5ZA9677L.pdf",
-      "slot": "2020 고3 4월 school_mock english/ solution",
+      "slot": "2020 고3 4월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5084,7 +5084,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200512/go3/s_his_mun_C4WM2JH2.pdf",
-      "slot": "2020 고3 4월 school_mock history/ question",
+      "slot": "2020 고3 4월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5104,7 +5104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200512/go3/s_his_hsj_4SJ5C437.pdf",
-      "slot": "2020 고3 4월 school_mock history/ solution",
+      "slot": "2020 고3 4월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5804,7 +5804,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go3/kor_mun_OZQW56K5.pdf",
-      "slot": "2020 고3 6월 kice_mock korean/ question",
+      "slot": "2020 고3 6월 kice_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5824,7 +5824,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go3/kor_hsj_6F4S9TQ7_2.pdf",
-      "slot": "2020 고3 6월 kice_mock korean/ solution",
+      "slot": "2020 고3 6월 kice_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5924,7 +5924,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go3/eng_mun_V98AZ88U.pdf",
-      "slot": "2020 고3 6월 kice_mock english/ question",
+      "slot": "2020 고3 6월 kice_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5944,7 +5944,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go3/eng_hsj_KKFWZ4N4.pdf",
-      "slot": "2020 고3 6월 kice_mock english/ solution",
+      "slot": "2020 고3 6월 kice_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5964,7 +5964,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go3/s_his_mun_K9MF72YR.pdf",
-      "slot": "2020 고3 6월 kice_mock history/ question",
+      "slot": "2020 고3 6월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5984,7 +5984,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200618/go3/s_his_hsj_J4A7F4AG_1.pdf",
-      "slot": "2020 고3 6월 kice_mock history/ solution",
+      "slot": "2020 고3 6월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7444,7 +7444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200722/go3/kor_mun_8CNW4SNK.pdf",
-      "slot": "2020 고3 7월 school_mock korean/ question",
+      "slot": "2020 고3 7월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7464,7 +7464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200722/go3/kor_hsj_QM91U9N8.pdf",
-      "slot": "2020 고3 7월 school_mock korean/ solution",
+      "slot": "2020 고3 7월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7564,7 +7564,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200722/go3/eng_mun_WNW9A1LE.pdf",
-      "slot": "2020 고3 7월 school_mock english/ question",
+      "slot": "2020 고3 7월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7584,7 +7584,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200722/go3/eng_hsj_2O2O6LFO.pdf",
-      "slot": "2020 고3 7월 school_mock english/ solution",
+      "slot": "2020 고3 7월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7604,7 +7604,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200722/go3/s_his_mun_915KTK93.pdf",
-      "slot": "2020 고3 7월 school_mock history/ question",
+      "slot": "2020 고3 7월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7624,7 +7624,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200722/go3/s_his_hsj_53B26B61.pdf",
-      "slot": "2020 고3 7월 school_mock history/ solution",
+      "slot": "2020 고3 7월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8324,7 +8324,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go3/kor_mun_3N8JQAA4.pdf",
-      "slot": "2020 고3 9월 kice_mock korean/ question",
+      "slot": "2020 고3 9월 kice_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8344,7 +8344,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go3/kor_hsj_N7RGA1D7_1.pdf",
-      "slot": "2020 고3 9월 kice_mock korean/ solution",
+      "slot": "2020 고3 9월 kice_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8444,7 +8444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go3/eng_mun_3QL46T62.pdf",
-      "slot": "2020 고3 9월 kice_mock english/ question",
+      "slot": "2020 고3 9월 kice_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8464,7 +8464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go3/eng_hsj_68O4PW8O.pdf",
-      "slot": "2020 고3 9월 kice_mock english/ solution",
+      "slot": "2020 고3 9월 kice_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8484,7 +8484,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go3/s_his_mun_9E2R7ZSZ.pdf",
-      "slot": "2020 고3 9월 kice_mock history/ question",
+      "slot": "2020 고3 9월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8504,7 +8504,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20200916/go3/s_his_hsj_78F7Z6SV.pdf",
-      "slot": "2020 고3 9월 kice_mock history/ solution",
+      "slot": "2020 고3 9월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9964,7 +9964,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201027/go3/kor_mun_8RDWY647.pdf",
-      "slot": "2020 고3 10월 school_mock korean/ question",
+      "slot": "2020 고3 10월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -9984,7 +9984,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201027/go3/kor_hsj_1CPB7Y97.pdf",
-      "slot": "2020 고3 10월 school_mock korean/ solution",
+      "slot": "2020 고3 10월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10084,7 +10084,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201027/go3/eng_mun_HR2O7LN4.pdf",
-      "slot": "2020 고3 10월 school_mock english/ question",
+      "slot": "2020 고3 10월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10104,7 +10104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201027/go3/eng_hsj_4ZDT79NP.pdf",
-      "slot": "2020 고3 10월 school_mock english/ solution",
+      "slot": "2020 고3 10월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10124,7 +10124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201027/go3/s_his_mun_94OX6896.pdf",
-      "slot": "2020 고3 10월 school_mock history/ question",
+      "slot": "2020 고3 10월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10144,7 +10144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201027/go3/s_his_hsj_N7254BR1.pdf",
-      "slot": "2020 고3 10월 school_mock history/ solution",
+      "slot": "2020 고3 10월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11524,7 +11524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/kor_mun_R624XS12.pdf",
-      "slot": "2020 고3 12월 school_mock korean/ question",
+      "slot": "2020 고3 12월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11544,7 +11544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/kor_hsj_1CPB7Y97.pdf",
-      "slot": "2020 고3 12월 school_mock korean/ solution",
+      "slot": "2020 고3 12월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11644,7 +11644,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/eng_mun_8JGC8T6P.pdf",
-      "slot": "2020 고3 12월 school_mock english/ question",
+      "slot": "2020 고3 12월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11664,7 +11664,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/eng_hsj_P1H5NJC3_3.pdf",
-      "slot": "2020 고3 12월 school_mock english/ solution",
+      "slot": "2020 고3 12월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11684,7 +11684,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_his_mun_769F47T4.pdf",
-      "slot": "2020 고3 12월 school_mock history/ question",
+      "slot": "2020 고3 12월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11704,7 +11704,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_his_hsj_MMB5369P.pdf",
-      "slot": "2020 고3 12월 school_mock history/ solution",
+      "slot": "2020 고3 12월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -13158,6 +13158,1810 @@
         "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 베트남어Ⅰ 정답 및 해설와 일치",
         "firstPageText": "2021학년도 대학수학능력시험 제2외국어/한문영역 베트남어Ⅰ 정답 및 해설 01. ② 02. ② 03. ➃ 04. ③ 05. ⑤ 06. ① 07. ⑤ 08. ② 09. ① 10. ② 11. ③ 12. ③ 13. ② 14. ④ 15. ⑤ 16. ③ 17. ④ 18. ④ 19. ⑤ 20. ④ 21. ② 22. ① 23. ① 24. ④ 25. ① 26. ⑤ 27. ⑤ 28. ③ 29. ② 30. ③ [1~5] 문자, 발음, 성조 및 어휘 1. 단어에 들어갈 글자 찾기 오토바이 xe máy 정답해설 : 그러므로 □에 들어갈 글자는 답지 ②이다. 정답 ② 2. 같은 발음의 철자 찾기 나는 책을 읽을 때 안경을 써야 한다. ① 쉽다 ② 나무 ③ 야위다 ➃ 다리 ⑤ 보고하다 정답해설 : c와 k는 서로 발음이 같고 나머지는 발음이 다르다. 정답 ② 3. 옳은 성조의 표기 찾기 정답해설 : gà(닭)이므로 □에 들어갈 글자의 성조 표기가 옳은 것은 답지 ➃이다. 정답 ➃ 4. 알맞은 어휘 찾기 ◦",
         "sha256": "84f09b967b0b1bba771e0b53d97184e280ca131c40b1af7760890fc224ab0cd7"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/kor_mun_R624XS12.pdf",
+      "slot": "2020 고3 12월 csat korean question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2609305,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 국어 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 1 교시 홀수형 [1～3] 다음은 학생의 발표이다. 물음에 답하시오. 2. 다음은 발표자가 제시한 자료이다. 발표자의 자료 활용에 대한 설명으로 적절하지 않은 것은? [3점] 안녕하세요? 이번 탐구 과제는 ‘우리 문화재 깊이 보기’인데요, 저는 ‘고구려 고분 벽화’에 대해 발표하려고 합니다. 여러분은 고구려 고분 벽화를 본 적이 있나요? (청중의 대답을 듣고) 생각 보다 많지 않네요. 우리나라 고분 벽화의 대다수는 고구려 돌방 무덤에 있습니다. 돌방무덤은 돌을 쌓아 방처럼 만든 무덤으로 3세기부터 만들어졌는데요, 바로 이 시기에 고분 벽화가 그려 지기 시작했습니다. (㉠ 자료 제시) 여기가 돌방무덤의 내부입니다. [자료 1] [자료 2] [자료 3] 고분 벽화는 이곳의 천장과 벽에 그려져 있어요. ① 고구려 돌방무덤 내부에 벽화가 그려져 있음을 보여 주기 위해 그럼 고구려 고분 벽화에는 무엇을 그렸을까요? (청중의 반응을 ㉠에 [자료 1]",
+        "sha256": "663efcb6deb7e5530bb61df6159bc31a0c044504f434043c9a72531788157e6a",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/kor_hsj_1CPB7Y97.pdf",
+      "slot": "2020 고3 12월 csat korean solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 313656,
+        "pdfPages": 29,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 국어 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 [홀수형] 국어영역 정답 및 해설 01. ② 02. ④ 03. ① 04. ⑤ 05. ② 06. ③ 07. ③ 08. ① 09. ⑤ 10. ⑤ 11. ④ 12. ③ 13. ② 14. ① 15. ③ 16. ① 17. ④ 18. ⑤ 19. ③ 20. ④ 21. ③ 22. ② 23. ① 24. ① 25. ④ 26. ⑤ 27. ③ 28. ① 29. ④ 30. ② 31. ④ 32. ② 33. ⑤ 34. ② 35. ② 36. ④ 37. ④ 38. ⑤ 39. ⑤ 40. ⑤ 41. ③ 42. ③ 43. ⑤ 44. ② 45. ④ [1~3] 화법 1. 발표 표현 전략 사용하기 정답 해설 : 1문단의 ‘여러분은 고구려 고분 벽화를 본 적이 있나요? (청중의 대답을 듣고) 생각보다 많지 않네요.’와, 2문단의 ‘그럼 고구려 고분 벽화에는 무엇을 그렸을 까요? (청중의 반응을 살피고) 네, 다양한 답변이 있네요.’ 등에서 발표자가 발표 내용 과 관련한 질문을 하여 청중의 반응을",
+        "sha256": "e42a328015b727e479750c27ea12ef30688c813ad67ccd62616f7401345154ac",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/matha_mun_LOTW4UYI_1.pdf",
+      "slot": "2020 고3 12월 csat math/math-a question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2805570,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 수학가형 문제지와 일치",
+        "firstPageText": "",
+        "sha256": "fb1c489d07fb949b31f162a891e0dacb5988923f3b10800492192eaa81153e5e",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/matha_hsj_1LP8AOBL_4.pdf",
+      "slot": "2020 고3 12월 csat math/math-a solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 263818,
+        "pdfPages": 16,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 수학가형 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 수학영역 가형 정답 및 풀이 *최종 수정일 : 22.02.28 3. : 01. ③ 02. ② 03. ① 04. ④ 05. ⑤ ? 06. ② 07. ① 08. ② 09. ④ 10. ② 11. ① 12. ④ 13. ③ 14. ③ 15. ② : 16. ⑤ 17. ③ 18. ③ 19. ⑤ 20. ⑤  21. ② 22.  23.  24.  25.  sin   cos      26.  27.  28.  29.  30.           cos          1. : ?   sin    : tan        cos                    ×      ×        ① ③ 4. : ? 2. : ? : P∩   P      ",
+        "sha256": "73bbd65aea4f7a28b7118c7afa8ffe1a92f73dd5bcc9c23a2cf622f74091e2b4",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/mathb_mun_2711196D.pdf",
+      "slot": "2020 고3 12월 csat math/math-b question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2180579,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 수학나형 문제지와 일치",
+        "firstPageText": "",
+        "sha256": "2f7b6145e53d1bf2f99060b6f3fb74bfd0bd7aacd69dc1346562f0ebd2831fa7",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/mathb_hsj_N7254BR1_6.pdf",
+      "slot": "2020 고3 12월 csat math/math-b solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 273799,
+        "pdfPages": 12,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 수학나형 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 수학영역 나형 정답 및 풀이 *최근 수정일 : 23.03.17(금) 01.④ 02.④ 03.③ 04.② 05.② :  06.① 07.⑤ 08.② 09.① 10.⑤      lim   11.④ 12.② 13.⑤ 14.③ 15.③ → 16.② 17.① 18.③ 19.④ 20.④       lim   21.③ 22. 24 23. 12 24. 2 25.15 → 26.6 27.36 28.21 29.587 30.39  lim   →     1. : ③ ? 4. : : ?       ×    ×        :   ≤   ≤  ④     ≤ cos    ≤    .   ≤ cos   ≤  2. : ?   cos   7 . : ②      , 5. :    ?  ",
+        "sha256": "a7be132011daba10a277801e761657c5fb104c9c6f17ac405b553272a95e2d8d",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/eng_mun_8JGC8T6P.pdf",
+      "slot": "2020 고3 12월 csat english question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 6200042,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 영어 문제지와 일치",
+        "firstPageText": "",
+        "sha256": "5d9913e49d4877ed8952dfb56fe7161e518f7a17d686f2e0943acc4574af16fc",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/eng_hsj_P1H5NJC3_3.pdf",
+      "slot": "2020 고3 12월 csat english solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 319697,
+        "pdfPages": 30,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 영어 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 영어영역 정답 및 해설 *수정일 : 20.12.07(월) 01. ⑤ 02. ① 03. ① 04. ⑤ 05. ① 06. ② 07. ③ 08. ④ 09. ③ 10. ④ 11. ③ 12. ① 13. ② 14. ④ 15. ① 16. ⑤ 17. ⑤ 18. ① 19. ② 20. ① 21. ② 22. ① 23. ③ 24. ② 25. ⑤ 26. ⑤ 27. ④ 28. ④ 29. ⑤ 30. ⑤ 31. ② 32. ③ 33. ① 34. ② 35. ③ 36. ② 37. ⑤ 38. ④ 39. ④ 40. ③ 41. ③ 42. ④ 43. ③ 44. ⑤ 45. ④ 1. [출제 의도] 목적 파악 [해석] 남: 안녕하세요, 시청자 여러분. 이 동영상을 클릭해줘서 감사합니다. 저는 Ronnie Drain이고 15년 넘게 개인 피트니스 트레이너로 일하고 있습니다. 오늘, 저는 여 러분께 저의 채널인 ‘Build Your Body’에 대해 말씀드리고 싶습니다. 제 채널에 서 여러분은 가정이나",
+        "sha256": "106d354cb5c9ff893a80be20fa6ff2c80269bed5691d78102d0d9b219adf68e8",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_his_mun_769F47T4.pdf",
+      "slot": "2020 고3 12월 csat history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1269560,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 한국사 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 4 교시 한국사 영역 홀수형 1. (가)에 해당하는 유물로 가장 적절한 것은? [3점] 3. 밑줄 친 ‘이 나라’에 대한 설명으로 옳은 것은? [3점] 이 나라는 지역이 사방 5천 리로 5경과 15부를 두었다. 서쪽 으로는 중국과 통하고, 남쪽으로는 신라와 교류하고, 북쪽으로는 거란을 막고, 동쪽으로는 일본에 사신을 보냈다. 이러한 활발한 대외 교류 등으로 인해 이 나라는 해동성국이라고 불렸다. - 󰡔해동역사󰡕 - ① 별무반을 편성하였다. ② 대가야를 병합하였다. ③ 3성 6부를 운영하였다. ④ 훈련도감을 창설하였다. ① ② ③ ⑤ 9서당 10정을 설치하였다. 4. (가) 왕에 대한 설명으로 옳은 것은? 주먹도끼 비파형 동검 덩이쇠 ④ ⑤ (가) 은/는 박수경 등과 함께 신검의 군대를 격파하고 후삼국을 통일하였다. 이후 (가) 은/는 역분전을 제정하면서 사람들의 성품․행동의 선악과 공로의 대소를 살펴 차등 있게 토지를 나누어 주었다. 특별",
+        "sha256": "7dea875cbbcec982e7759502a85bd8487f2f29d6611e03dc9477508e8c07498f",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_his_hsj_MMB5369P.pdf",
+      "slot": "2020 고3 12월 csat history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 166734,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 한국사 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 한국사영역 한국사 정답 및 해설 01. ① 02. ② 03. ③ 04. ② 05. ③ 06. ② 07. ④ 08. ① 09. ⑤ 10. ① 11. ⑤ 12. ④ 13. ④ 14. ⑤ 15. ① 16. ④ 17. ① 18. ③ 19. ⑤ 20. ⑤ 1. : , ( ) . . ① [ ] ② . ③ . ④ . ⑤ . 2. : ( ) . . 5 . ( ) . ② [ ] ① . ③ . ④ . ⑤ 7 ( ). 3. : 5 15 , , ‘ ’ . 3 6 . ③ [ ] ① . 9 . ② 6 . ④ 1",
+        "sha256": "52c089328014ba261e790b5d58cd95b305db762d013e399fd12c7927db041f67",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_easta_mun_W2E91V2S.pdf",
+      "slot": "2020 고3 12월 csat social/east-asian-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 5186903,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 동아시아사 문제지와 일치",
+        "firstPageText": "사회탐구 2021학년도 영역 문제지 대학수학능력시험 동아시아사 1 3 제 4 교시 사회탐구 영역(동아시아사) 성명 수험 번호 제 [ ] 선택 1. (가)에 들어갈 유물로 적절한 것은? 3. (가) 황제에 대한 설명으로 옳은 것은? ① 장건을 서역에 파견하였다. ① ② ③ ② 항우와의 전쟁에서 승리하였다. ③ 준왕을 몰아내고 왕위를 차지하였다. ④ 왜의 노국왕에게 금인을 내려 주었다. ⑤ 흉노 견제를 위해 만리장성을 축조하였다. ④ ⑤ 동 아 4. 다음 상황이 나타난 시기를 연표에서 옳게 고른 것은? [3점] 시 아 주군께서 조선 정벌을 명하면서 말하기를 “조선은 대대로 사 우리에게 피해를 끼쳤으니 마땅히 성토해야 한다. 그러나 이번 출정의 목적은 오로지 조선만을 정벌하는 것이 아니다. 평안도의 섬으로 들어간 명의 장수가 우리를 저버린 무리를 받아들이고 있으니 그도 토벌하라.”라고 하였다. ① (가) ② (나) ③ (다) ④ (라) ⑤ (마) 2. 다음 자료를 활용한 탐구 활동으로 가",
+        "sha256": "78f2f5957bc78d21d5141792f16bdd913b647f65fc16fe38e9f55df056524e33",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_easta_hsj_JV3J3A55_1.pdf",
+      "slot": "2020 고3 12월 csat social/east-asian-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 173715,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 동아시아사 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 동아시아사 정답 및 해설 01. ③ 02. ③ 03. ⑤ 04. ⑤ 05. ① 06. ⑤ 07. ④ 08. ② 09. ② 10. ① 11. ④ 12. ⑤ 13. ④ 14. ② 15. ① 16. ④ 17. ③ 18. ① 19. ④ 20. ② 1. 중국 랴오허강 지역의 신석기 문화 파악 정답 해설 : 중국 랴오허강 지역에서 발달한 신석기 문화 유물이라는 점을 통해 (가) 에는 훙산 문화의 토기가 들어가야 함을 알 수 있다. 중국 랴오허강 지역에서 발달한 신석기 문화인 훙산 문화 유적지에서 몸통에 기하학적 무늬가 있고, 위아래가 뚫려 있는 제사용 토기, 채도, 여신의 얼굴상, 용 모양 옥기 등이 발견되었다. 정답 ③ [오답피하기] ① 중국 황허강 중류 지역에서 발달한 신석기 문화인 양사오 문화의 토기이다. ② 한반도의 신석기 문화를 대표하는 빗살무늬 토기이다. ④ 일본 열도에서 발달한 신석기 문화인 조몬 문화의 토기이다. ⑤ 황허강 하류 지역에서",
+        "sha256": "344d5529b2c4c56885d2491bc700e98d7411e39aa2b46836647d9d786c00f3e9",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_eco_mun_NYE9297N.pdf",
+      "slot": "2020 고3 12월 csat social/economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 630454,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 경제 문제지와 일치",
+        "firstPageText": "사회탐구 2021학년도 영역 문제지 대학수학능력시험 경제 1 3 제 4 교시 사회탐구 영역(경제) 성명 수험 번호 제 [ ] 선택 1. 그림은 교사의 수업 장면이다. 이에 대한 설명으로 옳은 것은? [3점] 4. 다음 자료에 대한 설명으로 옳은 것은? 갑국 정부는 시장 균형 가격에서 거래되고 있던 X재와 Y재 시장에 가격 규제 정책을 시행하였다. 표는 정책 시행 전후의 수요량과 공급량을 나타낸다. 단, X재와 Y재 모두 수요와 공급 법칙을 따르고, 정책 시행 이후 암시장은 형성되지 않았다. 정책 시행 이전 정책 시행 이후 구분 수요량(개) 공급량(개) 수요량(개) 공급량(개) X재 220 220 180 250 Y재 200 200 230 190 ① A는 이윤 극대화를 추구한다. ② 재화와 서비스는 ㉠에 해당한다. ① X재 시장에서 시행한 정책은 소비자 보호를 목적으로 한다. ③ 임금과 지대는 ㉡에 해당한다. ② X재 거래량은 정책 시행 이전에 비해 증가하였다. ④ 소득세는 ㉢에 해당한",
+        "sha256": "d85a61bf63f11d57834a774ae5aef226b018acc0cebf0a0c2292604066cee18b",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_eco_hsj_H82DNDVE.pdf",
+      "slot": "2020 고3 12월 csat social/economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 134581,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 경제 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 경제 정답 및 해설 01. ② 02. ③ 03. ③ 04. ④ 05. ⑤ 06. ⑤ 07. ⑤ 08. ④ 09. ② 10. ③ 11. ④ 12. ① 13. ① 14. ③ 15. ③ 16. ② 17. ① 18. ④ 19. ④ 20. ⑤ 1. 민간 경제 순환의 이해 정답 해설 : 생산물 시장의 수요자이자 생산 요소 시장의 공급자인 A는 가계이다. ② 재화와 서비스는 생산물 시장에서 거래되는 실물인 ㉠에 해당한다. 정답 ② [오답피하기] ① 이윤 극대화를 추구하는 경제 주체는 기업이다. ③ ㉡은 노동, 자본, 토지 등과 같은 생산 요소이다. ④ ㉢은 재화와 서비스 구입에 대한 대가이다. ⑤ ㉣은 임금, 이자, 지대 등과 같은 생산 요소 제공에 대한 대가이다. 2. 경제 체제의 이해 정답 해설 : ③ 시장 경제 체제에서는 계획 경제 체제와 달리 민간 경제 주체의 자유 로운 경제 활동이 중시된다. 정답 ③ [오답피하기] ① 개인의 이윤 추구 동기가 ",
+        "sha256": "a9a4a198b575c8768017cd4d828cfc9ad1090ff791838284b289db0b95783228",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_yrnss_mun_ZDSGTC12.pdf",
+      "slot": "2020 고3 12월 csat social/ethics-and-thought question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1178056,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 윤리와사상 문제지와 일치",
+        "firstPageText": "사회탐구 2021학년도 영역 문제지 대학수학능력시험 윤리와 사상 1 3 제 4 교시 사회탐구 영역(윤리와 사상) 성명 수험 번호 제 [ ] 선택 윤 리 1. 다음 편지를 쓴 한국 사상가가 강조하는 삶의 태도로 가장 적절한 4. 다음을 주장한 고대 동양 사상가의 입장으로 옳지 않은 것은? 와 것은? 사 ◦ 색(色)은 물방울 같고 수(受)는 물거품 같으며 상(想)은 봄날의 상 아지랑이 같고 행(行)은 파초와 같으며 식(識)은 허깨비와 같다고 관찰하라. ◦ 고통[苦], 그 고통을 발생시키는 원인, 고통을 남김없이 다 없앤 상태, 고통이 없는 곳으로 나아가는 바른 도(道), 이 네 가지를 알지 못한다면 항상 잠들어 있는 것과 같으니라. ① 탐욕, 분노, 어리석음을 없애 고통 없는 경지[涅槃]로 나아가야 한다. ② 고통의 원인을 모두 제거해도 윤회(輪廻)에서 벗어날 수는 없다. ③ 고통을 없애려면 여덟 가지 수행 방법[八正道]을 실천해야 한다. ④ 오온(五蘊)의 참모습을 파악하지 못하면 고통",
+        "sha256": "3c4b25601bea8d73cef9f6e53b7c78050965f2701425c8be440f1b134b9c734a",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_yrnss_hsj_219C5826.pdf",
+      "slot": "2020 고3 12월 csat social/ethics-and-thought solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 167458,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 윤리와사상 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 윤리와 사상 정답 및 해설 01. ② 02. ③ 03. ② 04. ② 05. ① 06. ③ 07. ④ 08. ③ 09. ⑤ 10. ⑤ 11. ③ 12. ① 13. ⑤ 14. ⑤ 15. ① 16. ① 17. ⑤ 18. ③ 19. ④ 20. ④ 1. 이황이 강조하는 삶의 태도 파악 정답 해설 : 편지를 쓴 한국 사상가는 이황이다. 이황은 경(敬)을 특히 강조하면서 그 것의 구체적인 실천 방법으로 주일무적(主一無適), 정제엄숙(整齊嚴肅), 상성성(常惺 惺) 등을 제시하였다. 그러므로 이 편지의 내용에 가장 부합하는 삶의 태도는 ‘경건한 마음으로 이치를 탐구하고 성찰의 자세를 잃지 않는다.’라는 것이다. 정답 ② [오답피하기] ① 유학자인 이황은 오륜을 비롯한 인륜 도덕을 철저하게 따를 것을 강조하였다. ③ 도가 사상가인 장자가 강조하는 삶의 태도이다. 이황은 사단, 칠정 등의 개념을 엄밀히 구분해 보려고 하였으며, 유교적 도덕규범을 철저히 따를 ",
+        "sha256": "d05b2570166da2263b108594cd3f674c33460ec55026bbc450e410e48f3c81c1",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_hanji_mun_6379T27T.pdf",
+      "slot": "2020 고3 12월 csat social/korean-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 4906814,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 한국지리 문제지와 일치",
+        "firstPageText": "사회탐구 2021학년도 영역 문제지 대학수학능력시험 한국지리 1 3 제 4 교시 사회탐구 영역(한국지리) 성명 수험 번호 제 [ ] 선택 1. (가)와 (나)는 조선 시대에 제작된 고지도와 지리지의 일부이다. 3. 다음은 온라인 수업 장면의 일부이다. 댓글의 내용이 옳은 학생만을 이에 대한 설명으로 옳은 것은? 고른 것은? (가) (나) 춘천은 …(중략)… ㉠ 산속 에는 평야가 넓게 펼쳐져 있고 한 그 복판으로 두 강이 흐른다. 국 토질이 단단하고 기후가 온화 지 하며 강과 산이 맑고 시원하며 리 땅이 비옥해서 대를 이어 사는 사대부가 많다. - 김정호, ｢□□□□□｣ - - 이중환, 󰡔○○○󰡕 - ① (가)는 조선 후기에 제작되었다. ② (가)에서 A는 하천을 표현한 것이다. ③ (가)를 통해 B의 정확한 해발 고도를 알 수 있다. ④ (가)와 (나)는 모두 국가 통치의 목적으로 제작되었다. ⑤ ㉠은 이중환이 제시한 가거지 조건 중 인심(人心)에 해당한다. ① 갑, 을 ② 갑, 병",
+        "sha256": "25b6ad74eeee4d3ae845b1cbac3ac67fb04b7e00a51d1599128234e590fc4594",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_hanji_hsj_7VFB5H49.pdf",
+      "slot": "2020 고3 12월 csat social/korean-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 158443,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 한국지리 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 한국지리 정답 및 해설 01. ① 02. ② 03. ② 04. ④ 05. ② 06. ③ 07. ⑤ 08. ⑤ 09. ③ 10. ④ 11. ⑤ 12. ⑤ 13. ② 14. ④ 15. ⑤ 16. ⑤ 17. ③ 18. ③ 19. ① 20. ④ 1. 고지도와 고문헌의 이해 정답 해설 : (가)는 김정호가 조선 후기까지 축적된 지도 제작 기술을 집대성하여 제 작한 대동여지도의 일부이고, (나)는 이중환이 살기 좋은 곳의 입지 조건과 우리나라 각 지역의 특성을 체계적이고 종합적으로 설명한 택리지의 일부이다. ① 김정호의 대동여지도는 1861년에 만들어졌으므로, 조선 후기에 제작되었다. 정답 ① [오답피하기] ② 대동여지도(가)에서 A는 직선으로 표현되어 있고 10리마다 방점을 찍어 대략적인 거리 파악이 가능하도록 하였으므로 도로에 해당한다. 한편, 대동여지도에서 하천은 쌍선(배가 다닐 수 있는 하천)과 단선(배가 다닐 수 없는 하천)으로 구분해 표현하",
+        "sha256": "e6072d275ce5f0cbde9d94f649b890ce4f32c60a09106446a1c0c19419ed075a",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_ssnyr_mun_17OM3PI7.pdf",
+      "slot": "2020 고3 12월 csat social/life-and-ethics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 909007,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 생활과윤리 문제지와 일치",
+        "firstPageText": "생 사회탐구 2021학년도 영역 문제지 대학수학능력시험 생활과 윤리 1 3 활 과 제 4 교시 사회탐구 영역(생활과 윤리) 윤 리 성명 수험 번호 제 [ ] 선택 1. ㉠에 들어갈 진술로 가장 적절한 것은? 4. 갑, 을 사상가들의 입장으로 적절한 것만을 <보기>에서 있는 대로 고른 것은? [3점] 나는 윤리학이 행위의 근거가 되는 도덕적 원리를 탐구하기 보다는 도덕적 논의에서 사용되는 용어의 의미를 밝히고 추론의 갑 : 원조의 목적은 고통 받는 사회를 질서 정연한 사회가 되도록 규칙을 분석해야 한다고 생각한다. 그런데 어떤 사람은 윤리학이 하는 데 있다. 어떤 사회가 합당하게 합리적으로 통치된다면, 사회․문화적 변화와 과학 기술의 발달로 인해 발생하는 구체적 자원이 부족해도 질서 정연한 사회가 될 수 있다. 윤리 문제에 대한 해결책 탐구에 주력해야 한다고 주장한다. 을 : 원조는 극단적 빈곤을 방지하기 위해 이루어져야 한다. 이 경우 나는 이러한 주장이 ㉠ 고 생각한다. 원조는 이",
+        "sha256": "1028ef2b242461a79f7b5b87465ccbbb4cf4221f3def1219c0d61af646714b0c",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_ssnyr_hsj_F5P7Y27Q_1.pdf",
+      "slot": "2020 고3 12월 csat social/life-and-ethics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 143523,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 생활과윤리 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 생활과 윤리 정답 및 해설 *최근 수정일 : 22.11.10(목) 01. ② 02. ① 03. ④ 04. ② 05. ① 06. ⑤ 07. ③ 08. ⑤ 09. ② 10. ③ 11. ③ 12. ④ 13. ④ 14. ③ 15. ③ 16. ⑤ 17. ④ 18. ⑤ 19. ② 20. ② 1. 메타 윤리학과 실천 윤리학의 특징 파악 정답 해설 : 제시문의 ‘나’는 메타 윤리학의 입장을 지지하고, ‘어떤 사람’은 실천 윤 리학의 입장을 지지한다. 메타 윤리학은 도덕적 논의에 사용되는 용어들의 의미 분석 및 도덕적 추론의 규칙과 인식의 방법 검토를 핵심 과제로 삼는다. 반면 실천 윤리학 은 우리 삶의 여러 영역들에서 발생하는 윤리적인 문제들에 대한 구체적이고 실천적 인 해결책 모색을 주된 탐구 과제로 삼는다. 그러므로 ‘나’의 입장에서 ‘어떤 사람’의 주장은 ‘도덕 문제 해결보다 도덕 논증의 타당성 분석이 주요함을 간과한다고 생각한 다.’고 할 수 있다",
+        "sha256": "ddbaa2b6bd4c105540cc21e6c92426e77b1a9d324956daa95a6f2658d8cae4b3",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_bnj_mun_7R8HZ8X7.pdf",
+      "slot": "2020 고3 12월 csat social/politics-and-law question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1117492,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 정치와 법 문제지와 일치",
+        "firstPageText": "사회탐구 2021학년도 영역 문제지 대학수학능력시험 정치와 법 1 3 제 4 교시 사회탐구 영역(정치와 법) 성명 수험 번호 제 [ ] 선택 1. 정치를 바라보는 관점 A, B에 대한 질문에 모두 옳게 응답한 학생은? 4. 기본권 유형 A∼C에 대한 설명으로 옳은 것은? A, B에 대한 침해는 국가와 기본권 주체인 개인의 관계에서 주로 발생할 수 있다. A는 국가의 간섭과 침해를 배제함으로써 보장되는 기본권으로, 기본권 제한이 헌법상 과잉 금지의 원칙에 위반될 경우 위헌 판단이 가능하다. B는 권리 구제를 위한 기본권으로, 이를 실현하기 위한 법률을 제정하지 않은 (○ : 예, × : 아니요) 것이 현저히 불합리하다면 위헌 여부를 다툴 수 있다. 이에 질문 학생 갑 을 병 정 무 비하여 C는 국가, 개인, 그 개인과 비교 대상이 되는 제3자의 A는 국가 형성 이전의 정치 현상을 설명하기에 관계를 통하여 위헌 여부가 판단될 수 있다. 국가가 본질적으로 × × × ○ × 적합한가? 같은",
+        "sha256": "dce6aaf8ff8ebaa99784f070b06750b2476fa51fc6d9d4466247e4b6ba1370aa",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_bnj_hsj_11SGE54S.pdf",
+      "slot": "2020 고3 12월 csat social/politics-and-law solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 134180,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 정치와 법 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 정치와 법 정답 및 해설 01.① 02.③ 03.⑤ 04.① 05.④ 06.④ 07.② 08.③ 09.① 10.③ 11.② 12.③ 13.③ 14.④ 15.⑤ 16.② 17.② 18.③ 19.⑤ 20.④ 1. 정치를 바라보는 관점 이해 정답 해설 : A관점은 좁은 의미로 정치를 바라보는 관점, B관점은 넓은 의미로 정치 를 바라보는 관점이다. ① 좁은 의미로 정치를 바라보는 관점은 국가 수준의 정치 현 상만을 정치로 보기 때문에 국가 형성 이전의 정치 현상을 설명하기 곤란하다. 넓은 의미로 정치를 바라보는 관점은 국가의 정치 현상과 국가 이외 사회 집단의 정치 현 상이 본질적으로 같다고 본다. 또한 넓은 의미로 정치를 바라보는 관점은 좁은 의미 로 정치를 바라보는 관점에 비해 다원화된 현대 사회의 정치 현상을 설명하기 적합하 다. 좁은 의미로 정치를 바라보는 관점과 넓은 의미로 정치를 바라보는 관점 모두 정 치권력을 획득하고 유지・행사하는 ",
+        "sha256": "b9be7aae10740af7f02a357f917221202fa3ad30605de1363fa5c23e112a5af1",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_samun_mun_493B8957.pdf",
+      "slot": "2020 고3 12월 csat social/social-culture question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 937880,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 사회·문화 문제지와 일치",
+        "firstPageText": "사회탐구 2021학년도 영역 문제지 대학수학능력시험 사회･문화 1 3 제 4 교시 사회탐구 영역(사회･문화) 성명 수험 번호 제 [ ] 선택 1. 밑줄 친 ㉠～㉢과 같은 현상의 일반적인 특징에 대한 설명으로 4. 갑, 을의 문화 이해 태도에 대한 설명으로 옳은 것은? 옳은 것은? ◦ 갑은 외국에서 유학을 온 일부 학생들이 종교 의례에 참석하기 위해 예로부터 ㉠ 옹기는 음식의 발효와 저장을 위해 사용된 생활필수품 특정 요일의 수업에 결석하는 모습을 보고, 자국의 생활 양식에 비해 이었다. 열이 가해지면 ㉡ 흙 알갱이의 크기 차이로 인해 표면에 미세한 뒤떨어진 문화라고 생각하였다. 기공이 형성되어 숨 쉬는 옹기가 만들어졌다. 조상들은 김장 김치를 옹기에 ◦ 이주민인 신입 사원이 자신이 속한 문화권에서는 술을 마시거나 접촉 담아 겨울 동안 땅속에 보관하여 가장 맛있는 상태로 유지하였다. 최근 하는 것을 금기시한다며 술 판매 업무를 할 수 없다고 하자, 관리자 연구에서는 땅속 옹기의 음식 ",
+        "sha256": "93a47804ab72cac539b5b898dc1196c3375ff413df10f24bb477cd9840556005",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_samun_hsj_VS6AWEZF_1.pdf",
+      "slot": "2020 고3 12월 csat social/social-culture solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 155031,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 사회·문화 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 사회·문화 정답 및 해설 *수정일 : 2020.12.08 01. ⑤ 02. ② 03. ④ 04. ④ 05. ④ 06. ② 07. ② 08. ③ 09. ① 10. ② 11. ⑤ 12. ④ 13. ③ 14. ③ 15. ④ 16. ⑤ 17. ① 18. ⑤ 19. ③ 20. ① 1. 사회·문화 현상과 자연 현상의 특징 파악 정답 해설 : ㉠, ㉢은 사회·문화 현상, ㉡은 자연 현상이다. ⑤ 사회·문화 현상은 개연 성의 원리가, 자연 현상은 필연성의 원리가 적용된다. 정답 ⑤ [오답피하기] ① 자연 현상이 사회·문화 현상에 비해 인과 관계가 명확하다. ② 사회·문화 현상은 자연 현상과 달리 특수성이 나타난다. ③ 사회·문화 현상과 자연 현상 모두 경험적 자료를 통해 연구할 수 있다. ④ 사회·문화 현상은 가치 함축적이고 자연 현상은 몰가치적이다. 2. 정보 사회의 문제 파악 정답 해설 : (가)에는 과장된 사용 후기를 우연히 보고 제품을 구입하였으나",
+        "sha256": "dae2393ad583bdaa902a7d1e3a579b92c28ae8b1e712da5139488a2078917866",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_saeji_mun_8LG2IM6I_1.pdf",
+      "slot": "2020 고3 12월 csat social/world-geography question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 6808759,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 세계지리 문제지와 일치",
+        "firstPageText": "사회탐구 2021학년도 영역 문제지 대학수학능력시험 세계지리 1 3 제 4 교시 사회탐구 영역(세계지리) 성명 수험 번호 제 [ ] 선택 1. 표는 (가)～(다) 국가의 지리 정보를 나타낸 것이다. 이에 대한 3. 그래프의 (가)～(다) 지역(대륙)에 대한 설명으로 옳은 것만을 설명으로 옳은 것은? <보기>에서 고른 것은? (단, (가)～(다)는 각각 라틴 아메리카, 아프리카, 유럽 중 하나임.) [3점] ① ㉠은 지리 정보 중 속성 정보에 해당한다. 세 ② ㉡은 원격 탐사를 이용하여 수집된 정보이다. 계 <보 기> ③ (가)는 아프리카에 속한다. 지 ④ (가)는 (다)보다 인구 밀도가 낮다. ㄱ. (가)에는 최상위 계층 세계 도시가 위치한다. 리 ⑤ (나), (다)의 해안은 모두 인도양에 접해 있다. ㄴ. (가)는 (나)보다 산업화의 시작 시기가 이르다. ㄷ. (가)는 (다)보다 도시 인구 증가에 따른 기반 시설의 부족 문제가 심각하다. ㄹ. 아프리카 도시 인구 상위 5개국 모두 ",
+        "sha256": "d3cb129ab9014ef0097efb49bca31421526ecdfedfee78239b0575f2b8914884",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_saeji_hsj_9VB7R9RW.pdf",
+      "slot": "2020 고3 12월 csat social/world-geography solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 164460,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 세계지리 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 세계지리 정답 및 해설 01. ③ 02. ② 03. ① 04. ④ 05. ② 06. ① 07. ⑤ 08. ③ 09. ③ 10. ③ 11. ② 12. ③ 13. ④ 14. ④ 15. ① 16. ⑤ 17. ⑤ 18. ② 19. ④ 20. ② 1. 지리 정보를 통한 주요 국가의 특성 파악 정답 해설 : 해안선과 국토의 모양, 수도의 위ㆍ경도, 인구, 면적 등을 종합해 볼 때, (가)는 나이지리아, (나)는 뉴질랜드, (다)는 캐나다이다. ③ (가)는 수도의 위ㆍ경도 값을 통해 본초 자오선과 적도 부근에 위치함을 알 수 있 고, 인구 규모가 매우 크며, 해안선과 국토의 모양을 통해 국토의 남서쪽으로 바다와 접해 있음을 유추할 수 있다. 따라서 (가)는 아프리카에서 인구 규모가 가장 큰 국가 인 나이지리아로, 나이지리아는 아프리카에 속한다. 정답 ③ [오답피하기] ① ㉠은 위치적 특성을 나타내는 정보이므로 지리 정보 중 공간 정보에 해당한다. 한 편",
+        "sha256": "dee4465d14badd330b1daff515a3d02b4e27bc2643374edd37d84c29d613dca9",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_sks_mun_H64EU61E.pdf",
+      "slot": "2020 고3 12월 csat social/world-history question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 6070050,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 세계사 문제지와 일치",
+        "firstPageText": "사회탐구 2021학년도 영역 문제지 대학수학능력시험 세계사 1 3 제 4 교시 사회탐구 영역(세계사) 성명 수험 번호 제 [ ] 선택 1. 다음 문명에 대한 설명으로 옳은 것은? [3점] 3. 다음 지시가 내려진 시기의 왕조에 대한 설명으로 옳은 것은? [3점] ① 군기처를 설치하였다. ② 고구려를 침공하였다. ③ 이갑제를 시행하였다. ④ 5대 10국의 혼란을 수습하였다. ⑤ 황소의 난으로 국력이 쇠퇴하였다. 4. 다음 황제의 업적에 대한 설명으로 옳은 것은? [3점] ① 미라를 제작하였다. 황제는 즉위 전에 자신의 근거지였던 금련천 일대에 새로운 ② 콜로세움을 건립하였다. 성을 건설하였는데, 즉위 후에 이를 상도(上都)로 승격시켰다. ③ 길가메시 서사시를 남겼다. 한편, 황제는 옛 왕조의 수도였던 중도(中都) 인근에 도성을 ④ 갑골에 점복의 내용을 기록하였다. 쌓아 그 안에 처음으로 종묘와 궁전을 마련하였고, 이를 대도 ⑤ 하라파와 모헨조다로를 건설하였다. (大都)라고 부르게 하였",
+        "sha256": "f90607de203c3535d1fd763d82489a2612c9fbbcbab6d049259f011e84d3cb38",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/s_sks_hsj_OT1ZN175_1.pdf",
+      "slot": "2020 고3 12월 csat social/world-history solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 170450,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 세계사 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 사회탐구영역 세계사 정답 및 해설 01. ① 02. ① 03. ③ 04. ⑤ 05. ④ 06. ④ 07. ③ 08. ④ 09. ④ 10. ⑤ 11. ⑤ 12. ⑤ 13. ① 14. ① 15. ⑤ 16. ② 17. ② 18. ④ 19. ③ 20. ② 1. 이집트 문명의 특징 파악 정답 해설 : 자료에서 태양신의 아들 파라오, 나일강, 피라미드 등을 통해 이집트 문 명과 관련된 내용임을 알 수 있다. 이집트 문명에서는 영혼 불멸과 사후 세계를 믿어 지배자인 파라오의 시신을 미라로 만들어 피라미드에 묻었다. 정답 ① [오답피하기] ② 검투 경기장 등으로 이용된 콜로세움은 로마 문화를 보여 주는 대표적 유적이다. ③ 메소포타미아 문명에 대한 설명이다. ④ 중국 상 왕조에서는 점친 내용과 결과를 갑골에 기록하였다. ⑤ 인더스 문명에서는 하라파, 모헨조다로 등의 계획도시가 건설되었다. 2. 한 왕조의 문화 이해 정답 해설 : 자료에서 본기, 세가, 열전, 서, 표",
+        "sha256": "067e5f0e6a8d21af6cf0c486510a0b84c357f3956aa9787ff8e8bb76c55fce3a",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_che1_mun_S1N55N87.pdf",
+      "slot": "2020 고3 12월 csat science/chemistry-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 782782,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 화학Ⅰ 문제지와 일치",
+        "firstPageText": "과학탐구 2021학년도 영역 문제지 대학수학능력시험 화학 I 1 3 제 4 교시 과학탐구 영역(화학 I) 성명 수험 번호 제 [ ] 선택 1. 다음은 탄소 화합물에 대한 설명이다. 4. 다음은 가지 물질이다. 화 학 탄소 화합물이란 탄소( C)를 기본으로 수소( H ), 산소( O), 구리(Cu ) 염화 나트륨( NaCl) 다이아몬드( C) I 질소( N ) 등이 결합하여 만들어진 화합물이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 다음 중 탄소 화합물은? 것은? [3점] ① 산화 칼슘( CaO) ② 염화 칼륨(KCl ) ③ 암모니아(NH ) <보 기> ④ 에탄올( CHOH ) ⑤ 물(HO) ㄱ. Cu ( )는 연성(뽑힘성)이 있다. ㄴ. NaCl()은 전기 전도성이 있다. ㄷ. C(  , 다이아몬드)를 구성하는 원자는 공유 결합을 하고 있다. ①ㄱ ②ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ 2. 다음은 화학 반응에서 열의 출입에 대한 학생들",
+        "sha256": "cb919bfa3210a47a6712bdb6ffa83957675f8868334e69df55fc802dc04912c7",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_che1_hsj_I3HF54XN.pdf",
+      "slot": "2020 고3 12월 csat science/chemistry-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 165392,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 화학Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 과학탐구영역 화학Ⅰ 정답 및 해설 01. ④ 02. ③ 03. ⑤ 04. ⑤ 05. ③ 06. ② 07. ① 08. ① 09. ⑤ 10. ④ 11. ② 12. ② 13. ④ 14. ③ 15. ② 16. ① 17. ④ 18. ⑤ 19. ② 20. ① 1. 탄소 화합물 [정답맞히기] 제시된 보기의 물질 중 탄소 화합물은 에탄올( C H  OH ) 뿐이다. 정답④ 2. 화학 반응에서의 열 출입 [정답맞히기] 학생 A. 발열 반응은 화학 반응이 일어날 때 열이 방출된다. 학생 C. 메테인의 연소 반응에서는 열과 빛이 발생하므로 발열 반응이다. 정답③ [오답피하기] 학생 B. 화학 반응에는 열을 방출하는 발열 반응과 열을 흡수하는 흡열 반응이 있다. 3. 산소(O) 원자의 전자 배치 [정답맞히기] ㄱ. (가)와 (나)는 모두 전자 배치 원리를 만족하고 있으므로 바닥상태의 전자 배치이다. ㄴ. (다)는  오비탈에 쌍을 이룬 전자의 스핀 방향이 같으므로 파울",
+        "sha256": "1123c7c2ebf0ec80da4df6418ff00a89d8129cde511aa08c5954003162b9db08",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_che2_mun_864969QU.pdf",
+      "slot": "2020 고3 12월 csat science/chemistry-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 768702,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 화학Ⅱ 문제지와 일치",
+        "firstPageText": "과학탐구 2021학년도 영역 문제지 대학수학능력시험 화학 II 1 3 제 4 교시 과학탐구 영역(화학 II) 성명 수험 번호 제 [ ] 선택 1. 다음은 촉매에 대한 설명이다. 4. 그림은 가지 고체를 분류하는 과정을 나타낸 것이다. X∼Z 는 각각 Ag ( ), CO ( ), CsCl ( ) 중 하나이고, 각 고체의 결정 구조를 촉매는 화학 반응이 일어날 때 반응 경로를 변화시켜 모형으로 나타내었다. (가) 을/를 조절하는 물질이며, 동일한 화학 반응에서 (나) 를 사용하면 촉매를 사용하지 않은 경우보다 활성화 에너지가 작아진다. 다음 중 (가)와 (나)로 가장 적절한 것은? (가) (나) (가) (나) ① 반응 속도 정촉매 ② 반응 속도 부촉매 ③ 반응 엔탈피 정촉매 ④ 반응 엔탈피 부촉매 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 ⑤ 반응 시간 부촉매 것은? (단, 각 결정의 단위세포는 정육면체이다.) <보 기> ㄱ. X는 CsCl( )이다. ㄴ. ",
+        "sha256": "7ca3090c766b863e678a189b4171844328f79fe7985b0bd618865e0c897e259b",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_che2_hsj_7NMZ1A4X.pdf",
+      "slot": "2020 고3 12월 csat science/chemistry-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 189517,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 화학Ⅱ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 과학탐구영역 화학Ⅱ 정답 및 해설 01. ① 02. ④ 03. ① 04. ③ 05. ⑤ 06. ④ 07. ① 08. ③ 09. ⑤ 10. ⑤ 11. ② 12. ② 13. ③ 14. ① 15. ② 16. ④ 17. ⑤ 18. ④ 19. ② 20. ① 1. 촉매 [정답맞히기] 촉매는 반응 속도를 조절하는 물질이며 정촉매는 활성화 에너지를 낮추 어 반응 속도를 빠르게 한다. 따라서 (가)는 반응 속도, (나)는 정촉매이다. 정답① 2. 반응 엔탈피 [정답맞히기] ㄴ. H  O →H  O   반응의 반응 엔탈피(   )는 0보다 크므로 1mol의 엔탈피(  )는 H  O    H  O   이다. ㄷ. H  O  → H  O   반응은 H  O  → H  O   반응의 역반응이므로 반응 엔탈피(   )는 -44 kJ이다. 정답④ [오답피하기] ㄱ. 기화는 액체에서 기체로 상태가 변화하는 것이다.",
+        "sha256": "ae4156354460e8ec0d81d6493ae1e5e1d7f3b4358931fb7cfa27fcdd21430036",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_ear1_mun_14OTQ445.pdf",
+      "slot": "2020 고3 12월 csat science/earth-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2555368,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 지구과학Ⅰ 문제지와 일치",
+        "firstPageText": "과학탐구 2021학년도 영역 문제지 대학수학능력시험 지구과학 I 1 3 제 4 교시 과학탐구 영역(지구과학 I) 성명 수험 번호 제 [ ] 선택 1. 다음은 판 구조론이 정립되는 과정에서 등장한 두 이론에 대하여 4. 그림 (가)는 마그마가 생성되는 지역 A ～D를, (나)는 마그마가 학생 A , B, C가 나눈 대화를 나타낸 것이다. 생성되는 과정 중 하나를 나타낸 것이다. 이론 내용 고생대 말에 판게아가 존재하였고, 약  억 년 전에 분리되기 ㉠ 시작하여 현재와 같은 대륙 분포가 되었다. ㉡ 맨틀이 대류하는 과정에서 대륙이 이동할 수 있다. (가) (나) 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? [3점] <보 기> ㄱ. A 의 하부에는 플룸 상승류가 있다. 제시한 내용이 옳은 학생만을 있는 대로 고른 것은? ㄴ. (나)의 ㉠ 과정에 의해 마그마가 생성되는 지역은 B이다. ①A ②B ③ A, C ④ B, C ⑤ A , B, C ㄷ. 생성되는 마그마의 S",
+        "sha256": "8439ec044614b6c4ad0a702ea513dffb001afb43ab60df5424df602ca14d5367",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_ear1_hsj_2C441P31.pdf",
+      "slot": "2020 고3 12월 csat science/earth-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 157104,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 지구과학Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 과학탐구영역 지구과학Ⅰ 정답 및 해설 01. ① 02. ⑤ 03. ② 04. ① 05. ④ 06. ③ 07. ⑤ 08. ⑤ 09. ② 10. ④ 11. ② 12. ③ 13. ③ 14. ① 15. ① 16. ⑤ 17. ③ 18. ② 19. ③ 20. ④ 1. 판 구조론의 정립 과정 판 구조론은 대륙 이동설→맨틀 대류설→해저 확장설 등의 이론을 거쳐 정립되었다. ㉠은 베게너의 대륙 이동설, ㉡은 홈즈의 맨틀 대류설이다. [정답맞히기] A. 베게너는 초대륙 판게아가 고생대 말기~중생대 초기에 존재하였으며, 판게아는 약 2억 년 전부터 분리되어 현재와 같은 대륙 분포가 되었다는 대륙 이동설 (㉠)을 주장하였는데, 그 증거로 대서양 양쪽 대륙 해안선 굴곡의 유사성 등을 제시하 였다. 정답① [오답피하기] B. ㉡(맨틀 대류설)에 의하면 맨틀 대류가 상승하는 곳에서는 대륙 지각 이 분리되면서 새로운 해양이 생성되고, 맨틀 대류가 하강하는 곳에서는 산맥과 해구 가 ",
+        "sha256": "45696dc5a4726049e99ba2bdd3398315577f9b12993d0f580622d00b8610b75f",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_ear2_mun_F9VPF158.pdf",
+      "slot": "2020 고3 12월 csat science/earth-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2640148,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 지구과학Ⅱ 문제지와 일치",
+        "firstPageText": "과학탐구 2021학년도 영역 문제지 대학수학능력시험 지구과학 II 1 3 제 4 교시 과학탐구 영역(지구과학 II) 성명 수험 번호 제 [ ] 선택 1. 다음은 어느 발전 방식에 대한 설명이다. 4. 다음은 색등급도를 이용하여 성단의 거리를 구하는 탐구이다. ◦ (가) 발전은 만조와 간조의 해수면 [탐구 과정] 높이 차이가 큰 지역의 하구나 만을 (가) 표준 주계열성, 성단 A , 성단 B의 색등급도가 그려진 투명 방조제로 막아 전기를 생산한다. 용지 Ⅰ, Ⅱ, Ⅲ을 준비한다. ◦ 우리나라의 시화호 (가) 발전소 에서 이용하는 방식이다. (가)에 가장 적절한 것은? ① 조력 ② 조류 ③ 파력 ④ 수력 ⑤ 해양 온도 차 Ⅰ Ⅱ Ⅲ (나) Ⅰ을 Ⅱ 위에 놓고, ( ㉠ )을/를 일치시키면서 움직여 주계열이 겹치게 한다. 2. 그림은 관측소 (가)와 (나)에서 같은 기간 동안 관측한 해수면의 (다) 같은 ( ㉠ )을/를 갖는 성단의 주계열성과 표준 주계열성을 높이 변화를 나타낸 것이다. 비",
+        "sha256": "0b75af702ab11ad19f70569803b26c12a6b2fb02e1a6380513ac1ea4ac0174c1",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_ear2_hsj_61N181Z1.pdf",
+      "slot": "2020 고3 12월 csat science/earth-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 154183,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 지구과학Ⅱ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 과학탐구영역 지구과학Ⅱ 정답 및 해설 01. ① 02. ② 03. ⑤ 04. ① 05. ④ 06. ⑤ 07. ⑤ 08. ② 09. ④ 10. ③ 11. ③ 12. ① 13. ② 14. ③ 15. ① 16. ③ 17. ④ 18. ⑤ 19. ① 20. ② 1. 조력 발전 조력 발전은 달과 태양의 인력에 의해 발생하는 밀물과 썰물의 에너지를 이용한다. [정답맞히기] ① 조력 발전은 밀물과 썰물의 높이 차(조차)를 이용한 발전 방식으로, 조차가 큰 지역의 하구나 만을 방조제로 막아 해수를 가두고 발전기를 설치하여 외해 (바다)와 내해(호수)의 수위 차를 이용하여 발전한다. 정답① 2. 조석 현상 조석의 한 주기 중 해수면이 가장 높은 때를 만조, 가장 낮은 때를 간조라고 하며, 만조 때와 간조 때 해수면의 높이 차를 조차(조석 간만의 차)라고 한다. [정답맞히기] ㄷ. (가)와 (나) 모두 사리는 11일경에 나타나며, 이때의 조차는 (가)에서 가 (나)에서보다",
+        "sha256": "8320f60fd365c09a359276e77b31c58a4dac0ad5381db1b33fc828994a68810a",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_bio1_mun_238Z8T3Y.pdf",
+      "slot": "2020 고3 12월 csat science/life-science-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 617691,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 생명과학Ⅰ 문제지와 일치",
+        "firstPageText": "과학탐구 2021학년도 영역 문제지 대학수학능력시험 생명과학 I 1 3 제 4 교시 과학탐구 영역(생명과학 I) 성명 수험 번호 제 [ ] 선택 1. 그림은 사람에서 일어나는 영양소의 물질대사 과정 일부를 나타낸 4. 그림 (가)는 동공의 크기 조절에 관여 것이다. ㉠과 ㉡은 암모니아와 이산화 탄소를 순서 없이 나타낸 것이다. 하는 말초 신경이 중추 신경계에 연결된 경로를, (나)는 무릎 반사에 관여하는 말초 신경이 중추 신경계에 연결된 경로를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 <보 기> 생 것은? [3점] ㄱ. ㉠～㉢은 모두 자율 신경계에 속한다. 명 <보 기> ㄴ. ㉠과 ㉡의 말단에서 분비되는 신경 전달 물질은 같다. 과 ㄷ. 무릎 반사의 중추는 척수이다. 학 ㄱ. 과정 (가)에서 이화 작용이 일어난다. ㄴ. 호흡계를 통해 ㉠이 몸 밖으로 배출된다. I ①ㄱ ②ㄷ ③ ㄱ",
+        "sha256": "14d4c508a5e015898e58915a1e435bfe624859e13157f7e7d75ded0bb1f86d06",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_bio1_hsj_2GGY4PA2_2.pdf",
+      "slot": "2020 고3 12월 csat science/life-science-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 339651,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 생명과학Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 과학탐구영역 생명과학Ⅰ 정답 및 해설 *최근 수정일 : 2021.9.30(목) 01. ⑤ 02. ⑤ 03. ② 04. ② 05. ③ 06. ④ 07. ① 08. ① 09. ⑤ 10. ② 11. ⑤ 12. ⑤ 13. ④ 14. ① 15. ② 16. ② 17. ① 18. ④ 19. ③ 20. ③ 1. [ ] ㄱ. ( ) ( ) ( ) . ㄴ. . . ㉠ . ㄷ. (㉡) . ⑤ 2. [ ] ㄱ. 18.5 , 23.0 20.0 . ㄴ. 50% , 50% . ㄷ. . ⑤ 3. [ ] ㄷ. C . , , . ② [ ] ㄱ. . ㄴ. . 4. [ ] ㄷ. . ② [ ] ㄱ. ㉠ , ㉡ ㉠ ㉡ . ㉢ ㉢ . ㄴ. ㉠ , ㉡ . 5. 1",
+        "sha256": "365a0a81b9386bcb1d0bbafe44e9db3f51aef3965bba0b7a2bf729acadd91f61",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_bio2_mun_9YTGNG68.pdf",
+      "slot": "2020 고3 12월 csat science/life-science-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 923356,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 생명과학Ⅱ 문제지와 일치",
+        "firstPageText": "과학탐구 2021학년도 영역 문제지 대학수학능력시험 생명과학 II 1 3 제 4 교시 과학탐구 영역(생명과학 II) 성명 수험 번호 제 [ ] 선택 1. 그림은 동물 세포의 구조를 나타낸 것이다. A와 4. 그림은 동물의 구성 단계를, 표는 동물의 구성 단계 일부와 예를 B는 각각 핵과 미토콘드리아 중 하나이다. 나타낸 것이다. A～C는 기관, 기관계, 조직을 순서 없이 나타낸 이에 대한 설명으로 옳은 것만을 <보기>에서 것이고, (가)～(다)는 A～C를 순서 없이 나타낸 것이다. 있는 대로 고른 것은? 구성 단계 예 <보 기> (가) ? (나) 결합 조직 ㄱ. A에는 DNA가 있다. (다) 순환계 ㄴ. B는 대장균에도 있다. ㄷ. A와 B는 모두 2 중막을 갖는다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? [3점] ①ㄱ ②ㄴ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ <보 기> ㄱ. B는 기관계이다. ㄴ. 적혈구는 (가)의 예이다. 2. 표는 생명 과학자들의 ",
+        "sha256": "817d747eb68dc343377b937b3657513714bc463ed6076dd98c03c7ded3de12bd",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_bio2_hsj_91876MPU.pdf",
+      "slot": "2020 고3 12월 csat science/life-science-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 282631,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 생명과학Ⅱ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 과학탐구영역 생명과학Ⅱ 정답 및 해설 01. ④ 02. ① 03. ② 04. ② 05. ④ 06. ③ 07. ⑤ 08. ③ 09. ⑤ 10. ② 11. ③ 12. ① 13. ① 14. ⑤ 15. ⑤ 16. ① 17. ③ 18. ⑤ 19. ④ 20. ⑤ 1. 세포의 구조와 기능 A는 핵, B는 미토콘드리아이다. [정답맞히기] ㄱ. 핵(A)에는 유전 물질인 DNA가 있다. ㄷ. 핵(A)과 미토콘드리아(B)는 모두 외막과 내막의 2중막을 갖는다. 정답④ [오답피하기] ㄴ. 대장균은 원핵세포로 미토콘드리아(B)와 같은 막성 세포 소기관을 갖지 않는다. 2. 생명 과학의 역사 플레밍은 세균 배양 접시에 핀 푸른곰팡이에서 세균의 증식을 억제하는 물질인 페니 실린을 발견하였다. 하비는 관찰과 실험을 통해 혈액이 체내에서 순환한다는 사실을 알아냈다. 따라서 A는 플레밍, B는 하비이다. [정답맞히기] ㄱ. 페니실린을 발견한 생명 과학자 A는 플레밍이다. 정답① [오답",
+        "sha256": "f578bfe40af126ad133227b989084eee096400ffa952922c65853ecf311d8ee3",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_phy1_mun_516VJ441.pdf",
+      "slot": "2020 고3 12월 csat science/physics-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 808090,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 물리학Ⅰ 문제지와 일치",
+        "firstPageText": "과학탐구 2021학년도 영역 문제지 대학수학능력시험 물리학 I 1 3 물리 제 4 교시 과학탐구 영역(물리학 I) 학 I 성명 수험 번호 제 [ ] 선택 1. 그림은 파장에 따른 전자기파의 분류를 나타낸 것이다. 4. 다음은 물질의 전기 전도도에 대한 실험이다. [실험 과정] (가) 물질 X로 이루어진 원기둥 모양의 막대 a, b , c를 준비한다. (나) a, b , c의 ㉠ 과/와 길이를 측정 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 한다. <보 기> (다) 저항 측정기를 이용하여 a, b , c의 저항값을 측정한다. ㄱ. 진동수는 C가 A 보다 크다. (라) (나)와 (다)의 측정값을 이용하여 X의 전기 전도도를 ㄴ. 공항에서 수하물 검사에 사용하는 X선은 A 에 해당한다. 구한다. ㄷ. 적외선 체온계는 몸에서 나오는 B에 해당하는 전자기파를 측정한다. [실험 결과] ㉠ 길이 저항값 전기 전도도 막대 ①ㄱ ②ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ",
+        "sha256": "7bc5eda2ce1b3deb55c044c46562fb7dbbc1da4cf37d63b2f19c77ffe6461394",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_phy1_hsj_I7J7WGT3.pdf",
+      "slot": "2020 고3 12월 csat science/physics-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 146275,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 물리학Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 과학탐구영역 물리학Ⅰ 정답 및 해설 01.④ 02.① 03.③ 04.③ 05.⑤ 06.⑤ 07.④ 08.② 09.④ 10.② 11.③ 12.① 13.① 14.② 15.③ 16.⑤ 17.④ 18.④ 19.① 20.② 1. 전자기파의 종류 A는 감마선과 자외선 사이의 전자기파이므로 X선, B는 가시광선보다 파장이 긴 전자 기파이므로 적외선, C는 적외선과 라디오파 사이의 전자기파이므로 마이크로파이다. [정답맞히기] ㄴ. A는 X선이고, X선은 투과력이 강하여 공항에서 수하물을 검사하는 데 이용된다. ㄷ. B는 적외선이고, 적외선 체온계는 적외선을 측정할 수 있으므로 사람의 몸에서 나오는 B에 해당하는 전자기파를 측정한다. 정답 ④ [오답피하기] ㄱ. 진공에서 전자기파의 속력은 파장에 관계없이 일정하고, 전자기파의 속력은 파장과 진동수의 곱이므로 A가 C보다 진동수가 크다. 2. 핵반응 [정답맞히기] ㄱ. (가)는 H 와 H 가 융합하여 더 무거운 원",
+        "sha256": "886d0dd26492f4354a1e030462711d43e3291299295d2901e01560c8982212bd",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_phy2_mun_F82VD5I4.pdf",
+      "slot": "2020 고3 12월 csat science/physics-2 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1075710,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 물리학Ⅱ 문제지와 일치",
+        "firstPageText": "과학탐구 2021학년도 영역 문제지 대학수학능력시험 물리학 II 1 3 제 4 교시 과학탐구 영역(물리학 II) 성명 수험 번호 제 [ ] 선택 1. 다음은 광전 효과에 대한 설명이다. 4. 그림은 학생 A , B, C가 전자기파를 수신하는 직선형 안테나와 수신 회로에 대해 대화하는 모습을 나타낸 것이다. ◦ 금속판에 문턱 진동수보다 큰 진동수의 빛을 비추면 A 이/가 튀어나온다. ◦ 빛에너지를 전기 에너지로 바꾸는 태양 전지에 이용된다. A 로 가장 적절한 것은? ① 양성자 ② 중성자 ③ 광전자 ④ 감마선 ⑤ 수소 원자 2. 다음은 하이젠베르크가 발견한 원리에 대한 설명이다. 슬릿에 수직으로 입사하는 전자의 A 은 정해져 있고 위치는 슬릿의 폭으로 한정되므로 전자의 위치와 A 을 동시에 측정할 수 있는 제시한 내용이 옳은 학생만을 있는 대로 고른 것은? 것처럼 보인다. 그러나 전자가 슬릿을 ① A ② C ③ A, B ④ B, C ⑤ A , B, C 통과하면서 A 에 부정확성이 생기",
+        "sha256": "cb67a7b4498fa5eaa85f09e9c07d09b0d174d55f1daf65e35e346188fdb72c20",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/g_phy2_hsj_Z96Z4KI8.pdf",
+      "slot": "2020 고3 12월 csat science/physics-2 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 162053,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 물리학Ⅱ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 과학탐구영역 물리학Ⅱ 정답 및 해설 01.③ 02.② 03.⑤ 04.⑤ 05.① 06.① 07.⑤ 08.① 09.② 10.③ 11.③ 12.⑤ 13.② 14.① 15.④ 16.③ 17.④ 18.① 19.④ 20.② 1. 광전 효과 [정답맞히기] 광전 효과란 금속 등의 물체에 빛을 비추었을 때 광전자가 방출되는 현상 을 말하는 것으로, 빛에너지를 전기 에너지로 바꾸는 태양 전지 등에 이용된다. 즉, A로 가장 적절한 것은 광전자이다. 정답 ③ 2. 불확정성 원리 [정답맞히기] 불확정성 원리에 의하면 입자성과 파동성을 모두 띠고 있는 물체의 위치 와 운동량을 동시에 정확하게 측정하는 것은 불가능하다. 따라서 A는 운동량이고 B는 불확정성 원리이다. 정답 ② 3. 일반 상대성 이론 [정답맞히기] ㄱ, ㄴ, ㄷ. 아인슈타인의 일반 상대성 이론에 의하면 태양과 같이 질량 을 가진 천체 주위는 시공간이 휘어져 있어 빛의 진행 경로가 이들 천체에 의해 휘어 지게 된",
+        "sha256": "8ca717597e388d07260dd8f5c6ca7f931f855bb65683e9276f70d9e8e3c7e2c5",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_one_mun_25E3H1RG.pdf",
+      "slot": "2020 고3 12월 csat vocational/accounting-principles question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1673095,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 회계 원리 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 문제지 대학수학능력시험 회계 원리 1 3 제 4 교시 직업탐구 영역(회계 원리) 성명 수험 번호 제 [ ] 선택 1. 그림은 신입 사원 면접 시 회계의 종류에 대한 질의응답 내용이다. 4. 다음은 ○○(주)의 제3기 상품재고장 일부와 이월상품 계정이다. 이를 통해 알 수 있는 회계의 종류로 가장 적절한 것은? (단, 회계의 이를 통해 제3기 매출원가를 계산한 금액으로 옳은 것은? (단, 종류는 회계 정보 이용자의 정보 이용 목적에 따라 분류한다.) ○○(주)는 갑상품만을 취급하고, 상품 매매의 회계 처리는 3분법에 의하며, 제시된 자료 외의 것은 고려하지 않는다.) ① 관리회계 ② 세무회계 ③ 원가회계 ④ 재무회계 ⑤ 정부회계 2. 다음은 ○○(주)의 [총계정원장] 일부이다. 이에 나타난 9월 4일 거래와 동일한 거래 요소의 결합관계가 나타나는 거래로 옳은 것은? ① ￦ 58,000 ② ￦ 67,000 ③ ￦ 82,000 ④ ￦ 85,000 ⑤ ￦ 97,",
+        "sha256": "d18df7ee1cc3dd89286e23a458518be3e593257322fbb04dca8719b0d0764d3b",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_one_hsj_H69E7TFH.pdf",
+      "slot": "2020 고3 12월 csat vocational/accounting-principles solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 133271,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 회계 원리 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 회계 원리 정답 및 해설 01. ④ 02. ④ 03. ⑤ 04. ① 05. ② 06. ⑤ 07. ② 08. ⑤ 09. ③ 10. ② 11. ① 12. ③ 13. ③ 14. ④ 15. ③ 16. ④ 17. ③ 18. ② 19. ① 20. ② 1. [출제 의도] 회계의 종류 구분하기 [해설] 회계의 종류는 회계 정보 이용자들의 이용 목적에 따라 재무회계, 관리회계, 세무회계 등으로 구분한다. 재무회계란 채권자, 투자자 등의 기업 외부 이해 관계자가 주된 보고 대상이며 기업의 재무상태, 경영성과, 현금흐름 및 자본변동에 관한 회계 정보를 보고 내용으로 담고 있다. 관리회계란 경영자, 종업원 등의 기업 내부 이해관 계자가 주된 보고 대상이며, 기업 경영의 의사 결정에 적합한 회계 정보를 담고 있 다. 세무회계란 정부 등의 기업 외부 이해 관계자가 주된 보고 대상이며, 과세 소득 의 산정에 필요한 회계 정보를 담고 있다. 그러므로 기업회계기준에 따라",
+        "sha256": "4a5888eb97b9e4c5d46d7970a2c14efa5d89ef9cbed9fc52164e0ad2d62f350a",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_nupgi_mun_2GX2N749.pdf",
+      "slot": "2020 고3 12월 csat vocational/agriculture-basics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3666082,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 농업 기초 기술 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 문제지 농업 기초 기술 대학수학능력시험 1 3 제 4 교시 직업탐구 영역(농업 기초 기술) 농 성명 수험 번호 제 [ ] 선택 업 기 초 1. 다음 사례에서 (가)에 들어갈 [실습 과정]의 단계로 옳은 것은? 3. 다음 기사에서 (가)에 들어갈 식물 생장 조절 물질을 농업에 기 적용한 사례로 가장 적절한 것은? 술 학생 A는 연못 주변에 설치할 그림과 같은 야외용 테이블을 만들기 위해 [실습 최근 농가에 보급된 씨 없는 포도 신품종인 ‘홍주씨들리스’가 과정]을 다음과 같이 정리하여 선생님께 본격적으로 출하되어 주목받고 있다. 이 품종은 저장성이 우수할 보여 드렸더니, 용도에 맞지 않게 기록된 뿐만 아니라 당도와 식감 등에서 좋은 평가를 받고 있는데, 과립 한 도구가 (가) 에 있다고 알려 주셨다. 알의 무게가 약 6 g으로 큰 편이고, 껍질이 얇아 이물감이 적은 것이 특징이다. 이 품종은 거봉, 샤인머스켓 등과 달리 벼의 [실습 과정] 키다리병을 유발시키",
+        "sha256": "f3649f9ab37b1dac128970c7cf14c1ab596ee3b6885d3e519424d5563c281a3d",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_nupgi_hsj_1X5471AX.pdf",
+      "slot": "2020 고3 12월 csat vocational/agriculture-basics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 163085,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 농업 기초 기술 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 농업 기초 기술 정답 및 해설 01. ② 02. ② 03. ④ 04. ④ 05. ③ 06. ③ 07. ⑤ 08. ⑤ 09. ④ 10. ④ 11. ② 12. ① 13. ① 14. ④ 15. ③ 16. ① 17. ④ 18. ③ 19. ② 20. ② 1. [출제 의도] 기본 공구의 종료와 용도 파악하기 [해설] 제시문은 학생 A가 야외용 테이블 제작 실습에서 과정 단계별로 사용한 도구 를 파악하는 문항으로 구성되었다. 단계 1에서는 판재를 자르는 톱이 필요하고, 단계 2에서는 파라솔 꽂이 구멍을 뚫을 수 있는 전동 드릴이 필요하다. 단계 3에서는 판재 의 표면을 다듬을 수 있는 대패가 필요하며, 단계 4에서는 판재의 연결 부위를 나사 못으로 고정시킬 수 있는 전동 드라이버가 필요하다. 마지막으로 단계 5에서는 바니 시(니스)를 칠할 수 있는 붓이 필요하다. 그무개는 일정 간격으로 선을 긋거나, 같은 너비나 길이로 선을 긋는 데 사용한다. [정답]",
+        "sha256": "89ba96893c15801742ce2e44399307a4c66d72794ff3fcedfd91847705f9cad6",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_nup_mun_ANN34973.pdf",
+      "slot": "2020 고3 12월 csat vocational/agriculture-understanding question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1053544,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 농업 이해 문제지와 일치",
+        "firstPageText": "농 직업탐구 2021학년도 영역 문제지 대학수학능력시험 농업 이해 1 3 업 이 제 4 교시 직업탐구 영역(농업 이해) 해 성명 수험 번호 제 [ ] 선택 [1～2] 다음은 전통 떡 생산 업체 A 대표의 인터뷰 내용이다. 물음에 4. 다음 △△연구소가 개발한 시스템을 농업 경영체가 활용하였을 때 답하시오. 기대되는 효과로 적절한 것만을 <보기>에서 있는 대로 고른 것은? [3점] △△연구소가 개발한 생산지 이동식 배추 절임 시스템은 기존 공장 고정식 배추 절임 방식에 비하여 5시간 만에 배추를 절여 시간을 2/3가량 단축시켰다. 또한 절임 탱크에 배추를 쌓아 염수를 순환시켜서 절이고 배추를 꺼내 이동시키는 공정을 자동화 하였다. 특히 이동식 배추 절임 시스템은 전기 화학 분해 기술을 활용하여 배추 세척 시 절임 염수에 용해된 화학 비료 성분과 그 밖의 미생물, 냄새 등을 제거하여 염수를 재사용할 수 있도록 했다. 이를 통해 소금 사용량을 90% 줄이고, 절임에 필요한 용수량을 95%",
+        "sha256": "6c4c1f93ed77d0ae0de95f987b7ab293cd041a860e477dcea663058663854e29",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_nup_hsj_393I4ISJ.pdf",
+      "slot": "2020 고3 12월 csat vocational/agriculture-understanding solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 151559,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 농업 이해 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 농업 이해 정답 및 해설 01. ② 02. ③ 03. ⑤ 04. ④ 05. ④ 06. ⑤ 07. ③ 08. ① 09. ⑤ 10. ① 11. ⑤ 12. ② 13. ① 14. ② 15. ③ 16. ① 17. ③ 18. ④ 19. ④ 20. ① 1. [출제 의도] 농업인의 직업의식 파악하기 [해설] 제시문에 나타난 A 대표는 떡을 만드는 직업인이다. A 씨는 비싸지만 좋은 품 질의 국산 재료를 사용하여 고객에게 맛 좋고 건강에 좋은 떡을 제공하고자 하는 마 음가짐을 가지고 농업 가공직에 종사하는 직업인으로, 좋은 먹을거리를 제공하는 것 을 본분으로 생각하는 의식을 찾아볼 수 있다. 즉, 직업을 통해 그 사회 기능의 일부 를 맡아 행하며, 이로써 사회에 참여하는 의식인 직분의식을 유추할 수 있다. [정답] ② 2. [출제 의도] 진로 의사 결정 요인 파악하기 [해설] 제시문에 나타난 A 대표는 떡집을 가업으로 물려받아 떡을 만드는 직업을 선택 하였",
+        "sha256": "d24438f4feda7a86a08b2c5781581891e8f0b9e4eb47c51bb97161e8ab7d5b90",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_kicho_mun_3RF999UH.pdf",
+      "slot": "2020 고3 12월 csat vocational/basic-drafting question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2308798,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 기초 제도 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 문제지 대학수학능력시험 기초 제도 1 3 제 4 교시 직업탐구 영역(기초 제도) 성명 수험 번호 제 [ ] 선택 1. 그림은 산업 분야에서 사용되는 도면의 일부이다. (가), (나)에 3. 그림은 [제품 개발 계획서]의 일부이다. (가)～(다)에 대한 설명 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보 기> 기 <보 기> 초 ㄱ. (가)는 제품의 구조와 각 부품의 명칭을 나타낸 것이다. ㄱ. (가)의 관련 표준은 국제 표준에 해당한다. 제 ㄴ. (나)는 전자 부품 상호 간의 접속된 상태를 나타낸 것이다. ㄴ. (나)의 재질은 한국 산업 표준 KS D에 분류되어 있다. 도 ㄷ. (가)와 (나)에서 각 부품의 크기와 재질을 알 수 있다. ㄷ. (다)에 해당하는 국가 표준은 DIN이다. ①ㄱ ②ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ ①ㄱ ②ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ",
+        "sha256": "571ce94893a2da4702c2c77d1621feeda50e9765496153688a900e032de793e4",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_kicho_hsj_J2IBSQG5.pdf",
+      "slot": "2020 고3 12월 csat vocational/basic-drafting solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 270044,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 기초 제도 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 기초 제도 정답 및 해설 01. ③ 02. ② 03. ⑤ 04. ⑤ 05. ① 06. ④ 07. ④ 08. ① 09. ⑤ 10. ⑤ 11. ④ 12. ③ 13. ④ 14. ④ 15. ⑤ 16. ② 17. ③ 18. ① 19. ② 20. ② 1. [출제 의도] 도면의 분류 이해하기 [해설] 그림 (가)는 로봇 청소기의 구조와 각 부품의 명칭을 나타낸 설명도이다. 그림 (나)는 전자 부품 상호 간의 접속된 상태를 나타낸 전자 회로도이다. (가)와 (나)는 제 작도가 아니므로 각 부품의 크기와 재질을 알 수 없다. [정답] ③ 2. [출제 의도] 조립체의 투상도 추정하기 [해설] ①번은 부품 C의 저면도 우측 상단이 투상도 오류이며, ③번은 저면도 좌측 하단의 위치가 부품 C와 다르다. ④번은 저면도의 형태는 오류가 없으나 정면도 우측 하단 부분이 돌출되어 있어 오답지이다. ⑤번은 좌측 하단과 우측 상단이 투상도 오 류이며, 정면도 우측 하단의 ",
+        "sha256": "aab1ea4d82afcd97339c291a4e51a3cb7e62ab4b62d2406edc7278d5eb1fa62f",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_sangup_mun_963M5MDP.pdf",
+      "slot": "2020 고3 12월 csat vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1235161,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 상업 경제 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 문제지 대학수학능력시험 상업 경제 1 3 제 4 교시 직업탐구 영역(상업 경제) 성명 수험 번호 제 [ ] 선택 1. 다음에 나타난 상업의 기능으로 가장 적절한 것은? (단, 제시된 4. 다음은 ○○(주)의 조직 개편 계획서이다. [개편 방향]을 반영한 자료 외에는 고려하지 않는다.) 조직 구조를 통해 얻을 수 있는 효과로 적절한 것만을 <보기>에서 고른 것은? [3점] 조선 시대 방물장수는 화장품, 장식품 및 패물에 이르기까지 여러 물건을 팔러 다니는 행상이었다. ○○(주)의 조직 개편 계획서 이들은 물건을 보퉁이에 싸서 등에 지거나 머리에 [현재 상황] 이고 여기저기 돌아다니며 물건을 팔았다. ∙인적 자원을 효율적으로 운영할 필요성 증대 - 한국학중앙연구원, 󰡔한국민족문화대백과사전󰡕 - ∙기능별로 전문 관리자를 두는 현재 조직은 유지하면서 프로젝트 ① 자금 융통 기능 ② 소유권 이전 기능 별로 인력을 재편성할 수 있는 조직으로 개편할 필요성 증대 ③ ",
+        "sha256": "5b369efd55562206c16d91d98668faa940d8ea4d4e6e3edacf03a25c8c03a8a1",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_sangup_hsj_W5M1YJ93.pdf",
+      "slot": "2020 고3 12월 csat vocational/commercial-economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 141743,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 상업 경제 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 상업 경제 정답 및 해설 01. ② 02. ② 03. ① 04. ⑤ 05. ④ 06. ④ 07. ② 08. ⑤ 09. ② 10. ① 11. ⑤ 12. ① 13. ② 14. ③ 15. ② 16. ④ 17. ③ 18. ④ 19. ④ 20. ④ 1. [출제 의도] 상업의 기능 이해하기 [해설] 제시문에서 방물장수는 여러 물건을 팔러 다니는 행상으로서 운송을 통한 장소 적 불일치를 해소하고 판매에 따른 소유권 이전 기능을 수행한다. ①은 금융 기능, ③은 공공 서비스 제공 기능, ④는 보험 기능, ⑤는 보관 기능에 해당된다. [정답] ② 2. [출제 의도] 사회 보험의 종류와 특징 이해하기 [해설] 제시문에서 A 씨가 가입한 보험은 고용 보험이고, B 씨가 가입한 보험은 산업 재해 보상 보험이다. 고용 보험과 산업 재해 보상 보험은 사회 정책상의 목적을 달성 하기 위해 국가가 운영하는 사회 보험이므로 <보기 ㄱ>은 정선택지이다. 납부한 보험 료는 ",
+        "sha256": "d739b87171e001c9f643f18b2e8e00f2c40b30ac8ffd3123e697c9bc861c7aab",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_susan_mun_282XN1SW.pdf",
+      "slot": "2020 고3 12월 csat vocational/fisheries-and-shipping question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 3287355,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 수산·해운 산업 기초 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 문제지 대학수학능력시험 수산･ 해운 산업 기초 1 3 제 4 교시 직업탐구 영역(수산․해운 산업 기초) 성명 수험 번호 제 [ ] 선택 1. 다음 대화에서 알 수 있는 해양 레저 기구로 가장 적절한 것은? 3. 다음 기사에서 △△부가 마련할 정책 방안으로 적절한 것만을 <보기>에서 고른 것은? [3점] 남획으로 인해 우리나라 연근해의 수산 자원 고갈이 심각하다. 대표적인 국민 생선인 고등어도 예외가 아니어서 생산량 감소가 장기화될 수 있다는 우려가 나오고 있다. △△부는 “지난해 TAC 대상 어종인 국내 고등어 생산량은 12만 1,624톤으로 전년 대비 43.9 % 감소했다.”라고 발표하였다. 이에 △△부는 지속적인 어업 생산이 가능하도록 남획을 방지하고 수산 자원 회복을 위한 정책 방안을 마련할 계획이라고 밝혔다. - ○○신문, 2020년 9월 14일 자 - <보 기> ㄱ. 그물코의 크기를 축소한다. ㄴ. 어선 감척 사업을 실시한다. ㄷ. 조업 금지 기",
+        "sha256": "185529ac0515b427510561699c8bf3281c1a410c270e00e22db53ff17ee7b74f",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_susan_hsj_MPXR5395.pdf",
+      "slot": "2020 고3 12월 csat vocational/fisheries-and-shipping solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 163542,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 수산·해운 산업 기초 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 수산․해운 산업 기초 정답 및 해설 01. ⑤ 02. ① 03. ③ 04. ③ 05. ⑤ 06. ③ 07. ② 08. ② 09. ④ 10. ④ 11. ① 12. ④ 13. ⑤ 14. ① 15. ④ 16. ② 17. ⑤ 18. ③ 19. ⑤ 20. ④ 1. [출제 의도] 해양 레저 기구 선택하기 [해설] 제시된 대화에 나타난 해양 레저 기구는 호버 크래프트이다. 호버 크래프트는 강력한 팬으로 압축 공기를 아래쪽으로 강하게 내뿜으면서 선체를 부상시키고 프로펠 러로 추진하는 수륙 양용선이며, 늪지대와 모래 위를 자유롭게 이동할 수 있다. 답지 ①번의 모터 요트는 요트에 추진 기관을 장착한 것으로, 유람용, 경주용으로 사용되고 갑판이 없는 것부터 호화로운 대형범선, 대형 디젤 기관선에 이르는 다양한 크기와 규모를 가지는 것이므로 오답지이다. 답지 ②번의 수상 스키는 스키를 신고 모터보트 에 연결된 줄을 잡고 보트에 이끌려 물 위를 미끄러지듯 달리는",
+        "sha256": "0baeceae97ffbed5de50ee2b8e730bf67e180377102ca151629bc5497dbf77b4",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_inkan_mun_K68IB71I.pdf",
+      "slot": "2020 고3 12월 csat vocational/human-development question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1189970,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 인간 발달 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 문제지 대학수학능력시험 인간 발달 1 3 제 4 교시 직업탐구 영역(인간 발달) 성명 수험 번호 제 [ ] 선택 1. 다음 글에 나타난 발달의 원리로 적절한 것만을 <보기>에서 있는 3. 다음 낱말 퍼즐에서 (가)에 들어갈 내용으로 적절한 것은? 대로 고른 것은? A D 프랑스 의사 브로카(Broca)는 뇌의 특정 부분이 손상되면 언어 표현에 어려움을 겪는다는 것을 발견하고, 뇌의 이 B 부분을 ‘브로카 영역’이라고 칭하였다. 브로카 영역이 손상된 구 환자는 발음이 정확하지 않으며 조사나 관사, 접속사 등을 C 생략하여 표현하는 등 말하는 것이 유창하지 않았다. <보 기> [가로 열쇠] ㄱ. 발달에는 개인 간의 차이가 있다. A : 분만 과정에 이상이 생겨 분만 시간이 길어짐으로써 출산에 ㄴ. 발달의 각 영역은 서로 밀접한 관련이 있다. 어려움을 겪는 것 ㄷ. 발달은 지속적이지만 그 속도는 일정하지 않다. B : 무엇을 얻고자 하거나 무슨 일을 하고자 하",
+        "sha256": "89bea07f93a7bfd8421012a08f0ac9757a8fa867d0de7a5549998c239c30e4b9",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_inkan_hsj_9Q4TED7V.pdf",
+      "slot": "2020 고3 12월 csat vocational/human-development solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 152347,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 인간 발달 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 인간 발달 정답 및 해설 01. ② 02. ② 03. ④ 04. ② 05. ⑤ 06. ① 07. ② 08. ① 09. ① 10. ④ 11. ④ 12. ⑤ 13. ⑤ 14. ③ 15. ④ 16. ⑤ 17. ③ 18. ③ 19. ④ 20. ② 1. [출제 의도] 인간 발달의 원리에 대한 문제 인식 및 명료화하기 [해설] 제시문은 브로카라는 뇌의 특정 부분이 손상되면 언어 표현에 어려움을 겪게 됨을 나타내고 있다. 이는 발달의 상호 관련성을 제시하고 있는 것으로, 인간의 발달 은 신체, 인지, 사회·정서의 각 영역이 서로 영향을 주고받으면서 상호 관련성을 가지 고 발달한다. <보기 ㄱ> 발달에는 개인 간의 차이가 있다는 것은 발달의 개인차에 대 한 것으로 오선택지이다. <보기 ㄴ> 발달의 각 영역은 서로 밀접한 관련이 있다는 것 은 발달의 상호 관련성을 나타낸 것으로 정선택지이다. <보기 ㄷ> 발달은 지속적이지 만 그 속도는 일정하지 않다는 것은",
+        "sha256": "3627d0873b92a9e90fe4c563ea3b4dd76db0f20c26488fbf53d38a5471bf6248",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_gup_mun_68NJ75E3.pdf",
+      "slot": "2020 고3 12월 csat vocational/industry-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2918232,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 공업 일반 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 문제지 대학수학능력시험 공업 일반 1 3 제 4 교시 직업탐구 영역(공업 일반) 성명 수험 번호 제 [ ] 선택 1. 다음 기사에 나타난 A 씨의 직업의식으로 적절한 것만을 <보기> 3. 다음은 ○○기업의 생산 혁신 추진 실적이다. 이를 통해 알 수 에서 고른 것은? 있는 내용으로 가장 적절한 것은? [3점] 고등어만 보고 한 치의 오차도 없이 정확한 공 양의 소금을 잡아 뿌리는 일을 40여 년간 해 온 업 간잽이* A 씨는 우리나라 고등어 맛을 살리는 최고의 명인이다. 그는 이 일이 하늘이 내려준 일 직업이라 생각하고 투철한 사명감과 긍지를 반 가지고 고등어 부패를 방지하면서 맛을 최고로 유지하기 위해 노력하고 있다. * 간잽이 : 생선을 소금으로 절이는 일을 전문으로 하는 사람 - ○○신문, 2020년 9월 14일 자 - <보 기> ㄱ. 소명 의식 ㄴ. 연대 의식 ㄷ. 장인 의식 ㄹ. 평등 의식 ① 품질 관리부에서 데밍 사이클(Deming’s cycl",
+        "sha256": "ce4bde4d2a6bfd45a4fba27c0635af05714c02e4735021944be2ebfac525d9ca",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_gup_hsj_T97S2NE6.pdf",
+      "slot": "2020 고3 12월 csat vocational/industry-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 151005,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 공업 일반 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 공업 일반 정답 및 해설 01. ② 02. ⑤ 03. ① 04. ④ 05. ② 06. ⑤ 07. ② 08. ③ 09. ① 10. ③ 11. ④ 12. ③ 13. ① 14. ④ 15. ④ 16. ⑤ 17. ③ 18. ② 19. ③ 20. ⑤ 1. [출제 의도] 사례를 통한 직업의식 파악하기 [해설] 제시문에서 ‘한 치의 오차도 없이 정확한 양의 소금을 잡아 뿌리는 일을 40여 년간 해 온 간잽이 A 씨’는 한 분야에서 최고의 기술을 보유하거나 한 직종에 종사하 면서 대를 이어 가업을 승계하려는 장인 의식을 갖추고 있음을 알 수 있다. 또한 ‘이 일이 하늘이 내려준 직업이라 생각하고 투철한 사명감과 긍지를 가지고’에서 자신의 맡은 일이 하늘로부터 부여받은 것이라고 여기는 소명 의식을 갖추고 있음을 알 수 있다. 연대 의식이란 사회 구성원 상호 간에 믿음으로 서로 의존하는 의식이다. 평등 의식은 직업에 높고 낮음이 있다고 보지 않고 직업이 사회 ",
+        "sha256": "d8f335e9f611a908d40a9a3d14b114442f0bfdd4d45029188c85bd20620b894c",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_hae_mun_RO743A54.pdf",
+      "slot": "2020 고3 12월 csat vocational/ocean-understanding question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1129476,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 해양의 이해 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 문제지 대학수학능력시험 해양의 이해 1 3 제 4 교시 직업탐구 영역(해양의 이해) 성명 수험 번호 제 [ ] 선택 1. 다음 기사에서 알 수 있는 해양 생물에 대한 설명으로 옳은 것만을 3. 다음은 풍향에 대해 A, B 학생이 발표한 내용이다. 이러한 현상들이 <보기>에서 고른 것은? 나타나는 공통적인 원인으로 가장 적절한 것은? [3점] 밥도둑의 대명사로 불리는 이 해양 생물의 다리는 양쪽에 A 학생 : 무역풍은 아열대 고압대로부터 적도 저압대로 부는 것으로, 각각 5개씩 있는데, 집게 다리에 물리면 크게 다친다. 󰡔자산어보󰡕 본래는 정남북의 방향으로 불어야 합니다. 그런데 실제로 에는 “큰 놈은 지름이 두 자 정도이고 뒷다리 끝이 넓어서 부채 부는 바람은 북반구에서는 오른쪽으로 편향되어 북동풍, 같으며, 이것이 물에서 헤엄치면 큰바람이 불 징조이다.”라고 소개 남반구에서는 왼쪽으로 편향되어 남동풍이 됩니다. 했다. 낮에는 숨어 지내다가 밤이 되면 활",
+        "sha256": "8c778046245d299179182261e7e0b639d7f266f3c7bd4af09fba220409f7884e",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_hae_hsj_PH3S7371.pdf",
+      "slot": "2020 고3 12월 csat vocational/ocean-understanding solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 139488,
+        "pdfPages": 6,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 해양의 이해 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 해양의 이해 정답 및 해설 01. ③ 02. ② 03. ① 04. ③ 05. ① 06. ③ 07. ④ 08. ① 09. ④ 10. ④ 11. ③ 12. ② 13. ② 14. ③ 15. ② 16. ⑤ 17. ① 18. ⑤ 19. ⑤ 20. ④ 1. [출제 의도] 저서동물(절지동물) 이해하기 [해설] 제시문의 해양 생물은 저서동물 중 절지동물에 해당하는 게이다. 게는 키틴질 의 외골격을 가지고 있어 몸을 보호하며, 탈피하여 성장한다. 또한 펄이나 모래에 굴 을 파고 살아간다. <보기 ㄱ> 피낭류는 성체 때 주머니 모양의 두꺼운 섬유질 막으로 싸여 있다. 우렁쉥이(멍게), 미더덕이 속하므로 오선택지이다. <보기 ㄹ> 성체가 되면 고착 생활을 하는 것은 척색동물이다. 유생은 부유 생활을 하며 올챙이와 비슷한 모 양을 하고 이 시기에 척색을 가지지만, 성체가 되면 척색이 사라지고 고착 생활을 하 므로 오선택지이다. [정답] ③ 2. [출제 의도] 염",
+        "sha256": "35eb4d1521e3e1de696037b014e47c4405fee9c96cc54d8bb8594999df48f5f7",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_ser_mun_8OQ81W37.pdf",
+      "slot": "2020 고3 12월 csat vocational/service-industry-understanding question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1031164,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 생활 서비스 산업의 이해 문제지와 일치",
+        "firstPageText": "직업탐구 2021학년도 영역 생활 대학수학능력시험 서비스 산업의 이해 문제지 1 3 제 4 교시 직업탐구 영역(생활 서비스 산업의 이해) 성명 수험 번호 제 [ ] 선택 1. 다음 일기에서 알 수 있는 직업에 대한 설명으로 적절한 것만을 3. 다음 특강 안내문에서 알 수 있는 직업인 A, B 씨에 대한 설명 <보기>에서 있는 대로 고른 것은? (단, 한국표준직업분류에 근거 으로 적절한 것은? (단, 한국표준직업분류에 근거한다.) 한다.) 2020. 10. 24. 지난주에 상담한 고객의 주문대로 옷을 지었다. 저고리는 연갈색 명주로 만들고 치마는 분홍색 양단에 밑단은 레이스로 강조했다. 장식으로 조바위와 손 자수 돌띠를 더한다면 더욱 사랑스러운 모습일 듯하다. 몸은 고단했지만 한 땀 한 땀 내 손으로 완성한 한복을 보니 행복했다. <보 기> ㄱ. 한복의 옷감에 수를 놓거나 수선하는 일도 포함한다. ㄴ. 동일한 중분류 항목에 속하는 직업에는 재단사가 있다. ① A 씨의 직업은 소분류 항",
+        "sha256": "99c472889738e8568c9abaf6b1e1693127942c78247a4601d95a00a74660ef36",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/J_ser_hsj_J1W4KIV8.pdf",
+      "slot": "2020 고3 12월 csat vocational/service-industry-understanding solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 177201,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 생활 서비스 산업의 이해 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 직업탐구영역 생활 서비스 산업의 이해 정답 및 해설 01. ① 02. ③ 03. ④ 04. ③ 05. ④ 06. ① 07. ⑤ 08. ① 09. ⑤ 10. ⑤ 11. ⑤ 12. ④ 13. ② 14. ⑤ 15. ③ 16. ② 17. ④ 18. ② 19. ② 20. ④ 1. [출제 의도] 일기에 나타난 ‘한복 제조원’ 직업의 특징 탐색하기 [해설] 일기에서 알 수 있는 직업은 ‘한복 제조원’이다. ‘한복 제조원’은 고객의 주문에 의해서 원단의 종류와 색상을 정하고 치수를 재어 알맞은 바느질법으로 저고리 · 치마 · 두루 마기 · 마고자 · 버선 등의 한복을 제조하는 자를 말하며 수의 제조를 포함한다. 한국표준직업 분류의 대분류 항목 중 ‘기능원 및 관련 기능 종사자’, 중분류 항목 중 ‘섬유·의복 및 가죽 관련 기능직’에 속하고, 동일한 중분류 항목에 속하는 직업에는 ‘패턴사’, ‘재단 사’, ‘재봉사’, ‘양장 및 양복 제조원’ 등이 있다. <보기 ㄷ> ",
+        "sha256": "d3a78a8b6b259e99bbafc05ed967b76fead74f47f65d2b0db3620291b9da1004",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ar_mun_1A48H2M5.pdf",
+      "slot": "2020 고3 12월 csat second_language/arabic-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 1022773,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 아랍어Ⅰ 문제지와 일치",
+        "firstPageText": "1. 밑줄 친 부분에 공통으로 사용된 글자는? [1점] 6. 빈칸에 들어갈 말로 알맞은 것은? [1점] ① ¨ ②« ③³ ④µ ⑤¿ ① ŕƊÉ É£ ②ª É ƊÉÍ £ Ë ƊÉÍ £ ③ª ④ Ãƍ ⑤ ƓƍË ÉÊ É 7. 빈칸에 들어갈 말로 알맞은 것은? 2. 밑줄 친 낱말과 모음 배열이 같은 것은? ①ª Ê ŬÍ ƅÉ ②ª É ŬÍ ƅÉ Ë ŬƅÉ ③ª Í ① Ç̄ ÉƅÃ ② ÀÇ ŸÉ Í·ƈÉ ③ Ç·ƔŮË ƊÉ É ④³ É ƔÍ Éƅ ⑤ª Í ŬÉ ƔÍ Éƅ ④ ÇřŠŕ É ŠÉ²Ê ⑤ Ç©±Ã É ÊśŕžÉ 8. 밑줄 친 부분의 쓰임이 옳은 것만을 있는 대로 고른 것은? 3. 에 공통으로 들어갈 글자는? ¿Ç ¬É ¾ Ç ³ É ²Ç ÃÍ ① ª É ②­ É ③ É̄ ④¹ É ⑤À ① (a) ② (c) ③ (a), (b) É ④ (b), (c) ⑤ (a), (b), (c) 4. 빈칸에 들어갈 말로 알맞은 것은? 9. 빈칸에 들어갈 말로 알맞은 것은? ① È̄ ƆÉŗÉ ② ÁÈ",
+        "sha256": "8b10da130c32571eedfaf6a7ee2afe7e92316b7da0f79c3649e5d089a967dde1",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ar_hsj_W1HX5A6P.pdf",
+      "slot": "2020 고3 12월 csat second_language/arabic-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 351304,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 아랍어Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 제2외국어/한문영역 아랍어Ⅰ 정답 및 해설 01. ④ 02. ② 03. ⑤ 04. ⑤ 05. ① 06. ④ 07. ① 08. ⑤ 09. ③ 10. ③ 11. ① 12. ③ 13. ⑤ 14. ① 15. ③ 16. ④ 17. ④ 18. ③ 19. ② 20. ② 21. ① 22. ③ 23. ④ 24. ⑤ 25. ④ 26. ② 27. ⑤ 28. ③ 29. ② 30. ② [1~5] 발음 및 어휘 1. 동일한 자음 이해하기 O 양파가 신선하다. O 너의 말이 맞다. 정답해설 : 밑줄 친 두 어휘에서 동일하게 사용된 자음은 어중형 ‫ـ ـ‬와 어두형 ‫ صـ‬이므로 공통으로 사용된 자음은 ‫ص‬이다. 정답 ④ 2. 모음 배열 이해하기 A : 가방에 무엇이 있니? B : 그 속에 공책과 열쇠가 있어. ① 아들 ② 식당 ③ 활발한 ④ 유리 ⑤ 영수증 정답해설 : ٌَ ‫د ْف‬의 َ 모음 배열은 / a – Ø – a - u /이다. 이 모음과 같은 배열은 ‘식당’ ٌ",
+        "sha256": "c0102c4d100021773577364615e83128cffc612b9e7e6275672e9361896fc490",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ch_mun_R94L7EE5.pdf",
+      "slot": "2020 고3 12월 csat second_language/chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 653990,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 중국어Ⅰ 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 5 교시 성명 수험 번호 1. 그림의 발음 기호 중 두 개를 조합하여 만들 수 있는 발음에 6. 대화의 상황을 표현한 그림으로 알맞은 것은? [1점] 해당하는 글자는? [1점] A : 这里很难爬, 拉住我的手, 别放开。 B : 好! 我拉住了。你拉我一下, 我就能上去了。 ① ② ③ d m ī ào ④ ⑤ ① 到 ② 等 ③ 美 ④ 高 ⑤ 带 2. 밑줄 친 부분과 성조 배열이 같은 것만을 <보기>에서 있는 대로 고른 것은? 向大家表示欢迎! <보 기> a. 加油 b. 铅笔 c. 终于 7. 빈칸에 들어갈 말로 알맞은 것은? [1점] ① a ② b ③ a, c ④ b, c ⑤ a, b, c A : Duìbuqǐ, wǒ bǎ bēizi nòngpò le. B: , yǐhòu xiǎoxīn diǎnr. 3. 밑줄 친 부분의 한자 표기가 옳은 것만을 고른 것은? ① Méi guānxi ② Búyòng xiè a. 电视新间都结束了。 ③ Piányi yìdiǎn",
+        "sha256": "37ee88dc18686a50435965b84b694a788dafd509a0ecf7bda04d5934ce199be1",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ch_hsj_3DH59S9Z.pdf",
+      "slot": "2020 고3 12월 csat second_language/chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 226299,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 중국어Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2020학년도 대학수학능력시험 제2외국어/한문영역 중국어Ⅰ 정답 및 해설 01. ① 02. ③ 03. ④ 04. ④ 05. ⑤ 06. ② 07. ① 08. ① 09. ③ 10. ① 11. ⑤ 12. ⑤ 13. ③ 14. ④ 15. ③ 16. ② 17. ③ 18. ⑤ 19. ② 20. ⑤ 21. ④ 22. ② 23. ③ 24. ① 25. ② 26. ③ 27. ⑤ 28. ② 29. ① 30. ④ [1~5] 발음 및 어휘 1. 해당 성모 / 운모 조합 한자 찾기 d m ī ào 정답해설 : 제시된 성모(d, m)와 운모(ī, ào)의 조합으로 만들 수 있는 발음의 해당 한자를 고르는 문제로, 해당 단어의 정확한 발음을 알고 있는지 평가하는 문항이다. 정답 ① 2. 성조 배열이 같은 한자 찾기 모두에게 환영을 표현합니다! <보 기> a. 힘내다 b. 연필 c. 결국 정답해설 : '欢迎(huānyíng)'와 같은 성조 배열을 가지는 한자를 고르는 문제로, 해당 단어의 정확한 성조를 알고 있는",
+        "sha256": "ba21be25e49cee61cef6f246648ed3c835ffe1675265a6bf39b5bb2ebe384051",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_han_mun_O717J9I1.pdf",
+      "slot": "2020 고3 12월 csat second_language/classical-chinese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 853146,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 한문Ⅰ 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 5 교시 성명 수험 번호 1. 그림과 대화의 내용으로 보아 ㉠에 해당하는 것은? [1점] 4. 그림과 대화의 내용으로 보아 ㉠에 들어갈 것은? [1점] 교사 : 조선 후기에 그려진 그림을 감상해 볼까요? 왼쪽은 박제가, 오른쪽은 최북의 작품입니다. ① 兆 ② 初 ③ 早 ④ 助 ⑤ 肖 채준 : 두 그림 모두 같은 동물을 소재로 하고 있어요. 윤서 : 동물의 등 위에 소년이 올라앉아 있는 점도 같아요. 5. 단어장의 내용으로 보아 ㉠에 들어갈 것은? [1점] 채준 : 박제가의 그림에서는 한가로움이 느껴져요. 윤서 : 최북은 물을 건너는 동물을 역동적으로 그렸네요. 교사 : 그래요. ㉠같은 동물을 소재로 취했으면서도 작가의 관점에 따라 이렇게 다르게 표현되었답니다. ① 干 ② 半 ③ 牛 ④ 于 ⑤ 午 ① 上席 ② 席次 ③ 末席 ④ 席卷 ⑤ 坐席 2. 상반되는 뜻을 지닌 한자끼리 연결한 것만을 <보기>에서 고른 것은? 6. 화살표 방향으로 성어를",
+        "sha256": "1abd611f80ff6b4f6c946aec43c6b4efc44e8df4395ec618fee0e54f7ca7f461",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_han_hsj_4E1T221Y_1.pdf",
+      "slot": "2020 고3 12월 csat second_language/classical-chinese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 207899,
+        "pdfPages": 7,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 한문Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 제2외국어/한문영역 한문Ⅰ 정답 및 해설 01. ③ 02. ② 03. ④ 04. ③ 05. ④ 06. ② 07. ④ 08. ① 09. ⑤ 10. ① 11. ③ 12. ② 13. ① 14. ⑤ 15. ③ 16. ④ 17. ⑤ 18. ① 19. ⑤ 20. ④ 21. ③ 22. ① 23. ④ 24. ② 25. ④ 26. ⑤ 27. ② 28. ③ 29. ⑤ 30. ② 1. 한자의 뜻을 알고 있는가? 정답해설 : ⓛ 干(간): 방패 ② 半(반): 반 ③ 牛(우): 소 ④ 于(우): 어조사 ⑤ 午(오): 낮 정답 ③ ２. 한자의 뜻을 알고 있는가? 정답해설 : <보 기> ㄱ. 勝(승): 이기다 - 負(부): 지다 ㄴ. 休(휴): 쉬다 - 息(식): 쉬다 ㄷ. 巨(거): 크다 - 大(대): 크다 ㄹ. 賞(상): 상주다 - 罰(벌): 벌주다 정답 ② 3. 단어의 음, 의미, 유의어를 알고 활용할 수 있는가? 정답해설 : 薄氷(박빙): ‘얇게 살짝 언 얼음. 살얼음’이",
+        "sha256": "159b07fc7adb7582207775c0d6b70d2e3dbffe5720ef2d155ba01d01c14df6ad",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_fr_mun_63D5L24H.pdf",
+      "slot": "2020 고3 12월 csat second_language/french-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 301793,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 프랑스어Ⅰ 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 5 교시 성명 수험 번호 1. 밑줄 친 부분과 발음이 같은 것은? [1점] 6. 빈칸에 들어갈 말로 알맞지 않은 것은? A : Salut ! Ça va ? ① dîner B : Pas très bien. Je suis un peu fatigué. ② hiver A: ? ③ cahier B : J'ai attrapé froid. ④ janvier ① Qu'en dis-tu ② Pourquoi ça ⑤ étranger ③ Qu'est-ce que tu as ④ Tu es peut-être malade Au clair de la lune ⑤ Qu'est-ce qui ne va pas 2. □ 에 들어갈 글자를 모두 조합하여 만들 수 있는 낱말의 7. 빈칸에 들어갈 말로 알맞은 것은? [1점] 의미는? [1점] A : Tiens, les plats arrivent. La météo a une place imp□rtante dans B : On v",
+        "sha256": "6d9286841c32aec7ca0c51efe3bc265284f7cefff333a732edb566fb5ab0166f",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_fr_hsj_D2ZAB386.pdf",
+      "slot": "2020 고3 12월 csat second_language/french-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 159144,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 프랑스어Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 제2외국어/한문영역 프랑스어Ⅰ 정답 및 해설 01. ② 02. ① 03. ③ 04. ① 05. ③ 06. ① 07. ① 08. ② 09. ④ 10. ⑤ 11. ⑤ 12. ② 13. ④ 14. ④ 15. ① 16. ④ 17. ③ 18. ⑤ 19. ① 20. ④ 21. ⑤ 22. ② 23. ③ 24. ② 25. ① 26. ⑤ 27. ⑤ 28. ④ 29. ③ 30. ⑤ [1~5] 발음 및 어휘 1. 철자 r의 발음 이해하기 정답해설 : au clair de la lune(달밤에)에서 clair [klεːʀ]의 r는 [ʀ]로 발음된다. ② 번을 제외한 나머지 낱말에서 끝자음 r는 묵음이다. ① dîner [dine] 저녁 식사 ② hiver [ivεːʀ] 겨울 ③ cahier [kaje] 공책 ➃ janvier [ʒɑ̃vje] 1월 ⑤ étranger [etʀɑ̃ʒe] 외국인 정답 ② 2. 빈칸에 들어갈 알맞은 낱말 찾기 importante, conversat",
+        "sha256": "1966de1c410e04933061f2bc3d96ab6115b391e7932a3838226190e12a227015",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_gr_mun_B3496R8P.pdf",
+      "slot": "2020 고3 12월 csat second_language/german-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 397199,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 독일어Ⅰ 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 5 교시 성명 수험 번호 1. 밑줄 친 부분과 같은 발음이 들어 있는 것은? 6. 빈칸에 들어갈 말로 알맞은 것은? A : Kann ich heute einen Termin haben? A : Hier, diese Hose ist doch schön. B : Ja, gern. B: ? A : Die rote da, ganz links. ① Firma ② ledig ③ prima B : Ja, die gefällt mir auch. ④ Abitur ⑤ Kirche ① Welche meinst du ② Wie sehe ich darin aus 2. 밑줄 친 낱말과 강세의 위치가 같은 것은? ③ Wie findest du die Hose ④ Wie viel kostet die Hose ⑤ Welche Größe hat die Hose A : Ich suche eine Bäckerei. B : Da hinten ist eine. ① Automat",
+        "sha256": "552ef2c4bb3b137aedca33f378926a3af5a2290956dcce8d26a8aca8961d9260",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_gr_hsj_59SI32G6.pdf",
+      "slot": "2020 고3 12월 csat second_language/german-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 170740,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 독일어Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 제2외국어/한문영역 독일어Ⅰ 정답 및 해설 01. ③ 02. ① 03. ⑤ 04. ④ 05. ⑤ 06. ① 07. ③ 08. ③ 09. ② 10. ④ 11. ① 12. ① 13. ⑤ 14. ③ 15. ② 16. ③ 17. ① 18. ④ 19. ⑤ 20. ② 21. ⑤ 22. ① 23. ② 24. ④ 25. ② 26. ⑤ 27. ④ 28. ③ 29. ④ 30. ⑤ [1~5] 발음, 철자, 강세 및 어휘 1. 모음의 발음 이해하기 A : 제가 오늘 예약할 수 있을까요? B : 네, 가능합니다. ① Firma [ɪ] ② ledig [ɪ] ③ prima [i:] ④ Abitur [ɪ] ⑤ Kirche [ɪ] 정답해설 : Termin의 모음 ‘i’는 강세가 있고, 뒤에 자음이 하나가 있으므로, [i:]로 발 음된다. 따라서 같은 발음이 들어 있는 낱말은 ③ prima이다. 정답 ③ 2. 강세 규칙 이해하기 A : 저는 빵집을 찾고 있습니다. B : 저기 뒤쪽에 ",
+        "sha256": "bf8222a6f0714dd7cfa9c8489c288f5113a5f4e1ea3ab007a0abf4353934d1b2",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ja_mun_6FT68J17.pdf",
+      "slot": "2020 고3 12월 csat second_language/japanese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 468730,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 일본어Ⅰ 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 5 교시 성명 수험 번호 しず おか けん 1. 낱말 카드의 가타카나 표기가 옳은 것만을 고른 것은? [1점] 6. ‘静岡県’에 관한 글을 이해한 내용으로 알맞은 것은? (a) (b) (c) (d) 静岡県は お茶が 有名である。飲むだけで なく お茶を 使った そばや ケーキ、アイス クリーム、コーラも ある。また、日本で いち ばん 高い 富士山が あり、まわりに 湖も ある。 それに おんせんも 多く、海や 山の 自然と いっしょに 楽し パイパイ チケート ホームステイ バスケットボール める。おんせんに 入りながら 富士山を 見たり、ゆっくりと ① (a), (b) ② (a), (c) ③ (b), (c) おいしい お茶を 飲んだり する ことは、とても 幸せな 時間 ④ (b), (d) ⑤ (c), (d) である。 みずうみ しあわ * 湖 : 호수 * 幸せだ : 행복하다 ① 湖の まわりには 海と 山が ない。 2. 밑줄 친 부분의 표기가 옳은 것은? ② お茶が 入った コーラなどが ",
+        "sha256": "c4a05c5adc091e932ca94078b42b0d6fbe86da574633fdca3224da4c390a8d5b",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ja_hsj_U8HZ4MMT.pdf",
+      "slot": "2020 고3 12월 csat second_language/japanese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 321606,
+        "pdfPages": 10,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 일본어Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 제2외국어/한문영역 일본어Ⅰ 정답 및 해설 01. ⑤ 02. ① 03. ⑤ 04. ⑤ 05. ④ 06. ② 07. ① 08. ④ 09. ④ 10. ② 11. ④ 12. ③ 13. ③ 14. ① 15. ③ 16. ② 17. ④ 18. ① 19. ② 20. ③ 21. ⑤ 22. ② 23. ⑤ 24. ④ 25. ① 26. ④ 27. ⑤ 28. ⑤ 29. ① 30. ③ [1~5] 발음 및 어휘 1. 가타카나 표기의 이해 정답해설 : (a)와 (b)의 올바른 표기는 (a) バイバイ(안녕), (b) チケット(티켓)이다. (c) ホームステイ(홈스테이)와 (d) バスケットボール(농구)는 옳은 표기이다. 정답 ⑤ 2. 낱말 표기의 이해 ① 모레는 중요한 약속이 있습니다. ② 아버지는 미나미 중학교에서 수학을 가르치고 있습니다. ③ 뉴스에 의하면 오늘은 구름 끼고 가끔 비가 옵니다. ④ 나중에 먹으려고 생각해서 냉장고에 넣었습니다. ⑤ 쭉 바빴었습니다만 주말은 한가합니다",
+        "sha256": "65e4cac3519c8a4c651d3d18581caab537b68fe8cf8a9eb8fa0ded19e4c6e9bb",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ru_mun_4C6P18Q2.pdf",
+      "slot": "2020 고3 12월 csat second_language/russian-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 400868,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 러시아어Ⅰ 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 5 교시 성명 수험 번호 1. □에 들어갈 글자를 순서대로 조합하여 만들 수 있는 낱말에 6. Великий Новгород에 관한 글을 이해한 내용으로 알맞은 해당하는 그림은? [1점] 것만을 <보기>에서 고른 것은? Борис Годунов стал царём в 1598 го□у. На севере России находится Многие писат□ли инте□есовались его один из древнейших русских городов – Великий Новгород. жизнью. Наприм□р, из□естный п□эт Он стоит на реке Волхов. В А. С. Пушкин написал пьесу «Борис XII-XIV веках Великий Новгород был большим Годунов». городом, а Москва была маленьким городком. Около ①",
+        "sha256": "b272d7448de7e23ea3e6ae4d9c94767f753b7b6469134e2bd3b5683b703d6222",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_ru_hsj_59193NQ3_1.pdf",
+      "slot": "2020 고3 12월 csat second_language/russian-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 162174,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 러시아어Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 제2외국어/한문영역 러시아어Ⅰ 정답 및 해설 01. ② 02. ③ 03. ③ 04. ② 05. ⑤ 06. ① 07. ③ 08. ③ 09. ② 10. ④ 11. ① 12. ③ 13. ⑤ 14. ① 15. ④ 16. ① 17. ⑤ 18. ⑤ 19. ④ 20. ⑤ 21. ② 22. ⑤ 23. ④ 24. ② 25. ② 26. ③ 27. ④ 28. ② 29. ④ 30. ① [1~5] 발음 및 어휘 1. 철자 보리스 고두노프는 1598년에 황제가 되었다. 많은 작가들이 그의 삶에 흥미를 느꼈 다. 예를 들면, 유명한 시인 푸시킨은 ‘보리스 고두노프’라는 희곡을 집필하였다. ① дверь ② дерево ③ деньги ④ гитара ⑤ диван 정답해설 : году, писатели, интересовались, например, известный, поэт를 조합하여 만들 수 있는 낱말은 나무(дерево)이다. 정답 ② 2. 자음의 발음 ① 좋은 여행 되세",
+        "sha256": "6305b48691ea8bc247176a12a13aa68e5ec79193acfbd94bb996f8db5d3ef0b3",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_sp_mun_5T463C42.pdf",
+      "slot": "2020 고3 12월 csat second_language/spanish-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 434696,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 스페인어Ⅰ 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 5 교시 성명 수험 번호 1. 밑줄 친 낱말과 강세의 위치가 다른 것은? [1점] 6. 그림으로 보아 빈칸 (a)에 들어갈 말로 알맞은 것은? [1점] ① hotel (a) ② joven ③ nariz ④ pared ⑤ reloj 2. 밑줄 친 낱말의 철자가 옳은 것은? ① No pisar las plantas Cosas para comprar ② Cuidar el medio ambiente ③ Respetar la distancia social ◦ azúcar para el pastel (a) ① (a) ④ Utilizar el transporte público ◦ sumo de naranja ② (b) ⑤ No traer perros al restaurante (b) ③ (c) ◦ unas mansanas (c) ④ (d) ◦ un kilo de arros ⑤ (e) (d) 7. 빈칸에 들어갈 말로 알맞은 것은? ◦ azeite de ",
+        "sha256": "220d7cab0fbb70bb1aab881fdddc16ffbefee376651b11c2af99d4f3df370af7",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_sp_hsj_O6QGJ41M.pdf",
+      "slot": "2020 고3 12월 csat second_language/spanish-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 151857,
+        "pdfPages": 9,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 스페인어Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2020학년도 대학수학능력시험 제2외국어/한문영역 스페인어Ⅰ 정답 및 해설 01. ② 02. ① 03. ④ 04. ⑤ 05. ⑤ 06. ③ 07. ④ 08. ⑤ 09. ③ 10. ② 11. ⑤ 12. ② 13. ③ 14. ④ 15. ① 16. ① 17. ② 18. ④ 19. ⑤ 20. ③ 21. ④ 22. ④ 23. ② 24. ③ 25. ⑤ 26. ② 27. ① 28. ③ 29. ① 30. ④ [1~5] 발음 및 어휘 1. 강세 규칙 알기 수영 금지 정답해설 : 낱말의 끝이 모음(a, e, i, o, u) 혹은 자음 n, s로 끝나는 경우 강세는 끝 에서 두 번째 음절에 오고, 낱말의 끝이 n, s를 제외한 그 밖의 자음으로 끝나는 경 우 강세는 맨 끝음절에 온다. 따라서 joven은 끝에서 두 번째 음절에 강세가 오고, nadar, hotel, nariz, pared, reloj는 맨 끝음절에 강세가 온다. ① 호텔 ② 젊은이 ③ 코 ④ 벽 ⑤ 시계 정답 ② 2. 낱말의 철자 알기",
+        "sha256": "1efa06212a4d0daf3aa3c6d089bf8cdb4eb126caa721c1cf4f442a726efea08f",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_vit_mun_OHNN43KK.pdf",
+      "slot": "2020 고3 12월 csat second_language/vietnamese-1 question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 497574,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 베트남어Ⅰ 문제지와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 문제지 1 제 5 교시 성명 수험 번호 1. □에 들어갈 글자는? [1점] 7. 빈칸에 들어갈 말로 알맞은 것은? ① h A : Anh thấy Mũi Né có đẹp không? ② m B : Tôi thấy . ③ s ① đó khá ở đẹp phong cảnh ④ t ② đó phong cảnh ở khá đẹp xe áy ⑤ x ③ ở đó đẹp khá phong cảnh ④ phong cảnh đó ở đẹp khá ⑤ phong cảnh ở đó khá đẹp 2. 밑줄 친 부분과 발음이 같은 것은? [1점] Tôi phải đeo kính khi đọc sách. 8. 빈칸에 들어갈 말로 알맞은 것은? [1점] ① dễ ② cây ③ gầy ④ chân ⑤ khai Lan ơi, xem 3. □에 들어갈 글자의 성조 표기가 옳은 것은? mèo của tớ này! Ôi, xinh thế! ① a ② á ③ ã ④ à ⑤ ạ g ① bá",
+        "sha256": "7ff53399cf6b3f24d6afc4f85a650aa5b025ee67516ba690189608c66a1694e8",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20201203/go3/2nd_vit_hsj_GAI6966I.pdf",
+      "slot": "2020 고3 12월 csat second_language/vietnamese-1 solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 149596,
+        "pdfPages": 8,
+        "checkedAt": "2026-09-26T00:53:43.428Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2020학년도 12월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 12월 베트남어Ⅰ 정답 및 해설와 일치",
+        "firstPageText": "2021학년도 대학수학능력시험 제2외국어/한문영역 베트남어Ⅰ 정답 및 해설 01. ② 02. ② 03. ➃ 04. ③ 05. ⑤ 06. ① 07. ⑤ 08. ② 09. ① 10. ② 11. ③ 12. ③ 13. ② 14. ④ 15. ⑤ 16. ③ 17. ④ 18. ④ 19. ⑤ 20. ④ 21. ② 22. ① 23. ① 24. ④ 25. ① 26. ⑤ 27. ⑤ 28. ③ 29. ② 30. ③ [1~5] 문자, 발음, 성조 및 어휘 1. 단어에 들어갈 글자 찾기 오토바이 xe máy 정답해설 : 그러므로 □에 들어갈 글자는 답지 ②이다. 정답 ② 2. 같은 발음의 철자 찾기 나는 책을 읽을 때 안경을 써야 한다. ① 쉽다 ② 나무 ③ 야위다 ➃ 다리 ⑤ 보고하다 정답해설 : c와 k는 서로 발음이 같고 나머지는 발음이 다르다. 정답 ② 3. 옳은 성조의 표기 찾기 정답해설 : gà(닭)이므로 □에 들어갈 글자의 성조 표기가 옳은 것은 답지 ➃이다. 정답 ➃ 4. 알맞은 어휘 찾기 ◦",
+        "sha256": "84f09b967b0b1bba771e0b53d97184e280ca131c40b1af7760890fc224ab0cd7",
+        "slotMappingReason": "verification_wrong",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"

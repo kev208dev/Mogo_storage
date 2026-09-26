@@ -4,7 +4,7 @@
   "records": [
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go1/kor_mun_4PPRE3Iv_2_10.pdf",
-      "slot": "2019 고1 3월 school_mock korean/ question",
+      "slot": "2019 고1 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -24,7 +24,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go1/kor_hsj_hXJ4dErc_12_1.pdf",
-      "slot": "2019 고1 3월 school_mock korean/ solution",
+      "slot": "2019 고1 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -44,7 +44,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go1/matha_mun_D9YNrPXp_2_10.pdf",
-      "slot": "2019 고1 3월 school_mock math/ question",
+      "slot": "2019 고1 3월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -64,7 +64,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go1/matha_hsj_dt7q0pQg_12.pdf",
-      "slot": "2019 고1 3월 school_mock math/ solution",
+      "slot": "2019 고1 3월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -84,7 +84,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go1/eng_mun_kL7TCTRN_2_10.pdf",
-      "slot": "2019 고1 3월 school_mock english/ question",
+      "slot": "2019 고1 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -104,7 +104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go1/eng_hsj_9WBYShdm_12_2.pdf",
-      "slot": "2019 고1 3월 school_mock english/ solution",
+      "slot": "2019 고1 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -124,7 +124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go1/s_his_mun_Y7W0kyO5_2_10.pdf",
-      "slot": "2019 고1 3월 school_mock history/ question",
+      "slot": "2019 고1 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -144,7 +144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go1/s_his_hsj_3F8G3jbh_12.pdf",
-      "slot": "2019 고1 3월 school_mock history/ solution",
+      "slot": "2019 고1 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -244,7 +244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go1/kor_mun_SFsxf4yp_10.pdf",
-      "slot": "2019 고1 6월 school_mock korean/ question",
+      "slot": "2019 고1 6월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -264,7 +264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go1/kor_hsj_6UnHAaaz_10.pdf",
-      "slot": "2019 고1 6월 school_mock korean/ solution",
+      "slot": "2019 고1 6월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -284,7 +284,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go1/matha_mun_8ARf3sll_10.pdf",
-      "slot": "2019 고1 6월 school_mock math/ question",
+      "slot": "2019 고1 6월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -304,7 +304,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go1/matha_hsj_7EjQxzmW_10.pdf",
-      "slot": "2019 고1 6월 school_mock math/ solution",
+      "slot": "2019 고1 6월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -324,7 +324,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go1/eng_mun_NY30kkZI_1_10.pdf",
-      "slot": "2019 고1 6월 school_mock english/ question",
+      "slot": "2019 고1 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -344,7 +344,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go1/eng_hsj_ecm9t0CI_10.pdf",
-      "slot": "2019 고1 6월 school_mock english/ solution",
+      "slot": "2019 고1 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -364,7 +364,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go1/s_his_mun_hTrBoe2U_10.pdf",
-      "slot": "2019 고1 6월 school_mock history/ question",
+      "slot": "2019 고1 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -384,7 +384,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go1/s_his_hsj_76rOJhKP_10.pdf",
-      "slot": "2019 고1 6월 school_mock history/ solution",
+      "slot": "2019 고1 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -484,7 +484,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go1/kor_mun_DU162D11_10.pdf",
-      "slot": "2019 고1 9월 school_mock korean/ question",
+      "slot": "2019 고1 9월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -504,7 +504,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go1/kor_hsj_8YW3DW89_10.pdf",
-      "slot": "2019 고1 9월 school_mock korean/ solution",
+      "slot": "2019 고1 9월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -524,7 +524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go1/matha_mun_6IV1U91L_10.pdf",
-      "slot": "2019 고1 9월 school_mock math/ question",
+      "slot": "2019 고1 9월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -544,7 +544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go1/matha_hsj_XP281JF9_10.pdf",
-      "slot": "2019 고1 9월 school_mock math/ solution",
+      "slot": "2019 고1 9월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -564,7 +564,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go1/eng_mun_1F79K178_10.pdf",
-      "slot": "2019 고1 9월 school_mock english/ question",
+      "slot": "2019 고1 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -584,7 +584,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go1/eng_hsj_2J3929K3_10.pdf",
-      "slot": "2019 고1 9월 school_mock english/ solution",
+      "slot": "2019 고1 9월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -604,7 +604,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go1/s_his_mun_16V4WQN2_11.pdf",
-      "slot": "2019 고1 9월 school_mock history/ question",
+      "slot": "2019 고1 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -624,7 +624,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go1/s_his_hsj_F8J8918L_10.pdf",
-      "slot": "2019 고1 9월 school_mock history/ solution",
+      "slot": "2019 고1 9월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -724,7 +724,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go1/kor_mun_DU162D11_11.pdf",
-      "slot": "2019 고1 11월 school_mock korean/ question",
+      "slot": "2019 고1 11월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -744,7 +744,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go1/kor_hsj_786CP15O_11.pdf",
-      "slot": "2019 고1 11월 school_mock korean/ solution",
+      "slot": "2019 고1 11월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -764,7 +764,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go1/matha_mun_6IV1U91L_11.pdf",
-      "slot": "2019 고1 11월 school_mock math/ question",
+      "slot": "2019 고1 11월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -784,7 +784,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go1/matha_hsj_YGJ9W256_11.pdf",
-      "slot": "2019 고1 11월 school_mock math/ solution",
+      "slot": "2019 고1 11월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -804,7 +804,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go1/eng_mun_1F79K178_11.pdf",
-      "slot": "2019 고1 11월 school_mock english/ question",
+      "slot": "2019 고1 11월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -824,7 +824,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go1/eng_hsj_2J3929K3_11.pdf",
-      "slot": "2019 고1 11월 school_mock english/ solution",
+      "slot": "2019 고1 11월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -844,7 +844,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go1/s_his_mun_16V4WQN2_11.pdf",
-      "slot": "2019 고1 11월 school_mock history/ question",
+      "slot": "2019 고1 11월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -864,7 +864,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go1/s_his_hsj_94I2F24T_11.pdf",
-      "slot": "2019 고1 11월 school_mock history/ solution",
+      "slot": "2019 고1 11월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -964,7 +964,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go2/kor_mun_RXGsNLqY_10.pdf",
-      "slot": "2019 고2 3월 school_mock korean/ question",
+      "slot": "2019 고2 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -984,7 +984,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go2/kor_hsj_54z3r5vz_13_1.pdf",
-      "slot": "2019 고2 3월 school_mock korean/ solution",
+      "slot": "2019 고2 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1084,7 +1084,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go2/eng_mun_GSYmxi3C_10.pdf",
-      "slot": "2019 고2 3월 school_mock english/ question",
+      "slot": "2019 고2 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1104,7 +1104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go2/eng_hsj_lp38NdTy_12.pdf",
-      "slot": "2019 고2 3월 school_mock english/ solution",
+      "slot": "2019 고2 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1124,7 +1124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go2/s_his_mun_kxxUOka0_10.pdf",
-      "slot": "2019 고2 3월 school_mock history/ question",
+      "slot": "2019 고2 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1144,7 +1144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go2/s_his_hsj_9NmXyYmb_11.pdf",
-      "slot": "2019 고2 3월 school_mock history/ solution",
+      "slot": "2019 고2 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1684,7 +1684,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go2/kor_mun_eLYCT4aJ_10.pdf",
-      "slot": "2019 고2 6월 school_mock korean/ question",
+      "slot": "2019 고2 6월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1704,7 +1704,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go2/kor_hsj_0Gai4omR_10.pdf",
-      "slot": "2019 고2 6월 school_mock korean/ solution",
+      "slot": "2019 고2 6월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1804,7 +1804,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go2/eng_mun_okLQ8aZR_10.pdf",
-      "slot": "2019 고2 6월 school_mock english/ question",
+      "slot": "2019 고2 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1824,7 +1824,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go2/eng_hsj_W8BYXifW_10.pdf",
-      "slot": "2019 고2 6월 school_mock english/ solution",
+      "slot": "2019 고2 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1844,7 +1844,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go2/s_his_mun_hQdOgl4r_10.pdf",
-      "slot": "2019 고2 6월 school_mock history/ question",
+      "slot": "2019 고2 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1864,7 +1864,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go2/s_his_hsj_oqFXfyY0_10.pdf",
-      "slot": "2019 고2 6월 school_mock history/ solution",
+      "slot": "2019 고2 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2404,7 +2404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go2/kor_mun_92R7ITX2_10.pdf",
-      "slot": "2019 고2 9월 school_mock korean/ question",
+      "slot": "2019 고2 9월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2424,7 +2424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go2/kor_hsj_Q6827X84_10.pdf",
-      "slot": "2019 고2 9월 school_mock korean/ solution",
+      "slot": "2019 고2 9월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2524,7 +2524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go2/eng_mun_4951ECAS2_10.pdf",
-      "slot": "2019 고2 9월 school_mock english/ question",
+      "slot": "2019 고2 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2544,7 +2544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go2/eng_hsj_86J8T4KY_10.pdf",
-      "slot": "2019 고2 9월 school_mock english/ solution",
+      "slot": "2019 고2 9월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2564,7 +2564,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go2/s_his_mun_A4AAJ91J_10.pdf",
-      "slot": "2019 고2 9월 school_mock history/ question",
+      "slot": "2019 고2 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2584,7 +2584,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go2/s_his_hsj_FAB6ZI16_10.pdf",
-      "slot": "2019 고2 9월 school_mock history/ solution",
+      "slot": "2019 고2 9월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3124,7 +3124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go2/kor_mun_8TWAM3H3_10.pdf",
-      "slot": "2019 고2 11월 school_mock korean/ question",
+      "slot": "2019 고2 11월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3144,7 +3144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go2/kor_hsj_53U616D9_10.pdf",
-      "slot": "2019 고2 11월 school_mock korean/ solution",
+      "slot": "2019 고2 11월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3244,7 +3244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go2/eng_mun_R356U88Z2_10.pdf",
-      "slot": "2019 고2 11월 school_mock english/ question",
+      "slot": "2019 고2 11월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3264,7 +3264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go2/eng_hsj_3W65C138_10.pdf",
-      "slot": "2019 고2 11월 school_mock english/ solution",
+      "slot": "2019 고2 11월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3284,7 +3284,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go2/s_his_mun_2Z54L1F6_10.pdf",
-      "slot": "2019 고2 11월 school_mock history/ question",
+      "slot": "2019 고2 11월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -3304,7 +3304,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191120/go2/s_his_hsj_CTDAO7V1_10.pdf",
-      "slot": "2019 고2 11월 school_mock history/ solution",
+      "slot": "2019 고2 11월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4524,7 +4524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go3/kor_mun_nOvXwoIz_10.pdf",
-      "slot": "2019 고3 3월 school_mock korean/ question",
+      "slot": "2019 고3 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4544,7 +4544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go3/kor_hsj_jwakzNFf_10.pdf",
-      "slot": "2019 고3 3월 school_mock korean/ solution",
+      "slot": "2019 고3 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4644,7 +4644,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go3/eng_mun_jOuF1Qp4_10.pdf",
-      "slot": "2019 고3 3월 school_mock english/ question",
+      "slot": "2019 고3 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4664,7 +4664,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go3/eng_hsj_hZDnrasn_10.pdf",
-      "slot": "2019 고3 3월 school_mock english/ solution",
+      "slot": "2019 고3 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4684,7 +4684,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go3/s_his_mun_ApFZEoKz_10.pdf",
-      "slot": "2019 고3 3월 school_mock history/ question",
+      "slot": "2019 고3 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4704,7 +4704,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190307/go3/s_his_hsj_4r02V5xm_10.pdf",
-      "slot": "2019 고3 3월 school_mock history/ solution",
+      "slot": "2019 고3 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5244,7 +5244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190410/go3/kor_mun_FRaqbC8w_10.pdf",
-      "slot": "2019 고3 4월 school_mock korean/ question",
+      "slot": "2019 고3 4월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5264,7 +5264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190410/go3/kor_hsj_QYx3G5aY_10.pdf",
-      "slot": "2019 고3 4월 school_mock korean/ solution",
+      "slot": "2019 고3 4월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5364,7 +5364,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190410/go3/eng_mun_IIZS2TRq_10.pdf",
-      "slot": "2019 고3 4월 school_mock english/ question",
+      "slot": "2019 고3 4월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5384,7 +5384,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190410/go3/eng_hsj_RKLpgTFu_10.pdf",
-      "slot": "2019 고3 4월 school_mock english/ solution",
+      "slot": "2019 고3 4월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5404,7 +5404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190410/go3/s_his_mun_f69aZbLA_10.pdf",
-      "slot": "2019 고3 4월 school_mock history/ question",
+      "slot": "2019 고3 4월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5424,7 +5424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190410/go3/s_his_hsj_r2iz2Mb1_10.pdf",
-      "slot": "2019 고3 4월 school_mock history/ solution",
+      "slot": "2019 고3 4월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6124,7 +6124,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go3/kor_mun_FRaqbC8w_02_10.pdf",
-      "slot": "2019 고3 6월 kice_mock korean/ question",
+      "slot": "2019 고3 6월 kice_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6144,7 +6144,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go3/kor_hsj_oHMwVN7m_11.pdf",
-      "slot": "2019 고3 6월 kice_mock korean/ solution",
+      "slot": "2019 고3 6월 kice_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6244,7 +6244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go3/eng_mun_IIZS2TRq_10.pdf",
-      "slot": "2019 고3 6월 kice_mock english/ question",
+      "slot": "2019 고3 6월 kice_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6264,7 +6264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go3/eng_hsj_ZuNY1SWo_11.pdf",
-      "slot": "2019 고3 6월 kice_mock english/ solution",
+      "slot": "2019 고3 6월 kice_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6284,7 +6284,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go3/s_his_mun_f69aZbLA_10.pdf",
-      "slot": "2019 고3 6월 kice_mock history/ question",
+      "slot": "2019 고3 6월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -6304,7 +6304,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190604/go3/s_his_hsj_BDyseVwr_11.pdf",
-      "slot": "2019 고3 6월 kice_mock history/ solution",
+      "slot": "2019 고3 6월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7764,7 +7764,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190710/go3/kor_mun_B7O27LD1_10.pdf",
-      "slot": "2019 고3 7월 school_mock korean/ question",
+      "slot": "2019 고3 7월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7784,7 +7784,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190710/go3/kor_hsj_F1HVL4Q4_10.pdf",
-      "slot": "2019 고3 7월 school_mock korean/ solution",
+      "slot": "2019 고3 7월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7884,7 +7884,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190710/go3/eng_mun_Z5DK2B89_12_10.pdf",
-      "slot": "2019 고3 7월 school_mock english/ question",
+      "slot": "2019 고3 7월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7904,7 +7904,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190710/go3/eng_hsj_C9U93T7N_10.pdf",
-      "slot": "2019 고3 7월 school_mock english/ solution",
+      "slot": "2019 고3 7월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7924,7 +7924,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190710/go3/s_his_mun_41EXUNB4_10.pdf",
-      "slot": "2019 고3 7월 school_mock history/ question",
+      "slot": "2019 고3 7월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7944,7 +7944,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190710/go3/s_his_hsj_6V8C6V5M_10.pdf",
-      "slot": "2019 고3 7월 school_mock history/ solution",
+      "slot": "2019 고3 7월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8644,7 +8644,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go3/kor_mun_RAAGQO9I_10.pdf",
-      "slot": "2019 고3 9월 kice_mock korean/ question",
+      "slot": "2019 고3 9월 kice_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8664,7 +8664,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go3/kor_hsj_E16IK6K5_11.pdf",
-      "slot": "2019 고3 9월 kice_mock korean/ solution",
+      "slot": "2019 고3 9월 kice_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8764,7 +8764,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go3/eng_mun_U2812ZU3_10.pdf",
-      "slot": "2019 고3 9월 kice_mock english/ question",
+      "slot": "2019 고3 9월 kice_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8784,7 +8784,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go3/eng_hsj_576CED6K_11.pdf",
-      "slot": "2019 고3 9월 kice_mock english/ solution",
+      "slot": "2019 고3 9월 kice_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8804,7 +8804,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go3/s_his_mun_JM4F53CC_10.pdf",
-      "slot": "2019 고3 9월 kice_mock history/ question",
+      "slot": "2019 고3 9월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8824,7 +8824,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20190904/go3/s_his_hsj_8966B4K8_11.pdf",
-      "slot": "2019 고3 9월 kice_mock history/ solution",
+      "slot": "2019 고3 9월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10284,7 +10284,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191015/go3/kor_mun_Q45UA6AI_10.pdf",
-      "slot": "2019 고3 10월 school_mock korean/ question",
+      "slot": "2019 고3 10월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10304,7 +10304,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191015/go3/kor_hsj_7252Q322_10.pdf",
-      "slot": "2019 고3 10월 school_mock korean/ solution",
+      "slot": "2019 고3 10월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10404,7 +10404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191015/go3/eng_mun_57Y3JLV7_10.pdf",
-      "slot": "2019 고3 10월 school_mock english/ question",
+      "slot": "2019 고3 10월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10424,7 +10424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191015/go3/eng_hsj_551T82X9_10_1.pdf",
-      "slot": "2019 고3 10월 school_mock english/ solution",
+      "slot": "2019 고3 10월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10444,7 +10444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191015/go3/s_his_mun_BFOP12Y7_10.pdf",
-      "slot": "2019 고3 10월 school_mock history/ question",
+      "slot": "2019 고3 10월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10464,7 +10464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191015/go3/s_his_hsj_T5873729_10.pdf",
-      "slot": "2019 고3 10월 school_mock history/ solution",
+      "slot": "2019 고3 10월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11844,7 +11844,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191114/go3/kor_mun_3LZ5KM2T_10.pdf",
-      "slot": "2019 고3 11월 csat korean/ question",
+      "slot": "2019 고3 11월 csat korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11864,7 +11864,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191114/go3/kor_hsj_XV23G53Z_11_1.pdf",
-      "slot": "2019 고3 11월 csat korean/ solution",
+      "slot": "2019 고3 11월 csat korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11964,7 +11964,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191114/go3/eng_mun_D76AAM3H_10.pdf",
-      "slot": "2019 고3 11월 csat english/ question",
+      "slot": "2019 고3 11월 csat english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -11984,7 +11984,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191114/go3/eng_hsj_5I29RAO6_11.pdf",
-      "slot": "2019 고3 11월 csat english/ solution",
+      "slot": "2019 고3 11월 csat english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12004,7 +12004,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191114/go3/s_his_mun_6XLZ28TK_10.pdf",
-      "slot": "2019 고3 11월 csat history/ question",
+      "slot": "2019 고3 11월 csat history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12024,7 +12024,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20191114/go3/s_his_hsj_C49B6YA2_1_11.pdf",
-      "slot": "2019 고3 11월 csat history/ solution",
+      "slot": "2019 고3 11월 csat history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",

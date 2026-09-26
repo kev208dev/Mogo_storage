@@ -8,7 +8,7 @@
       "search_title": "1 • 영어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 english/ solution"
+      "slot": "1-3 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/his_main_hsj_461Y98HN.pdf",
@@ -16,7 +16,7 @@
       "search_title": "1 • 한국사영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 history/ solution"
+      "slot": "1-3 history solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/kor_mun_55A7H57F.pdf",
@@ -24,7 +24,7 @@
       "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 여러분, 안녕하세요. 어릴 적 종이비행기를 접어 하늘 높이",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 korean/ question"
+      "slot": "1-3 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/math_main_mun_1Z1WK7R9_1.pdf",
@@ -32,7 +32,7 @@
       "search_title": "1 12 5 지선다형 1. ×   의 값은? [2점] ①    ②  ③    ④  ⑤ ",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 math/ question"
+      "slot": "1-3 math question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go1/math_main_hsj_3P67AC54.pdf",
@@ -40,7 +40,7 @@
       "search_title": "1 • 수학영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 math/ solution"
+      "slot": "1-3 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/eng_main_hsj_2FVA49I8_2.pdf",
@@ -48,7 +48,7 @@
       "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고1 1 • 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 english/ solution"
+      "slot": "1-6 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/his_main_hsj_4538K65W.pdf",
@@ -56,7 +56,7 @@
       "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고1 1 • 한국사 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 history/ solution"
+      "slot": "1-6 history solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/kor_main_mun_PY1V7PAD_1.pdf",
@@ -64,7 +64,7 @@
       "search_title": "1 16 [1 ～3] 다음은 수업 중 학생의 발표이다. 물음에 답하시오. 안녕하세요, ○○○입니다. 여름철은 물놀이나 캠핑 같은 야외",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 korean/ question"
+      "slot": "1-6 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/math_main_hsj_74Z57396_2.pdf",
@@ -72,7 +72,7 @@
       "search_title": "1 • 수학 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 math/ solution"
+      "slot": "1-6 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go1/sat_main_mun_936R24LR.pdf",
@@ -88,7 +88,7 @@
       "search_title": "고1 영어영역 1 1 8 1번부터 17번까지는 듣고 답하는 문제입니다. 1번부터",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 english/ question"
+      "slot": "1-9 english question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/kor_main_mun_77F7745C.pdf",
@@ -96,7 +96,7 @@
       "search_title": "고1 국어영역 1 1 16 [1~3] 다음은 수업 중 학생의 발표이다. 물음에 답하시오.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 korean/ question"
+      "slot": "1-9 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/math_main_mun_8KC62N33_1.pdf",
@@ -104,7 +104,7 @@
       "search_title": "고1 수학영역 1 1 12 5지선다형 1. 두 다항식 , 에 대하여 를 간단히 하면? [2점]",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 math/ question"
+      "slot": "1-9 math question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go1/gat_main_mun_66784PDJ.pdf",
@@ -120,7 +120,7 @@
       "search_title": "1 • 3교시 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-10 english/ solution"
+      "slot": "1-10 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/kor_main_mun_Y2Y66383.pdf",
@@ -128,7 +128,7 @@
       "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? 지난 시간에 대화의 원리에 대해 배운 것 기억하",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-10 korean/ question"
+      "slot": "1-10 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/gat_main_hsj_B9HQ8H65.pdf",
@@ -152,7 +152,7 @@
       "search_title": "1 • 영어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 english/ solution"
+      "slot": "2-3 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_mun_JBJ4R7WR.pdf",
@@ -160,7 +160,7 @@
       "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요. 여러분은 혹시 ‘국가 중요 농업 유산’이란 말을",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 korean/ question"
+      "slot": "2-3 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/kor_main_hsj_9MR565V3.pdf",
@@ -168,7 +168,7 @@
       "search_title": "1 • 국어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 korean/ solution"
+      "slot": "2-3 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go2/g_che1_hsj_3Z3EUA27.pdf",
@@ -208,7 +208,7 @@
       "search_title": "2025학년도 6월 전국연합학력평가 정답 및 해설 고2 1 • 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 english/ solution"
+      "slot": "2-6 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/kor_main_mun_6WZU5Z12_1.pdf",
@@ -216,7 +216,7 @@
       "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? 오늘 발표를 맡은 ○○○입니다. 저는 얼마 전에",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 korean/ question"
+      "slot": "2-6 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/math_main_hsj_8QV88PI4_1.pdf",
@@ -224,7 +224,7 @@
       "search_title": "1 • 수학 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 math/ solution"
+      "slot": "2-6 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go2/s_easta_hsj_3DECJW6P.pdf",
@@ -264,7 +264,7 @@
       "search_title": "2025학년도 9월 전국연합학력평가 정답 및 해설 고2 9 27 영어 영역 ※ 본전국연합학력평가는17개시도교육청주관으로",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 english/ solution"
+      "slot": "2-9 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/his_main_mun_Z12G5685_1.pdf",
@@ -272,7 +272,7 @@
       "search_title": "고2 한국사영역 1 1 4 1. (가) 시대의 사회 모습으로 옳은 것은? 이곳 서울 암사동 유적은 1925년에 발생한 큰 홍수로 인해 움집",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 history/ question"
+      "slot": "2-9 history question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/kor_main_mun_ZKNW6ZSE.pdf",
@@ -280,7 +280,7 @@
       "search_title": "고2 국어영역 1 1 16 [1~3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? 저는 며칠 전에 화장의 역사에 관한 책을 읽었",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 korean/ question"
+      "slot": "2-9 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/kor_main_hsj_B4X88PV5.pdf",
@@ -288,7 +288,7 @@
       "search_title": "1 27 국어영역 ※ 본전국연합학력평가는17개시도교육청주관으로 시행되며, 해당자료는EBSi에서만제공됩니다. 무단전재및재배포는금지됩니다. 정답",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 korean/ solution"
+      "slot": "2-9 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go2/math_main_hsj_Z95Y88V4_1.pdf",
@@ -296,7 +296,7 @@
       "search_title": "2025학년도 9월 전국연합학력평가 정답 및 해설 고2 5 27 수학 영역 ※ 본전국연합학력평가는17개시도교육청주관으로",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 math/ solution"
+      "slot": "2-9 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/eng_main_hsj_LS66F3HV.pdf",
@@ -304,7 +304,7 @@
       "search_title": "1 • 3교시 영어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-10 english/ solution"
+      "slot": "2-10 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/kor_main_mun_43243P8X.pdf",
@@ -312,7 +312,7 @@
       "search_title": "1 16 [1 ~ 3] 다음은 학생의 발표이다. 물음에 답하시오. 안녕하세요? ○○○입니다. 오늘은 독특한 번식 전략을 지닌",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-10 korean/ question"
+      "slot": "2-10 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/kor_main_hsj_CN1Z96XN.pdf",
@@ -320,7 +320,7 @@
       "search_title": "1 • 1교시 국어 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-10 korean/ solution"
+      "slot": "2-10 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go2/math_main_hsj_6DW94788.pdf",
@@ -328,7 +328,7 @@
       "search_title": "1 • 2교시 수학 영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-10 math/ solution"
+      "slot": "2-10 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/eng_main_hsj_66I8PI22.pdf",
@@ -336,7 +336,7 @@
       "search_title": "1 • 영어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 english/ solution"
+      "slot": "3-3 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/kor_main_hsj_5J8MI931.pdf",
@@ -344,7 +344,7 @@
       "search_title": "1 • 국어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 korean/ solution"
+      "slot": "3-3 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250326/go3/g_phy1_mun_C172K36V.pdf",
@@ -376,7 +376,7 @@
       "search_title": "2026학년도 대학수학능력시험 6월 모의평가 영어 영어 영어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 english/ solution"
+      "slot": "3-6 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/kor_main_hsj_J154F7J1_2.pdf",
@@ -384,7 +384,7 @@
       "search_title": "2026학년도 대학수학능력시험 6월 모의평가 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 korean/ solution"
+      "slot": "3-6 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250604/go3/g_che1_hsj_4WY39517.pdf",
@@ -520,7 +520,7 @@
       "search_title": "고3 국어영역 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 중국의 유학자인 주희는 사물의 이치를 탐구하는 궁리(窮理)",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 korean/ question"
+      "slot": "3-7 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250710/go3/kor_main_hsj_BK6Q7H9T.pdf",
@@ -528,7 +528,7 @@
       "search_title": "2025학년도 7월 전국연합학력평가 정답 및 해설 고3 1 39 국어영역 ※ 본전국연합학력평가는17개시도교육청주관으로",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 korean/ solution"
+      "slot": "3-7 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/his_main_hsj_39JY93S5.pdf",
@@ -536,7 +536,7 @@
       "search_title": "2026학년도 대학수학능력시험 9월 모의평가 한국사영역 한국사영역 한국사영역 한국사 한국사 한국사 정답 및 해설 정답 및 해설 정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 history/ solution"
+      "slot": "3-9 history solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/kor_main_hsj_2X96S4LB_2.pdf",
@@ -544,7 +544,7 @@
       "search_title": "학년도 대학수학능력시험 월 모의평가 2026 9 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1 독서 [1~3]",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 korean/ solution"
+      "slot": "3-9 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/math_main_mun_9A36W91J_1.pdf",
@@ -552,7 +552,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 5지선다형 1. ×   의 값은? [2점] ①",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 math/ question"
+      "slot": "3-9 math question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20250903/go3/2nd_ch_mun_218426MU.pdf",
@@ -728,7 +728,7 @@
       "search_title": "1 • 영어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 english/ solution"
+      "slot": "3-10 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/his_main_mun_DLW4557I.pdf",
@@ -736,7 +736,7 @@
       "search_title": "1 4 1. (가) 국가에 대한 설명으로 옳은 것은? 나는 천제(天帝)이신 환 인의 아들 환웅과 웅녀 사이에서 태어났다. 이곳",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 history/ question"
+      "slot": "3-10 history question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_mun_1SX526ZF.pdf",
@@ -744,7 +744,7 @@
       "search_title": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 인지 심리학에서는 외부 세계를 이미지로 구조화한 정신 표",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 korean/ question"
+      "slot": "3-10 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/kor_main_hsj_39QAF4NE.pdf",
@@ -752,7 +752,7 @@
       "search_title": "1 • 국어영역 • ※ 본 전국연합학력평가는 17개 시도 교육청 주관으로 시행되며, 해당 자료는 EBSi에서만 제공됩니다.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 korean/ solution"
+      "slot": "3-10 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go3/math_main_hsj_QFS3UEX9_1.pdf",
@@ -760,7 +760,7 @@
       "search_title": "2025학년도 10월 고3 전국연합학력평가 정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 math/ solution"
+      "slot": "3-10 math solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/eng_main_hsj_36WSA734.pdf",
@@ -768,7 +768,7 @@
       "search_title": "2026학년도 대학수학능력시험 영어 영어 영어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 english/ solution"
+      "slot": "3-11 english solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/his_main_hsj_13AS7CD6.pdf",
@@ -776,7 +776,7 @@
       "search_title": "한국사영역 한국사 정답 및 해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 history/ solution"
+      "slot": "3-11 history solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_kor_352K8BKR.pdf",
@@ -784,7 +784,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 korean/ question"
+      "slot": "3-11 korean question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/kor_main_hsj_53A2UX7R_1.pdf",
@@ -792,7 +792,7 @@
       "search_title": "2026학년도 대학수학능력시험 국어 국어 국어영역 영역 영역 정답 및 해설 정답 및 해설 정답 및 해설 1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 korean/ solution"
+      "slot": "3-11 korean solution"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251113/go3/live_main_paper_1_math_9Q5HR738.pdf",
@@ -800,7 +800,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 5지선다형 1.   ×    의 값은? [2점]",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 math/ question"
+      "slot": "3-11 math question"
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20251014/go1/his_main_hsj_2C1K8D2V.pdf",
@@ -808,7 +808,7 @@
       "search_title": "1 • 4교시 한국사 영역 • 정답·해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-10 history/ solution",
+      "slot": "1-10 history solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 2쪽 연결 머리말에 2025학년도 10월 고1 전국연합학력평가; 1쪽 한국사 영역과 정답·해설 본문 확인"
     },
@@ -818,7 +818,7 @@
       "search_title": "1 • 1교시 국어 영역 • 정답·해설",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-10 korean/ solution",
+      "slot": "1-10 korean solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 2쪽 연결 머리말에 2025학년도 10월 고1 전국연합학력평가; 1쪽 국어 영역과 정답·해설 본문 확인"
     },
@@ -828,7 +828,7 @@
       "search_title": "고1 정답 및 해설 2025학년도 9월 전국연합학력평가 수학 영역",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 math/ solution",
+      "slot": "1-9 math solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 1쪽에 연도·월·학년·수학 영역·정답 및 해설 모두 확인"
     },
@@ -858,7 +858,7 @@
       "search_title": "2025학년도 5월 고3 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-5 history/ solution",
+      "slot": "3-5 history solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 한국사, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
     },
@@ -868,7 +868,7 @@
       "search_title": "2025학년도 5월 고3 전국연합학력평가 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-5 math/ solution",
+      "slot": "3-5 math solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 수학, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
     },
@@ -898,7 +898,7 @@
       "search_title": "2025학년도 5월 고3 전국연합학력평가 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-5 korean/ solution",
+      "slot": "3-5 korean solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가, 국어, 정답 및 해설 확인. 공식 EBSi 일정·경기도 학교 공지상 시험일 2025-05-08; URL 디렉터리 20250430을 시행일로 해석하지 않음."
     },
@@ -938,7 +938,7 @@
       "search_title": "2025학년도 5월 고3 전국연합학력평가 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-5 english/ question",
+      "slot": "3-5 english question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 영어 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
     },
@@ -968,7 +968,7 @@
       "search_title": "2025학년도 5월 고3 전국연합학력평가 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-5 english/ solution",
+      "slot": "3-5 english solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "공식 EBSi PDF 전체 본문에 2025학년도 5월 고3 전국연합학력평가 및 영어 확인. 문항 본문 또는 정답·해설을 직접 확인. 시험일은 EBSi 일정·학교 공지의 2025-05-08; URL 디렉터리 20250430은 시행일이 아님."
     },
@@ -1218,7 +1218,7 @@
       "search_title": "2025학년도 5월 고3 전국연합학력평가 문제지 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-5 history/ question",
+      "slot": "3-5 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 본문에서 2025학년도 5월 고3 전국연합학력평가 문제지, 한국사 영역 확인. 시험일 2025-05-08은 공식 일정·학교 공지 기준."
     },
@@ -1228,7 +1228,7 @@
       "search_title": "2025학년도 3월 고2 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 history/ question",
+      "slot": "2-3 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 3월 고2 전국연합학력평가와 한국사 문제지 확인."
     },
@@ -1238,7 +1238,7 @@
       "search_title": "2025학년도 3월 고2 전국연합학력평가 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 math/ question",
+      "slot": "2-3 math question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 3월 고2 전국연합학력평가와 수학 문제지 확인."
     },
@@ -1248,7 +1248,7 @@
       "search_title": "2025학년도 6월 고1 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 history/ question",
+      "slot": "1-6 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 한국사 문제지 확인."
     },
@@ -1258,7 +1258,7 @@
       "search_title": "2025학년도 6월 고1 전국연합학력평가 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 korean/ solution",
+      "slot": "1-6 korean solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
     },
@@ -1268,7 +1268,7 @@
       "search_title": "2025학년도 6월 고1 전국연합학력평가 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 math/ question",
+      "slot": "1-6 math question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고1 전국연합학력평가와 수학 문제지 확인."
     },
@@ -1278,7 +1278,7 @@
       "search_title": "2025학년도 6월 고2 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 history/ solution",
+      "slot": "2-6 history solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 한국사 정답 및 해설 확인."
     },
@@ -1288,7 +1288,7 @@
       "search_title": "2025학년도 6월 고2 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 history/ question",
+      "slot": "2-6 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 한국사 문제지 확인."
     },
@@ -1298,7 +1298,7 @@
       "search_title": "2025학년도 6월 고2 전국연합학력평가 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 korean/ solution",
+      "slot": "2-6 korean solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 6월 고2 전국연합학력평가와 국어 정답 및 해설 확인."
     },
@@ -1308,7 +1308,7 @@
       "search_title": "2025학년도 9월 고1 전국연합학력평가 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 english/ solution",
+      "slot": "1-9 english solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 영어 정답 및 해설 확인."
     },
@@ -1318,7 +1318,7 @@
       "search_title": "2025학년도 9월 고1 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 history/ solution",
+      "slot": "1-9 history solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 한국사 정답 및 해설 확인."
     },
@@ -1328,7 +1328,7 @@
       "search_title": "2025학년도 9월 고1 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 history/ question",
+      "slot": "1-9 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 한국사 문제지 확인."
     },
@@ -1338,7 +1338,7 @@
       "search_title": "2025학년도 9월 고1 전국연합학력평가 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-9 korean/ solution",
+      "slot": "1-9 korean solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
     },
@@ -1348,7 +1348,7 @@
       "search_title": "2025학년도 10월 고1 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-10 history/ question",
+      "slot": "1-10 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고1 전국연합학력평가와 한국사 문제지 확인."
     },
@@ -1358,7 +1358,7 @@
       "search_title": "2025학년도 10월 고1 전국연합학력평가 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-10 math/ solution",
+      "slot": "1-10 math solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고1 전국연합학력평가와 수학 정답 및 해설 확인."
     },
@@ -1368,7 +1368,7 @@
       "search_title": "2025학년도 10월 고2 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-10 history/ solution",
+      "slot": "2-10 history solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 한국사 정답 및 해설 확인."
     },
@@ -1378,7 +1378,7 @@
       "search_title": "2025학년도 10월 고2 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-10 history/ question",
+      "slot": "2-10 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 한국사 문제지 확인."
     },
@@ -1388,7 +1388,7 @@
       "search_title": "2025학년도 10월 고2 전국연합학력평가 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-10 math/ question",
+      "slot": "2-10 math question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 10월 고2 전국연합학력평가와 수학 문제지 확인."
     },
@@ -1398,7 +1398,7 @@
       "search_title": "2025학년도 3월 고1 전국연합학력평가 국어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 korean/ solution",
+      "slot": "1-3 korean solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 3월 고1 전국연합학력평가와 국어 정답 및 해설 확인."
     },
@@ -1408,7 +1408,7 @@
       "search_title": "2025학년도 3월 고1 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 history/ question",
+      "slot": "1-3 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 3월 고1 전국연합학력평가와 한국사 문제지 확인."
     },
@@ -1418,7 +1418,7 @@
       "search_title": "2025학년도 9월 고2 전국연합학력평가 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 english/ listening_script",
+      "slot": "2-9 english listening_script",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 전체 본문에서 2025학년도 9월 고2 전국연합학력평가와 영어 듣기 대본 확인."
     },
@@ -1448,7 +1448,7 @@
       "search_title": "2025학년도 7월 고3 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 history/ solution",
+      "slot": "3-7 history solution",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 한국사, 정답 및 해설 확인."
     },
@@ -1458,7 +1458,7 @@
       "search_title": "2025학년도 7월 고3 전국연합학력평가 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 history/ question",
+      "slot": "3-7 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 한국사, 문제지 확인."
     },
@@ -1478,7 +1478,7 @@
       "search_title": "2025학년도 7월 고3 전국연합학력평가 영어 듣기 대본",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 english/ listening_script",
+      "slot": "3-7 english listening_script",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "EBSi PDF 본문에서 2025학년도 7월 고3 전국연합학력평가, 영어 듣기 대본, 듣기 대본 확인."
     },
@@ -1488,7 +1488,7 @@
       "search_title": "2025학년도 3월 고3 전국연합학력평가 문제지 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 history/ question",
+      "slot": "3-3 history question",
       "discovery": "검색엔진에 색인된 EBSi 공식 PDF URL",
       "identity_evidence": "PDF 본문에 2025학년도 3월 고3 전국연합학력평가 문제지와 한국사 영역 확인. EBSi 일정의 영역 요약은 한국사를 명시하지 않지만 실제 공식 문제지가 존재함."
     },
@@ -1498,7 +1498,7 @@
       "search_title": "고3 국어영역 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 중국의 유학자인 주희는 사물의 이치를 탐구하는 궁리(窮理)",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 korean/speech-and-writing question",
+      "slot": "3-7 korean question",
       "bundle_evidence": {
         "page": 13,
         "heading": "화법과 작문",
@@ -1511,7 +1511,7 @@
       "search_title": "고3 국어영역 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오. 중국의 유학자인 주희는 사물의 이치를 탐구하는 궁리(窮理)",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 korean/language-and-media question",
+      "slot": "3-7 korean question",
       "bundle_evidence": {
         "page": 17,
         "heading": "언어와 매체",
@@ -1524,7 +1524,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 5지선다형 1. ×   의 값은? [2점] ①",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 math/probability-and-statistics question",
+      "slot": "3-9 math question",
       "bundle_evidence": {
         "page": 9,
         "heading": "확률과 통계",
@@ -1537,7 +1537,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 5지선다형 1. ×   의 값은? [2점] ①",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 math/calculus question",
+      "slot": "3-9 math question",
       "bundle_evidence": {
         "page": 13,
         "heading": "미적분",
@@ -1550,7 +1550,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 1 1 20 5지선다형 1. ×   의 값은? [2점] ①",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 math/geometry question",
+      "slot": "3-9 math question",
       "bundle_evidence": {
         "page": 17,
         "heading": "기하",
@@ -1563,7 +1563,7 @@
       "search_title": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 인지 심리학에서는 외부 세계를 이미지로 구조화한 정신 표",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 korean/speech-and-writing question",
+      "slot": "3-10 korean question",
       "bundle_evidence": {
         "page": 13,
         "heading": "화법과 작문",
@@ -1576,7 +1576,7 @@
       "search_title": "1 20 [1 ~ 3] 다음 글을 읽고 물음에 답하시오. 인지 심리학에서는 외부 세계를 이미지로 구조화한 정신 표",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 korean/language-and-media question",
+      "slot": "3-10 korean question",
       "bundle_evidence": {
         "page": 17,
         "heading": "언어와 매체",
@@ -1589,7 +1589,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 korean/speech-and-writing question",
+      "slot": "3-11 korean question",
       "bundle_evidence": {
         "page": 13,
         "heading": "화법과 작문",
@@ -1602,7 +1602,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 [1～3] 다음 글을 읽고 물음에 답하시오.",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 korean/language-and-media question",
+      "slot": "3-11 korean question",
       "bundle_evidence": {
         "page": 17,
         "heading": "언어와 매체",
@@ -1615,7 +1615,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 5지선다형 1.   ×    의 값은? [2점]",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 math/probability-and-statistics question",
+      "slot": "3-11 math question",
       "bundle_evidence": {
         "page": 9,
         "heading": "확률과 통계",
@@ -1628,7 +1628,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 5지선다형 1.   ×    의 값은? [2점]",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 math/calculus question",
+      "slot": "3-11 math question",
       "bundle_evidence": {
         "page": 13,
         "heading": "미적분",
@@ -1641,7 +1641,7 @@
       "search_title": "이 문제지에 관한 저작권은 한국교육과정평가원에 있습니다. 홀수형 1 1 20 5지선다형 1.   ×    의 값은? [2점]",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 math/geometry question",
+      "slot": "3-11 math question",
       "bundle_evidence": {
         "page": 17,
         "heading": "기하",
@@ -1654,7 +1654,7 @@
       "search_title": "2026학년도 대학수학능력시험 6월 모의평가 문제지 - 영어 영역",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 english/ question",
+      "slot": "3-6 english question",
       "discovery": "search_engine_indexed_official_url"
     },
     {
@@ -1663,7 +1663,7 @@
       "search_title": "2026학년도 대학수학능력시험 6월 모의평가 영어 영역 듣기평가 대본",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 english/ listening_script",
+      "slot": "3-6 english listening_script",
       "discovery": "search_engine_indexed_official_url"
     },
     {
@@ -1699,7 +1699,7 @@
       "search_title": "2025학년도 전국연합학력평가 영어 영역 듣기평가 대본 3월 고1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 english/ listening_script",
+      "slot": "1-3 english listening_script",
       "discovery": "search_engine_indexed_official_url"
     },
     {
@@ -1708,7 +1708,7 @@
       "search_title": "2025학년도 전국연합학력평가 영어 영역 듣기평가 대본 6월 고1",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 english/ listening_script",
+      "slot": "1-6 english listening_script",
       "discovery": "search_engine_indexed_official_url"
     },
     {
@@ -1717,7 +1717,7 @@
       "search_title": "2025학년도 전국연합학력평가 영어 영역 듣기평가 대본 3월 고2",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 english/ listening_script",
+      "slot": "2-3 english listening_script",
       "discovery": "search_engine_indexed_official_url"
     },
     {
@@ -1726,7 +1726,7 @@
       "search_title": "2025학년도 전국연합학력평가 영어 영역 듣기평가 대본 3월 고3",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 english/ listening_script",
+      "slot": "3-3 english listening_script",
       "discovery": "search_engine_indexed_official_url"
     },
     {
@@ -1870,7 +1870,7 @@
       "search_title": "2025년 고2 6월 학평 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 math/- question",
+      "slot": "2-6 math question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -1879,7 +1879,7 @@
       "search_title": "2025년 고2 6월 학평 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-6 english/- question",
+      "slot": "2-6 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -1951,7 +1951,7 @@
       "search_title": "고1 10월 학평(경기) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-10 math/- question",
+      "slot": "1-10 math question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -1960,7 +1960,7 @@
       "search_title": "고1 10월 학평(경기) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-10 english/- question",
+      "slot": "1-10 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2014,7 +2014,7 @@
       "search_title": "고1 6월 학평(부산) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-6 english/- question",
+      "slot": "1-6 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2050,7 +2050,7 @@
       "search_title": "고1 3월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "1-3 english/- question",
+      "slot": "1-3 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2095,7 +2095,7 @@
       "search_title": "고2 10월 학평(경기) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-10 english/- question",
+      "slot": "2-10 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2338,7 +2338,7 @@
       "search_title": "고2 9월 학평(인천) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 math/- question",
+      "slot": "2-9 math question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2347,7 +2347,7 @@
       "search_title": "고2 9월 학평(인천) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 english/- question",
+      "slot": "2-9 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2356,7 +2356,7 @@
       "search_title": "고2 9월 학평(인천) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-9 history/- solution",
+      "slot": "2-9 history solution",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2581,7 +2581,7 @@
       "search_title": "고2 3월 학평(서울) 수학",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 math/- solution",
+      "slot": "2-3 math solution",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2590,7 +2590,7 @@
       "search_title": "고2 3월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 english/- question",
+      "slot": "2-3 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -2599,7 +2599,7 @@
       "search_title": "고2 3월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "2-3 history/- solution",
+      "slot": "2-3 history solution",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -3013,7 +3013,7 @@
       "search_title": "고3 3월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 english/- question",
+      "slot": "3-3 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -3022,7 +3022,7 @@
       "search_title": "고3 3월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-3 history/- solution",
+      "slot": "3-3 history solution",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -3301,7 +3301,7 @@
       "search_title": "고3 9월 모평(평가원) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 english/- question",
+      "slot": "3-9 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -3310,7 +3310,7 @@
       "search_title": "고3 9월 모평(평가원) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 english/- solution",
+      "slot": "3-9 english solution",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -3319,7 +3319,7 @@
       "search_title": "고3 9월 모평(평가원) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-9 history/- question",
+      "slot": "3-9 history question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -3778,7 +3778,7 @@
       "search_title": "고3 6월 모평(평가원) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 history/- question",
+      "slot": "3-6 history question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -3787,7 +3787,7 @@
       "search_title": "고3 6월 모평(평가원) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-6 history/- solution",
+      "slot": "3-6 history solution",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -4273,7 +4273,7 @@
       "search_title": "2026학년도 대학수학능력시험 영어 홀수형",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 english/- question",
+      "slot": "3-11 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -4282,7 +4282,7 @@
       "search_title": "2026학년도 대학수학능력시험 한국사 홀수형",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-11 history/- question",
+      "slot": "3-11 history question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -4939,7 +4939,7 @@
       "search_title": "고3 10월 학평(서울) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 english/- question",
+      "slot": "3-10 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -4948,7 +4948,7 @@
       "search_title": "고3 10월 학평(서울) 한국사",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-10 history/- solution",
+      "slot": "3-10 history solution",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -5560,7 +5560,7 @@
       "search_title": "고3 7월 학평(인천) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 english/- question",
+      "slot": "3-7 english question",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {
@@ -5569,7 +5569,7 @@
       "search_title": "고3 7월 학평(인천) 영어",
       "head_status": 200,
       "head_content_type": "application/pdf",
-      "slot": "3-7 english/- solution",
+      "slot": "3-7 english solution",
       "discovery": "official_ebsi_previous_paper_catalog"
     },
     {

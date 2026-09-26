@@ -1,0 +1,674 @@
+[
+  {
+    "code": "accounting-principles",
+    "name": "회계 원리",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "agriculture-understanding",
+    "name": "농업 이해",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "basic-drafting",
+    "name": "기초 제도",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "math-a",
+    "name": "수학 가형",
+    "subject": "math",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "math-b",
+    "name": "수학 나형",
+    "subject": "math",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "ocean-understanding",
+    "name": "해양의 이해",
+    "subject": "vocational",
+    "years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "service-industry-understanding",
+    "name": "생활 서비스 산업의 이해",
+    "subject": "vocational",
+    "years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "chemistry-general",
+    "name": "화학",
+    "subject": "science",
+    "years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "earth-science-general",
+    "name": "지구과학",
+    "subject": "science",
+    "years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "general-social",
+    "name": "일반사회",
+    "subject": "social",
+    "years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "geography-general",
+    "name": "지리",
+    "subject": "social",
+    "years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "life-and-ethics-general",
+    "name": "생활과 윤리",
+    "subject": "social",
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "life-science-general",
+    "name": "생명과학",
+    "subject": "science",
+    "years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "physics-general",
+    "name": "물리",
+    "subject": "science",
+    "years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "science-studies",
+    "name": "과학탐구",
+    "subject": "science",
+    "years": [
+      2011,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "social-studies",
+    "name": "사회탐구",
+    "subject": "social",
+    "years": [
+      2011,
+      2017
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "social-science-studies",
+    "name": "사회·과학탐구",
+    "subject": "social",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2015,
+      2016
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "agriculture-bio-industry",
+    "name": "농생명산업",
+    "subject": "vocational",
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "commerce-information",
+    "name": "상업정보",
+    "subject": "vocational",
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "fisheries-shipping",
+    "name": "수산해운",
+    "subject": "vocational",
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "home-economics-industry",
+    "name": "가사실업",
+    "subject": "vocational",
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "industry",
+    "name": "공업",
+    "subject": "vocational",
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "korean-a",
+    "name": "국어 A형",
+    "subject": "korean",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "korean-b",
+    "name": "국어 B형",
+    "subject": "korean",
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "morality",
+    "name": "도덕",
+    "subject": "social",
+    "years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "english-a",
+    "name": "영어 A",
+    "subject": "english",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "english-b",
+    "name": "영어 B",
+    "subject": "english",
+    "years": [
+      2012,
+      2013
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "agriculture-information",
+    "name": "농업정보관리",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "computer-general",
+    "name": "컴퓨터일반",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "design-general",
+    "name": "디자인일반",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "economic-geography",
+    "name": "경제지리",
+    "subject": "social",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "english-old",
+    "name": "외국어",
+    "subject": "english",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "ethics",
+    "name": "윤리",
+    "subject": "social",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "fisheries-general",
+    "name": "수산일반",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "fisheries-shipping-information",
+    "name": "수산해운정보처리",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "food-and-nutrition",
+    "name": "식품과영양",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "industry-intro",
+    "name": "공업입문",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "information-technology-basics",
+    "name": "정보기술기초",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "korean-modern-history",
+    "name": "한국근·현대사",
+    "subject": "history",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "korean-old",
+    "name": "언어",
+    "subject": "korean",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "maritime-general",
+    "name": "해사일반",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "ocean-general",
+    "name": "해양일반",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "politics",
+    "name": "정치",
+    "subject": "social",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "programming",
+    "name": "프로그래밍",
+    "subject": "vocational",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "action": "add_legacy_course"
+  },
+  {
+    "code": "law-and-society",
+    "name": "법과사회",
+    "subject": "social",
+    "years": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011
+    ],
+    "action": "add_legacy_course"
+  }
+]

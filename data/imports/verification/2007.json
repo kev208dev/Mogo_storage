@@ -4,7 +4,7 @@
   "records": [
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070314/kor_mun.pdf",
-      "slot": "2007 고1 3월 school_mock korean/ question",
+      "slot": "2007 고1 3월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -24,7 +24,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070314/kor_hsj.pdf",
-      "slot": "2007 고1 3월 school_mock korean/ solution",
+      "slot": "2007 고1 3월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -44,7 +44,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070314/math_mun.pdf",
-      "slot": "2007 고1 3월 school_mock math/ question",
+      "slot": "2007 고1 3월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -64,7 +64,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070314/math_hsj.pdf",
-      "slot": "2007 고1 3월 school_mock math/ solution",
+      "slot": "2007 고1 3월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -84,7 +84,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070314/eng_mun.pdf",
-      "slot": "2007 고1 3월 school_mock english/ question",
+      "slot": "2007 고1 3월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -104,7 +104,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070314/eng_hsj.pdf",
-      "slot": "2007 고1 3월 school_mock english/ solution",
+      "slot": "2007 고1 3월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -164,7 +164,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070613/kor_mun.pdf",
-      "slot": "2007 고1 6월 school_mock korean/ question",
+      "slot": "2007 고1 6월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -184,7 +184,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070613/kor_hsj_1.pdf",
-      "slot": "2007 고1 6월 school_mock korean/ solution",
+      "slot": "2007 고1 6월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -204,7 +204,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070613/math_mun.pdf",
-      "slot": "2007 고1 6월 school_mock math/ question",
+      "slot": "2007 고1 6월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -224,7 +224,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070613/math_hsj_1.pdf",
-      "slot": "2007 고1 6월 school_mock math/ solution",
+      "slot": "2007 고1 6월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -244,7 +244,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070613/eng_mun.pdf",
-      "slot": "2007 고1 6월 school_mock english/ question",
+      "slot": "2007 고1 6월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -264,7 +264,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070613/eng_hsj_1.pdf",
-      "slot": "2007 고1 6월 school_mock english/ solution",
+      "slot": "2007 고1 6월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -324,7 +324,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070920/kor_mun.pdf",
-      "slot": "2007 고1 9월 school_mock korean/ question",
+      "slot": "2007 고1 9월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -344,7 +344,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070920/kor_hsj.pdf",
-      "slot": "2007 고1 9월 school_mock korean/ solution",
+      "slot": "2007 고1 9월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -364,7 +364,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070920/math_mun.pdf",
-      "slot": "2007 고1 9월 school_mock math/ question",
+      "slot": "2007 고1 9월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -384,7 +384,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070920/math_hsj.pdf",
-      "slot": "2007 고1 9월 school_mock math/ solution",
+      "slot": "2007 고1 9월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -404,7 +404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070920/eng_mun.pdf",
-      "slot": "2007 고1 9월 school_mock english/ question",
+      "slot": "2007 고1 9월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -424,7 +424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070920/eng_hsj.pdf",
-      "slot": "2007 고1 9월 school_mock english/ solution",
+      "slot": "2007 고1 9월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -484,7 +484,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071122/kor_mun.pdf",
-      "slot": "2007 고1 11월 school_mock korean/ question",
+      "slot": "2007 고1 11월 school_mock korean question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -504,7 +504,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071122/kor_hsj.pdf",
-      "slot": "2007 고1 11월 school_mock korean/ solution",
+      "slot": "2007 고1 11월 school_mock korean solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -524,7 +524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071122/math_mun.pdf",
-      "slot": "2007 고1 11월 school_mock math/ question",
+      "slot": "2007 고1 11월 school_mock math question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -544,7 +544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071122/math_hsj.pdf",
-      "slot": "2007 고1 11월 school_mock math/ solution",
+      "slot": "2007 고1 11월 school_mock math solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -564,7 +564,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071122/eng_mun.pdf",
-      "slot": "2007 고1 11월 school_mock english/ question",
+      "slot": "2007 고1 11월 school_mock english question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -584,7 +584,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071122/eng_hsj.pdf",
-      "slot": "2007 고1 11월 school_mock english/ solution",
+      "slot": "2007 고1 11월 school_mock english solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -884,7 +884,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070614/s_his_mun.pdf",
-      "slot": "2007 고2 6월 school_mock history/ question",
+      "slot": "2007 고2 6월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -904,7 +904,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070614/s_his_hsj_1.pdf",
-      "slot": "2007 고2 6월 school_mock history/ solution",
+      "slot": "2007 고2 6월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1644,7 +1644,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070921/s_his_mun.pdf",
-      "slot": "2007 고2 9월 school_mock history/ question",
+      "slot": "2007 고2 9월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -1664,7 +1664,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070921/s_his_hsj.pdf",
-      "slot": "2007 고2 9월 school_mock history/ solution",
+      "slot": "2007 고2 9월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2404,7 +2404,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071123/s_his_mun.pdf",
-      "slot": "2007 고2 11월 school_mock history/ question",
+      "slot": "2007 고2 11월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -2424,7 +2424,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071123/s_his_hsj.pdf",
-      "slot": "2007 고2 11월 school_mock history/ solution",
+      "slot": "2007 고2 11월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4004,7 +4004,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070316/s_his_mun.pdf",
-      "slot": "2007 고3 3월 school_mock history/ question",
+      "slot": "2007 고3 3월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4024,7 +4024,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070316/s_his_hsj.pdf",
-      "slot": "2007 고3 3월 school_mock history/ solution",
+      "slot": "2007 고3 3월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4764,7 +4764,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070418/s_his_mun.pdf",
-      "slot": "2007 고3 4월 school_mock history/ question",
+      "slot": "2007 고3 4월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -4784,7 +4784,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070418/s_his_hsj.pdf",
-      "slot": "2007 고3 4월 school_mock history/ solution",
+      "slot": "2007 고3 4월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5684,7 +5684,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070607/s_his_mun.pdf",
-      "slot": "2007 고3 6월 kice_mock history/ question",
+      "slot": "2007 고3 6월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -5704,7 +5704,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070607/s_his_hsj_2.pdf",
-      "slot": "2007 고3 6월 kice_mock history/ solution",
+      "slot": "2007 고3 6월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7604,7 +7604,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070712/s_his_mun.pdf",
-      "slot": "2007 고3 7월 school_mock history/ question",
+      "slot": "2007 고3 7월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -7624,7 +7624,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070712/s_his_hsj.pdf",
-      "slot": "2007 고3 7월 school_mock history/ solution",
+      "slot": "2007 고3 7월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8524,7 +8524,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070906/s_his_mun.pdf",
-      "slot": "2007 고3 9월 kice_mock history/ question",
+      "slot": "2007 고3 9월 kice_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -8544,7 +8544,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070906/s_his_hsj.pdf",
-      "slot": "2007 고3 9월 kice_mock history/ solution",
+      "slot": "2007 고3 9월 kice_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10444,7 +10444,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071010/s_his_mun.pdf",
-      "slot": "2007 고3 10월 school_mock history/ question",
+      "slot": "2007 고3 10월 school_mock history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -10464,7 +10464,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071010/s_his_hsj.pdf",
-      "slot": "2007 고3 10월 school_mock history/ solution",
+      "slot": "2007 고3 10월 school_mock history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12284,7 +12284,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071115/s_his_mun.pdf",
-      "slot": "2007 고3 11월 csat history/ question",
+      "slot": "2007 고3 11월 csat history question",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -12304,7 +12304,7 @@
     },
     {
       "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071115/s_his_hsj.pdf",
-      "slot": "2007 고3 11월 csat history/ solution",
+      "slot": "2007 고3 11월 csat history solution",
       "browser": {
         "status": 200,
         "contentType": "application/pdf",
@@ -14038,6 +14038,116 @@
         "visual": "렌더링한 1쪽이 EBSi 목록의 고3 11월 스페인어Ⅰ 정답 및 해설와 일치",
         "firstPageText": "2008학년도 대학수학능력시험 제2외국어/ 한문 영역(스페인어Ⅰ) 정답 및 해설 <정답> 1 ④ 2 ④ 3 ② 4 ③ 5 ① 6 ⑤ 7 ② 8 ① 9 ④ 10 ③ 11 ④ 12 ② 13 ⑤ 14 ① 15 ⑤ 16 ② 17 ⑤ 18 ④ 19 ③ 20 ① 21 ③ 22 ② 23 ⑤ 24 ② 25 ③ 26 ① 27 ③ 28 ③ 29 ① 30 ① <해설> 1. 발음 문제 : 같은 발음의 철자 ligera[리헤라] ① gana[가나] ② según[세군] ③ grande[그란데] ④ página[빠히나] ⑤ domingo[도밍고] 그 펜은 그 책보다 더 가볍다. 2. 철자 문제 : 단어의 철자 알기 * 눈 ojo 입 boca 손가락 dedo 3.발음 문제 : 강세의 위치 구분 * 강세의 위치 (1) 모음, n, s로 끝난 단어 끝에서 두 번째 음절에 강세를 준다. (2) n, s를 제외한 나머지 자음으로 끝난 단어 끝에서 첫 번째 음절에 강세를 준다. capital ① examen 시험 ② ",
         "sha256": "e5e739249fdbaef5a1243d1c073ad510b7286f8f1be420c722709fc2083f38a1"
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071123/J_nsmsup_mun.pdf",
+      "slot": "2007 고2 11월 school_mock vocational/commercial-economics question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 2113599,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:57:25.778Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2007학년도 11월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고2 11월 농업이해 문제지와 일치",
+        "firstPageText": "",
+        "sha256": "e97aaf112cfb3294d9191a0fb765a49a49e092d8b08536d74cb282cdeedf7d64",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071123/J_nsmsup_hsj.pdf",
+      "slot": "2007 고2 11월 school_mock vocational/commercial-economics solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 546021,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-26T01:57:25.778Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2007학년도 11월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고2 11월 농업이해 정답 및 해설와 일치",
+        "firstPageText": "2007학년도 11월 고2 전국연합학력평가 정답 및 해설 10. [출제의도] 농업 정보 체계의 구성요소와 효과 이해 맵 방식의 파일은 JPG, BMP, GIF, PNG 등이 있고, • 4교시 직업탐구 영역 • 하기 WMF파일은 벡터방식의 파일이다. [해설] 유비쿼터스 농업은 통신과 네트워크를 활용한 농 업이며, 온실 등의 시설관리를 전화나 인터넷을 이용 [농업정보관리] 하여 원격으로 제어할 수 있으며 이로 인하여 편리성 1 ② 2 ② 3 ④ 4 ① 5 ④ 이 증가하고 인건비 등의 비용절감 효과가 있다. 6 ② 7 ② 8 ③ 9 ③ 10 ④ [정보기술기초] 11 ④ 12 ④ 13 ① 14 ④ 15 ③ 11. [출제의도] 데이터 베이스의 테이블 만들기 1 ① 2 ⑤ 3 ③ 4 ① 5 ⑤ 16 ⑤ 17 ① 18 ③ 19 ② 20 ⑤ [해설] 데이터베이스 테이블 구조에서 값을 조회하여 입력 6 ③ 7 ④ 8 ③ 9 ⑤ 10 ③ 하려면 필드 형식을 ‘조회마법사’로 설정하여야 한다. 11 ② ",
+        "sha256": "7c2cceb8a81a1c6f49bc23532164dba76b5720825388e6ce4c03fb9ba0282489",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071123/j_jic11_hsj.pdf",
+      "slot": "2007 고2 11월 school_mock vocational/fisheries-shipping-information solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 546021,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-26T01:57:25.778Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2007학년도 11월 고2 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고2 11월 기초제도 정답 및 해설와 일치",
+        "firstPageText": "2007학년도 11월 고2 전국연합학력평가 정답 및 해설 10. [출제의도] 농업 정보 체계의 구성요소와 효과 이해 맵 방식의 파일은 JPG, BMP, GIF, PNG 등이 있고, • 4교시 직업탐구 영역 • 하기 WMF파일은 벡터방식의 파일이다. [해설] 유비쿼터스 농업은 통신과 네트워크를 활용한 농 업이며, 온실 등의 시설관리를 전화나 인터넷을 이용 [농업정보관리] 하여 원격으로 제어할 수 있으며 이로 인하여 편리성 1 ② 2 ② 3 ④ 4 ① 5 ④ 이 증가하고 인건비 등의 비용절감 효과가 있다. 6 ② 7 ② 8 ③ 9 ③ 10 ④ [정보기술기초] 11 ④ 12 ④ 13 ① 14 ④ 15 ③ 11. [출제의도] 데이터 베이스의 테이블 만들기 1 ① 2 ⑤ 3 ③ 4 ① 5 ⑤ 16 ⑤ 17 ① 18 ③ 19 ② 20 ⑤ [해설] 데이터베이스 테이블 구조에서 값을 조회하여 입력 6 ③ 7 ④ 8 ③ 9 ⑤ 10 ③ 하려면 필드 형식을 ‘조회마법사’로 설정하여야 한다. 11 ② ",
+        "sha256": "7c2cceb8a81a1c6f49bc23532164dba76b5720825388e6ce4c03fb9ba0282489",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071010/J_ssnw_mun.pdf",
+      "slot": "2007 고3 10월 school_mock vocational/ocean-general question",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 884940,
+        "pdfPages": 4,
+        "checkedAt": "2026-09-26T01:57:25.778Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2007학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 10월 수산해운정보처리 문제지와 일치",
+        "firstPageText": "",
+        "sha256": "f2f6261c58a4de70780960d7e50ed4c6db46664de5a08291cb2a9a206e178200",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
+      },
+      "result": "verified_pending_import",
+      "dbStatus": "not_imported"
+    },
+    {
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20071010/J_ssnw_hsj.pdf",
+      "slot": "2007 고3 10월 school_mock vocational/ocean-general solution",
+      "browser": {
+        "status": 200,
+        "contentType": "application/pdf",
+        "bytes": 531643,
+        "pdfPages": 11,
+        "checkedAt": "2026-09-26T01:57:25.778Z"
+      },
+      "evidence": {
+        "method": "official EBSi previous-paper catalog listing, PDF download, extracted first-page text, and rendered first-page visual inspection",
+        "examLineInDocument": "2007학년도 10월 고3 전국연합학력평가",
+        "visual": "렌더링한 1쪽이 EBSi 목록의 고3 10월 수산해운정보처리 정답 및 해설와 일치",
+        "firstPageText": "2008 대학수학능력시험 대비 2007학년도 10월 고3 전국연합학력평가 정답 및 해설(1~4교시) 복잡하게 관련되어 있으므로 컴퓨터 환경 제어 시스 강화, 집중화, 급변하는 환경대처, 정보의 홍수 등을 • 4교시 직업탐구 영역 • 템을 사용하는 것이 유리하다. 관리하기 위하여 체계적인 관리가 필요하다. [오답풀이] 어느 정도 사람의 관리가 필요하다. 9. [출제의도] 정보의 특성을 묻는 문제이다. 농업정보관리 정답 희소 가치성(비밀성)이란 정보가 공개되었을 때 정 보의 가치가 떨어질 수 있다는 특징을 말한다. 1 ② 2 ② 3 ① 4 ③ 5 ⑤ 6 ③ 7 ⑤ 8 ⑤ 9 ⑤ 10 ④ 10. [출제의도] 소프트웨어의 응용 분야를 묻는 문제이다. 11 ④ 12 ③ 13 ③ 14 ② 15 ④ 스프레드 시트 : 계산하는 사무 업무를 자동으로 할 16 ① 17 ⑤ 18 ④ 19 ③ 20 ① 수 있는 표 계산 프로그램 웹 에디터 : 홈페이지를 만드는 프로그램 데이터 베이스 : 데이터를 효율적으",
+        "sha256": "c23b7b01c92e5988ba00a466bb6b1ea6c0c8dd58753475aa6b8600a3e6133792",
+        "slotMappingReason": "source_bundle_multi_slot",
+        "slotMappingSource": "official-urls.csv plus the same verified official PDF; shared URL retained as a bundle mapping."
       },
       "result": "verified_pending_import",
       "dbStatus": "not_imported"

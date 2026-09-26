@@ -436,7 +436,7 @@ describe.skipIf(!TEST_DB_URL)("migration 0002 on an existing (pre-course) databa
       expect(files.every((f) => f.courseId === null)).toBe(true); // 임의 mapping 금지
       expect((await db.select().from(s.questions))[0]!.courseId).toBeNull();
       expect((await db.select().from(s.gradeCuts))[0]!.courseId).toBeNull();
-      expect(await db.select().from(s.courses)).toHaveLength(24);
+      expect(await db.select().from(s.courses)).toHaveLength(48);
       expect(await db.select().from(s.examCourses)).toHaveLength(0);
       // 기존 NULL course 자료의 uniqueness 는 그대로
       await expect(

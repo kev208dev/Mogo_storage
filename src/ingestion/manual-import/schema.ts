@@ -156,7 +156,10 @@ export const importRowSchema = z
   })
   .superRefine((row, ctx) => {
     // 시험 종류와 학년·월의 일관성 (오타로 다른 시험에 붙는 것을 막는다)
-    if (row.exam_type === "csat" && !(row.grade === 3 && (row.month === 11 || (row.year <= 2020 && row.month === 12))))
+    if (
+      row.exam_type === "csat" &&
+      !(row.grade === 3 && (row.month === 11 || (row.year <= 2020 && row.month === 12)))
+    )
       ctx.addIssue({
         code: "custom",
         message: "exam_type=csat 은 고3 11월(2020년 이전 카탈로그는 12월)이어야 합니다",
@@ -168,16 +171,7 @@ export const importRowSchema = z
       });
     if (row.exam_date && row.exam_date.slice(0, 4) !== String(row.year))
       ctx.addIssue({ code: "custom", message: "exam_date 의 연도가 year(시행 연도)와 다릅니다" });
-    const legacyCourseCodes = new Set([
-      "math-a", "math-b", "agriculture-understanding", "basic-drafting",
-      "accounting-principles", "ocean-understanding", "service-industry-understanding",
-      "geography-general", "general-social", "life-and-ethics-general", "social-studies",
-      "science-studies", "physics-general", "chemistry-general", "life-science-general", "earth-science-general",
-      "social-science-studies",
-      "korean-a", "korean-b", "morality", "agriculture-bio-industry", "industry", "commerce-information", "fisheries-shipping", "home-economics-industry",
-      "english-a", "english-b",
-    ]);
-    if (row.course_code && !legacyCourseCodes.has(row.course_code)) {
+    if (row.course_code) {
       const course = courseByCode(row.course_code);
       if (!course)
         ctx.addIssue({

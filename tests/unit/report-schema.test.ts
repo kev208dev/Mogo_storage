@@ -26,3 +26,18 @@ describe("RateLimiter", () => {
     expect(limiter.take("ip", 1500)).toBe(true);
   });
 });
+
+describe("RateLimiter — 실패만 세는 제한 (관리자 로그인)", () => {
+  it("record 로 실패만 기록하고, 한도에 닿으면 창이 지날 때까지 차단", () => {
+    const limiter = new RateLimiter(2, 1000);
+    expect(limiter.isBlocked("ip", 0)).toBe(false);
+    limiter.record("ip", 0);
+    expect(limiter.isBlocked("ip", 10)).toBe(false);
+    limiter.record("ip", 20);
+    expect(limiter.isBlocked("ip", 30)).toBe(true);
+    expect(limiter.isBlocked("other", 30)).toBe(false);
+    // isBlocked 는 기록하지 않는다
+    expect(limiter.isBlocked("ip", 500)).toBe(true);
+    expect(limiter.isBlocked("ip", 1021)).toBe(false);
+  });
+});

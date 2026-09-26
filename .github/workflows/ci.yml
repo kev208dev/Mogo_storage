@@ -34,6 +34,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npx next typegen
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run format:check

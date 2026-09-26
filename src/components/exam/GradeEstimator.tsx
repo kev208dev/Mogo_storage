@@ -6,7 +6,15 @@ import { GRADE_CUT_SOURCE_LABELS } from "@/lib/constants";
 import type { GradeCut, GradeCutEntry } from "@/lib/data/types";
 import { estimateGrade, isMutedEstimate, orderGradeCutColumns } from "@/lib/grade-cuts";
 
-export function GradeEstimator({ gradeCuts, fixedCuts, maxScore = 100 }: { gradeCuts: GradeCut[]; fixedCuts?: GradeCutEntry[]; maxScore?: number }) {
+export function GradeEstimator({
+  gradeCuts,
+  fixedCuts,
+  maxScore = 100,
+}: {
+  gradeCuts: GradeCut[];
+  fixedCuts?: GradeCutEntry[];
+  maxScore?: number;
+}) {
   const [value, setValue] = useState("");
   const score = value.trim() === "" ? null : Number(value);
   const valid = score !== null && Number.isInteger(score) && score >= 0 && score <= maxScore;
@@ -17,8 +25,11 @@ export function GradeEstimator({ gradeCuts, fixedCuts, maxScore = 100 }: { grade
       valid
         ? orderGradeCutColumns(gradeCuts)
             .map((cut) => ({ cut, estimate: estimateGrade(cut.cuts, score) }))
-            .filter((x): x is { cut: GradeCut; estimate: NonNullable<ReturnType<typeof estimateGrade>> } =>
-              Boolean(x.estimate),
+            .filter(
+              (
+                x,
+              ): x is { cut: GradeCut; estimate: NonNullable<ReturnType<typeof estimateGrade>> } =>
+                Boolean(x.estimate),
             )
         : [],
     [gradeCuts, score, valid],
@@ -40,9 +51,11 @@ export function GradeEstimator({ gradeCuts, fixedCuts, maxScore = 100 }: { grade
           value={value}
           onChange={(event) => setValue(event.target.value)}
           placeholder="예: 84"
-          className="border-border h-10 w-28 rounded-md border bg-background px-3 text-sm tabular-nums"
+          className="border-border bg-background h-10 w-28 rounded-md border px-3 text-sm tabular-nums"
         />
-        <span className="text-muted-foreground text-xs">0~{maxScore}점 · 입력값은 저장하지 않습니다.</span>
+        <span className="text-muted-foreground text-xs">
+          0~{maxScore}점 · 입력값은 저장하지 않습니다.
+        </span>
       </div>
 
       {value && !valid ? (
@@ -53,7 +66,14 @@ export function GradeEstimator({ gradeCuts, fixedCuts, maxScore = 100 }: { grade
 
       {valid ? (
         <div className="mt-3 flex flex-wrap gap-2" aria-live="polite">
-          {fixedEstimate ? <div className="border-border bg-primary-soft min-w-32 rounded-md border px-3 py-2"><div className="text-xs font-semibold">절대평가 고정 기준</div><p className="mt-1 text-lg font-extrabold tabular-nums">{fixedEstimate.grade === null ? "9등급" : fixedEstimate.label}</p></div> : null}
+          {fixedEstimate ? (
+            <div className="border-border bg-primary-soft min-w-32 rounded-md border px-3 py-2">
+              <div className="text-xs font-semibold">절대평가 고정 기준</div>
+              <p className="mt-1 text-lg font-extrabold tabular-nums">
+                {fixedEstimate.grade === null ? "9등급" : fixedEstimate.label}
+              </p>
+            </div>
+          ) : null}
           {estimates.map(({ cut, estimate }) => (
             <div
               key={cut.source}

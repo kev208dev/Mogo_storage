@@ -1,0 +1,54 @@
+name: Production smoke
+
+# 배포된 Production 을 읽기 전용으로 점검한다 (데이터를 쓰거나 바꾸지 않음).
+#   repository secret  INGESTION_SITE_URL (또는 수동 실행 시 base_url 입력)
+on:
+  schedule:
+    - cron: "37 5 * * *"
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "대상 URL (비우면 INGESTION_SITE_URL)"
+        required: false
+
+concurrency:
+  group: prod-smoke
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Resolve target
+        id: target
+        env:
+          INPUT_URL: ${{ github.event.inputs.base_url }}
+          SITE_URL: ${{ secrets.INGESTION_SITE_URL }}
+        run: |
+          url="${INPUT_URL:-$SITE_URL}"
+          if [ -z "$url" ]; then
+            echo "No target configured — skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::add-mask::$url"
+            echo "url=$url" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.target.outputs.skip != 'true'
+      - uses: actions/setup-node@v4
+        if: steps.target.outputs.skip != 'true'
+        with:
+          node-version: 22
+          cache: npm
+      - if: steps.target.outputs.skip != 'true'
+        run: npm ci
+      - if: steps.target.outputs.skip != 'true'
+        run: npx playwright install --with-deps chromium
+      - if: steps.target.outputs.skip != 'true'
+        env:
+          SMOKE_BASE_URL: ${{ steps.target.outputs.url }}
+        run: npm run test:smoke:prod

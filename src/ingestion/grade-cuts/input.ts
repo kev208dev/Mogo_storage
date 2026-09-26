@@ -1,5 +1,10 @@
 import type { GradeCutEntry } from "../../lib/data/types";
-import { GRADE_CUT_SOURCES, SUBJECTS, type GradeCutSource, type Subject } from "../../lib/constants";
+import {
+  GRADE_CUT_SOURCES,
+  SUBJECTS,
+  type GradeCutSource,
+  type Subject,
+} from "../../lib/constants";
 import { parseCsv } from "../manual-import/csv";
 
 export class GradeCutInputError extends Error {
@@ -28,9 +33,7 @@ export function parseGradeCutEntries(input: string): GradeCutEntry[] {
     const cleaned = row.replace(/등급/g, "").replace(/점/g, "").trim();
     const match = /^([1-9])\s*[:,=\t ]+\s*(\d{1,3})$/.exec(cleaned);
     if (!match) {
-      throw new GradeCutInputError(
-        `등급컷 형식이 올바르지 않습니다: "${row}" (예: 1: 88)`,
-      );
+      throw new GradeCutInputError(`등급컷 형식이 올바르지 않습니다: "${row}" (예: 1: 88)`);
     }
     const grade = Number(match[1]);
     const rawScore = Number(match[2]);
@@ -72,9 +75,7 @@ export function parseGradeCutSourceUrl(input: string): string {
   return url.toString();
 }
 
-
-export const GRADE_CUT_CSV_HEADER =
-  "year,grade,month,subject,course_code,source,source_url,cuts";
+export const GRADE_CUT_CSV_HEADER = "year,grade,month,subject,course_code,source,source_url,cuts";
 
 export interface ParsedGradeCutCsvRow {
   line: number;
@@ -106,14 +107,18 @@ export function parseGradeCutCsv(text: string): {
   try {
     parsed = parseCsv(text);
   } catch (error) {
-    throw new GradeCutInputError(error instanceof Error ? error.message : "CSV를 읽을 수 없습니다.");
+    throw new GradeCutInputError(
+      error instanceof Error ? error.message : "CSV를 읽을 수 없습니다.",
+    );
   }
   if (parsed.length === 0) throw new GradeCutInputError("CSV가 비어 있습니다.");
 
   const expected = GRADE_CUT_CSV_HEADER.split(",");
   const actual = parsed[0]!.cells.map((cell) => cell.trim());
   if (actual.length !== expected.length || actual.some((cell, index) => cell !== expected[index])) {
-    throw new GradeCutInputError(`CSV 헤더가 올바르지 않습니다. 필요한 헤더: ${GRADE_CUT_CSV_HEADER}`);
+    throw new GradeCutInputError(
+      `CSV 헤더가 올바르지 않습니다. 필요한 헤더: ${GRADE_CUT_CSV_HEADER}`,
+    );
   }
 
   const rows: ParsedGradeCutCsvRow[] = [];

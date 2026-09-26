@@ -32,9 +32,19 @@ describe.skipIf(!TEST_DB_URL)("grade cut completion against Postgres", () => {
         isSample: true,
       })
       .returning();
-    await db.insert(courses).values({ id: "grade-cut-test-course", code: "grade-cut-test-course", name: "Test course", subject: "social" });
+    await db.insert(courses).values({
+      id: "grade-cut-test-course",
+      code: "grade-cut-test-course",
+      name: "Test course",
+      subject: "social",
+    });
     await db.insert(gradeCutWatchStates).values([
-      { examId: exam!.id, subject: "social", slotKey: "grade-cut-test-course", courseId: "grade-cut-test-course" },
+      {
+        examId: exam!.id,
+        subject: "social",
+        slotKey: "grade-cut-test-course",
+        courseId: "grade-cut-test-course",
+      },
       { examId: exam!.id, subject: "korean", slotKey: "" },
     ]);
     const now = new Date("2026-07-08T09:00:00Z");
@@ -42,8 +52,8 @@ describe.skipIf(!TEST_DB_URL)("grade cut completion against Postgres", () => {
       {
         examId: exam!.id,
         subject: "social",
-      courseId: "grade-cut-test-course",
-      courseCode: "grade-cut-test-course",
+        courseId: "grade-cut-test-course",
+        courseCode: "grade-cut-test-course",
         status: "waiting",
         lastPolledAt: null,
       },

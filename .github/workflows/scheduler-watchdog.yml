@@ -1,0 +1,66 @@
+name: Scheduler watchdog
+
+# Production health + cron heartbeat 점검 (매시).
+# 같은 점검을 Vercel Cron(vercel.json, 매일)도 호출하므로 GitHub schedule 이 멈춰도 감지된다.
+#   repository secrets  INGESTION_SITE_URL, CRON_SECRET, (선택) OPS_WEBHOOK_URL
+# 값이 없으면 아무것도 하지 않고 성공으로 끝난다. secret 값은 출력하지 않는다.
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: scheduler-watchdog
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  # 직전 실행 결과 조회용 (health 실패 알림 중복 방지). 쓰기 권한 없음
+  actions: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Production health
+        env:
+          SITE_URL: ${{ secrets.INGESTION_SITE_URL }}
+          OPS_WEBHOOK_URL: ${{ secrets.OPS_WEBHOOK_URL }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -z "$SITE_URL" ]; then
+            echo "INGESTION_SITE_URL not configured — skipping."
+            exit 0
+          fi
+          code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 30 "$SITE_URL/api/health" || echo 000)
+          echo "health: HTTP $code"
+          if [ "$code" = "200" ]; then exit 0; fi
+          echo "::error::Production /api/health returned HTTP $code"
+          # 직전 실행도 실패였다면 이미 알렸으므로 webhook 은 보내지 않는다 (알림 폭탄 방지)
+          prev=$(gh api "repos/$REPO/actions/workflows/scheduler-watchdog.yml/runs?status=completed&per_page=1" --jq '.workflow_runs[0].conclusion' 2>/dev/null || echo unknown)
+          if [ -n "$OPS_WEBHOOK_URL" ] && [ "$prev" != "failure" ]; then
+            msg="🚨 Production health check 실패 (HTTP $code)"
+            curl -sS -o /dev/null --max-time 10 -X POST -H 'content-type: application/json' \
+              -d "{\"content\":\"$msg\",\"text\":\"$msg\",\"event\":\"health_failure\"}" "$OPS_WEBHOOK_URL" || true
+          fi
+          exit 1
+
+      - name: Scheduler heartbeats
+        env:
+          SITE_URL: ${{ secrets.INGESTION_SITE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          if [ -z "$SITE_URL" ] || [ -z "$CRON_SECRET" ]; then
+            echo "Scheduler watchdog not configured — skipping."
+            exit 0
+          fi
+          curl --fail-with-body -sS --max-time 60 -o watchdog.json \
+            -H "Authorization: Bearer $CRON_SECRET" "$SITE_URL/api/cron/watchdog"
+          jq '{tasks, alerted, recovered}' watchdog.json
+          # stale/연속 실패가 있으면 workflow 도 실패로 표시 (알림은 app 이 dedupe 해서 보낸다)
+          if jq -e '.alerted | length > 0' watchdog.json > /dev/null; then
+            echo "::error::scheduler unhealthy: $(jq -r '.alerted | join(", ")' watchdog.json)"
+            exit 1
+          fi

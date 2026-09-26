@@ -31,6 +31,14 @@ test("Flow J: source 구조 변경 → 자동 게시 중단 → 관리자 경고
   await expect(kice.getByText(/자동 수집: 비활성/)).toBeVisible();
 });
 
+test("관리자 대시보드: scheduler heartbeat 상태 (cron 설정 없음 → 꺼짐)", async ({ page }) => {
+  await login(page);
+  const table = page.getByTestId("scheduler-status");
+  await expect(table).toBeVisible();
+  await expect(table.getByRole("row").filter({ hasText: "grade-cuts" })).toContainText("꺼짐");
+  await expect(table.getByRole("row").filter({ hasText: "watchdog" })).toBeVisible();
+});
+
 test("Flow H: 오류 신고 → 관리자 → 해결", async ({ page, request }) => {
   const res = await request.post("/api/reports", {
     data: JSON.stringify({

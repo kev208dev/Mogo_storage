@@ -5,12 +5,7 @@ import { redirect } from "next/navigation";
 import { and, eq, isNull } from "drizzle-orm";
 import { getDb } from "@/db/client";
 import { courses, examCourses, examFiles, exams, examSubjects, gradeCuts } from "@/db/schema";
-import {
-  GRADE_CUT_SOURCES,
-  SUBJECTS,
-  type GradeCutSource,
-  type Subject,
-} from "@/lib/constants";
+import { GRADE_CUT_SOURCES, SUBJECTS, type GradeCutSource, type Subject } from "@/lib/constants";
 import { examCoursePath, examPath } from "@/lib/exam-path";
 import {
   GradeCutInputError,
@@ -130,13 +125,26 @@ export async function upsertGradeCutAction(form: FormData) {
         throw new GradeCutInputError("이 시험에 등록되지 않은 세부과목입니다.");
     }
 
-    const existing = await db.select({ id: gradeCuts.id }).from(gradeCuts).where(and(
-      eq(gradeCuts.examId, examId), eq(gradeCuts.subject, subject),
-      courseId ? eq(gradeCuts.courseId, courseId) : isNull(gradeCuts.courseId),
-      eq(gradeCuts.source, source),
-    )).limit(1);
+    const existing = await db
+      .select({ id: gradeCuts.id })
+      .from(gradeCuts)
+      .where(
+        and(
+          eq(gradeCuts.examId, examId),
+          eq(gradeCuts.subject, subject),
+          courseId ? eq(gradeCuts.courseId, courseId) : isNull(gradeCuts.courseId),
+          eq(gradeCuts.source, source),
+        ),
+      )
+      .limit(1);
     const changed = await persistGradeCut(db, {
-      examId, subject, courseId, source, sourceUrl, cuts, observedAt: new Date(),
+      examId,
+      subject,
+      courseId,
+      source,
+      sourceUrl,
+      cuts,
+      observedAt: new Date(),
     });
 
     console.info(
@@ -147,13 +155,14 @@ export async function upsertGradeCutAction(form: FormData) {
         target: `${examId}:${subject}:${courseId ?? "-"}:${source}`,
       }),
     );
-    if (changed) await revalidateExamSlot({
-      year: exam.year,
-      grade: exam.grade,
-      month: exam.month,
-      subject,
-      courseCode: course?.code,
-    });
+    if (changed)
+      await revalidateExamSlot({
+        year: exam.year,
+        grade: exam.grade,
+        month: exam.month,
+        subject,
+        courseCode: course?.code,
+      });
     return `${exam.year} 고${exam.grade} ${exam.month}월 등급컷을 ${changed ? "저장" : "변경 없이 확인"}했습니다.`;
   });
 }
@@ -189,7 +198,6 @@ export async function deleteGradeCutAction(form: FormData) {
   });
 }
 
-
 /**
  * 여러 시험/과목/출처의 등급컷을 한 번에 입력한다.
  * 서버는 source_url을 fetch하지 않고 HTTPS 형식만 검증한다.
@@ -222,11 +230,7 @@ export async function bulkImportGradeCutsAction(form: FormData) {
           .select()
           .from(exams)
           .where(
-            and(
-              eq(exams.year, row.year),
-              eq(exams.grade, row.grade),
-              eq(exams.month, row.month),
-            ),
+            and(eq(exams.year, row.year), eq(exams.grade, row.grade), eq(exams.month, row.month)),
           )
           .limit(1);
         if (!exam) throw new GradeCutInputError("해당 시험이 DB에 없습니다.");
@@ -282,25 +286,35 @@ export async function bulkImportGradeCutsAction(form: FormData) {
           course ? eq(gradeCuts.courseId, course.id) : isNull(gradeCuts.courseId),
           eq(gradeCuts.source, row.source),
         );
-        const [existing] = await db.select({ id: gradeCuts.id }).from(gradeCuts).where(slot).limit(1);
+        const [existing] = await db
+          .select({ id: gradeCuts.id })
+          .from(gradeCuts)
+          .where(slot)
+          .limit(1);
         valid += 1;
 
         if (!dryRun) {
           const changed = await persistGradeCut(db, {
-            examId: exam.id, subject: row.subject, courseId: course?.id ?? null,
-            source: row.source, sourceUrl: row.sourceUrl, cuts: row.cuts, observedAt: new Date(),
+            examId: exam.id,
+            subject: row.subject,
+            courseId: course?.id ?? null,
+            source: row.source,
+            sourceUrl: row.sourceUrl,
+            cuts: row.cuts,
+            observedAt: new Date(),
           });
           if (changed) {
             if (existing) updated += 1;
             else created += 1;
           }
-          if (changed) await revalidateExamSlot({
-            year: exam.year,
-            grade: exam.grade,
-            month: exam.month,
-            subject: row.subject,
-            courseCode: course?.code ?? null,
-          });
+          if (changed)
+            await revalidateExamSlot({
+              year: exam.year,
+              grade: exam.grade,
+              month: exam.month,
+              subject: row.subject,
+              courseCode: course?.code ?? null,
+            });
         } else if (existing) updated += 1;
         else created += 1;
       } catch (error) {

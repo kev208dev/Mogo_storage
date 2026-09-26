@@ -84,12 +84,62 @@ pg_dump --format=custom --no-owner --file=mogo-$(date +%F).dump "$DATABASE_URL"
 createdb mogo_restore
 pg_restore --no-owner --dbname=postgres://.../mogo_restore mogo-2026-09-24.dump
 DATABASE_URL=postgres://.../mogo_restore npm run db:migrate:prod     # 백업 이후 migration 적용
-DATABASE_URL=postgres://.../mogo_restore npm run ingest:audit        # 무결성 확인
+DATABASE_URL=postgres://.../mogo_restore npm run ops:restore-verify  # migration 수·행 수·공식 URL·샘플 섞임 점검 (읽기 전용)
+DATABASE_URL=postgres://.../mogo_restore npm run ingest:audit        # 슬롯 무결성 확인
 ```
+
+- `ops:restore-verify -- --min-exams=<N> --min-files=<N>` 로 복원 전 운영 규모를 기준으로 줄 수 있습니다. 하나라도 실패하면 exit 1 입니다.
+- Supabase 는 대시보드의 Backups/PITR 로 복원합니다. 복원한 DB 로 바로 서비스를 전환하지 말고 위 세 명령을 먼저 실행합니다.
 
 - 관리형 PostgreSQL 은 PITR(시점 복구)을 켜 두는 것을 권장합니다.
 - R2 에는 원본 대신 재생성 가능한 자료가 대부분입니다. 단어장 PDF 는 job 으로 다시 만들 수 있고(`generate_vocabulary_pdf`), `source_redirect` 자료는 R2 에 없습니다.
 - 복원 후 `npm run ingest:coverage` 로 누락을 확인하고 필요하면 backfill 로 보충합니다 (idempotent).
+
+## Scheduler 감시 (heartbeat · watchdog)
+
+- 모든 `/api/cron/<task>` 실행은 `scheduler_heartbeats` 에 시작·종료·결과(`ok`/`skipped`/`failed` + 짧은 상태 코드)를 남깁니다. 기록이 실패해도 cron 자체는 영향을 받지 않습니다.
+- `/api/cron/watchdog` 이 기대 주기 대비 늦은 task(`stale`), 연속 실패(`failing`), 켜져 있는데 기록이 없는 task(`never_run`)를 찾아 `OPS_WEBHOOK_URL` 로 알립니다. 정상으로 돌아오면 복구 알림을 한 번 보냅니다.
+
+| task         | 기대 주기 | stale 기준 | 감시 조건                          |
+| ------------ | --------- | ---------- | ---------------------------------- |
+| `grade-cuts` | 5분       | 45분       | `GRADE_CUT_INGESTION_ENABLED=true` |
+| `scheduled`  | 10분      | 90분       | `INGESTION_ENABLED=true`           |
+| `watchdog`   | 1시간     | 36시간     | 항상 (관리자 화면 표시용)          |
+
+- 기준은 `SCHEDULER_STALE_MINUTES_GRADE_CUTS=60` 처럼 env 로 조정합니다 (주기보다 짧은 값은 무시).
+- watchdog 은 두 곳에서 호출합니다. 한쪽 scheduler 가 멈춰도 다른 쪽이 감지합니다.
+  - GitHub Actions `Scheduler watchdog` (매시): `/api/health` 확인 + watchdog 호출. 이상이 있으면 workflow 가 실패로 표시됩니다. health 실패는 직전 실행이 성공이었을 때만 webhook 을 보냅니다 (secret `OPS_WEBHOOK_URL`, 선택).
+  - Vercel Cron (`vercel.json`, 매일): 같은 watchdog 호출. GitHub schedule 자체가 멈춘 경우를 잡습니다.
+- 확인: `/admin` 대시보드의 "Scheduler 상태", 또는 `npm run ops:scheduler` (`--json`, `--strict`, 알림까지 보내려면 `--watchdog`).
+- 공개 `/api/health` 는 `app`, `database` 만 돌려줍니다. cron·source 상태는 관리자 화면과 인증된 watchdog 응답에만 있습니다.
+
+### "scheduler 지연" 알림을 받았을 때
+
+1. GitHub Actions 의 `Grade cut watch` / `Scheduled ingestion` 실행 기록을 봅니다. schedule 이 멈췄으면 `workflow_dispatch` 로 한 번 실행하고, 저장소가 60일 이상 비활성이면 workflow 를 다시 켭니다.
+2. 실행은 되는데 heartbeat 가 없으면 `/api/cron/<task>` 응답(401/404/5xx)을 확인합니다. `CRON_SECRET`·`INGESTION_SITE_URL` secret 을 점검합니다.
+3. "연속 실패"면 `/admin` 의 상태 코드(예: `advisory_lock`)와 Vercel 로그의 `grade_cut_watch.failed` 를 봅니다.
+
+## 운영 알림 중복 방지
+
+- webhook 알림은 문제 단위 key(예: `scheduler:grade-cuts`, `source_broken:ebsi`, `job_dead:<type>`)로 묶어 cooldown(기본 6시간, `OPS_ALERT_COOLDOWN_MINUTES`) 동안 한 번만 보냅니다. 생략한 횟수는 다음 알림에 덧붙입니다.
+- 상태는 `ops_alert_states` 에 있습니다. 여러 인스턴스가 동시에 보내도 row lock 으로 한 번만 발송됩니다. 이 테이블을 읽지 못하면 알림을 막지 않고 보냅니다 (누락보다 중복이 낫다).
+- 로그(`ops.alert_suppressed`)에는 생략 사실만 남습니다.
+
+## Production smoke test
+
+```bash
+SMOKE_BASE_URL=https://mogo-storage.vercel.app npm run test:smoke:prod
+```
+
+- 읽기 전용입니다. 대상은 sitemap 에서 고르므로 데이터가 늘어도 그대로 동작합니다.
+- 확인 항목: 홈·검색·최신/legacy 시험·고1/2/3·국어 canonical redirect·수학/영어·사회/과학 세부과목·enum 경로 308·404·다운로드 302(공식 도메인, 따라가지 않음)·"자료 준비 중"·`/api/health`·admin/cron/revalidate 비인증 차단·robots·sitemap.
+- GitHub Actions `Production smoke` 가 매일 실행합니다 (수동 실행 시 `base_url` 입력 가능). 다운로드 허용 호스트를 늘리려면 `SMOKE_ALLOWED_DOWNLOAD_HOSTS` 를 씁니다.
+
+## 환경변수 검증
+
+- 서버 시작 시(`instrumentation`)와 Vercel Production build 시(`next.config.ts`) 같은 검증을 합니다. build 에서 실패하면 배포가 중단되고 기존 배포가 계속 서비스됩니다.
+- 실패 조건: `NEXT_PUBLIC_SITE_URL` 이 https origin 이 아님(경로·쿼리·계정정보 포함) · 수집/등급컷 cron 이 켜졌는데 DB 나 16자 이상 `CRON_SECRET` 없음 · 관리자 설정 3개 중 일부만 있음 또는 짧음 · DB 연결 상태에서 `ALLOW_SAMPLE_INDEXING=1` · R2 설정 일부만 있음/`R2_PUBLIC_BASE_URL` 이 https 아님.
+- 메시지에는 변수 이름만 나오고 값은 출력하지 않습니다. 긴급 우회는 `SKIP_ENV_VALIDATION=1` (원인을 고친 뒤 제거).
 
 ## 보안 점검
 

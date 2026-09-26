@@ -6,3 +6,5 @@ test-results
 coverage
 package-lock.json
 next-env.d.ts
+# 수집한 원문 fixture 는 byte 단위로 보존한다 (포맷하면 원문이 바뀐다)
+tests/fixtures/**/*.html

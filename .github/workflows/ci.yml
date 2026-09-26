@@ -37,10 +37,7 @@ jobs:
       - run: npx next typegen
       - run: npm run typecheck
       - run: npm run lint
-      # Existing repository-wide formatting debt predates this PR; report it without
-      # skipping migration, tests, and build on a clean GitHub runner.
       - run: npm run format:check
-        continue-on-error: true
       # schema.ts 와 drizzle/ migration 이 어긋나면 실패 (migration 누락 방지)
       - run: npx drizzle-kit generate --name=ci_drift_check && git diff --exit-code -- drizzle && test -z "$(git status --porcelain drizzle)"
       # migration 을 실제 PostgreSQL 에 적용 (fresh DB)

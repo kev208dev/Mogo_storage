@@ -23,6 +23,7 @@ import {
 import { OPERATOR_IMPORT_SOURCE_ID } from "@/ingestion/manual-import/source";
 import { AdminNotice } from "./notice";
 import { NoDatabase } from "./no-db";
+import { SchedulerPanel } from "@/components/admin/SchedulerPanel";
 
 export const dynamic = "force-dynamic";
 
@@ -59,6 +60,8 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
           </div>
         ))}
       </dl>
+
+      <SchedulerPanel db={db} />
 
       <Panel title="출처 (source)">
         <ul className="divide-border divide-y">

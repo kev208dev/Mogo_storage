@@ -4,6 +4,7 @@ import { createStorageProvider } from "../../lib/storage/factory";
 import { httpRevalidator, type IngestionContext } from "../context";
 import { createLogger } from "../logger";
 import { createOpsNotifier } from "../notifier";
+import { createDbAlertGate, failOpen } from "../ops/alert-gate";
 
 export function requireDb(): Database {
   const url = process.env.DATABASE_URL;
@@ -19,7 +20,7 @@ export function createCliContext(db: Database): IngestionContext {
   return {
     db,
     logger,
-    notifier: createOpsNotifier(logger),
+    notifier: createOpsNotifier(logger, process.env, failOpen(createDbAlertGate(db))),
     storage: createStorageProvider(),
     revalidator: httpRevalidator(process.env.NEXT_PUBLIC_SITE_URL, process.env.CRON_SECRET),
     now: () => new Date(),

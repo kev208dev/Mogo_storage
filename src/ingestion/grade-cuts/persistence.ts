@@ -33,9 +33,16 @@ export interface CutInput {
 
 /** Current row + immutable history are committed together. Only a genuinely new value writes. */
 export async function persistGradeCut(db: Database, input: CutInput): Promise<boolean> {
-  const [exam] = await db.select({ year: exams.year, grade: exams.grade,
-    examType: exams.examType, academicYear: exams.academicYear })
-    .from(exams).where(eq(exams.id, input.examId)).limit(1);
+  const [exam] = await db
+    .select({
+      year: exams.year,
+      grade: exams.grade,
+      examType: exams.examType,
+      academicYear: exams.academicYear,
+    })
+    .from(exams)
+    .where(eq(exams.id, input.examId))
+    .limit(1);
   if (!exam || gradingMode(exam, input.subject) !== "relative")
     throw new Error("fixed or unverified grading mode does not accept grade-cut rows");
   const cuts = normalizeCuts(input.cuts);
@@ -251,8 +258,7 @@ export function createGradeCutStore(db: Database): WatchStore {
         .where(eq(gradeCutWatchStates.examId, exam.id));
       return candidates.map((candidate): WatchSlot => {
         const state = states.find(
-          (s) =>
-            s.subject === candidate.subject && s.slotKey === (candidate.courseId ?? ""),
+          (s) => s.subject === candidate.subject && s.slotKey === (candidate.courseId ?? ""),
         );
         if (!state) throw new Error("missing grade cut watch state");
         return {
@@ -263,12 +269,7 @@ export function createGradeCutStore(db: Database): WatchStore {
         };
       });
     },
-    async save(
-      exam: WatchExam,
-      slot: WatchSlot,
-      source: GradeCutSource,
-      value: CollectedGradeCut,
-    ) {
+    async save(exam: WatchExam, slot: WatchSlot, source: GradeCutSource, value: CollectedGradeCut) {
       if (slot.status === "finalized" && source !== "official") return false;
       return persistGradeCut(db, {
         examId: exam.id,

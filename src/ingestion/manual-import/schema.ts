@@ -171,6 +171,8 @@ export const importRowSchema = z
     const legacyCourseCodes = new Set([
       "math-a", "math-b", "agriculture-understanding", "basic-drafting",
       "accounting-principles", "ocean-understanding", "service-industry-understanding",
+      "geography-general", "general-social", "life-and-ethics-general", "social-studies",
+      "science-studies", "physics-general", "chemistry-general", "life-science-general", "earth-science-general",
     ]);
     if (row.course_code && !legacyCourseCodes.has(row.course_code)) {
       const course = courseByCode(row.course_code);

@@ -12,6 +12,7 @@
     "format:check": "prettier --check .",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:smoke:prod": "playwright test -c playwright.smoke.config.ts",
     "test:e2e": "playwright test",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
@@ -34,7 +35,9 @@
     "storage:selftest": "node --env-file-if-exists=.env.local --import tsx scripts/storage-selftest.ts",
     "import:official-urls": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/import-official-urls.ts",
     "ingest:audit": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/audit.ts",
-    "ingest:inspect": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/inspect.ts"
+    "ingest:inspect": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/inspect.ts",
+    "ops:scheduler": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/scheduler-status.ts",
+    "ops:restore-verify": "node --env-file-if-exists=.env.local --import tsx scripts/restore-verify.ts"
   },
   "dependencies": {
     "@expo-google-fonts/noto-sans-kr": "^0.4.3",

@@ -8,6 +8,20 @@ const code = (label: string, subject?: "social" | "science" | "math" | "korean")
   return r.status === "resolved" ? r.code : r.status;
 };
 
+describe("가운뎃점 정규화 (EBSi 제목의 'ㆍ' 는 NFKC 에서 U+119E 로 바뀐다)", () => {
+  it.each([
+    "사회ㆍ문화",
+    "사회·문화",
+    "사회・문화",
+    "사회‧문화",
+    "수산･해운 산업 기초",
+    "수산․해운 산업 기초",
+  ])("%s", (label) => {
+    const r = resolveCourse(label);
+    expect(r.status).toBe("resolved");
+  });
+});
+
 describe("course catalog", () => {
   it("codes are URL-safe, unique and seeded by the migration", () => {
     const codes = COURSE_CATALOG.map((c) => c.code);

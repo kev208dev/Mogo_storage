@@ -607,6 +607,9 @@ export const sourceArtifacts = pgTable(
     ),
     index("source_artifacts_status_idx").on(t.status),
     index("source_artifacts_exam_idx").on(t.examId, t.subject, t.type),
+    // 같은 URL·같은 내용이 다른 시험/슬롯에 연결됐는지 (manual_review 충돌 탐지)
+    index("source_artifacts_source_url_idx").on(t.sourceUrl),
+    index("source_artifacts_fingerprint_idx").on(t.contentFingerprint),
   ],
 );
 
@@ -858,6 +861,49 @@ export const opsAlertStates = pgTable("ops_alert_states", {
   lastMessage: text("last_message"),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });
+
+/**
+ * 검토 근거 · 보류 사유 (source_artifacts 1:1, 별도 테이블).
+ * source_artifacts 에 컬럼을 더하지 않는 이유: 운영 DB migration 보다 코드가 먼저 배포돼도
+ * 기존 조회(select *)가 깨지지 않게 하기 위해. 이 테이블은 새 코드만 읽고, 없으면 건너뛴다.
+ */
+export const artifactReviewNotes = pgTable("artifact_review_notes", {
+  artifactId: text("artifact_id")
+    .primaryKey()
+    .references(() => sourceArtifacts.id, { onDelete: "cascade" }),
+  /** 보류 사유 코드 (예: no_exam_identity, subject_mismatch, slot_conflict) */
+  reasonCode: text("reason_code"),
+  reason: text("reason"),
+  /** 근거 목록 — 형식: src/ingestion/manual-import/evidence.ts */
+  evidence: jsonb("evidence").$type<Array<Record<string, unknown>>>().notNull().default([]),
+  updatedBy: text("updated_by"),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+/**
+ * 관리자가 승인한 매핑 규칙 — 이후 후보 분류에 재사용한다.
+ * 예: EBSi 파일 코드 "s_samun" → 사회탐구 / social-culture (고2·고3 공통)
+ * 확정적인 규칙만 저장한다 (한 코드가 서로 다른 과목으로 승인되면 규칙을 만들지 않는다).
+ */
+export const reviewMappingRules = pgTable(
+  "review_mapping_rules",
+  {
+    id: id(),
+    sourceId: text("source_id").notNull(),
+    /** ebsi_file_code */
+    kind: text("kind").notNull(),
+    pattern: text("pattern").notNull(),
+    /** 학년에 따라 뜻이 다른 코드(sat/gat 등)는 학년별 규칙. 공통이면 "" */
+    gradeScope: text("grade_scope").notNull().default(""),
+    subject: subjectEnum("subject").notNull(),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
+    createdBy: text("created_by").notNull(),
+    /** 이 규칙을 뒷받침하는 승인 건수 */
+    approvals: integer("approvals").notNull().default(1),
+    ...timestamps,
+  },
+  (t) => [uniqueIndex("review_mapping_rules_uq").on(t.sourceId, t.kind, t.pattern, t.gradeScope)],
+);
 
 // ── relations ───────────────────────────────────────────────
 export const examsRelations = relations(exams, ({ many }) => ({

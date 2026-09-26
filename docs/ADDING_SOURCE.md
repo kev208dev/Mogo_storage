@@ -8,6 +8,21 @@
 - robots.txt 가 해당 경로를 허용하는가?
 - 이용조건: 재배포 허용이 문서로 확인되지 않으면 정책은 `source_redirect` (다운로드 시 공식 URL 로 연결).
 
+### source 정책 (`src/ingestion/sources/policy.ts`)
+
+source 마다 기능(`discover_exams` · `discover_files` · `fetch_file` · `release_watch` · `grade_cuts`)별 지원 방식을 적습니다.
+
+| kind             | 의미                                                                                    |
+| ---------------- | --------------------------------------------------------------------------------------- |
+| `adapter`        | 자동화 가능 (검증 · health · capability 게이트를 통과해야 실제로 돈다)                  |
+| `policy_blocked` | robots.txt · 약관 · anti-bot 등으로 금지. `evidence` 에 근거(확인일·경로)를 반드시 적음 |
+| `manual`         | 운영자 CSV 입력 등 사람이 하는 흐름                                                     |
+| `not_applicable` | 해당 없음                                                                               |
+
+`policy_blocked` 기능은 코드로 강제됩니다: 관리자 [켜기]/capability 켜기가 거부되고, DB 를 직접 바꿔도 게이트(`canRun`)가 실행하지 않습니다.
+화면 상태는 `automated_verified` · `degraded` · `disabled_unverified` · `disabled_policy` · `manual_only` 로 표시됩니다
+(`/admin` 의 source × 기능 표, `npm run ingest:sources -- --matrix`).
+
 ## 1. 설정 (`src/ingestion/sources/config.ts`)
 
 ```ts

@@ -12,14 +12,17 @@ import { regimeFor } from "../../lib/regimes";
  * 예) "물리학 Ⅰ" → "물리학1", "사회·문화" → "사회문화", "생활과 윤리" → "생활과윤리"
  */
 export function normalizeCourseLabel(raw: string): string {
-  return raw
-    .normalize("NFKC")
-    .replace(/Ⅱ|Ⅱ/g, "2")
-    .replace(/Ⅰ|Ⅰ/g, "1")
-    .replace(/(?<=[가-힣])\s*II(?![A-Za-z])/g, "2")
-    .replace(/(?<=[가-힣])\s*I(?![A-Za-z])/g, "1")
-    .replace(/[\s·ㆍ・•.,_\-()[\]{}<>「」『』/|]/g, "")
-    .toLowerCase();
+  return (
+    raw
+      .normalize("NFKC")
+      .replace(/Ⅱ|Ⅱ/g, "2")
+      .replace(/Ⅰ|Ⅰ/g, "1")
+      .replace(/(?<=[가-힣])\s*II(?![A-Za-z])/g, "2")
+      .replace(/(?<=[가-힣])\s*I(?![A-Za-z])/g, "1")
+      // 가운뎃점 계열: NFKC 가 "ㆍ"(U+318D) 를 U+119E 로 바꾸므로 둘 다, 그리고 ･(U+FF65) ․(U+2024) ‧(U+2027) ∙(U+2219)
+      .replace(/[\s·ㆍ\u119E・･․‧∙•.,_\-()[\]{}<>「」『』/|]/g, "")
+      .toLowerCase()
+  );
 }
 
 /** 자료 종류/파일 표기 단어 (course 판별 전에 제거) */

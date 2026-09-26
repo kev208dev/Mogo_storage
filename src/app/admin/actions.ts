@@ -1,5 +1,6 @@
 "use server";
 
+import { resolveDuplicatePendingImports } from "@/ingestion/manual-import/review";
 import { cookies, headers } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
@@ -49,19 +50,22 @@ import { getClientIp, hashIp } from "@/lib/server/client-ip";
 import { createAppIngestionContext } from "@/lib/server/ingestion-context";
 import { RateLimiter } from "@/lib/server/rate-limit";
 
+/** 로그인 실패 제한: IP 당 15분에 실패 5회 (성공한 로그인은 세지 않는다). 차단 중에는 올바른 토큰도 받지 않는다 */
 const loginLimiter = new RateLimiter(5, 15 * 60 * 1000);
 
 export async function login(_prev: { error?: string } | undefined, form: FormData) {
   const config = getAdminConfig();
   if (!config) notFound();
   const ip = hashIp(getClientIp(await headers()));
-  if (!loginLimiter.take(ip)) return { error: "시도가 너무 많습니다. 15분 후 다시 시도해 주세요." };
+  if (loginLimiter.isBlocked(ip))
+    return { error: "시도가 너무 많습니다. 15분 후 다시 시도해 주세요." };
   const email = verifyCredentials(
     config,
     String(form.get("email") ?? ""),
     String(form.get("token") ?? ""),
   );
   if (!email) {
+    loginLimiter.record(ip);
     await new Promise((r) => setTimeout(r, 400));
     return { error: "이메일 또는 접근 토큰이 올바르지 않습니다." };
   }
@@ -383,5 +387,15 @@ export async function rejectImportsAction(form: FormData) {
     const n = await rejectImportedArtifacts(ctx, { artifactIds: ids, admin, reason });
     audit(admin, "import.reject", `${n}`);
     return `거절 ${n}건`;
+  });
+}
+
+/** 확정적인 중복만 정리: 같은 슬롯에 같은 공식 URL 이 이미 게시된 검토 대기 건 (다른 경우는 사람이 판단) */
+export async function resolveDuplicateImportsAction() {
+  const { ctx, admin } = await context();
+  await withNotice("/admin/imports", async () => {
+    const { resolved } = await resolveDuplicatePendingImports(ctx, admin);
+    audit(admin, "import.resolve_duplicates", `${resolved}`);
+    return `확정적 중복 ${resolved}건 정리`;
   });
 }

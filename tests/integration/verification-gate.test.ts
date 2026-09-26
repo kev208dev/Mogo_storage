@@ -26,6 +26,12 @@ import {
   type FakeSource,
 } from "./helpers";
 
+/**
+ * 게이트 메커니즘은 정책 표(sources/policy.ts)에 없는 테스트 전용 source 로 검증한다 (parser 종류는 ebsi).
+ * 실제 "ebsi" id 는 robots 정책상 목록 수집을 켤 수 없다 — 아래 정책 테스트 참고.
+ */
+const SRC = "fake_ebsi";
+
 describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin approval)", () => {
   let db: Database;
   let fake: FakeSource;
@@ -58,7 +64,7 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
     });
     // 운영과 같은 기본값: 기능은 모두 꺼진 상태
     await installSources(db, [
-      testSource("ebsi", "ebsi", fake.baseUrl, {
+      testSource(SRC, "ebsi", fake.baseUrl, {
         capabilities: { discovery: false, artifacts: false, release_watch: false },
       }),
     ]);
@@ -78,7 +84,7 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
       fromYear: 2025,
       toYear: 2025,
       grades: [2],
-      sourceIds: ["ebsi"],
+      sourceIds: [SRC],
     });
     expect(results).toEqual([]);
     expect(fake.hits).not.toContain("/f/k.pdf");
@@ -93,29 +99,27 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
   });
 
   it("enabling requires verification; approval requires live fixture evidence for the current parser", async () => {
-    await expect(setSourceEnabled(db, "ebsi", true)).rejects.toThrow(/fixture/);
-    await expect(approveLiveVerification(db, "ebsi", "ops@example.com")).rejects.toThrow(
+    await expect(setSourceEnabled(db, SRC, true)).rejects.toThrow(/fixture/);
+    await expect(approveLiveVerification(db, SRC, "ops@example.com")).rejects.toThrow(
       /검증 기록이 없습니다/,
     );
 
-    await recordLiveFixtureEvidence(db, "ebsi", {
+    await recordLiveFixtureEvidence(db, SRC, {
       passed: true,
       fixtureHash: "f".repeat(32),
       parserVersion: "ebsi-v0",
       at: new Date(),
     });
-    await expect(approveLiveVerification(db, "ebsi", "ops@example.com")).rejects.toThrow(
-      /다시 검증/,
-    );
+    await expect(approveLiveVerification(db, SRC, "ops@example.com")).rejects.toThrow(/다시 검증/);
 
-    await recordLiveFixtureEvidence(db, "ebsi", {
+    await recordLiveFixtureEvidence(db, SRC, {
       passed: true,
       fixtureHash: "f".repeat(32),
       parserVersion: currentParserVersion("ebsi"),
       at: new Date(),
     });
-    await approveLiveVerification(db, "ebsi", "ops@example.com");
-    const [row] = await db.select().from(s.examSources).where(eq(s.examSources.id, "ebsi"));
+    await approveLiveVerification(db, SRC, "ops@example.com");
+    const [row] = await db.select().from(s.examSources).where(eq(s.examSources.id, SRC));
     expect(row).toMatchObject({
       verifiedAgainstLiveFixture: true,
       verifiedBy: "ops@example.com",
@@ -123,44 +127,44 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
       verifiedFixtureHash: "f".repeat(32),
     });
     // 승인만으로는 켤 수 없다: 최근 health check 통과가 필요
-    await expect(setSourceEnabled(db, "ebsi", true)).rejects.toThrow(/health check/);
-    await recordHealthCheck(db, "ebsi", {
+    await expect(setSourceEnabled(db, SRC, true)).rejects.toThrow(/health check/);
+    await recordHealthCheck(db, SRC, {
       status: "network_error",
       checkedAt: new Date().toISOString(),
       message: "timeout",
     });
-    await expect(setSourceEnabled(db, "ebsi", true)).rejects.toThrow(/network_error/);
-    await recordHealthCheck(db, "ebsi", {
+    await expect(setSourceEnabled(db, SRC, true)).rejects.toThrow(/network_error/);
+    await recordHealthCheck(db, SRC, {
       status: "healthy",
       checkedAt: new Date().toISOString(),
       message: "parsed 1 exams",
     });
-    await setSourceEnabled(db, "ebsi", true);
+    await setSourceEnabled(db, SRC, true);
     // 기능은 단계적으로: artifacts 는 discovery 뒤에만
-    await expect(setSourceCapability(db, "ebsi", "artifacts", true)).rejects.toThrow(/discovery/);
-    await setSourceCapability(db, "ebsi", "discovery", true);
-    await setSourceCapability(db, "ebsi", "artifacts", true);
+    await expect(setSourceCapability(db, SRC, "artifacts", true)).rejects.toThrow(/discovery/);
+    await setSourceCapability(db, SRC, "discovery", true);
+    await setSourceCapability(db, SRC, "artifacts", true);
 
     const { ctx } = productionContext();
     const { results } = await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2] });
-    expect(results[0]).toMatchObject({ source: "ebsi", status: "completed" });
+    expect(results[0]).toMatchObject({ source: SRC, status: "completed" });
     expect(await db.select().from(s.examFiles)).toHaveLength(1);
   });
 
   it("a parser version change invalidates the approval", async () => {
-    await recordLiveFixtureEvidence(db, "ebsi", {
+    await recordLiveFixtureEvidence(db, SRC, {
       passed: true,
       fixtureHash: "a".repeat(32),
       parserVersion: currentParserVersion("ebsi"),
       at: new Date(),
     });
-    await approveLiveVerification(db, "ebsi", "ops@example.com");
+    await approveLiveVerification(db, SRC, "ops@example.com");
     expect((await loadSources(db))[0]!.liveVerified).toBe(true);
     // parser 코드가 바뀌어 버전이 올라간 상황 = 승인된 버전과 현재 버전이 다름
     await db
       .update(s.examSources)
       .set({ verifiedParserVersion: "ebsi-v0" })
-      .where(eq(s.examSources.id, "ebsi"));
+      .where(eq(s.examSources.id, SRC));
     expect((await loadSources(db))[0]!.liveVerified).toBe(false);
     const { ctx } = productionContext();
     expect((await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2] })).results).toEqual(
@@ -169,20 +173,20 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
   });
 
   it("a failed live fixture validation revokes approval and stops the source", async () => {
-    await recordLiveFixtureEvidence(db, "ebsi", {
+    await recordLiveFixtureEvidence(db, SRC, {
       passed: true,
       fixtureHash: "a".repeat(32),
       parserVersion: currentParserVersion("ebsi"),
       at: new Date(),
     });
-    await approveLiveVerification(db, "ebsi", "ops@example.com");
-    await recordLiveFixtureEvidence(db, "ebsi", {
+    await approveLiveVerification(db, SRC, "ops@example.com");
+    await recordLiveFixtureEvidence(db, SRC, {
       passed: false,
       fixtureHash: null,
       parserVersion: currentParserVersion("ebsi"),
       at: new Date(),
     });
-    const [row] = await db.select().from(s.examSources).where(eq(s.examSources.id, "ebsi"));
+    const [row] = await db.select().from(s.examSources).where(eq(s.examSources.id, SRC));
     expect(row).toMatchObject({
       verifiedAgainstLiveFixture: false,
       enabled: false,
@@ -204,5 +208,44 @@ describe.skipIf(!TEST_DB_URL)("source verification gate (live fixture + admin ap
     } finally {
       delete process.env.SOURCE_EBSI_ENABLED;
     }
+  });
+  it("정책: 실제 ebsi 는 모든 검증 조건을 갖춰도 목록 수집을 켤 수 없고, DB 를 직접 켜도 실행되지 않는다", async () => {
+    await installSources(db, [testSource("ebsi", "ebsi", fake.baseUrl)]);
+    await recordLiveFixtureEvidence(db, "ebsi", {
+      passed: true,
+      fixtureHash: "e".repeat(32),
+      parserVersion: currentParserVersion("ebsi"),
+      at: new Date(),
+    });
+    await approveLiveVerification(db, "ebsi", "ops@example.com");
+    await recordHealthCheck(db, "ebsi", {
+      status: "healthy",
+      checkedAt: new Date().toISOString(),
+      message: "ok",
+    });
+    await expect(setSourceEnabled(db, "ebsi", true)).rejects.toThrow(/정책상 자동 수집 금지/);
+    await expect(setSourceCapability(db, "ebsi", "discovery", true)).rejects.toThrow(/정책상/);
+
+    // 누군가 DB 를 직접 바꿔 켜 둔 상황에서도 pipeline 게이트가 막는다
+    await db
+      .update(s.examSources)
+      .set({
+        enabled: true,
+        discoveryEnabled: true,
+        artifactEnabled: true,
+        releaseWatchEnabled: true,
+      })
+      .where(eq(s.examSources.id, "ebsi"));
+    const { ctx } = productionContext();
+    const hitsBefore = fake.hits.length;
+    const { results } = await runBackfill(ctx, {
+      fromYear: 2025,
+      toYear: 2025,
+      grades: [2],
+      sourceIds: ["ebsi"],
+    });
+    expect(results).toEqual([]);
+    expect(fake.hits.slice(hitsBefore)).toEqual([]);
+    expect(await db.select().from(s.exams)).toHaveLength(0);
   });
 });

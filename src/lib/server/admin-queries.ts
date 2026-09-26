@@ -1,4 +1,6 @@
 import "server-only";
+import { loadReviewNotes } from "@/ingestion/manual-import/evidence";
+import { loadMappingRules, reviewInsights } from "@/ingestion/manual-import/review";
 import { and, count, desc, eq, gte, inArray, isNull, lte, max, ne } from "drizzle-orm";
 import type { Database } from "@/db/client";
 import {
@@ -340,5 +342,13 @@ export async function importsData(db: Database) {
       .groupBy(sourceArtifacts.status),
     db.select().from(officialUrlImports).orderBy(desc(officialUrlImports.createdAt)).limit(5),
   ]);
-  return { pending, byStatus, recent };
+  const [insights, notes, rules] = await Promise.all([
+    reviewInsights(db, pending),
+    loadReviewNotes(
+      db,
+      pending.map((p) => p.artifact.id),
+    ),
+    loadMappingRules(db),
+  ]);
+  return { pending, byStatus, recent, insights, notes, rules };
 }

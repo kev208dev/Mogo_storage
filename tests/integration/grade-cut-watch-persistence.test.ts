@@ -32,12 +32,15 @@ describe.skipIf(!TEST_DB_URL)("grade cut completion against Postgres", () => {
         isSample: true,
       })
       .returning();
-    await db.insert(courses).values({
-      id: "grade-cut-test-course",
-      code: "grade-cut-test-course",
-      name: "Test course",
-      subject: "social",
-    });
+    await db
+      .insert(courses)
+      .values({
+        id: "grade-cut-test-course",
+        code: "grade-cut-test-course",
+        name: "Test course",
+        subject: "social",
+      })
+      .onConflictDoNothing();
     await db.insert(gradeCutWatchStates).values([
       {
         examId: exam!.id,

@@ -24,3 +24,17 @@
 
 다시 조사할 때: 각 기관 robots.txt 확인 → 허용된 경우에만 `npm run ingest:capture` → [ADDING_SOURCE.md](ADDING_SOURCE.md) 절차.
 기관의 명시적 이용 허락(제휴)을 받으면 그 범위에 맞춰 source 를 켤 수 있다.
+
+## 코드 반영 (`src/ingestion/sources/policy.ts`)
+
+위 조사 결과는 source × 기능 정책 표로 코드에 고정돼 있습니다. `policy_blocked` 기능은 관리자 화면·CLI·DB 직접 수정 어느 경로로도 실행되지 않습니다.
+
+| source             | 시험 목록 · 파일 목록 · 시험일 감시    | 파일 받기                                                |
+| ------------------ | -------------------------------------- | -------------------------------------------------------- |
+| `ebsi`             | 금지 (robots.txt `.ajax` 경로)         | 허용 (`wdown.ebsi.co.kr` 는 robots 제한 없음) — 확인용만 |
+| `kice`             | 금지 (robots.txt `Disallow: /`)        | 금지                                                     |
+| `education_office` | 금지 (NetFunnel 대기열 · pdf/hwp 차단) | 금지                                                     |
+| `operator_import`  | 수동 (운영자 CSV + 관리자 승인)        | 서버 요청 없음 (브라우저 확인 후 redirect)               |
+
+정책이 바뀌면(예: 공개 API 제공, robots 변경) 근거를 이 문서에 기록하고 `policy.ts` 의 해당 기능을 `adapter` 로 바꾼 뒤,
+[ADDING_SOURCE.md](ADDING_SOURCE.md) 의 fixture 검증 → 승인 → health check 절차를 거쳐야 켜집니다.

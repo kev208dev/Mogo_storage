@@ -285,7 +285,8 @@ export function createGradeCutStore(db: Database): WatchStore {
         .update(gradeCutWatchStates)
         .set({
           lastPolledAt: now,
-          startedAt: sql`coalesce(${gradeCutWatchStates.startedAt}, ${now})`,
+          // Raw SQL interpolation bypasses Drizzle's timestamp encoder.
+          startedAt: sql`coalesce(${gradeCutWatchStates.startedAt}, ${now.toISOString()}::timestamptz)`,
           status: "watching",
         })
         .where(

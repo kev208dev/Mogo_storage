@@ -9,6 +9,7 @@ import {
   type WatchExam,
   type WatchSlot,
   type WatchStore,
+  type WatchProgress,
 } from "../../src/ingestion/grade-cuts/core";
 import { isMutedEstimate, orderGradeCutColumns } from "../../src/lib/grade-cuts";
 import type { GradeCut } from "../../src/lib/data/types";
@@ -79,6 +80,102 @@ function adapter(
 }
 
 describe("grade cut watch", () => {
+  it("attributes collect, persistence, revalidation and completion failures to safe stages", async () => {
+    const stages = ["adapter_collect", "persist_cut", "revalidate", "mark_polled"] as const;
+    for (const stage of stages) {
+      const m = mockStore([korean]);
+      const progress: WatchProgress[] = [];
+      const mega = adapter("megastudy", "korean");
+      if (stage === "adapter_collect")
+        mega.collect = async () => {
+          throw new Error("source failure");
+        };
+      if (stage === "persist_cut")
+        m.store.save = async () => {
+          throw new Error("save failed");
+        };
+      if (stage === "mark_polled")
+        m.store.markPolled = async () => {
+          throw new Error("completion failed");
+        };
+      const run = () =>
+        runGradeCutWatch(
+          m.store,
+          [mega],
+          after,
+          async () => {
+            if (stage === "revalidate") throw new Error("revalidation failed");
+          },
+          undefined,
+          (value) => progress.push(value),
+        );
+      if (stage === "adapter_collect") {
+        expect((await run()).failures).toBe(1);
+        expect(progress.some((value) => value.stage === "source_failure")).toBe(true);
+      } else {
+        await expect(run()).rejects.toThrow();
+        expect(progress.at(-1)?.stage).toBe(stage);
+      }
+    }
+  });
+  it("keeps 17 saved cuts if first completion fails, while unsupported slots remain unpolled", async () => {
+    const courses = Array.from({ length: 17 }, (_, index): WatchSlot => ({
+      ...korean,
+      subject: index < 9 ? "social" : "science",
+      courseId: `course-${index}`,
+      courseCode: `course-${index}`,
+    }));
+    const slots = [...courses, korean, math];
+    const values: string[] = [];
+    const polled: string[] = [];
+    const store: WatchStore = {
+      dueExams: async () => [exam],
+      slots: async () => slots,
+      save: async (_exam, slot) => {
+        values.push(slot.courseId!);
+        return true;
+      },
+      markPolled: async (slot) => {
+        polled.push(slot.courseId!);
+        throw new Error("first mark failed");
+      },
+      fail: async () => {},
+    };
+    const mega: GradeCutAdapter = {
+      source: "megastudy",
+      status: "automated_verified",
+      supports: (_exam, slot) =>
+        Boolean(slot.courseCode && (slot.subject === "social" || slot.subject === "science")),
+      collect: vi.fn(async (_exam: WatchExam, requested: readonly WatchSlot[]) =>
+        requested.map((slot) => ({
+          subject: slot.subject,
+          courseCode: slot.courseCode,
+          cuts: [{ grade: 1, rawScore: 47 }],
+          observedAt: after,
+          sourceUrl: "https://example.org/cut",
+        })),
+      ),
+    };
+    const progress: WatchProgress[] = [];
+    await expect(
+      runGradeCutWatch(
+        store,
+        [mega],
+        after,
+        async () => {},
+        undefined,
+        (value) => progress.push(value),
+      ),
+    ).rejects.toThrow("first mark failed");
+    expect(mega.collect).toHaveBeenCalledWith(exam, courses);
+    expect(values).toHaveLength(17);
+    expect(polled).toEqual(["course-0"]);
+    expect(progress.at(-1)).toMatchObject({
+      stage: "mark_polled",
+      subject: "social",
+      course: "course-0",
+    });
+  });
   it("inserts first observation; identical repoll is a no-op; changed value adds a snapshot", async () => {
     const m = mockStore([korean]);
     const mega = adapter("megastudy", "korean", 85);
@@ -92,19 +189,10 @@ describe("grade cut watch", () => {
     expect(refresh).toHaveBeenCalledTimes(1);
     const revised = adapter("megastudy", "korean", 86);
     expect(
-      (
-        await runGradeCutWatch(
-          m.store,
-          [revised],
-          new Date(after.getTime() + 600_000),
-          refresh,
-        )
-      ).changed,
+      (await runGradeCutWatch(m.store, [revised], new Date(after.getTime() + 600_000), refresh))
+        .changed,
     ).toBe(1);
-    expect(m.snapshots).toEqual([
-      "korean:megastudy:1:85",
-      "korean:megastudy:1:86",
-    ]);
+    expect(m.snapshots).toEqual(["korean:megastudy:1:85", "korean:megastudy:1:86"]);
   });
   it("finalizes only the official slot and never calls its estimate adapter again", async () => {
     const m = mockStore([korean, math]);
@@ -112,9 +200,7 @@ describe("grade cut watch", () => {
     const mega = adapter("megastudy", "math", 84);
     await runGradeCutWatch(m.store, [mega, official], after);
     expect(m.slots.map((s) => s.status)).toEqual(["finalized", "waiting"]);
-    expect(mega.collect).toHaveBeenCalledWith(exam, [
-      expect.objectContaining({ subject: "math" }),
-    ]);
+    expect(mega.collect).toHaveBeenCalledWith(exam, [expect.objectContaining({ subject: "math" })]);
     await runGradeCutWatch(m.store, [mega], new Date(after.getTime() + 300_000));
     expect(mega.collect).toHaveBeenCalledTimes(2);
     expect((mega.collect as ReturnType<typeof vi.fn>).mock.calls[1]![1]).toEqual([
@@ -143,9 +229,7 @@ describe("grade cut watch", () => {
     await runGradeCutWatch(m.store, [mega], after);
     await runGradeCutWatch(m.store, [mega], new Date(after.getTime() + 299_999));
     expect(mega.collect).toHaveBeenCalledTimes(1);
-    expect(isGradeCutDue(exam, m.slots[0]!, new Date(after.getTime() + 300_000))).toBe(
-      true,
-    );
+    expect(isGradeCutDue(exam, m.slots[0]!, new Date(after.getTime() + 300_000))).toBe(true);
   });
   it("keeps five-minute cadence after 72 hours for an unresolved slot", async () => {
     const m = mockStore([{ ...korean, status: "finalized" }, math]);
@@ -209,7 +293,9 @@ describe("grade cut watch", () => {
     const m = mockStore([english, history, korean]);
     const mega = adapter("megastudy", "korean");
     await runGradeCutWatch(m.store, [mega], after);
-    expect(mega.collect).toHaveBeenCalledWith(exam, [expect.objectContaining({ subject: "korean" })]);
+    expect(mega.collect).toHaveBeenCalledWith(exam, [
+      expect.objectContaining({ subject: "korean" }),
+    ]);
     expect(m.slots.slice(0, 2).map((s) => s.lastPolledAt)).toEqual([null, null]);
   });
   it("orders official first for display and score calculation", () => {

@@ -7,7 +7,7 @@ import { checkCronAuth } from "@/lib/server/cron-auth";
 import { createAppIngestionContext } from "@/lib/server/ingestion-context";
 import { getDb } from "@/db/client";
 import { withAdvisoryLock } from "@/ingestion/pipeline/locks";
-import { runGradeCutWatch } from "@/ingestion/grade-cuts/core";
+import { runGradeCutWatch, type WatchProgress } from "@/ingestion/grade-cuts/core";
 import { createGradeCutStore } from "@/ingestion/grade-cuts/persistence";
 import { verifiedGradeCutAdapters } from "@/ingestion/grade-cuts/adapters";
 import { examCoursePath, examPath } from "@/lib/exam-path";
@@ -39,32 +39,79 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
       return NextResponse.json({ skipped: "GRADE_CUT_INGESTION_ENABLED is not true" });
     const db = getDb();
     if (!db) return NextResponse.json({ error: "database not configured" }, { status: 503 });
+    let progress:
+      | WatchProgress
+      | { stage: "advisory_reserve" | "advisory_lock" | "advisory_unlock" | "advisory_release" } = {
+      stage: "advisory_reserve",
+    };
     try {
       const started = Date.now();
-      const locked = await withAdvisoryLock(db, "ingest:grade-cuts", () =>
-        runGradeCutWatch(createGradeCutStore(db), verifiedGradeCutAdapters, new Date(),
-          async (exam, slot) => {
-            const key = { year: exam.year, grade: exam.grade, month: exam.month };
-            revalidatePath(examPath(key));
-            revalidatePath(examPath(key, slot.subject));
-            if (slot.courseCode) revalidatePath(examCoursePath(key, slot.subject, slot.courseCode));
-          },
-          (source) => console.info(JSON.stringify({
-            event: "grade_cut_watch.tick", exam: source.examId, adapter: source.source,
-            requested_slots: source.requested, collected: source.collected,
-            changed: source.changed, finalized: source.finalized,
-            failures: Number(source.failed), duration_ms: source.durationMs,
-          })),
-        ),
+      const locked = await withAdvisoryLock(
+        db,
+        "ingest:grade-cuts",
+        () =>
+          runGradeCutWatch(
+            createGradeCutStore(db),
+            verifiedGradeCutAdapters,
+            new Date(),
+            async (exam, slot) => {
+              const key = { year: exam.year, grade: exam.grade, month: exam.month };
+              revalidatePath(examPath(key));
+              revalidatePath(examPath(key, slot.subject));
+              if (slot.courseCode)
+                revalidatePath(examCoursePath(key, slot.subject, slot.courseCode));
+            },
+            (source) =>
+              console.info(
+                JSON.stringify({
+                  event: "grade_cut_watch.tick",
+                  exam: source.examId,
+                  adapter: source.source,
+                  requested_slots: source.requested,
+                  collected: source.collected,
+                  changed: source.changed,
+                  finalized: source.finalized,
+                  failures: Number(source.failed),
+                  duration_ms: source.durationMs,
+                }),
+              ),
+            (current) => {
+              progress = current;
+            },
+          ),
+        (stage) => {
+          progress = { stage };
+        },
       );
-      console.info(JSON.stringify({
-        event: "grade_cut_watch.summary", acquired: locked.acquired,
-        result: locked.acquired ? locked.value : null, durationMs: Date.now() - started,
-      }));
-      return NextResponse.json(locked.acquired ? { ok: true, result: locked.value } : { skipped: "locked" });
+      console.info(
+        JSON.stringify({
+          event: "grade_cut_watch.summary",
+          acquired: locked.acquired,
+          result: locked.acquired ? locked.value : null,
+          durationMs: Date.now() - started,
+        }),
+      );
+      return NextResponse.json(
+        locked.acquired ? { ok: true, result: locked.value } : { skipped: "locked" },
+      );
     } catch (error) {
-      console.error("grade_cut_watch.failed", error);
-      return NextResponse.json({ error: "grade cut watch failed" }, { status: 500 });
+      console.error("grade_cut_watch.failed", {
+        stage: progress.stage,
+        exam: "exam" in progress ? progress.exam : undefined,
+        subject: "subject" in progress ? progress.subject : undefined,
+        course: "course" in progress ? progress.course : undefined,
+        errorName: error instanceof Error ? error.name : "unknown",
+        // Only standard five-character SQLSTATE codes; never log SQL, URL or credentials.
+        pgCode:
+          typeof (error as { code?: unknown })?.code === "string" &&
+          /^[A-Z0-9]{5}$/.test((error as { code: string }).code)
+            ? (error as { code: string }).code
+            : undefined,
+      });
+      return NextResponse.json(
+        { error: "grade cut watch failed", stage: progress.stage },
+        { status: 500 },
+      );
     }
   }
   if (!ingestionEnabled()) {

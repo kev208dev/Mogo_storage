@@ -9,18 +9,34 @@ export async function withAdvisoryLock<T>(
   db: Database,
   key: string,
   fn: () => Promise<T>,
+  onStage?: (
+    stage: "advisory_reserve" | "advisory_lock" | "advisory_unlock" | "advisory_release",
+  ) => void,
 ): Promise<{ acquired: true; value: T } | { acquired: false }> {
+  onStage?.("advisory_reserve");
   const conn = await db.$client.reserve();
+  let operationCompleted = false;
+  let unlockCompleted = false;
   try {
+    onStage?.("advisory_lock");
     const [row] = await conn<{ locked: boolean }[]>`
       select pg_try_advisory_lock(hashtextextended(${key}, 0)) as locked`;
-    if (!row?.locked) return { acquired: false };
+    if (!row?.locked) {
+      operationCompleted = true;
+      unlockCompleted = true;
+      return { acquired: false };
+    }
     try {
-      return { acquired: true, value: await fn() };
+      const value = await fn();
+      operationCompleted = true;
+      return { acquired: true, value };
     } finally {
+      if (operationCompleted) onStage?.("advisory_unlock");
       await conn`select pg_advisory_unlock(hashtextextended(${key}, 0))`;
+      unlockCompleted = true;
     }
   } finally {
+    if (operationCompleted && unlockCompleted) onStage?.("advisory_release");
     conn.release();
   }
 }

@@ -276,6 +276,7 @@ robots.txt 가 자동 요청을 막는 EBSi·KICE·교육청 자료는 우회하
 - 같은 CSV 를 다시 넣어도 결과는 같습니다 (idempotent). URL 이 바뀐 슬롯만 다시 검토 대기가 됩니다.
 - 샘플 시험에 실제 자료가 승인되면 그 시험의 샘플 파일·문항·등급컷 등을 제거하고 실제 시험으로 전환합니다.
 - 실제 데이터 coverage: `npm run ingest:coverage -- --summary`
+- 시험별 기능 상태: `npm run ingest:coverage -- --features [--year=2025] [--json]` · 관리자 `/admin/coverage` — 시험지·해설 / 정답·채점 / 등급컷 / 영어 듣기 / 단어장을 complete · partial · manual_review · missing · blocked_policy(정책상 수동) · not_applicable 로 표시
 - 후보 생성: `npm run import:candidates -- --in=<found.json> --out=<csv> [--check-urls]` (공개 색인 결과만, 확실하지 않으면 보류). 검토 대기 행에는 보류 사유·근거·URL 충돌·짝 자료가 보이고, 승인된 파일명 코드→세부과목 매핑은 규칙으로 재사용됩니다.
 - source × 기능 정책: `src/ingestion/sources/policy.ts` — robots 등으로 금지된 기능은 켤 수 없음 (`npm run ingest:sources -- --matrix`, `/admin`).
 - 현재 입력분: `data/imports/official-urls.csv` (2023~2025년 309행 중 288행은 브라우저 검증 후 관리자 승인으로 게시, 21행은 `manual_review`). 수집 방법·근거·누락은 [docs/REAL_DATA_COVERAGE.md](docs/REAL_DATA_COVERAGE.md)

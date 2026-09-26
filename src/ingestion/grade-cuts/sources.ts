@@ -39,7 +39,7 @@ export const GRADE_CUT_SOURCE_POLICIES: Record<GradeCutSource, GradeCutSourcePol
     isOfficial: false,
     policy: "automated",
     status: "automated_verified",
-    note: "공개 고3 사회탐구·과학탐구 원점수 표만 자동 수집 (그 외 과목은 수동 보정)",
+    note: "공개 원점수 표만 자동 수집: 고3 사회·과학탐구, 고2 학력평가 국어·수학·탐구, 고1 학력평가 국어·수학 (그 외는 수동 보정)",
   },
   daesung: {
     source: "daesung",

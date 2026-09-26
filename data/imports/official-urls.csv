@@ -8438,3 +8438,681 @@ year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,off
 2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/IOFUHopH_h3_2nd_sp1_hsj.pdf,IOFUHopH_h3_2nd_sp1_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 스페인어Ⅰ 정답 및 해설
 2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201411133/C2hB4dpz_h3_2nd_vit_mun.pdf,C2hB4dpz_h3_2nd_vit_mun.pdf,EBSi 2014년 11월 고3 대학수학능력시험 기초베트남어Ⅰ 문제
 2014,3,11,csat,2014-11-13,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201411133/vvKINiyJ_h3_2nd_vit_hsj.pdf,vvKINiyJ_h3_2nd_vit_hsj.pdf,EBSi 2014년 11월 고3 대학수학능력시험 기초베트남어Ⅰ 정답 및 해설
+2013,1,3,school_mock,2013-03-13,서울특별시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/201303131/kor_mun.pdf,kor_mun.pdf,EBSi 2013년 3월 고1 전국연합학력평가 국어 문제
+2013,1,3,school_mock,2013-03-13,서울특별시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303131/kor_hsj.pdf,kor_hsj.pdf,EBSi 2013년 3월 고1 전국연합학력평가 국어 정답 및 해설
+2013,1,3,school_mock,2013-03-13,서울특별시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/201303131/math_mun.pdf,math_mun.pdf,EBSi 2013년 3월 고1 전국연합학력평가 수학 문제
+2013,1,3,school_mock,2013-03-13,서울특별시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303131/math_hsj.pdf,math_hsj.pdf,EBSi 2013년 3월 고1 전국연합학력평가 수학 정답 및 해설
+2013,1,3,school_mock,2013-03-13,서울특별시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201303131/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 3월 고1 전국연합학력평가 영어 문제
+2013,1,3,school_mock,2013-03-13,서울특별시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303131/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 3월 고1 전국연합학력평가 영어 정답 및 해설
+2013,1,3,school_mock,2013-03-13,서울특별시교육청,social,social-science-studies,question,https://wdown.ebsi.co.kr/W61001/01exam/201303131/saga_mun.pdf,saga_mun.pdf,EBSi 2013년 3월 고1 전국연합학력평가 사회·과학탐구 문제
+2013,1,3,school_mock,2013-03-13,서울특별시교육청,social,social-science-studies,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303131/saga_hsj.pdf,saga_hsj.pdf,EBSi 2013년 3월 고1 전국연합학력평가 사회·과학탐구 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/kor_mun.pdf,kor_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 국어 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/kor_hsj.pdf,kor_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 국어 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/math_mun.pdf,math_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 수학 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/math_hsj.pdf,math_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 수학 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/eng_mun.pdf,eng_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 영어 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/eng_hsj.pdf,eng_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 영어 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 한국사 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 한국사 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,social,general-social,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/s_sahoe_mun.pdf,s_sahoe_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 일반사회 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,social,general-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/s_sahoe_hsj.pdf,s_sahoe_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 일반사회 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,social,geography-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/s_jiri_mun.pdf,s_jiri_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 지리 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,social,geography-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/s_jiri_hsj.pdf,s_jiri_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 지리 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,social,morality,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/s_ethics_mun.pdf,s_ethics_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 도덕 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,social,morality,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/s_ethics_hsj.pdf,s_ethics_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 도덕 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,science,chemistry-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 화학 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,science,chemistry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 화학 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,science,earth-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 지구과학 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,science,earth-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 지구과학 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,science,life-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 생명과학 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,science,life-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 생명과학 정답 및 해설
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,science,physics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201306051/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 6월 고1 전국연합학력평가 물리 문제
+2013,1,6,school_mock,2013-06-05,부산광역시교육청,science,physics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306051/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 6월 고1 전국연합학력평가 물리 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/kor_mun.pdf,kor_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 국어 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/kor_hsj.pdf,kor_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 국어 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/math_mun.pdf,math_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 수학 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/math_hsj.pdf,math_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 수학 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/eng_mun.pdf,eng_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 영어 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/eng_hsj.pdf,eng_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 영어 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 한국사 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 한국사 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,social,general-social,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/s_sahoe_mun.pdf,s_sahoe_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 일반사회 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,social,general-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/s_sahoe_hsj.pdf,s_sahoe_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 일반사회 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,social,geography-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/s_jiri_mun.pdf,s_jiri_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 지리 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,social,geography-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/s_jiri_hsj.pdf,s_jiri_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 지리 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,social,morality,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/s_ethics_mun.pdf,s_ethics_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 도덕 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,social,morality,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/s_ethics_hsj.pdf,s_ethics_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 도덕 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,science,chemistry-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 화학 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,science,chemistry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 화학 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,science,earth-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 지구과학 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,science,earth-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 지구과학 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,science,life-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 생명과학 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,science,life-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 생명과학 정답 및 해설
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,science,physics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201309031/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 9월 고1 전국연합학력평가 물리 문제
+2013,1,9,school_mock,2013-09-03,인천광역시교육청,science,physics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309031/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 9월 고1 전국연합학력평가 물리 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/kor_mun.pdf,kor_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 국어 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/kor_hsj.pdf,kor_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 국어 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/math_mun.pdf,math_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 수학 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/math_hsj.pdf,math_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 수학 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/eng_mun.pdf,eng_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 영어 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/eng_hsj.pdf,eng_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 영어 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 한국사 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 한국사 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,social,general-social,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 일반사회 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,social,general-social,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 일반사회 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,social,geography-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/s_jiri_mun.pdf,s_jiri_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 지리 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,social,geography-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/s_jiri_hsj.pdf,s_jiri_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 지리 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,social,morality,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/s_ethics_mun.pdf,s_ethics_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 도덕 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,social,morality,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/s_ethics_hsj.pdf,s_ethics_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 도덕 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,science,chemistry-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 화학 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,science,chemistry-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 화학 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,science,earth-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 지구과학 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,science,earth-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 지구과학 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,science,life-science-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 생명과학 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,science,life-science-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 생명과학 정답 및 해설
+2013,1,11,school_mock,2013-11-14,경기도교육청,science,physics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201311141/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 11월 고1 전국연합학력평가 물리 문제
+2013,1,11,school_mock,2013-11-14,경기도교육청,science,physics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311141/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 11월 고1 전국연합학력평가 물리 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 국어A형 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 국어A형 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 국어B형 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 국어B형 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 수학A 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 수학A 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 수학B 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 수학B 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 영어A 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 영어A 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 영어B 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 영어B 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 한국사 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 한국사 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/s_jiri_mun.pdf,s_jiri_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 한국지리 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/s_jiri_hsj.pdf,s_jiri_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 한국지리 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/s_ethics_mun.pdf,s_ethics_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 생활과 윤리 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/s_ethics_hsj.pdf,s_ethics_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 생활과 윤리 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/s_sahoe_mun.pdf,s_sahoe_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 사회문화 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/s_sahoe_hsj.pdf,s_sahoe_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 사회문화 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/g_che_mun.pdf,g_che_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 화학Ⅰ 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/g_che_hsj.pdf,g_che_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/g_ear_mun.pdf,g_ear_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/g_ear_hsj.pdf,g_ear_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/g_bio_mun.pdf,g_bio_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/g_bio_hsj.pdf,g_bio_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201303132/g_phy_mun.pdf,g_phy_mun.pdf,EBSi 2013년 3월 고2 전국연합학력평가 물리Ⅰ 문제
+2013,2,3,school_mock,2013-03-13,서울특별시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303132/g_phy_hsj.pdf,g_phy_hsj.pdf,EBSi 2013년 3월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 국어A형 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 국어A형 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 국어B형 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 국어B형 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 수학A 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 수학A 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 수학B 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 수학B 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 영어A 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 영어A 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 영어B 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 영어B 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 한국사 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 한국사 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 동아시아사 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 동아시아사 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 경제 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 경제 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 윤리와 사상 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 윤리와 사상 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 한국지리 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 한국지리 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 생활과 윤리 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 생활과 윤리 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 법과정치 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 법과정치 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 사회문화 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 사회문화 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 세계지리 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 세계지리 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 세계사 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 세계사 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 화학Ⅰ 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306052/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 6월 고2 전국연합학력평가 물리Ⅰ 문제
+2013,2,6,school_mock,2013-06-05,부산광역시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306052/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 6월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 국어A형 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 국어A형 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 국어B형 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 국어B형 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 수학A 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 수학A 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 수학B 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 수학B 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 영어A 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 영어A 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 영어B 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 영어B 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 한국사 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 한국사 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 동아시아사 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 동아시아사 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 경제 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 경제 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 윤리와 사상 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 윤리와 사상 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 한국지리 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 한국지리 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 생활과 윤리 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 생활과 윤리 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 법과정치 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 법과정치 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 사회문화 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 사회문화 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 세계지리 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 세계지리 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 세계사 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 세계사 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 화학Ⅰ 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309032/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 9월 고2 전국연합학력평가 물리Ⅰ 문제
+2013,2,9,school_mock,2013-09-03,인천광역시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309032/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 9월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 국어A형 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 국어A형 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 국어B형 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 국어B형 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 수학A 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 수학A 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 수학B 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 수학B 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/eng_mun.pdf,eng_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 영어A 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/eng_hsj.pdf,eng_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 영어A 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 한국사 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 한국사 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 동아시아사 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 동아시아사 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 경제 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 경제 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 윤리와 사상 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 윤리와 사상 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 한국지리 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 한국지리 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 생활과 윤리 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 생활과 윤리 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 법과정치 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 법과정치 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 사회문화 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 사회문화 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 세계지리 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 세계지리 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 세계사 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 세계사 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 화학Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 물리Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 농생명산업 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 농생명산업 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 상업정보 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 상업정보 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 수산해운 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 수산해운 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 가사실업 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 가사실업 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 공업 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 공업 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 중국어Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 중국어Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 한문 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 한문 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 프랑스어Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 프랑스어Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 독일어Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 독일어Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 일본어Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 일본어Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 러시아어Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 러시아어Ⅰ 정답 및 해설
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2013년 11월 고2 전국연합학력평가 스페인어Ⅰ 문제
+2013,2,11,school_mock,2013-11-14,경기도교육청,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311142/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2013년 11월 고2 전국연합학력평가 스페인어Ⅰ 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 국어A형 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 국어A형 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 국어B형 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 국어B형 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 수학A 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 수학A 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 수학B 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 수학B 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 영어A 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 영어A 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 영어B 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 영어B 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 한국사 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 한국사 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 동아시아사 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 동아시아사 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 경제 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 경제 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 윤리와 사상 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 윤리와 사상 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 한국지리 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 한국지리 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 생활과 윤리 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 생활과 윤리 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 법과정치 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 법과정치 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 사회문화 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 사회문화 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 세계지리 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 세계지리 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 세계사 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 세계사 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 화학Ⅰ 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201303133/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 3월 고3 전국연합학력평가 물리Ⅰ 문제
+2013,3,3,school_mock,2013-03-13,서울특별시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201303133/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 3월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 국어A형 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 국어A형 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 국어B형 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 국어B형 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 수학A 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 수학A 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 수학B 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 수학B 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 영어A 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 영어A 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 영어B 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 영어B 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 한국사 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 한국사 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 동아시아사 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 동아시아사 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 경제 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 경제 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 윤리와 사상 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 윤리와 사상 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 한국지리 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 한국지리 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 생활과 윤리 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 생활과 윤리 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 법과정치 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 법과정치 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 사회문화 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 사회문화 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 세계지리 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 세계지리 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 세계사 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 세계사 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 화학Ⅰ 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 화학Ⅱ 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 화학Ⅱ 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 지구과학Ⅱ 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 지구과학Ⅱ 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 생명과학Ⅱ 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 물리Ⅰ 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2013년 4월 고3 전국연합학력평가 물리Ⅱ 문제
+2013,3,4,school_mock,2013-04-11,경기도교육청,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201304113/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2013년 4월 고3 전국연합학력평가 물리Ⅱ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 6월 고3 모의평가 국어A형 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 6월 고3 모의평가 국어A형 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 6월 고3 모의평가 국어B형 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 6월 고3 모의평가 국어B형 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 6월 고3 모의평가 수학A 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 6월 고3 모의평가 수학A 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 6월 고3 모의평가 수학B 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 6월 고3 모의평가 수학B 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 6월 고3 모의평가 영어A 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 6월 고3 모의평가 영어A 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 6월 고3 모의평가 영어B 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 6월 고3 모의평가 영어B 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 6월 고3 모의평가 한국사 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 6월 고3 모의평가 한국사 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 6월 고3 모의평가 동아시아사 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_easta_hsj1.pdf,s_easta_hsj1.pdf,EBSi 2013년 6월 고3 모의평가 동아시아사 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 6월 고3 모의평가 경제 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 6월 고3 모의평가 경제 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 6월 고3 모의평가 윤리와 사상 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 6월 고3 모의평가 윤리와 사상 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 6월 고3 모의평가 한국지리 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 6월 고3 모의평가 한국지리 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 6월 고3 모의평가 생활과 윤리 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 6월 고3 모의평가 생활과 윤리 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 6월 고3 모의평가 법과정치 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 6월 고3 모의평가 법과정치 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 6월 고3 모의평가 사회문화 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 6월 고3 모의평가 사회문화 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 6월 고3 모의평가 세계지리 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 6월 고3 모의평가 세계지리 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 6월 고3 모의평가 세계사 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 6월 고3 모의평가 세계사 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 6월 고3 모의평가 화학Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 화학Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2013년 6월 고3 모의평가 화학Ⅱ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2013년 6월 고3 모의평가 화학Ⅱ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 6월 고3 모의평가 지구과학Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_ear1_hsj_01.pdf,g_ear1_hsj_01.pdf,EBSi 2013년 6월 고3 모의평가 지구과학Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2013년 6월 고3 모의평가 지구과학Ⅱ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2013년 6월 고3 모의평가 지구과학Ⅱ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 6월 고3 모의평가 생명과학Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 생명과학Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2013년 6월 고3 모의평가 생명과학Ⅱ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2013년 6월 고3 모의평가 생명과학Ⅱ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 6월 고3 모의평가 물리Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 물리Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2013년 6월 고3 모의평가 물리Ⅱ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2013년 6월 고3 모의평가 물리Ⅱ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2013년 6월 고3 모의평가 농생명산업 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2013년 6월 고3 모의평가 농생명산업 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2013년 6월 고3 모의평가 상업정보 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2013년 6월 고3 모의평가 상업정보 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2013년 6월 고3 모의평가 수산해운 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2013년 6월 고3 모의평가 수산해운 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2013년 6월 고3 모의평가 가사실업 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2013년 6월 고3 모의평가 가사실업 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2013년 6월 고3 모의평가 공업 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2013년 6월 고3 모의평가 공업 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_ar1_mun.pdf,2nd_ar1_mun.pdf,EBSi 2013년 6월 고3 모의평가 아랍어Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_ar1_hsj.pdf,2nd_ar1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 아랍어Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2013년 6월 고3 모의평가 중국어Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 중국어Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2013년 6월 고3 모의평가 한문 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2013년 6월 고3 모의평가 한문 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2013년 6월 고3 모의평가 프랑스어Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 프랑스어Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2013년 6월 고3 모의평가 독일어Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 독일어Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2013년 6월 고3 모의평가 일본어Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 일본어Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2013년 6월 고3 모의평가 러시아어Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 러시아어Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2013년 6월 고3 모의평가 스페인어Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2013년 6월 고3 모의평가 스페인어Ⅰ 정답 및 해설
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_vit_mun.pdf,2nd_vit_mun.pdf,EBSi 2013년 6월 고3 모의평가 기초베트남어Ⅰ 문제
+2013,3,6,kice_mock,2013-06-05,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201306053/2nd_vit_hsj.pdf,2nd_vit_hsj.pdf,EBSi 2013년 6월 고3 모의평가 기초베트남어Ⅰ 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 국어A형 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 국어A형 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 국어B형 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 국어B형 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 수학A 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 수학A 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 수학B 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 수학B 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 영어A 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 영어A 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 영어B 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 영어B 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 한국사 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 한국사 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 동아시아사 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 동아시아사 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 경제 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 경제 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 윤리와 사상 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 윤리와 사상 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 한국지리 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 한국지리 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 생활과 윤리 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 생활과 윤리 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 법과정치 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 법과정치 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 사회문화 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 사회문화 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 세계지리 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 세계지리 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 세계사 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 세계사 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 화학Ⅰ 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 화학Ⅱ 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 화학Ⅱ 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 지구과학Ⅱ 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 지구과학Ⅱ 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 생명과학Ⅱ 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 물리Ⅰ 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2013년 7월 고3 전국연합학력평가 물리Ⅱ 문제
+2013,3,7,school_mock,2013-07-12,인천광역시교육청,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201307123/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2013년 7월 고3 전국연합학력평가 물리Ⅱ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 9월 고3 모의평가 국어A형 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 9월 고3 모의평가 국어A형 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 9월 고3 모의평가 국어B형 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 9월 고3 모의평가 국어B형 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 9월 고3 모의평가 수학A 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 9월 고3 모의평가 수학A 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 9월 고3 모의평가 수학B 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 9월 고3 모의평가 수학B 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 9월 고3 모의평가 영어A 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 9월 고3 모의평가 영어A 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 9월 고3 모의평가 영어B 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 9월 고3 모의평가 영어B 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 9월 고3 모의평가 한국사 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 9월 고3 모의평가 한국사 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 9월 고3 모의평가 동아시아사 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 9월 고3 모의평가 동아시아사 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 9월 고3 모의평가 경제 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 9월 고3 모의평가 경제 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 9월 고3 모의평가 윤리와 사상 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 9월 고3 모의평가 윤리와 사상 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 9월 고3 모의평가 한국지리 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 9월 고3 모의평가 한국지리 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 9월 고3 모의평가 생활과 윤리 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 9월 고3 모의평가 생활과 윤리 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 9월 고3 모의평가 법과정치 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 9월 고3 모의평가 법과정치 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 9월 고3 모의평가 사회문화 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 9월 고3 모의평가 사회문화 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 9월 고3 모의평가 세계지리 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 9월 고3 모의평가 세계지리 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 9월 고3 모의평가 세계사 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 9월 고3 모의평가 세계사 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 9월 고3 모의평가 화학Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 화학Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2013년 9월 고3 모의평가 화학Ⅱ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2013년 9월 고3 모의평가 화학Ⅱ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 9월 고3 모의평가 지구과학Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 지구과학Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2013년 9월 고3 모의평가 지구과학Ⅱ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2013년 9월 고3 모의평가 지구과학Ⅱ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 9월 고3 모의평가 생명과학Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 생명과학Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2013년 9월 고3 모의평가 생명과학Ⅱ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2013년 9월 고3 모의평가 생명과학Ⅱ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 9월 고3 모의평가 물리Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 물리Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2013년 9월 고3 모의평가 물리Ⅱ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2013년 9월 고3 모의평가 물리Ⅱ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2013년 9월 고3 모의평가 농생명산업 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2013년 9월 고3 모의평가 농생명산업 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2013년 9월 고3 모의평가 상업정보 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2013년 9월 고3 모의평가 상업정보 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2013년 9월 고3 모의평가 수산해운 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2013년 9월 고3 모의평가 수산해운 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2013년 9월 고3 모의평가 가사실업 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2013년 9월 고3 모의평가 가사실업 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2013년 9월 고3 모의평가 공업 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2013년 9월 고3 모의평가 공업 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_ar1_mun.pdf,2nd_ar1_mun.pdf,EBSi 2013년 9월 고3 모의평가 아랍어Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_ar1_hsj.pdf,2nd_ar1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 아랍어Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2013년 9월 고3 모의평가 중국어Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 중국어Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2013년 9월 고3 모의평가 한문 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2013년 9월 고3 모의평가 한문 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2013년 9월 고3 모의평가 프랑스어Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 프랑스어Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2013년 9월 고3 모의평가 독일어Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 독일어Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2013년 9월 고3 모의평가 일본어Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 일본어Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2013년 9월 고3 모의평가 러시아어Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 러시아어Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2013년 9월 고3 모의평가 스페인어Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2013년 9월 고3 모의평가 스페인어Ⅰ 정답 및 해설
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_vit_mun.pdf,2nd_vit_mun.pdf,EBSi 2013년 9월 고3 모의평가 기초베트남어Ⅰ 문제
+2013,3,9,kice_mock,2013-09-03,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201309033/2nd_vit_hsj.pdf,2nd_vit_hsj.pdf,EBSi 2013년 9월 고3 모의평가 기초베트남어Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/kora_mun.pdf,kora_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 국어A형 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/kora_hsj.pdf,kora_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 국어A형 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/korb_mun.pdf,korb_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 국어B형 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/korb_hsj.pdf,korb_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 국어B형 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/matha_mun.pdf,matha_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 수학A 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/matha_hsj.pdf,matha_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 수학A 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/mathb_mun.pdf,mathb_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 수학B 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/mathb_hsj.pdf,mathb_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 수학B 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/enga_mun.pdf,enga_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 영어A 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/enga_hsj.pdf,enga_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 영어A 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/engb_mun.pdf,engb_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 영어B 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/engb_hsj.pdf,engb_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 영어B 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 한국사 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 한국사 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 동아시아사 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 동아시아사 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 윤리와 사상 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 윤리와 사상 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 한국지리 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 한국지리 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 생활과 윤리 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 생활과 윤리 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 법과정치 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 법과정치 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 사회문화 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 사회문화 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 세계지리 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 세계지리 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 세계사 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 세계사 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 화학Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 화학Ⅱ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 화학Ⅱ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 지구과학Ⅱ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 지구과학Ⅱ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 생명과학Ⅱ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 물리Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 물리Ⅱ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 물리Ⅱ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 농생명산업 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 농생명산업 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 상업정보 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 상업정보 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 수산해운 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 수산해운 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 가사실업 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 가사실업 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 공업 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 공업 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 중국어Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 중국어Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 한문 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 한문 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 프랑스어Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 프랑스어Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 독일어Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 독일어Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 일본어Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 일본어Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 러시아어Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 러시아어Ⅰ 정답 및 해설
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2013년 10월 고3 전국연합학력평가 스페인어Ⅰ 문제
+2013,3,10,school_mock,2013-10-08,서울특별시교육청,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201310083/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2013년 10월 고3 전국연합학력평가 스페인어Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/kora1_mun.pdf,kora1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 국어A형 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/kora1_hsj.pdf,kora1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 국어A형 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,korean,korean-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/korb1_mun.pdf,korb1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 국어B형 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,korean,korean-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/korb1_hsj.pdf,korb1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 국어B형 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/matha1_mun.pdf,matha1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 수학A 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/matha1_hsj.pdf,matha1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 수학A 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/mathb1_mun.pdf,mathb1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 수학B 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/mathb1_hsj.pdf,mathb1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 수학B 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/enga1_mun.pdf,enga1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 영어A 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/enga1_hsj.pdf,enga1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 영어A 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,english,english-b,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/engb1_mun.pdf,engb1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 영어B 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,english,english-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/engb1_hsj.pdf,engb1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 영어B 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_his_mun.pdf,s_his_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 한국사 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 한국사 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,east-asian-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_easta_mun.pdf,s_easta_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 동아시아사 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,east-asian-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_easta_hsj.pdf,s_easta_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 동아시아사 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 경제 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 경제 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,ethics-and-thought,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_yrnss_mun.pdf,s_yrnss_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 윤리와 사상 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,ethics-and-thought,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_yrnss_hsj.pdf,s_yrnss_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 윤리와 사상 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 한국지리 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 한국지리 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,life-and-ethics-general,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_ssnyr_mun.pdf,s_ssnyr_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 생활과 윤리 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,life-and-ethics-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_ssnyr_hsj.pdf,s_ssnyr_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 생활과 윤리 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,politics-and-law,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_bnj_mun.pdf,s_bnj_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 법과정치 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,politics-and-law,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_bnj_hsj.pdf,s_bnj_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 법과정치 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 사회문화 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 사회문화 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 세계지리 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 세계지리 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 세계사 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 세계사 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 화학Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 화학Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 화학Ⅱ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_che2_hsj_01.pdf,g_che2_hsj_01.pdf,EBSi 2013년 11월 고3 대학수학능력시험 화학Ⅱ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 지구과학Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 지구과학Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 지구과학Ⅱ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 지구과학Ⅱ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 생명과학Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 생명과학Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 생명과학Ⅱ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 생명과학Ⅱ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 물리Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 물리Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 물리Ⅱ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 물리Ⅱ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,agriculture-bio-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 농생명산업 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,agriculture-bio-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 농생명산업 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,commerce-information,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 상업정보 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,commerce-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 상업정보 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,fisheries-shipping,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 수산해운 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,fisheries-shipping,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 수산해운 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,home-economics-industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 가사실업 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,home-economics-industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 가사실업 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,industry,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 공업 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,vocational,industry,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 공업 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_ar1_mun.pdf,2nd_ar1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 아랍어Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_ar1_hsj.pdf,2nd_ar1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 아랍어Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 중국어Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 중국어Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 한문 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 한문 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 프랑스어Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 프랑스어Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 독일어Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 독일어Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 일본어Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 일본어Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 러시아어Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 러시아어Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 스페인어Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 스페인어Ⅰ 정답 및 해설
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,vietnamese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_vit_mun.pdf,2nd_vit_mun.pdf,EBSi 2013년 11월 고3 대학수학능력시험 기초베트남어Ⅰ 문제
+2013,3,11,csat,2013-11-07,한국교육과정평가원,second_language,vietnamese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/201311073/2nd_vit_hsj.pdf,2nd_vit_hsj.pdf,EBSi 2013년 11월 고3 대학수학능력시험 기초베트남어Ⅰ 정답 및 해설

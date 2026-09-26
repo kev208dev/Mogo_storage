@@ -156,10 +156,13 @@ export const importRowSchema = z
   })
   .superRefine((row, ctx) => {
     // 시험 종류와 학년·월의 일관성 (오타로 다른 시험에 붙는 것을 막는다)
-    if (row.exam_type === "csat" && !(row.grade === 3 && row.month === 11))
+    if (
+      row.exam_type === "csat" &&
+      !(row.grade === 3 && (row.month === 11 || (row.year <= 2020 && row.month === 12)))
+    )
       ctx.addIssue({
         code: "custom",
-        message: "exam_type=csat 은 grade=3, month=11 이어야 합니다",
+        message: "exam_type=csat 은 고3 11월(2020년 이전 카탈로그는 12월)이어야 합니다",
       });
     if (row.exam_type === "kice_mock" && !(row.grade === 3 && (row.month === 6 || row.month === 9)))
       ctx.addIssue({

@@ -2,7 +2,13 @@ import { describe, expect, it } from "vitest";
 import { applyRegime, resolveCourse, type CourseAlias } from "@/ingestion/canonical/course";
 import { classifyArtifact } from "@/ingestion/canonical/classify";
 import { finalCourseResolution } from "@/ingestion/pipeline/artifacts";
-import { courseExpectation, coursesForExam, coursesForSubject } from "@/lib/courses";
+import {
+  COURSE_CATALOG,
+  courseByCode,
+  courseExpectation,
+  coursesForExam,
+  coursesForSubject,
+} from "@/lib/courses";
 import { cohortYear, regimeFor } from "@/lib/regimes";
 
 const exam = (year: number, grade: 1 | 2 | 3) => ({ year, grade });
@@ -123,7 +129,7 @@ describe("직업탐구 / 제2외국어·한문", () => {
     });
   });
 
-  it("고2 시험에서 발견된 제2외국어 세부과목은 체제 검증으로 검토 대상", () => {
+  it("공식 기출에서 확인된 고2·고3 제2외국어 세부과목을 확정한다", () => {
     const r = classifyArtifact({
       subjectLabel: "제2외국어",
       linkLabel: "일본어Ⅰ 문제",
@@ -132,6 +138,73 @@ describe("직업탐구 / 제2외국어·한문", () => {
     if (!r.ok) throw new Error("classify failed");
     expect(finalCourseResolution(r.artifact, "ebsi", [], exam(2025, 2)).status).toBe("ambiguous");
     expect(finalCourseResolution(r.artifact, "ebsi", [], exam(2025, 3)).status).toBe("resolved");
+  });
+});
+
+describe("역사적 과목 catalog", () => {
+  const legacy = [
+    "accounting-principles",
+    "agriculture-understanding",
+    "basic-drafting",
+    "math-a",
+    "math-b",
+    "ocean-understanding",
+    "service-industry-understanding",
+    "chemistry-general",
+    "earth-science-general",
+    "general-social",
+    "geography-general",
+    "life-and-ethics-general",
+    "life-science-general",
+    "physics-general",
+    "science-studies",
+    "social-studies",
+    "social-science-studies",
+    "agriculture-bio-industry",
+    "commerce-information",
+    "fisheries-shipping",
+    "home-economics-industry",
+    "industry",
+    "korean-a",
+    "korean-b",
+    "morality",
+    "english-a",
+    "english-b",
+    "agriculture-information",
+    "computer-general",
+    "design-general",
+    "economic-geography",
+    "english-old",
+    "ethics",
+    "fisheries-general",
+    "fisheries-shipping-information",
+    "food-and-nutrition",
+    "industry-intro",
+    "information-technology-basics",
+    "korean-modern-history",
+    "korean-old",
+    "maritime-general",
+    "ocean-general",
+    "politics",
+    "programming",
+    "law-and-society",
+  ];
+
+  it("all 45 codes are unique catalog entries and legacy-only", () => {
+    expect(new Set(legacy).size).toBe(45);
+    expect(legacy.every((code) => COURSE_CATALOG.some((c) => c.code === code))).toBe(true);
+    expect(
+      COURSE_CATALOG.filter((c) => legacy.includes(c.code)).every((c) =>
+        c.regimes.map((r) => r.regime).every((r) => r === "legacy"),
+      ),
+    ).toBe(true);
+    expect(legacy.every((code) => courseByCode(code))).toBe(true);
+  });
+
+  it("legacy courses are excluded from modern subject lists but available to legacy exams", () => {
+    expect(coursesForSubject("math").map((c) => c.code)).not.toContain("math-a");
+    expect(coursesForExam("math", exam(2012, 3)).map((c) => c.code)).toContain("math-a");
+    expect(courseExpectation("math-a", exam(2025, 3))).toBe("unexpected");
   });
 });
 

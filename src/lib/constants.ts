@@ -13,7 +13,7 @@ export const MONTHS = [3, 4, 5, 6, 7, 9, 10, 11] as const;
 /**
  * 시험 영역. 배열 순서가 곧 화면 표시 순서다 (주요 과목 순서는 바꾸지 않는다).
  *  - history 는 "한국사" 영역이다 (세계사·동아시아사는 social 의 세부과목)
- *  - vocational(직업탐구), second_language(제2외국어/한문)는 고3 시험 일부에만 존재한다.
+ *  - vocational(직업탐구), second_language(제2외국어/한문)는 고2·고3 시험 일부에만 존재한다.
  *    시험에 실제 자료/과목이 있을 때만 탭에 나타난다 (exam_subjects 기준).
  */
 export const SUBJECTS = [

@@ -1,0 +1,27 @@
+-- Historical course catalog entries used only by the legacy exam regime.
+INSERT INTO "courses" ("id", "code", "name", "subject", "display_order", "regimes") VALUES
+  ('math-a', 'math-a', '수학 가형', 'math', 1003, '[{"regime":"legacy"}]'::jsonb),
+  ('math-b', 'math-b', '수학 나형', 'math', 1004, '[{"regime":"legacy"}]'::jsonb),
+  ('chemistry-general', 'chemistry-general', '화학', 'science', 1007, '[{"regime":"legacy"}]'::jsonb),
+  ('earth-science-general', 'earth-science-general', '지구과학', 'science', 1008, '[{"regime":"legacy"}]'::jsonb),
+  ('general-social', 'general-social', '일반사회', 'social', 1009, '[{"regime":"legacy"}]'::jsonb),
+  ('geography-general', 'geography-general', '지리', 'social', 1010, '[{"regime":"legacy"}]'::jsonb),
+  ('life-and-ethics-general', 'life-and-ethics-general', '생활과 윤리', 'social', 1011, '[{"regime":"legacy"}]'::jsonb),
+  ('life-science-general', 'life-science-general', '생명과학', 'science', 1012, '[{"regime":"legacy"}]'::jsonb),
+  ('physics-general', 'physics-general', '물리', 'science', 1013, '[{"regime":"legacy"}]'::jsonb),
+  ('science-studies', 'science-studies', '과학탐구', 'science', 1014, '[{"regime":"legacy"}]'::jsonb),
+  ('social-studies', 'social-studies', '사회탐구', 'social', 1015, '[{"regime":"legacy"}]'::jsonb),
+  ('social-science-studies', 'social-science-studies', '사회·과학탐구', 'social', 1016, '[{"regime":"legacy"}]'::jsonb),
+  ('korean-a', 'korean-a', '국어 A형', 'korean', 1022, '[{"regime":"legacy"}]'::jsonb),
+  ('korean-b', 'korean-b', '국어 B형', 'korean', 1023, '[{"regime":"legacy"}]'::jsonb),
+  ('morality', 'morality', '도덕', 'social', 1024, '[{"regime":"legacy"}]'::jsonb),
+  ('english-a', 'english-a', '영어 A', 'english', 1025, '[{"regime":"legacy"}]'::jsonb),
+  ('english-b', 'english-b', '영어 B', 'english', 1026, '[{"regime":"legacy"}]'::jsonb),
+  ('economic-geography', 'economic-geography', '경제지리', 'social', 1030, '[{"regime":"legacy"}]'::jsonb),
+  ('english-old', 'english-old', '외국어', 'english', 1031, '[{"regime":"legacy"}]'::jsonb),
+  ('ethics', 'ethics', '윤리', 'social', 1032, '[{"regime":"legacy"}]'::jsonb),
+  ('korean-modern-history', 'korean-modern-history', '한국근·현대사', 'history', 1038, '[{"regime":"legacy"}]'::jsonb),
+  ('korean-old', 'korean-old', '언어', 'korean', 1039, '[{"regime":"legacy"}]'::jsonb),
+  ('politics', 'politics', '정치', 'social', 1042, '[{"regime":"legacy"}]'::jsonb),
+  ('law-and-society', 'law-and-society', '법과사회', 'social', 1044, '[{"regime":"legacy"}]'::jsonb)
+ON CONFLICT ("id") DO UPDATE SET "name" = EXCLUDED."name", "subject" = EXCLUDED."subject", "display_order" = EXCLUDED."display_order", "regimes" = EXCLUDED."regimes";

@@ -23,8 +23,69 @@ export interface CourseDefinition {
 
 /** 2015 개정 교육과정 수능 선택과목 (2022~2027학년도 체제), 고2·고3 시험 */
 const R2022_ELECTIVE: CourseDefinition["regimes"] = [{ regime: "csat_2022", grades: [2, 3] }];
-/** 직업탐구·제2외국어/한문: 고3 시험에만 */
-const R2022_G3: CourseDefinition["regimes"] = [{ regime: "csat_2022", grades: [3] }];
+/** 직업탐구·제2외국어/한문: 공식 EBSi 기출 목록에서 확인된 고2·고3 시험 */
+const R2022_UPPER: CourseDefinition["regimes"] = [{ regime: "csat_2022", grades: [3] }];
+
+/** 2021학년도 이전 공식 자료에서 확인된 과거 과목. 현대 체제에는 노출하지 않는다. */
+const LEGACY_COURSE_ROWS = [
+  ["accounting-principles", "회계 원리", "vocational"],
+  ["agriculture-understanding", "농업 이해", "vocational"],
+  ["basic-drafting", "기초 제도", "vocational"],
+  ["math-a", "수학 가형", "math"],
+  ["math-b", "수학 나형", "math"],
+  ["ocean-understanding", "해양의 이해", "vocational"],
+  ["service-industry-understanding", "생활 서비스 산업의 이해", "vocational"],
+  ["chemistry-general", "화학", "science"],
+  ["earth-science-general", "지구과학", "science"],
+  ["general-social", "일반사회", "social"],
+  ["geography-general", "지리", "social"],
+  ["life-and-ethics-general", "생활과 윤리", "social"],
+  ["life-science-general", "생명과학", "science"],
+  ["physics-general", "물리", "science"],
+  ["science-studies", "과학탐구", "science"],
+  ["social-studies", "사회탐구", "social"],
+  ["social-science-studies", "사회·과학탐구", "social"],
+  ["agriculture-bio-industry", "농생명산업", "vocational"],
+  ["commerce-information", "상업정보", "vocational"],
+  ["fisheries-shipping", "수산해운", "vocational"],
+  ["home-economics-industry", "가사실업", "vocational"],
+  ["industry", "공업", "vocational"],
+  ["korean-a", "국어 A형", "korean"],
+  ["korean-b", "국어 B형", "korean"],
+  ["morality", "도덕", "social"],
+  ["english-a", "영어 A", "english"],
+  ["english-b", "영어 B", "english"],
+  ["agriculture-information", "농업정보관리", "vocational"],
+  ["computer-general", "컴퓨터일반", "vocational"],
+  ["design-general", "디자인일반", "vocational"],
+  ["economic-geography", "경제지리", "social"],
+  ["english-old", "외국어", "english"],
+  ["ethics", "윤리", "social"],
+  ["fisheries-general", "수산일반", "vocational"],
+  ["fisheries-shipping-information", "수산해운정보처리", "vocational"],
+  ["food-and-nutrition", "식품과영양", "vocational"],
+  ["industry-intro", "공업입문", "vocational"],
+  ["information-technology-basics", "정보기술기초", "vocational"],
+  ["korean-modern-history", "한국근·현대사", "history"],
+  ["korean-old", "언어", "korean"],
+  ["maritime-general", "해사일반", "vocational"],
+  ["ocean-general", "해양일반", "vocational"],
+  ["politics", "정치", "social"],
+  ["programming", "프로그래밍", "vocational"],
+  ["law-and-society", "법과사회", "social"],
+] as const;
+
+const LEGACY_COURSES: CourseDefinition[] = LEGACY_COURSE_ROWS.map(
+  ([code, name, subject], index) => ({
+    code,
+    name,
+    subject,
+    displayOrder: 1000 + index,
+    aliases: [],
+    abbreviations: [],
+    regimes: [{ regime: "legacy" }],
+  }),
+);
 
 export const COURSE_CATALOG: CourseDefinition[] = [
   // ── 국어 선택 ──
@@ -247,7 +308,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     abbreviations: ["지2"],
     regimes: R2022_ELECTIVE,
   },
-  // ── 직업탐구 (2022~2027학년도 체제, 고3) ──
+  // ── 직업탐구 (2022~2027학년도 체제, 고2·고3) ──
   {
     code: "agriculture-basics",
     name: "농업 기초 기술",
@@ -255,7 +316,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 10,
     aliases: ["농업기초기술"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "industry-general",
@@ -264,7 +325,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 20,
     aliases: ["공업일반"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "commercial-economics",
@@ -273,7 +334,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 30,
     aliases: ["상업경제"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "fisheries-and-shipping",
@@ -282,7 +343,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 40,
     aliases: ["수산해운산업기초"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "human-development",
@@ -291,7 +352,7 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: 50,
     aliases: ["인간발달"],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
   {
     code: "successful-career-life",
@@ -301,9 +362,9 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     aliases: ["성공적인직업생활"],
     abbreviations: [],
     // 2028 체제의 직업탐구 구성은 확정 자료(실제 시험)로 확인되지 않아 포함하지 않는다 → 발견 시 manual_review
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   },
-  // ── 제2외국어/한문 (2022~2027학년도 체제, 고3) ──
+  // ── 제2외국어/한문 (2022~2027학년도 체제, 고2·고3) ──
   ...(
     [
       ["german-1", "독일어 I", "독일어1"],
@@ -323,8 +384,9 @@ export const COURSE_CATALOG: CourseDefinition[] = [
     displayOrder: (i + 1) * 10,
     aliases: [alias],
     abbreviations: [],
-    regimes: R2022_G3,
+    regimes: R2022_UPPER,
   })),
+  ...LEGACY_COURSES,
 ];
 
 /**
@@ -375,10 +437,15 @@ export function courseByCode(code: string): CourseDefinition | undefined {
   return COURSE_CATALOG.find((c) => c.code === code);
 }
 
-export function coursesForSubject(subject: Subject): CourseDefinition[] {
-  return COURSE_CATALOG.filter((c) => c.subject === subject).sort(
-    (a, b) => a.displayOrder - b.displayOrder,
-  );
+export function coursesForSubject(
+  subject: Subject,
+  options: { includeLegacy?: boolean } = {},
+): CourseDefinition[] {
+  return COURSE_CATALOG.filter(
+    (c) =>
+      c.subject === subject &&
+      (options.includeLegacy || !c.regimes.every((r) => r.regime === "legacy")),
+  ).sort((a, b) => a.displayOrder - b.displayOrder);
 }
 
 export function isCourseCode(value: string): boolean {
@@ -416,5 +483,11 @@ export function courseExpectation(
 
 /** 체제에 존재할 수 있는 세부과목 목록 (관리자 화면/coverage 참고용) */
 export function coursesForExam(subject: Subject, exam: { year: number; grade: number }) {
-  return coursesForSubject(subject).filter((c) => courseExpectation(c.code, exam) === "expected");
+  const regime = regimeFor(exam).code;
+  return COURSE_CATALOG.filter(
+    (c) =>
+      c.subject === subject &&
+      (courseExpectation(c.code, exam) === "expected" ||
+        (regime === "legacy" && c.regimes.some((r) => r.regime === "legacy"))),
+  ).sort((a, b) => a.displayOrder - b.displayOrder);
 }

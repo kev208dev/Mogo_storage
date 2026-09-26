@@ -71,6 +71,13 @@
       "when": 1790330000000,
       "tag": "0009_grade_cut_watch",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1790396903343,
+      "tag": "0010_legacy_course_catalog",
+      "breakpoints": true
     }
   ]
 }

@@ -1,6 +1,7 @@
 import type { Subject } from "../constants";
 import { courseByCode } from "../courses";
 import type { ExamKey } from "../exam-path";
+import { questionsForSlot } from "./question-slot";
 import { sortExamsDesc, type ExamRepository } from "./repository";
 import { sampleDataset, type SampleDataset } from "./sample-data";
 import type { Course, Exam, NewReport, QuestionWithStats, Report } from "./types";
@@ -77,12 +78,13 @@ export class SampleExamRepository implements ExamRepository {
     ) =>
       rows.filter((r) => r.examId === exam.id && r.subject === subject && r.courseId === courseId);
 
-    const questions: QuestionWithStats[] = inSlot(this.data.questions)
-      .sort((a, b) => a.questionNumber - b.questionNumber)
-      .map((q) => ({
-        ...q,
-        statistic: this.data.statistics.find((s) => s.questionId === q.id) ?? null,
-      }));
+    const questions: QuestionWithStats[] = questionsForSlot(
+      this.data.questions.filter((q) => q.examId === exam.id && q.subject === subject),
+      courseId,
+    ).map((q) => ({
+      ...q,
+      statistic: this.data.statistics.find((s) => s.questionId === q.id) ?? null,
+    }));
 
     const courseFileCounts: Record<string, number> = {};
     for (const c of courses) {

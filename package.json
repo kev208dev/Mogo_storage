@@ -37,7 +37,8 @@
     "ingest:audit": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/audit.ts",
     "ingest:inspect": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/inspect.ts",
     "ops:scheduler": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/scheduler-status.ts",
-    "ops:restore-verify": "node --env-file-if-exists=.env.local --import tsx scripts/restore-verify.ts"
+    "ops:restore-verify": "node --env-file-if-exists=.env.local --import tsx scripts/restore-verify.ts",
+    "import:candidates": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/import-candidates.ts"
   },
   "dependencies": {
     "@expo-google-fonts/noto-sans-kr": "^0.4.3",

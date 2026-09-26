@@ -25,6 +25,7 @@ import { sanitizeFileName } from "../verify/artifact-validator";
 import { parseCsv } from "./csv";
 import { IMPORT_COLUMNS, importRowSchema, OFFICIAL_URL_HOSTS, REQUIRED_COLUMNS } from "./schema";
 import { isOperatorImport, OPERATOR_IMPORT_SOURCE_ID } from "./source";
+import { recordApprovalRule } from "./review";
 
 export { isOperatorImport, OPERATOR_IMPORT_SOURCE_ID } from "./source";
 
@@ -332,6 +333,16 @@ export async function approveImportedArtifacts(
         })
         .where(eq(sourceArtifacts.id, a.id));
     });
+    // 승인된 매핑(EBSi 파일 코드 → 과목)을 규칙으로 남겨 이후 후보 분류에 재사용. 실패해도 승인에는 영향 없음
+    try {
+      const [exam] = await ctx.db.select().from(exams).where(eq(exams.id, a.examId));
+      if (exam) await recordApprovalRule(ctx.db, { artifact: a, exam, admin: input.admin, now });
+    } catch {
+      ctx.logger.warn("artifact.manual_review", {
+        artifactId: a.id,
+        note: "mapping rule not recorded",
+      });
+    }
     const outcome = await publishSlot(ctx, {
       examId: a.examId,
       subject: a.subject,

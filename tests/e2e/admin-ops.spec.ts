@@ -39,6 +39,19 @@ test("관리자 대시보드: scheduler heartbeat 상태 (cron 설정 없음 →
   await expect(table.getByRole("row").filter({ hasText: "watchdog" })).toBeVisible();
 });
 
+test("관리자 대시보드: source × 기능 자동화 범위 (robots 금지는 정책상 금지로 표시)", async ({
+  page,
+}) => {
+  await login(page);
+  const table = page.getByTestId("source-policy");
+  await expect(table).toBeVisible();
+  const kice = table.getByRole("row").filter({ hasText: "한국교육과정평가원" }).first();
+  await expect(kice).toContainText("정책상 금지");
+  await expect(table.getByRole("row").filter({ hasText: "등급컷 megastudy" })).toContainText(
+    "자동",
+  );
+});
+
 test("Flow H: 오류 신고 → 관리자 → 해결", async ({ page, request }) => {
   const res = await request.post("/api/reports", {
     data: JSON.stringify({

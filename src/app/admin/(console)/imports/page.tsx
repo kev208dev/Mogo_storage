@@ -3,7 +3,13 @@ import { FILE_TYPE_LABELS, SUBJECT_LABELS } from "@/lib/constants";
 import { importsData } from "@/lib/server/admin-queries";
 import { examPath } from "@/lib/exam-path";
 import { formatKst, Panel, SmallButton } from "@/components/admin/ui";
-import { approveImportsAction, importOfficialUrlsAction, rejectImportsAction } from "../../actions";
+import {
+  approveImportsAction,
+  importOfficialUrlsAction,
+  rejectImportsAction,
+  resolveDuplicateImportsAction,
+} from "../../actions";
+import { ReviewDetails } from "@/components/admin/ReviewDetails";
 import { AdminNotice } from "../notice";
 import { NoDatabase } from "../no-db";
 
@@ -21,7 +27,8 @@ export default async function ImportsPage({ searchParams }: PageProps<"/admin/im
   const notice = (await searchParams).notice;
   const db = getDb();
   if (!db) return <NoDatabase />;
-  const { pending, byStatus, recent } = await importsData(db);
+  const { pending, byStatus, recent, insights, notes, rules } = await importsData(db);
+  const duplicates = [...insights.values()].filter((i) => i.publishedInSlot?.sameUrl).length;
   const statusCount = Object.fromEntries(byStatus.map((r) => [r.status, r.n]));
 
   return (
@@ -130,6 +137,10 @@ export default async function ImportsPage({ searchParams }: PageProps<"/admin/im
                     </a>
                     <span className="block break-all">{artifact.sourceUrl}</span>
                   </span>
+                  <ReviewDetails
+                    insight={insights.get(artifact.id)}
+                    note={notes.get(artifact.id)}
+                  />
                 </li>
               ))}
             </ul>
@@ -161,6 +172,42 @@ export default async function ImportsPage({ searchParams }: PageProps<"/admin/im
               </button>
             </div>
           </form>
+        )}
+      </Panel>
+
+      {duplicates > 0 ? (
+        <Panel title="확정적 중복 정리">
+          <form
+            action={resolveDuplicateImportsAction}
+            className="flex flex-wrap items-center gap-2 text-sm"
+          >
+            <p className="text-muted-foreground">
+              같은 슬롯에 같은 공식 URL 이 이미 게시된 검토 대기 {duplicates}건. 다른 URL 이 게시돼
+              있거나 다른 슬롯에 같은 URL 이 있는 경우는 건드리지 않습니다.
+            </p>
+            <SmallButton>중복 {duplicates}건 정리</SmallButton>
+          </form>
+        </Panel>
+      ) : null}
+
+      <Panel title={`승인에서 배운 매핑 규칙 ${rules.size}개`}>
+        {rules.size === 0 ? (
+          <p className="text-muted-foreground text-sm">
+            아직 없습니다. EBSi 파일 코드(예: s_samun)가 붙은 자료를 승인하면 코드 → 세부과목 규칙이
+            쌓이고, <code>npm run import:candidates</code> 가 다음 후보 분류에 재사용합니다. 같은
+            코드가 다른 과목으로 승인되면 규칙은 지워집니다.
+          </p>
+        ) : (
+          <ul className="grid gap-1 text-sm sm:grid-cols-2" data-testid="mapping-rules">
+            {[...rules.values()].map((r) => (
+              <li key={`${r.pattern}|${r.gradeScope}`}>
+                <code>{r.pattern}</code>
+                {r.gradeScope ? ` (${r.gradeScope})` : ""} → {SUBJECT_LABELS[r.subject]}
+                {r.courseCode ? ` / ${r.courseCode}` : ""}{" "}
+                <span className="text-muted-foreground">승인 {r.approvals}회</span>
+              </li>
+            ))}
+          </ul>
         )}
       </Panel>
 

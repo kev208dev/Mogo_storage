@@ -1,0 +1,641 @@
+{
+  "year": 2019,
+  "status": "complete_question_solution_inventory",
+  "method": "EBSi 공식 기출문제 목록과 실제 공식 PDF를 대조",
+  "notes": [
+    "고1·고2는 3·6·9·11월, 고3은 3·4·6·7·9·10월 및 11월 대학수학능력시험을 포함한다.",
+    "대학수학능력시험 문제지는 홀수형을 대표 슬롯으로 기록하고 짝수형 중복 문제지는 제외했다.",
+    "영어 듣기 음원·대본과 과목 묶음 레거시 별칭 0건은 정식 문제지·해설지 행렬 밖에서 기존 기록을 보존했다.",
+    "공식 EBSi 카탈로그의 시험명 월과 시험일을 기록했다."
+  ],
+  "exams": [
+    {
+      "year": 2019,
+      "grade": 1,
+      "month": 3,
+      "exam_type": "school_mock",
+      "exam_date": "2019-03-07",
+      "organizer": "서울특별시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "integrated-science",
+        "integrated-social"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 1,
+      "month": 6,
+      "exam_type": "school_mock",
+      "exam_date": "2019-06-04",
+      "organizer": "부산광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "integrated-science",
+        "integrated-social"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 1,
+      "month": 9,
+      "exam_type": "school_mock",
+      "exam_date": "2019-09-04",
+      "organizer": "인천광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "integrated-science",
+        "integrated-social"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 1,
+      "month": 11,
+      "exam_type": "school_mock",
+      "exam_date": "2019-11-20",
+      "organizer": "경기도교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "integrated-science",
+        "integrated-social"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 2,
+      "month": 3,
+      "exam_type": "school_mock",
+      "exam_date": "2019-03-07",
+      "organizer": "서울특별시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "chemistry-1",
+        "earth-science-1",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "math-a",
+        "math-b",
+        "physics-1",
+        "politics-and-law",
+        "social-culture",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 2,
+      "month": 6,
+      "exam_type": "school_mock",
+      "exam_date": "2019-06-04",
+      "organizer": "부산광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "chemistry-1",
+        "earth-science-1",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "math-a",
+        "math-b",
+        "physics-1",
+        "politics-and-law",
+        "social-culture",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 2,
+      "month": 9,
+      "exam_type": "school_mock",
+      "exam_date": "2019-09-04",
+      "organizer": "인천광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "chemistry-1",
+        "earth-science-1",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "math-a",
+        "math-b",
+        "physics-1",
+        "politics-and-law",
+        "social-culture",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 2,
+      "month": 11,
+      "exam_type": "school_mock",
+      "exam_date": "2019-11-20",
+      "organizer": "경기도교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "courses": [
+        "accounting-principles",
+        "agriculture-basics",
+        "agriculture-understanding",
+        "basic-drafting",
+        "chemistry-1",
+        "chinese-1",
+        "classical-chinese-1",
+        "commercial-economics",
+        "earth-science-1",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "fisheries-and-shipping",
+        "french-1",
+        "german-1",
+        "human-development",
+        "industry-general",
+        "japanese-1",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "math-a",
+        "math-b",
+        "ocean-understanding",
+        "physics-1",
+        "politics-and-law",
+        "russian-1",
+        "service-industry-understanding",
+        "social-culture",
+        "spanish-1",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 3,
+      "month": 3,
+      "exam_type": "school_mock",
+      "exam_date": "2019-03-07",
+      "organizer": "서울특별시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "chemistry-1",
+        "earth-science-1",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "math-a",
+        "math-b",
+        "physics-1",
+        "politics-and-law",
+        "social-culture",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 3,
+      "month": 4,
+      "exam_type": "school_mock",
+      "exam_date": "2019-04-10",
+      "organizer": "경기도교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "chemistry-1",
+        "chemistry-2",
+        "earth-science-1",
+        "earth-science-2",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "life-science-2",
+        "math-a",
+        "math-b",
+        "physics-1",
+        "physics-2",
+        "politics-and-law",
+        "social-culture",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 3,
+      "month": 6,
+      "exam_type": "kice_mock",
+      "exam_date": "2019-06-04",
+      "organizer": "한국교육과정평가원",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "courses": [
+        "accounting-principles",
+        "agriculture-basics",
+        "agriculture-understanding",
+        "arabic-1",
+        "basic-drafting",
+        "chemistry-1",
+        "chemistry-2",
+        "chinese-1",
+        "classical-chinese-1",
+        "commercial-economics",
+        "earth-science-1",
+        "earth-science-2",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "fisheries-and-shipping",
+        "french-1",
+        "german-1",
+        "human-development",
+        "industry-general",
+        "japanese-1",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "life-science-2",
+        "math-a",
+        "math-b",
+        "ocean-understanding",
+        "physics-1",
+        "physics-2",
+        "politics-and-law",
+        "russian-1",
+        "service-industry-understanding",
+        "social-culture",
+        "spanish-1",
+        "vietnamese-1",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 3,
+      "month": 7,
+      "exam_type": "school_mock",
+      "exam_date": "2019-07-10",
+      "organizer": "인천광역시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science"
+      ],
+      "courses": [
+        "chemistry-1",
+        "chemistry-2",
+        "earth-science-1",
+        "earth-science-2",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "life-science-2",
+        "math-a",
+        "math-b",
+        "physics-1",
+        "physics-2",
+        "politics-and-law",
+        "social-culture",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 3,
+      "month": 9,
+      "exam_type": "kice_mock",
+      "exam_date": "2019-09-04",
+      "organizer": "한국교육과정평가원",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "courses": [
+        "accounting-principles",
+        "agriculture-basics",
+        "agriculture-understanding",
+        "arabic-1",
+        "basic-drafting",
+        "chemistry-1",
+        "chemistry-2",
+        "chinese-1",
+        "classical-chinese-1",
+        "commercial-economics",
+        "earth-science-1",
+        "earth-science-2",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "fisheries-and-shipping",
+        "french-1",
+        "german-1",
+        "human-development",
+        "industry-general",
+        "japanese-1",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "life-science-2",
+        "math-a",
+        "math-b",
+        "ocean-understanding",
+        "physics-1",
+        "physics-2",
+        "politics-and-law",
+        "russian-1",
+        "service-industry-understanding",
+        "social-culture",
+        "spanish-1",
+        "vietnamese-1",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 3,
+      "month": 10,
+      "exam_type": "school_mock",
+      "exam_date": "2019-10-15",
+      "organizer": "서울특별시교육청",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "courses": [
+        "accounting-principles",
+        "agriculture-basics",
+        "agriculture-understanding",
+        "basic-drafting",
+        "chemistry-1",
+        "chemistry-2",
+        "chinese-1",
+        "classical-chinese-1",
+        "commercial-economics",
+        "earth-science-1",
+        "earth-science-2",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "fisheries-and-shipping",
+        "french-1",
+        "german-1",
+        "human-development",
+        "industry-general",
+        "japanese-1",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "life-science-2",
+        "math-a",
+        "math-b",
+        "ocean-understanding",
+        "physics-1",
+        "physics-2",
+        "politics-and-law",
+        "russian-1",
+        "service-industry-understanding",
+        "social-culture",
+        "spanish-1",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    },
+    {
+      "year": 2019,
+      "grade": 3,
+      "month": 11,
+      "exam_type": "csat",
+      "exam_date": "2019-11-14",
+      "organizer": "한국교육과정평가원",
+      "subjects": [
+        "korean",
+        "math",
+        "english",
+        "history",
+        "social",
+        "science",
+        "vocational",
+        "second_language"
+      ],
+      "courses": [
+        "accounting-principles",
+        "agriculture-basics",
+        "agriculture-understanding",
+        "arabic-1",
+        "basic-drafting",
+        "chemistry-1",
+        "chemistry-2",
+        "chinese-1",
+        "classical-chinese-1",
+        "commercial-economics",
+        "earth-science-1",
+        "earth-science-2",
+        "east-asian-history",
+        "economics",
+        "ethics-and-thought",
+        "fisheries-and-shipping",
+        "french-1",
+        "german-1",
+        "human-development",
+        "industry-general",
+        "japanese-1",
+        "korean-geography",
+        "life-and-ethics",
+        "life-science-1",
+        "life-science-2",
+        "math-a",
+        "math-b",
+        "ocean-understanding",
+        "physics-1",
+        "physics-2",
+        "politics-and-law",
+        "russian-1",
+        "service-industry-understanding",
+        "social-culture",
+        "spanish-1",
+        "vietnamese-1",
+        "world-geography",
+        "world-history"
+      ],
+      "course_inventory_status": "confirmed_by_official_catalog_and_pdf",
+      "sources": [
+        "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs"
+      ]
+    }
+  ]
+}

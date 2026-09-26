@@ -52,8 +52,7 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
       !Number.isInteger(c.rawScore) ||
       c.rawScore < 0 ||
       c.rawScore > 100 ||
-      (i > 0 &&
-        (c.grade === sorted[i - 1]!.grade || c.rawScore > sorted[i - 1]!.rawScore))
+      (i > 0 && (c.grade === sorted[i - 1]!.grade || c.rawScore > sorted[i - 1]!.rawScore))
     )
       throw new Error("invalid grade cut");
   }
@@ -112,6 +111,21 @@ export interface WatchSourceEvent {
   failed: boolean;
   durationMs: number;
 }
+export type WatchStage =
+  | "due_exams"
+  | "load_slots"
+  | "adapter_collect"
+  | "source_failure"
+  | "persist_cut"
+  | "revalidate"
+  | "source_event"
+  | "mark_polled";
+export interface WatchProgress {
+  stage: WatchStage;
+  exam?: string;
+  subject?: Subject;
+  course?: string | null;
+}
 
 /** Adapter errors are isolated; persistence errors still surface so a broken DB is visible to operations. */
 export async function runGradeCutWatch(
@@ -120,10 +134,13 @@ export async function runGradeCutWatch(
   now: Date,
   revalidate: (exam: WatchExam, slot: WatchSlot) => Promise<void> = async () => {},
   onSource?: (event: WatchSourceEvent) => void,
+  onProgress?: (progress: WatchProgress) => void,
 ): Promise<WatchResult> {
   const result: WatchResult = { changed: 0, failures: 0, polled: 0 };
+  onProgress?.({ stage: "due_exams" });
   for (const exam of await store.dueExams(now)) {
     if (now < examEndAt(exam)) continue;
+    onProgress?.({ stage: "load_slots", exam: exam.id });
     const slots = (await store.slots(exam)).filter(
       (slot) => gradingMode(exam, slot.subject) === "relative" && isGradeCutDue(exam, slot, now),
     );
@@ -138,15 +155,27 @@ export async function runGradeCutWatch(
     const active = new Map(slots.map((slot) => [slotKey(slot), slot]));
     const polled = new Set<string>();
     for (const adapter of verified) {
-      const requested = [...active.values()].filter((slot) => adapter.supports?.(exam, slot) ?? true);
+      const requested = [...active.values()].filter(
+        (slot) => adapter.supports?.(exam, slot) ?? true,
+      );
       if (!requested.length) continue;
       const started = Date.now();
       let collected: CollectedGradeCut[];
       try {
+        onProgress?.({ stage: "adapter_collect", exam: exam.id });
         collected = await adapter.collect(exam, requested);
       } catch (error) {
         result.failures++;
-        for (const slot of requested) await store.fail(slot, adapter.source, error);
+        for (const slot of requested) {
+          onProgress?.({
+            stage: "source_failure",
+            exam: exam.id,
+            subject: slot.subject,
+            course: slot.courseCode,
+          });
+          await store.fail(slot, adapter.source, error);
+        }
+        onProgress?.({ stage: "source_event", exam: exam.id });
         onSource?.({
           examId: exam.id,
           source: adapter.source,
@@ -167,10 +196,22 @@ export async function runGradeCutWatch(
         if (!requestedKeys.has(slotKey(value))) continue;
         const slot = active.get(slotKey(value));
         if (!slot) continue; // wrong course or exam mapping must never create a DB row
+        onProgress?.({
+          stage: "persist_cut",
+          exam: exam.id,
+          subject: slot.subject,
+          course: slot.courseCode,
+        });
         const changed = await store.save(exam, slot, adapter.source, value);
         if (changed) {
           result.changed++;
           changedCount++;
+          onProgress?.({
+            stage: "revalidate",
+            exam: exam.id,
+            subject: slot.subject,
+            course: slot.courseCode,
+          });
           await revalidate(exam, slot);
         }
         if (adapter.source === "official") {
@@ -178,6 +219,7 @@ export async function runGradeCutWatch(
           finalizedCount++;
         }
       }
+      onProgress?.({ stage: "source_event", exam: exam.id });
       onSource?.({
         examId: exam.id,
         source: adapter.source,
@@ -190,6 +232,12 @@ export async function runGradeCutWatch(
       });
     }
     for (const slot of slots.filter((item) => polled.has(slotKey(item)))) {
+      onProgress?.({
+        stage: "mark_polled",
+        exam: exam.id,
+        subject: slot.subject,
+        course: slot.courseCode,
+      });
       await store.markPolled(slot, now);
       result.polled++;
     }

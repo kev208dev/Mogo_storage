@@ -14,7 +14,7 @@ const exam = {
 };
 
 describe("grade cut source policy", () => {
-  it("never auto-collects private-education estimates", async () => {
+  it("collects only the verified Mega source through the legacy policy entry point", async () => {
     const calls: string[] = [];
     const adapters: GradeCutSourceAdapter[] = (["megastudy", "daesung", "ebs"] as const).map(
       (source) => ({
@@ -26,8 +26,8 @@ describe("grade cut source policy", () => {
       }),
     );
     const result = await collectGradeCuts(exam, adapters);
-    expect(calls).toEqual([]);
-    expect(result.manual.sort()).toEqual(["daesung", "ebs", "megastudy", "official"]);
+    expect(calls).toEqual(["megastudy"]);
+    expect(result.manual.sort()).toEqual(["daesung", "ebs", "official"]);
   });
 
   it("keeps official vs estimate distinction", () => {

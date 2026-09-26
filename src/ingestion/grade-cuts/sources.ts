@@ -37,9 +37,9 @@ export const GRADE_CUT_SOURCE_POLICIES: Record<GradeCutSource, GradeCutSourcePol
   megastudy: {
     source: "megastudy",
     isOfficial: false,
-    policy: "manual_only",
-    status: "disabled_unverified",
-    note: "사교육 업체 예상 등급컷. 자동 scraping 금지 — 공개·허용 범위 확인 후 수동 입력",
+    policy: "automated",
+    status: "automated_verified",
+    note: "공개 고3 사회탐구 원점수 표만 자동 수집 (그 외 과목은 수동 보정)",
   },
   daesung: {
     source: "daesung",

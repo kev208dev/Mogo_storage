@@ -1,11 +1,11 @@
 # 등급컷 자동 수집 검증 기록
 
-2026-09-25 기준. 광고/서비스 소개 문구는 실제 시험별 원점수 데이터 fixture로 취급하지 않습니다.
-검증된 공개 숫자, 시험 식별자, 과목 mapping을 확보할 때까지 adapter를 등록하지 않습니다.
+2026-09-26 기준. 광고 문구를 원점수 데이터 fixture로 취급하지 않습니다.
+검증된 상대평가 숫자, 시험 식별자, 과목 mapping을 확보한 범위만 adapter에 등록합니다.
 
 | 출처 | 공개 위치 | 공개 데이터/로그인 | 접근 정책·상태 | fixture / 자동 활성 |
 | --- | --- | --- | --- | --- |
-| 메가스터디 | https://m.megastudy.net/Entinfo/total_rankCut/main.asp | 로그인 없이 2026.07.08 고3 학력평가의 숫자 표 확인. 국어·수학은 표준점수, 영어·한국사는 원점수로 표시. 두 번째 시험의 숫자 응답과 탐구 course mapping 미확인 | m.megastudy.net robots 요청이 502, desktop robots는 브라우저에서 차단, `disabled_unverified` | 없음 / 꺼짐 |
+| 메가스터디 | https://m.megastudy.net/Entinfo/total_rankCut/main.asp | 로그인 없이 2026.07.08·06.04 고3 사회탐구 원점수 표 확인 | robots 허용, `automated_verified` (사회탐구만) | 실제 2건 / 켜짐 |
 | EBSi | https://www.ebsi.co.kr/ebs/xip/xipa/retrieveSCVPreparation.ebs?irecord=202609023&targetCd=D300 | 공개 사전준비 HTML은 서비스 안내와 과목 목록. 점수표 숫자는 확인하지 못함 | https://www.ebsi.co.kr/robots.txt의 `Disallow: /*.ajax$` 확인. `.ajax` 요청 금지. `disabled_policy` | 없음 / 꺼짐 |
 | 대성마이맥 | https://www.mimacstudy.com/hmockTest/HmockAnalysisExamPointCut.ds?groupNo=344 | 검색에 나타난 공식 도메인 등급컷 URL은 `Exception` 오류 화면. 실제 숫자·course mapping 미확인 | robots 조회 실패, `disabled_unverified` | 없음 / 꺼짐 |
 | 공식 | 평가원(KICE) 모의평가·수능, 주관 교육청 학력평가 원문 필요 | EBSi 역대 등급컷 페이지는 표준점수를 주관 교육청·평가원 출처로, 원점수 백분위를 EBSi 자체분석으로 명시. 공식 **원점수** 구분점수 원문 확인 전 자동 생성 금지 | `disabled_unverified` | 없음 / 꺼짐 |
@@ -24,30 +24,14 @@
 제2외국어/한문 학력평가는 해당 시험의 고정점수 체제 근거를 확인하기 전까지
 `unknown`으로 두어 폴링하거나 수능 고정표를 적용하지 않습니다.
 Mega에서 관찰한 영어·한국사 원점수는 상대평가 자동 수집 검증 근거가 아닙니다.
-상대평가 국어·수학·탐구의 실제 **원점수** 숫자와 mapping 확인이 여전히 필요합니다.
+고3 사회탐구의 실제 **원점수** 숫자와 mapping을 확인했습니다. 다른 영역은 검증 전까지 비활성입니다.
 
-## Mega 브라우저 검증 (2026-09-25)
+## Mega 공개 응답 검증 (2026-09-26)
 
-- 로그인하지 않은 기존 Chrome 탭에서 위 공개 URL의 실제 DOM을 읽음. 첫 화면은
-  `#examRankCutArea`의 `고3 2026.07.08 학력평가` 표이며, 시험 목록의 실제 선택 요소는
-  `#examNmArea li`이다. 선택 요소에 `fncSelExamSeq(357,'1',0)` 및
-  `fncSelExamSeq(356,'1',1)`이 노출되어 각각 2026.07.08 학력평가와
-  2026.06.04 모의평가를 가리킨다. 이 ID들은 다른 시험으로 일반화하지 않는다.
-- 실제 표 헤더: 국어·수학 `표준점수`, `백분위`; 영어·한국사 `원점수`.
-  첫 시험 영어 1등급 90, 한국사 1등급 40은 원점수로 표시된다.
-  국어 1등급 132는 표준점수이므로 `rawScore`에 넣을 수 없다.
-- 공개 페이지 inline script의 `fncSelExamSeq`는
-  `/Entinfo/total_rankCut/main_examRankCut_ax.asp`로 `examSeq`, `tabNo`를
-  jQuery POST하고 응답을 `#examRankCutArea`에 넣는다. 이는 브라우저가 표시를 위해
-  실제 호출하는 경로라는 구조 확인일 뿐, 자동 요청 허용 검증은 아니다.
-- UI에서 2026.06.04를 클릭하면 선택 요소만 바뀌고 표 제목은 2026.07.08로 남았다.
-  따라서 두 번째 시험 숫자 및 identity 일치를 확인할 수 없었다.
-- `https://m.megastudy.net/robots.txt`는 클라우드 브라우저에서 502
-  (connection refused), desktop robots는 브라우저 `ERR_BLOCKED_BY_CLIENT`.
-  공개 페이지의 robots 허용 여부와 위 POST 경로의 허용 여부를 확정할 수 없다.
-  데스크톱 등급컷 페이지도 이 브라우저에서 콘텐츠가 로드되지 않았다.
-- 사회/과학 탭의 원점수 표와 과목명·`courses.code` 매핑을 확인하지 못했다.
-  두 시험 fixture, parser, live adapter는 만들거나 등록하지 않는다.
-
-대성 URL은 공개 검색 응답에서 오류 페이지이며 브라우저 이동도 시간 초과입니다.
-EBSi는 `.ajax`를 요청하지 않았습니다. 가짜 수치 fixture는 생성하지 않았습니다.
+- 공개 URL: https://m.megastudy.net/Entinfo/total_rankCut/main.asp
+- `https://m.megastudy.net/robots.txt`는 HTTP 200, `User-agent: *`, `Allow: /`이며 `/Entinfo/total_rankCut/` 경로를 금지하지 않습니다.
+- 로그인·인증 쿠키 없이 메인 HTML을 GET하고, 그 페이지의 실제 inline script가 사용하는 `/Entinfo/total_rankCut/main_examRankCut_ax.asp`에 공개 파라미터 `examSeq`, `tabNo=2`로 POST하여 HTTP 200의 사회탐구 원점수 표를 받았습니다. 응답의 Set-Cookie는 재사용하지 않았습니다.
+- 시험 목록에서 `357`은 2026.07.08 고3 학력평가, `356`은 2026.06.04 고3 모의평가임을 확인했습니다. adapter는 매번 공개 목록에서 정확한 날짜·유형·학년을 대조하고 ID를 읽습니다. 목록에 없으면 건너뜁니다.
+- 두 시험의 사회문화 `원점수` 1등급은 각각 45, 48. 숫자 열에는 별도의 `표준점수` 열도 있으므로 원점수 헤더를 검증합니다. `tests/fixtures/grade-cuts/mega-357-social.html`, `mega-356-social.html`은 실제 응답에서 제목과 사회문화 표의 앞 3개 등급만 보존한 최소 조각입니다.
+- 활성 범위: 고3의 현행 상대평가 사회탐구 세부과목. 카탈로그에 존재하고 시험 체제에서 예상되는 course code만 처리합니다. 국어·수학의 표준점수, 영어·한국사 절대평가 값은 사용하지 않습니다.
+- 대성은 공개 숫자와 허용 범위를 확인하지 못해 `disabled_unverified`, EBS는 금지된 `.ajax` 요청을 사용하지 않으며 일반 HTML의 숫자가 확인되지 않아 `disabled_policy`입니다. 공식 rawScore 자료도 확인되지 않아 `disabled_unverified`입니다.

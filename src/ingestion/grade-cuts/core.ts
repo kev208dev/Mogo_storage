@@ -31,6 +31,8 @@ export interface CollectedGradeCut {
 export interface GradeCutAdapter {
   source: GradeCutSource;
   status: AdapterStatus;
+  /** Only slots backed by this source's verified public score structure. */
+  supports?(exam: WatchExam, slot: WatchSlot): boolean;
   collect(exam: WatchExam, slots: readonly WatchSlot[]): Promise<CollectedGradeCut[]>;
 }
 
@@ -134,9 +136,10 @@ export async function runGradeCutWatch(
     if (!verified.length) continue;
 
     const active = new Map(slots.map((slot) => [slotKey(slot), slot]));
+    const polled = new Set<string>();
     for (const adapter of verified) {
-      const requested = [...active.values()];
-      if (!requested.length) break;
+      const requested = [...active.values()].filter((slot) => adapter.supports?.(exam, slot) ?? true);
+      if (!requested.length) continue;
       const started = Date.now();
       let collected: CollectedGradeCut[];
       try {
@@ -156,9 +159,12 @@ export async function runGradeCutWatch(
         });
         continue;
       }
+      for (const slot of requested) polled.add(slotKey(slot));
       let changedCount = 0;
       let finalizedCount = 0;
+      const requestedKeys = new Set(requested.map(slotKey));
       for (const value of collected) {
+        if (!requestedKeys.has(slotKey(value))) continue;
         const slot = active.get(slotKey(value));
         if (!slot) continue; // wrong course or exam mapping must never create a DB row
         const changed = await store.save(exam, slot, adapter.source, value);
@@ -183,7 +189,7 @@ export async function runGradeCutWatch(
         durationMs: Date.now() - started,
       });
     }
-    for (const slot of slots) {
+    for (const slot of slots.filter((item) => polled.has(slotKey(item)))) {
       await store.markPolled(slot, now);
       result.polled++;
     }

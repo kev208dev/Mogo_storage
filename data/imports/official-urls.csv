@@ -13447,3 +13447,679 @@ year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,off
 2007,3,11,csat,2007-11-15,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20071115/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2007년 11월 고3 대학수학능력시험 러시아어Ⅰ 정답 및 해설
 2007,3,11,csat,2007-11-15,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20071115/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2007년 11월 고3 대학수학능력시험 스페인어Ⅰ 문제
 2007,3,11,csat,2007-11-15,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20071115/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2007년 11월 고3 대학수학능력시험 스페인어Ⅰ 정답 및 해설
+2006,1,3,school_mock,2006-03-09,서울특별시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060309/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 3월 고1 전국연합학력평가 국어 문제
+2006,1,3,school_mock,2006-03-09,서울특별시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060309/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 3월 고1 전국연합학력평가 국어 정답 및 해설
+2006,1,3,school_mock,2006-03-09,서울특별시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060309/math_mun.pdf,math_mun.pdf,EBSi 2006년 3월 고1 전국연합학력평가 수학 문제
+2006,1,3,school_mock,2006-03-09,서울특별시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060309/math_hsj.pdf,math_hsj.pdf,EBSi 2006년 3월 고1 전국연합학력평가 수학 정답 및 해설
+2006,1,3,school_mock,2006-03-09,서울특별시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060309/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 3월 고1 전국연합학력평가 영어 문제
+2006,1,3,school_mock,2006-03-09,서울특별시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060309/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 3월 고1 전국연합학력평가 영어 정답 및 해설
+2006,1,3,school_mock,2006-03-09,서울특별시교육청,social,social-science-studies,question,https://wdown.ebsi.co.kr/W61001/01exam/20060309/saga_mun.pdf,saga_mun.pdf,EBSi 2006년 3월 고1 전국연합학력평가 사회·과학탐구 문제
+2006,1,3,school_mock,2006-03-09,서울특별시교육청,social,social-science-studies,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060309/saga_hsj.pdf,saga_hsj.pdf,EBSi 2006년 3월 고1 전국연합학력평가 사회·과학탐구 정답 및 해설
+2006,1,6,school_mock,2006-06-01,부산광역시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060601/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 6월 고1 전국연합학력평가 국어 문제
+2006,1,6,school_mock,2006-06-01,부산광역시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060601/kor_hsj_1.pdf,kor_hsj_1.pdf,EBSi 2006년 6월 고1 전국연합학력평가 국어 정답 및 해설
+2006,1,6,school_mock,2006-06-01,부산광역시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060601/math_mun.pdf,math_mun.pdf,EBSi 2006년 6월 고1 전국연합학력평가 수학 문제
+2006,1,6,school_mock,2006-06-01,부산광역시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060601/math_hsj_1.pdf,math_hsj_1.pdf,EBSi 2006년 6월 고1 전국연합학력평가 수학 정답 및 해설
+2006,1,6,school_mock,2006-06-01,부산광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060601/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 6월 고1 전국연합학력평가 영어 문제
+2006,1,6,school_mock,2006-06-01,부산광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060601/eng_hsj_1.pdf,eng_hsj_1.pdf,EBSi 2006년 6월 고1 전국연합학력평가 영어 정답 및 해설
+2006,1,6,school_mock,2006-06-01,부산광역시교육청,social,social-science-studies,question,https://wdown.ebsi.co.kr/W61001/01exam/20060601/saga_mun.pdf,saga_mun.pdf,EBSi 2006년 6월 고1 전국연합학력평가 사회·과학탐구 문제
+2006,1,6,school_mock,2006-06-01,부산광역시교육청,social,social-science-studies,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060601/saga_hsj.pdf,saga_hsj.pdf,EBSi 2006년 6월 고1 전국연합학력평가 사회·과학탐구 정답 및 해설
+2006,1,9,school_mock,2006-09-23,인천광역시교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060923/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 9월 고1 전국연합학력평가 국어 문제
+2006,1,9,school_mock,2006-09-23,인천광역시교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060923/kor_hsj_2.pdf,kor_hsj_2.pdf,EBSi 2006년 9월 고1 전국연합학력평가 국어 정답 및 해설
+2006,1,9,school_mock,2006-09-23,인천광역시교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060923/math_mun.pdf,math_mun.pdf,EBSi 2006년 9월 고1 전국연합학력평가 수학 문제
+2006,1,9,school_mock,2006-09-23,인천광역시교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060923/math_hsj_2.pdf,math_hsj_2.pdf,EBSi 2006년 9월 고1 전국연합학력평가 수학 정답 및 해설
+2006,1,9,school_mock,2006-09-23,인천광역시교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060923/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 9월 고1 전국연합학력평가 영어 문제
+2006,1,9,school_mock,2006-09-23,인천광역시교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060923/eng_hsj_2.pdf,eng_hsj_2.pdf,EBSi 2006년 9월 고1 전국연합학력평가 영어 정답 및 해설
+2006,1,9,school_mock,2006-09-23,인천광역시교육청,social,social-science-studies,question,https://wdown.ebsi.co.kr/W61001/01exam/20060923/saga_mun.pdf,saga_mun.pdf,EBSi 2006년 9월 고1 전국연합학력평가 사회·과학탐구 문제
+2006,1,9,school_mock,2006-09-23,인천광역시교육청,social,social-science-studies,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060923/saga_hsj_2.pdf,saga_hsj_2.pdf,EBSi 2006년 9월 고1 전국연합학력평가 사회·과학탐구 정답 및 해설
+2006,1,11,school_mock,2006-11-21,경기도교육청,korean,,question,https://wdown.ebsi.co.kr/W61001/01exam/20061121/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 11월 고1 전국연합학력평가 국어 문제
+2006,1,11,school_mock,2006-11-21,경기도교육청,korean,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061121/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 11월 고1 전국연합학력평가 국어 정답 및 해설
+2006,1,11,school_mock,2006-11-21,경기도교육청,math,,question,https://wdown.ebsi.co.kr/W61001/01exam/20061121/math_mun.pdf,math_mun.pdf,EBSi 2006년 11월 고1 전국연합학력평가 수학 문제
+2006,1,11,school_mock,2006-11-21,경기도교육청,math,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061121/math_hsj.pdf,math_hsj.pdf,EBSi 2006년 11월 고1 전국연합학력평가 수학 정답 및 해설
+2006,1,11,school_mock,2006-11-21,경기도교육청,english,,question,https://wdown.ebsi.co.kr/W61001/01exam/20061121/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 11월 고1 전국연합학력평가 영어 문제
+2006,1,11,school_mock,2006-11-21,경기도교육청,english,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061121/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 11월 고1 전국연합학력평가 영어 정답 및 해설
+2006,1,11,school_mock,2006-11-21,경기도교육청,social,social-science-studies,question,https://wdown.ebsi.co.kr/W61001/01exam/20061121/saga_mun.pdf,saga_mun.pdf,EBSi 2006년 11월 고1 전국연합학력평가 사회·과학탐구 문제
+2006,1,11,school_mock,2006-11-21,경기도교육청,social,social-science-studies,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061121/saga_hsj.pdf,saga_hsj.pdf,EBSi 2006년 11월 고1 전국연합학력평가 사회·과학탐구 정답 및 해설
+2006,2,3,school_mock,2006-03-10,서울특별시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060310/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 3월 고2 전국연합학력평가 국어A형 문제
+2006,2,3,school_mock,2006-03-10,서울특별시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060310/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 3월 고2 전국연합학력평가 국어A형 정답 및 해설
+2006,2,3,school_mock,2006-03-10,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060310/math_mun.pdf,math_mun.pdf,EBSi 2006년 3월 고2 전국연합학력평가 수리가형 문제
+2006,2,3,school_mock,2006-03-10,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060310/math_hsj.pdf,math_hsj.pdf,EBSi 2006년 3월 고2 전국연합학력평가 수리가형 정답 및 해설
+2006,2,3,school_mock,2006-03-10,서울특별시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060310/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 3월 고2 전국연합학력평가 영어A 문제
+2006,2,3,school_mock,2006-03-10,서울특별시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060310/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 3월 고2 전국연합학력평가 영어A 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 국어A형 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/kor_hsj_1.pdf,kor_hsj_1.pdf,EBSi 2006년 6월 고2 전국연합학력평가 국어A형 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 수리가형 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/mathga_hsj_1.pdf,mathga_hsj_1.pdf,EBSi 2006년 6월 고2 전국연합학력평가 수리가형 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/mathna_mun.pdf,mathna_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 수리나형 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/mathna_hsj_1.pdf,mathna_hsj_1.pdf,EBSi 2006년 6월 고2 전국연합학력평가 수리나형 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 영어A 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/eng_hsj_1.pdf,eng_hsj_1.pdf,EBSi 2006년 6월 고2 전국연합학력평가 영어A 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_his_mun.pdf,s_his_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 한국사 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 한국사 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_hgh_mun.pdf,s_hgh_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 한국근·현대사 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 한국근·현대사 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_kyaji_mun.pdf,s_kyaji_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 경제지리 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 경제지리 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 경제 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 경제 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_eth_mun.pdf,s_eth_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 윤리 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 윤리 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 한국지리 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 한국지리 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 법과사회 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 법과사회 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_pol_mun.pdf,s_pol_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 정치 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 정치 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 사회문화 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 사회문화 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 세계지리 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 세계지리 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 세계사 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 6월 고2 전국연합학력평가 세계사 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 화학Ⅰ 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/g_che1_hsj_1.pdf,g_che1_hsj_1.pdf,EBSi 2006년 6월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/g_ear1_hsj_1.pdf,g_ear1_hsj_1.pdf,EBSi 2006년 6월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/g_bio1_hsj_1.pdf,g_bio1_hsj_1.pdf,EBSi 2006년 6월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060602/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 6월 고2 전국연합학력평가 물리Ⅰ 문제
+2006,2,6,school_mock,2006-06-02,부산광역시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060602/g_phy1_hsj_1.pdf,g_phy1_hsj_1.pdf,EBSi 2006년 6월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 국어A형 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 국어A형 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 수리가형 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 수리가형 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/mathna_mun.pdf,mathna_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 수리나형 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/mathna_hsj.pdf,mathna_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 수리나형 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 영어A 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 영어A 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_his_mun.pdf,s_his_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 한국사 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 한국사 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_hgh_mun.pdf,s_hgh_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 한국근·현대사 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 한국근·현대사 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_kyaji_mun.pdf,s_kyaji_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 경제지리 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 경제지리 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 경제 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 경제 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_eth_mun.pdf,s_eth_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 윤리 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 윤리 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 한국지리 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 한국지리 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 법과사회 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 법과사회 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_pol_mun.pdf,s_pol_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 정치 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 정치 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 사회문화 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 사회문화 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 세계지리 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 세계지리 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 세계사 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 세계사 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 화학Ⅰ 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060922/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 9월 고2 전국연합학력평가 물리Ⅰ 문제
+2006,2,9,school_mock,2006-09-22,인천광역시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060922/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2006년 9월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,korean,korean-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 국어A형 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,korean,korean-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 국어A형 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 수리가형 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 수리가형 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/mathna_mun.pdf,mathna_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 수리나형 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/mathna_hsj.pdf,mathna_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 수리나형 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,english,english-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 영어A 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,english,english-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 영어A 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_his_mun.pdf,s_his_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 한국사 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 한국사 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_hgh_mun.pdf,s_hgh_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 한국근·현대사 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 한국근·현대사 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_kyaji_mun.pdf,s_kyaji_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 경제지리 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 경제지리 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 경제 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 경제 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_eth_mun.pdf,s_eth_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 윤리 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 윤리 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 한국지리 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 한국지리 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 법과사회 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 법과사회 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_pol_mun.pdf,s_pol_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 정치 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 정치 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 사회문화 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 사회문화 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 세계지리 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 세계지리 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 세계사 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 세계사 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 화학Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 화학Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 지구과학Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 생명과학Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 물리Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 물리Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,accounting-principles,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic12_mun.pdf,j_jic12_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 회계원리 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,accounting-principles,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic12_hsj.pdf,j_jic12_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 회계원리 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,agriculture-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic10_mun.pdf,j_jic10_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 농업기초기술 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,agriculture-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic10_hsj.pdf,j_jic10_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 농업기초기술 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,agriculture-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic01_mun.pdf,j_jic01_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 농업정보관리 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,agriculture-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic01_hsj.pdf,j_jic01_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 농업정보관리 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,agriculture-understanding,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 농업이해 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,agriculture-understanding,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 농업이해 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,basic-drafting,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic11_mun.pdf,j_jic11_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 기초제도 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,basic-drafting,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic11_hsj.pdf,j_jic11_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 기초제도 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,commercial-economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 상업경제 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,commercial-economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 상업경제 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,design-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic02_mun.pdf,j_jic02_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 디자인일반 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,design-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic02_hsj.pdf,j_jic02_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 디자인일반 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,fisheries-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic03_mun.pdf,j_jic03_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 수산일반 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,fisheries-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic03_hsj.pdf,j_jic03_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 수산일반 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,fisheries-shipping-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 수산해운정보처리 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,fisheries-shipping-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 수산해운정보처리 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,food-and-nutrition,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic04_mun.pdf,j_jic04_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 식품과영양 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,food-and-nutrition,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic04_hsj.pdf,j_jic04_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 식품과영양 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,human-development,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 인간발달 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,human-development,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 인간발달 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,industry-intro,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 공업입문 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,industry-intro,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 공업입문 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,information-technology-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic05_mun.pdf,j_jic05_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 정보기술기초 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,information-technology-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic05_hsj.pdf,j_jic05_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 정보기술기초 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,maritime-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic07_mun.pdf,j_jic07_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 해사일반 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,maritime-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic07_hsj.pdf,j_jic07_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 해사일반 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,ocean-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 해양일반 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,ocean-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 해양일반 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,programming,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic06_mun.pdf,j_jic06_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 프로그래밍 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,vocational,programming,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/j_jic06_hsj.pdf,j_jic06_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 프로그래밍 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 중국어Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 중국어Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 한문 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 한문 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 프랑스어Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 프랑스어Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 독일어Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 독일어Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 일본어Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 일본어Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 러시아어Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 러시아어Ⅰ 정답 및 해설
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2006년 11월 고2 전국연합학력평가 스페인어Ⅰ 문제
+2006,2,11,school_mock,2006-11-22,경기도교육청,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061122/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2006년 11월 고2 전국연합학력평가 스페인어Ⅰ 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,korean,korean-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 언어 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,korean,korean-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 언어 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 수리가형 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 수리가형 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/mathna_mun.pdf,mathna_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 수리나형 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/mathna_hsj.pdf,mathna_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 수리나형 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,english,english-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 외국어 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,english,english-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 외국어 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_his_mun.pdf,s_his_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 한국사 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 한국사 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_hgh_mun.pdf,s_hgh_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 한국근·현대사 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 한국근·현대사 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_kyaji_mun.pdf,s_kyaji_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 경제지리 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 경제지리 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 경제 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_eth_mun.pdf,s_eth_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 윤리 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 윤리 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 한국지리 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 한국지리 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 법과사회 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 법과사회 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_pol_mun.pdf,s_pol_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 정치 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 정치 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 사회문화 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 사회문화 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 세계지리 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 세계지리 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 세계사 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 세계사 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 화학Ⅰ 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060311/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 3월 고3 전국연합학력평가 물리Ⅰ 문제
+2006,3,3,school_mock,2006-03-11,서울특별시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060311/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2006년 3월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,korean,korean-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 언어 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,korean,korean-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 언어 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 수리가형 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 수학가형 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 수학가형 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 수리가형 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 수학가형 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 수학가형 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/mathna_mun.pdf,mathna_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 수리나형 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/mathna_hsj.pdf,mathna_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 수리나형 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,english,english-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 외국어 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,english,english-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 외국어 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_his_mun.pdf,s_his_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 한국사 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 한국사 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_hgh_mun.pdf,s_hgh_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 한국근·현대사 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 한국근·현대사 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_kyaji_mun.pdf,s_kyaji_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 경제지리 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 경제지리 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 경제 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 경제 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_eth_mun.pdf,s_eth_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 윤리 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 윤리 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 한국지리 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 한국지리 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 법과사회 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 법과사회 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_pol_mun.pdf,s_pol_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 정치 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 정치 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 사회문화 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 사회문화 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 세계지리 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 세계지리 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 세계사 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 세계사 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 화학Ⅰ 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 화학Ⅱ 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 화학Ⅱ 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 지구과학Ⅱ 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 지구과학Ⅱ 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 생명과학Ⅱ 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 물리Ⅰ 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2006년 4월 고3 전국연합학력평가 물리Ⅱ 문제
+2006,3,4,school_mock,2006-04-19,경기도교육청,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060419/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2006년 4월 고3 전국연합학력평가 물리Ⅱ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,korean,korean-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 6월 고3 모의평가 언어 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,korean,korean-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 6월 고3 모의평가 언어 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 6월 고3 모의평가 수리가형 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 6월 고3 모의평가 수리가형 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 6월 고3 모의평가 수학가형 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 6월 고3 모의평가 수학가형 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/mathna_mun.pdf,mathna_mun.pdf,EBSi 2006년 6월 고3 모의평가 수리나형 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/mathna_hsj.pdf,mathna_hsj.pdf,EBSi 2006년 6월 고3 모의평가 수리나형 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,english,english-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 6월 고3 모의평가 외국어 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,english,english-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 6월 고3 모의평가 외국어 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_his.pdf,s_his.pdf,EBSi 2006년 6월 고3 모의평가 한국사 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 6월 고3 모의평가 한국사 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_hgh.pdf,s_hgh.pdf,EBSi 2006년 6월 고3 모의평가 한국근·현대사 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 6월 고3 모의평가 한국근·현대사 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_kyaji.pdf,s_kyaji.pdf,EBSi 2006년 6월 고3 모의평가 경제지리 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 6월 고3 모의평가 경제지리 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_eco.pdf,s_eco.pdf,EBSi 2006년 6월 고3 모의평가 경제 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2006년 6월 고3 모의평가 경제 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_eth.pdf,s_eth.pdf,EBSi 2006년 6월 고3 모의평가 윤리 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 6월 고3 모의평가 윤리 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_hanji.pdf,s_hanji.pdf,EBSi 2006년 6월 고3 모의평가 한국지리 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 6월 고3 모의평가 한국지리 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_bns.pdf,s_bns.pdf,EBSi 2006년 6월 고3 모의평가 법과사회 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 6월 고3 모의평가 법과사회 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_pol.pdf,s_pol.pdf,EBSi 2006년 6월 고3 모의평가 정치 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 6월 고3 모의평가 정치 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_samun.pdf,s_samun.pdf,EBSi 2006년 6월 고3 모의평가 사회문화 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 6월 고3 모의평가 사회문화 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_saeji.pdf,s_saeji.pdf,EBSi 2006년 6월 고3 모의평가 세계지리 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 6월 고3 모의평가 세계지리 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_sks.pdf,s_sks.pdf,EBSi 2006년 6월 고3 모의평가 세계사 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 6월 고3 모의평가 세계사 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 6월 고3 모의평가 화학Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 화학Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2006년 6월 고3 모의평가 화학Ⅱ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2006년 6월 고3 모의평가 화학Ⅱ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 6월 고3 모의평가 지구과학Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 지구과학Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2006년 6월 고3 모의평가 지구과학Ⅱ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2006년 6월 고3 모의평가 지구과학Ⅱ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 6월 고3 모의평가 생명과학Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 생명과학Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2006년 6월 고3 모의평가 생명과학Ⅱ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2006년 6월 고3 모의평가 생명과학Ⅱ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 6월 고3 모의평가 물리Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 물리Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2006년 6월 고3 모의평가 물리Ⅱ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2006년 6월 고3 모의평가 물리Ⅱ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,accounting-principles,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic12_mun.pdf,j_jic12_mun.pdf,EBSi 2006년 6월 고3 모의평가 회계원리 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,accounting-principles,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic12_hsj.pdf,j_jic12_hsj.pdf,EBSi 2006년 6월 고3 모의평가 회계원리 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,agriculture-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic10_mun.pdf,j_jic10_mun.pdf,EBSi 2006년 6월 고3 모의평가 농업기초기술 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,agriculture-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic10_hsj.pdf,j_jic10_hsj.pdf,EBSi 2006년 6월 고3 모의평가 농업기초기술 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,agriculture-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic01_mun.pdf,j_jic01_mun.pdf,EBSi 2006년 6월 고3 모의평가 농업정보관리 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,agriculture-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic01_hsj.pdf,j_jic01_hsj.pdf,EBSi 2006년 6월 고3 모의평가 농업정보관리 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,agriculture-understanding,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2006년 6월 고3 모의평가 농업이해 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,agriculture-understanding,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2006년 6월 고3 모의평가 농업이해 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,basic-drafting,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic11_mun.pdf,j_jic11_mun.pdf,EBSi 2006년 6월 고3 모의평가 기초제도 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,basic-drafting,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic11_hsj.pdf,j_jic11_hsj.pdf,EBSi 2006년 6월 고3 모의평가 기초제도 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,commercial-economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2006년 6월 고3 모의평가 상업경제 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,commercial-economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2006년 6월 고3 모의평가 상업경제 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,computer-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic08_mun.pdf,j_jic08_mun.pdf,EBSi 2006년 6월 고3 모의평가 컴퓨터일반 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,computer-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic08_hsj.pdf,j_jic08_hsj.pdf,EBSi 2006년 6월 고3 모의평가 컴퓨터일반 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,design-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic02_mun.pdf,j_jic02_mun.pdf,EBSi 2006년 6월 고3 모의평가 디자인일반 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,design-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic02_hsj.pdf,j_jic02_hsj.pdf,EBSi 2006년 6월 고3 모의평가 디자인일반 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,fisheries-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic03_mun.pdf,j_jic03_mun.pdf,EBSi 2006년 6월 고3 모의평가 수산일반 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,fisheries-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic03_hsj.pdf,j_jic03_hsj.pdf,EBSi 2006년 6월 고3 모의평가 수산일반 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,fisheries-shipping-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 6월 고3 모의평가 수산해운정보처리 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,fisheries-shipping-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 6월 고3 모의평가 수산해운정보처리 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,food-and-nutrition,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic04_mun.pdf,j_jic04_mun.pdf,EBSi 2006년 6월 고3 모의평가 식품과영양 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,food-and-nutrition,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic04_hsj.pdf,j_jic04_hsj.pdf,EBSi 2006년 6월 고3 모의평가 식품과영양 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,human-development,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2006년 6월 고3 모의평가 인간발달 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,human-development,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2006년 6월 고3 모의평가 인간발달 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,industry-intro,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2006년 6월 고3 모의평가 공업입문 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,information-technology-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic05_mun.pdf,j_jic05_mun.pdf,EBSi 2006년 6월 고3 모의평가 정보기술기초 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,information-technology-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic05_hsj.pdf,j_jic05_hsj.pdf,EBSi 2006년 6월 고3 모의평가 정보기술기초 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,maritime-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic07_mun.pdf,j_jic07_mun.pdf,EBSi 2006년 6월 고3 모의평가 해사일반 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,maritime-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic07_hsj.pdf,j_jic07_hsj.pdf,EBSi 2006년 6월 고3 모의평가 해사일반 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,ocean-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 6월 고3 모의평가 해양일반 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,ocean-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 6월 고3 모의평가 해양일반 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,programming,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic06_mun.pdf,j_jic06_mun.pdf,EBSi 2006년 6월 고3 모의평가 프로그래밍 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,vocational,programming,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/j_jic06_hsj.pdf,j_jic06_hsj.pdf,EBSi 2006년 6월 고3 모의평가 프로그래밍 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_ar1_mun.pdf,2nd_ar1_mun.pdf,EBSi 2006년 6월 고3 모의평가 아랍어Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_ar1_hsj.pdf,2nd_ar1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 아랍어Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2006년 6월 고3 모의평가 중국어Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 중국어Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2006년 6월 고3 모의평가 한문 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2006년 6월 고3 모의평가 한문 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2006년 6월 고3 모의평가 프랑스어Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 프랑스어Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2006년 6월 고3 모의평가 독일어Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 독일어Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2006년 6월 고3 모의평가 일본어Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 일본어Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2006년 6월 고3 모의평가 러시아어Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 러시아어Ⅰ 정답 및 해설
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2006년 6월 고3 모의평가 스페인어Ⅰ 문제
+2006,3,6,kice_mock,2006-06-03,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060603/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2006년 6월 고3 모의평가 스페인어Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,korean,korean-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 9월 고3 모의평가 언어 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,korean,korean-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 9월 고3 모의평가 언어 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 9월 고3 모의평가 수리가형 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 9월 고3 모의평가 수학가형 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 9월 고3 모의평가 수학가형 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 9월 고3 모의평가 수학가형 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/mathna_mun.pdf,mathna_mun.pdf,EBSi 2006년 9월 고3 모의평가 수리나형 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/mathna_hsj.pdf,mathna_hsj.pdf,EBSi 2006년 9월 고3 모의평가 수리나형 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,english,english-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 9월 고3 모의평가 외국어 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,english,english-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 9월 고3 모의평가 외국어 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_his_mun.pdf,s_his_mun.pdf,EBSi 2006년 9월 고3 모의평가 한국사 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 9월 고3 모의평가 한국사 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_hgh_mun.pdf,s_hgh_mun.pdf,EBSi 2006년 9월 고3 모의평가 한국근·현대사 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 9월 고3 모의평가 한국근·현대사 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_kyaji_mun.pdf,s_kyaji_mun.pdf,EBSi 2006년 9월 고3 모의평가 경제지리 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 9월 고3 모의평가 경제지리 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2006년 9월 고3 모의평가 경제 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2006년 9월 고3 모의평가 경제 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_eth_mun.pdf,s_eth_mun.pdf,EBSi 2006년 9월 고3 모의평가 윤리 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 9월 고3 모의평가 윤리 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2006년 9월 고3 모의평가 한국지리 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 9월 고3 모의평가 한국지리 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2006년 9월 고3 모의평가 법과사회 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 9월 고3 모의평가 법과사회 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_pol_mun.pdf,s_pol_mun.pdf,EBSi 2006년 9월 고3 모의평가 정치 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 9월 고3 모의평가 정치 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2006년 9월 고3 모의평가 사회문화 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 9월 고3 모의평가 사회문화 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2006년 9월 고3 모의평가 세계지리 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 9월 고3 모의평가 세계지리 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2006년 9월 고3 모의평가 세계사 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 9월 고3 모의평가 세계사 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 9월 고3 모의평가 화학Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 화학Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2006년 9월 고3 모의평가 화학Ⅱ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2006년 9월 고3 모의평가 화학Ⅱ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 9월 고3 모의평가 지구과학Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 지구과학Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2006년 9월 고3 모의평가 지구과학Ⅱ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2006년 9월 고3 모의평가 지구과학Ⅱ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 9월 고3 모의평가 생명과학Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 생명과학Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2006년 9월 고3 모의평가 생명과학Ⅱ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2006년 9월 고3 모의평가 생명과학Ⅱ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 9월 고3 모의평가 물리Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 물리Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2006년 9월 고3 모의평가 물리Ⅱ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2006년 9월 고3 모의평가 물리Ⅱ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,accounting-principles,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic12_mun.pdf,j_jic12_mun.pdf,EBSi 2006년 9월 고3 모의평가 회계원리 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,accounting-principles,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic12_hsj.pdf,j_jic12_hsj.pdf,EBSi 2006년 9월 고3 모의평가 회계원리 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,agriculture-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic10_mun.pdf,j_jic10_mun.pdf,EBSi 2006년 9월 고3 모의평가 농업기초기술 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,agriculture-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic10_hsj.pdf,j_jic10_hsj.pdf,EBSi 2006년 9월 고3 모의평가 농업기초기술 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,agriculture-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic01_mun.pdf,j_jic01_mun.pdf,EBSi 2006년 9월 고3 모의평가 농업정보관리 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,agriculture-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic01_hsj.pdf,j_jic01_hsj.pdf,EBSi 2006년 9월 고3 모의평가 농업정보관리 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,agriculture-understanding,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2006년 9월 고3 모의평가 농업이해 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,agriculture-understanding,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2006년 9월 고3 모의평가 농업이해 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,basic-drafting,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic11_mun.pdf,j_jic11_mun.pdf,EBSi 2006년 9월 고3 모의평가 기초제도 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,basic-drafting,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic11_hsj.pdf,j_jic11_hsj.pdf,EBSi 2006년 9월 고3 모의평가 기초제도 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,commercial-economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2006년 9월 고3 모의평가 상업경제 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,commercial-economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2006년 9월 고3 모의평가 상업경제 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,computer-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic08_mun.pdf,j_jic08_mun.pdf,EBSi 2006년 9월 고3 모의평가 컴퓨터일반 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,computer-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic08_hsj.pdf,j_jic08_hsj.pdf,EBSi 2006년 9월 고3 모의평가 컴퓨터일반 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,design-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic02_mun.pdf,j_jic02_mun.pdf,EBSi 2006년 9월 고3 모의평가 디자인일반 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,design-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic02_hsj.pdf,j_jic02_hsj.pdf,EBSi 2006년 9월 고3 모의평가 디자인일반 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,fisheries-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic03_mun.pdf,j_jic03_mun.pdf,EBSi 2006년 9월 고3 모의평가 수산일반 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,fisheries-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic03_hsj.pdf,j_jic03_hsj.pdf,EBSi 2006년 9월 고3 모의평가 수산일반 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,fisheries-shipping-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 9월 고3 모의평가 수산해운정보처리 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,fisheries-shipping-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 9월 고3 모의평가 수산해운정보처리 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,food-and-nutrition,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic04_mun.pdf,j_jic04_mun.pdf,EBSi 2006년 9월 고3 모의평가 식품과영양 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,food-and-nutrition,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic04_hsj.pdf,j_jic04_hsj.pdf,EBSi 2006년 9월 고3 모의평가 식품과영양 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,human-development,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2006년 9월 고3 모의평가 인간발달 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,human-development,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2006년 9월 고3 모의평가 인간발달 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,industry-intro,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2006년 9월 고3 모의평가 공업입문 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,industry-intro,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2006년 9월 고3 모의평가 공업입문 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,information-technology-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic05_mun.pdf,j_jic05_mun.pdf,EBSi 2006년 9월 고3 모의평가 정보기술기초 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,information-technology-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic05_hsj.pdf,j_jic05_hsj.pdf,EBSi 2006년 9월 고3 모의평가 정보기술기초 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,maritime-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic07_mun.pdf,j_jic07_mun.pdf,EBSi 2006년 9월 고3 모의평가 해사일반 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,maritime-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic07_hsj.pdf,j_jic07_hsj.pdf,EBSi 2006년 9월 고3 모의평가 해사일반 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,ocean-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 9월 고3 모의평가 해양일반 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,ocean-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 9월 고3 모의평가 해양일반 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,programming,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic06_mun.pdf,j_jic06_mun.pdf,EBSi 2006년 9월 고3 모의평가 프로그래밍 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,vocational,programming,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/j_jic06_hsj.pdf,j_jic06_hsj.pdf,EBSi 2006년 9월 고3 모의평가 프로그래밍 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_ar1_mun.pdf,2nd_ar1_mun.pdf,EBSi 2006년 9월 고3 모의평가 아랍어Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_ar1_hsj.pdf,2nd_ar1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 아랍어Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2006년 9월 고3 모의평가 중국어Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 중국어Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2006년 9월 고3 모의평가 한문 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2006년 9월 고3 모의평가 한문 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2006년 9월 고3 모의평가 프랑스어Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 프랑스어Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2006년 9월 고3 모의평가 독일어Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 독일어Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2006년 9월 고3 모의평가 일본어Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 일본어Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2006년 9월 고3 모의평가 러시아어Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 러시아어Ⅰ 정답 및 해설
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2006년 9월 고3 모의평가 스페인어Ⅰ 문제
+2006,3,9,kice_mock,2006-09-06,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20060906/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2006년 9월 고3 모의평가 스페인어Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,korean,korean-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/kor_mun.pdf,kor_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 언어 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,korean,korean-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/kor_hsj.pdf,kor_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 언어 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수리가형 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수학가형 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/mathga_mun.pdf,mathga_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수학가형 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수리가형 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수학가형 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/mathga_hsj.pdf,mathga_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수학가형 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/mathna_mun.pdf,mathna_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수리나형 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/mathna_hsj.pdf,mathna_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수리나형 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,english,english-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/eng_mun.pdf,eng_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 외국어 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,english,english-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/eng_hsj.pdf,eng_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 외국어 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_his_mun.pdf,s_his_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 한국사 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 한국사 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_hgh_mun.pdf,s_hgh_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 한국근·현대사 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 한국근·현대사 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_kyaji_mun.pdf,s_kyaji_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 경제지리 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 경제지리 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 경제 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 경제 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_eth_mun.pdf,s_eth_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 윤리 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 윤리 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 한국지리 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 한국지리 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 법과사회 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 법과사회 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_pol_mun.pdf,s_pol_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 정치 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 정치 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 사회문화 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 사회문화 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 세계지리 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 세계지리 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 세계사 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 세계사 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 화학Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 화학Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 화학Ⅱ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 화학Ⅱ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 지구과학Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 지구과학Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 지구과학Ⅱ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 지구과학Ⅱ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 생명과학Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 생명과학Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 생명과학Ⅱ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 생명과학Ⅱ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 물리Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 물리Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 물리Ⅱ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 물리Ⅱ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,accounting-principles,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic12_mun.pdf,j_jic12_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 회계원리 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,accounting-principles,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic12_hsj.pdf,j_jic12_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 회계원리 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,agriculture-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic10_mun.pdf,j_jic10_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 농업기초기술 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,agriculture-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic10_hsj.pdf,j_jic10_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 농업기초기술 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,agriculture-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic01_mun.pdf,j_jic01_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 농업정보관리 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,agriculture-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic01_hsj.pdf,j_jic01_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 농업정보관리 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,agriculture-understanding,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 농업이해 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,agriculture-understanding,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 농업이해 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,basic-drafting,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic11_mun.pdf,j_jic11_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 기초제도 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,basic-drafting,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic11_hsj.pdf,j_jic11_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 기초제도 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,commercial-economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 상업경제 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,commercial-economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 상업경제 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,computer-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic08_mun.pdf,j_jic08_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 컴퓨터일반 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,computer-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic08_hsj.pdf,j_jic08_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 컴퓨터일반 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,design-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic02_mun.pdf,j_jic02_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 디자인일반 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,design-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic02_hsj.pdf,j_jic02_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 디자인일반 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,fisheries-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic03_mun.pdf,j_jic03_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수산일반 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,fisheries-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic03_hsj.pdf,j_jic03_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수산일반 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,fisheries-shipping-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수산해운정보처리 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,fisheries-shipping-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 수산해운정보처리 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,food-and-nutrition,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic04_mun.pdf,j_jic04_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 식품과영양 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,food-and-nutrition,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic04_hsj.pdf,j_jic04_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 식품과영양 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,human-development,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 인간발달 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,human-development,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 인간발달 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,industry-intro,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 공업입문 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,industry-intro,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 공업입문 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,information-technology-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic05_mun.pdf,j_jic05_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 정보기술기초 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,information-technology-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic05_hsj.pdf,j_jic05_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 정보기술기초 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,maritime-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic07_mun.pdf,j_jic07_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 해사일반 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,maritime-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic07_hsj.pdf,j_jic07_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 해사일반 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,ocean-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 해양일반 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,ocean-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 해양일반 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,programming,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic06_mun.pdf,j_jic06_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 프로그래밍 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,vocational,programming,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/j_jic06_hsj.pdf,j_jic06_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 프로그래밍 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 중국어Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 중국어Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 한문 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 한문 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 프랑스어Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 프랑스어Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 독일어Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 독일어Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 일본어Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 일본어Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 러시아어Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 러시아어Ⅰ 정답 및 해설
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2006년 10월 고3 전국연합학력평가 스페인어Ⅰ 문제
+2006,3,10,school_mock,2006-10-12,서울특별시교육청,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061012/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2006년 10월 고3 전국연합학력평가 스페인어Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,korean,korean-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/kor1_mun.pdf,kor1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 언어 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,korean,korean-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/kor1_hsj.pdf,kor1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 언어 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathga1_mun.pdf,mathga1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수리가형 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,math,math-a,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathga1_mun.pdf,mathga1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수학가형 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathga1_hsj.pdf,mathga1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수리가형 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,math,math-a,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathga1_hsj.pdf,mathga1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수학가형 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,math,math-b,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathna1_mun.pdf,mathna1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수리나형 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,math,math-b,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/mathna2_hsj.pdf,mathna2_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수리나형 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,english,english-old,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/eng1_mun.pdf,eng1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 외국어 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,english,english-old,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/eng1_hsj.pdf,eng1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 외국어 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,history,,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_his_mun.pdf,s_his_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 한국사 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,history,,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_his_hsj.pdf,s_his_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 한국사 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,history,korean-modern-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_hgh_mun.pdf,s_hgh_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 한국근·현대사 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,history,korean-modern-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_hgh_hsj.pdf,s_hgh_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 한국근·현대사 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,economic-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_kyaji_mun.pdf,s_kyaji_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 경제지리 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,economic-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_kyaji_hsj.pdf,s_kyaji_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 경제지리 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_eco_mun.pdf,s_eco_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 경제 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_eco_hsj.pdf,s_eco_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 경제 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,ethics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_eth_mun.pdf,s_eth_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 윤리 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,ethics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_eth_hsj.pdf,s_eth_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 윤리 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,korean-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_hanji_mun.pdf,s_hanji_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 한국지리 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,korean-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_hanji_hsj.pdf,s_hanji_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 한국지리 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,law-and-society,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_bns_mun.pdf,s_bns_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 법과사회 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,law-and-society,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_bns_hsj.pdf,s_bns_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 법과사회 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,politics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_pol_mun.pdf,s_pol_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 정치 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,politics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_pol_hsj.pdf,s_pol_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 정치 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,social-culture,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_samun_mun.pdf,s_samun_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 사회문화 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,social-culture,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_samun_hsj.pdf,s_samun_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 사회문화 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,world-geography,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_saeji_mun.pdf,s_saeji_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 세계지리 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,world-geography,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_saeji_hsj.pdf,s_saeji_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 세계지리 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,world-history,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_sks_mun.pdf,s_sks_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 세계사 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,social,world-history,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/s_sks_hsj.pdf,s_sks_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 세계사 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,chemistry-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_che1_mun.pdf,g_che1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 화학Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,chemistry-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_che1_hsj.pdf,g_che1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 화학Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,chemistry-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_che2_mun.pdf,g_che2_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 화학Ⅱ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,chemistry-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_che2_hsj.pdf,g_che2_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 화학Ⅱ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,earth-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_ear1_mun.pdf,g_ear1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 지구과학Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,earth-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_ear1_hsj.pdf,g_ear1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 지구과학Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,earth-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_ear2_mun.pdf,g_ear2_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 지구과학Ⅱ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,earth-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_ear2_hsj.pdf,g_ear2_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 지구과학Ⅱ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,life-science-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_bio1_mun.pdf,g_bio1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 생명과학Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,life-science-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_bio1_hsj.pdf,g_bio1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 생명과학Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,life-science-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_bio2_mun.pdf,g_bio2_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 생명과학Ⅱ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,life-science-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_bio2_hsj.pdf,g_bio2_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 생명과학Ⅱ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,physics-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_phy1_mun.pdf,g_phy1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 물리Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,physics-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_phy1_hsj.pdf,g_phy1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 물리Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,physics-2,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_phy2_mun.pdf,g_phy2_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 물리Ⅱ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,science,physics-2,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/g_phy2_hsj.pdf,g_phy2_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 물리Ⅱ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,accounting-principles,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic12_mun.pdf,j_jic12_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 회계원리 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,accounting-principles,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic12_hsj.pdf,j_jic12_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 회계원리 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,agriculture-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic10_mun.pdf,j_jic10_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 농업기초기술 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,agriculture-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic10_hsj.pdf,j_jic10_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 농업기초기술 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,agriculture-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic01_mun.pdf,j_jic01_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 농업정보관리 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,agriculture-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic01_hsj.pdf,j_jic01_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 농업정보관리 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,agriculture-understanding,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_nsmsup_mun.pdf,J_nsmsup_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 농업이해 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,agriculture-understanding,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_nsmsup_hsj.pdf,J_nsmsup_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 농업이해 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,basic-drafting,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic11_mun.pdf,j_jic11_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 기초제도 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,basic-drafting,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic11_hsj.pdf,j_jic11_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 기초제도 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,commercial-economics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_supjb_mun.pdf,J_supjb_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 상업경제 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,commercial-economics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_supjb_hsj.pdf,J_supjb_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 상업경제 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,computer-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic08_mun.pdf,j_jic08_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 컴퓨터일반 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,computer-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic08_hsj.pdf,j_jic08_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 컴퓨터일반 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,design-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic02_mun.pdf,j_jic02_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 디자인일반 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,design-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic02_hsj.pdf,j_jic02_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 디자인일반 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,fisheries-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic03_mun.pdf,j_jic03_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수산일반 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,fisheries-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic03_hsj.pdf,j_jic03_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수산일반 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,fisheries-shipping-information,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수산해운정보처리 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,fisheries-shipping-information,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 수산해운정보처리 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,food-and-nutrition,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic04_mun.pdf,j_jic04_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 식품과영양 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,food-and-nutrition,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic04_hsj.pdf,j_jic04_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 식품과영양 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,human-development,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_gsnsup_mun.pdf,J_gsnsup_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 인간발달 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,human-development,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_gsnsup_hsj.pdf,J_gsnsup_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 인간발달 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,industry-intro,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_gup_mun.pdf,J_gup_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 공업입문 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,industry-intro,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_gup_hsj.pdf,J_gup_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 공업입문 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,information-technology-basics,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic05_mun.pdf,j_jic05_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 정보기술기초 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,information-technology-basics,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic05_hsj.pdf,j_jic05_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 정보기술기초 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,maritime-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic07_mun.pdf,j_jic07_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 해사일반 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,maritime-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic07_hsj.pdf,j_jic07_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 해사일반 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,ocean-general,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_ssnw_mun.pdf,J_ssnw_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 해양일반 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,ocean-general,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/J_ssnw_hsj.pdf,J_ssnw_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 해양일반 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,programming,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic06_mun.pdf,j_jic06_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 프로그래밍 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,vocational,programming,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/j_jic06_hsj.pdf,j_jic06_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 프로그래밍 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,arabic-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_ar1_mun.pdf,2nd_ar1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 아랍어Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,arabic-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_ar1_hsj.pdf,2nd_ar1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 아랍어Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_ch1_mun.pdf,2nd_ch1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 중국어Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_ch1_hsj.pdf,2nd_ch1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 중국어Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,classical-chinese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_han_mun.pdf,2nd_han_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 한문 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,classical-chinese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_han_hsj.pdf,2nd_han_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 한문 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,french-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_fr1_mun.pdf,2nd_fr1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 프랑스어Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,french-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_fr1_hsj.pdf,2nd_fr1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 프랑스어Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,german-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_gr1_mun.pdf,2nd_gr1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 독일어Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,german-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_gr1_hsj.pdf,2nd_gr1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 독일어Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,japanese-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_ja1_mun.pdf,2nd_ja1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 일본어Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,japanese-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_ja1_hsj.pdf,2nd_ja1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 일본어Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,russian-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_ru1_mun.pdf,2nd_ru1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 러시아어Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,russian-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_ru1_hsj.pdf,2nd_ru1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 러시아어Ⅰ 정답 및 해설
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,spanish-1,question,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_sp1_mun.pdf,2nd_sp1_mun.pdf,EBSi 2006년 11월 고3 대학수학능력시험 스페인어Ⅰ 문제
+2006,3,11,csat,2006-11-16,한국교육과정평가원,second_language,spanish-1,solution,https://wdown.ebsi.co.kr/W61001/01exam/20061116/2nd_sp1_hsj.pdf,2nd_sp1_hsj.pdf,EBSi 2006년 11월 고3 대학수학능력시험 스페인어Ⅰ 정답 및 해설

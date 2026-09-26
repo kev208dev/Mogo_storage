@@ -26,28 +26,34 @@ export function findMegaExamSeq(page: string, exam: WatchExam): string | null {
   return match?.[1] ?? null;
 }
 
-function socialCourse(labelText: string) {
+function relativeCourse(labelText: string, subject: "social" | "science") {
   const name = label(labelText);
-  return COURSE_CATALOG.find((course) => course.subject === "social" &&
+  return COURSE_CATALOG.find((course) => course.subject === subject &&
     [course.name, ...course.aliases].some((alias) => label(alias) === name));
 }
 
-/** The social tab has an explicit 원점수 column; core tab standard scores are never used as rawScore. */
-export function parseMegaSocialFragment(
+/** Both inquiry tabs have an explicit 원점수 column. Never infer raw scores from standard scores. */
+export function parseMegaInquiryFragment(
   fragment: string,
   exam: WatchExam,
   slots: readonly WatchSlot[],
   observedAt: Date,
+  subject: "social" | "science",
 ): CollectedGradeCut[] {
   const root = parse(fragment);
   if (label(root.querySelector("h4.areaLogo")?.text ?? "") !== identity(exam))
     throw new Error("MegaStudy exam identity mismatch");
-  const requested = new Set(slots.filter((slot) => megaStudyAdapter.supports?.(exam, slot)).map(slotKey));
+  const requested = new Set(slots.filter((slot) => slot.subject === subject && megaStudyAdapter.supports?.(exam, slot)).map(slotKey));
   const result: CollectedGradeCut[] = [];
   const seen = new Set<string>();
   for (const table of root.querySelectorAll("table.tb_basic")) {
-    const course = socialCourse(table.querySelector("th.sb_th")?.text ?? "");
-    if (!course || !requested.has(`social:${course.code}`)) continue;
+    const displayed = table.querySelector("th.sb_th")?.text ?? "";
+    const course = relativeCourse(displayed, subject);
+    if (!course) {
+      console.warn(JSON.stringify({ event: "grade_cut_watch.unknown_course", source: "megastudy", subject, label: displayed.slice(0, 80) }));
+      continue;
+    }
+    if (!requested.has(`${subject}:${course.code}`)) continue;
     if (seen.has(course.code)) throw new Error("duplicate MegaStudy course table");
     seen.add(course.code);
     const headers = table.querySelectorAll("thead tr").at(-1)?.querySelectorAll("th").map((th) => label(th.text));
@@ -61,10 +67,15 @@ export function parseMegaSocialFragment(
         throw new Error("malformed MegaStudy grade row");
       return [{ grade: Number(gradeText[0]), rawScore: Number(cells[1]!.text.trim()) }];
     });
-    if (!cuts.length || cuts.some((cut) => cut.rawScore > 50)) throw new Error("invalid social raw score");
-    result.push({ subject: "social", courseCode: course.code, cuts: normalizeCuts(cuts), sourceUrl: PAGE, observedAt });
+    if (!cuts.length || cuts.some((cut) => cut.rawScore > 50)) throw new Error("invalid inquiry raw score");
+    result.push({ subject, courseCode: course.code, cuts: normalizeCuts(cuts), sourceUrl: PAGE, observedAt });
   }
   return result;
+}
+
+/** Preserve the existing social parser contract for callers and tests. */
+export function parseMegaSocialFragment(fragment: string, exam: WatchExam, slots: readonly WatchSlot[], observedAt: Date) {
+  return parseMegaInquiryFragment(fragment, exam, slots, observedAt, "social");
 }
 
 async function publicHtml(url: string, init?: RequestInit) {
@@ -78,19 +89,24 @@ async function publicHtml(url: string, init?: RequestInit) {
 export const megaStudyAdapter: GradeCutAdapter = {
   source: "megastudy",
   status: "automated_verified",
-  supports: (exam, slot) => exam.grade === 3 && slot.subject === "social" && !!slot.courseCode &&
+  supports: (exam, slot) => exam.grade === 3 && (slot.subject === "social" || slot.subject === "science") && !!slot.courseCode &&
     courseExpectation(slot.courseCode, exam) === "expected" &&
-    !!COURSE_CATALOG.find((course) => course.subject === "social" && course.code === slot.courseCode),
+    !!COURSE_CATALOG.find((course) => course.subject === slot.subject && course.code === slot.courseCode),
   async collect(exam, slots) {
     if (!slots.some((slot) => this.supports?.(exam, slot))) return [];
     const seq = findMegaExamSeq(await publicHtml(PAGE), exam);
     if (!seq) return []; // The exam has not yet appeared on the public selector.
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    const fragment = await publicHtml(FRAGMENT, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
-      body: new URLSearchParams({ examSeq: seq, tabNo: "2" }),
-    });
-    return parseMegaSocialFragment(fragment, exam, slots, new Date());
+    const collected: CollectedGradeCut[] = [];
+    for (const subject of ["social", "science"] as const) {
+      if (!slots.some((slot) => slot.subject === subject && this.supports?.(exam, slot))) continue;
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      const fragment = await publicHtml(FRAGMENT, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
+        body: new URLSearchParams({ examSeq: seq, tabNo: subject === "social" ? "2" : "3" }),
+      });
+      collected.push(...parseMegaInquiryFragment(fragment, exam, slots, new Date(), subject));
+    }
+    return collected;
   },
 };

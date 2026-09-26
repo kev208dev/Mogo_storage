@@ -5,9 +5,9 @@
 
 | 출처 | 공개 위치 | 공개 데이터/로그인 | 접근 정책·상태 | fixture / 자동 활성 |
 | --- | --- | --- | --- | --- |
-| 메가스터디 | https://m.megastudy.net/Entinfo/total_rankCut/main.asp | 로그인 없이 2026.07.08·06.04 고3 사회탐구 원점수 표 확인 | robots 허용, `automated_verified` (사회탐구만) | 실제 2건 / 켜짐 |
+| 메가스터디 | https://m.megastudy.net/Entinfo/total_rankCut/main.asp | 로그인 없이 2026.07.08·06.04 고3 사회·과학탐구 원점수 표 확인 | robots 허용, `automated_verified` (사회·과학탐구) | 실제 2건 / 켜짐 |
 | EBSi | https://www.ebsi.co.kr/ebs/xip/xipa/retrieveSCVPreparation.ebs?irecord=202609023&targetCd=D300 | 공개 사전준비 HTML은 서비스 안내와 과목 목록. 점수표 숫자는 확인하지 못함 | https://www.ebsi.co.kr/robots.txt의 `Disallow: /*.ajax$` 확인. `.ajax` 요청 금지. `disabled_policy` | 없음 / 꺼짐 |
-| 대성마이맥 | https://www.mimacstudy.com/hmockTest/HmockAnalysisExamPointCut.ds?groupNo=344 | 검색에 나타난 공식 도메인 등급컷 URL은 `Exception` 오류 화면. 실제 숫자·course mapping 미확인 | robots 조회 실패, `disabled_unverified` | 없음 / 꺼짐 |
+| 대성마이맥 | https://www.mimacstudy.com/hmockTest/HmockAnalysis.ds?groupNo=446 | 공개 2026.09.02·06.04 고3 시험분석의 사회·과학 숫자 표 확인 | robots.txt `User-agent: *; Disallow: /` 및 해당 경로 Allow 없음. `disabled_policy` | 없음 / 꺼짐 |
 | 공식 | 평가원(KICE) 모의평가·수능, 주관 교육청 학력평가 원문 필요 | EBSi 역대 등급컷 페이지는 표준점수를 주관 교육청·평가원 출처로, 원점수 백분위를 EBSi 자체분석으로 명시. 공식 **원점수** 구분점수 원문 확인 전 자동 생성 금지 | `disabled_unverified` | 없음 / 꺼짐 |
 
 검증되면 실제 공개 HTML의 필요한 최소 조각만 fixture로 저장하고, malformed 입력과
@@ -24,7 +24,7 @@
 제2외국어/한문 학력평가는 해당 시험의 고정점수 체제 근거를 확인하기 전까지
 `unknown`으로 두어 폴링하거나 수능 고정표를 적용하지 않습니다.
 Mega에서 관찰한 영어·한국사 원점수는 상대평가 자동 수집 검증 근거가 아닙니다.
-고3 사회탐구의 실제 **원점수** 숫자와 mapping을 확인했습니다. 다른 영역은 검증 전까지 비활성입니다.
+고3 사회·과학탐구의 실제 **원점수** 숫자와 mapping을 확인했습니다. 다른 영역은 검증 전까지 비활성입니다.
 
 ## Mega 공개 응답 검증 (2026-09-26)
 
@@ -33,5 +33,11 @@ Mega에서 관찰한 영어·한국사 원점수는 상대평가 자동 수집 �
 - 로그인·인증 쿠키 없이 메인 HTML을 GET하고, 그 페이지의 실제 inline script가 사용하는 `/Entinfo/total_rankCut/main_examRankCut_ax.asp`에 공개 파라미터 `examSeq`, `tabNo=2`로 POST하여 HTTP 200의 사회탐구 원점수 표를 받았습니다. 응답의 Set-Cookie는 재사용하지 않았습니다.
 - 시험 목록에서 `357`은 2026.07.08 고3 학력평가, `356`은 2026.06.04 고3 모의평가임을 확인했습니다. adapter는 매번 공개 목록에서 정확한 날짜·유형·학년을 대조하고 ID를 읽습니다. 목록에 없으면 건너뜁니다.
 - 두 시험의 사회문화 `원점수` 1등급은 각각 45, 48. 숫자 열에는 별도의 `표준점수` 열도 있으므로 원점수 헤더를 검증합니다. `tests/fixtures/grade-cuts/mega-357-social.html`, `mega-356-social.html`은 실제 응답에서 제목과 사회문화 표의 앞 3개 등급만 보존한 최소 조각입니다.
-- 활성 범위: 고3의 현행 상대평가 사회탐구 세부과목. 카탈로그에 존재하고 시험 체제에서 예상되는 course code만 처리합니다. 국어·수학의 표준점수, 영어·한국사 절대평가 값은 사용하지 않습니다.
-- 대성은 공개 숫자와 허용 범위를 확인하지 못해 `disabled_unverified`, EBS는 금지된 `.ajax` 요청을 사용하지 않으며 일반 HTML의 숫자가 확인되지 않아 `disabled_policy`입니다. 공식 rawScore 자료도 확인되지 않아 `disabled_unverified`입니다.
+- 활성 범위: 고3의 현행 상대평가 사회·과학탐구 세부과목. 카탈로그에 존재하고 시험 체제에서 예상되는 course code만 처리합니다. 국어·수학의 표준점수, 영어·한국사 절대평가 값은 사용하지 않습니다.
+- 대성은 공개 숫자는 확인했으나 robots가 해당 경로를 금지하여 `disabled_policy`, EBS는 금지된 `.ajax` 요청을 사용하지 않으며 일반 HTML의 숫자가 확인되지 않아 `disabled_policy`입니다. 공식 rawScore 자료도 확인되지 않아 `disabled_unverified`입니다.
+
+## Coverage 조사 (2026-09-26)
+
+- Mega 공개 스크립트의 실제 `tabNo=3` 과학탐구 응답을 `examSeq=357`(7월 학력평가)과 `356`(6월 모의평가)에서 인증 쿠키 없이 확인. 두 응답 모두 과목별 `원점수`·`표준점수` 별도 열과 물리학/화학/생명과학/지구과학 I/II 표가 있습니다. 실제 응답의 제목과 물리학 I·지구과학 II 표 일부를 `tests/fixtures/grade-cuts/megastudy/`에 저장. 한 시험에서 필요한 탭당 한 번만 요청합니다.
+- Mega 국어·수학은 역대 등급컷 일반 표와 공개 고3 풀서비스 `https://m.megastudy.net/Entinfo/2027_jungsi/exam/Exam_main.asp`가 `표준점수`를 표시합니다. 채점 분석은 별도 서비스이나 공개 원점수 **등급컷** 표는 이 조사에서 확인되지 않았으므로 rawScore adapter에서 제외합니다.
+- Daesung 공식 입시정보의 고3 시험분석 링크는 9월 `groupNo=446`, 6월 `groupNo=442`이며 브라우저에 사회·과학탐구의 1~3등급 숫자 표가 보입니다. 다만 `https://www.mimacstudy.com/robots.txt`의 `User-agent: *`에는 `Disallow: /`가 있고 Allow 목록에 `/hmockTest/`가 없습니다. robots 제한을 우회하지 않으므로 자동 adapter와 fixture를 만들지 않고 수동 보정만 유지합니다. `확정 등급컷`이라는 사이트 제목을 official rawScore로 승격하지 않습니다.

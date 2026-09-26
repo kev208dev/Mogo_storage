@@ -45,8 +45,8 @@ export const GRADE_CUT_SOURCE_POLICIES: Record<GradeCutSource, GradeCutSourcePol
     source: "daesung",
     isOfficial: false,
     policy: "manual_only",
-    status: "disabled_unverified",
-    note: "사교육 업체 예상 등급컷. 자동 scraping 금지 — 공개·허용 범위 확인 후 수동 입력",
+    status: "disabled_policy",
+    note: "공개 시험분석 숫자 표는 확인했으나 robots.txt가 해당 경로를 Disallow하므로 자동 요청 금지",
   },
 };
 

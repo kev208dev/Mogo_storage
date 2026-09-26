@@ -280,6 +280,12 @@ robots.txt 가 자동 요청을 막는 EBSi·KICE·교육청 자료는 우회하
 - source × 기능 정책: `src/ingestion/sources/policy.ts` — robots 등으로 금지된 기능은 켤 수 없음 (`npm run ingest:sources -- --matrix`, `/admin`).
 - 현재 입력분: `data/imports/official-urls.csv` (2023~2025년 309행 중 288행은 브라우저 검증 후 관리자 승인으로 게시, 21행은 `manual_review`). 수집 방법·근거·누락은 [docs/REAL_DATA_COVERAGE.md](docs/REAL_DATA_COVERAGE.md)
 
+### 공식 정답표 추출 (정답 · 배점 · 해설 쪽)
+
+- `npm run answers:extract -- --year=2025 [--dry-run] [--publish]` — 게시된 공식 정답·해설 PDF 와 문제지에서 정답·배점·해설 쪽을 추출
+- 정책상 허용된 파일 서버(EBSi)만 요청, 문항 수·연속성·값 범위·본문 정답 표기·배점 합계를 모두 검증한 슬롯만 게시
+- 결과와 보류 사유: `answer_key_extractions` (migration 0013). 자세한 규칙: [docs/ANSWER_KEYS.md](docs/ANSWER_KEYS.md)
+
 ### 실제 source 검증 (live fixture)
 
 EBSi/KICE 의 실제 페이지를 보지 않은 상태에서 parser 가 맞다고 가정하지 않습니다.

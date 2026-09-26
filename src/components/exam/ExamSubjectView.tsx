@@ -80,7 +80,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     { href: "#grade-cuts", label: "등급컷" },
     isEnglish && vocabulary.length > 0 && { href: "#vocabulary", label: "단어장" },
     isEnglish && vocabulary.length > 0 && { href: "#vocabulary-quiz", label: "단어 시험" },
-    isEnglish && listeningTracks.length > 0 && { href: "#listening", label: "듣기" },
+    isEnglish && (listeningTracks.length > 0 || audioFile) && { href: "#listening", label: "듣기" },
     isEnglish && listeningTracks.length > 0 && { href: "#dictation", label: "받아쓰기" },
   ].filter((x): x is { href: string; label: string } => Boolean(x));
 
@@ -211,6 +211,23 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
               <DictationPractice tracks={listeningTracks} />
             </Section>
           </>
+        ) : isEnglish && audioFile ? (
+          // 문항별 구간·대본이 아직 없는 실제 시험: 공식 음원 전체만 재생 (구간·대본을 추측하지 않는다)
+          <Section
+            id="listening"
+            title="영어 듣기"
+            description="공식 듣기 음원 전체입니다. 문항별 구간과 대본은 공식 자료로 확인된 경우에만 제공합니다."
+          >
+            <audio
+              controls
+              preload="none"
+              src={fileViewHref(audioFile.id)}
+              className="w-full"
+              data-testid="listening-full-audio"
+            >
+              <a href={fileViewHref(audioFile.id)}>듣기 파일 열기</a>
+            </audio>
+          </Section>
         ) : null}
       </div>
       <ExamRelatedLinks exam={exam} />

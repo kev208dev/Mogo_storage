@@ -1,8 +1,9 @@
-import { and, asc, count, desc, eq, gte, inArray, isNull } from "drizzle-orm";
+import { and, asc, count, desc, eq, gte, inArray, isNull, or } from "drizzle-orm";
 import type { Database } from "../../db/client";
 import * as s from "../../db/schema";
 import type { Grade, Subject } from "../constants";
 import type { ExamKey } from "../exam-path";
+import { questionsForSlot } from "./question-slot";
 import type { ExamRepository } from "./repository";
 import type {
   Course,
@@ -147,10 +148,7 @@ export class DrizzleExamRepository implements ExamRepository {
     const course = courseCode ? (courses.find((c) => c.code === courseCode) ?? null) : null;
     if (courseCode && !course) return null;
     const courseId = course?.id ?? null;
-    const courseMatch = <
-      C extends
-        typeof s.examFiles.courseId | typeof s.questions.courseId | typeof s.gradeCuts.courseId,
-    >(
+    const courseMatch = <C extends typeof s.examFiles.courseId | typeof s.gradeCuts.courseId>(
       col: C,
     ) => (courseId ? eq(col, courseId) : isNull(col));
 
@@ -171,7 +169,9 @@ export class DrizzleExamRepository implements ExamRepository {
           where: and(
             eq(s.questions.examId, exam.id),
             eq(s.questions.subject, subject),
-            courseMatch(s.questions.courseId),
+            courseId
+              ? or(isNull(s.questions.courseId), eq(s.questions.courseId, courseId))
+              : isNull(s.questions.courseId),
           ),
           orderBy: asc(s.questions.questionNumber),
           with: {
@@ -204,7 +204,7 @@ export class DrizzleExamRepository implements ExamRepository {
         this.getSchedule(exam.id),
       ]);
 
-    const questions: QuestionWithStats[] = questionRows.map(
+    const questions: QuestionWithStats[] = questionsForSlot(questionRows, courseId).map(
       ({ statistics, createdAt: _c, updatedAt: _u, ...q }) => {
         void _c;
         void _u;

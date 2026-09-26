@@ -905,6 +905,56 @@ export const reviewMappingRules = pgTable(
   (t) => [uniqueIndex("review_mapping_rules_uq").on(t.sourceId, t.kind, t.pattern, t.gradeScope)],
 );
 
+/**
+ * 공식 정답·해설 PDF 에서 추출한 정답표와 문제지 배점 (슬롯별 1건).
+ * 검증을 통과한 슬롯만 questions 에 게시한다. 실패·불확실은 reasons 와 함께 manual_review.
+ * questions 에 컬럼을 더하지 않고 출처(provenance)는 이 테이블에 둔다 (코드 선배포 안전).
+ */
+export const answerKeyExtractions = pgTable(
+  "answer_key_extractions",
+  {
+    id: id(),
+    examId: text("exam_id")
+      .notNull()
+      .references(() => exams.id, { onDelete: "cascade" }),
+    subject: subjectEnum("subject").notNull(),
+    /** "" = 공통 또는 영역 전체, 그 외 course id */
+    slotKey: text("slot_key").notNull().default(""),
+    courseId: text("course_id").references(() => courses.id, { onDelete: "restrict" }),
+    /** verified · manual_review · published */
+    status: text("status").notNull(),
+    answersVerified: boolean("answers_verified").notNull().default(false),
+    pointsVerified: boolean("points_verified").notNull().default(false),
+    reasons: jsonb("reasons")
+      .$type<Array<{ code: string; detail: string }>>()
+      .notNull()
+      .default([]),
+    answers: jsonb("answers")
+      .$type<Array<{ number: number; answer: string; choice: boolean; page: number | null }>>()
+      .notNull()
+      .default([]),
+    /** 문항 번호 → 배점. 검증 실패면 null */
+    points: jsonb("points").$type<Record<string, number>>(),
+    crossChecked: smallint("cross_checked").notNull().default(0),
+    solutionFileId: text("solution_file_id").references(() => examFiles.id, {
+      onDelete: "set null",
+    }),
+    questionFileId: text("question_file_id").references(() => examFiles.id, {
+      onDelete: "set null",
+    }),
+    solutionUrl: text("solution_url"),
+    solutionSha256: text("solution_sha256"),
+    parserVersion: text("parser_version").notNull(),
+    extractedAt: timestamp("extracted_at", { withTimezone: true }).notNull().defaultNow(),
+    publishedAt: timestamp("published_at", { withTimezone: true }),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("answer_key_extractions_slot_uq").on(t.examId, t.subject, t.slotKey),
+    index("answer_key_extractions_status_idx").on(t.status),
+  ],
+);
+
 // ── relations ───────────────────────────────────────────────
 export const examsRelations = relations(exams, ({ many }) => ({
   subjects: many(examSubjects),

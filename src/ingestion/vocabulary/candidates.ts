@@ -100,6 +100,8 @@ export function extractVocabularyCandidates(text: string): VocabularyCandidate[]
     }
   }
   return [...byKey.values()].sort(
-    (a, b) => a.questionNumber - b.questionNumber || a.word.localeCompare(b.word),
+    // 실행 환경 locale 과 무관한 순서 (코드 포인트 비교)
+    (a, b) =>
+      a.questionNumber - b.questionNumber || (a.word < b.word ? -1 : a.word > b.word ? 1 : 0),
   );
 }

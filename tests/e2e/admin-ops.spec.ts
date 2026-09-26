@@ -80,3 +80,16 @@ async function examIdOf(page: Page, path: string): Promise<string> {
   if (!id) throw new Error("exam id not found on page");
   return id;
 }
+
+test("관리자 기능 coverage: 시험별 파일 · 정답 · 등급컷 상태와 합계", async ({ page }) => {
+  await login(page);
+  await page.getByRole("link", { name: "기능 coverage" }).click();
+  await expect(page).toHaveURL(/\/admin\/coverage$/);
+  const view = page.getByTestId("feature-coverage");
+  await expect(view.getByRole("heading", { name: "기능 coverage" })).toBeVisible();
+  // e2e DB 의 실제(비샘플) 시험 2022 고3 9월: fake source 로 국어 파일이 게시돼 있다
+  const row = view.getByRole("row").filter({ hasText: "2022 고3 9월" });
+  await expect(row).toBeVisible();
+  await expect(row.locator("td[data-status]").first()).not.toHaveAttribute("data-status", "");
+  await expect(view.locator("tr[data-feature=files]")).toBeVisible();
+});

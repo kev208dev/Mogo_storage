@@ -10,6 +10,7 @@
 
 ```bash
 npm run ingest:coverage -- --from=2025 --to=2026      # 시험·영역·세부과목별 ✓/✗/검토
+npm run ingest:coverage -- --features --year=2025     # 시험별 기능 상태 (파일·정답·등급컷·듣기·단어장), /admin/coverage 와 같은 계산
 npm run ingest:audit -- --json                        # 중복·URL·도메인·누락·미확정·공개 후 미발견
 npm run ingest:health -- --source=ebsi                # 실제 사이트 요청 1회 (결과는 DB 에 기록)
 npm run ingest:inspect -- --source=ebsi --year=2026 --grade=3 --month=9   # 읽기 전용 진단
@@ -147,3 +148,18 @@ SMOKE_BASE_URL=https://mogo-storage.vercel.app npm run test:smoke:prod
 - `/admin` 은 allowlist + 토큰 + 서명 세션(httpOnly, SameSite=Strict, production Secure, 12시간)이며 설정이 없으면 404.
 - cron endpoint 는 `CRON_SECRET` 이 없으면 404, 틀리면 401 (timing-safe 비교).
 - 외부 요청은 SafeFetcher 만 사용: https/allowlist, redirect 마다 재검증, private IP·localhost·metadata 주소 차단, timeout, 크기 제한, robots.txt.
+
+## 기능 coverage (`src/ingestion/feature-coverage.ts`)
+
+| 상태             | 의미                                                                             |
+| ---------------- | -------------------------------------------------------------------------------- |
+| `complete`       | 필요한 슬롯이 모두 채워짐                                                        |
+| `partial`        | 일부만                                                                           |
+| `manual_review`  | 사람이 확인해야 하는 대기 건 (검토 대기 자료, 정답표 보류)                       |
+| `missing`        | 자동화 가능하지만 아직 없음                                                      |
+| `blocked_policy` | 없음 + 정책상 자동 수집 불가 (예: 해설이 KICE 에만 있음, 고3 국어 원점수 등급컷) |
+| `not_applicable` | 해당 없음 (영어가 없는 시험의 듣기 등)                                           |
+
+- 슬롯 = 세부과목이 있으면 세부과목, 없으면 영역 전체. 등급컷은 상대평가 슬롯만 셉니다.
+- 쿼리는 시험 목록 1회 + 테이블별 group by 1회 (시험 수와 무관, N+1 없음). 관리자 화면은 50개씩 페이지로 나눕니다.
+- 인덱스: 모든 집계 쿼리는 `exam_id` 로 시작하는 기존 인덱스를 씁니다 (추가 migration 없음).

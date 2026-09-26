@@ -13,6 +13,7 @@ const NAV = [
   { href: "/admin/review", label: "검토 대기" },
   { href: "/admin/imports", label: "공식 URL 입력" },
   { href: "/admin/grade-cuts", label: "등급컷" },
+  { href: "/admin/coverage", label: "기능 coverage" },
   { href: "/admin/mappings", label: "Source mapping" },
   { href: "/admin/runs", label: "실행 기록" },
   { href: "/admin/reports", label: "오류 신고" },

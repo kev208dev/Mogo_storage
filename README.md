@@ -31,7 +31,7 @@ Drizzle 추적 테이블이 없는 DB에 `db:migrate:prod`를 바로 실행하�
 
 ⚠️ 이 저장소에는 **실제 시험지/해설지/음원이 포함되어 있지 않습니다.** 정답·해설·정답률·등급컷·단어장·듣기 대본 등은 모두 개발용 **샘플 데이터**이며, 화면에도 "샘플"로 표시됩니다.
 
-운영 문서: [docs/OPERATIONS.md](docs/OPERATIONS.md) (상황별 대응 · 백업/복구) · [docs/ADDING_SOURCE.md](docs/ADDING_SOURCE.md) (공식 source 추가)
+운영 문서: [docs/OPERATIONS.md](docs/OPERATIONS.md) (상황별 대응 · 백업/복구 · scheduler 감시 · smoke test) · [docs/ADDING_SOURCE.md](docs/ADDING_SOURCE.md) (공식 source 추가)
 
 ## 기술 스택
 
@@ -60,20 +60,23 @@ npm run dev
 
 ### 스크립트
 
-| 명령                       | 설명                                                |
-| -------------------------- | --------------------------------------------------- |
-| `npm run dev`              | 개발 서버                                           |
-| `npm run build`            | 프로덕션 빌드 (시험 페이지 정적 생성)               |
-| `npm run typecheck`        | `tsc --noEmit`                                      |
-| `npm run lint`             | ESLint                                              |
-| `npm run format`           | Prettier                                            |
-| `npm test`                 | Vitest 단위 테스트                                  |
-| `npm run test:e2e`         | Playwright (먼저 `npm run build`)                   |
-| `npm run check`            | typecheck + lint + format + test                    |
-| `npm run db:*`             | generate / migrate / push / seed                    |
-| `npm run db:migrate:prod`  | 운영 migration (drizzle-kit 없이) + 카탈로그 동기화 |
-| `npm run ingest:*`         | 자동 수집 CLI (아래 "자동 수집")                    |
-| `npm run storage:selftest` | R2 실제 연결 점검 (`_internal/test/` 만 사용)       |
+| 명령                         | 설명                                                |
+| ---------------------------- | --------------------------------------------------- |
+| `npm run dev`                | 개발 서버                                           |
+| `npm run build`              | 프로덕션 빌드 (시험 페이지 정적 생성)               |
+| `npm run typecheck`          | `tsc --noEmit`                                      |
+| `npm run lint`               | ESLint                                              |
+| `npm run format`             | Prettier                                            |
+| `npm test`                   | Vitest 단위 테스트                                  |
+| `npm run test:e2e`           | Playwright (먼저 `npm run build`)                   |
+| `npm run check`              | typecheck + lint + format + test                    |
+| `npm run db:*`               | generate / migrate / push / seed                    |
+| `npm run db:migrate:prod`    | 운영 migration (drizzle-kit 없이) + 카탈로그 동기화 |
+| `npm run ingest:*`           | 자동 수집 CLI (아래 "자동 수집")                    |
+| `npm run storage:selftest`   | R2 실제 연결 점검 (`_internal/test/` 만 사용)       |
+| `npm run test:smoke:prod`    | 배포된 사이트 읽기 전용 smoke (`SMOKE_BASE_URL`)    |
+| `npm run ops:scheduler`      | cron heartbeat 상태 (`--watchdog` 이면 알림까지)    |
+| `npm run ops:restore-verify` | 복원한 DB 무결성 점검 (읽기 전용)                   |
 
 ## URL 구조
 

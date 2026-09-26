@@ -12,18 +12,33 @@ import { createGradeCutStore } from "@/ingestion/grade-cuts/persistence";
 import { verifiedGradeCutAdapters } from "@/ingestion/grade-cuts/adapters";
 import { examCoursePath, examPath } from "@/lib/exam-path";
 import { revalidatePath } from "next/cache";
+import { createLogger } from "@/ingestion/logger";
+import { createOpsNotifier } from "@/ingestion/notifier";
+import { createDbAlertGate, failOpen } from "@/ingestion/ops/alert-gate";
+import { recordTaskFinish, recordTaskStart, type HeartbeatStatus } from "@/ingestion/ops/scheduler";
+import { runSchedulerWatchdog } from "@/ingestion/ops/watchdog";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
 
-const TASKS = ["scheduled", "release-watch", "jobs", "grade-cuts"] as const;
+const TASKS = ["scheduled", "release-watch", "jobs", "grade-cuts", "watchdog"] as const;
+type Task = (typeof TASKS)[number];
+
+interface TaskOutcome {
+  status: number;
+  body: Record<string, unknown>;
+  heartbeat: { status: Exclude<HeartbeatStatus, "running">; detail?: string };
+}
 
 /**
  * scheduler 공통 진입점 (Vercel Cron, GitHub Actions, Cloudflare Cron Trigger, 일반 cron 이 호출)
  *   GET|POST /api/cron/scheduled      정기 수집 + release watch + job 처리
  *   GET|POST /api/cron/release-watch  시험 당일 감시만
  *   GET|POST /api/cron/jobs           job queue 만
+ *   GET|POST /api/cron/grade-cuts     등급컷 watch
+ *   GET|POST /api/cron/watchdog       scheduler heartbeat 점검 (stale/연속 실패 알림)
  * 수집 로직은 src/ingestion 에 있고 이 route 는 호출만 한다.
+ * 모든 실행은 scheduler_heartbeats 에 기록된다 (기록 실패는 task 결과에 영향 없음).
  */
 async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
   const auth = checkCronAuth(request);
@@ -34,11 +49,67 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
   if (!(TASKS as readonly string[]).includes(task)) {
     return NextResponse.json({ error: "unknown task" }, { status: 404 });
   }
+  const db = getDb();
+  const startedAt = new Date();
+  if (db) await recordTaskStart(db, task, startedAt);
+  const outcome = await runTask(task as Task);
+  if (db) await recordTaskFinish(db, task, { ...outcome.heartbeat, startedAt }, new Date());
+  return NextResponse.json(outcome.body, {
+    status: outcome.status,
+    headers: { "cache-control": "no-store" },
+  });
+}
+
+async function runTask(task: Task): Promise<TaskOutcome> {
+  if (task === "watchdog") {
+    const db = getDb();
+    if (!db)
+      return {
+        status: 503,
+        body: { error: "database not configured" },
+        heartbeat: { status: "failed", detail: "no_database" },
+      };
+    const gate = failOpen(createDbAlertGate(db));
+    const result = await runSchedulerWatchdog({
+      db,
+      gate,
+      notifier: createOpsNotifier(createLogger(), process.env, gate),
+      now: new Date(),
+    });
+    return {
+      status: result.unavailable ? 503 : 200,
+      body: {
+        ok: !result.unavailable,
+        unavailable: result.unavailable,
+        tasks: result.tasks.map((t) => ({
+          task: t.task,
+          state: t.state,
+          minutesSinceSeen: t.minutesSinceSeen,
+          staleAfterMinutes: t.staleAfterMinutes,
+          consecutiveFailures: t.consecutiveFailures,
+        })),
+        alerted: result.alerted,
+        recovered: result.recovered,
+      },
+      heartbeat: result.unavailable
+        ? { status: "failed", detail: "heartbeats_unavailable" }
+        : { status: "ok", detail: result.alerted.length ? "alerted" : "healthy" },
+    };
+  }
   if (task === "grade-cuts") {
     if (process.env.GRADE_CUT_INGESTION_ENABLED !== "true")
-      return NextResponse.json({ skipped: "GRADE_CUT_INGESTION_ENABLED is not true" });
+      return {
+        status: 200,
+        body: { skipped: "GRADE_CUT_INGESTION_ENABLED is not true" },
+        heartbeat: { status: "skipped", detail: "disabled" },
+      };
     const db = getDb();
-    if (!db) return NextResponse.json({ error: "database not configured" }, { status: 503 });
+    if (!db)
+      return {
+        status: 503,
+        body: { error: "database not configured" },
+        heartbeat: { status: "failed", detail: "no_database" },
+      };
     let progress:
       | WatchProgress
       | { stage: "advisory_reserve" | "advisory_lock" | "advisory_unlock" | "advisory_release" } = {
@@ -91,9 +162,13 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
           durationMs: Date.now() - started,
         }),
       );
-      return NextResponse.json(
-        locked.acquired ? { ok: true, result: locked.value } : { skipped: "locked" },
-      );
+      return locked.acquired
+        ? { status: 200, body: { ok: true, result: locked.value }, heartbeat: { status: "ok" } }
+        : {
+            status: 200,
+            body: { skipped: "locked" },
+            heartbeat: { status: "skipped", detail: "locked" },
+          };
     } catch (error) {
       console.error("grade_cut_watch.failed", {
         stage: progress.stage,
@@ -108,17 +183,27 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
             ? (error as { code: string }).code
             : undefined,
       });
-      return NextResponse.json(
-        { error: "grade cut watch failed", stage: progress.stage },
-        { status: 500 },
-      );
+      return {
+        status: 500,
+        body: { error: "grade cut watch failed", stage: progress.stage },
+        heartbeat: { status: "failed", detail: progress.stage },
+      };
     }
   }
   if (!ingestionEnabled()) {
-    return NextResponse.json({ skipped: "INGESTION_ENABLED is not true" });
+    return {
+      status: 200,
+      body: { skipped: "INGESTION_ENABLED is not true" },
+      heartbeat: { status: "skipped", detail: "disabled" },
+    };
   }
   const ingestion = createAppIngestionContext();
-  if (!ingestion) return NextResponse.json({ error: "database not configured" }, { status: 503 });
+  if (!ingestion)
+    return {
+      status: 503,
+      body: { error: "database not configured" },
+      heartbeat: { status: "failed", detail: "no_database" },
+    };
 
   try {
     await syncBuiltinSources(ingestion.db);
@@ -128,19 +213,17 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
         : task === "release-watch"
           ? await runReleaseWatch(ingestion)
           : await runJobs(ingestion, { timeBudgetMs: 240_000 });
-    return NextResponse.json(
-      { ok: true, task, result },
-      { headers: { "cache-control": "no-store" } },
-    );
+    return { status: 200, body: { ok: true, task, result }, heartbeat: { status: "ok" } };
   } catch (error) {
     ingestion.logger.error("ingestion.failed", {
       task,
       message: error instanceof Error ? error.message : String(error),
     });
-    return NextResponse.json(
-      { ok: false, error: "ingestion failed (see server logs)" },
-      { status: 500 },
-    );
+    return {
+      status: 500,
+      body: { ok: false, error: "ingestion failed (see server logs)" },
+      heartbeat: { status: "failed", detail: "exception" },
+    };
   }
 }
 

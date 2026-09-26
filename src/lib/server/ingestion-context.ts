@@ -5,6 +5,7 @@ import { getDb } from "@/db/client";
 import type { IngestionContext } from "@/ingestion/context";
 import { createLogger } from "@/ingestion/logger";
 import { createOpsNotifier } from "@/ingestion/notifier";
+import { createDbAlertGate, failOpen } from "@/ingestion/ops/alert-gate";
 import { getSharedStorageProvider } from "@/lib/storage/factory";
 
 /** Next 런타임(cron route, admin action)에서 쓰는 수집 context. 게시 즉시 revalidatePath 로 페이지 갱신 */
@@ -15,7 +16,7 @@ export function createAppIngestionContext(): IngestionContext | null {
   return {
     db,
     logger,
-    notifier: createOpsNotifier(logger),
+    notifier: createOpsNotifier(logger, process.env, failOpen(createDbAlertGate(db))),
     storage: getSharedStorageProvider(),
     revalidator: {
       async revalidatePaths(paths) {

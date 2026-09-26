@@ -20,7 +20,9 @@ export type IngestionEvent =
   | "release_watch.missed"
   | "vocabulary.extracted"
   | "vocabulary.pdf_generated"
-  | "release_watch.tick";
+  | "release_watch.tick"
+  | "scheduler.unhealthy"
+  | "scheduler.recovered";
 
 type Fields = Record<string, unknown>;
 

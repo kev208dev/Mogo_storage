@@ -829,6 +829,36 @@ export const vocabularyCandidates = pgTable(
   ],
 );
 
+/**
+ * scheduler heartbeat — cron task 마다 마지막 실행/성공 시각.
+ * watchdog 이 기대 주기 대비 stale·연속 실패를 판정한다 (민감정보 없이 상태 코드만 저장).
+ */
+export const schedulerHeartbeats = pgTable("scheduler_heartbeats", {
+  task: text("task").primaryKey(),
+  lastStartedAt: timestamp("last_started_at", { withTimezone: true }),
+  lastFinishedAt: timestamp("last_finished_at", { withTimezone: true }),
+  lastSuccessAt: timestamp("last_success_at", { withTimezone: true }),
+  /** running | ok | skipped | failed */
+  lastStatus: text("last_status"),
+  /** 짧은 상태 코드 (예: locked, disabled, stage 이름) — 오류 메시지·URL 은 저장하지 않는다 */
+  lastDetail: text("last_detail"),
+  lastDurationMs: integer("last_duration_ms"),
+  consecutiveFailures: integer("consecutive_failures").notNull().default(0),
+  runCount: integer("run_count").notNull().default(0),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+/** 운영 알림 dedupe/cooldown 상태 (같은 key 는 cooldown 동안 한 번만 보낸다) */
+export const opsAlertStates = pgTable("ops_alert_states", {
+  key: text("key").primaryKey(),
+  kind: text("kind").notNull(),
+  lastSentAt: timestamp("last_sent_at", { withTimezone: true }).notNull(),
+  /** 마지막 발송 이후 cooldown 때문에 보내지 않은 횟수 */
+  suppressedCount: integer("suppressed_count").notNull().default(0),
+  lastMessage: text("last_message"),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 // ── relations ───────────────────────────────────────────────
 export const examsRelations = relations(exams, ({ many }) => ({
   subjects: many(examSubjects),

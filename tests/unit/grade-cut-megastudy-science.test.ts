@@ -14,12 +14,12 @@ const parse = (seq: number, exam: WatchExam, slots: WatchSlot[] = [physics, eart
 describe("MegaStudy science raw-score response", () => {
   it("maps two distinct public exam identities and I/II courses to raw scores", () => {
     expect(parse(357, july)).toMatchObject([
-      { subject: "science", courseCode: "physics-1", cuts: [{ grade: 1, rawScore: 46 }, { grade: 2, rawScore: 44 }] },
-      { subject: "science", courseCode: "earth-science-2", cuts: [{ grade: 1, rawScore: 34 }, { grade: 2, rawScore: 20 }] },
+      { subject: "science", courseCode: "physics-1", cuts: [{ grade: 1, rawScore: 46 }, { grade: 2, rawScore: 44 }, { grade: 3, rawScore: 38 }] },
+      { subject: "science", courseCode: "earth-science-2", cuts: [{ grade: 1, rawScore: 34 }, { grade: 2, rawScore: 20 }, { grade: 3, rawScore: 16 }] },
     ]);
     expect(parse(356, june)).toMatchObject([
-      { courseCode: "physics-1", cuts: [{ grade: 1, rawScore: 46 }, { grade: 2, rawScore: 41 }] },
-      { courseCode: "earth-science-2", cuts: [{ grade: 1, rawScore: 50 }, { grade: 2, rawScore: 43 }] },
+      { courseCode: "physics-1", cuts: [{ grade: 1, rawScore: 46 }, { grade: 2, rawScore: 41 }, { grade: 3, rawScore: 35 }] },
+      { courseCode: "earth-science-2", cuts: [{ grade: 1, rawScore: 50 }, { grade: 2, rawScore: 43 }, { grade: 3, rawScore: 27 }] },
     ]);
   });
   it("rejects wrong exam/date/type and never returns an unrequested course", () => {

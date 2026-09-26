@@ -78,6 +78,13 @@
       "when": 1790396903343,
       "tag": "0010_legacy_course_catalog",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1790415240000,
+      "tag": "0011_legacy_vocational_course_catalog",
+      "breakpoints": true
     }
   ]
 }

@@ -2,6 +2,8 @@
  * Flow C 준비 (E2E_DATABASE_URL 이 있을 때만): 빈 DB → migration → fake 공식 source 로 실제 파이프라인 실행.
  * source 가 "윤리" 로만 표기한 자료가 검증 후 manual_review 로 남은 상태를 만든다.
  */
+import { rmSync } from "node:fs";
+import path from "node:path";
 import { sql } from "drizzle-orm";
 import { runBackfill } from "@/ingestion/backfill";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
@@ -17,9 +19,25 @@ import {
   testSource,
 } from "../integration/helpers";
 
+/**
+ * 관리자 e2e 가 만드는 시험 경로. 샘플 build 에는 없는 경로라 .next 에 남은 파일은 이전 실행의 ISR 결과뿐이다.
+ * 같은 .next 로 다시 실행하면 새 DB 인데도 이전 실행에서 게시된 페이지가 먼저 나가므로 지운다.
+ */
+const ADMIN_E2E_EXAM_PATHS = ["exam/2021/high2/11", "exam/2022/high3/09"];
+
+function clearStaleIsrOutput() {
+  const root = path.resolve(".next/server/app");
+  for (const p of ADMIN_E2E_EXAM_PATHS) {
+    rmSync(path.join(root, p), { recursive: true, force: true });
+    for (const ext of [".html", ".rsc", ".meta", ".segments"])
+      rmSync(path.join(root, p + ext), { recursive: true, force: true });
+  }
+}
+
 export default async function globalSetup() {
   const url = process.env.E2E_DATABASE_URL;
   if (!url) return;
+  clearStaleIsrOutput();
   const reset = createDb(url, 1);
   await reset.execute(sql`drop schema if exists public cascade`);
   await reset.execute(sql`drop schema if exists drizzle cascade`);

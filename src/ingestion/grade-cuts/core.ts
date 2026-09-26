@@ -2,7 +2,8 @@ import type { ExamType, GradeCutSource, Subject } from "../../lib/constants";
 import type { GradeCutEntry } from "../../lib/data/types";
 import { gradingMode } from "../../lib/grade-cut-mode";
 
-export type AdapterStatus = "automated_verified" | "disabled_unverified" | "disabled_policy";
+export type AdapterStatus =
+  "automated_verified" | "degraded" | "disabled_unverified" | "disabled_policy" | "manual_only";
 export type WatchStatus = "waiting" | "watching" | "finalized" | "failed";
 export interface WatchSlot {
   examId: string;

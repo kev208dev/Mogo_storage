@@ -1,6 +1,7 @@
 import parserVersions from "./parser-versions.json";
 import type { SourceCapability, SourceHealthStatus } from "../constants";
 import type { SourceConfig } from "../types";
+import { isCapabilityPolicyBlocked } from "./policy";
 
 /**
  * 현재 코드의 parser 버전. parser 관련 파일이 바뀌면 버전이 바뀌고(단위 테스트가 강제),
@@ -41,12 +42,16 @@ const STOPPED: SourceHealthStatus[] = ["structure_changed", "broken", "unverifie
  * options.allowUnverified 는 테스트/로컬 fake source 전용 (코드에서만 설정, 환경변수 없음).
  */
 export function canRun(
-  source: Pick<SourceConfig, "enabled" | "liveVerified" | "capabilities" | "healthStatus">,
+  source: Pick<SourceConfig, "enabled" | "liveVerified" | "capabilities" | "healthStatus"> & {
+    id?: string;
+  },
   capability: SourceCapability,
   options: { allowUnverified?: boolean } = {},
 ): boolean {
   if (!source.enabled) return false;
   if (!options.allowUnverified) {
+    // robots·이용조건상 금지된 기능은 DB 설정과 무관하게 실행하지 않는다 (sources/policy.ts)
+    if (source.id && isCapabilityPolicyBlocked(source.id, capability)) return false;
     if (!source.liveVerified) return false;
     if (source.healthStatus && STOPPED.includes(source.healthStatus)) return false;
   }

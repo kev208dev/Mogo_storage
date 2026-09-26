@@ -11,34 +11,43 @@ export interface GradingRegime {
 
 /** Only confirmed relative slots are eligible for external grade-cut collection. */
 export function gradingMode(exam: GradingRegime, subject: Subject): GradingMode {
-  if (["korean", "math", "social", "science", "vocational"].includes(subject))
-    return "relative";
+  if (["korean", "math", "social", "science", "vocational"].includes(subject)) return "relative";
 
   const academicYear = exam.academicYear ?? exam.year + 1;
   if (subject === "history")
     return exam.examType === "school_mock"
-      ? exam.year >= 2016 ? "absolute" : "unknown"
-      : academicYear >= 2017 ? "absolute" : "unknown";
+      ? exam.year >= 2016
+        ? "absolute"
+        : "unknown"
+      : academicYear >= 2017
+        ? "absolute"
+        : "unknown";
   if (subject === "english")
     return exam.examType === "school_mock"
-      ? exam.year >= 2017 ? "absolute" : "unknown"
-      : academicYear >= 2018 ? "absolute" : "unknown";
+      ? exam.year >= 2017
+        ? "absolute"
+        : "unknown"
+      : academicYear >= 2018
+        ? "absolute"
+        : "unknown";
   if (subject === "second_language") {
-    if (exam.examType === "school_mock")
-      return "unknown"; // No verified fixed-score regime for education-office exams.
+    if (exam.examType === "school_mock") return "unknown"; // No verified fixed-score regime for education-office exams.
     return academicYear >= 2022 ? "absolute" : "relative";
   }
   return "unknown";
 }
 
-export function absoluteGradeCuts(exam: GradingRegime, subject: Subject):
-  { cuts: GradeCutEntry[]; maxScore: number } | null {
+export function absoluteGradeCuts(
+  exam: GradingRegime,
+  subject: Subject,
+): { cuts: GradeCutEntry[]; maxScore: number } | null {
   if (gradingMode(exam, subject) !== "absolute") return null;
-  const scores = subject === "english"
-    ? [90, 80, 70, 60, 50, 40, 30, 20]
-    : subject === "history"
-      ? [40, 35, 30, 25, 20, 15, 10, 5]
-      : [45, 40, 35, 30, 25, 20, 15, 10];
+  const scores =
+    subject === "english"
+      ? [90, 80, 70, 60, 50, 40, 30, 20]
+      : subject === "history"
+        ? [40, 35, 30, 25, 20, 15, 10, 5]
+        : [45, 40, 35, 30, 25, 20, 15, 10];
   return {
     cuts: scores.map((rawScore, i) => ({ grade: i + 1, rawScore })),
     maxScore: subject === "english" ? 100 : 50,

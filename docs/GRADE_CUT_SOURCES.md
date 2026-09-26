@@ -3,12 +3,12 @@
 2026-09-26 기준. 광고 문구를 원점수 데이터 fixture로 취급하지 않습니다.
 검증된 상대평가 숫자, 시험 식별자, 과목 mapping을 확보한 범위만 adapter에 등록합니다.
 
-| 출처 | 공개 위치 | 공개 데이터/로그인 | 접근 정책·상태 | fixture / 자동 활성 |
-| --- | --- | --- | --- | --- |
-| 메가스터디 | https://m.megastudy.net/Entinfo/total_rankCut/main.asp | 로그인 없이 2026.07.08·06.04 고3 사회·과학탐구 원점수 표 확인 | robots 허용, `automated_verified` (사회·과학탐구) | 실제 2건 / 켜짐 |
-| EBSi | https://www.ebsi.co.kr/ebs/xip/xipa/retrieveSCVPreparation.ebs?irecord=202609023&targetCd=D300 | 공개 사전준비 HTML은 서비스 안내와 과목 목록. 점수표 숫자는 확인하지 못함 | https://www.ebsi.co.kr/robots.txt의 `Disallow: /*.ajax$` 확인. `.ajax` 요청 금지. `disabled_policy` | 없음 / 꺼짐 |
-| 대성마이맥 | https://www.mimacstudy.com/hmockTest/HmockAnalysis.ds?groupNo=446 | 공개 2026.09.02·06.04 고3 시험분석의 사회·과학 숫자 표 확인 | robots.txt `User-agent: *; Disallow: /` 및 해당 경로 Allow 없음. `disabled_policy` | 없음 / 꺼짐 |
-| 공식 | 평가원(KICE) 모의평가·수능, 주관 교육청 학력평가 원문 필요 | EBSi 역대 등급컷 페이지는 표준점수를 주관 교육청·평가원 출처로, 원점수 백분위를 EBSi 자체분석으로 명시. 공식 **원점수** 구분점수 원문 확인 전 자동 생성 금지 | `disabled_unverified` | 없음 / 꺼짐 |
+| 출처       | 공개 위치                                                                                      | 공개 데이터/로그인                                                                                                                                           | 접근 정책·상태                                                                                      | fixture / 자동 활성 |
+| ---------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ------------------- |
+| 메가스터디 | https://m.megastudy.net/Entinfo/total_rankCut/main.asp                                         | 로그인 없이 2026.07.08·06.04 고3 사회·과학탐구 원점수 표 확인                                                                                                | robots 허용, `automated_verified` (사회·과학탐구)                                                   | 실제 2건 / 켜짐     |
+| EBSi       | https://www.ebsi.co.kr/ebs/xip/xipa/retrieveSCVPreparation.ebs?irecord=202609023&targetCd=D300 | 공개 사전준비 HTML은 서비스 안내와 과목 목록. 점수표 숫자는 확인하지 못함                                                                                    | https://www.ebsi.co.kr/robots.txt의 `Disallow: /*.ajax$` 확인. `.ajax` 요청 금지. `disabled_policy` | 없음 / 꺼짐         |
+| 대성마이맥 | https://www.mimacstudy.com/hmockTest/HmockAnalysis.ds?groupNo=446                              | 공개 2026.09.02·06.04 고3 시험분석의 사회·과학 숫자 표 확인                                                                                                  | robots.txt `User-agent: *; Disallow: /` 및 해당 경로 Allow 없음. `disabled_policy`                  | 없음 / 꺼짐         |
+| 공식       | 평가원(KICE) 모의평가·수능, 주관 교육청 학력평가 원문 필요                                     | EBSi 역대 등급컷 페이지는 표준점수를 주관 교육청·평가원 출처로, 원점수 백분위를 EBSi 자체분석으로 명시. 공식 **원점수** 구분점수 원문 확인 전 자동 생성 금지 | `disabled_unverified`                                                                               | 없음 / 꺼짐         |
 
 검증되면 실제 공개 HTML의 필요한 최소 조각만 fixture로 저장하고, malformed 입력과
 시험/세부과목 mapping 테스트를 만든 뒤 `adapters/index.ts`에 등록합니다.

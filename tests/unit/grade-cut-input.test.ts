@@ -49,7 +49,6 @@ describe("grade estimate", () => {
   });
 });
 
-
 describe("grade cut bulk csv", () => {
   it("parses multiple rows without fetching source URLs", () => {
     const csv = [

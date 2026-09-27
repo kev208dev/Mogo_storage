@@ -1,11 +1,7 @@
 import { SampleNotice } from "@/components/layout/SampleNotice";
 import { Badge } from "@/components/ui/badge";
 import { GRADE_CUT_SOURCE_LABELS, type Subject } from "@/lib/constants";
-import {
-  gradeCutTableColumns,
-  gradeCutTableGrades,
-  gradeCutValue,
-} from "@/lib/grade-cut-table";
+import { gradeCutTableColumns, gradeCutTableGrades, gradeCutValue } from "@/lib/grade-cut-table";
 import { isMutedEstimate } from "@/lib/grade-cuts";
 import { absoluteGradeCuts } from "@/lib/grade-cut-mode";
 import type { Exam, GradeCut } from "@/lib/data/types";
@@ -29,11 +25,7 @@ export function GradeCutTable({
         <p className="text-muted-foreground text-sm">
           절대평가 · 시험별 예상컷 수집 없이 고정 원점수 기준을 적용합니다.
         </p>
-        <GradeEstimator
-          gradeCuts={[]}
-          fixedCuts={absolute.cuts}
-          maxScore={absolute.maxScore}
-        />
+        <GradeEstimator gradeCuts={[]} fixedCuts={absolute.cuts} maxScore={absolute.maxScore} />
         <div className="border-border overflow-x-auto rounded-md border">
           <table className="w-full min-w-[20rem] text-sm tabular-nums">
             <caption className="sr-only">절대평가 고정 원점수 등급 기준</caption>

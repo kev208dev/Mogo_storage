@@ -80,10 +80,15 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
           cut.rawScoreMin! > cut.rawScoreMax! ||
           cut.rawScore !== null)) ||
       (cut.rawScore !== null &&
-        (!Number.isFinite(cut.rawScore) ||
-          cut.rawScore < 0 ||
-          cut.rawScore > 100 ||
-          Math.round(cut.rawScore * 2) !== cut.rawScore * 2)) ||
+        (!Number.isFinite(cut.rawScore) || cut.rawScore < 0 || cut.rawScore > 100)) ||
+      (cut.standardScore !== null &&
+        (!Number.isFinite(cut.standardScore) ||
+          cut.standardScore < 0 ||
+          cut.standardScore > 300)) ||
+      (cut.percentile !== null &&
+        (!Number.isFinite(cut.percentile) || cut.percentile < 0 || cut.percentile > 100)) ||
+      (cut.rawScoreText !== null &&
+        !/^\d+(?:\.\d+)?(?:\s*[~～-]\s*\d+(?:\.\d+)?)?$/.test(cut.rawScoreText)) ||
       (cut.rawScore === null &&
         !hasRange &&
         cut.standardScore === null &&
@@ -93,14 +98,25 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
     )
       throw new Error("invalid grade cut");
   }
-  const rawCuts = sorted.filter((cut) => cut.rawScore !== null || cut.rawScoreMin !== null);
-  for (let i = 1; i < rawCuts.length; i++) {
-    const prior = rawCuts[i - 1]!;
-    const current = rawCuts[i]!;
-    const priorLow = prior.rawScoreMin ?? prior.rawScore!;
-    const currentHigh = current.rawScoreMax ?? current.rawScore!;
-    if (currentHigh > priorLow) throw new Error("non-monotonic grade cuts");
-  }
+
+  const validateMonotonic = (scores: Array<{ grade: number; score: number }>) => {
+    for (let i = 1; i < scores.length; i++) {
+      if (scores[i]!.score > scores[i - 1]!.score) throw new Error("non-monotonic grade cuts");
+    }
+  };
+  const rawScores = sorted.flatMap((cut) => {
+    const score = cut.rawScore ?? cut.rawScoreMin;
+    return score === null ? [] : [{ grade: cut.grade, score }];
+  });
+  const standardScores = sorted.flatMap((cut) =>
+    cut.standardScore === null ? [] : [{ grade: cut.grade, score: cut.standardScore }],
+  );
+  const percentiles = sorted.flatMap((cut) =>
+    cut.percentile === null ? [] : [{ grade: cut.grade, score: cut.percentile }],
+  );
+  validateMonotonic(rawScores);
+  validateMonotonic(standardScores);
+  validateMonotonic(percentiles);
   return sorted;
 }
 export function cutsFingerprint(cuts: GradeCutEntry[]): string {

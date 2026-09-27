@@ -8,7 +8,9 @@ import {
 describe("grade cut provider registry", () => {
   it("classifies every target provider", () => {
     expect(GRADE_CUT_PROVIDERS).toHaveLength(7);
-    expect(Object.keys(GRADE_CUT_PROVIDER_POLICIES).sort()).toEqual([...GRADE_CUT_PROVIDERS].sort());
+    const registered = Object.keys(GRADE_CUT_PROVIDER_POLICIES).sort();
+    const expected = [...GRADE_CUT_PROVIDERS].sort();
+    expect(registered).toEqual(expected);
     expect(GRADE_CUT_PROVIDER_POLICIES.megastudy.automation).toBe("automated_first_party");
     expect(GRADE_CUT_PROVIDER_POLICIES.ebsi.automation).toBe("blocked_policy");
     expect(GRADE_CUT_PROVIDER_POLICIES.daesung.automation).toBe("blocked_policy");

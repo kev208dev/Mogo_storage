@@ -8,6 +8,7 @@ export const GRADE_CUT_PROVIDERS = [
   "jongro",
   "jinhak",
   "uway",
+  "kimyoungil",
 ] as const;
 export type GradeCutProvider = (typeof GRADE_CUT_PROVIDERS)[number];
 export type ProviderAutomationStatus =
@@ -15,6 +16,9 @@ export type ProviderAutomationStatus =
   | "automated_secondary"
   | "manual_verified"
   | "blocked_policy"
+  | "blocked_challenge"
+  | "research_pending"
+  | "manual_only"
   | "unsupported"
   | "no_data";
 export type ProviderDataStatus = "estimated" | "finalized" | "missing" | "stale";
@@ -50,7 +54,7 @@ export const GRADE_CUT_PROVIDER_POLICIES: Record<GradeCutProvider, GradeCutProvi
     source: "ebs",
     automation: "blocked_policy",
     firstParty: true,
-    reason: "점수 데이터가 robots.txt에서 차단한 .ajax 경로에 있어 자동 요청 금지",
+    reason: "robots 정책상 자동 요청 비활성",
   },
   daesung: {
     provider: "daesung",
@@ -62,30 +66,37 @@ export const GRADE_CUT_PROVIDER_POLICIES: Record<GradeCutProvider, GradeCutProvi
   etoos: {
     provider: "etoos",
     source: null,
-    automation: "unsupported",
+    automation: "manual_only",
     firstParty: true,
-    reason: "로그인 없이 안정적으로 검증 가능한 공개 숫자 표와 fixture 미확보",
+    reason: "수동 확인 경로만 사용",
   },
   jongro: {
     provider: "jongro",
-    source: null,
-    automation: "manual_verified",
+    source: "jongro",
+    automation: "automated_first_party",
     firstParty: true,
-    reason: "공개 발표 페이지는 있으나 시험 식별자와 최소 fixture 검증 전 자동화하지 않음",
+    reason: "robots 허용된 공개 등급컷 페이지를 자동 수집",
   },
   jinhak: {
     provider: "jinhak",
     source: null,
-    automation: "unsupported",
+    automation: "blocked_challenge",
     firstParty: true,
-    reason: "자체 값과 비교표 값을 구분할 안정적인 공개 parser/fixture 미확보",
+    reason: "공개 경로에서 challenge 확인, 자동 수집 비활성",
   },
   uway: {
     provider: "uway",
     source: null,
-    automation: "no_data",
+    automation: "blocked_policy",
     firstParty: true,
-    reason: "공개 안내에서 등급컷 서비스는 확인했지만 수집 가능한 숫자 표 미확보",
+    reason: "정책상 자동 수집 비활성",
+  },
+  kimyoungil: {
+    provider: "kimyoungil",
+    source: "kimyoungil",
+    automation: "research_pending",
+    firstParty: true,
+    reason: "공개 등급컷 데이터와 이용 정책 조사 중",
   },
 };
 

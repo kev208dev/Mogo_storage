@@ -52,7 +52,7 @@ export function parseGradeCutEntries(input: string): GradeCutEntry[] {
     const current = cuts[i]!;
     const currentHigh = current.rawScore === null ? current.rawScoreMax : current.rawScore;
     const previousLow = previous.rawScore === null ? previous.rawScoreMin : previous.rawScore;
-    if (currentHigh > previousLow) {
+    if (currentHigh != null && previousLow != null && currentHigh > previousLow) {
       throw new GradeCutInputError(
         `${current.grade}등급 컷은 ${previous.grade}등급 컷보다 높을 수 없습니다.`,
       );

@@ -140,9 +140,7 @@ export function GradeCutTable({
         </table>
       </div>
       {gradeCuts.length === 0 ? (
-        <p className="text-muted-foreground text-xs">
-          현재 확인된 자료부터 표시하고 있습니다.
-        </p>
+        <p className="text-muted-foreground text-xs">현재 확인된 자료부터 표시하고 있습니다.</p>
       ) : null}
       <ul className="text-muted-foreground space-y-0.5 text-xs">
         {gradeCuts.map((c) => (

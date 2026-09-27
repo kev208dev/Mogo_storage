@@ -362,6 +362,11 @@ function buildGradeCuts(featured: Exam): GradeCut[] {
         megastudy: [88, 79, 69, 58, 46, 35, 26, 18],
         daesung: [89, 80, 70, 59, 47, 36, 27, 19],
         ebs: [88, 80, 69, 58, 47, 36, 26, 18],
+        jongro: [],
+        etoos: [],
+        jinhak: [],
+        uway: [],
+        kimyoungil: [],
       },
     ],
     [
@@ -371,6 +376,11 @@ function buildGradeCuts(featured: Exam): GradeCut[] {
         megastudy: [84, 75, 63, 50, 36, 24, 16, 10],
         daesung: [85, 76, 64, 51, 37, 25, 17, 11],
         ebs: [84, 76, 64, 50, 36, 25, 16, 10],
+        jongro: [],
+        etoos: [],
+        jinhak: [],
+        uway: [],
+        kimyoungil: [],
       },
     ],
   ];

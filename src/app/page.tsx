@@ -4,13 +4,7 @@ import { ExamList } from "@/components/exam/ExamList";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { ExamFinder } from "@/components/search/ExamFinder";
 import { ExamSearch } from "@/components/search/ExamSearch";
-import {
-  CORE_SUBJECTS,
-  GRADES,
-  MONTHS,
-  SITE_NAME,
-  SUBJECT_LABELS,
-} from "@/lib/constants";
+import { CORE_SUBJECTS, GRADES, MONTHS, SITE_NAME, SUBJECT_LABELS } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
 import { FEATURED_EXAM } from "@/lib/data/sample-data";
 import { examPath, subjectSegment } from "@/lib/exam-path";

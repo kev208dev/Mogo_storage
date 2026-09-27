@@ -4,7 +4,7 @@
  */
 import { rmSync } from "node:fs";
 import path from "node:path";
-import { and, eq, sql } from "drizzle-orm";
+import { sql } from "drizzle-orm";
 import * as s from "@/db/schema";
 import { runBackfill } from "@/ingestion/backfill";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
@@ -24,7 +24,12 @@ import {
  * 관리자 e2e 가 만드는 시험 경로. 샘플 build 에는 없는 경로라 .next 에 남은 파일은 이전 실행의 ISR 결과뿐이다.
  * 같은 .next 로 다시 실행하면 새 DB 인데도 이전 실행에서 게시된 페이지가 먼저 나가므로 지운다.
  */
-const ADMIN_E2E_EXAM_PATHS = ["exam/2021/high2/11", "exam/2022/high3/09", "concepts/korean"];
+const ADMIN_E2E_EXAM_PATHS = [
+  "exam/2021/high2/11",
+  "exam/2022/high3/09",
+  "exam/2022/high3/07",
+  "concepts/korean",
+];
 
 function clearStaleIsrOutput() {
   const root = path.resolve(".next/server/app");
@@ -100,17 +105,29 @@ export default async function globalSetup() {
  * 실제 운영에서는 answers:extract 가 해설지 머리말로 만든다 — 여기서는 화면·관리자 흐름만 확인한다.
  */
 async function seedConcepts(db: Awaited<ReturnType<typeof setupDbAt>>) {
+  // 다른 e2e 가 방문하지 않는 전용 시험: 공개 페이지를 승인 뒤에 처음 열어 ISR 캐시에 의존하지 않는다
   const [exam] = await db
-    .select({ id: s.exams.id })
-    .from(s.exams)
-    .where(and(eq(s.exams.year, 2022), eq(s.exams.grade, 3), eq(s.exams.month, 9)))
-    .limit(1);
-  if (!exam) throw new Error("e2e: 2022 고3 9월 시험이 게시되지 않음");
+    .insert(s.exams)
+    .values({
+      year: 2022,
+      grade: 3,
+      month: 7,
+      examDate: "2022-07-06",
+      academicYear: 2023,
+      examType: "school_mock",
+      organizer: "서울특별시교육청",
+      slug: "2022-high3-07-e2e-concepts",
+      isSample: false,
+    })
+    .returning();
+  await db
+    .insert(s.examSubjects)
+    .values({ examId: exam!.id, subject: "korean", questionCount: 45, totalScore: 100 });
   const qs = await db
     .insert(s.questions)
     .values(
-      [1, 2].map((n) => ({
-        examId: exam.id,
+      [1, 2, 3].map((n) => ({
+        examId: exam!.id,
         subject: "korean" as const,
         questionNumber: n,
         answer: String(n),
@@ -123,23 +140,16 @@ async function seedConcepts(db: Awaited<ReturnType<typeof setupDbAt>>) {
     .insert(s.concepts)
     .values({ subject: "korean", name: "세부 내용 파악", slug: "세부-내용-파악" })
     .returning();
-  await db.insert(s.questionConcepts).values([
-    {
-      questionId: qs[0]!.id,
-      conceptId: concept!.id,
-      status: "approved",
-      source: "solution_heading",
-      confidence: 0.9,
-      evidence: "1. 세부 내용 파악 (해설지 1쪽)",
-    },
-    {
-      questionId: qs[1]!.id,
-      conceptId: concept!.id,
-      status: "manual_review",
-      source: "solution_heading",
-      confidence: 0.6,
-      evidence: "2. 세부 내용 파악 (해설지 1쪽)",
-      reviewReason: "텍스트 층에서 번호 위치가 흩어진 머리말",
-    },
-  ]);
+  const link = (i: number, status: "approved" | "manual_review") => ({
+    questionId: qs[i]!.id,
+    conceptId: concept!.id,
+    status,
+    source: "solution_heading" as const,
+    confidence: status === "approved" ? 0.9 : 0.6,
+    evidence: `${i + 1}. 세부 내용 파악 (해설지 1쪽)`,
+    reviewReason: status === "approved" ? null : "텍스트 층에서 번호 위치가 흩어진 머리말",
+  });
+  await db
+    .insert(s.questionConcepts)
+    .values([link(0, "approved"), link(1, "manual_review"), link(2, "manual_review")]);
 }

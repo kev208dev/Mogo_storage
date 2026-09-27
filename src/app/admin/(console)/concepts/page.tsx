@@ -87,20 +87,21 @@ export default async function ConceptsAdminPage({ searchParams }: PageProps<"/ad
                   className="space-y-1.5 py-2 text-sm"
                 >
                   <div className="flex flex-wrap items-baseline gap-x-2">
-                    <Link
+                    {/* 공개 페이지는 prefetch 하지 않는다: 승인 전 내용이 ISR 캐시에 미리 만들어지지 않게 */}
+                    <a
                       href={`${page}#q-${question.questionNumber}`}
                       className="font-bold underline"
                     >
                       {examTitle(key)} {courseName ?? SUBJECT_LABELS[question.subject]}{" "}
                       {question.questionNumber}번
-                    </Link>
+                    </a>
                     <span>→</span>
-                    <Link
+                    <a
                       href={conceptPath(concept.subject, concept.slug)}
                       className="font-semibold underline"
                     >
                       {concept.name}
-                    </Link>
+                    </a>
                     <span className="text-muted-foreground text-xs">
                       신뢰도 {link.confidence.toFixed(1)} · {link.source}
                       {link.reviewedAt

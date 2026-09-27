@@ -70,7 +70,7 @@ type TableRow = { grade: number; rawScore: number };
 /**
  * 원점수 열이 명시된 표만 읽는다. 표준점수·백분위에서 원점수를 추정하지 않는다.
  * "만점" 행이 있으면 영역 만점과 같아야 한다 (다른 시험·과목 표가 섞였는지 확인).
- * 반점수(예: 43.5)는 정수 원점수 모델로 표현할 수 없으므로 표 전체를 건너뛴다 (null).
+ * 소수 원점수는 반올림하지 않고 그대로 보존한다.
  */
 function rawScoreTable(
   table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
@@ -83,7 +83,6 @@ function rawScoreTable(
     .map((th) => label(th.text));
   if (!headers || headers[0] !== "등급" || headers[1] !== "원점수")
     throw new Error("MegaStudy raw score header missing");
-  let halfPoint = false;
   const cuts = table.querySelectorAll("tbody tr").flatMap((tr) => {
     const cells = tr.querySelectorAll("td");
     const gradeText = label(cells[0]?.text ?? "");
@@ -94,14 +93,10 @@ function rawScoreTable(
       return [];
     }
     if (!/^[1-9]등급$/.test(gradeText)) throw new Error("malformed MegaStudy grade row");
-    if (/^\d{1,3}\.5$/.test(scoreText)) {
-      halfPoint = true;
-      return [];
-    }
-    if (!/^\d{1,3}$/.test(scoreText)) throw new Error("malformed MegaStudy grade row");
+    if (!/^\d{1,3}(?:\.\d{1,2})?$/.test(scoreText))
+      throw new Error("malformed MegaStudy grade row");
     return [{ grade: Number(gradeText[0]), rawScore: Number(scoreText) }];
   });
-  if (halfPoint) return null;
   if (!cuts.length || cuts.some((cut) => cut.rawScore > maxRawScore(subject)))
     throw new Error("invalid MegaStudy raw score");
   return cuts;

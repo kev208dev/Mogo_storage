@@ -53,23 +53,30 @@ test("관리자 대시보드: source × 기능 자동화 범위 (robots 금지�
 });
 
 test("Flow H: 오류 신고 → 관리자 → 해결", async ({ page, request }) => {
+  // 재시도(retries)에서도 같은 DB 를 쓰므로 시도마다 다른 신고 문구로 구분한다
+  const message = `E2E 신고 ${Date.now()}`;
   const res = await request.post("/api/reports", {
     data: JSON.stringify({
       examId: await examIdOf(page, "/exam/2022/high3/09"),
       category: "wrong_solution",
-      message: "E2E 신고",
+      message,
     }),
     headers: { "content-type": "application/json", "x-forwarded-for": "10.1.2.3" },
   });
   expect(res.status()).toBe(201);
   await login(page);
   await page.goto("/admin/reports");
-  const row = page.getByRole("listitem").filter({ hasText: "E2E 신고" });
+  const row = page.getByRole("listitem").filter({ hasText: message });
   await row.getByLabel("상태").selectOption("resolved");
+  // server action 응답을 기다린 뒤 이동한다 (바로 이동하면 요청이 취소될 수 있다)
+  const saved = page.waitForResponse(
+    (r) => r.request().method() === "POST" && new URL(r.url()).pathname === "/admin/reports",
+  );
   await row.getByRole("button", { name: "변경" }).click();
+  expect((await saved).ok()).toBe(true);
   await page.goto("/admin/reports");
   await expect(
-    page.getByRole("listitem").filter({ hasText: "E2E 신고" }).getByLabel("상태"),
+    page.getByRole("listitem").filter({ hasText: message }).getByLabel("상태"),
   ).toHaveValue("resolved");
 });
 

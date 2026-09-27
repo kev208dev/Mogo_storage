@@ -42,6 +42,11 @@ export const GRADE_CUT_SOURCE_HOSTS: Record<GradeCutSource, readonly string[]> =
   megastudy: [".megastudy.net"],
   daesung: [".mimacstudy.com"],
   ebs: [".ebsi.co.kr", ".ebs.co.kr"],
+  jongro: [".jongro.co.kr"],
+  etoos: [".etoos.com"],
+  jinhak: [".jinhak.com"],
+  uway: [".uway.com"],
+  kimyoungil: [".kimyoungil.com"],
 };
 
 export type CutProblem =

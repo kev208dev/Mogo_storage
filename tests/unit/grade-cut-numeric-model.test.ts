@@ -41,6 +41,11 @@ describe("grade cut numeric models", () => {
     expect(() => normalizeCuts([])).toThrow();
     expect(() => normalizeCuts([{ grade: 1, rawScoreMin: 90, rawScoreMax: 89 }])).toThrow();
     expect(() => normalizeCuts([{ grade: 1, rawScoreText: "한국사 템플릿" }])).toThrow();
-    expect(() => normalizeCuts([{ grade: 1, rawScore: 80 }, { grade: 2, rawScore: 81 }])).toThrow();
+    expect(() =>
+      normalizeCuts([
+        { grade: 1, rawScore: 80 },
+        { grade: 2, rawScore: 81 },
+      ]),
+    ).toThrow();
   });
 });

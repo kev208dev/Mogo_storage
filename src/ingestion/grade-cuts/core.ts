@@ -99,22 +99,31 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
       throw new Error("invalid grade cut");
   }
 
+  const rawCuts = sorted.filter(
+    (cut) =>
+      cut.rawScore !== null ||
+      cut.rawScoreMin !== null ||
+      (cut.rawScoreText !== null && !/[~～-]/.test(cut.rawScoreText)),
+  );
+  for (let i = 1; i < rawCuts.length; i++) {
+    const prior = rawCuts[i - 1]!;
+    const current = rawCuts[i]!;
+    const priorLow = prior.rawScoreMin ?? prior.rawScore ?? Number(prior.rawScoreText);
+    const currentHigh = current.rawScoreMax ?? current.rawScore ?? Number(current.rawScoreText);
+    if (currentHigh > priorLow) throw new Error("non-monotonic grade cuts");
+  }
+
   const validateMonotonic = (scores: Array<{ grade: number; score: number }>) => {
     for (let i = 1; i < scores.length; i++) {
       if (scores[i]!.score > scores[i - 1]!.score) throw new Error("non-monotonic grade cuts");
     }
   };
-  const rawScores = sorted.flatMap((cut) => {
-    const score = cut.rawScore ?? cut.rawScoreMin;
-    return score === null ? [] : [{ grade: cut.grade, score }];
-  });
   const standardScores = sorted.flatMap((cut) =>
     cut.standardScore === null ? [] : [{ grade: cut.grade, score: cut.standardScore }],
   );
   const percentiles = sorted.flatMap((cut) =>
     cut.percentile === null ? [] : [{ grade: cut.grade, score: cut.percentile }],
   );
-  validateMonotonic(rawScores);
   validateMonotonic(standardScores);
   validateMonotonic(percentiles);
   return sorted;

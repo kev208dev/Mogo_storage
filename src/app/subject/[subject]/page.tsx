@@ -36,10 +36,7 @@ export default async function SubjectPage({ params }: PageProps<"/subject/[subje
   if (!subject) notFound();
 
   const repo = getRepository();
-  const [exams, examSubjects] = await Promise.all([
-    repo.listExams(),
-    repo.listAllExamSubjects(),
-  ]);
+  const [exams, examSubjects] = await Promise.all([repo.listExams(), repo.listAllExamSubjects()]);
   const examIds = new Set(
     examSubjects.filter((row) => row.subject === subject).map((row) => row.examId),
   );
@@ -51,11 +48,16 @@ export default async function SubjectPage({ params }: PageProps<"/subject/[subje
 
   return (
     <div className="py-6">
-      <Breadcrumb items={[{ label: "홈", href: "/" }, { label, href: path }]} />
+      <Breadcrumb
+        items={[
+          { label: "홈", href: "/" },
+          { label, href: path },
+        ]}
+      />
       <h1 className="mt-2 text-2xl font-extrabold">{label} 모의고사·모고 모음</h1>
       <p className="text-muted-foreground mt-2 text-sm leading-6">
-        고1·고2·고3 {label} 모의고사를 연도와 월별로 찾아 문제지, 정답·해설과 학습 기능을
-        확인할 수 있습니다.
+        고1·고2·고3 {label} 모의고사를 연도와 월별로 찾아 문제지, 정답·해설과 학습 기능을 확인할 수
+        있습니다.
       </p>
 
       <div className="mt-6 space-y-7">

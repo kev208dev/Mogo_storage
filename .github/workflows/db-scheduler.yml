@@ -1,0 +1,51 @@
+name: DB scheduler (pg_cron)
+
+# 운영 DB(Supabase)의 pg_cron + pg_net scheduler 설치 · 상태 · 제거 (수동 실행).
+#   install    pg_cron/pg_net 확인 → Vault 에 사이트 URL · CRON_SECRET 저장 → cron job 등록 (idempotent)
+#   status     cron job · 최근 실행 · pg_net 응답 코드 (비밀값 · 헤더 · 본문은 읽지 않음)
+#   uninstall  job 과 Vault 항목 제거
+# repository secrets: INGESTION_DATABASE_URL(운영 DB), INGESTION_SITE_URL, CRON_SECRET
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: install | status | uninstall
+        required: true
+        default: status
+        type: choice
+        options: [status, install, uninstall]
+
+concurrency:
+  group: db-scheduler
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: ops:db-scheduler
+        env:
+          DATABASE_URL: ${{ secrets.INGESTION_DATABASE_URL }}
+          INGESTION_SITE_URL: ${{ secrets.INGESTION_SITE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          ACTION: ${{ inputs.action }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::repository secret INGESTION_DATABASE_URL (운영 DB 연결 문자열) 이 없습니다."
+            exit 1
+          fi
+          case "$ACTION" in
+            install) npm run -s ops:db-scheduler -- --install ;;
+            uninstall) npm run -s ops:db-scheduler -- --uninstall ;;
+            *) npm run -s ops:db-scheduler -- --status ;;
+          esac

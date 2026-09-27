@@ -136,10 +136,14 @@ describe.skipIf(!TEST_DB_URL)("scheduler heartbeat · watchdog · 알림 dedupe 
     delete process.env.OPS_WEBHOOK_URL;
     try {
       const { GET } = await import("@/app/api/cron/[task]/route");
-      const call = (task: string, token = process.env.CRON_SECRET) =>
+      const call = (
+        task: string,
+        token = process.env.CRON_SECRET,
+        extra: Record<string, string> = {},
+      ) =>
         GET(
           new Request(`https://mogo.example/api/cron/${task}`, {
-            headers: { authorization: `Bearer ${token}` },
+            headers: { authorization: `Bearer ${token}`, ...extra },
           }),
           { params: Promise.resolve({ task }) },
         );
@@ -151,11 +155,22 @@ describe.skipIf(!TEST_DB_URL)("scheduler heartbeat · watchdog · 알림 dedupe 
       const skipped = await call("grade-cuts");
       expect(skipped.status).toBe(200);
       expect(await skipped.json()).toEqual({ skipped: "GRADE_CUT_INGESTION_ENABLED is not true" });
+      // 누가 불렀는지 detail 에 남는다: 헤더 없으면 manual
       expect(await loadHeartbeat(db, "grade-cuts")).toMatchObject({
         lastStatus: "skipped",
-        lastDetail: "disabled",
+        lastDetail: "manual:disabled",
         runCount: 1,
       });
+      await call("grade-cuts", undefined, { "x-scheduler": "pg_cron" });
+      expect(await loadHeartbeat(db, "grade-cuts")).toMatchObject({
+        lastDetail: "pg_cron:disabled",
+        runCount: 2,
+      });
+      await call("grade-cuts", undefined, { "user-agent": "vercel-cron/1.0" });
+      expect((await loadHeartbeat(db, "grade-cuts"))!.lastDetail).toBe("vercel_cron:disabled");
+      // 헤더 값은 짧은 식별자만 — 이상한 값은 manual 로 취급
+      await call("grade-cuts", undefined, { "x-scheduler": "https://evil.example/?x=1" });
+      expect((await loadHeartbeat(db, "grade-cuts"))!.lastDetail).toBe("manual:disabled");
 
       const watchdog = await call("watchdog");
       expect(watchdog.status).toBe(200);
@@ -174,7 +189,11 @@ describe.skipIf(!TEST_DB_URL)("scheduler heartbeat · watchdog · 알림 dedupe 
         .select()
         .from(s.schedulerHeartbeats)
         .where(eq(s.schedulerHeartbeats.task, "watchdog"));
-      expect(hb).toMatchObject({ lastStatus: "ok", lastDetail: "healthy" });
+      expect(hb).toMatchObject({ lastStatus: "ok", lastDetail: "manual:healthy" });
+      // 주기 확인용 정보 (실행 횟수 · 마지막 시작)
+      const gc = body.tasks.find((t: { task: string }) => t.task === "grade-cuts");
+      expect(gc).toMatchObject({ runCount: 4, lastStatus: "skipped" });
+      expect(typeof gc.lastStartedAt).toBe("string");
     } finally {
       process.env = prior;
     }

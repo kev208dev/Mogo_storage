@@ -15,7 +15,7 @@ export interface ScheduledTaskSpec {
   label: string;
   /** 기대 실행 주기(분). 사람이 읽는 값 */
   cadenceMinutes: number;
-  /** 마지막 실행 이후 이 시간(분)이 지나면 stale — GitHub schedule 지연을 감안해 여유를 둔다 */
+  /** 마지막 실행 이후 이 시간(분)이 지나면 stale (scheduler 지연 여유 포함) */
   staleAfterMinutes: number;
   /** 연속 실패가 이 횟수 이상이면 failing */
   failingAfter: number;
@@ -27,8 +27,9 @@ export const SCHEDULED_TASKS: ScheduledTaskSpec[] = [
   {
     task: "grade-cuts",
     label: "등급컷 watch",
+    // Supabase pg_cron(*/5)이 호출한다 — 5분 주기 4회를 놓치면 stale
     cadenceMinutes: 5,
-    staleAfterMinutes: 45,
+    staleAfterMinutes: 20,
     failingAfter: 3,
     enabled: (env) => env.GRADE_CUT_INGESTION_ENABLED === "true",
   },
@@ -74,6 +75,9 @@ export interface TaskHealth {
   lastSuccessAt: Date | null;
   minutesSinceSeen: number | null;
   consecutiveFailures: number;
+  /** 누적 실행 횟수 · 마지막 시작 시각 (주기 확인용) */
+  runCount: number;
+  lastStartedAt: Date | null;
   lastStatus: string | null;
   lastDetail: string | null;
 }
@@ -119,6 +123,8 @@ export function evaluateSchedulerHealth(
       lastSuccessAt: row?.lastSuccessAt ?? null,
       minutesSinceSeen,
       consecutiveFailures: row?.consecutiveFailures ?? 0,
+      runCount: row?.runCount ?? 0,
+      lastStartedAt: row?.lastStartedAt ?? null,
       lastStatus: row?.lastStatus ?? null,
       lastDetail: row?.lastDetail ?? null,
     };

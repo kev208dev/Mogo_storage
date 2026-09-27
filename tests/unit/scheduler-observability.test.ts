@@ -54,11 +54,11 @@ describe("scheduler heartbeat 판정", () => {
     expect(off["scheduled"]!.state).toBe("disabled");
   });
 
-  it("GitHub schedule 지연을 감안한 여유 (등급컷 5분 주기라도 45분까지는 정상)", () => {
-    const t = byTask([row("grade-cuts", { lastStartedAt: minutesAgo(40), lastFinishedAt: null })]);
+  it("등급컷은 pg_cron 5분 주기 — 4회(20분)까지 놓쳐도 정상, 그 이후 stale", () => {
+    const t = byTask([row("grade-cuts", { lastStartedAt: minutesAgo(20), lastFinishedAt: null })]);
     expect(t["grade-cuts"]!.state).toBe("ok");
     const late = byTask([
-      row("grade-cuts", { lastStartedAt: minutesAgo(46), lastFinishedAt: null }),
+      row("grade-cuts", { lastStartedAt: minutesAgo(21), lastFinishedAt: null }),
     ]);
     expect(late["grade-cuts"]!.state).toBe("stale");
   });

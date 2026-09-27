@@ -103,20 +103,44 @@ DATABASE_URL=postgres://.../mogo_restore npm run ingest:audit        # 슬롯 �
 
 | task         | 기대 주기 | stale 기준 | 감시 조건                          |
 | ------------ | --------- | ---------- | ---------------------------------- |
-| `grade-cuts` | 5분       | 45분       | `GRADE_CUT_INGESTION_ENABLED=true` |
+| `grade-cuts` | 5분       | 20분       | `GRADE_CUT_INGESTION_ENABLED=true` |
 | `scheduled`  | 10분      | 90분       | `INGESTION_ENABLED=true`           |
 | `watchdog`   | 1시간     | 36시간     | 항상 (관리자 화면 표시용)          |
 
 - 기준은 `SCHEDULER_STALE_MINUTES_GRADE_CUTS=60` 처럼 env 로 조정합니다 (주기보다 짧은 값은 무시).
-- watchdog 은 두 곳에서 호출합니다. 한쪽 scheduler 가 멈춰도 다른 쪽이 감지합니다.
-  - GitHub Actions `Scheduler watchdog` (매시): `/api/health` 확인 + watchdog 호출. 이상이 있으면 workflow 가 실패로 표시됩니다. health 실패는 직전 실행이 성공이었을 때만 webhook 을 보냅니다 (secret `OPS_WEBHOOK_URL`, 선택).
-  - Vercel Cron (`vercel.json`, 매일): 같은 watchdog 호출. GitHub schedule 자체가 멈춘 경우를 잡습니다.
+- heartbeat 의 `lastDetail` 앞부분은 호출한 scheduler 입니다: `pg_cron:` · `vercel_cron:` · `github_actions:` · `github_manual:` · `manual:` (헤더 `X-Scheduler` 또는 Vercel Cron user-agent). 자동 실행과 수동 호출을 구분할 수 있습니다.
+- watchdog 은 세 곳에서 호출합니다. 한쪽 scheduler 가 멈춰도 다른 쪽이 감지합니다.
+  - Supabase pg_cron `mogo-scheduler-watchdog` (매시 17분).
+  - GitHub Actions `Scheduler watchdog` (매시, best-effort): `/api/health` 확인 + watchdog 호출. 이상이 있으면 workflow 가 실패로 표시됩니다. health 실패는 직전 실행이 성공이었을 때만 webhook 을 보냅니다 (secret `OPS_WEBHOOK_URL`, 선택).
+  - Vercel Cron (`vercel.json`, 매일): 같은 watchdog 호출. DB scheduler 자체가 멈춘 경우를 잡습니다.
+
+## 5분 등급컷 scheduler — Supabase pg_cron + pg_net
+
+GitHub Actions `schedule` 은 5분 주기를 보장하지 않습니다. 2026-09-25~27 이 저장소에서 `2-57/5 * * * *` (5분),
+`*/10 * * * *` (10분), `23 * * * *` (매시) 세 workflow 가 모두 약 2.5~4시간 간격으로만 실행됐고, 건너뛴 회차는
+취소·대기 기록조차 없었습니다 (GitHub 가 schedule 이벤트 자체를 만들지 않음). Vercel Hobby 는 5분 Cron 배포를 거절합니다.
+그래서 운영 DB(Supabase) 안의 pg_cron 이 5분마다 pg_net 으로 `/api/cron/grade-cuts` 를 호출합니다.
+
+| job                       | 주기          | 호출                       |
+| ------------------------- | ------------- | -------------------------- |
+| `mogo-grade-cuts`         | `*/5 * * * *` | `GET /api/cron/grade-cuts` |
+| `mogo-scheduler-watchdog` | `17 * * * *`  | `GET /api/cron/watchdog`   |
+
+- 비밀값: 사이트 URL 과 `CRON_SECRET` 은 Supabase Vault(`mogo_site_url`, `mogo_cron_secret`)에만 저장합니다. job SQL 에는 Vault 이름만 들어가므로 `cron.job` · `cron.job_run_details` 에 비밀값이 남지 않습니다.
+- 중복 실행: endpoint 가 advisory lock 을 쓰므로 겹치면 `skipped`(locked)로 끝납니다. 확정(finalized) 슬롯은 계속 제외됩니다.
+- 비용: Supabase 에 포함된 extension, Vercel 호출 하루 288회(등급컷) + 24회(watchdog).
+- 설치·상태·제거 (idempotent, 비밀값 출력 없음):
+  - GitHub Actions → `DB scheduler (pg_cron)` → Run workflow → `install` / `status` / `uninstall` (secret `INGESTION_DATABASE_URL`, `INGESTION_SITE_URL`, `CRON_SECRET`)
+  - 또는 로컬: `DATABASE_URL=… CRON_SECRET=… INGESTION_SITE_URL=https://… npm run ops:db-scheduler -- --install` (`--status`, `--uninstall`)
+- `CRON_SECRET` 을 바꾸면 `install` 을 다시 실행해 Vault 값을 갱신합니다.
+- GitHub `Grade cut watch` workflow 는 schedule 을 없애고 수동 실행(보조)만 남겼습니다.
 - 확인: `/admin` 대시보드의 "Scheduler 상태", 또는 `npm run ops:scheduler` (`--json`, `--strict`, 알림까지 보내려면 `--watchdog`).
 - 공개 `/api/health` 는 `app`, `database` 만 돌려줍니다. cron·source 상태는 관리자 화면과 인증된 watchdog 응답에만 있습니다.
 
 ### "scheduler 지연" 알림을 받았을 때
 
-1. GitHub Actions 의 `Grade cut watch` / `Scheduled ingestion` 실행 기록을 봅니다. schedule 이 멈췄으면 `workflow_dispatch` 로 한 번 실행하고, 저장소가 60일 이상 비활성이면 workflow 를 다시 켭니다.
+1. 등급컷: `DB scheduler (pg_cron)` workflow 를 `status` 로 실행해 job 이 active 인지, 최근 실행(`cron.job_run_details`)과 pg_net 응답 코드(`net._http_response`)를 봅니다. 급하면 `Grade cut watch` 를 수동 실행합니다.
+   정기 수집(`scheduled`)은 아직 GitHub `Scheduled ingestion` 이 호출합니다. 저장소가 60일 이상 비활성이면 workflow 를 다시 켭니다.
 2. 실행은 되는데 heartbeat 가 없으면 `/api/cron/<task>` 응답(401/404/5xx)을 확인합니다. `CRON_SECRET`·`INGESTION_SITE_URL` secret 을 점검합니다.
 3. "연속 실패"면 `/admin` 의 상태 코드(예: `advisory_lock`)와 Vercel 로그의 `grade_cut_watch.failed` 를 봅니다.
 

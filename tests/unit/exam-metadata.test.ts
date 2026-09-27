@@ -6,6 +6,8 @@ import {
   buildExamMetadata,
   buildExamStructuredData,
   examSearchTitle,
+  examSeoFeatures,
+  examSeoOptions,
   monthAlias,
   NO_FEATURES,
   shouldNoindexExam,
@@ -95,6 +97,31 @@ describe("exam long-tail SEO", () => {
     });
     // 미적분은 카탈로그에 약칭이 없다 → 만들지 않는다
     expect(calculus.description).toContain("수학 미적분 자료");
+  });
+
+  it("영역 페이지는 세부과목 자료까지 센다 (세부과목 페이지는 자기 자료만)", async () => {
+    const { SampleExamRepository } = await import("@/lib/data/sample-repository");
+    const repo = new SampleExamRepository();
+    const loaded = await repo.getSubjectDetail(exam, "social");
+    // 영역 전체 자료는 없고 세부과목(사회·문화 등)에만 문제지·해설이 있는 영역 페이지
+    const area = {
+      ...loaded!,
+      files: [],
+      courseFileTypes: ["question", "solution"] as ("question" | "solution")[],
+    };
+    const f = examSeoFeatures(area);
+    expect(f.questionPaper && f.solution).toBe(true);
+    const m = buildExamMetadata(exam, subjects, "social", examSeoOptions(area));
+    expect(String(m.title)).toContain("사회탐구 문제·정답·해설");
+    expect(String(m.description)).not.toContain("공개되는 대로");
+    // 세부과목 자료가 없으면 주장하지 않는다
+    const none = examSeoFeatures({ ...area, courseFileTypes: [] });
+    expect(none.questionPaper || none.solution).toBe(false);
+
+    const course = await repo.getSubjectDetail(exam, "social", "social-culture");
+    expect(examSeoFeatures({ ...course!, courseFileTypes: ["listening_audio"] }).listening).toBe(
+      course!.files.some((x) => x.type === "listening_audio"),
+    );
   });
 
   it("시험 첫 페이지: 과목 없이, OpenGraph siteName · locale", () => {

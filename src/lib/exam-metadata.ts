@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, SUBJECTS, SUBJECT_LABELS, type Subject } from "./constants";
+import { SITE_NAME, SUBJECTS, SUBJECT_LABELS, type FileType, type Subject } from "./constants";
 import { courseByCode, courseSeoName, SUBJECT_AREA_LABELS } from "./courses";
 import type { Course, Exam, ExamSubject, ExamSubjectDetail } from "./data/types";
 import { examCoursePath, examPath, examTitle } from "./exam-path";
@@ -30,9 +30,14 @@ export const NO_FEATURES: ExamSeoFeatures = {
   vocabulary: false,
 };
 
-/** 시험 상세 데이터 → 제공 기능 (이미 불러온 detail 만 쓴다: 추가 조회 없음) */
+/**
+ * 시험 상세 데이터 → 제공 기능 (이미 불러온 detail 만 쓴다: 추가 조회 없음).
+ * 영역 페이지(세부과목 미선택)는 세부과목 자료도 이 페이지에서 고를 수 있으므로 함께 센다.
+ */
 export function examSeoFeatures(detail: ExamSubjectDetail): ExamSeoFeatures {
-  const has = (type: string) => detail.files.some((f) => f.type === type);
+  const courseTypes = detail.course ? [] : detail.courseFileTypes;
+  const has = (type: FileType) =>
+    detail.files.some((f) => f.type === type) || courseTypes.includes(type);
   return {
     questionPaper: has("question"),
     solution: has("solution"),

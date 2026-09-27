@@ -1,7 +1,12 @@
 import { SampleNotice } from "@/components/layout/SampleNotice";
 import { Badge } from "@/components/ui/badge";
 import { GRADE_CUT_SOURCE_LABELS, type Subject } from "@/lib/constants";
-import { gradeCutTableColumns, gradeCutTableGrades, gradeCutValueLabel, isOfficialGradeCutColumn } from "@/lib/grade-cut-table";
+import {
+  gradeCutTableColumns,
+  gradeCutTableGrades,
+  gradeCutValueLabel,
+  isOfficialGradeCutColumn,
+} from "@/lib/grade-cut-table";
 import { isMutedEstimate } from "@/lib/grade-cuts";
 import { absoluteGradeCuts } from "@/lib/grade-cut-mode";
 import type { Exam, GradeCut } from "@/lib/data/types";

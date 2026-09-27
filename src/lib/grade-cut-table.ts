@@ -21,3 +21,15 @@ export function gradeCutValue(
   const row = gradeCuts.find((cut) => cut.source === source);
   return row?.cuts.find((cut) => cut.grade === grade)?.rawScore ?? null;
 }
+
+export function gradeCutValueLabel(
+  gradeCuts: GradeCut[],
+  source: GradeCutSource,
+  grade: number,
+): string {
+  return String(gradeCutValue(gradeCuts, source, grade) ?? "-");
+}
+
+export function isOfficialGradeCutColumn(source: GradeCutSource): boolean {
+  return source === "official";
+}

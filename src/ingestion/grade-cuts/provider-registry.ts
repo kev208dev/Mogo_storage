@@ -37,10 +37,7 @@ export interface GradeCutProviderPolicy {
   reason: string;
 }
 
-export const GRADE_CUT_PROVIDER_POLICIES: Record<
-  GradeCutProvider,
-  GradeCutProviderPolicy
-> = {
+export const GRADE_CUT_PROVIDER_POLICIES: Record<GradeCutProvider, GradeCutProviderPolicy> = {
   megastudy: {
     provider: "megastudy",
     source: "megastudy",

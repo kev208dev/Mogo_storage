@@ -34,11 +34,7 @@ export function parseGradeCutEntries(input: string): GradeCutEntry[] {
     const grade = Number(match[1]);
     const rawScoreMin = Number(match[2]);
     const rawScoreMax = match[3] ? Number(match[3]) : rawScoreMin;
-    if (
-      rawScoreMin < 0 ||
-      rawScoreMax > 100 ||
-      rawScoreMin > rawScoreMax
-    ) {
+    if (rawScoreMin < 0 || rawScoreMax > 100 || rawScoreMin > rawScoreMax) {
       throw new GradeCutInputError(`${grade}등급 원점수 범위가 올바르지 않습니다.`);
     }
     if (seen.has(grade)) throw new GradeCutInputError(`${grade}등급이 중복되었습니다.`);
@@ -54,10 +50,8 @@ export function parseGradeCutEntries(input: string): GradeCutEntry[] {
   for (let i = 1; i < cuts.length; i += 1) {
     const previous = cuts[i - 1]!;
     const current = cuts[i]!;
-    const currentHigh =
-      current.rawScore === null ? current.rawScoreMax : current.rawScore;
-    const previousLow =
-      previous.rawScore === null ? previous.rawScoreMin : previous.rawScore;
+    const currentHigh = current.rawScore === null ? current.rawScoreMax : current.rawScore;
+    const previousLow = previous.rawScore === null ? previous.rawScoreMin : previous.rawScore;
     if (currentHigh > previousLow) {
       throw new GradeCutInputError(
         `${current.grade}등급 컷은 ${previous.grade}등급 컷보다 높을 수 없습니다.`,

@@ -23,9 +23,7 @@ function shortAlias(month: number): string | null {
   return month === 3 || month === 6 || month === 9 ? `${month}모` : null;
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps<"/month/[month]">): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<"/month/[month]">): Promise<Metadata> {
   const month = parseMonth((await params).month);
   if (!month) return {};
   const alias = shortAlias(month);
@@ -53,13 +51,17 @@ export default async function MonthPage({ params }: PageProps<"/month/[month]">)
 
   return (
     <div className="py-6">
-      <Breadcrumb items={[{ label: "홈", href: "/" }, { label: `${month}월`, href: path }]} />
+      <Breadcrumb
+        items={[
+          { label: "홈", href: "/" },
+          { label: `${month}월`, href: path },
+        ]}
+      />
       <h1 className="mt-2 text-2xl font-extrabold">
         {month}월 모의고사{alias ? ` · ${alias}` : ""} 모음
       </h1>
       <p className="text-muted-foreground mt-2 text-sm leading-6">
-        역대 {month}월 고1·고2·고3 모고를 연도별로 찾아 문제지와 정답·해설을 확인할 수
-        있습니다.
+        역대 {month}월 고1·고2·고3 모고를 연도별로 찾아 문제지와 정답·해설을 확인할 수 있습니다.
       </p>
 
       <div className="mt-6 space-y-7">

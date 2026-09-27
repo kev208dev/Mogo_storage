@@ -22,6 +22,13 @@ export interface AnswerEntry {
    * 이런 값은 본문 "정답" 표기와 모두 일치할 때만 인정한다 (validate).
    */
   reordered: boolean;
+  /**
+   * 본문 문항 머리말의 제목 원문 ("1. 세부 내용 파악" → "세부 내용 파악"). 개념 태그 후보.
+   * 머리말을 찾지 못하면 null. 해설 본문은 담지 않는다.
+   */
+  heading: string | null;
+  /** 머리말 형태: 번호가 앞("1. 제목") = leading, 텍스트 층에서 번호가 뒤로 밀림 = trailing */
+  headingForm: "leading" | "trailing" | null;
 }
 
 export interface AnswerSection {
@@ -174,6 +181,13 @@ function findBlocks(lines: Line[], problems: string[]): Block[] {
   return blocks;
 }
 
+/** 머리말 줄에서 번호를 뗀 제목 부분 */
+function headingTitle(text: string, leading: boolean): string {
+  if (leading) return text.replace(HEADING, "").trim();
+  const m = /^(.*?)\d{1,2}\./.exec(text);
+  return (m?.[1] ?? "").trim();
+}
+
 function isTrailingHeading(text: string, n: number): boolean {
   const m = TRAILING_HEADING.exec(text);
   return !!m && Number(m[1]) === n;
@@ -213,7 +227,13 @@ export function parseAnswerKeyText(pages: readonly string[]): ParsedAnswerKey {
           problems.push(`${sectionName(block)} ${t.number}번 정답이 두 번 다르게 나옴`);
         continue;
       }
-      const entry: AnswerEntry = { ...t, page: null, marker: null };
+      const entry: AnswerEntry = {
+        ...t,
+        page: null,
+        marker: null,
+        heading: null,
+        headingForm: null,
+      };
       seen.set(t.number, entry);
       entries.push(entry);
     }
@@ -227,12 +247,12 @@ export function parseAnswerKeyText(pages: readonly string[]): ParsedAnswerKey {
       const text = lines[li]!.text;
       const hm = HEADING.exec(text);
       const next = k < order.length ? order[k]!.number : null;
-      if (
-        next !== null &&
-        ((hm && Number(hm[1]) === next && !/^0\d\./.test(text)) || isTrailingHeading(text, next))
-      ) {
+      const leading = next !== null && !!hm && Number(hm[1]) === next && !/^0\d\./.test(text);
+      if (next !== null && (leading || isTrailingHeading(text, next))) {
         current = order[k]!;
         current.page = lines[li]!.page;
+        current.headingForm = leading ? "leading" : "trailing";
+        current.heading = headingTitle(text, leading) || null;
         k++;
       }
       const mm = current ? MARKER.exec(text) : null;

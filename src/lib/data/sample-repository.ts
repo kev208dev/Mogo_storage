@@ -4,7 +4,7 @@ import type { ExamKey } from "../exam-path";
 import { questionsForSlot } from "./question-slot";
 import { sortExamsDesc, type ExamRepository } from "./repository";
 import { sampleDataset, type SampleDataset } from "./sample-data";
-import type { Course, Exam, NewReport, QuestionWithStats, Report } from "./types";
+import type { ConceptDetail, Course, Exam, NewReport, QuestionWithStats, Report } from "./types";
 
 function toCourse(code: string): Course | null {
   const c = courseByCode(code);
@@ -101,6 +101,8 @@ export class SampleExamRepository implements ExamRepository {
       course,
       courseFileCounts,
       processingTypes: [],
+      // 샘플 모드에는 개념 태그를 만들지 않는다 (공식 해설지 근거가 없음)
+      conceptTags: {},
       files: inSlot(this.data.files),
       questions,
       gradeCuts: inSlot(this.data.gradeCuts),
@@ -126,6 +128,10 @@ export class SampleExamRepository implements ExamRepository {
       if (exam && course) result.push({ exam, course });
     }
     return result;
+  }
+
+  async getConcept(): Promise<ConceptDetail | null> {
+    return null;
   }
 
   async getFile(fileId: string) {

@@ -102,3 +102,8 @@ export function examCoursePath(key: ExamKey, subject: Subject, courseCode: strin
   const base = `/exam/${key.year}/${gradeSegment(key.grade)}/${monthSegment(key.month)}`;
   return `${base}/${subjectSegment(subject)}/${courseCode}`;
 }
+
+/** 개념 페이지: /concepts/science/탄소-화합물 (slug 는 URL 인코딩) */
+export function conceptPath(subject: Subject, slug: string): string {
+  return `/concepts/${subjectSegment(subject)}/${encodeURIComponent(slug)}`;
+}

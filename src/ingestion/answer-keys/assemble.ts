@@ -4,8 +4,8 @@ import { headerConflicts, type ExamIdentity } from "./identity";
 import { parseAnswerKeyText, parsePointsText, type AnswerEntry } from "./parse";
 import { checkAnswerKey, checkPoints, pointsRule, QUESTION_COUNT } from "./validate";
 
-/** 파서 규칙이 바뀌면 올린다 — 이전 버전으로 추출한 슬롯은 다시 추출 대상이 된다 */
-export const ANSWER_KEY_PARSER_VERSION = "answer-key-v2";
+/** 파서 규칙이 바뀌면 올린다 — 이전 버전으로 추출한 슬롯은 다시 추출 대상이 된다 (v3: 문항 머리말 제목 → 개념 태그) */
+export const ANSWER_KEY_PARSER_VERSION = "answer-key-v3";
 
 export interface SolutionDoc {
   fileId: string;

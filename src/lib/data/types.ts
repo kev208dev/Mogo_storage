@@ -216,4 +216,29 @@ export interface ExamSubjectDetail {
    * 자동 수집 DB 가 없으면 빈 배열.
    */
   processingTypes: FileType[];
+  /** 문항 id → 승인된 개념 태그 (해설지 머리말 근거, 관리자 승인) */
+  conceptTags: Record<string, ConceptTag[]>;
+}
+
+export interface ConceptTag {
+  subject: Subject;
+  name: string;
+  slug: string;
+}
+
+export interface ConceptQuestion {
+  exam: Exam;
+  subject: Subject;
+  courseCode: string | null;
+  courseName: string | null;
+  questionNumber: number;
+  score: number;
+  /** 근거: 해설지 머리말 원문 + 쪽 */
+  evidence: string | null;
+}
+
+export interface ConceptDetail {
+  concept: ConceptTag;
+  /** 승인된 연결만, 최신 시험부터 */
+  questions: ConceptQuestion[];
 }

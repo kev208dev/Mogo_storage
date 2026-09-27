@@ -14,6 +14,7 @@ import {
   timestamp,
   uniqueIndex,
 } from "drizzle-orm/pg-core";
+import { CONCEPT_SOURCES, CONCEPT_STATUSES } from "../lib/concepts";
 import {
   ARTIFACT_DELIVERY_POLICIES,
   ARTIFACT_ORIGINS,
@@ -930,7 +931,15 @@ export const answerKeyExtractions = pgTable(
       .notNull()
       .default([]),
     answers: jsonb("answers")
-      .$type<Array<{ number: number; answer: string; choice: boolean; page: number | null }>>()
+      .$type<
+        Array<{
+          number: number;
+          answer: string;
+          choice: boolean;
+          page: number | null;
+          heading?: string | null;
+        }>
+      >()
       .notNull()
       .default([]),
     /** 문항 번호 → 배점. 검증 실패면 null */
@@ -952,6 +961,58 @@ export const answerKeyExtractions = pgTable(
   (t) => [
     uniqueIndex("answer_key_extractions_slot_uq").on(t.examId, t.subject, t.slotKey),
     index("answer_key_extractions_status_idx").on(t.status),
+  ],
+);
+
+/**
+ * 개념 (과목별 사전). 이름은 공식 해설지 머리말에서 규칙으로 정리한 표기 또는 관리자 입력.
+ * slug 는 같은 과목 안에서 중복 제거 키.
+ */
+export const concepts = pgTable(
+  "concepts",
+  {
+    id: id(),
+    subject: subjectEnum("subject").notNull(),
+    name: text("name").notNull(),
+    slug: text("slug").notNull(),
+    ...timestamps,
+  },
+  (t) => [uniqueIndex("concepts_subject_slug_uq").on(t.subject, t.slug)],
+);
+
+/**
+ * 문항 ↔ 개념 (다대다). 공개 화면에는 approved 만 나온다.
+ * 근거(evidence)는 머리말 원문 + 해설지 쪽, 출처 파일(source_file_id/url)을 남긴다.
+ */
+export const questionConcepts = pgTable(
+  "question_concepts",
+  {
+    questionId: text("question_id")
+      .notNull()
+      .references(() => questions.id, { onDelete: "cascade" }),
+    conceptId: text("concept_id")
+      .notNull()
+      .references(() => concepts.id, { onDelete: "cascade" }),
+    status: text("status", { enum: CONCEPT_STATUSES }).notNull(),
+    source: text("source", { enum: CONCEPT_SOURCES }).notNull(),
+    confidence: real("confidence").notNull(),
+    evidence: text("evidence"),
+    reviewReason: text("review_reason"),
+    sourceFileId: text("source_file_id").references(() => examFiles.id, { onDelete: "set null" }),
+    sourceUrl: text("source_url"),
+    reviewedAt: timestamp("reviewed_at", { withTimezone: true }),
+    reviewedBy: text("reviewed_by"),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("question_concepts_pk_uq").on(t.questionId, t.conceptId),
+    index("question_concepts_concept_idx").on(t.conceptId, t.status),
+    index("question_concepts_status_idx").on(t.status),
+    check(
+      "question_concepts_status_ck",
+      sql`${t.status} in ('approved', 'manual_review', 'rejected')`,
+    ),
+    check("question_concepts_confidence_ck", sql`${t.confidence} >= 0 and ${t.confidence} <= 1`),
   ],
 );
 

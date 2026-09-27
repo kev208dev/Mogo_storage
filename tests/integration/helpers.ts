@@ -49,7 +49,8 @@ export async function resetDb(db: Database) {
     truncate table jobs, vocabulary_candidates, vocabulary, ingestion_errors, ingestion_runs,
       ingestion_checkpoints, exam_schedules, exam_files, source_artifacts, source_exams,
       source_priorities, exam_sources, question_statistics, listening_transcripts,
-      listening_tracks, grade_cuts, reports, questions, exam_subjects, exams restart identity cascade`);
+      listening_tracks, grade_cuts, reports, question_concepts, concepts, questions, exam_subjects,
+      exams restart identity cascade`);
 }
 
 // ── fake official source ────────────────────────────────────

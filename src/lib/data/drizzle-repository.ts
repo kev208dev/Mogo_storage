@@ -6,6 +6,8 @@ import type { ExamKey } from "../exam-path";
 import { questionsForSlot } from "./question-slot";
 import type { ExamRepository } from "./repository";
 import type {
+  ConceptDetail,
+  ConceptTag,
   Course,
   Exam,
   ExamFile,
@@ -174,6 +176,7 @@ export class DrizzleExamRepository implements ExamRepository {
       scheduleRows,
       counts,
       pending,
+      conceptRows,
     ] = await Promise.all([
       this.db.select().from(s.exams).where(eq(s.exams.id, examRef)).limit(1),
       this.db
@@ -261,6 +264,20 @@ export class DrizzleExamRepository implements ExamRepository {
             inArray(s.sourceArtifacts.status, ["discovered", "verifying", "changed"]),
           ),
         ),
+      // 승인된 개념 태그 (문항 필터는 아래 questionsForSlot 결과로)
+      this.db
+        .select({ questionId: s.questionConcepts.questionId, concept: s.concepts })
+        .from(s.questionConcepts)
+        .innerJoin(s.concepts, eq(s.concepts.id, s.questionConcepts.conceptId))
+        .innerJoin(s.questions, eq(s.questions.id, s.questionConcepts.questionId))
+        .where(
+          and(
+            eq(s.questions.examId, examRef),
+            eq(s.questions.subject, subject),
+            eq(s.questionConcepts.status, "approved"),
+          ),
+        )
+        .orderBy(asc(s.concepts.name)),
     ]);
 
     const examRow = examRows[0];
@@ -317,6 +334,15 @@ export class DrizzleExamRepository implements ExamRepository {
       .map(({ transcript, ...t }) => ({ ...t, transcript: transcript?.lines ?? null }))
       .sort((a, b) => (a.questionNumber ?? 0) - (b.questionNumber ?? 0));
 
+    const conceptTags: Record<string, ConceptTag[]> = {};
+    for (const { questionId, concept } of conceptRows) {
+      (conceptTags[questionId] ??= []).push({
+        subject: concept.subject,
+        name: concept.name,
+        slug: concept.slug,
+      });
+    }
+
     const courseFileCounts: Record<string, number> = {};
     for (const c of courses)
       courseFileCounts[c.code] = counts.find((x) => x.courseId === c.id)?.n ?? 0;
@@ -339,6 +365,9 @@ export class DrizzleExamRepository implements ExamRepository {
       listeningTracks,
       schedule: scheduleRows[0] ? toSchedule(scheduleRows[0]) : null,
       processingTypes,
+      conceptTags: Object.fromEntries(
+        questions.filter((q) => conceptTags[q.id]).map((q) => [q.id, conceptTags[q.id]!]),
+      ),
     };
   }
 
@@ -349,6 +378,51 @@ export class DrizzleExamRepository implements ExamRepository {
       .innerJoin(s.exams, eq(s.exams.id, s.examCourses.examId))
       .innerJoin(s.courses, eq(s.courses.id, s.examCourses.courseId));
     return rows.map((r) => ({ exam: toExam(r.exam), course: toCourse(r.course) }));
+  }
+
+  async getConcept(subject: Subject, slug: string): Promise<ConceptDetail | null> {
+    const [concept] = await this.db
+      .select()
+      .from(s.concepts)
+      .where(and(eq(s.concepts.subject, subject), eq(s.concepts.slug, slug)))
+      .limit(1);
+    if (!concept) return null;
+    const rows = await this.db
+      .select({
+        exam: s.exams,
+        question: s.questions,
+        course: s.courses,
+        evidence: s.questionConcepts.evidence,
+      })
+      .from(s.questionConcepts)
+      .innerJoin(s.questions, eq(s.questions.id, s.questionConcepts.questionId))
+      .innerJoin(s.exams, eq(s.exams.id, s.questions.examId))
+      .leftJoin(s.courses, eq(s.courses.id, s.questions.courseId))
+      .where(
+        and(
+          eq(s.questionConcepts.conceptId, concept.id),
+          eq(s.questionConcepts.status, "approved"),
+        ),
+      )
+      .orderBy(
+        desc(s.exams.year),
+        desc(s.exams.month),
+        desc(s.exams.grade),
+        asc(s.questions.questionNumber),
+      )
+      .limit(500);
+    return {
+      concept: { subject: concept.subject, name: concept.name, slug: concept.slug },
+      questions: rows.map((r) => ({
+        exam: toExam(r.exam),
+        subject: r.question.subject,
+        courseCode: r.course?.code ?? null,
+        courseName: r.course?.name ?? null,
+        questionNumber: r.question.questionNumber,
+        score: r.question.score,
+        evidence: r.evidence,
+      })),
+    };
   }
 
   async getSchedule(examId: string): Promise<ExamSchedule | null> {

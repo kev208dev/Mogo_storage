@@ -119,7 +119,7 @@ describe.skipIf(!TEST_DB_URL)("공식 정답표 추출 → 검증 → 게시", (
       answersVerified: true,
       pointsVerified: true,
       crossChecked: 20,
-      parserVersion: "answer-key-v2",
+      parserVersion: "answer-key-v3",
     });
     expect(bySlot["science:chemistry-1"]!.solutionSha256).toMatch(/^[0-9a-f]{64}$/);
     expect(bySlot["korean:language-and-media"]).toMatchObject({
@@ -137,6 +137,26 @@ describe.skipIf(!TEST_DB_URL)("공식 정답표 추출 → 검증 → 게시", (
       solutionPage: 8,
       explanation: null,
     });
+    // 개념 태그: 해설지 머리말 → 과목별 개념 (같은 이름은 하나로), 근거·출처 파일 기록
+    const links = await db
+      .select({ q: s.questions, link: s.questionConcepts, concept: s.concepts })
+      .from(s.questionConcepts)
+      .innerJoin(s.questions, eq(s.questions.id, s.questionConcepts.questionId))
+      .innerJoin(s.concepts, eq(s.concepts.id, s.questionConcepts.conceptId))
+      .where(eq(s.questions.courseId, "chemistry-1"));
+    expect(links).toHaveLength(20);
+    const q1 = links.find((l) => l.q.questionNumber === 1)!;
+    expect(q1.concept).toMatchObject({ subject: "science", name: "탄소 화합물" });
+    expect(q1.link).toMatchObject({
+      status: "approved",
+      source: "solution_heading",
+      sourceUrl: url(0),
+    });
+    expect(q1.link.evidence).toMatch(/^1\. 탄소 화합물 \(해설지 \d+쪽\)$/);
+    const structure = links.filter((l) => l.concept.name === "분자의 구조와 성질");
+    expect(structure.map((l) => l.q.questionNumber).sort((a, b) => a - b)).toEqual([7, 13]);
+    expect(new Set(structure.map((l) => l.concept.id)).size).toBe(1);
+
     const korean = await db.select().from(s.questions).where(eq(s.questions.subject, "korean"));
     expect(korean).toHaveLength(45); // 공통 34 + 화법과 작문 11
     expect(korean.reduce((a, q) => a + q.score, 0)).toBe(100);

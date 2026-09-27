@@ -1,7 +1,16 @@
 import { createHash } from "node:crypto";
 import { and, eq, inArray, isNull } from "drizzle-orm";
 import type { Database } from "../../db/client";
-import { answerKeyExtractions, courses, examFiles, exams, questions } from "../../db/schema";
+import {
+  answerKeyExtractions,
+  concepts,
+  courses,
+  examFiles,
+  exams,
+  questionConcepts,
+  questions,
+} from "../../db/schema";
+import { conceptCandidate } from "../../lib/concepts";
 import type { ExamType, FileType, Subject } from "../../lib/constants";
 import { examCoursePath, examPath } from "../../lib/exam-path";
 import type { IngestionContext } from "../context";
@@ -277,6 +286,7 @@ async function saveExtraction(
       answer: e.answer,
       choice: e.choice,
       page: e.page,
+      heading: e.heading,
     })),
     points: slot.points
       ? Object.fromEntries([...slot.points].map(([n, p]) => [String(n), p]))
@@ -348,12 +358,60 @@ async function publishSlot(
         solutionPage: e.page,
       };
       const q = byNumber.get(e.number);
-      if (q) await tx.update(questions).set(fields).where(eq(questions.id, q.id));
-      else
-        await tx
+      let questionId: string;
+      if (q) {
+        await tx.update(questions).set(fields).where(eq(questions.id, q.id));
+        questionId = q.id;
+      } else {
+        const [row] = await tx
           .insert(questions)
-          .values({ examId, subject, courseId, questionNumber: e.number, ...fields });
+          .values({ examId, subject, courseId, questionNumber: e.number, ...fields })
+          .returning({ id: questions.id });
+        questionId = row!.id;
+      }
+      await linkConcept(tx, subject, questionId, e, slot);
     }
     return { ok: true as const };
   });
+}
+
+type Tx = Parameters<Parameters<Database["transaction"]>[0]>[0];
+
+/**
+ * 해설지 문항 머리말 → 개념 태그. 이미 있는 연결(관리자가 승인·거절·수정한 것 포함)은 건드리지 않는다.
+ * 개념 이름도 이미 있으면 그대로 둔다 (관리자가 고친 표기 보호).
+ */
+async function linkConcept(
+  tx: Tx,
+  subject: Subject,
+  questionId: string,
+  entry: SlotAnswerKey["entries"][number],
+  slot: SlotAnswerKey,
+) {
+  const candidate = conceptCandidate(entry, slot.answersVerified);
+  if (!candidate) return;
+  await tx
+    .insert(concepts)
+    .values({ subject, name: candidate.name, slug: candidate.slug })
+    .onConflictDoNothing({ target: [concepts.subject, concepts.slug] });
+  const [concept] = await tx
+    .select({ id: concepts.id })
+    .from(concepts)
+    .where(and(eq(concepts.subject, subject), eq(concepts.slug, candidate.slug)))
+    .limit(1);
+  if (!concept) return;
+  await tx
+    .insert(questionConcepts)
+    .values({
+      questionId,
+      conceptId: concept.id,
+      status: candidate.status,
+      source: "solution_heading",
+      confidence: candidate.confidence,
+      evidence: candidate.evidence,
+      reviewReason: candidate.reason,
+      sourceFileId: slot.solutionFileId,
+      sourceUrl: slot.solutionUrl,
+    })
+    .onConflictDoNothing({ target: [questionConcepts.questionId, questionConcepts.conceptId] });
 }

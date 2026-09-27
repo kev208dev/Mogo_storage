@@ -5,6 +5,7 @@
 import { rmSync } from "node:fs";
 import path from "node:path";
 import { sql } from "drizzle-orm";
+import * as s from "@/db/schema";
 import { runBackfill } from "@/ingestion/backfill";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
 import { KICE_DEFINITION } from "@/ingestion/sources/kice/structure";
@@ -23,7 +24,12 @@ import {
  * 관리자 e2e 가 만드는 시험 경로. 샘플 build 에는 없는 경로라 .next 에 남은 파일은 이전 실행의 ISR 결과뿐이다.
  * 같은 .next 로 다시 실행하면 새 DB 인데도 이전 실행에서 게시된 페이지가 먼저 나가므로 지운다.
  */
-const ADMIN_E2E_EXAM_PATHS = ["exam/2021/high2/11", "exam/2022/high3/09"];
+const ADMIN_E2E_EXAM_PATHS = [
+  "exam/2021/high2/11",
+  "exam/2022/high3/09",
+  "exam/2022/high3/07",
+  "concepts/korean",
+];
 
 function clearStaleIsrOutput() {
   const root = path.resolve(".next/server/app");
@@ -87,8 +93,63 @@ export default async function globalSetup() {
     setNow(new Date("2022-12-01T12:00:00+09:00"));
     await runBackfill(ctx, { fromYear: 2022, toYear: 2022, grades: [3], sourceIds: ["ebsi"] });
     await runBackfill(ctx, { fromYear: 2022, toYear: 2022, grades: [3], sourceIds: ["kice"] });
+    await seedConcepts(db);
   } finally {
     await fake.close();
     await db.$client.end({ timeout: 5 });
   }
+}
+
+/**
+ * 개념 태그 흐름: 게시된 국어 시험에 문항 2개 + 개념 연결 (승인 1, 검토 대기 1).
+ * 실제 운영에서는 answers:extract 가 해설지 머리말로 만든다 — 여기서는 화면·관리자 흐름만 확인한다.
+ */
+async function seedConcepts(db: Awaited<ReturnType<typeof setupDbAt>>) {
+  // 다른 e2e 가 방문하지 않는 전용 시험: 공개 페이지를 승인 뒤에 처음 열어 ISR 캐시에 의존하지 않는다
+  const [exam] = await db
+    .insert(s.exams)
+    .values({
+      year: 2022,
+      grade: 3,
+      month: 7,
+      examDate: "2022-07-06",
+      academicYear: 2023,
+      examType: "school_mock",
+      organizer: "서울특별시교육청",
+      slug: "2022-high3-07-e2e-concepts",
+      isSample: false,
+    })
+    .returning();
+  await db
+    .insert(s.examSubjects)
+    .values({ examId: exam!.id, subject: "korean", questionCount: 45, totalScore: 100 });
+  const qs = await db
+    .insert(s.questions)
+    .values(
+      [1, 2, 3].map((n) => ({
+        examId: exam!.id,
+        subject: "korean" as const,
+        questionNumber: n,
+        answer: String(n),
+        choiceCount: 5,
+        score: 2,
+      })),
+    )
+    .returning();
+  const [concept] = await db
+    .insert(s.concepts)
+    .values({ subject: "korean", name: "세부 내용 파악", slug: "세부-내용-파악" })
+    .returning();
+  const link = (i: number, status: "approved" | "manual_review") => ({
+    questionId: qs[i]!.id,
+    conceptId: concept!.id,
+    status,
+    source: "solution_heading" as const,
+    confidence: status === "approved" ? 0.9 : 0.6,
+    evidence: `${i + 1}. 세부 내용 파악 (해설지 1쪽)`,
+    reviewReason: status === "approved" ? null : "텍스트 층에서 번호 위치가 흩어진 머리말",
+  });
+  await db
+    .insert(s.questionConcepts)
+    .values([link(0, "approved"), link(1, "manual_review"), link(2, "manual_review")]);
 }

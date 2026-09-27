@@ -9,7 +9,7 @@ import { Section } from "@/components/ui/section";
 import { SUBJECT_LABELS } from "@/lib/constants";
 import { SUBJECT_AREA_LABELS } from "@/lib/courses";
 import type { ExamSubjectDetail } from "@/lib/data/types";
-import { examCoursePath, examPath, examTitle } from "@/lib/exam-path";
+import { conceptPath, examCoursePath, examPath, examTitle } from "@/lib/exam-path";
 import { AnswerSheet } from "./AnswerSheet";
 import { CourseSelector } from "./CourseSelector";
 import { DifficultQuestions } from "./DifficultQuestions";
@@ -47,6 +47,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     listeningTracks,
     schedule,
     processingTypes,
+    conceptTags,
   } = detail;
   const subjectKey = subject.subject;
   const areaLabel = SUBJECT_AREA_LABELS[subjectKey] ?? SUBJECT_LABELS[subjectKey];
@@ -181,6 +182,12 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
                 solutionHref={solutionFile ? fileViewHref(solutionFile.id) : null}
                 tracks={isEnglish ? listeningTracks : []}
                 vocabulary={isEnglish ? vocabulary : []}
+                concepts={Object.fromEntries(
+                  Object.entries(conceptTags).map(([id, tags]) => [
+                    id,
+                    tags.map((t) => ({ name: t.name, href: conceptPath(t.subject, t.slug) })),
+                  ]),
+                )}
               />
             </Section>
           </>

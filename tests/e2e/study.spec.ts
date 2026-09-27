@@ -58,6 +58,7 @@ test.describe("빠른 답 입력 · 채점", () => {
 test.describe("문항별 학습", () => {
   test("해설 또는 해설지 쪽 링크, 많이 틀린 문제(통계 출처)", async ({ page }) => {
     await page.goto(ENGLISH);
+    await expect(page.getByTestId("question-explorer")).toHaveAttribute("data-ready", "");
     const card = page.locator("#q-1");
     await card.locator("summary").first().click();
     await expect(card).toHaveAttribute("open", "");

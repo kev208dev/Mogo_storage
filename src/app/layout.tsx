@@ -20,12 +20,11 @@ export const metadata: Metadata = {
       "naver-site-verification": "5b9da66d2a560cd7ec10b5a5fcd19770e9d14c26",
     },
   },
-  alternates: { canonical: "/" },
+  // canonical · og:url 은 페이지마다 자기 주소로 정한다 (layout 에 두면 404 까지 "/" 를 canonical 로 물려받는다)
   openGraph: {
     type: "website",
     locale: "ko_KR",
     siteName: SITE_NAME,
-    url: "/",
   },
   twitter: { card: "summary" },
   formatDetection: { telephone: false },

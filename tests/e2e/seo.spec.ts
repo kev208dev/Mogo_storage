@@ -152,4 +152,16 @@ test.describe("SEO: 허브 · sitemap · robots", () => {
     expect(robots).toMatch(/Host: /);
     expect(robots).not.toMatch(/Googlebot|Yeti|NaverBot/i);
   });
+
+  test("홈 canonical 은 자기 자신, 404 는 canonical 없이 noindex", async ({ page }) => {
+    await page.goto("/");
+    const home = await head(page);
+    expect(home.canonicalCount).toBe(1);
+    expect(home.canonical).toMatch(/^https?:\/\/[^/]+\/?$/);
+
+    const res = await page.goto("/exam/2030/high3/09");
+    expect(res?.status()).toBe(404);
+    await expect(page.locator('link[rel="canonical"]')).toHaveCount(0);
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+  });
 });

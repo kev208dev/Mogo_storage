@@ -23,7 +23,9 @@ function shortAlias(month: number): string | null {
   return month === 3 || month === 6 || month === 9 ? `${month}모` : null;
 }
 
-export async function generateMetadata({ params }: PageProps<"/month/[month]">): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps<"/month/[month]">): Promise<Metadata> {
   const month = parseMonth((await params).month);
   if (!month) return {};
   const alias = shortAlias(month);
@@ -42,7 +44,9 @@ export default async function MonthPage({ params }: PageProps<"/month/[month]">)
   const month = parseMonth((await params).month);
   if (!month) notFound();
 
-  const exams = (await getRepository().listExams()).filter((exam) => exam.month === month).sort(sortExamsDesc);
+  const exams = (await getRepository().listExams())
+    .filter((exam) => exam.month === month)
+    .sort(sortExamsDesc);
   if (exams.length === 0) notFound();
   const alias = shortAlias(month);
   const path = `/month/${month}`;

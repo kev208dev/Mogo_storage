@@ -4,7 +4,13 @@ import { ExamList } from "@/components/exam/ExamList";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { ExamFinder } from "@/components/search/ExamFinder";
 import { ExamSearch } from "@/components/search/ExamSearch";
-import { CORE_SUBJECTS, GRADES, MONTHS, SITE_NAME, SUBJECT_LABELS } from "@/lib/constants";
+import {
+  CORE_SUBJECTS,
+  GRADES,
+  MONTHS,
+  SITE_NAME,
+  SUBJECT_LABELS,
+} from "@/lib/constants";
 import { getRepository } from "@/lib/data";
 import { FEATURED_EXAM } from "@/lib/data/sample-data";
 import { examPath, subjectSegment } from "@/lib/exam-path";
@@ -39,7 +45,9 @@ export default async function HomePage() {
   const [years, recent] = await Promise.all([repo.listYears(), repo.listRecentExams(9)]);
   const latest = recent[0];
   const englishDemo = `${examPath(FEATURED_EXAM, "english")}`;
-  const monthLinks = MONTHS.filter((month) => recent.some((exam) => exam.month === month) || [3, 6, 9].includes(month));
+  const monthLinks = MONTHS.filter(
+    (month) => recent.some((exam) => exam.month === month) || [3, 6, 9].includes(month),
+  );
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -103,7 +111,8 @@ export default async function HomePage() {
                   href={`/month/${month}`}
                   className="border-border hover:border-primary hover:text-primary inline-flex min-h-10 items-center rounded-md border px-3 text-sm font-semibold"
                 >
-                  {month}월 모고{month === 3 || month === 6 || month === 9 ? ` · ${month}모` : ""}
+                  {month}월 모고
+                  {month === 3 || month === 6 || month === 9 ? ` · ${month}모` : ""}
                 </Link>
               ))}
             </nav>

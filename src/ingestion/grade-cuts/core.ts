@@ -4,7 +4,13 @@ import { gradingMode } from "../../lib/grade-cut-mode";
 import { dedupeCollected, GradeCutValidationError, validateGradeCut } from "./validate";
 
 export type AdapterStatus =
-  "automated_verified" | "degraded" | "disabled_unverified" | "disabled_policy" | "manual_only";
+  | "automated_verified"
+  | "degraded"
+  | "disabled_unverified"
+  | "disabled_policy"
+  | "blocked_challenge"
+  | "research_pending"
+  | "manual_only";
 export type WatchStatus = "waiting" | "watching" | "finalized" | "failed";
 export interface WatchSlot {
   examId: string;
@@ -43,44 +49,68 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
   if (!Array.isArray(cuts) || cuts.length === 0 || cuts.length > 9)
     throw new Error("empty or oversized cuts");
   const sorted = cuts
-    .map((cut): GradeCutEntry =>
-      cut.rawScore === null
-        ? {
-            grade: cut.grade,
-            rawScore: null,
-            rawScoreMin: cut.rawScoreMin,
-            rawScoreMax: cut.rawScoreMax,
-          }
-        : { grade: cut.grade, rawScore: cut.rawScore },
-    )
+    .map((cut) => ({
+      grade: cut.grade,
+      rawScore: cut.rawScore ?? null,
+      rawScoreMin: cut.rawScoreMin ?? null,
+      rawScoreMax: cut.rawScoreMax ?? null,
+      rawScoreText: cut.rawScoreText ?? null,
+      standardScore: cut.standardScore ?? null,
+      percentile: cut.percentile ?? null,
+    }))
     .sort((a, b) => a.grade - b.grade);
   for (let i = 0; i < sorted.length; i++) {
     const cut = sorted[i]!;
-    const low = cut.rawScore === null ? cut.rawScoreMin : cut.rawScore;
-    const high = cut.rawScore === null ? cut.rawScoreMax : cut.rawScore;
-    const previous = sorted[i - 1];
-    const previousLow = previous?.rawScore === null ? previous.rawScoreMin : previous?.rawScore;
+    const hasRange = cut.rawScoreMin !== null || cut.rawScoreMax !== null;
     if (
       !Number.isInteger(cut.grade) ||
       cut.grade < 1 ||
       cut.grade > 9 ||
-      !Number.isInteger(low) ||
-      !Number.isInteger(high) ||
-      low < 0 ||
-      high > 100 ||
-      low > high ||
-      (previous && (cut.grade === previous.grade || high > previousLow!))
+      (hasRange &&
+        (!Number.isFinite(cut.rawScoreMin) ||
+          !Number.isFinite(cut.rawScoreMax) ||
+          cut.rawScoreMin! < 0 ||
+          cut.rawScoreMax! > 100 ||
+          cut.rawScoreMin! > cut.rawScoreMax! ||
+          cut.rawScore !== null)) ||
+      (cut.rawScore !== null &&
+        (!Number.isFinite(cut.rawScore) ||
+          cut.rawScore < 0 ||
+          cut.rawScore > 100 ||
+          Math.round(cut.rawScore * 2) !== cut.rawScore * 2)) ||
+      (cut.rawScore === null &&
+        !hasRange &&
+        cut.standardScore === null &&
+        cut.percentile === null &&
+        !cut.rawScoreText) ||
+      (i > 0 && cut.grade === sorted[i - 1]!.grade)
     )
       throw new Error("invalid grade cut");
+  }
+  const rawCuts = sorted.filter(
+    (cut) => cut.rawScore !== null || cut.rawScoreMin !== null,
+  );
+  for (let i = 1; i < rawCuts.length; i++) {
+    const prior = rawCuts[i - 1]!;
+    const current = rawCuts[i]!;
+    const priorLow = prior.rawScoreMin ?? prior.rawScore!;
+    const currentHigh = current.rawScoreMax ?? current.rawScore!;
+    if (currentHigh > priorLow) throw new Error("non-monotonic grade cuts");
   }
   return sorted;
 }
 export function cutsFingerprint(cuts: GradeCutEntry[]): string {
   return normalizeCuts(cuts)
     .map((cut) =>
-      cut.rawScore === null
-        ? `${cut.grade}:${cut.rawScoreMin}~${cut.rawScoreMax}`
-        : `${cut.grade}:${cut.rawScore}`,
+      [
+        cut.grade,
+        cut.rawScore ?? "",
+        cut.rawScoreMin ?? "",
+        cut.rawScoreMax ?? "",
+        cut.rawScoreText ?? "",
+        cut.standardScore ?? "",
+        cut.percentile ?? "",
+      ].join(":"),
     )
     .join("|");
 }

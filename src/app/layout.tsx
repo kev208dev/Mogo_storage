@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description:
     "고1·고2·고3 역대 모의고사 시험지와 정답·해설 PDF, 영어 듣기 MP3를 회원가입 없이 바로 다운로드하세요.",
   applicationName: SITE_NAME,
+  verification: {
+    google: "DyKKUXF2xmvO-lT972fru4WJreKZzYWI-qU7PrRee-w",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

@@ -1,7 +1,7 @@
 import { SampleNotice } from "@/components/layout/SampleNotice";
 import { Badge } from "@/components/ui/badge";
 import { GRADE_CUT_SOURCE_LABELS, type Subject } from "@/lib/constants";
-import { gradeCutTableColumns, gradeCutTableGrades, gradeCutValue } from "@/lib/grade-cut-table";
+import { gradeCutTableColumns, gradeCutTableGrades, gradeCutValueLabel, isOfficialGradeCutColumn } from "@/lib/grade-cut-table";
 import { isMutedEstimate } from "@/lib/grade-cuts";
 import { absoluteGradeCuts } from "@/lib/grade-cut-mode";
 import type { Exam, GradeCut } from "@/lib/data/types";
@@ -79,7 +79,7 @@ export function GradeCutTable({
                 등급
               </th>
               {columns.map((source) => {
-                const official = source === "official";
+                const official = isOfficialGradeCutColumn(source);
                 return (
                   <th
                     key={source}
@@ -107,7 +107,7 @@ export function GradeCutTable({
                   {grade}등급
                 </th>
                 {columns.map((source) => {
-                  const value = gradeCutValue(gradeCuts, source, grade);
+                  const value = gradeCutValueLabel(gradeCuts, source, grade);
                   const official = source === "official";
                   const estimateColumn = gradeCuts.find((c) => c.source === source);
                   return (
@@ -122,7 +122,7 @@ export function GradeCutTable({
                             : "",
                       )}
                     >
-                      {value ?? "-"}
+                      {value}
                     </td>
                   );
                 })}

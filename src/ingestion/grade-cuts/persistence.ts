@@ -75,7 +75,7 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
     input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate");
   const providerLabel = input.providerLabel ?? defaultProviderLabel(input.source);
   const observedVia = input.observedVia ?? input.source;
-  const firstParty = input.firstParty ?? input.source !== "official";
+  const firstParty = input.firstParty ?? true;
   const scoreBasis = input.scoreBasis ?? "raw";
   const parserVersion = input.parserVersion ?? "legacy";
   return db.transaction(async (tx) => {
@@ -86,7 +86,17 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
       eq(gradeCuts.source, input.source),
     );
     let [current] = await tx.select().from(gradeCuts).where(slot).limit(1).for("update");
-    let changed = !current || cutsFingerprint(current.cuts) !== fingerprint;
+    const isChanged = (row: typeof current) =>
+      !row ||
+      cutsFingerprint(row.cuts) !== fingerprint ||
+      row.sourceUrl !== url.toString() ||
+      row.providerStatus !== providerStatus ||
+      row.providerLabel !== providerLabel ||
+      row.observedVia !== observedVia ||
+      row.firstParty !== firstParty ||
+      row.scoreBasis !== scoreBasis ||
+      row.parserVersion !== parserVersion;
+    let changed = isChanged(current);
     if (!current) {
       const [created] = await tx
         .insert(gradeCuts)
@@ -112,7 +122,7 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
       current = created;
       if (!current) {
         [current] = await tx.select().from(gradeCuts).where(slot).limit(1).for("update");
-        changed = Boolean(current && cutsFingerprint(current.cuts) !== fingerprint);
+        changed = isChanged(current);
       }
     } else if (changed) {
       await tx

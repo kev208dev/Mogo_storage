@@ -36,8 +36,13 @@ export default async function SubjectPage({ params }: PageProps<"/subject/[subje
   if (!subject) notFound();
 
   const repo = getRepository();
-  const [exams, examSubjects] = await Promise.all([repo.listExams(), repo.listAllExamSubjects()]);
-  const examIds = new Set(examSubjects.filter((row) => row.subject === subject).map((row) => row.examId));
+  const [exams, examSubjects] = await Promise.all([
+    repo.listExams(),
+    repo.listAllExamSubjects(),
+  ]);
+  const examIds = new Set(
+    examSubjects.filter((row) => row.subject === subject).map((row) => row.examId),
+  );
   const matches = exams.filter((exam) => examIds.has(exam.id)).sort(sortExamsDesc);
   if (matches.length === 0) notFound();
 

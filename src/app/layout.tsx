@@ -8,11 +8,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: `${SITE_NAME} - 고1·고2·고3 역대 모의고사 PDF 다운로드`,
+    default: `${SITE_NAME} - 고1·고2·고3 모고·모의고사 문제지·정답·해설`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "고1·고2·고3 역대 모의고사 시험지와 정답·해설 PDF, 영어 듣기 MP3를 회원가입 없이 바로 다운로드하세요.",
+    "고1·고2·고3 모고·모의고사 문제지와 정답·해설 PDF, 영어 듣기, 자동 채점, 등급컷을 연도·월·과목별로 빠르게 확인하세요.",
   applicationName: SITE_NAME,
   verification: {
     google: "DyKKUXF2xmvO-lT972fru4WJreKZzYWI-qU7PrRee-w",

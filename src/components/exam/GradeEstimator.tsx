@@ -20,10 +20,11 @@ export function GradeEstimator({
   const valid = score !== null && Number.isInteger(score) && score >= 0 && score <= maxScore;
 
   const fixedEstimate = valid && fixedCuts ? estimateGrade(fixedCuts, score) : null;
+  const columns = useMemo(() => orderGradeCutColumns(gradeCuts), [gradeCuts]);
   const estimates = useMemo(
     () =>
       valid
-        ? orderGradeCutColumns(gradeCuts)
+        ? columns
             .map((cut) => ({ cut, estimate: estimateGrade(cut.cuts, score) }))
             .filter(
               (
@@ -32,7 +33,7 @@ export function GradeEstimator({
                 Boolean(x.estimate),
             )
         : [],
-    [gradeCuts, score, valid],
+    [columns, score, valid],
   );
 
   return (
@@ -51,12 +52,16 @@ export function GradeEstimator({
           value={value}
           onChange={(event) => setValue(event.target.value)}
           placeholder="예: 84"
-          className="border-border bg-background h-10 w-28 rounded-md border px-3 text-sm tabular-nums"
+          disabled={!fixedCuts && columns.length === 0}
+          className="border-border bg-background h-10 w-28 rounded-md border px-3 text-sm tabular-nums disabled:cursor-not-allowed disabled:opacity-60"
         />
         <span className="text-muted-foreground text-xs">
           0~{maxScore}점 · 입력값은 저장하지 않습니다.
         </span>
       </div>
+      {!fixedCuts && columns.length === 0 ? (
+        <p className="text-muted-foreground mt-2 text-sm">등급컷 데이터 없음</p>
+      ) : null}
 
       {value && !valid ? (
         <p className="text-danger-strong mt-2 text-sm" role="alert">

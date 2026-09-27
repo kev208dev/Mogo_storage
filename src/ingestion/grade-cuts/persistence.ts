@@ -29,6 +29,27 @@ export interface CutInput {
   sourceUrl: string;
   cuts: GradeCutEntry[];
   observedAt: Date;
+  providerStatus?: string;
+  providerLabel?: string;
+  observedVia?: GradeCutSource;
+  firstParty?: boolean;
+  scoreBasis?: "raw" | "standard";
+  parserVersion?: string;
+}
+
+function defaultProviderLabel(source: GradeCutSource): string {
+  const labels: Record<GradeCutSource, string> = {
+    official: "공식",
+    megastudy: "메가스터디 예상",
+    daesung: "대성 예상",
+    ebs: "EBS 예상",
+    jongro: "종로학원",
+    etoos: "이투스",
+    jinhak: "진학사",
+    uway: "유웨이",
+    kimyoungil: "김영일교육컨설팅",
+  };
+  return labels[source];
 }
 
 /** Current row + immutable history are committed together. Only a genuinely new value writes. */
@@ -68,6 +89,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
           courseId: input.courseId,
           source: input.source,
           sourceUrl: url.toString(),
+          providerStatus: input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate"),
+          providerLabel: input.providerLabel ?? defaultProviderLabel(input.source),
+          observedVia: input.observedVia ?? input.source,
+          firstParty: input.firstParty ?? input.source !== "official",
+          scoreBasis: input.scoreBasis ?? "raw",
+          parserVersion: input.parserVersion ?? "legacy",
           cuts,
           isOfficial: input.source === "official",
           isSample: false,
@@ -86,6 +113,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
         .set({
           cuts,
           sourceUrl: url.toString(),
+          providerStatus: input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate"),
+          providerLabel: input.providerLabel ?? defaultProviderLabel(input.source),
+          observedVia: input.observedVia ?? input.source,
+          firstParty: input.firstParty ?? input.source !== "official",
+          scoreBasis: input.scoreBasis ?? "raw",
+          parserVersion: input.parserVersion ?? "legacy",
           isOfficial: input.source === "official",
           isSample: false,
           updatedAt: input.observedAt,
@@ -103,6 +136,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
         cuts,
         fingerprint,
         sourceUrl: url.toString(),
+        providerStatus: input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate"),
+        providerLabel: input.providerLabel ?? defaultProviderLabel(input.source),
+        observedVia: input.observedVia ?? input.source,
+        firstParty: input.firstParty ?? input.source !== "official",
+        scoreBasis: input.scoreBasis ?? "raw",
+        parserVersion: input.parserVersion ?? "legacy",
         observedAt: input.observedAt,
       });
     if (input.source === "official") {
@@ -274,6 +313,12 @@ export function createGradeCutStore(db: Database): WatchStore {
         sourceUrl: value.sourceUrl,
         cuts: value.cuts,
         observedAt: value.observedAt,
+        providerStatus: value.providerStatus,
+        providerLabel: value.providerLabel,
+        observedVia: value.observedVia,
+        firstParty: value.firstParty,
+        scoreBasis: value.scoreBasis,
+        parserVersion: value.parserVersion,
       });
     },
     async markPolled(slot, now) {

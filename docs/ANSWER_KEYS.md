@@ -10,6 +10,9 @@ npm run answers:extract -- --year=2025 --publish          # 검증된 슬롯만 
 npm run answers:extract -- --exam=<exam id> --force       # 같은 파서 버전으로 처리한 시험도 다시
 ```
 
+운영 DB 에는 GitHub Actions **Answer keys (extract)** (수동 실행)로 돌릴 수 있습니다. mode 는 `dry-run` → `record` → `publish`
+순서로 쓰고, `year`·`limit` 로 범위를 나눕니다. 필요한 secret: `INGESTION_DATABASE_URL`, `INGESTION_SITE_URL`, `CRON_SECRET`.
+
 ## 무엇을 요청하나
 
 - `exam_files` 중 실제 시험(`is_sample=false`)의 공식 redirect 자료(`solution`, `question`)만.

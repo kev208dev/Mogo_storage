@@ -34,13 +34,22 @@ export function gradeCutValueLabel(
     .find((cut) => cut.source === source)
     ?.cuts.find((cut) => cut.grade === grade) as RangeEntry | undefined;
   if (!entry) return "-";
-  if (
-    Number.isInteger(entry.rawScoreMin) &&
-    Number.isInteger(entry.rawScoreMax) &&
-    entry.rawScoreMin! <= entry.rawScoreMax!
-  )
-    return `${entry.rawScoreMin}~${entry.rawScoreMax}`;
-  return typeof entry.rawScore === "number" ? String(entry.rawScore) : "-";
+  const raw =
+    Number.isFinite(entry.rawScoreMin) && Number.isFinite(entry.rawScoreMax)
+      ? `${entry.rawScoreMin}~${entry.rawScoreMax}`
+      : typeof entry.rawScore === "number"
+        ? String(entry.rawScore)
+        : entry.rawScoreText ?? null;
+  const details = [
+    raw === null
+      ? null
+      : entry.standardScore != null || entry.percentile != null
+        ? `원점수 ${raw}`
+        : raw,
+    entry.standardScore == null ? null : `표준점수 ${entry.standardScore}`,
+    entry.percentile == null ? null : `백분위 ${entry.percentile}`,
+  ].filter((value): value is string => value !== null);
+  return details.length > 0 ? details.join(" · ") : "-";
 }
 
 export function hasOnlySingleValueCuts(cut: GradeCut): boolean {

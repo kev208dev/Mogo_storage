@@ -472,3 +472,5 @@ docker run -d --env-file .env.production -p 3000:3000 mogo-storage          # HE
 - source 별 이용조건(재배포 허용 여부) 법적 검토 → 확인된 source 만 `mirror_allowed`
 - R2 bucket·credential 발급, 도메인 연결, `CRON_SECRET`·관리자 secret 발급, `OPS_WEBHOOK_URL` 설정
 - 공식 등급컷·정답률은 공개 형식을 확인한 source 만 입력 (사교육 예상치는 이용조건 확인 전까지 수동 입력)
+
+등급컷 자료가 없는 상대평가 과목도 표와 공식 열을 유지하고, 비어 있는 점수는 `-`로 표시합니다.

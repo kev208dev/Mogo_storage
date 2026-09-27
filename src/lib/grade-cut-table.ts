@@ -39,7 +39,7 @@ export function gradeCutValueLabel(
       ? `${entry.rawScoreMin}~${entry.rawScoreMax}`
       : typeof entry.rawScore === "number"
         ? String(entry.rawScore)
-        : entry.rawScoreText ?? null;
+        : (entry.rawScoreText ?? null);
   const details = [
     raw === null
       ? null

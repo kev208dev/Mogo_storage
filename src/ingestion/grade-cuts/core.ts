@@ -59,8 +59,7 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
     const low = cut.rawScore === null ? cut.rawScoreMin : cut.rawScore;
     const high = cut.rawScore === null ? cut.rawScoreMax : cut.rawScore;
     const previous = sorted[i - 1];
-    const previousLow =
-      previous?.rawScore === null ? previous.rawScoreMin : previous?.rawScore;
+    const previousLow = previous?.rawScore === null ? previous.rawScoreMin : previous?.rawScore;
     if (
       !Number.isInteger(cut.grade) ||
       cut.grade < 1 ||

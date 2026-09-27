@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   verification: {
     google: "DyKKUXF2xmvO-lT972fru4WJreKZzYWI-qU7PrRee-w",
+    other: {
+      "naver-site-verification": "5b9da66d2a560cd7ec10b5a5fcd19770e9d14c26",
+    },
   },
   alternates: { canonical: "/" },
   openGraph: {

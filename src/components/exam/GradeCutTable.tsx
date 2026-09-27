@@ -29,11 +29,7 @@ export function GradeCutTable({
         <p className="text-muted-foreground text-sm">
           절대평가 · 시험별 예상컷 수집 없이 고정 원점수 기준을 적용합니다.
         </p>
-        <GradeEstimator
-          gradeCuts={[]}
-          fixedCuts={absolute.cuts}
-          maxScore={absolute.maxScore}
-        />
+        <GradeEstimator gradeCuts={[]} fixedCuts={absolute.cuts} maxScore={absolute.maxScore} />
         <div className="border-border overflow-x-auto rounded-md border">
           <table className="w-full min-w-[20rem] text-sm tabular-nums">
             <caption className="sr-only">절대평가 고정 원점수 등급 기준</caption>
@@ -67,7 +63,9 @@ export function GradeCutTable({
         </div>
       </div>
     );
-
+  if (gradeCuts.length === 0) {
+    return <p className="text-muted-foreground text-sm">등급컷 자료 준비 중입니다.</p>;
+  }
   const columns = gradeCutTableColumns(gradeCuts);
   const grades = gradeCutTableGrades();
   const hasSample = gradeCuts.some((c) => c.isSample);
@@ -140,7 +138,9 @@ export function GradeCutTable({
         </table>
       </div>
       {gradeCuts.length === 0 ? (
-        <p className="text-muted-foreground text-xs">현재 확인된 자료부터 표시하고 있습니다.</p>
+        <p className="text-muted-foreground text-xs">
+          현재 확인된 자료부터 표시하고 있습니다.
+        </p>
       ) : null}
       <ul className="text-muted-foreground space-y-0.5 text-xs">
         {gradeCuts.map((c) => (

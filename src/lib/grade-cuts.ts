@@ -25,7 +25,11 @@ export function estimateGrade(cuts: GradeCutEntry[], rawScore: number): GradeEst
   if (!Number.isFinite(rawScore) || rawScore < 0 || rawScore > 100 || cuts.length === 0)
     return null;
 
-  const sorted = [...cuts].sort((a, b) => a.grade - b.grade);
+  const exact = cuts.filter(
+    (cut): cut is Extract<GradeCutEntry, { rawScore: number }> => typeof cut.rawScore === "number",
+  );
+  if (exact.length !== cuts.length) return null;
+  const sorted = [...exact].sort((a, b) => a.grade - b.grade);
   for (const cut of sorted) {
     if (rawScore >= cut.rawScore) return { grade: cut.grade, label: `${cut.grade}등급` };
   }

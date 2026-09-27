@@ -1,12 +1,10 @@
 name: Grade cut watch
 
-# Vercel Hobby does not accept a five-minute Cron expression. The endpoint
-# remains deployment-independent and PostgreSQL advisory locked.
+# 5분 등급컷 polling 의 주 scheduler 는 Supabase pg_cron + pg_net 이다 (docs/OPERATIONS.md, db-scheduler.yml).
+# GitHub Actions `schedule` 은 best-effort 라 이 저장소에서 5분 cron 이 2~4시간 간격으로만 실행됐고,
+# Vercel Hobby 는 5분 Cron 배포를 거절한다. 이 workflow 는 수동 실행(보조)용으로만 남긴다.
+# endpoint 는 PostgreSQL advisory lock 을 쓰므로 pg_cron 과 겹쳐 실행돼도 안전하다.
 on:
-  schedule:
-    # Keep a five-minute cadence, but avoid minute 0 where GitHub-hosted
-    # scheduled workflows are most prone to queue pressure/delay.
-    - cron: "2-57/5 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -30,4 +28,5 @@ jobs:
           fi
           curl --fail-with-body -sS --max-time 320 \
             -H "Authorization: Bearer $CRON_SECRET" \
+            -H "X-Scheduler: github-manual" \
             "$SITE_URL/api/cron/grade-cuts"

@@ -1,7 +1,7 @@
 name: Scheduler watchdog
 
-# Production health + cron heartbeat 점검 (매시).
-# 같은 점검을 Vercel Cron(vercel.json, 매일)도 호출하므로 GitHub schedule 이 멈춰도 감지된다.
+# Production health + cron heartbeat 점검 (매시, GitHub schedule 은 best-effort 라 보조 역할).
+# 같은 watchdog 을 Supabase pg_cron(매시 17분)과 Vercel Cron(vercel.json, 매일)도 호출한다.
 #   repository secrets  INGESTION_SITE_URL, CRON_SECRET, (선택) OPS_WEBHOOK_URL
 # 값이 없으면 아무것도 하지 않고 성공으로 끝난다. secret 값은 출력하지 않는다.
 on:
@@ -57,8 +57,9 @@ jobs:
             exit 0
           fi
           curl --fail-with-body -sS --max-time 60 -o watchdog.json \
-            -H "Authorization: Bearer $CRON_SECRET" "$SITE_URL/api/cron/watchdog"
-          jq '{tasks, alerted, recovered}' watchdog.json
+            -H "Authorization: Bearer $CRON_SECRET" -H "X-Scheduler: github-actions" \
+            "$SITE_URL/api/cron/watchdog"
+          jq '{tasks: [.tasks[] | {task, state, minutesSinceSeen, staleAfterMinutes, consecutiveFailures, runCount, lastStartedAt, lastStatus, lastDetail}], alerted, recovered}' watchdog.json
           # stale/연속 실패가 있으면 workflow 도 실패로 표시 (알림은 app 이 dedupe 해서 보낸다)
           if jq -e '.alerted | length > 0' watchdog.json > /dev/null; then
             echo "::error::scheduler unhealthy: $(jq -r '.alerted | join(", ")' watchdog.json)"

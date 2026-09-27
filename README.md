@@ -2,10 +2,11 @@
 
 ## 등급컷 감시
 
-`/api/cron/grade-cuts`는 `CRON_SECRET` Bearer 인증을 재사용합니다. 현재 Vercel Hobby
-프로젝트에서는 5분 Cron 배포가 거절되므로 전용 GitHub Actions 스케줄이 5분마다 호출하도록
-구성했습니다. 저장소 변수 `GRADE_CUT_SCHEDULER=github-actions`와 기존
-`INGESTION_SITE_URL`, `CRON_SECRET` secrets를 설정해야 스케줄이 실제 호출합니다.
+`/api/cron/grade-cuts`는 `CRON_SECRET` Bearer 인증을 재사용합니다. 5분 호출은 운영 DB(Supabase)의
+pg_cron + pg_net 이 합니다 (Vercel Hobby 는 5분 Cron 배포를 거절하고, GitHub Actions schedule 은
+이 저장소에서 2~4시간 간격으로만 실행돼 5분 주기를 보장하지 못했습니다). 설치·상태 확인은 GitHub Actions
+`DB scheduler (pg_cron)` workflow 또는 `npm run ops:db-scheduler` 로 합니다 ([docs/OPERATIONS.md](docs/OPERATIONS.md)).
+GitHub `Grade cut watch` 는 수동 실행용으로만 남아 있습니다 (저장소 변수 `GRADE_CUT_SCHEDULER=github-actions` 필요).
 `GRADE_CUT_INGESTION_ENABLED=true`를 별도로 설정해야 실행됩니다. 기본값은 꺼짐이며
 `INGESTION_ENABLED`와 무관합니다. 운영 DB가 Supabase migration tracking을 사용한다면
 `drizzle/0009_grade_cut_watch.sql`을 해당 migration 절차로 적용·확인한 뒤 활성화하세요.

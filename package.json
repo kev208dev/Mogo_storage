@@ -9,7 +9,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
-    "format:check": "prettier --write . && git diff -- src/app/page.tsx 'src/app/month/[month]/page.tsx' 'src/app/subject/[subject]/page.tsx' && exit 1",
+    "format:check": "prettier --check .",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:smoke:prod": "playwright test -c playwright.smoke.config.ts",

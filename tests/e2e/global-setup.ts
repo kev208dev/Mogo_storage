@@ -4,7 +4,8 @@
  */
 import { rmSync } from "node:fs";
 import path from "node:path";
-import { sql } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
+import * as s from "@/db/schema";
 import { runBackfill } from "@/ingestion/backfill";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
 import { KICE_DEFINITION } from "@/ingestion/sources/kice/structure";
@@ -23,7 +24,7 @@ import {
  * 관리자 e2e 가 만드는 시험 경로. 샘플 build 에는 없는 경로라 .next 에 남은 파일은 이전 실행의 ISR 결과뿐이다.
  * 같은 .next 로 다시 실행하면 새 DB 인데도 이전 실행에서 게시된 페이지가 먼저 나가므로 지운다.
  */
-const ADMIN_E2E_EXAM_PATHS = ["exam/2021/high2/11", "exam/2022/high3/09"];
+const ADMIN_E2E_EXAM_PATHS = ["exam/2021/high2/11", "exam/2022/high3/09", "concepts/korean"];
 
 function clearStaleIsrOutput() {
   const root = path.resolve(".next/server/app");
@@ -87,8 +88,58 @@ export default async function globalSetup() {
     setNow(new Date("2022-12-01T12:00:00+09:00"));
     await runBackfill(ctx, { fromYear: 2022, toYear: 2022, grades: [3], sourceIds: ["ebsi"] });
     await runBackfill(ctx, { fromYear: 2022, toYear: 2022, grades: [3], sourceIds: ["kice"] });
+    await seedConcepts(db);
   } finally {
     await fake.close();
     await db.$client.end({ timeout: 5 });
   }
+}
+
+/**
+ * 개념 태그 흐름: 게시된 국어 시험에 문항 2개 + 개념 연결 (승인 1, 검토 대기 1).
+ * 실제 운영에서는 answers:extract 가 해설지 머리말로 만든다 — 여기서는 화면·관리자 흐름만 확인한다.
+ */
+async function seedConcepts(db: Awaited<ReturnType<typeof setupDbAt>>) {
+  const [exam] = await db
+    .select({ id: s.exams.id })
+    .from(s.exams)
+    .where(and(eq(s.exams.year, 2022), eq(s.exams.grade, 3), eq(s.exams.month, 9)))
+    .limit(1);
+  if (!exam) throw new Error("e2e: 2022 고3 9월 시험이 게시되지 않음");
+  const qs = await db
+    .insert(s.questions)
+    .values(
+      [1, 2].map((n) => ({
+        examId: exam.id,
+        subject: "korean" as const,
+        questionNumber: n,
+        answer: String(n),
+        choiceCount: 5,
+        score: 2,
+      })),
+    )
+    .returning();
+  const [concept] = await db
+    .insert(s.concepts)
+    .values({ subject: "korean", name: "세부 내용 파악", slug: "세부-내용-파악" })
+    .returning();
+  await db.insert(s.questionConcepts).values([
+    {
+      questionId: qs[0]!.id,
+      conceptId: concept!.id,
+      status: "approved",
+      source: "solution_heading",
+      confidence: 0.9,
+      evidence: "1. 세부 내용 파악 (해설지 1쪽)",
+    },
+    {
+      questionId: qs[1]!.id,
+      conceptId: concept!.id,
+      status: "manual_review",
+      source: "solution_heading",
+      confidence: 0.6,
+      evidence: "2. 세부 내용 파악 (해설지 1쪽)",
+      reviewReason: "텍스트 층에서 번호 위치가 흩어진 머리말",
+    },
+  ]);
 }

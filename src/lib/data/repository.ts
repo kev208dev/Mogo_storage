@@ -1,6 +1,7 @@
 import type { Grade, Subject } from "../constants";
 import type { ExamKey } from "../exam-path";
 import type {
+  ConceptDetail,
   Course,
   Exam,
   ExamFile,
@@ -32,6 +33,8 @@ export interface ExamRepository {
   ): Promise<ExamSubjectDetail | null>;
   /** 세부과목 페이지 경로 (정적 생성·sitemap 용) */
   listExamCoursePaths(): Promise<Array<{ exam: Exam; course: Course }>>;
+  /** 개념 페이지 (승인된 문항만). 없으면 null */
+  getConcept(subject: Subject, slug: string): Promise<ConceptDetail | null>;
   getFile(fileId: string): Promise<ExamFile | null>;
   createReport(report: NewReport): Promise<Report>;
   countRecentReports(ipHash: string, since: Date): Promise<number>;

@@ -53,3 +53,13 @@ describe("concept normalization", () => {
     expect(c.sentence).toBe(true);
   });
 });
+
+describe("emptyIfMissingTable", () => {
+  it("undefined_table 만 빈 결과, 다른 오류는 그대로", async () => {
+    const { emptyIfMissingTable } = await import("@/lib/data/drizzle-repository");
+    expect(emptyIfMissingTable({ cause: { code: "42P01" } })).toEqual([]);
+    expect(emptyIfMissingTable({ code: "42P01" })).toEqual([]);
+    const other = { cause: { code: "57014" } };
+    expect(() => emptyIfMissingTable(other)).toThrow();
+  });
+});

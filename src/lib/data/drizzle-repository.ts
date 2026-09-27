@@ -53,6 +53,16 @@ const toFile = (row: FileRow): ExamFile => ({
   updatedAt: row.updatedAt.toISOString(),
 });
 
+/** PostgreSQL undefined_table (42P01) 만 빈 결과로 바꾼다. 다른 오류는 그대로 던진다 */
+export function emptyIfMissingTable(error: unknown): never[] {
+  const e = error as { code?: string; cause?: { code?: string } };
+  if (e?.code === "42P01" || e?.cause?.code === "42P01") {
+    console.warn("[repository] concepts tables missing — run db:migrate:prod (0014)");
+    return [];
+  }
+  throw error;
+}
+
 export class DrizzleExamRepository implements ExamRepository {
   constructor(private readonly db: Database) {}
 
@@ -277,7 +287,9 @@ export class DrizzleExamRepository implements ExamRepository {
             eq(s.questionConcepts.status, "approved"),
           ),
         )
-        .orderBy(asc(s.concepts.name)),
+        .orderBy(asc(s.concepts.name))
+        // migration 0014 적용 전 배포에서도 시험 페이지는 그대로 동작해야 한다 (태그만 비어 있음)
+        .catch(emptyIfMissingTable),
     ]);
 
     const examRow = examRows[0];
@@ -385,7 +397,8 @@ export class DrizzleExamRepository implements ExamRepository {
       .select()
       .from(s.concepts)
       .where(and(eq(s.concepts.subject, subject), eq(s.concepts.slug, slug)))
-      .limit(1);
+      .limit(1)
+      .catch(emptyIfMissingTable);
     if (!concept) return null;
     const rows = await this.db
       .select({

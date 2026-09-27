@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 import type { Database } from "@/db/client";
 import * as s from "@/db/schema";
@@ -143,5 +143,19 @@ describe.skipIf(!TEST_DB_URL)("개념 태그: 검토 → 공개 화면", () => {
     const [c] = await db.select().from(s.concepts).where(eq(s.concepts.id, conceptId));
     expect(c).toMatchObject({ name: "탄소 화합물의 특징", slug: "탄소-화합물" });
     await expect(renameConcept(db, conceptId, "a")).rejects.toBeInstanceOf(ConceptReviewError);
+  });
+
+  it("migration 0014 적용 전(테이블 없음)에도 시험 페이지 데이터는 나온다", async () => {
+    await db.execute(sql`alter table question_concepts rename to question_concepts_hidden`);
+    await db.execute(sql`alter table concepts rename to concepts_hidden`);
+    try {
+      const d = await detail();
+      expect(d!.questions).toHaveLength(2);
+      expect(d!.conceptTags).toEqual({});
+      expect(await repo().getConcept("science", "탄소-화합물")).toBeNull();
+    } finally {
+      await db.execute(sql`alter table concepts_hidden rename to concepts`);
+      await db.execute(sql`alter table question_concepts_hidden rename to question_concepts`);
+    }
   });
 });

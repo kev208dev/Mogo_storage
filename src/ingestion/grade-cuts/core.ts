@@ -87,9 +87,7 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
     )
       throw new Error("invalid grade cut");
   }
-  const rawCuts = sorted.filter(
-    (cut) => cut.rawScore !== null || cut.rawScoreMin !== null,
-  );
+  const rawCuts = sorted.filter((cut) => cut.rawScore !== null || cut.rawScoreMin !== null);
   for (let i = 1; i < rawCuts.length; i++) {
     const prior = rawCuts[i - 1]!;
     const current = rawCuts[i]!;

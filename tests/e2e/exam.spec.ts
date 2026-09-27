@@ -3,7 +3,9 @@ import { expect, test } from "@playwright/test";
 test.describe("핵심 흐름: 검색 → 시험 페이지 → 다운로드", () => {
   test("홈에서 년도/학년/월 선택으로 시험 페이지 이동", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("heading", { level: 1, name: "모의고사 창고" })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { level: 1, name: "고1·고2·고3 모고·모의고사 자료" }),
+    ).toBeVisible();
     await page.getByLabel("년도", { exact: true }).selectOption("2025");
     await page.getByLabel("학년", { exact: true }).selectOption("2");
     await page.getByLabel("월", { exact: true }).selectOption("9");

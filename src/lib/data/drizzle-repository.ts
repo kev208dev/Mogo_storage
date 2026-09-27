@@ -315,7 +315,7 @@ export class DrizzleExamRepository implements ExamRepository {
 
     const gradeCuts: GradeCut[] = gradeCutRows.map(({ createdAt: _c, ...g }) => {
       void _c;
-      return { ...g, updatedAt: g.updatedAt.toISOString() };
+      return { ...g, scoreBasis: g.scoreBasis as GradeCut["scoreBasis"], updatedAt: g.updatedAt.toISOString() };
     });
 
     const vocabulary: VocabularyItem[] = vocabularyRows.map((v) => ({

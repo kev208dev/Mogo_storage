@@ -32,7 +32,12 @@ describe("relative grade-cut table model", () => {
   });
 
   it("shows Mega values without inventing official values or zeroes", () => {
-    const cuts = [row("megastudy", [{ grade: 1, rawScore: 87 }, { grade: 2, rawScore: 77 }])];
+    const cuts = [
+      row("megastudy", [
+        { grade: 1, rawScore: 87 },
+        { grade: 2, rawScore: 77 },
+      ]),
+    ];
     expect(gradeCutValue(cuts, "official", 1)).toBeNull();
     expect(gradeCutValue(cuts, "megastudy", 1)).toBe(87);
     expect(gradeCutValue(cuts, "megastudy", 2)).toBe(77);

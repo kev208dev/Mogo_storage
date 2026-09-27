@@ -29,25 +29,37 @@ export function GradeCutTable({
         <p className="text-muted-foreground text-sm">
           절대평가 · 시험별 예상컷 수집 없이 고정 원점수 기준을 적용합니다.
         </p>
-        <GradeEstimator gradeCuts={[]} fixedCuts={absolute.cuts} maxScore={absolute.maxScore} />
+        <GradeEstimator
+          gradeCuts={[]}
+          fixedCuts={absolute.cuts}
+          maxScore={absolute.maxScore}
+        />
         <div className="border-border overflow-x-auto rounded-md border">
           <table className="w-full min-w-[20rem] text-sm tabular-nums">
             <caption className="sr-only">절대평가 고정 원점수 등급 기준</caption>
             <thead>
               <tr className="border-border bg-muted border-b">
-                <th scope="col" className="px-3 py-2 text-left">등급</th>
-                <th scope="col" className="px-3 py-2 text-right">고정 원점수 기준</th>
+                <th scope="col" className="px-3 py-2 text-left">
+                  등급
+                </th>
+                <th scope="col" className="px-3 py-2 text-right">
+                  고정 원점수 기준
+                </th>
               </tr>
             </thead>
             <tbody>
               {absolute.cuts.map(({ grade, rawScore }) => (
                 <tr key={grade} className="border-border border-b last:border-0">
-                  <th scope="row" className="px-3 py-2 text-left">{grade}등급</th>
+                  <th scope="row" className="px-3 py-2 text-left">
+                    {grade}등급
+                  </th>
                   <td className="px-3 py-2 text-right">{rawScore}점 이상</td>
                 </tr>
               ))}
               <tr>
-                <th scope="row" className="px-3 py-2 text-left">9등급</th>
+                <th scope="row" className="px-3 py-2 text-left">
+                  9등급
+                </th>
                 <td className="px-3 py-2 text-right">{absolute.cuts[7]!.rawScore}점 미만</td>
               </tr>
             </tbody>
@@ -71,7 +83,9 @@ export function GradeCutTable({
           </caption>
           <thead>
             <tr className="border-border bg-muted border-b">
-              <th scope="col" className="px-3 py-2 text-left font-semibold">등급</th>
+              <th scope="col" className="px-3 py-2 text-left font-semibold">
+                등급
+              </th>
               {columns.map((source) => {
                 const official = source === "official";
                 return (
@@ -97,7 +111,9 @@ export function GradeCutTable({
           <tbody>
             {grades.map((grade) => (
               <tr key={grade} className="border-border border-b last:border-0">
-                <th scope="row" className="px-3 py-2 text-left font-semibold">{grade}등급</th>
+                <th scope="row" className="px-3 py-2 text-left font-semibold">
+                  {grade}등급
+                </th>
                 {columns.map((source) => {
                   const value = gradeCutValue(gradeCuts, source, grade);
                   const official = source === "official";
@@ -124,7 +140,9 @@ export function GradeCutTable({
         </table>
       </div>
       {gradeCuts.length === 0 ? (
-        <p className="text-muted-foreground text-xs">현재 확인된 자료부터 표시하고 있습니다.</p>
+        <p className="text-muted-foreground text-xs">
+          현재 확인된 자료부터 표시하고 있습니다.
+        </p>
       ) : null}
       <ul className="text-muted-foreground space-y-0.5 text-xs">
         {gradeCuts.map((c) => (
@@ -135,7 +153,12 @@ export function GradeCutTable({
             {c.sourceUrl ? (
               <>
                 {" · "}
-                <a href={c.sourceUrl} className="underline" target="_blank" rel="noopener noreferrer">
+                <a
+                  href={c.sourceUrl}
+                  className="underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   출처
                 </a>
               </>

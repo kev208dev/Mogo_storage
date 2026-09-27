@@ -53,11 +53,21 @@ async function handle(request: Request, ctx: RouteContext<"/api/cron/[task]">) {
   const startedAt = new Date();
   if (db) await recordTaskStart(db, task, startedAt);
   const outcome = await runTask(task as Task);
-  if (db) await recordTaskFinish(db, task, { ...outcome.heartbeat, startedAt }, new Date());
+  // 어느 scheduler 가 불렀는지 heartbeat 에 남긴다 (자동 실행과 수동 호출 구분)
+  const detail = [triggerSource(request), outcome.heartbeat.detail].filter(Boolean).join(":");
+  if (db) await recordTaskFinish(db, task, { ...outcome.heartbeat, detail, startedAt }, new Date());
   return NextResponse.json(outcome.body, {
     status: outcome.status,
     headers: { "cache-control": "no-store" },
   });
+}
+
+/** X-Scheduler 헤더(pg_cron, github-actions) 또는 Vercel Cron user-agent. 그 외는 manual */
+function triggerSource(request: Request): string {
+  const declared = request.headers.get("x-scheduler")?.trim().toLowerCase() ?? "";
+  if (/^[a-z0-9_-]{1,20}$/.test(declared)) return declared.replace(/-/g, "_");
+  if ((request.headers.get("user-agent") ?? "").startsWith("vercel-cron")) return "vercel_cron";
+  return "manual";
 }
 
 async function runTask(task: Task): Promise<TaskOutcome> {
@@ -87,6 +97,10 @@ async function runTask(task: Task): Promise<TaskOutcome> {
           minutesSinceSeen: t.minutesSinceSeen,
           staleAfterMinutes: t.staleAfterMinutes,
           consecutiveFailures: t.consecutiveFailures,
+          runCount: t.runCount,
+          lastStartedAt: t.lastStartedAt,
+          lastStatus: t.lastStatus,
+          lastDetail: t.lastDetail,
         })),
         alerted: result.alerted,
         recovered: result.recovered,

@@ -18,11 +18,6 @@ UPDATE grade_cuts SET
     WHEN 'megastudy' THEN '메가스터디 예상'
     WHEN 'daesung' THEN '대성 예상'
     WHEN 'ebs' THEN 'EBS 예상'
-    WHEN 'jongro' THEN '종로학원'
-    WHEN 'etoos' THEN '이투스'
-    WHEN 'jinhak' THEN '진학사'
-    WHEN 'uway' THEN '유웨이'
-    WHEN 'kimyoungil' THEN '김영일교육컨설팅'
   END,
   observed_via = source,
   first_party = source <> 'official',

@@ -36,6 +36,12 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npx prettier --write src/components/exam/GradeCutTable.tsx tests/unit/grade-cut-table.test.ts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prettier-formatted-grade-cut-files
+          path: |
+            src/components/exam/GradeCutTable.tsx
+            tests/unit/grade-cut-table.test.ts
       - run: git diff -- src/components/exam/GradeCutTable.tsx tests/unit/grade-cut-table.test.ts
       - run: npm run format:check
       - run: npx drizzle-kit generate --name=ci_drift_check && git diff --exit-code -- drizzle && test -z "$(git status --porcelain drizzle)"

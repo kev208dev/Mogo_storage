@@ -1,10 +1,18 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
+
+/** 문항 카드는 hydration 뒤에 연다 (그 전 클릭은 브라우저 기본 동작만 일어난다) */
+async function openExamPage(page: Page, path: string) {
+  await page.goto(path);
+  await expect(page.getByTestId("question-explorer")).toHaveAttribute("data-ready", "");
+}
 
 test.skip(!process.env.E2E_DATABASE_URL, "E2E_DATABASE_URL 이 없으면 관리자 흐름은 건너뛴다");
+// 승인은 DB 에 남는다 — 재시도하면 처음 상태(검토 대기 1건)가 아니므로 재시도하지 않는다
+test.describe.configure({ retries: 0 });
 
 test("개념 태그: 문항 카드 → 개념 페이지 → 관리자 승인 → 공개", async ({ page }) => {
   // 승인된 연결만 공개 화면에 나온다
-  await page.goto("/exam/2022/high3/09");
+  await openExamPage(page, "/exam/2022/high3/09");
   const q1 = page.locator("#q-1");
   await q1.locator("summary").first().click();
   const tag = q1.getByRole("link", { name: /세부 내용 파악/ });
@@ -34,7 +42,7 @@ test("개념 태그: 문항 카드 → 개념 페이지 → 관리자 승인 →
 
   // ISR: revalidatePath 는 stale-while-revalidate — 다시 생성된 페이지가 나올 때까지 새로 연다
   await expect(async () => {
-    await page.goto("/exam/2022/high3/09");
+    await openExamPage(page, "/exam/2022/high3/09");
     const again = page.locator("#q-2");
     await again.locator("summary").first().click();
     await expect(again.getByRole("link", { name: /세부 내용 파악/ })).toBeVisible({

@@ -3,23 +3,29 @@ import { SITE_NAME, SUBJECTS, SUBJECT_LABELS, type Subject } from "./constants";
 import { courseSeoName, SUBJECT_AREA_LABELS } from "./courses";
 import type { Course, Exam, ExamSubject, ExamSubjectDetail } from "./data/types";
 import { examCoursePath, examPath, examTitle } from "./exam-path";
+import { absoluteUrl } from "./site";
 
-export function buildExamMetadata(
+type ExamSeoOptions = { upcomingExamDate?: string | null; course?: Course | null };
+
+function buildExamSeoContent(
   exam: Exam,
   subjects: ExamSubject[],
   subject: Subject | null,
-  options: { upcomingExamDate?: string | null; course?: Course | null } = {},
-): Metadata {
+  options: ExamSeoOptions = {},
+) {
   const baseTitle = examTitle(exam);
   const available = SUBJECTS.filter((s) => subjects.some((x) => x.subject === s));
   const subjectList = available.map((s) => SUBJECT_LABELS[s]).join(", ");
-
   const course = options.course ?? null;
+  const subjectSeoName = subject
+    ? (SUBJECT_AREA_LABELS[subject] ?? SUBJECT_LABELS[subject])
+    : null;
+
   const title = course
-    ? `${baseTitle} ${courseSeoName(course.name)} 문제·정답·해설 PDF`
-    : subject
-      ? `${baseTitle} ${SUBJECT_AREA_LABELS[subject] ?? SUBJECT_LABELS[subject]}`
-      : baseTitle;
+    ? `${baseTitle} ${courseSeoName(course.name)} 문제·정답·해설·등급컷`
+    : subjectSeoName
+      ? `${baseTitle} ${subjectSeoName} 문제·정답·해설·등급컷`
+      : `${baseTitle} 문제·정답·해설·등급컷`;
   const upcoming = options.upcomingExamDate
     ? `${baseTitle} 시행일은 ${options.upcomingExamDate.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_, y, m, d) => `${y}년 ${Number(m)}월 ${Number(d)}일`)}입니다. 시험 종료 후 문제지와 정답·해설이 공개되면 바로 다운로드할 수 있습니다.`
     : null;
@@ -31,10 +37,21 @@ export function buildExamMetadata(
         ? `${baseTitle} ${SUBJECT_LABELS[subject]} 문제지와 정답·해설 PDF를 빠르게 확인하고 다운로드하세요.${
             subject === "english" ? " 듣기 MP3, 지문별 단어장, 받아쓰기도 제공합니다." : ""
           } 정답 바로 보기와 자동 채점, 등급컷도 확인할 수 있습니다.`
-        : `${baseTitle} ${subjectList} 문제지와 정답·해설 PDF를 빠르게 확인하고 다운로드하세요.`;
+        : `${baseTitle} ${subjectList} 문제지와 정답·해설 PDF를 빠르게 확인하고 다운로드하세요. 과목별 정답 확인, 자동 채점과 등급컷도 제공합니다.`;
   const path = course
     ? examCoursePath(exam, course.subject, course.code)
     : examPath(exam, subject ?? undefined);
+
+  return { title, description, path, course, subjectSeoName };
+}
+
+export function buildExamMetadata(
+  exam: Exam,
+  subjects: ExamSubject[],
+  subject: Subject | null,
+  options: ExamSeoOptions = {},
+): Metadata {
+  const { title, description, path } = buildExamSeoContent(exam, subjects, subject, options);
 
   return {
     title,
@@ -51,6 +68,48 @@ export function buildExamMetadata(
     twitter: { card: "summary", title, description },
     // 샘플 데이터 시험은 운영 환경 검색 결과에 노출되지 않도록 한다. (실제 데이터는 isSample=false → index)
     robots: shouldNoindexExam(exam) ? { index: false, follow: true } : undefined,
+  };
+}
+
+/** 시험 상세 페이지용 Schema.org CollectionPage JSON-LD. */
+export function buildExamStructuredData(
+  exam: Exam,
+  subjects: ExamSubject[],
+  subject: Subject | null,
+  options: ExamSeoOptions = {},
+): Record<string, unknown> {
+  const { title, description, path, course, subjectSeoName } = buildExamSeoContent(
+    exam,
+    subjects,
+    subject,
+    options,
+  );
+  const about: Array<Record<string, string>> = [
+    {
+      "@type": "Thing",
+      name: `${exam.year}년 고${exam.grade} ${exam.month}월 모의고사`,
+    },
+  ];
+  if (subjectSeoName) {
+    about.push({
+      "@type": "Thing",
+      name: course ? `${subjectSeoName} ${course.name}` : subjectSeoName,
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: absoluteUrl(path),
+    inLanguage: "ko-KR",
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: absoluteUrl("/"),
+    },
+    about,
   };
 }
 

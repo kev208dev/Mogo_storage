@@ -69,19 +69,6 @@ test.describe("부가기능", () => {
     await expect(answers).toBeVisible();
   });
 
-  test("자동 채점 → 틀린 문제 클릭 시 해설 열림", async ({ page }) => {
-    await page.goto("/exam/2025/high2/09/english");
-    await page.getByLabel("1번 1번 선택", { exact: true }).check({ force: true });
-    await page.getByRole("button", { name: "채점하기" }).click();
-    const result = page.getByRole("region", { name: "채점 결과" });
-    await expect(result).toContainText("점");
-    const wrong = result.getByRole("link").first();
-    const label = await wrong.getAttribute("aria-label");
-    const n = label?.match(/(\d+)번/)?.[1];
-    await wrong.click();
-    await expect(page.locator(`#q-${n}`)).toHaveAttribute("open", "");
-  });
-
   test("등급컷은 공식/예상을 구분한다", async ({ page }) => {
     await page.goto("/exam/2025/high2/09/math");
     const table = page.locator("#grade-cuts table");

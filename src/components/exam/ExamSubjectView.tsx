@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FullListeningPlayer } from "@/components/english/FullListeningPlayer";
 import { DictationPractice } from "@/components/english/DictationPractice";
 import { ListeningPlayer } from "@/components/english/ListeningPlayer";
 import { VocabularyList } from "@/components/english/VocabularyList";
@@ -10,7 +11,6 @@ import { SUBJECT_AREA_LABELS } from "@/lib/courses";
 import type { ExamSubjectDetail } from "@/lib/data/types";
 import { examCoursePath, examPath, examTitle } from "@/lib/exam-path";
 import { AnswerSheet } from "./AnswerSheet";
-import { AutoGrader } from "./AutoGrader";
 import { CourseSelector } from "./CourseSelector";
 import { DifficultQuestions } from "./DifficultQuestions";
 import { ExamFiles } from "./ExamFiles";
@@ -20,6 +20,7 @@ import { ExamSchedulePanel } from "./ExamSchedulePanel";
 import { fileViewHref } from "./FileDownloadCard";
 import { GradeCutTable } from "./GradeCutTable";
 import { QuestionExplorer } from "./QuestionExplorer";
+import { QuickGrader } from "./QuickGrader";
 import { SubjectTabs } from "./SubjectTabs";
 
 function todayKst(): string {
@@ -71,6 +72,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
   const progressKey = course ? `${subjectKey}:${course.code}` : subjectKey;
   const isEnglish = subjectKey === "english";
   const audioFile = files.find((f) => f.type === "listening_audio");
+  const solutionFile = files.find((f) => f.type === "solution");
   const hasQuestions = questions.length > 0;
 
   const quickLinks = [
@@ -156,9 +158,9 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
             <Section
               id="grader"
               title="자동 채점"
-              description="답을 선택하고 채점하기를 누르세요. 입력한 답은 이 기기에만 저장됩니다."
+              description="답을 이어서 입력하거나 붙여넣으세요 (예: 34244125…). 입력한 답은 이 기기에만 저장됩니다."
             >
-              <AutoGrader
+              <QuickGrader
                 examId={exam.id}
                 subject={progressKey}
                 questions={questions.map(({ questionNumber, answer, score, choiceCount }) => ({
@@ -170,9 +172,16 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
               />
             </Section>
 
-            <Section id="questions" title="문항별 해설 · 정답률">
+            <Section id="questions" title="문항별 해설">
               <DifficultQuestions questions={questions} />
-              <QuestionExplorer examId={exam.id} subject={progressKey} questions={questions} />
+              <QuestionExplorer
+                examId={exam.id}
+                subject={progressKey}
+                questions={questions}
+                solutionHref={solutionFile ? fileViewHref(solutionFile.id) : null}
+                tracks={isEnglish ? listeningTracks : []}
+                vocabulary={isEnglish ? vocabulary : []}
+              />
             </Section>
           </>
         ) : (
@@ -218,15 +227,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
             title="영어 듣기"
             description="공식 듣기 음원 전체입니다. 문항별 구간과 대본은 공식 자료로 확인된 경우에만 제공합니다."
           >
-            <audio
-              controls
-              preload="none"
-              src={fileViewHref(audioFile.id)}
-              className="w-full"
-              data-testid="listening-full-audio"
-            >
-              <a href={fileViewHref(audioFile.id)}>듣기 파일 열기</a>
-            </audio>
+            <FullListeningPlayer audioUrl={fileViewHref(audioFile.id)} />
           </Section>
         ) : null}
       </div>

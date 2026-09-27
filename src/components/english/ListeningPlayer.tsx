@@ -1,6 +1,13 @@
 "use client";
 
-import { FileTextIcon, PauseIcon, PencilLineIcon, PlayIcon, RotateCcwIcon } from "lucide-react";
+import {
+  FileTextIcon,
+  PauseIcon,
+  PencilLineIcon,
+  PlayIcon,
+  RotateCcwIcon,
+  RotateCwIcon,
+} from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ListeningTrack } from "@/lib/data/types";
 import { cn } from "@/lib/utils";
@@ -91,6 +98,16 @@ export function ListeningPlayer({
     return () => window.removeEventListener(LISTENING_PLAY_EVENT, onRequest);
   }, [tracks, play]);
 
+  /** ±초 이동. 현재 문항 구간 밖으로는 나가지 않는다 */
+  function seek(delta: number) {
+    const audio = audioRef.current;
+    if (!audio || !current) return;
+    audio.currentTime = Math.min(
+      Math.max(audio.currentTime + delta, current.startSeconds),
+      Math.max(current.startSeconds, current.endSeconds - 0.25),
+    );
+  }
+
   const toggleScript = (id: string) =>
     setOpenScripts((prev) => {
       const next = new Set(prev);
@@ -125,6 +142,22 @@ export function ListeningPlayer({
             </label>
           ))}
         </fieldset>
+        <div className="flex gap-1">
+          <TrackAction
+            icon={RotateCcwIcon}
+            label="5초 뒤로"
+            ariaLabel="5초 뒤로"
+            disabled={!current}
+            onClick={() => seek(-5)}
+          />
+          <TrackAction
+            icon={RotateCwIcon}
+            label="5초 앞으로"
+            ariaLabel="5초 앞으로"
+            disabled={!current}
+            onClick={() => seek(5)}
+          />
+        </div>
         <p className="text-muted-foreground text-sm" aria-live="polite">
           {current
             ? `${current.label} ${playing ? "재생 중" : "일시정지"}`

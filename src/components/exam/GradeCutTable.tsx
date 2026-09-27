@@ -85,6 +85,15 @@ export function GradeCutTable({
               </th>
               {columns.map((source) => {
                 const official = isOfficialGradeCutColumn(source);
+                const providerColumn = gradeCuts.find((cut) => cut.source === source);
+                const title =
+                  source === "jongro" && providerColumn?.providerStatus === "provider_final"
+                    ? "종로 최종"
+                    : source === "jongro"
+                      ? "종로 예상/추정"
+                      : official
+                        ? "공식 확정"
+                        : `${GRADE_CUT_SOURCE_LABELS[source]} 예상`;
                 return (
                   <th
                     key={source}
@@ -95,7 +104,7 @@ export function GradeCutTable({
                     )}
                   >
                     <span className="flex flex-col items-end gap-0.5">
-                      {official ? "공식 확정" : `${GRADE_CUT_SOURCE_LABELS[source]} 예상`}
+                      {title}
                       <Badge variant={official ? "default" : "warning"}>
                         {official ? "공식" : "예상"}
                       </Badge>
@@ -142,8 +151,12 @@ export function GradeCutTable({
       <ul className="text-muted-foreground space-y-0.5 text-xs">
         {gradeCuts.map((c) => (
           <li key={c.source}>
-            {GRADE_CUT_SOURCE_LABELS[c.source]}
-            {c.isOfficial ? " (공식)" : " (예상)"}
+            {c.providerLabel ?? GRADE_CUT_SOURCE_LABELS[c.source]}
+            {c.isOfficial
+              ? " (공식)"
+              : c.providerStatus === "provider_final"
+                ? " (업체 최종)"
+                : " (예상)"}
             {c.isSample ? " · 샘플" : ""} · {formatKoreanDate(c.updatedAt)} 업데이트
             {c.sourceUrl ? (
               <>

@@ -35,6 +35,12 @@ export interface CollectedGradeCut {
   cuts: GradeCutEntry[];
   sourceUrl: string;
   observedAt: Date;
+  providerStatus?: string;
+  providerLabel?: string;
+  observedVia?: GradeCutSource;
+  firstParty?: boolean;
+  scoreBasis?: "raw" | "standard";
+  parserVersion?: string;
 }
 export interface GradeCutAdapter {
   source: GradeCutSource;

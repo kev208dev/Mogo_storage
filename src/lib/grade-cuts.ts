@@ -26,7 +26,7 @@ export function estimateGrade(cuts: GradeCutEntry[], rawScore: number): GradeEst
     return null;
 
   const exact = cuts.filter(
-    (cut): cut is Extract<GradeCutEntry, { rawScore: number }> => typeof cut.rawScore === "number",
+    (cut) => typeof cut.rawScore === "number" && cut.rawScoreMin == null && cut.rawScoreMax == null,
   );
   if (exact.length !== cuts.length) return null;
   const sorted = [...exact].sort((a, b) => a.grade - b.grade);

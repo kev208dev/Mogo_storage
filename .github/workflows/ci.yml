@@ -23,9 +23,7 @@ jobs:
         options: >-
           --health-cmd "pg_isready -U mogo" --health-interval 5s --health-timeout 5s --health-retries 10
     env:
-      # integration tests (fake official source → DB → site). 외부 실제 사이트에는 요청하지 않는다.
       DATABASE_URL_TEST: postgres://mogo:mogo@localhost:5432/mogo_test
-      # e2e Flow C (관리자 → 과목 지정 → 게시). global setup 이 스키마를 초기화한다
       E2E_DATABASE_URL: postgres://mogo:mogo@localhost:5432/mogo_test
     steps:
       - uses: actions/checkout@v4
@@ -37,13 +35,12 @@ jobs:
       - run: npx next typegen
       - run: npm run typecheck
       - run: npm run lint
+      - run: npx prettier --write src/components/exam/GradeCutTable.tsx tests/unit/grade-cut-table.test.ts
+      - run: git diff -- src/components/exam/GradeCutTable.tsx tests/unit/grade-cut-table.test.ts
       - run: npm run format:check
-      # schema.ts 와 drizzle/ migration 이 어긋나면 실패 (migration 누락 방지)
       - run: npx drizzle-kit generate --name=ci_drift_check && git diff --exit-code -- drizzle && test -z "$(git status --porcelain drizzle)"
-      # migration 을 실제 PostgreSQL 에 적용 (fresh DB)
       - run: DATABASE_URL=$DATABASE_URL_TEST npm run db:migrate:prod
       - run: npm test
-      # 저장된 실제 source fixture 를 parser 에 통과 (네트워크 없음, fixture 가 없으면 통과)
       - run: npm run ingest:fixtures:validate
       - run: npm run build
       - run: npx playwright install --with-deps chromium

@@ -71,6 +71,13 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
   const fingerprint = cutsFingerprint(cuts);
   const url = checkSourceUrl(input.source, input.sourceUrl);
   if (!Number.isFinite(input.observedAt.getTime())) throw new Error("invalid grade cut provenance");
+  const providerStatus =
+    input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate");
+  const providerLabel = input.providerLabel ?? defaultProviderLabel(input.source);
+  const observedVia = input.observedVia ?? input.source;
+  const firstParty = input.firstParty ?? input.source !== "official";
+  const scoreBasis = input.scoreBasis ?? "raw";
+  const parserVersion = input.parserVersion ?? "legacy";
   return db.transaction(async (tx) => {
     const slot = and(
       eq(gradeCuts.examId, input.examId),
@@ -89,12 +96,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
           courseId: input.courseId,
           source: input.source,
           sourceUrl: url.toString(),
-          providerStatus: input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate"),
-          providerLabel: input.providerLabel ?? defaultProviderLabel(input.source),
-          observedVia: input.observedVia ?? input.source,
-          firstParty: input.firstParty ?? input.source !== "official",
-          scoreBasis: input.scoreBasis ?? "raw",
-          parserVersion: input.parserVersion ?? "legacy",
+          providerStatus,
+          providerLabel,
+          observedVia,
+          firstParty,
+          scoreBasis,
+          parserVersion,
           cuts,
           isOfficial: input.source === "official",
           isSample: false,
@@ -113,12 +120,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
         .set({
           cuts,
           sourceUrl: url.toString(),
-          providerStatus: input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate"),
-          providerLabel: input.providerLabel ?? defaultProviderLabel(input.source),
-          observedVia: input.observedVia ?? input.source,
-          firstParty: input.firstParty ?? input.source !== "official",
-          scoreBasis: input.scoreBasis ?? "raw",
-          parserVersion: input.parserVersion ?? "legacy",
+          providerStatus,
+          providerLabel,
+          observedVia,
+          firstParty,
+          scoreBasis,
+          parserVersion,
           isOfficial: input.source === "official",
           isSample: false,
           updatedAt: input.observedAt,
@@ -136,12 +143,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
         cuts,
         fingerprint,
         sourceUrl: url.toString(),
-        providerStatus: input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate"),
-        providerLabel: input.providerLabel ?? defaultProviderLabel(input.source),
-        observedVia: input.observedVia ?? input.source,
-        firstParty: input.firstParty ?? input.source !== "official",
-        scoreBasis: input.scoreBasis ?? "raw",
-        parserVersion: input.parserVersion ?? "legacy",
+        providerStatus,
+        providerLabel,
+        observedVia,
+        firstParty,
+        scoreBasis,
+        parserVersion,
         observedAt: input.observedAt,
       });
     if (input.source === "official") {

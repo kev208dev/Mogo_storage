@@ -43,18 +43,34 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
   if (!Array.isArray(cuts) || cuts.length === 0 || cuts.length > 9)
     throw new Error("empty or oversized cuts");
   const sorted = cuts
-    .map((c) => ({ grade: c.grade, rawScore: c.rawScore }))
+    .map((cut): GradeCutEntry =>
+      cut.rawScore === null
+        ? {
+            grade: cut.grade,
+            rawScore: null,
+            rawScoreMin: cut.rawScoreMin,
+            rawScoreMax: cut.rawScoreMax,
+          }
+        : { grade: cut.grade, rawScore: cut.rawScore },
+    )
     .sort((a, b) => a.grade - b.grade);
   for (let i = 0; i < sorted.length; i++) {
-    const c = sorted[i]!;
+    const cut = sorted[i]!;
+    const low = cut.rawScore === null ? cut.rawScoreMin : cut.rawScore;
+    const high = cut.rawScore === null ? cut.rawScoreMax : cut.rawScore;
+    const previous = sorted[i - 1];
+    const previousLow =
+      previous?.rawScore === null ? previous.rawScoreMin : previous?.rawScore;
     if (
-      !Number.isInteger(c.grade) ||
-      c.grade < 1 ||
-      c.grade > 9 ||
-      !Number.isInteger(c.rawScore) ||
-      c.rawScore < 0 ||
-      c.rawScore > 100 ||
-      (i > 0 && (c.grade === sorted[i - 1]!.grade || c.rawScore > sorted[i - 1]!.rawScore))
+      !Number.isInteger(cut.grade) ||
+      cut.grade < 1 ||
+      cut.grade > 9 ||
+      !Number.isInteger(low) ||
+      !Number.isInteger(high) ||
+      low < 0 ||
+      high > 100 ||
+      low > high ||
+      (previous && (cut.grade === previous.grade || high > previousLow!))
     )
       throw new Error("invalid grade cut");
   }
@@ -62,7 +78,11 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
 }
 export function cutsFingerprint(cuts: GradeCutEntry[]): string {
   return normalizeCuts(cuts)
-    .map((c) => `${c.grade}:${c.rawScore}`)
+    .map((cut) =>
+      cut.rawScore === null
+        ? `${cut.grade}:${cut.rawScoreMin}~${cut.rawScoreMax}`
+        : `${cut.grade}:${cut.rawScore}`,
+    )
     .join("|");
 }
 export function slotKey(slot: Pick<WatchSlot, "subject" | "courseCode">): string {

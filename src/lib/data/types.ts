@@ -203,6 +203,8 @@ export interface ExamSubjectDetail {
   course: Course | null;
   /** 세부과목 code → 공개된 자료 수 (선택 UI 에서 "자료 준비 중" 표시용) */
   courseFileCounts: Record<string, number>;
+  /** 이 영역의 세부과목 자료에 있는 파일 종류 (영역 페이지 SEO 문구용: 실제로 있는 것만 말한다) */
+  courseFileTypes: FileType[];
   /** 선택된 영역/세부과목의 자료 (영역 페이지에서는 course 가 없는 자료만) */
   files: ExamFile[];
   questions: QuestionWithStats[];

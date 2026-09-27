@@ -86,6 +86,20 @@ export class SampleExamRepository implements ExamRepository {
       statistic: this.data.statistics.find((s) => s.questionId === q.id) ?? null,
     }));
 
+    const slotCourseIds = new Set(courses.map((c) => c.id));
+    const courseFileTypes = [
+      ...new Set(
+        this.data.files
+          .filter(
+            (f) =>
+              f.examId === exam.id &&
+              f.subject === subject &&
+              f.courseId !== null &&
+              slotCourseIds.has(f.courseId),
+          )
+          .map((f) => f.type),
+      ),
+    ];
     const courseFileCounts: Record<string, number> = {};
     for (const c of courses) {
       courseFileCounts[c.code] = this.data.files.filter(
@@ -100,6 +114,7 @@ export class SampleExamRepository implements ExamRepository {
       courses,
       course,
       courseFileCounts,
+      courseFileTypes,
       processingTypes: [],
       // 샘플 모드에는 개념 태그를 만들지 않는다 (공식 해설지 근거가 없음)
       conceptTags: {},

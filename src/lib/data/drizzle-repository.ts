@@ -246,10 +246,10 @@ export class DrizzleExamRepository implements ExamRepository {
         : Promise.resolve([]),
       this.db.select().from(s.examSchedules).where(eq(s.examSchedules.examId, examRef)).limit(1),
       this.db
-        .select({ courseId: s.examFiles.courseId, n: count() })
+        .select({ courseId: s.examFiles.courseId, type: s.examFiles.type, n: count() })
         .from(s.examFiles)
         .where(and(eq(s.examFiles.examId, examRef), eq(s.examFiles.subject, subject)))
-        .groupBy(s.examFiles.courseId),
+        .groupBy(s.examFiles.courseId, s.examFiles.type),
       // 발견됐지만 아직 게시 전인 공식 자료 (검증 중) → "확인 중" 표시
       this.db
         .selectDistinct({ type: s.sourceArtifacts.type })
@@ -345,7 +345,13 @@ export class DrizzleExamRepository implements ExamRepository {
 
     const courseFileCounts: Record<string, number> = {};
     for (const c of courses)
-      courseFileCounts[c.code] = counts.find((x) => x.courseId === c.id)?.n ?? 0;
+      courseFileCounts[c.code] = counts
+        .filter((x) => x.courseId === c.id)
+        .reduce((sum, x) => sum + x.n, 0);
+    const courseIds = new Set(courses.map((c) => c.id));
+    const courseFileTypes = [
+      ...new Set(counts.filter((x) => x.courseId && courseIds.has(x.courseId)).map((x) => x.type)),
+    ];
 
     const processingTypes = pending
       .map((p) => p.type)
@@ -358,6 +364,7 @@ export class DrizzleExamRepository implements ExamRepository {
       courses,
       course,
       courseFileCounts,
+      courseFileTypes,
       files: files.map(toFile),
       questions,
       gradeCuts,

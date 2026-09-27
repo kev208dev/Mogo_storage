@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { GRADES, MONTHS } from "@/lib/constants";
-import { getRepository, sortExamsDesc } from "@/lib/data";
+import { getRepository } from "@/lib/data";
+import { sortExamsDesc } from "@/lib/data/repository";
 import { examPath } from "@/lib/exam-path";
 
 export const revalidate = 3600;

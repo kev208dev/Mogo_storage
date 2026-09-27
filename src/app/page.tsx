@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { BookOpenIcon, HeadphonesIcon, PencilLineIcon, SpellCheckIcon } from "lucide-react";
 import Link from "next/link";
 import { ExamList } from "@/components/exam/ExamList";
@@ -11,6 +12,11 @@ import { examPath, subjectSegment } from "@/lib/exam-path";
 import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 3600;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", locale: "ko_KR", siteName: SITE_NAME, url: "/" },
+};
 
 const ENGLISH_TOOLS = [
   {

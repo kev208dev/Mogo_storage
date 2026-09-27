@@ -53,6 +53,16 @@ describe("relative grade-cut table model", () => {
     expect(gradeCutValueLabel(cuts, "megastudy", 3)).toBe("-");
   });
 
+  it("renders range values without inventing a midpoint", () => {
+    const cuts = [
+      row("megastudy", [
+        { grade: 1, rawScore: null, rawScoreMin: 88, rawScoreMax: 90 },
+      ]),
+    ];
+    expect(gradeCutValue(cuts, "megastudy", 1)).toBeNull();
+    expect(gradeCutValueLabel(cuts, "megastudy", 1)).toBe("88~90");
+  });
+
   it("retains official and Mega values independently with an official designation", () => {
     const cuts = [
       row("official", [{ grade: 1, rawScore: 86 }], true),

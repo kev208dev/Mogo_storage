@@ -115,19 +115,19 @@ export function checkCuts(subject: Subject, cuts: GradeCutEntry[]): GradeCutEntr
     );
   }
   const max = maxRawScore(subject);
-  const over = normalized.find((cut) =>
-    cut.rawScore === null ? cut.rawScoreMax > max : cut.rawScore > max,
+  const over = normalized.find(
+    (cut) => (cut.rawScoreMax ?? cut.rawScore) !== null && (cut.rawScoreMax ?? cut.rawScore)! > max,
   );
   if (over) {
-    const score = over.rawScore === null ? over.rawScoreMax : over.rawScore;
+    const score = over.rawScoreMax ?? over.rawScore;
     throw new GradeCutValidationError(
       "over_max",
       `${over.grade}등급 원점수 ${score}점이 만점(${max}점)을 넘습니다.`,
     );
   }
-  const top = normalized[0]!;
-  const topMinimum = top.rawScore === null ? top.rawScoreMin : top.rawScore;
-  if (top.grade === 1 && topMinimum === 0)
+  const top = normalized.find((cut) => cut.grade === 1);
+  const topMinimum = top?.rawScoreMin ?? top?.rawScore;
+  if (top && topMinimum === 0)
     throw new GradeCutValidationError("zero_top_grade", "1등급 컷이 0점일 수 없습니다.");
   return normalized;
 }

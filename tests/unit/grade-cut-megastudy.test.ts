@@ -62,6 +62,15 @@ describe("MegaStudy public relative raw-score table", () => {
     });
     expect(() => parseFixture(357, june)).toThrow(/identity/);
   });
+  it("preserves decimal raw-score cutoffs without rounding", () => {
+    const cuts = parseMegaSocialFragment(
+      fixture(357).replace("<td>45</td>", "<td>45.5</td>"),
+      july,
+      [social],
+      new Date(),
+    );
+    expect(cuts[0]?.cuts[0]?.rawScore).toBe(45.5);
+  });
   it("rejects malformed rows, the wrong column, and unmatched courses", () => {
     const input = fixture(357);
     expect(() =>

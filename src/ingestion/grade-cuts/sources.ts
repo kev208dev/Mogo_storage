@@ -48,6 +48,11 @@ export const GRADE_CUT_SOURCE_POLICIES: Record<GradeCutSource, GradeCutSourcePol
     status: "disabled_policy",
     note: "공개 시험분석 숫자 표는 확인했으나 robots.txt가 해당 경로를 Disallow하므로 자동 요청 금지",
   },
+  jongro: { source: "jongro", isOfficial: false, policy: "automated", status: "automated_verified", note: "공개 추정/확정 등급컷 표; 공식값 아님" },
+  etoos: { source: "etoos", isOfficial: false, policy: "manual_only", status: "manual_only", note: "공개 숫자 표 자동화 근거 부족" },
+  jinhak: { source: "jinhak", isOfficial: false, policy: "manual_only", status: "blocked_challenge", note: "접근 challenge로 자동 수집 금지" },
+  uway: { source: "uway", isOfficial: false, policy: "manual_only", status: "disabled_policy", note: "정책상 자동 수집 비활성" },
+  kimyoungil: { source: "kimyoungil", isOfficial: false, policy: "manual_only", status: "research_pending", note: "공개 데이터 형식 조사 중" },
 };
 
 export interface CollectedGradeCut {

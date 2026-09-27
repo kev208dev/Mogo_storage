@@ -1,12 +1,17 @@
 import type { GradeCutSource } from "./constants";
-import type { GradeCut } from "./data/types";
+import type { GradeCut, GradeCutEntry } from "./data/types";
 
-/**
- * Relative-grading columns: official and the only currently enabled automated
- * estimate source. Policy-disabled EBS/Daesung sources are omitted when empty.
- */
-export function gradeCutTableColumns(_gradeCuts: GradeCut[]): GradeCutSource[] {
-  return ["official", "megastudy"];
+type RangeEntry = GradeCutEntry & {
+  rawScore: number | null;
+  rawScoreMin?: number;
+  rawScoreMax?: number;
+};
+
+const DEFAULT_COLUMNS: GradeCutSource[] = ["official", "megastudy"];
+
+export function gradeCutTableColumns(gradeCuts: GradeCut[]): GradeCutSource[] {
+  const present = gradeCuts.map((cut) => cut.source);
+  return [...new Set([...DEFAULT_COLUMNS, ...present])];
 }
 
 export function gradeCutTableGrades(): number[] {
@@ -18,8 +23,10 @@ export function gradeCutValue(
   source: GradeCutSource,
   grade: number,
 ): number | null {
-  const row = gradeCuts.find((cut) => cut.source === source);
-  return row?.cuts.find((cut) => cut.grade === grade)?.rawScore ?? null;
+  const entry = gradeCuts
+    .find((cut) => cut.source === source)
+    ?.cuts.find((cut) => cut.grade === grade) as RangeEntry | undefined;
+  return typeof entry?.rawScore === "number" ? entry.rawScore : null;
 }
 
 export function gradeCutValueLabel(
@@ -27,7 +34,28 @@ export function gradeCutValueLabel(
   source: GradeCutSource,
   grade: number,
 ): string {
-  return String(gradeCutValue(gradeCuts, source, grade) ?? "-");
+  const entry = gradeCuts
+    .find((cut) => cut.source === source)
+    ?.cuts.find((cut) => cut.grade === grade) as RangeEntry | undefined;
+  if (!entry) return "-";
+  if (
+    Number.isInteger(entry.rawScoreMin) &&
+    Number.isInteger(entry.rawScoreMax) &&
+    entry.rawScoreMin! <= entry.rawScoreMax!
+  )
+    return `${entry.rawScoreMin}~${entry.rawScoreMax}`;
+  return typeof entry.rawScore === "number" ? String(entry.rawScore) : "-";
+}
+
+export function hasOnlySingleValueCuts(cut: GradeCut): boolean {
+  return cut.cuts.every((entry) => {
+    const candidate = entry as RangeEntry;
+    return (
+      typeof candidate.rawScore === "number" &&
+      candidate.rawScoreMin === undefined &&
+      candidate.rawScoreMax === undefined
+    );
+  });
 }
 
 export function isOfficialGradeCutColumn(source: GradeCutSource): boolean {

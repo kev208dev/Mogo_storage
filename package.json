@@ -40,7 +40,8 @@
     "ops:db-scheduler": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/db-scheduler.ts",
     "ops:restore-verify": "node --env-file-if-exists=.env.local --import tsx scripts/restore-verify.ts",
     "import:candidates": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/import-candidates.ts",
-    "answers:extract": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/answer-keys.ts"
+    "answers:extract": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/answer-keys.ts",
+    "grade-cuts:backfill": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/grade-cut-backfill.ts"
   },
   "dependencies": {
     "@expo-google-fonts/noto-sans-kr": "^0.4.3",

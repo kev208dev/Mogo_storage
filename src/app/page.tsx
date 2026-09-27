@@ -1,12 +1,14 @@
 import { BookOpenIcon, HeadphonesIcon, PencilLineIcon, SpellCheckIcon } from "lucide-react";
 import Link from "next/link";
 import { ExamList } from "@/components/exam/ExamList";
+import { JsonLd } from "@/components/layout/JsonLd";
 import { ExamFinder } from "@/components/search/ExamFinder";
 import { ExamSearch } from "@/components/search/ExamSearch";
-import { GRADES, SITE_NAME } from "@/lib/constants";
+import { CORE_SUBJECTS, GRADES, MONTHS, SITE_NAME, SUBJECT_LABELS } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
 import { FEATURED_EXAM } from "@/lib/data/sample-data";
-import { examPath } from "@/lib/exam-path";
+import { examPath, subjectSegment } from "@/lib/exam-path";
+import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 3600;
 
@@ -37,14 +39,30 @@ export default async function HomePage() {
   const [years, recent] = await Promise.all([repo.listYears(), repo.listRecentExams(9)]);
   const latest = recent[0];
   const englishDemo = `${examPath(FEATURED_EXAM, "english")}`;
+  const monthLinks = MONTHS.filter(
+    (month) => recent.some((exam) => exam.month === month) || [3, 6, 9].includes(month),
+  );
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    alternateName: "모고창고",
+    url: absoluteUrl("/"),
+    inLanguage: "ko-KR",
+    description:
+      "고1·고2·고3 모고·모의고사 문제지와 정답·해설, 영어 듣기, 자동 채점, 등급컷을 연도·월·과목별로 확인하는 서비스",
+  };
 
   return (
     <div className="mx-auto max-w-2xl py-8 sm:py-12">
+      <JsonLd data={websiteJsonLd} />
       <section aria-labelledby="hero-title">
         <h1 id="hero-title" className="text-2xl font-extrabold tracking-tight sm:text-3xl">
-          {SITE_NAME}
+          고1·고2·고3 모고·모의고사 자료
         </h1>
-        <p className="text-muted-foreground mt-1">찾는 모의고사를 바로 다운로드하세요.</p>
+        <p className="text-muted-foreground mt-1">
+          {SITE_NAME}에서 연도·학년·월·과목별 시험지와 정답·해설을 바로 찾으세요.
+        </p>
 
         <div className="mt-5 space-y-3">
           <ExamFinder
@@ -56,6 +74,43 @@ export default async function HomePage() {
             }
           />
           <ExamSearch />
+        </div>
+      </section>
+
+      <section aria-labelledby="seo-nav-title" className="mt-8">
+        <h2 id="seo-nav-title" className="text-lg font-bold">
+          모고 빠르게 찾기
+        </h2>
+        <div className="mt-3 space-y-3">
+          <div>
+            <h3 className="text-sm font-semibold">과목별</h3>
+            <nav aria-label="과목별 모의고사" className="mt-1.5 flex flex-wrap gap-2">
+              {CORE_SUBJECTS.map((subject) => (
+                <Link
+                  key={subject}
+                  href={`/subject/${subjectSegment(subject)}`}
+                  className="border-border hover:border-primary hover:text-primary inline-flex min-h-10 items-center rounded-md border px-3 text-sm font-semibold"
+                >
+                  {SUBJECT_LABELS[subject]} 모고
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold">월별</h3>
+            <nav aria-label="월별 모의고사" className="mt-1.5 flex flex-wrap gap-2">
+              {monthLinks.map((month) => (
+                <Link
+                  key={month}
+                  href={`/month/${month}`}
+                  className="border-border hover:border-primary hover:text-primary inline-flex min-h-10 items-center rounded-md border px-3 text-sm font-semibold"
+                >
+                  {month}월 모고
+                  {month === 3 || month === 6 || month === 9 ? ` · ${month}모` : ""}
+                </Link>
+              ))}
+            </nav>
+          </div>
         </div>
       </section>
 

@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { DEFAULT_SUBJECT, GRADES, SUBJECTS } from "@/lib/constants";
+import { DEFAULT_SUBJECT, GRADES, MONTHS, SUBJECTS } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
 import { shouldNoindexExam } from "@/lib/exam-metadata";
-import { examCoursePath, examPath } from "@/lib/exam-path";
+import { examCoursePath, examPath, subjectSegment } from "@/lib/exam-path";
 import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 3600;
@@ -18,6 +18,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const es of allSubjects)
     subjectsOf.set(es.examId, (subjectsOf.get(es.examId) ?? new Set()).add(es.subject));
 
+  const indexableExams = exams.filter((exam) => !shouldNoindexExam(exam));
+  const availableSubjects = new Set(allSubjects.map((row) => row.subject));
+  const availableMonths = new Set(indexableExams.map((exam) => exam.month));
+
   const entries: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/"), changeFrequency: "daily", priority: 1 },
     ...GRADES.map((g) => ({
@@ -30,10 +34,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.6,
     })),
+    ...SUBJECTS.filter((subject) => availableSubjects.has(subject)).map((subject) => ({
+      url: absoluteUrl(`/subject/${subjectSegment(subject)}`),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
+    ...MONTHS.filter((month) => availableMonths.has(month)).map((month) => ({
+      url: absoluteUrl(`/month/${month}`),
+      changeFrequency: "weekly" as const,
+      priority: 0.65,
+    })),
   ];
 
   // noindex 대상(샘플) 시험은 sitemap 에서도 제외한다.
-  for (const exam of exams.filter((e) => !shouldNoindexExam(e))) {
+  for (const exam of indexableExams) {
     const subjects = subjectsOf.get(exam.id) ?? new Set<string>();
     const lastModified = new Date(exam.updatedAt);
     entries.push({ url: absoluteUrl(examPath(exam)), lastModified, priority: 0.9 });

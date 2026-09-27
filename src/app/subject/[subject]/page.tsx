@@ -3,9 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { GRADES, SUBJECT_LABELS, SUBJECTS } from "@/lib/constants";
-import { getRepository } from "@/lib/data";
-import { sortExamsDesc } from "@/lib/data/repository";
 import { examPath, parseSubjectSegment, subjectSegment } from "@/lib/exam-path";
+import { hubExams } from "@/lib/hubs";
+import { hubMetadata } from "@/lib/seo";
 
 export const revalidate = 3600;
 export const dynamicParams = false;
@@ -23,24 +23,15 @@ export async function generateMetadata({
   const path = `/subject/${subjectSegment(subject)}`;
   const title = `${label} 모의고사·모고 문제지, 정답, 해설`;
   const description = `고1·고2·고3 ${label} 모의고사와 모고를 연도·월별로 모아 문제지, 정답·해설을 빠르게 확인하세요.`;
-  return {
-    title,
-    description,
-    alternates: { canonical: path },
-    openGraph: { title, description, url: path },
-  };
+  const { indexable } = await hubExams({ subject });
+  return hubMetadata({ title, description, path, noindex: indexable.length === 0 });
 }
 
 export default async function SubjectPage({ params }: PageProps<"/subject/[subject]">) {
   const subject = parseSubjectSegment((await params).subject);
   if (!subject) notFound();
 
-  const repo = getRepository();
-  const [exams, examSubjects] = await Promise.all([repo.listExams(), repo.listAllExamSubjects()]);
-  const examIds = new Set(
-    examSubjects.filter((row) => row.subject === subject).map((row) => row.examId),
-  );
-  const matches = exams.filter((exam) => examIds.has(exam.id)).sort(sortExamsDesc);
+  const { exams: matches } = await hubExams({ subject });
   if (matches.length === 0) notFound();
 
   const label = SUBJECT_LABELS[subject];

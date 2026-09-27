@@ -3,7 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { ExamSubjectView } from "@/components/exam/ExamSubjectView";
 import { DEFAULT_SUBJECT } from "@/lib/constants";
 import { getRepository, getSubjectDetail } from "@/lib/data";
-import { buildExamMetadata, upcomingDate } from "@/lib/exam-metadata";
+import { buildExamMetadata, examSeoOptions } from "@/lib/exam-metadata";
 import {
   examPath,
   gradeSegment,
@@ -47,9 +47,7 @@ export async function generateMetadata({
     return {};
   const detail = await getSubjectDetail(key.year, key.grade, key.month, subject);
   if (!detail) return {};
-  return buildExamMetadata(detail.exam, detail.subjects, subject, {
-    upcomingExamDate: upcomingDate(detail),
-  });
+  return buildExamMetadata(detail.exam, detail.subjects, subject, examSeoOptions(detail));
 }
 
 export default async function ExamSubjectPage({

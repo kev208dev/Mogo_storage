@@ -116,9 +116,9 @@ test.describe("SEO", () => {
   test("sitemap / robots", async ({ request }) => {
     const sitemap = await request.get("/sitemap.xml");
     const xml = await sitemap.text();
-    expect(xml).toContain("/grade/high2");
-    // production 빌드에서는 noindex 대상인 샘플 시험을 sitemap 에서 제외한다.
+    // production 빌드에서는 noindex 대상인 샘플 시험, 그리고 샘플 시험만 있는 허브(noindex)를 sitemap 에서 제외한다.
     expect(xml).not.toContain("/exam/2025/high2/09");
+    expect(xml).not.toContain("/grade/high2");
     const robots = await request.get("/robots.txt");
     expect(await robots.text()).toContain("Sitemap:");
   });

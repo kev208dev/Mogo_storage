@@ -10,7 +10,12 @@ import { Section } from "@/components/ui/section";
 import { SUBJECT_LABELS } from "@/lib/constants";
 import { SUBJECT_AREA_LABELS } from "@/lib/courses";
 import type { ExamSubjectDetail } from "@/lib/data/types";
-import { buildExamStructuredData, upcomingDate } from "@/lib/exam-metadata";
+import {
+  buildExamStructuredData,
+  examContentWords,
+  examSeoFeatures,
+  examSeoOptions,
+} from "@/lib/exam-metadata";
 import { conceptPath, examCoursePath, examPath, examTitle } from "@/lib/exam-path";
 import { AnswerSheet } from "./AnswerSheet";
 import { CourseSelector } from "./CourseSelector";
@@ -77,10 +82,15 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
   const audioFile = files.find((f) => f.type === "listening_audio");
   const solutionFile = files.find((f) => f.type === "solution");
   const hasQuestions = questions.length > 0;
-  const structuredData = buildExamStructuredData(exam, subjects, subjectKey, {
-    upcomingExamDate: upcomingDate(detail),
-    course,
-  });
+  // 기본 과목(국어) 첫 페이지는 시험 전체 페이지다 — metadata 와 같은 기준으로 과목을 넣지 않는다
+  const seoSubject = !course && examPath(exam, subjectKey) === examPath(exam) ? null : subjectKey;
+  const structuredData = buildExamStructuredData(
+    exam,
+    subjects,
+    seoSubject,
+    examSeoOptions(detail),
+  );
+  const contentWords = examContentWords(examSeoFeatures(detail));
 
   const quickLinks = [
     hasQuestions && { href: "#answers", label: "정답" },
@@ -95,13 +105,13 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
 
   return (
     <>
-      <JsonLd data={structuredData} />
       <article className="pb-6" data-exam-id={exam.id}>
         <ExamHeader
           exam={exam}
-          subject={subjectKey}
           extraCrumbs={extraCrumbs}
-          heading={course ? `${areaLabel} ${course.name}` : undefined}
+          subtitle={`${course ? `${areaLabel} ${course.name}` : SUBJECT_LABELS[subjectKey]}${
+            contentWords ? ` ${contentWords}` : ""
+          }`}
         />
         <SubjectTabs exam={exam} subjects={subjects} current={subjectKey} />
         <CourseSelector
@@ -213,7 +223,11 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
 
           {isEnglish && vocabulary.length > 0 ? (
             <>
-              <Section id="vocabulary" title="지문별 단어장" description={`${vocabulary.length}단어`}>
+              <Section
+                id="vocabulary"
+                title="지문별 단어장"
+                description={`${vocabulary.length}단어`}
+              >
                 <VocabularyList items={vocabulary} />
               </Section>
               <Section id="vocabulary-quiz" title="단어 시험">
@@ -248,6 +262,8 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
         </div>
         <ExamRelatedLinks exam={exam} subject={subjectKey} />
       </article>
+      {/* BreadcrumbList(머리말) 다음에 CollectionPage */}
+      <JsonLd data={structuredData} />
     </>
   );
 }

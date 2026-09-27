@@ -45,7 +45,7 @@ test.describe("세부과목 (선택과목) 흐름", () => {
   test("세부과목 페이지 SEO: title, canonical, breadcrumb JSON-LD", async ({ page }) => {
     await page.goto("/exam/2025/high2/09/social/social-culture");
     await expect(page).toHaveTitle(
-      "2025년 고2 9월 모의고사 사회문화 문제·정답·해설 PDF | 모의고사 창고",
+      "2025년 고2 9월 모의고사(9모) 사회문화 문제·정답·해설·등급컷 | 모의고사 창고",
     );
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",

@@ -2,13 +2,14 @@ import Link from "next/link";
 import { SUBJECT_LABELS, type Subject } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
 import type { Exam } from "@/lib/data/types";
+import { monthAlias } from "@/lib/exam-metadata";
 import { examPath, examShortTitle, subjectSegment } from "@/lib/exam-path";
 
 const order = (e: Pick<Exam, "year" | "month">) => e.year * 100 + e.month;
 
 function monthSearchLabel(month: number): string {
-  if (month === 3 || month === 6 || month === 9) return `${month}월 모고 (${month}모)`;
-  return `${month}월 모고`;
+  const alias = monthAlias(month);
+  return alias ? `${month}월 모고 (${alias})` : `${month}월 모고`;
 }
 
 /**

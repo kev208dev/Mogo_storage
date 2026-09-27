@@ -3,9 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { GRADES, MONTHS } from "@/lib/constants";
-import { getRepository } from "@/lib/data";
-import { sortExamsDesc } from "@/lib/data/repository";
+import { monthAlias } from "@/lib/exam-metadata";
 import { examPath } from "@/lib/exam-path";
+import { hubExams } from "@/lib/hubs";
+import { hubMetadata } from "@/lib/seo";
 
 export const revalidate = 3600;
 export const dynamicParams = false;
@@ -19,34 +20,24 @@ function parseMonth(value: string): number | null {
   return Number.isInteger(month) && (MONTHS as readonly number[]).includes(month) ? month : null;
 }
 
-function shortAlias(month: number): string | null {
-  return month === 3 || month === 6 || month === 9 ? `${month}모` : null;
-}
-
 export async function generateMetadata({ params }: PageProps<"/month/[month]">): Promise<Metadata> {
   const month = parseMonth((await params).month);
   if (!month) return {};
-  const alias = shortAlias(month);
+  const alias = monthAlias(month);
   const path = `/month/${month}`;
   const title = `${month}월 모의고사${alias ? `·${alias}` : ""} 모음 - 고1·고2·고3`;
   const description = `역대 ${month}월 고1·고2·고3 모의고사${alias ? `(${alias})` : ""} 문제지와 정답·해설을 연도별로 확인하세요.`;
-  return {
-    title,
-    description,
-    alternates: { canonical: path },
-    openGraph: { title, description, url: path },
-  };
+  const { indexable } = await hubExams({ month });
+  return hubMetadata({ title, description, path, noindex: indexable.length === 0 });
 }
 
 export default async function MonthPage({ params }: PageProps<"/month/[month]">) {
   const month = parseMonth((await params).month);
   if (!month) notFound();
 
-  const exams = (await getRepository().listExams())
-    .filter((exam) => exam.month === month)
-    .sort(sortExamsDesc);
+  const { exams } = await hubExams({ month });
   if (exams.length === 0) notFound();
-  const alias = shortAlias(month);
+  const alias = monthAlias(month);
   const path = `/month/${month}`;
 
   return (

@@ -1,6 +1,6 @@
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Badge } from "@/components/ui/badge";
-import { EXAM_TYPE_LABELS, SUBJECT_LABELS, type Subject } from "@/lib/constants";
+import { EXAM_TYPE_LABELS } from "@/lib/constants";
 import type { Exam } from "@/lib/data/types";
 import { examPath, examTitle } from "@/lib/exam-path";
 
@@ -10,16 +10,14 @@ function todayKst(): string {
 
 export function ExamHeader({
   exam,
-  subject,
   extraCrumbs = [],
-  heading,
+  subtitle,
 }: {
   exam: Exam;
-  subject: Subject;
   /** 영역/세부과목 breadcrumb (예: 사회탐구 > 사회·문화) */
   extraCrumbs?: Array<{ label: string; href: string }>;
-  /** 스크린리더용 과목 표기 (기본: 영역 이름) */
-  heading?: string;
+  /** H1 아래 줄에 보이는 과목 · 제공 자료 (예: "영어 문제·정답·해설·등급컷") */
+  subtitle: string;
 }) {
   const title = examTitle(exam);
   return (
@@ -35,7 +33,9 @@ export function ExamHeader({
       />
       <h1 className="mt-1 text-[22px] leading-tight font-extrabold tracking-tight sm:text-3xl">
         {title}
-        <span className="sr-only"> {heading ?? SUBJECT_LABELS[subject]}</span>
+        <span className="text-muted-foreground mt-0.5 block text-base font-bold sm:text-lg">
+          {subtitle}
+        </span>
       </h1>
       <p className="text-muted-foreground mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px]">
         <span>

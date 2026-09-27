@@ -3,9 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { GRADES } from "@/lib/constants";
-import { getRepository } from "@/lib/data";
 import type { Exam } from "@/lib/data/types";
 import { examPath, parseGradeSegment } from "@/lib/exam-path";
+import { hubExams } from "@/lib/hubs";
+import { hubMetadata } from "@/lib/seo";
 
 export const revalidate = 3600;
 export const dynamicParams = false;
@@ -17,19 +18,19 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/grade/[grade]">): Promise<Metadata> {
   const grade = parseGradeSegment((await params).grade);
   if (!grade) return {};
-  const title = `고${grade} 모의고사 모음`;
-  return {
-    title,
-    description: `고${grade} 역대 모의고사 시험지와 정답·해설 PDF를 년도·월별로 모아 보고 바로 다운로드하세요.`,
-    alternates: { canonical: `/grade/high${grade}` },
-    openGraph: { title, url: `/grade/high${grade}` },
-  };
+  const { indexable } = await hubExams({ grade });
+  return hubMetadata({
+    noindex: indexable.length === 0,
+    title: `고${grade} 모의고사·모고 모음`,
+    description: `고${grade} 역대 모의고사(모고) 문제지와 정답·해설 PDF를 연도·월별로 모아 보고 바로 받으세요.`,
+    path: `/grade/high${grade}`,
+  });
 }
 
 export default async function GradePage({ params }: PageProps<"/grade/[grade]">) {
   const grade = parseGradeSegment((await params).grade);
   if (!grade) notFound();
-  const exams = await getRepository().listExams({ grade });
+  const { exams } = await hubExams({ grade });
   const byYear = new Map<number, Exam[]>();
   for (const exam of exams) byYear.set(exam.year, [...(byYear.get(exam.year) ?? []), exam]);
 

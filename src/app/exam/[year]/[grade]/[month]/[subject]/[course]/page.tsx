@@ -3,14 +3,13 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { ExamSubjectView } from "@/components/exam/ExamSubjectView";
 import { isCourseCode } from "@/lib/courses";
 import { getSubjectDetail } from "@/lib/data";
-import { buildExamMetadata, upcomingDate } from "@/lib/exam-metadata";
+import { buildExamMetadata, examSeoOptions } from "@/lib/exam-metadata";
 import {
-  gradeSegment,
+  examCoursePath,
   legacySubjectSegmentRedirect,
   monthSegment,
   parseExamParams,
   parseSubjectSegment,
-  subjectSegment,
 } from "@/lib/exam-path";
 import { resolveExamKey } from "@/lib/exam-route";
 
@@ -34,10 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   const detail = await getSubjectDetail(key.year, key.grade, key.month, subject, p.course);
   if (!detail?.course) return {};
-  return buildExamMetadata(detail.exam, detail.subjects, subject, {
-    upcomingExamDate: upcomingDate(detail),
-    course: detail.course,
-  });
+  return buildExamMetadata(detail.exam, detail.subjects, subject, examSeoOptions(detail));
 }
 
 export default async function ExamCoursePage({ params }: Props) {
@@ -48,6 +44,10 @@ export default async function ExamCoursePage({ params }: Props) {
     permanentRedirect(`/exam/${p.year}/${p.grade}/${p.month}/${legacy}/${p.course}`);
   const subject = parseSubjectSegment(p.subject);
   if (!subject || !isCourseCode(p.course)) notFound();
+  // "9" 처럼 canonical 이 아닌 월은 같은 세부과목 페이지("09")로 영구 이동 (시험 첫 페이지로 보내지 않는다)
+  const parsed = parseExamParams(p);
+  if (parsed && p.month !== monthSegment(parsed.month))
+    permanentRedirect(examCoursePath(parsed, subject, p.course));
   const key = resolveExamKey(p);
   const detail = await getSubjectDetail(key.year, key.grade, key.month, subject, p.course);
   if (!detail?.course) notFound();

@@ -33,3 +33,7 @@ export const getSubjectDetail = cache(
 );
 
 export const getExamSubjects = cache((examId: string) => getRepository().getExamSubjects(examId));
+
+/** 허브 · sitemap 용 전체 목록 (generateMetadata 와 page 가 같은 요청에서 한 번만 조회) */
+export const listAllExams = cache(() => getRepository().listExams());
+export const listAllExamSubjectRows = cache(() => getRepository().listAllExamSubjects());

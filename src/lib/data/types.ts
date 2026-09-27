@@ -137,10 +137,19 @@ export interface ListeningTrack {
   transcript: TranscriptLine[] | null;
 }
 
-export interface GradeCutEntry {
-  grade: number;
-  rawScore: number;
-}
+export type GradeCutEntry =
+  | {
+      grade: number;
+      rawScore: number;
+      rawScoreMin?: never;
+      rawScoreMax?: never;
+    }
+  | {
+      grade: number;
+      rawScore: null;
+      rawScoreMin: number;
+      rawScoreMax: number;
+    };
 
 export interface GradeCut {
   id: string;

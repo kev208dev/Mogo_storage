@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { cache } from "react";
 import { SUBJECT_LABELS } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
+import { hubMetadata } from "@/lib/seo";
 import {
   conceptPath,
   examCoursePath,
@@ -39,12 +40,12 @@ export async function generateMetadata({
   const detail = await loadConcept(p.subject, p.slug);
   if (!detail) return {};
   const { concept } = detail;
-  return {
-    title: `${concept.name} — ${SUBJECT_LABELS[concept.subject]} 개념별 기출 문항`,
-    description: `${SUBJECT_LABELS[concept.subject]} "${concept.name}" 개념이 나온 모의고사 문항 ${detail.questions.length}개`,
-    alternates: { canonical: conceptPath(concept.subject, concept.slug) },
-    robots: detail.questions.length ? undefined : { index: false, follow: true },
-  };
+  return hubMetadata({
+    title: `${concept.name} — ${SUBJECT_LABELS[concept.subject]} 개념별 모의고사 문항`,
+    description: `${SUBJECT_LABELS[concept.subject]} "${concept.name}" 개념이 나온 모의고사 문항 ${detail.questions.length}개를 공식 해설지 근거와 함께 모았습니다.`,
+    path: conceptPath(concept.subject, concept.slug),
+    noindex: detail.questions.length === 0,
+  });
 }
 
 export default async function ConceptPage({ params }: PageProps<"/concepts/[subject]/[slug]">) {

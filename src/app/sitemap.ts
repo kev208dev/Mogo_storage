@@ -1,69 +1,24 @@
 import type { MetadataRoute } from "next";
-import { DEFAULT_SUBJECT, GRADES, MONTHS, SUBJECTS } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
 import { shouldNoindexExam } from "@/lib/exam-metadata";
-import { examCoursePath, examPath, subjectSegment } from "@/lib/exam-path";
 import { absoluteUrl } from "@/lib/site";
+import { buildSitemapEntries } from "@/lib/sitemap-entries";
 
 export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const repo = getRepository();
-  const [exams, years, allSubjects] = await Promise.all([
+  const [exams, examSubjects, coursePaths] = await Promise.all([
     repo.listExams(),
-    repo.listYears(),
     repo.listAllExamSubjects(),
+    repo.listExamCoursePaths(),
   ]);
-  const subjectsOf = new Map<string, Set<string>>();
-  for (const es of allSubjects)
-    subjectsOf.set(es.examId, (subjectsOf.get(es.examId) ?? new Set()).add(es.subject));
-
-  const indexableExams = exams.filter((exam) => !shouldNoindexExam(exam));
-  const availableSubjects = new Set(allSubjects.map((row) => row.subject));
-  const availableMonths = new Set(indexableExams.map((exam) => exam.month));
-
-  const entries: MetadataRoute.Sitemap = [
-    { url: absoluteUrl("/"), changeFrequency: "daily", priority: 1 },
-    ...GRADES.map((g) => ({
-      url: absoluteUrl(`/grade/high${g}`),
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    })),
-    ...years.map((y) => ({
-      url: absoluteUrl(`/year/${y}`),
-      changeFrequency: "weekly" as const,
-      priority: 0.6,
-    })),
-    ...SUBJECTS.filter((subject) => availableSubjects.has(subject)).map((subject) => ({
-      url: absoluteUrl(`/subject/${subjectSegment(subject)}`),
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    })),
-    ...MONTHS.filter((month) => availableMonths.has(month)).map((month) => ({
-      url: absoluteUrl(`/month/${month}`),
-      changeFrequency: "weekly" as const,
-      priority: 0.65,
-    })),
-  ];
-
-  // noindex 대상(샘플) 시험은 sitemap 에서도 제외한다.
-  for (const exam of indexableExams) {
-    const subjects = subjectsOf.get(exam.id) ?? new Set<string>();
-    const lastModified = new Date(exam.updatedAt);
-    entries.push({ url: absoluteUrl(examPath(exam)), lastModified, priority: 0.9 });
-    for (const subject of SUBJECTS) {
-      if (subject === DEFAULT_SUBJECT || !subjects.has(subject)) continue;
-      entries.push({ url: absoluteUrl(examPath(exam, subject)), lastModified, priority: 0.8 });
-    }
-  }
-  // 세부과목 페이지 (사회·문화, 물리학 I …)
-  for (const { exam, course } of await repo.listExamCoursePaths()) {
-    if (shouldNoindexExam(exam)) continue;
-    entries.push({
-      url: absoluteUrl(examCoursePath(exam, course.subject, course.code)),
-      lastModified: new Date(exam.updatedAt),
-      priority: 0.7,
-    });
-  }
-  return entries;
+  // noindex 대상(운영의 샘플) 시험과, 그런 시험만 있는 허브는 넣지 않는다
+  return buildSitemapEntries({
+    exams,
+    examSubjects,
+    coursePaths,
+    isIndexable: (exam) => !shouldNoindexExam(exam),
+    toUrl: absoluteUrl,
+  });
 }

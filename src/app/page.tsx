@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { ExamFinder } from "@/components/search/ExamFinder";
 import { ExamSearch } from "@/components/search/ExamSearch";
 import { CORE_SUBJECTS, GRADES, MONTHS, SITE_NAME, SUBJECT_LABELS } from "@/lib/constants";
-import { getRepository } from "@/lib/data";
+import { getRepository, listAllExams } from "@/lib/data";
 import { FEATURED_EXAM } from "@/lib/data/sample-data";
 import { examPath, subjectSegment } from "@/lib/exam-path";
 import { absoluteUrl } from "@/lib/site";
@@ -36,12 +36,15 @@ const ENGLISH_TOOLS = [
 
 export default async function HomePage() {
   const repo = getRepository();
-  const [years, recent] = await Promise.all([repo.listYears(), repo.listRecentExams(9)]);
+  const [years, recent, allExams] = await Promise.all([
+    repo.listYears(),
+    repo.listRecentExams(9),
+    listAllExams(),
+  ]);
   const latest = recent[0];
   const englishDemo = `${examPath(FEATURED_EXAM, "english")}`;
-  const monthLinks = MONTHS.filter(
-    (month) => recent.some((exam) => exam.month === month) || [3, 6, 9].includes(month),
-  );
+  // 실제 시험이 있는 달만 링크한다 (없는 달의 허브는 404)
+  const monthLinks = MONTHS.filter((month) => allExams.some((exam) => exam.month === month));
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",

@@ -5,6 +5,8 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { GRADES } from "@/lib/constants";
 import { getRepository } from "@/lib/data";
 import { examPath, parseYearSegment } from "@/lib/exam-path";
+import { hubExams } from "@/lib/hubs";
+import { hubMetadata } from "@/lib/seo";
 
 export const revalidate = 3600;
 
@@ -16,19 +18,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/year/[year]">): Promise<Metadata> {
   const year = parseYearSegment((await params).year);
   if (!year) return {};
-  const title = `${year}년 모의고사 모음`;
-  return {
-    title,
-    description: `${year}년 고1·고2·고3 모의고사 시험지와 정답·해설 PDF를 학년·월별로 확인하고 다운로드하세요.`,
-    alternates: { canonical: `/year/${year}` },
-    openGraph: { title, url: `/year/${year}` },
-  };
+  const { indexable } = await hubExams({ year });
+  return hubMetadata({
+    noindex: indexable.length === 0,
+    title: `${year}년 모의고사 모음`,
+    description: `${year}년 고1·고2·고3 모의고사 문제지와 정답·해설 PDF를 학년·월별로 확인하고 받으세요.`,
+    path: `/year/${year}`,
+  });
 }
 
 export default async function YearPage({ params }: PageProps<"/year/[year]">) {
   const year = parseYearSegment((await params).year);
   if (!year) notFound();
-  const exams = await getRepository().listExams({ year });
+  const { exams } = await hubExams({ year });
   if (exams.length === 0) notFound();
 
   return (

@@ -64,6 +64,11 @@ const URLS: Record<GradeCutAdapter["source"], string> = {
   megastudy: "https://m.megastudy.net/cut",
   daesung: "https://www.mimacstudy.com/cut",
   ebs: "https://www.ebsi.co.kr/cut",
+  jongro: "https://www.jongro.co.kr/cut",
+  etoos: "https://www.etoos.com/cut",
+  jinhak: "https://www.jinhak.com/cut",
+  uway: "https://www.uway.com/cut",
+  kimyoungil: "https://www.kimyoungil.com/cut",
 };
 function adapter(
   source: GradeCutAdapter["source"],

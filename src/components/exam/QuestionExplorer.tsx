@@ -70,6 +70,7 @@ export function QuestionExplorer({
   const [openSet, setOpenSet] = useState<Set<number>>(() => new Set());
   const [wrongNumbers, setWrongNumbers] = useState<number[] | null>(null);
   const [answers, setAnswers] = useState<UserAnswers>({});
+  const [ready, setReady] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
   const hasStats = questions.some((q) => q.statistic);
   const trackBy = useMemo(
@@ -94,8 +95,13 @@ export function QuestionExplorer({
   }, []);
 
   useEffect(() => {
+    // hydration 전에 사용자가 연 카드(네이티브 <details>)는 상태로 받아서, 다음 렌더에서 닫히지 않게 한다
+    const openedEarly = [
+      ...(listRef.current?.querySelectorAll<HTMLDetailsElement>("details[open][id^='q-']") ?? []),
+    ].map((el) => Number(el.id.slice(2)));
+    if (openedEarly.length) setOpenSet((prev) => new Set([...prev, ...openedEarly]));
+    setReady(true);
     const stored = readJson<StoredResult>(resultKey(examId, subject));
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage 동기화
     if (stored) setWrongNumbers(stored.wrongNumbers);
     const saved = readJson<UserAnswers>(answersKey(examId, subject));
     if (saved) setAnswers(saved);
@@ -145,7 +151,12 @@ export function QuestionExplorer({
   }, [questions, filter, sort, wrongNumbers]);
 
   return (
-    <div ref={listRef} className="scroll-mt-4" data-testid="question-explorer">
+    <div
+      ref={listRef}
+      className="scroll-mt-4"
+      data-testid="question-explorer"
+      data-ready={ready ? "" : undefined}
+    >
       <div className="flex flex-wrap gap-1.5" role="group" aria-label="문항 필터">
         {FILTERS.filter((f) => hasStats || f.value === "all" || f.value === "wrong").map((f) => (
           <button

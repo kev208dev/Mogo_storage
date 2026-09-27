@@ -6,11 +6,7 @@ import {
   gradeCutValue,
 } from "../../src/lib/grade-cut-table";
 
-const row = (
-  source: GradeCut["source"],
-  cuts: GradeCut["cuts"],
-  isOfficial = false,
-): GradeCut => ({
+const row = (source: GradeCut["source"], cuts: GradeCut["cuts"], isOfficial = false): GradeCut => ({
   id: source,
   examId: "2026-g1-september",
   subject: "korean",

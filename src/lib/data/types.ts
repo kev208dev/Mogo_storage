@@ -154,6 +154,12 @@ export interface GradeCut {
   courseId: string | null;
   source: GradeCutSource;
   sourceUrl: string | null;
+  providerStatus?: string;
+  providerLabel?: string | null;
+  observedVia?: GradeCutSource | null;
+  firstParty?: boolean;
+  scoreBasis?: "raw" | "standard";
+  parserVersion?: string;
   isOfficial: boolean;
   isSample: boolean;
   cuts: GradeCutEntry[];

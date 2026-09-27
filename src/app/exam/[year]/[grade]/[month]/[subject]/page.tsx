@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ExamSubjectView } from "@/components/exam/ExamSubjectView";
 import { DEFAULT_SUBJECT } from "@/lib/constants";
-import { getExam, getExamSubjects, getRepository, getSubjectDetail } from "@/lib/data";
+import { getRepository, getSubjectDetail } from "@/lib/data";
 import { buildExamMetadata, upcomingDate } from "@/lib/exam-metadata";
 import {
   examPath,
@@ -42,11 +42,12 @@ export async function generateMetadata({
   const p = await params;
   const key = parseExamParams(p);
   const subject = parseSubjectSegment(p.subject);
-  if (!key || !subject) return {};
-  const exam = await getExam(key.year, key.grade, key.month);
-  if (!exam) return {};
+  // 기본 과목·옛 표기는 redirect 만 하므로 조회하지 않는다
+  if (!key || !subject || subject === DEFAULT_SUBJECT || legacySubjectSegmentRedirect(p.subject))
+    return {};
   const detail = await getSubjectDetail(key.year, key.grade, key.month, subject);
-  return buildExamMetadata(exam, await getExamSubjects(exam.id), subject, {
+  if (!detail) return {};
+  return buildExamMetadata(detail.exam, detail.subjects, subject, {
     upcomingExamDate: upcomingDate(detail),
   });
 }

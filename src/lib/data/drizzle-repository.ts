@@ -1,4 +1,4 @@
-import { and, asc, count, desc, eq, gte, inArray, isNull, or } from "drizzle-orm";
+import { and, asc, count, desc, eq, gte, inArray, isNull, or, sql } from "drizzle-orm";
 import type { Database } from "../../db/client";
 import * as s from "../../db/schema";
 import type { Grade, Subject } from "../constants";
@@ -36,6 +36,13 @@ const toCourse = (row: typeof s.courses.$inferSelect): Course => ({
   name: row.name,
   subject: row.subject,
   displayOrder: row.displayOrder,
+});
+
+const toSchedule = (row: typeof s.examSchedules.$inferSelect): ExamSchedule => ({
+  ...row,
+  grade: row.grade as Grade,
+  expectedReleaseStart: row.expectedReleaseStart?.toISOString() ?? null,
+  expectedReleaseEnd: row.expectedReleaseEnd?.toISOString() ?? null,
 });
 
 const toFile = (row: FileRow): ExamFile => ({
@@ -138,71 +145,138 @@ export class DrizzleExamRepository implements ExamRepository {
     return [...byId.values()].sort((a, b) => a.displayOrder - b.displayOrder);
   }
 
+  /**
+   * 시험·영역(·세부과목) 페이지 데이터. 모든 조회를 한 번에 병렬로 보낸다 (DB 왕복 1회).
+   * 시험 id 와 course id 는 subquery 로 풀어서, 앞 조회 결과를 기다리는 순차 왕복을 없앴다.
+   */
   async getSubjectDetail(key: ExamKey, subject: Subject, courseCode: string | null = null) {
-    const exam = await this.getExam(key);
-    if (!exam) return null;
-    const subjects = await this.getExamSubjects(exam.id);
+    // 식별자는 고정 별칭으로 직접 쓴다: relational query(findMany) 안에서는 ${s.exams.id} 같은
+    // 컬럼 참조가 바깥 테이블 별칭으로 바뀌어 버린다 (값은 모두 bind parameter)
+    const examRef = sql`(select "x_e"."id" from "exams" "x_e" where "x_e"."year" = ${key.year} and "x_e"."grade" = ${key.grade} and "x_e"."month" = ${key.month} limit 1)`;
+    const courseRef = courseCode
+      ? sql`(select "x_c"."id" from "courses" "x_c" where "x_c"."code" = ${courseCode} limit 1)`
+      : null;
+    const courseMatch = <C extends typeof s.examFiles.courseId | typeof s.gradeCuts.courseId>(
+      col: C,
+    ) => (courseRef ? eq(col, courseRef) : isNull(col));
+    const isEnglish = subject === "english" && !courseCode;
+
+    const [
+      examRows,
+      subjects,
+      declaredCourses,
+      fileCourses,
+      files,
+      questionRows,
+      gradeCutRows,
+      vocabularyRows,
+      trackRows,
+      scheduleRows,
+      counts,
+      pending,
+    ] = await Promise.all([
+      this.db.select().from(s.exams).where(eq(s.exams.id, examRef)).limit(1),
+      this.db
+        .select({
+          examId: s.examSubjects.examId,
+          subject: s.examSubjects.subject,
+          questionCount: s.examSubjects.questionCount,
+          totalScore: s.examSubjects.totalScore,
+        })
+        .from(s.examSubjects)
+        .where(eq(s.examSubjects.examId, examRef)),
+      this.db
+        .select({ course: s.courses })
+        .from(s.examCourses)
+        .innerJoin(s.courses, eq(s.courses.id, s.examCourses.courseId))
+        .where(and(eq(s.examCourses.examId, examRef), eq(s.courses.subject, subject))),
+      this.db
+        .selectDistinct({ course: s.courses })
+        .from(s.examFiles)
+        .innerJoin(s.courses, eq(s.courses.id, s.examFiles.courseId))
+        .where(and(eq(s.examFiles.examId, examRef), eq(s.examFiles.subject, subject))),
+      this.db
+        .select()
+        .from(s.examFiles)
+        .where(
+          and(
+            eq(s.examFiles.examId, examRef),
+            eq(s.examFiles.subject, subject),
+            courseMatch(s.examFiles.courseId),
+          ),
+        ),
+      this.db.query.questions.findMany({
+        where: and(
+          eq(s.questions.examId, examRef),
+          eq(s.questions.subject, subject),
+          courseRef
+            ? or(isNull(s.questions.courseId), eq(s.questions.courseId, courseRef))
+            : isNull(s.questions.courseId),
+        ),
+        orderBy: asc(s.questions.questionNumber),
+        with: {
+          statistics: { orderBy: desc(s.questionStatistics.statisticsUpdatedAt), limit: 1 },
+        },
+      }),
+      this.db
+        .select()
+        .from(s.gradeCuts)
+        .where(
+          and(
+            eq(s.gradeCuts.examId, examRef),
+            eq(s.gradeCuts.subject, subject),
+            courseMatch(s.gradeCuts.courseId),
+          ),
+        ),
+      isEnglish
+        ? this.db
+            .select()
+            .from(s.vocabulary)
+            .where(and(eq(s.vocabulary.examId, examRef), eq(s.vocabulary.subject, "english")))
+            .orderBy(asc(s.vocabulary.questionNumber), asc(s.vocabulary.word))
+        : Promise.resolve([]),
+      isEnglish
+        ? this.db.query.listeningTracks.findMany({
+            where: eq(s.listeningTracks.examId, examRef),
+            with: { transcript: true },
+          })
+        : Promise.resolve([]),
+      this.db.select().from(s.examSchedules).where(eq(s.examSchedules.examId, examRef)).limit(1),
+      this.db
+        .select({ courseId: s.examFiles.courseId, n: count() })
+        .from(s.examFiles)
+        .where(and(eq(s.examFiles.examId, examRef), eq(s.examFiles.subject, subject)))
+        .groupBy(s.examFiles.courseId),
+      // 발견됐지만 아직 게시 전인 공식 자료 (검증 중) → "확인 중" 표시
+      this.db
+        .selectDistinct({ type: s.sourceArtifacts.type })
+        .from(s.sourceArtifacts)
+        .where(
+          and(
+            eq(s.sourceArtifacts.examId, examRef),
+            eq(s.sourceArtifacts.subject, subject),
+            courseRef
+              ? eq(s.sourceArtifacts.courseId, courseRef)
+              : isNull(s.sourceArtifacts.courseId),
+            inArray(s.sourceArtifacts.status, ["discovered", "verifying", "changed"]),
+          ),
+        ),
+    ]);
+
+    const examRow = examRows[0];
+    if (!examRow) return null;
+    const exam = toExam(examRow);
     const current = subjects.find((x) => x.subject === subject);
     if (!current) return null;
-    const courses = await this.getExamCourses(exam.id, subject);
+    const byId = new Map<string, Course>();
+    for (const { course } of [...declaredCourses, ...fileCourses]) {
+      if (!course.active) continue;
+      byId.set(course.id, toCourse(course));
+    }
+    const courses = [...byId.values()].sort((a, b) => a.displayOrder - b.displayOrder);
     const course = courseCode ? (courses.find((c) => c.code === courseCode) ?? null) : null;
     if (courseCode && !course) return null;
     const courseId = course?.id ?? null;
-    const courseMatch = <C extends typeof s.examFiles.courseId | typeof s.gradeCuts.courseId>(
-      col: C,
-    ) => (courseId ? eq(col, courseId) : isNull(col));
-
-    const isEnglish = subject === "english" && !course;
-    const [files, questionRows, gradeCutRows, vocabularyRows, trackRows, schedule] =
-      await Promise.all([
-        this.db
-          .select()
-          .from(s.examFiles)
-          .where(
-            and(
-              eq(s.examFiles.examId, exam.id),
-              eq(s.examFiles.subject, subject),
-              courseMatch(s.examFiles.courseId),
-            ),
-          ),
-        this.db.query.questions.findMany({
-          where: and(
-            eq(s.questions.examId, exam.id),
-            eq(s.questions.subject, subject),
-            courseId
-              ? or(isNull(s.questions.courseId), eq(s.questions.courseId, courseId))
-              : isNull(s.questions.courseId),
-          ),
-          orderBy: asc(s.questions.questionNumber),
-          with: {
-            statistics: { orderBy: desc(s.questionStatistics.statisticsUpdatedAt), limit: 1 },
-          },
-        }),
-        this.db
-          .select()
-          .from(s.gradeCuts)
-          .where(
-            and(
-              eq(s.gradeCuts.examId, exam.id),
-              eq(s.gradeCuts.subject, subject),
-              courseMatch(s.gradeCuts.courseId),
-            ),
-          ),
-        isEnglish
-          ? this.db
-              .select()
-              .from(s.vocabulary)
-              .where(and(eq(s.vocabulary.examId, exam.id), eq(s.vocabulary.subject, "english")))
-              .orderBy(asc(s.vocabulary.questionNumber), asc(s.vocabulary.word))
-          : Promise.resolve([]),
-        isEnglish
-          ? this.db.query.listeningTracks.findMany({
-              where: eq(s.listeningTracks.examId, exam.id),
-              with: { transcript: true },
-            })
-          : Promise.resolve([]),
-        this.getSchedule(exam.id),
-      ]);
 
     const questions: QuestionWithStats[] = questionsForSlot(questionRows, courseId).map(
       ({ statistics, createdAt: _c, updatedAt: _u, ...q }) => {
@@ -243,29 +317,10 @@ export class DrizzleExamRepository implements ExamRepository {
       .map(({ transcript, ...t }) => ({ ...t, transcript: transcript?.lines ?? null }))
       .sort((a, b) => (a.questionNumber ?? 0) - (b.questionNumber ?? 0));
 
-    const counts = courses.length
-      ? await this.db
-          .select({ courseId: s.examFiles.courseId, n: count() })
-          .from(s.examFiles)
-          .where(and(eq(s.examFiles.examId, exam.id), eq(s.examFiles.subject, subject)))
-          .groupBy(s.examFiles.courseId)
-      : [];
     const courseFileCounts: Record<string, number> = {};
     for (const c of courses)
       courseFileCounts[c.code] = counts.find((x) => x.courseId === c.id)?.n ?? 0;
 
-    // 발견됐지만 아직 게시 전인 공식 자료 (검증 중) → "확인 중" 표시
-    const pending = await this.db
-      .selectDistinct({ type: s.sourceArtifacts.type })
-      .from(s.sourceArtifacts)
-      .where(
-        and(
-          eq(s.sourceArtifacts.examId, exam.id),
-          eq(s.sourceArtifacts.subject, subject),
-          courseId ? eq(s.sourceArtifacts.courseId, courseId) : isNull(s.sourceArtifacts.courseId),
-          inArray(s.sourceArtifacts.status, ["discovered", "verifying", "changed"]),
-        ),
-      );
     const processingTypes = pending
       .map((p) => p.type)
       .filter((t) => !files.some((f) => f.type === t));
@@ -282,7 +337,7 @@ export class DrizzleExamRepository implements ExamRepository {
       gradeCuts,
       vocabulary,
       listeningTracks,
-      schedule,
+      schedule: scheduleRows[0] ? toSchedule(scheduleRows[0]) : null,
       processingTypes,
     };
   }
@@ -302,13 +357,7 @@ export class DrizzleExamRepository implements ExamRepository {
       .from(s.examSchedules)
       .where(eq(s.examSchedules.examId, examId))
       .limit(1);
-    if (!row) return null;
-    return {
-      ...row,
-      grade: row.grade as Grade,
-      expectedReleaseStart: row.expectedReleaseStart?.toISOString() ?? null,
-      expectedReleaseEnd: row.expectedReleaseEnd?.toISOString() ?? null,
-    };
+    return row ? toSchedule(row) : null;
   }
 
   async getFile(fileId: string) {

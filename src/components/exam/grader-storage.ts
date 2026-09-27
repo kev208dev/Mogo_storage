@@ -33,3 +33,7 @@ export const GRADED_EVENT = "mogo:graded";
 export const SHOW_QUESTION_EVENT = "mogo:show-question";
 
 export type StoredResult = Pick<GradeResult, "rawScore" | "wrongNumbers"> & { gradedAt: string };
+/** 입력한 답이 바뀔 때 (문항 학습 카드가 내 답을 보여준다) */
+export const ANSWERS_EVENT = "mogo:answers";
+/** "틀린 문제만 복습하기" */
+export const SHOW_WRONG_EVENT = "mogo:show-wrong";

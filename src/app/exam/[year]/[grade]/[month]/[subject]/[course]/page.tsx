@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ExamSubjectView } from "@/components/exam/ExamSubjectView";
 import { isCourseCode } from "@/lib/courses";
-import { getExam, getExamSubjects, getSubjectDetail } from "@/lib/data";
+import { getSubjectDetail } from "@/lib/data";
 import { buildExamMetadata, upcomingDate } from "@/lib/exam-metadata";
 import {
   gradeSegment,
@@ -30,12 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = await params;
   const key = parseExamParams(p);
   const subject = parseSubjectSegment(p.subject);
-  if (!key || !subject || !isCourseCode(p.course)) return {};
-  const exam = await getExam(key.year, key.grade, key.month);
-  if (!exam) return {};
+  if (!key || !subject || !isCourseCode(p.course) || legacySubjectSegmentRedirect(p.subject))
+    return {};
   const detail = await getSubjectDetail(key.year, key.grade, key.month, subject, p.course);
   if (!detail?.course) return {};
-  return buildExamMetadata(exam, await getExamSubjects(exam.id), subject, {
+  return buildExamMetadata(detail.exam, detail.subjects, subject, {
     upcomingExamDate: upcomingDate(detail),
     course: detail.course,
   });

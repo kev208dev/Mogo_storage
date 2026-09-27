@@ -1,11 +1,7 @@
 import type { GradeCutSource } from "./constants";
 import type { GradeCut, GradeCutEntry } from "./data/types";
 
-type RangeEntry = GradeCutEntry & {
-  rawScore: number | null;
-  rawScoreMin?: number;
-  rawScoreMax?: number;
-};
+type RangeEntry = GradeCutEntry;
 
 const DEFAULT_COLUMNS: GradeCutSource[] = ["official", "megastudy"];
 

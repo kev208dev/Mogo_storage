@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import type { WatchExam } from "../../src/ingestion/grade-cuts/core";
-import { parseJongroResultCut } from "../../src/ingestion/grade-cuts/adapters/jongro";
+import { jongroAdapter, parseJongroResultCut } from "../../src/ingestion/grade-cuts/adapters/jongro";
 
 const exam = (grade: 1 | 2 | 3): WatchExam => ({
   id: "exam-" + grade,
@@ -22,6 +22,7 @@ const url = (grade: number) =>
 
 describe("Jongro grade-cut parser fixtures", () => {
   it("parses high school 1 raw, decimal, standard, percentile and integrated course rows", () => {
+    expect(jongroAdapter.source).toBe("jongro");
     const result = parseJongroResultCut(fixture(1), exam(1), url(1));
     expect(result.isOfficial).toBe(false);
     expect(result.rows).toEqual(
@@ -30,6 +31,7 @@ describe("Jongro grade-cut parser fixtures", () => {
           subject: "korean",
           providerStatus: "provider_final",
           providerLabel: "종로 최종",
+          parserVersion: "jongro-result-cut-v1",
           observedVia: null,
           firstParty: true,
           scoreBasis: "standard",
@@ -55,6 +57,7 @@ describe("Jongro grade-cut parser fixtures", () => {
         expect.objectContaining({
           providerStatus: "provider_estimate",
           providerLabel: "종로 예상",
+          parserVersion: "jongro-result-cut-v1",
           subject: "social",
           courseCode: "integrated-social",
           cuts: expect.arrayContaining([expect.objectContaining({ rawScore: 42.5 })]),

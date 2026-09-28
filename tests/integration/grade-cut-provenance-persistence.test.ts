@@ -36,18 +36,19 @@ describe.skipIf(!TEST_DB_URL)("grade-cut extended value and provenance round-tri
     const cuts = [
       {
         grade: 1,
-        rawScore: 88.5,
+        rawScore: 89,
         standardScore: 130,
         percentile: 99,
       },
       {
         grade: 2,
-        rawScoreMin: 80,
-        rawScoreMax: 81,
-        rawScoreText: "80~81",
+        rawScoreMin: 88,
+        rawScoreMax: 89,
+        rawScoreText: "88~89",
         standardScore: 120,
         percentile: 90,
       },
+      { grade: 3, rawScore: 43.5, standardScore: 110, percentile: 80 },
     ];
     await persistGradeCut(db, {
       examId: exam!.id,
@@ -91,8 +92,8 @@ describe.skipIf(!TEST_DB_URL)("grade-cut extended value and provenance round-tri
       parserVersion: "jongro-result-cut-v1",
       cuts,
     });
-    expect(snapshot?.fingerprint).toContain("88.5");
-    expect(snapshot?.fingerprint).toContain("80");
-    expect(snapshot?.fingerprint).toContain("81");
+    expect(snapshot?.fingerprint).toContain("43.5");
+    expect(snapshot?.fingerprint).toContain("88");
+    expect(snapshot?.fingerprint).toContain("89");
   });
 });

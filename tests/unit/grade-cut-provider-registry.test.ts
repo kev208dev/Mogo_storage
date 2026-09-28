@@ -7,7 +7,7 @@ import {
 
 describe("grade cut provider registry", () => {
   it("classifies every target provider", () => {
-    expect(GRADE_CUT_PROVIDERS).toHaveLength(7);
+    expect(GRADE_CUT_PROVIDERS).toHaveLength(8);
     const registered = Object.keys(GRADE_CUT_PROVIDER_POLICIES).sort();
     const expected = [...GRADE_CUT_PROVIDERS].sort();
     expect(registered).toEqual(expected);

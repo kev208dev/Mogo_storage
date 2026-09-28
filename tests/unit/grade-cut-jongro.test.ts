@@ -72,9 +72,10 @@ describe("Jongro grade-cut parser fixtures", () => {
         "probability-and-statistics",
         "social-culture",
         "physics-1",
+        "economics",
       ]),
     );
-    expect(result.rows.some((row) => row.courseCode === "economics")).toBe(false);
+    expect(result.rows.some((row) => row.courseCode === "unknown-course")).toBe(false);
   });
 
   it("skips malformed table templates and absolute English/history rows", () => {

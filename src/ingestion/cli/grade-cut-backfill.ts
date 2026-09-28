@@ -4,7 +4,12 @@ import { courses, examCourses, exams, examSubjects } from "../../db/schema";
 import type { GradeCutSource, Subject } from "../../lib/constants";
 import { gradingMode } from "../../lib/grade-cut-mode";
 import { createGradeCutStore } from "../grade-cuts/persistence";
-import { normalizeCuts, type GradeCutAdapter, type WatchExam, type WatchSlot } from "../grade-cuts/core";
+import {
+  normalizeCuts,
+  type GradeCutAdapter,
+  type WatchExam,
+  type WatchSlot,
+} from "../grade-cuts/core";
 import { validateGradeCut } from "../grade-cuts/validate";
 import { jongroAdapter, createJongroAdapter } from "../grade-cuts/adapters/jongro";
 import { megaStudyAdapter } from "../grade-cuts/adapters/megastudy";
@@ -15,7 +20,7 @@ function option(name: string): string | null {
   const inline = process.argv.find((arg) => arg.startsWith(exact));
   if (inline) return inline.slice(exact.length);
   const index = process.argv.indexOf("--" + name);
-  return index >= 0 ? process.argv[index + 1] ?? null : null;
+  return index >= 0 ? (process.argv[index + 1] ?? null) : null;
 }
 const source = option("source");
 const yearValue = option("year");
@@ -123,9 +128,15 @@ async function liveExams(): Promise<{ db: ReturnType<typeof createDb>; exams: Wa
   };
 }
 
-async function liveSlots(db: Awaited<ReturnType<typeof createDb>>, exam: WatchExam): Promise<WatchSlot[]> {
+async function liveSlots(
+  db: Awaited<ReturnType<typeof createDb>>,
+  exam: WatchExam,
+): Promise<WatchSlot[]> {
   const [subjects, details] = await Promise.all([
-    db.select({ subject: examSubjects.subject }).from(examSubjects).where(eq(examSubjects.examId, exam.id)),
+    db
+      .select({ subject: examSubjects.subject })
+      .from(examSubjects)
+      .where(eq(examSubjects.examId, exam.id)),
     db
       .select({ courseId: examCourses.courseId, code: courses.code, subject: courses.subject })
       .from(examCourses)
@@ -133,8 +144,16 @@ async function liveSlots(db: Awaited<ReturnType<typeof createDb>>, exam: WatchEx
       .where(eq(examCourses.examId, exam.id)),
   ]);
   const candidates = [
-    ...subjects.map((row) => ({ subject: row.subject, courseId: null as string | null, courseCode: null as string | null })),
-    ...details.map((row) => ({ subject: row.subject, courseId: row.courseId, courseCode: row.code })),
+    ...subjects.map((row) => ({
+      subject: row.subject,
+      courseId: null as string | null,
+      courseCode: null as string | null,
+    })),
+    ...details.map((row) => ({
+      subject: row.subject,
+      courseId: row.courseId,
+      courseCode: row.code,
+    })),
   ];
   return candidates
     .filter((slot) => gradingMode(exam, slot.subject) === "relative")
@@ -210,20 +229,10 @@ async function main() {
     if (publish) {
       for (const value of normalized) {
         const slot = slots.find(
-          (item) =>
-            item.subject === value.subject &&
-            item.courseCode === value.courseCode,
+          (item) => item.subject === value.subject && item.courseCode === value.courseCode,
         );
         if (!slot || !store) continue;
-        if (
-          await store.save(
-            exam,
-            slot,
-            adapter.source as GradeCutSource,
-            value,
-          )
-        )
-          persisted += 1;
+        if (await store.save(exam, slot, adapter.source as GradeCutSource, value)) persisted += 1;
       }
     }
 
@@ -247,7 +256,9 @@ async function main() {
     });
   }
 
-  console.log(JSON.stringify({ source, year: year ?? null, from, grade, month, results: report }, null, 2));
+  console.log(
+    JSON.stringify({ source, year: year ?? null, from, grade, month, results: report }, null, 2),
+  );
   if (db) await db.$client.end({ timeout: 5 });
 }
 

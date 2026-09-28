@@ -128,7 +128,7 @@ describe("MegaStudy 고1·고2 공개 원점수 표", () => {
     const social = parseMegaInquiryFragment(
       fixture("mega-344-g2-social")
         .replaceAll("2025.09.03", "2026.09.02")
-        .replace("사회문화", "통합사회"),
+        .replaceAll("사회문화", "통합사회"),
       g2_2026,
       [slot("social", "integrated-social")],
       at,
@@ -137,7 +137,7 @@ describe("MegaStudy 고1·고2 공개 원점수 표", () => {
     const science = parseMegaInquiryFragment(
       fixture("mega-344-g2-science")
         .replaceAll("2025.09.03", "2026.09.02")
-        .replace("물리학 I", "통합과학"),
+        .replaceAll("물리학 I", "통합과학"),
       g2_2026,
       [slot("science", "integrated-science")],
       at,

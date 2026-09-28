@@ -3,25 +3,13 @@ import { cutsFingerprint, normalizeCuts } from "../../src/ingestion/grade-cuts/c
 
 describe("grade cut numeric models", () => {
   it("preserves decimal raw scores without rounding", () => {
-    expect(normalizeCuts([{ grade: 1, rawScore: 43.5 }])).toEqual([
-      {
-        grade: 1,
-        rawScore: 43.5,
-        rawScoreMin: null,
-        rawScoreMax: null,
-        rawScoreText: null,
-        standardScore: null,
-        percentile: null,
-      },
-    ]);
+    expect(normalizeCuts([{ grade: 1, rawScore: 43.5 }])).toEqual([{ grade: 1, rawScore: 43.5 }]);
   });
 
   it("preserves raw score ranges and does not replace them with a midpoint", () => {
-    expect(normalizeCuts([{ grade: 1, rawScoreMin: 88, rawScoreMax: 89 }])[0]).toMatchObject({
-      rawScore: null,
-      rawScoreMin: 88,
-      rawScoreMax: 89,
-    });
+    const cut = normalizeCuts([{ grade: 1, rawScoreMin: 88, rawScoreMax: 89 }])[0];
+    expect(cut).toMatchObject({ rawScoreMin: 88, rawScoreMax: 89 });
+    expect(cut?.rawScore).toBeUndefined();
   });
 
   it("accepts a standard-score-only boundary and validates its scale", () => {

@@ -1,4 +1,4 @@
-import { and, eq, gte, lte } from "drizzle-orm";
+import { and, eq, gte } from "drizzle-orm";
 import { createDb } from "../../db/client";
 import { courses, examCourses, exams, examSubjects } from "../../db/schema";
 import type { GradeCutSource, Subject } from "../../lib/constants";

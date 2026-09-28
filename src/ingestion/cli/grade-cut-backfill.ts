@@ -259,4 +259,9 @@ async function main() {
   if (db) await db.$client.end({ timeout: 5 });
 }
 
-await main();
+main().catch((error: unknown) => {
+  const message = error instanceof Error ? error.message : "unknown error";
+  const secret = process.env.INGESTION_DATABASE_URL;
+  console.error(secret ? message.replaceAll(secret, "[redacted]") : message);
+  process.exitCode = 1;
+});

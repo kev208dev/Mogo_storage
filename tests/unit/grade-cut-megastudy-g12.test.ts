@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { FixtureFetcher } from "../../src/ingestion/net/fixture-fetcher";
 import {
+  createMegaStudyAdapter,
   findMegaExamSeqInList,
   megaStudyAdapter,
   parseMegaCoreFragment,
@@ -140,6 +142,22 @@ describe("MegaStudy 고1·고2 공개 원점수 표", () => {
         at,
       ),
     ).toThrow(/header/);
+  });
+
+  it("고1·고2 current exam list can discover an exam before the main selector lists it", async () => {
+    const examListUrl = "https://m.megastudy.net/Entinfo/total_rankCut/main_examNm_ax.asp";
+    const fragmentUrl = "https://m.megastudy.net/Entinfo/total_rankCut/main_examRankCut_ax.asp";
+    const fetcher = new FixtureFetcher(
+      {
+        [examListUrl]: "tests/fixtures/grade-cuts/mega-list-g2.html",
+        [fragmentUrl]: "tests/fixtures/grade-cuts/mega-344-g2-core.html",
+      },
+      process.cwd(),
+    );
+    const adapter = createMegaStudyAdapter(fetcher);
+    const rows = await adapter.collect(g2, [slot("korean")]);
+    expect(rows[0]?.cuts[0]).toEqual({ grade: 1, rawScore: 86 });
+    expect(fetcher.requested).toEqual([examListUrl, fragmentUrl]);
   });
 
   it("고1·고2 시험 목록에서 같은 날짜·종류가 하나일 때만 examSeq", () => {

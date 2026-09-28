@@ -61,6 +61,22 @@ describe("relative grade-cut table model", () => {
     expect(gradeCutValueLabel(cuts, "megastudy", 1)).toBe("88~90");
   });
 
+  it("shows Jongro as a separate non-official provider and labels score units", () => {
+    const jongro = {
+      ...row("jongro", [
+        { grade: 1, rawScore: 43.5, standardScore: 130, percentile: 99 },
+      ]),
+      providerStatus: "provider_final",
+      providerLabel: "종로 최종",
+    };
+    expect(gradeCutTableColumns([jongro])).toEqual(["official", "megastudy", "jongro"]);
+    expect(isOfficialGradeCutColumn("jongro")).toBe(false);
+    expect(jongro.isOfficial).toBe(false);
+    expect(gradeCutValueLabel([jongro], "jongro", 1)).toBe(
+      "원점수 43.5 · 표준점수 130 · 백분위 99",
+    );
+  });
+
   it("retains official and Mega values independently with an official designation", () => {
     const cuts = [
       row("official", [{ grade: 1, rawScore: 86 }], true),

@@ -185,8 +185,6 @@ describe("MegaStudy 고1·고2 공개 원점수 표", () => {
     expect(fetcher.requested).toEqual([examListUrl, fragmentUrl]);
   });
 
-
-
   it("discovers the current 2026 high-school 2 exam before requesting its score fragment", async () => {
     const requests: Array<{ url: string; body: string }> = [];
     const list = fixture("mega-list-g2");

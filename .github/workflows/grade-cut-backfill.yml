@@ -21,11 +21,11 @@ on:
         type: string
         default: ""
         required: false
-      provider:
+      source:
         type: choice
-        options: ["", megastudy, ebsi, daesung, etoos, jongro, jinhak, uway]
-        default: ""
-        required: false
+        options: [jongro, megastudy]
+        default: jongro
+        required: true
       limit:
         type: string
         default: "10"
@@ -60,5 +60,5 @@ jobs:
           args=(--year="${{ inputs.year }}" --limit="${{ inputs.limit }}" --"${{ inputs.mode }}")
           [ -z "${{ inputs.grade }}" ] || args+=(--grade="${{ inputs.grade }}")
           [ -z "${{ inputs.month }}" ] || args+=(--month="${{ inputs.month }}")
-          [ -z "${{ inputs.provider }}" ] || args+=(--provider="${{ inputs.provider }}")
+          args+=(--source="${{ inputs.source }}")
           npm run grade-cuts:backfill -- "${args[@]}"

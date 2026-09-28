@@ -32,6 +32,7 @@ describe("Jongro grade-cut parser fixtures", () => {
           providerLabel: "종로 최종",
           observedVia: null,
           firstParty: true,
+          scoreBasis: "standard",
           cuts: expect.arrayContaining([
             expect.objectContaining({ grade: 1, rawScore: 87, standardScore: 137, percentile: 96 }),
           ]),

@@ -172,6 +172,8 @@ async function main() {
   }
 
   const fixtureRoutes: Record<string, string> = {};
+  if (!live && !publish && (source !== "jongro" || examsToProcess.length === 0))
+    throw new Error("no offline fixtures match these filters; use the supported 2026 September Jongro fixture or pass --live");
   if (source === "jongro" && !live && !publish) {
     for (const exam of examsToProcess) {
       fixtureRoutes[
@@ -184,7 +186,7 @@ async function main() {
     }
   }
   const adapter =
-    source === "jongro" && Object.keys(fixtureRoutes).length
+    source === "jongro" && Object.keys(fixtureRoutes).length > 0
       ? createJongroAdapter(new FixtureFetcher(fixtureRoutes, process.cwd()))
       : adapters[source]!;
   const store = db ? createGradeCutStore(db) : null;

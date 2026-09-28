@@ -227,7 +227,7 @@ const megaFetcher = new SafeFetcher({
 async function publicHtml(fetcher: Fetcher, url: string, init?: RequestInit) {
   const response = await fetcher.fetch(url, {
     method: init?.method,
-    body: init?.body,
+    body: init?.body ?? undefined,
     accept: "text/html",
     maxBytes: 500_000,
     headers: { ...HEADERS, ...init?.headers },

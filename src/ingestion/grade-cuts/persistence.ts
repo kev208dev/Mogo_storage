@@ -31,7 +31,7 @@ export interface CutInput {
   observedAt: Date;
   providerStatus?: string;
   providerLabel?: string;
-  observedVia?: GradeCutSource;
+  observedVia?: GradeCutSource | null;
   firstParty?: boolean;
   scoreBasis?: "raw" | "standard";
   parserVersion?: string;
@@ -74,7 +74,7 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
   const providerStatus =
     input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate");
   const providerLabel = input.providerLabel ?? defaultProviderLabel(input.source);
-  const observedVia = input.observedVia ?? input.source;
+  const observedVia = input.observedVia === undefined ? input.source : input.observedVia;
   const firstParty = input.firstParty ?? true;
   const scoreBasis = input.scoreBasis ?? "raw";
   const parserVersion = input.parserVersion ?? "legacy";

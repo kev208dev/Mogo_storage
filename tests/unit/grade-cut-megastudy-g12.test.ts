@@ -125,6 +125,29 @@ describe("MegaStudy 고1·고2 공개 원점수 표", () => {
     expect(megaStudyAdapter.supports!(g2_2026, slot("science", "integrated-science"))).toBe(true);
   });
 
+  it("2026년 고2 통합사회·통합과학 표를 2028 체제 course로 parse한다", () => {
+    const social = parseMegaInquiryFragment(
+      fixture("mega-344-g2-social")
+        .replaceAll("2025.09.03", "2026.09.02")
+        .replace("사회·문화", "통합사회"),
+      g2_2026,
+      [slot("social", "integrated-social")],
+      at,
+      "social",
+    );
+    const science = parseMegaInquiryFragment(
+      fixture("mega-344-g2-science")
+        .replaceAll("2025.09.03", "2026.09.02")
+        .replace("물리학 I", "통합과학"),
+      g2_2026,
+      [slot("science", "integrated-science")],
+      at,
+      "science",
+    );
+    expect(social[0]?.courseCode).toBe("integrated-social");
+    expect(science[0]?.courseCode).toBe("integrated-science");
+  });
+
   it("시험 정체성·만점·헤더가 어긋나면 거부", () => {
     const core = fixture("mega-344-g2-core");
     expect(() => parseMegaCoreFragment(core, g1, [slot("korean")], at)).toThrow(/identity/);

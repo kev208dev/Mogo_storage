@@ -5,7 +5,6 @@ import type { GradeCutSource, Subject } from "../../lib/constants";
 import { gradingMode } from "../../lib/grade-cut-mode";
 import { createGradeCutStore } from "../grade-cuts/persistence";
 import {
-  normalizeCuts,
   type GradeCutAdapter,
   type WatchExam,
   type WatchSlot,
@@ -65,7 +64,7 @@ function known2026ExamCandidates(): WatchExam[] {
       month: 9,
       examDate: "2026-09-02",
       academicYear: 2026 + (4 - g),
-      examType: "school_mock",
+      examType: "school_mock" as const,
     }))
     .filter((exam) => month === null || exam.month === month);
 }
@@ -189,7 +188,7 @@ async function main() {
   const adapter =
     source === "jongro" && Object.keys(fixtureRoutes).length > 0
       ? createJongroAdapter(new FixtureFetcher(fixtureRoutes, process.cwd()))
-      : adapters[source]!;
+      : adapters[source!]!;
   const store = db ? createGradeCutStore(db) : null;
   const now = new Date();
   const report: Array<Record<string, unknown>> = [];
@@ -202,7 +201,6 @@ async function main() {
         return [
           {
             ...value,
-            cuts: normalizeCuts(value.cuts),
             ...validateGradeCut({
               exam,
               subject: value.subject,

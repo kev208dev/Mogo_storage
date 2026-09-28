@@ -4,7 +4,13 @@ import { gradingMode } from "../../lib/grade-cut-mode";
 import { dedupeCollected, GradeCutValidationError, validateGradeCut } from "./validate";
 
 export type AdapterStatus =
-  "automated_verified" | "degraded" | "disabled_unverified" | "disabled_policy" | "manual_only";
+  | "automated_verified"
+  | "degraded"
+  | "disabled_unverified"
+  | "disabled_policy"
+  | "blocked_challenge"
+  | "research_pending"
+  | "manual_only";
 export type WatchStatus = "waiting" | "watching" | "finalized" | "failed";
 export interface WatchSlot {
   examId: string;
@@ -29,6 +35,12 @@ export interface CollectedGradeCut {
   cuts: GradeCutEntry[];
   sourceUrl: string;
   observedAt: Date;
+  providerStatus?: string;
+  providerLabel?: string;
+  observedVia?: GradeCutSource | null;
+  firstParty?: boolean;
+  scoreBasis?: "raw" | "standard";
+  parserVersion?: string;
 }
 export interface GradeCutAdapter {
   source: GradeCutSource;
@@ -42,27 +54,99 @@ export interface GradeCutAdapter {
 export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
   if (!Array.isArray(cuts) || cuts.length === 0 || cuts.length > 9)
     throw new Error("empty or oversized cuts");
-  const sorted = cuts
-    .map((c) => ({ grade: c.grade, rawScore: c.rawScore }))
-    .sort((a, b) => a.grade - b.grade);
+  const normalized = cuts.map((cut) => ({ ...cut })).sort((a, b) => a.grade - b.grade);
+  const sorted = normalized.map((cut) => ({
+    grade: cut.grade,
+    rawScore: cut.rawScore ?? null,
+    rawScoreMin: cut.rawScoreMin ?? null,
+    rawScoreMax: cut.rawScoreMax ?? null,
+    rawScoreText: cut.rawScoreText ?? null,
+    standardScore: cut.standardScore ?? null,
+    percentile: cut.percentile ?? null,
+  }));
   for (let i = 0; i < sorted.length; i++) {
-    const c = sorted[i]!;
+    const cut = sorted[i]!;
+    const hasRange = cut.rawScoreMin !== null || cut.rawScoreMax !== null;
     if (
-      !Number.isInteger(c.grade) ||
-      c.grade < 1 ||
-      c.grade > 9 ||
-      !Number.isInteger(c.rawScore) ||
-      c.rawScore < 0 ||
-      c.rawScore > 100 ||
-      (i > 0 && (c.grade === sorted[i - 1]!.grade || c.rawScore > sorted[i - 1]!.rawScore))
+      !Number.isInteger(cut.grade) ||
+      cut.grade < 1 ||
+      cut.grade > 9 ||
+      (hasRange &&
+        (!Number.isFinite(cut.rawScoreMin) ||
+          !Number.isFinite(cut.rawScoreMax) ||
+          cut.rawScoreMin! < 0 ||
+          cut.rawScoreMax! > 100 ||
+          cut.rawScoreMin! > cut.rawScoreMax! ||
+          cut.rawScore !== null)) ||
+      (cut.rawScore !== null &&
+        (!Number.isFinite(cut.rawScore) || cut.rawScore < 0 || cut.rawScore > 100)) ||
+      (cut.standardScore !== null &&
+        (!Number.isFinite(cut.standardScore) ||
+          cut.standardScore < 0 ||
+          cut.standardScore > 300)) ||
+      (cut.percentile !== null &&
+        (!Number.isFinite(cut.percentile) || cut.percentile < 0 || cut.percentile > 100)) ||
+      (cut.rawScoreText !== null &&
+        !/^\d+(?:\.\d+)?(?:\s*[~～-]\s*\d+(?:\.\d+)?)?$/.test(cut.rawScoreText)) ||
+      (cut.rawScore === null &&
+        !hasRange &&
+        cut.standardScore === null &&
+        cut.percentile === null &&
+        !cut.rawScoreText) ||
+      (i > 0 && cut.grade === sorted[i - 1]!.grade)
     )
       throw new Error("invalid grade cut");
   }
-  return sorted;
+
+  const rawCuts = sorted.filter(
+    (cut) =>
+      cut.rawScore !== null ||
+      cut.rawScoreMin !== null ||
+      (cut.rawScoreText !== null && !/[~～-]/.test(cut.rawScoreText)),
+  );
+  for (let i = 1; i < rawCuts.length; i++) {
+    const prior = rawCuts[i - 1]!;
+    const current = rawCuts[i]!;
+    const priorLow = prior.rawScoreMin ?? prior.rawScore ?? Number(prior.rawScoreText);
+    const currentHigh = current.rawScoreMax ?? current.rawScore ?? Number(current.rawScoreText);
+    if (currentHigh > priorLow) throw new Error("non-monotonic grade cuts");
+  }
+
+  const validateMonotonic = (scores: Array<{ grade: number; score: number }>) => {
+    for (let i = 1; i < scores.length; i++) {
+      if (scores[i]!.score > scores[i - 1]!.score) throw new Error("non-monotonic grade cuts");
+    }
+  };
+  const standardScores = sorted.flatMap((cut) =>
+    cut.standardScore === null ? [] : [{ grade: cut.grade, score: cut.standardScore }],
+  );
+  const percentiles = sorted.flatMap((cut) =>
+    cut.percentile === null ? [] : [{ grade: cut.grade, score: cut.percentile }],
+  );
+  validateMonotonic(standardScores);
+  validateMonotonic(percentiles);
+  return normalized;
 }
 export function cutsFingerprint(cuts: GradeCutEntry[]): string {
   return normalizeCuts(cuts)
-    .map((c) => `${c.grade}:${c.rawScore}`)
+    .map((cut) => {
+      const hasExtendedValue =
+        cut.rawScoreMin != null ||
+        cut.rawScoreMax != null ||
+        cut.rawScoreText != null ||
+        cut.standardScore != null ||
+        cut.percentile != null;
+      if (!hasExtendedValue) return `${cut.grade}:${cut.rawScore ?? ""}`;
+      return [
+        cut.grade,
+        cut.rawScore ?? "",
+        cut.rawScoreMin ?? "",
+        cut.rawScoreMax ?? "",
+        cut.rawScoreText ?? "",
+        cut.standardScore ?? "",
+        cut.percentile ?? "",
+      ].join(":");
+    })
     .join("|");
 }
 export function slotKey(slot: Pick<WatchSlot, "subject" | "courseCode">): string {

@@ -1,0 +1,64 @@
+name: Grade cuts (backfill)
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [dry-run, publish]
+        default: dry-run
+        required: true
+      year:
+        type: string
+        default: "2026"
+        required: true
+      grade:
+        type: choice
+        options: ["", "1", "2", "3"]
+        default: ""
+        required: false
+      month:
+        type: string
+        default: ""
+        required: false
+      source:
+        type: choice
+        options: [jongro, megastudy]
+        default: jongro
+        required: true
+      limit:
+        type: string
+        default: "10"
+        required: true
+
+concurrency:
+  group: grade-cuts-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      INGESTION_DATABASE_URL: ${{ secrets.INGESTION_DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check publish database
+        if: inputs.mode == 'publish'
+        run: |
+          if [ -z "$INGESTION_DATABASE_URL" ]; then
+            echo "::error::INGESTION_DATABASE_URL is required for publish."
+            exit 1
+          fi
+      - name: Backfill
+        run: |
+          args=(--year="${{ inputs.year }}" --limit="${{ inputs.limit }}" --"${{ inputs.mode }}")
+          [ -z "${{ inputs.grade }}" ] || args+=(--grade="${{ inputs.grade }}")
+          [ -z "${{ inputs.month }}" ] || args+=(--month="${{ inputs.month }}")
+          args+=(--source="${{ inputs.source }}")
+          npm run grade-cuts:backfill -- "${args[@]}"

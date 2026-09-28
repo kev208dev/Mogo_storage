@@ -31,6 +31,9 @@ export interface FetchOptions {
    * source_redirect 자료처럼 파일 전체가 필요 없을 때 불필요한 전체 다운로드를 피한다.
    */
   probeBytes?: number;
+  method?: string;
+  headers?: HeadersInit;
+  body?: BodyInit;
 }
 
 /** 외부 source 접근은 모두 이 인터페이스를 통한다 (테스트에서는 fixture fetcher 로 교체) */
@@ -112,10 +115,13 @@ export class SafeFetcher implements Fetcher {
         response = await this.fetchImpl(url, {
           redirect: "manual",
           signal: controller.signal,
+          method: options.method ?? "GET",
           headers: {
             "user-agent": this.options.userAgent,
             accept: options.accept ?? "*/*",
+            ...Object.fromEntries(new Headers(options.headers).entries()),
           },
+          body: options.body,
         });
       } catch (error) {
         clearTimeout(timer);

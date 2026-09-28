@@ -85,7 +85,9 @@ export function GradeEstimator({
               className={`border-border min-w-32 rounded-md border px-3 py-2 ${cut.isOfficial ? "bg-primary-soft" : isMutedEstimate(cut, gradeCuts) ? "bg-muted text-muted-foreground" : "bg-background"}`}
             >
               <div className="flex items-center gap-1.5 text-xs">
-                <span className="font-semibold">{GRADE_CUT_SOURCE_LABELS[cut.source]}</span>
+                <span className="font-semibold">
+                  {cut.providerLabel ?? GRADE_CUT_SOURCE_LABELS[cut.source]}
+                </span>
                 <Badge variant={cut.isOfficial ? "default" : "warning"}>
                   {cut.isOfficial ? "공식" : "예상"}
                 </Badge>

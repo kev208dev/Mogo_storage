@@ -42,6 +42,11 @@ export const GRADE_CUT_SOURCE_HOSTS: Record<GradeCutSource, readonly string[]> =
   megastudy: [".megastudy.net"],
   daesung: [".mimacstudy.com"],
   ebs: [".ebsi.co.kr", ".ebs.co.kr"],
+  jongro: [".jongro.co.kr"],
+  etoos: [".etoos.com"],
+  jinhak: [".jinhak.com"],
+  uway: [".uway.com"],
+  kimyoungil: [".kimyoungil.com"],
 };
 
 export type CutProblem =
@@ -115,13 +120,19 @@ export function checkCuts(subject: Subject, cuts: GradeCutEntry[]): GradeCutEntr
     );
   }
   const max = maxRawScore(subject);
-  const over = normalized.find((c) => c.rawScore > max);
-  if (over)
+  const over = normalized.find(
+    (cut) => (cut.rawScoreMax ?? cut.rawScore) !== null && (cut.rawScoreMax ?? cut.rawScore)! > max,
+  );
+  if (over) {
+    const score = over.rawScoreMax ?? over.rawScore;
     throw new GradeCutValidationError(
       "over_max",
-      `${over.grade}등급 원점수 ${over.rawScore}점이 만점(${max}점)을 넘습니다.`,
+      `${over.grade}등급 원점수 ${score}점이 만점(${max}점)을 넘습니다.`,
     );
-  if (normalized[0]!.grade === 1 && normalized[0]!.rawScore === 0)
+  }
+  const top = normalized.find((cut) => cut.grade === 1);
+  const topMinimum = top?.rawScoreMin ?? top?.rawScore;
+  if (top && topMinimum === 0)
     throw new GradeCutValidationError("zero_top_grade", "1등급 컷이 0점일 수 없습니다.");
   return normalized;
 }

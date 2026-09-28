@@ -90,7 +90,17 @@ export const EXAM_TYPE_LABELS: Record<ExamType, string> = {
   csat: "대학수학능력시험",
 };
 
-export const GRADE_CUT_SOURCES = ["official", "megastudy", "daesung", "ebs"] as const;
+export const GRADE_CUT_SOURCES = [
+  "official",
+  "megastudy",
+  "daesung",
+  "ebs",
+  "jongro",
+  "etoos",
+  "jinhak",
+  "uway",
+  "kimyoungil",
+] as const;
 export type GradeCutSource = (typeof GRADE_CUT_SOURCES)[number];
 
 export const GRADE_CUT_SOURCE_LABELS: Record<GradeCutSource, string> = {
@@ -98,6 +108,11 @@ export const GRADE_CUT_SOURCE_LABELS: Record<GradeCutSource, string> = {
   megastudy: "메가스터디",
   daesung: "대성",
   ebs: "EBS",
+  jongro: "종로학원",
+  etoos: "이투스",
+  jinhak: "진학사",
+  uway: "유웨이",
+  kimyoungil: "김영일교육컨설팅",
 };
 
 export const REPORT_CATEGORIES = [

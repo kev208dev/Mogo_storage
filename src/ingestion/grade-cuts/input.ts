@@ -27,27 +27,34 @@ export function parseGradeCutEntries(input: string): GradeCutEntry[] {
   const cuts: GradeCutEntry[] = [];
   for (const row of rows) {
     const cleaned = row.replace(/등급/g, "").replace(/점/g, "").trim();
-    const match = /^([1-9])\s*[:,=\t ]+\s*(\d{1,3})$/.exec(cleaned);
+    const match = /^([1-9])\s*[:,=\t ]+\s*(\d{1,3})(?:\s*[~～-]\s*(\d{1,3}))?$/.exec(cleaned);
     if (!match) {
       throw new GradeCutInputError(`등급컷 형식이 올바르지 않습니다: "${row}" (예: 1: 88)`);
     }
     const grade = Number(match[1]);
-    const rawScore = Number(match[2]);
-    if (rawScore < 0 || rawScore > 100) {
-      throw new GradeCutInputError(`${grade}등급 원점수는 0~100 사이여야 합니다.`);
+    const rawScoreMin = Number(match[2]);
+    const rawScoreMax = match[3] ? Number(match[3]) : rawScoreMin;
+    if (rawScoreMin < 0 || rawScoreMax > 100 || rawScoreMin > rawScoreMax) {
+      throw new GradeCutInputError(`${grade}등급 원점수 범위가 올바르지 않습니다.`);
     }
     if (seen.has(grade)) throw new GradeCutInputError(`${grade}등급이 중복되었습니다.`);
     seen.add(grade);
-    cuts.push({ grade, rawScore });
+    cuts.push(
+      rawScoreMin === rawScoreMax
+        ? { grade, rawScore: rawScoreMin }
+        : { grade, rawScore: null, rawScoreMin, rawScoreMax },
+    );
   }
 
   cuts.sort((a, b) => a.grade - b.grade);
   for (let i = 1; i < cuts.length; i += 1) {
     const previous = cuts[i - 1]!;
     const current = cuts[i]!;
-    if (current.rawScore > previous.rawScore) {
+    const currentHigh = current.rawScore === null ? current.rawScoreMax : current.rawScore;
+    const previousLow = previous.rawScore === null ? previous.rawScoreMin : previous.rawScore;
+    if (currentHigh != null && previousLow != null && currentHigh > previousLow) {
       throw new GradeCutInputError(
-        `${current.grade}등급 컷(${current.rawScore})은 ${previous.grade}등급 컷(${previous.rawScore})보다 높을 수 없습니다.`,
+        `${current.grade}등급 컷은 ${previous.grade}등급 컷보다 높을 수 없습니다.`,
       );
     }
   }

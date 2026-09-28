@@ -15,6 +15,8 @@ const STATUS: Record<FeatureStatus, { label: string; className: string }> = {
   disabled_unverified: { label: "미검증", className: "bg-warning-soft text-warning-strong" },
   disabled_policy: { label: "정책상 금지", className: "bg-muted text-muted-foreground" },
   manual_only: { label: "수동", className: "bg-primary/10 text-primary" },
+  blocked_challenge: { label: "접근 제한", className: "bg-muted text-muted-foreground" },
+  research_pending: { label: "조사 중", className: "bg-warning-soft text-warning-strong" },
   not_applicable: { label: "-", className: "text-muted-foreground" },
 };
 

@@ -29,6 +29,27 @@ export interface CutInput {
   sourceUrl: string;
   cuts: GradeCutEntry[];
   observedAt: Date;
+  providerStatus?: string;
+  providerLabel?: string;
+  observedVia?: GradeCutSource | null;
+  firstParty?: boolean;
+  scoreBasis?: "raw" | "standard";
+  parserVersion?: string;
+}
+
+function defaultProviderLabel(source: GradeCutSource): string {
+  const labels: Record<GradeCutSource, string> = {
+    official: "공식",
+    megastudy: "메가스터디 예상",
+    daesung: "대성 예상",
+    ebs: "EBS 예상",
+    jongro: "종로학원",
+    etoos: "이투스",
+    jinhak: "진학사",
+    uway: "유웨이",
+    kimyoungil: "김영일교육컨설팅",
+  };
+  return labels[source];
 }
 
 /** Current row + immutable history are committed together. Only a genuinely new value writes. */
@@ -50,6 +71,13 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
   const fingerprint = cutsFingerprint(cuts);
   const url = checkSourceUrl(input.source, input.sourceUrl);
   if (!Number.isFinite(input.observedAt.getTime())) throw new Error("invalid grade cut provenance");
+  const providerStatus =
+    input.providerStatus ?? (input.source === "official" ? "official_final" : "provider_estimate");
+  const providerLabel = input.providerLabel ?? defaultProviderLabel(input.source);
+  const observedVia = input.observedVia === undefined ? input.source : input.observedVia;
+  const firstParty = input.firstParty ?? true;
+  const scoreBasis = input.scoreBasis ?? "raw";
+  const parserVersion = input.parserVersion ?? "legacy";
   return db.transaction(async (tx) => {
     const slot = and(
       eq(gradeCuts.examId, input.examId),
@@ -58,7 +86,17 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
       eq(gradeCuts.source, input.source),
     );
     let [current] = await tx.select().from(gradeCuts).where(slot).limit(1).for("update");
-    let changed = !current || cutsFingerprint(current.cuts) !== fingerprint;
+    const isChanged = (row: typeof current) =>
+      !row ||
+      cutsFingerprint(row.cuts) !== fingerprint ||
+      row.sourceUrl !== url.toString() ||
+      row.providerStatus !== providerStatus ||
+      row.providerLabel !== providerLabel ||
+      row.observedVia !== observedVia ||
+      row.firstParty !== firstParty ||
+      row.scoreBasis !== scoreBasis ||
+      row.parserVersion !== parserVersion;
+    let changed = isChanged(current);
     if (!current) {
       const [created] = await tx
         .insert(gradeCuts)
@@ -68,6 +106,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
           courseId: input.courseId,
           source: input.source,
           sourceUrl: url.toString(),
+          providerStatus,
+          providerLabel,
+          observedVia,
+          firstParty,
+          scoreBasis,
+          parserVersion,
           cuts,
           isOfficial: input.source === "official",
           isSample: false,
@@ -78,7 +122,7 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
       current = created;
       if (!current) {
         [current] = await tx.select().from(gradeCuts).where(slot).limit(1).for("update");
-        changed = Boolean(current && cutsFingerprint(current.cuts) !== fingerprint);
+        changed = isChanged(current);
       }
     } else if (changed) {
       await tx
@@ -86,6 +130,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
         .set({
           cuts,
           sourceUrl: url.toString(),
+          providerStatus,
+          providerLabel,
+          observedVia,
+          firstParty,
+          scoreBasis,
+          parserVersion,
           isOfficial: input.source === "official",
           isSample: false,
           updatedAt: input.observedAt,
@@ -103,6 +153,12 @@ export async function persistGradeCut(db: Database, input: CutInput): Promise<bo
         cuts,
         fingerprint,
         sourceUrl: url.toString(),
+        providerStatus,
+        providerLabel,
+        observedVia,
+        firstParty,
+        scoreBasis,
+        parserVersion,
         observedAt: input.observedAt,
       });
     if (input.source === "official") {
@@ -274,6 +330,12 @@ export function createGradeCutStore(db: Database): WatchStore {
         sourceUrl: value.sourceUrl,
         cuts: value.cuts,
         observedAt: value.observedAt,
+        providerStatus: value.providerStatus,
+        providerLabel: value.providerLabel,
+        observedVia: value.observedVia,
+        firstParty: value.firstParty,
+        scoreBasis: value.scoreBasis,
+        parserVersion: value.parserVersion,
       });
     },
     async markPolled(slot, now) {

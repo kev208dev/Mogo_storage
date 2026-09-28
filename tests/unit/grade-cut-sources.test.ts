@@ -27,7 +27,16 @@ describe("grade cut source policy", () => {
     );
     const result = await collectGradeCuts(exam, adapters);
     expect(calls).toEqual(["megastudy"]);
-    expect(result.manual.sort()).toEqual(["daesung", "ebs", "official"]);
+    expect(result.manual.sort()).toEqual([
+      "daesung",
+      "ebs",
+      "etoos",
+      "jinhak",
+      "jongro",
+      "kimyoungil",
+      "official",
+      "uway",
+    ]);
   });
 
   it("keeps official vs estimate distinction", () => {

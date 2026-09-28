@@ -54,9 +54,8 @@ const adapters: Record<string, GradeCutAdapter> = {
   megastudy: megaStudyAdapter,
 };
 
-function knownFixtureExams(): WatchExam[] {
-  if (source !== "jongro" || (year !== null && year !== 2026) || (from !== null && from > 2026))
-    return [];
+function known2026ExamCandidates(): WatchExam[] {
+  if ((year !== null && year !== 2026) || (from !== null && from > 2026)) return [];
   return ([1, 2, 3] as const)
     .filter((g) => grade === null || grade === g)
     .map((g) => ({
@@ -163,12 +162,12 @@ async function liveSlots(
 async function main() {
   let db: Awaited<ReturnType<typeof createDb>> | null = null;
   let examsToProcess: WatchExam[];
-  if (publish || live) {
+  if (publish) {
     const found = await liveExams();
     db = found.db;
     examsToProcess = found.exams;
   } else {
-    examsToProcess = knownFixtureExams();
+    examsToProcess = known2026ExamCandidates();
   }
 
   const fixtureRoutes: Record<string, string> = {};

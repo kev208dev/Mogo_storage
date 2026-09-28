@@ -3,12 +3,14 @@ import { describe, expect, it } from "vitest";
 import { FixtureFetcher } from "../../src/ingestion/net/fixture-fetcher";
 import {
   createMegaStudyAdapter,
+  createMegaStudyAdapter,
   findMegaExamSeqInList,
   megaStudyAdapter,
   parseMegaCoreFragment,
   parseMegaInquiryFragment,
 } from "../../src/ingestion/grade-cuts/adapters/megastudy";
 import type { WatchExam, WatchSlot } from "../../src/ingestion/grade-cuts/core";
+import type { Fetcher } from "../../src/ingestion/net/fetcher";
 
 const fixture = (name: string) =>
   readFileSync(new URL(`../fixtures/grade-cuts/${name}.html`, import.meta.url), "utf8");
@@ -158,6 +160,34 @@ describe("MegaStudy 고1·고2 공개 원점수 표", () => {
     const rows = await adapter.collect(g2, [slot("korean")]);
     expect(rows[0]?.cuts[0]).toEqual({ grade: 1, rawScore: 86 });
     expect(fetcher.requested).toEqual([examListUrl, fragmentUrl]);
+  });
+
+
+
+  it("discovers the current 2026 high-school 2 exam before requesting its score fragment", async () => {
+    const requests: Array<{ url: string; body: string }> = [];
+    const list = fixture("mega-list-g2");
+    const fragment = fixture("mega-344-g2-core").replaceAll("2025.09.03", "2026.09.02");
+    const fetcher: Fetcher = {
+      async fetch(url, options) {
+        requests.push({ url, body: String(options?.body ?? "") });
+        const body = url.includes("main_examNm_ax") ? list : fragment;
+        return {
+          url,
+          status: 200,
+          contentType: "text/html; charset=utf-8",
+          headers: new Headers(),
+          bytes: new TextEncoder().encode(body),
+        };
+      },
+    };
+    const adapter = createMegaStudyAdapter(fetcher);
+    const result = await adapter.collect(g2_2026, [slot("korean"), slot("math")]);
+
+    expect(requests[0]?.url).toContain("main_examNm_ax.asp");
+    expect(requests[1]?.url).toContain("main_examRankCut_ax.asp");
+    expect(requests[1]?.body).toContain("examSeq=359");
+    expect(result.map((row) => row.subject).sort()).toEqual(["korean", "math"]);
   });
 
   it("고1·고2 시험 목록에서 같은 날짜·종류가 하나일 때만 examSeq", () => {

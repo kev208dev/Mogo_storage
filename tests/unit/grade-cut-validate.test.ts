@@ -49,7 +49,7 @@ describe("grade cut validation", () => {
     expect(problem(() => checkCuts("korean", [{ grade: 1, rawScore: 96 }]))).toBe("ok");
   });
 
-  it("형식 오류: 등급 중복 · 역순 · 범위 밖 · 소수 · 1등급 0점", () => {
+  it("형식 오류: 등급 중복 · 역순 · 범위 밖 · 빈 컷 · 1등급 0점; 소수는 보존", () => {
     const bad = [
       [
         { grade: 1, rawScore: 80 },
@@ -60,10 +60,12 @@ describe("grade cut validation", () => {
         { grade: 2, rawScore: 80 },
       ],
       [{ grade: 10, rawScore: 20 }],
-      [{ grade: 1, rawScore: 80.5 }],
       [],
     ];
     for (const cuts of bad) expect(problem(() => checkCuts("korean", cuts))).toBe("malformed");
+    expect(checkCuts("korean", [{ grade: 1, rawScore: 80.5 }])).toEqual([
+      { grade: 1, rawScore: 80.5 },
+    ]);
     expect(problem(() => checkCuts("korean", [{ grade: 1, rawScore: 0 }]))).toBe("zero_top_grade");
     // 입력 순서와 무관하게 정렬된다
     expect(

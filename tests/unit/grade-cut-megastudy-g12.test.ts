@@ -20,6 +20,13 @@ const g2: WatchExam = {
   examType: "school_mock",
 };
 const g1: WatchExam = { ...g2, id: "g1", grade: 1, year: 2026, examDate: "2026-09-02" };
+const g2_2026: WatchExam = {
+  ...g2,
+  id: "g2-2026",
+  year: 2026,
+  examDate: "2026-09-02",
+  academicYear: 2028,
+};
 const g3: WatchExam = { ...g2, id: "g3", grade: 3, year: 2026, month: 7, examDate: "2026-07-08" };
 const slot = (subject: WatchSlot["subject"], courseCode: string | null = null): WatchSlot => ({
   examId: "x",
@@ -107,6 +114,11 @@ describe("MegaStudy 고1·고2 공개 원점수 표", () => {
     expect(megaStudyAdapter.supports!(g2, slot("math"))).toBe(true);
     expect(megaStudyAdapter.supports!(g2, slot("english"))).toBe(false);
     expect(megaStudyAdapter.supports!(g2, slot("math", "math-1"))).toBe(false);
+  });
+
+  it("2026년 고2는 2028 체제 통합사회·통합과학 course를 지원한다", () => {
+    expect(megaStudyAdapter.supports!(g2_2026, slot("social", "integrated-social"))).toBe(true);
+    expect(megaStudyAdapter.supports!(g2_2026, slot("science", "integrated-science"))).toBe(true);
   });
 
   it("시험 정체성·만점·헤더가 어긋나면 거부", () => {

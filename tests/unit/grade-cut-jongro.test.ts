@@ -1,7 +1,10 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import type { WatchExam } from "../../src/ingestion/grade-cuts/core";
-import { jongroAdapter, parseJongroResultCut } from "../../src/ingestion/grade-cuts/adapters/jongro";
+import {
+  jongroAdapter,
+  parseJongroResultCut,
+} from "../../src/ingestion/grade-cuts/adapters/jongro";
 
 const exam = (grade: 1 | 2 | 3): WatchExam => ({
   id: "exam-" + grade,

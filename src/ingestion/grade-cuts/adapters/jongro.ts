@@ -176,10 +176,10 @@ export function parseJongroResultCut(
   )
     throw new Error("Jongro page identity mismatch");
 
-  const gradeCutTitle = allText.includes("확정 등급컷")
-    ? "provider_final"
-    : allText.includes("추정 등급컷")
-      ? "provider_estimate"
+  const gradeCutTitle = allText.includes("추정 등급컷")
+    ? "provider_estimate"
+    : allText.includes("확정 등급컷")
+      ? "provider_final"
       : null;
   if (!gradeCutTitle) return { rows: [], isOfficial: false };
 

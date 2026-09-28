@@ -54,17 +54,16 @@ export interface GradeCutAdapter {
 export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
   if (!Array.isArray(cuts) || cuts.length === 0 || cuts.length > 9)
     throw new Error("empty or oversized cuts");
-  const sorted = cuts
-    .map((cut) => ({
-      grade: cut.grade,
-      rawScore: cut.rawScore ?? null,
-      rawScoreMin: cut.rawScoreMin ?? null,
-      rawScoreMax: cut.rawScoreMax ?? null,
-      rawScoreText: cut.rawScoreText ?? null,
-      standardScore: cut.standardScore ?? null,
-      percentile: cut.percentile ?? null,
-    }))
-    .sort((a, b) => a.grade - b.grade);
+  const normalized = cuts.map((cut) => ({ ...cut })).sort((a, b) => a.grade - b.grade);
+  const sorted = normalized.map((cut) => ({
+    grade: cut.grade,
+    rawScore: cut.rawScore ?? null,
+    rawScoreMin: cut.rawScoreMin ?? null,
+    rawScoreMax: cut.rawScoreMax ?? null,
+    rawScoreText: cut.rawScoreText ?? null,
+    standardScore: cut.standardScore ?? null,
+    percentile: cut.percentile ?? null,
+  }));
   for (let i = 0; i < sorted.length; i++) {
     const cut = sorted[i]!;
     const hasRange = cut.rawScoreMin !== null || cut.rawScoreMax !== null;
@@ -126,12 +125,19 @@ export function normalizeCuts(cuts: GradeCutEntry[]): GradeCutEntry[] {
   );
   validateMonotonic(standardScores);
   validateMonotonic(percentiles);
-  return sorted;
+  return normalized;
 }
 export function cutsFingerprint(cuts: GradeCutEntry[]): string {
   return normalizeCuts(cuts)
-    .map((cut) =>
-      [
+    .map((cut) => {
+      const hasExtendedValue =
+        cut.rawScoreMin != null ||
+        cut.rawScoreMax != null ||
+        cut.rawScoreText != null ||
+        cut.standardScore != null ||
+        cut.percentile != null;
+      if (!hasExtendedValue) return `${cut.grade}:${cut.rawScore ?? ""}`;
+      return [
         cut.grade,
         cut.rawScore ?? "",
         cut.rawScoreMin ?? "",
@@ -139,8 +145,8 @@ export function cutsFingerprint(cuts: GradeCutEntry[]): string {
         cut.rawScoreText ?? "",
         cut.standardScore ?? "",
         cut.percentile ?? "",
-      ].join(":"),
-    )
+      ].join(":");
+    })
     .join("|");
 }
 export function slotKey(slot: Pick<WatchSlot, "subject" | "courseCode">): string {

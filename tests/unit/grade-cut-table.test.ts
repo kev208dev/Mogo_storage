@@ -63,9 +63,7 @@ describe("relative grade-cut table model", () => {
 
   it("shows Jongro as a separate non-official provider and labels score units", () => {
     const jongro = {
-      ...row("jongro", [
-        { grade: 1, rawScore: 43.5, standardScore: 130, percentile: 99 },
-      ]),
+      ...row("jongro", [{ grade: 1, rawScore: 43.5, standardScore: 130, percentile: 99 }]),
       providerStatus: "provider_final",
       providerLabel: "종로 최종",
     };

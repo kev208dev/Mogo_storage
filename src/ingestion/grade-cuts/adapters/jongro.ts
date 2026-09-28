@@ -46,12 +46,12 @@ function entryValue(value: string): Pick<GradeCutEntry, "rawScore" | "rawScoreMi
   return number === null ? {} : { rawScore: number };
 }
 
-function courseFor(label: string, subject: Subject, exam: WatchExam) {
+function courseFor(label: string, subject: Subject | null, exam: WatchExam) {
   const wanted = normalize(label);
   if (!wanted) return null;
   const item = COURSE_CATALOG.find(
     (course) =>
-      course.subject === subject &&
+      (subject === null || course.subject === subject) &&
       [course.name, ...course.aliases, ...course.abbreviations].some((name) => normalize(name) === wanted),
   );
   if (!item || courseExpectation(item.code, exam) !== "expected") return null;
@@ -105,13 +105,17 @@ function panelIndex(className: string): number | null {
   return match ? Number(match[1]) : null;
 }
 
-function courseLabelFor(panel: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number]) {
+function courseLabelFor(
+  panel: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+  table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+) {
+  const tagged = table.getAttribute("data-course") ?? table.getAttribute("data-subject");
+  if (tagged) return tagged;
+  const caption = table.querySelector("caption");
+  if (caption) return caption.textContent;
   const active = panel.querySelectorAll(".tabController02 .on, .tabController02_01 .on, .tabController02_02 .on");
   if (active.length === 1) return active[0]!.textContent;
-  const caption = panel.querySelector("caption");
-  if (caption) return caption.textContent;
-  const tagged = panel.querySelector("[data-course]");
-  return tagged?.getAttribute("data-course") ?? "";
+  return "";
 }
 
 export interface JongroParsedPage {
@@ -151,17 +155,23 @@ export function parseJongroResultCut(
     const index = panelIndex(panel.getAttribute("class") ?? "");
     if (index === null) continue;
     const tabLabel = navLabels[index - 1];
-    const subject = tabLabel ? SUBJECTS[tabLabel] : undefined;
-    if (!subject || subject === "english" || subject === "history") continue;
-    if (gradingMode(exam, subject) !== "relative") continue;
+    const tabSubject = tabLabel ? SUBJECTS[tabLabel] : undefined;
+    if (!tabSubject || tabSubject === "english" || tabSubject === "history") continue;
     const tableNodes = panel.querySelectorAll("table");
     for (const table of tableNodes) {
       const cuts = parseTable(table);
       if (!cuts) continue;
+      const courseLabel = courseLabelFor(panel, table);
+      const course =
+        tabLabel === "탐구"
+          ? courseFor(courseLabel, null, exam)
+          : courseFor(courseLabel, tabSubject, exam);
+      const subject = course?.subject ?? tabSubject;
+      if (subject !== "korean" && subject !== "math" && subject !== "social" && subject !== "science")
+        continue;
+      if (gradingMode(exam, subject) !== "relative") continue;
       let courseCode: string | null = null;
       if (subject === "social" || subject === "science" || (exam.grade === 3 && (subject === "korean" || subject === "math"))) {
-        const label = courseLabelFor(panel);
-        const course = courseFor(label, subject, exam);
         if (!course) continue;
         courseCode = course.code;
       }

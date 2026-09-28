@@ -172,7 +172,9 @@ async function main() {
 
   const fixtureRoutes: Record<string, string> = {};
   if (!live && !publish && (source !== "jongro" || examsToProcess.length === 0))
-    throw new Error("no offline fixtures match these filters; use the supported 2026 September Jongro fixture or pass --live");
+    throw new Error(
+      "no offline fixtures match these filters; use the supported 2026 September Jongro fixture or pass --live",
+    );
   if (source === "jongro" && !live && !publish) {
     for (const exam of examsToProcess) {
       fixtureRoutes[

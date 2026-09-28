@@ -1,4 +1,6 @@
 import { parse } from "node-html-parser";
+import { SafeFetcher, decodeHtml } from "../../net/fetcher";
+import type { Fetcher } from "../../net/fetcher";
 import { COURSE_CATALOG, courseExpectation } from "../../../lib/courses";
 import type { Subject } from "../../../lib/constants";
 import {
@@ -212,18 +214,25 @@ export function parseMegaSocialFragment(
   return parseMegaInquiryFragment(fragment, exam, slots, observedAt, "social");
 }
 
-async function publicHtml(url: string, init?: RequestInit) {
-  const response = await fetch(url, {
-    ...init,
-    credentials: "omit",
-    redirect: "error",
-    signal: AbortSignal.timeout(12_000),
+const megaFetcher = new SafeFetcher({
+  policy: { allowedHosts: [".megastudy.net"], allowHttp: false },
+  timeoutMs: 12_000,
+  maxConcurrent: 1,
+  minGapMs: 500,
+  maxRetries: 2,
+  userAgent: HEADERS["User-Agent"],
+  respectRobots: true,
+});
+
+async function publicHtml(fetcher: Fetcher, url: string, init?: RequestInit) {
+  const response = await fetcher.fetch(url, {
+    method: init?.method,
+    body: init?.body,
+    accept: "text/html",
+    maxBytes: 500_000,
     headers: { ...HEADERS, ...init?.headers },
   });
-  if (!response.ok) throw new Error(`MegaStudy HTTP ${response.status}`);
-  const bytes = await response.arrayBuffer();
-  if (bytes.byteLength > 500_000) throw new Error("MegaStudy response oversized");
-  return new TextDecoder("euc-kr", { fatal: true }).decode(bytes);
+  return decodeHtml(response);
 }
 
 /**
@@ -232,9 +241,9 @@ async function publicHtml(url: string, init?: RequestInit) {
  */
 const SELECTOR_TTL_MS = 60_000;
 let selectorCache: { at: number; html: string } | null = null;
-async function selectorPage(now = Date.now()): Promise<string> {
+async function selectorPage(fetcher: Fetcher, now = Date.now()): Promise<string> {
   if (selectorCache && now - selectorCache.at < SELECTOR_TTL_MS) return selectorCache.html;
-  const html = await publicHtml(PAGE);
+  const html = await publicHtml(fetcher, PAGE);
   selectorCache = { at: now, html };
   return html;
 }
@@ -249,7 +258,8 @@ const inquiryCourse = (exam: WatchExam, slot: WatchSlot) =>
     (course) => course.subject === slot.subject && course.code === slot.courseCode,
   );
 
-export const megaStudyAdapter: GradeCutAdapter = {
+export function createMegaStudyAdapter(fetcher: Fetcher = megaFetcher): GradeCutAdapter {
+  return {
   source: "megastudy",
   status: "automated_verified",
   /**
@@ -274,9 +284,9 @@ export const megaStudyAdapter: GradeCutAdapter = {
     if (!wanted.length) return [];
     const seq =
       exam.grade === 3
-        ? findMegaExamSeq(await selectorPage(), exam)
+        ? findMegaExamSeq(await selectorPage(fetcher), exam)
         : findMegaExamSeqInList(
-            await publicHtml(EXAM_LIST, {
+            await publicHtml(fetcher, EXAM_LIST, {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
               body: new URLSearchParams({ grdFlg: String(exam.grade), examYear: "", examType: "" }),
@@ -293,7 +303,7 @@ export const megaStudyAdapter: GradeCutAdapter = {
       );
       if (!needed.length) continue;
       await new Promise((resolve) => setTimeout(resolve, 500));
-      const fragment = await publicHtml(FRAGMENT, {
+      const fragment = await publicHtml(fetcher, FRAGMENT, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
         body: new URLSearchParams({ examSeq: seq, tabNo: TAB[tab] }),
@@ -307,4 +317,7 @@ export const megaStudyAdapter: GradeCutAdapter = {
     }
     return collected;
   },
-};
+  };
+}
+
+export const megaStudyAdapter = createMegaStudyAdapter();

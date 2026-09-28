@@ -37,7 +37,7 @@ export interface CollectedGradeCut {
   observedAt: Date;
   providerStatus?: string;
   providerLabel?: string;
-  observedVia?: GradeCutSource;
+  observedVia?: GradeCutSource | null;
   firstParty?: boolean;
   scoreBasis?: "raw" | "standard";
   parserVersion?: string;

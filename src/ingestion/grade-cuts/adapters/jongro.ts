@@ -20,8 +20,19 @@ const SUBJECTS: Record<string, Subject> = {
   과학: "science",
 };
 const normalize = (s: string) => s.replace(/[\s\u200b\u00a0·・]/g, "").trim();
-const visibleText = (node: { textContent: string; querySelectorAll: (s: string) => Array<{ getAttribute: (n: string) => string | undefined; textContent: string }> }) =>
-  normalize(node.textContent + node.querySelectorAll("img").map((img) => img.getAttribute("alt") ?? "").join(""));
+const visibleText = (node: {
+  textContent: string;
+  querySelectorAll: (
+    s: string,
+  ) => Array<{ getAttribute: (n: string) => string | undefined; textContent: string }>;
+}) =>
+  normalize(
+    node.textContent +
+      node
+        .querySelectorAll("img")
+        .map((img) => img.getAttribute("alt") ?? "")
+        .join(""),
+  );
 
 function sourceUrl(exam: WatchExam) {
   return ROOT + "ex" + exam.examDate.replace(/-/g, "") + "/go" + exam.grade + "_resultCut.asp";
@@ -34,7 +45,9 @@ function parseNumber(value: string): number | null {
   return Number(clean);
 }
 
-function entryValue(value: string): Pick<GradeCutEntry, "rawScore" | "rawScoreMin" | "rawScoreMax" | "rawScoreText"> {
+function entryValue(
+  value: string,
+): Pick<GradeCutEntry, "rawScore" | "rawScoreMin" | "rawScoreMax" | "rawScoreText"> {
   const clean = value.replace(/,/g, "").trim();
   const range = /^(\d+(?:\.\d+)?)\s*[~～-]\s*(\d+(?:\.\d+)?)$/.exec(clean);
   if (range) {
@@ -52,14 +65,22 @@ function courseFor(label: string, subject: Subject | null, exam: WatchExam) {
   const item = COURSE_CATALOG.find(
     (course) =>
       (subject === null || course.subject === subject) &&
-      [course.name, ...course.aliases, ...course.abbreviations].some((name) => normalize(name) === wanted),
+      [course.name, ...course.aliases, ...course.abbreviations].some(
+        (name) => normalize(name) === wanted,
+      ),
   );
   if (!item || courseExpectation(item.code, exam) !== "expected") return null;
   return item;
 }
 
-function headerLabel(cell: { textContent: string; querySelectorAll: (s: string) => Array<{ getAttribute: (n: string) => string | undefined }> }) {
-  const imageText = cell.querySelectorAll("img").map((img) => img.getAttribute("alt") ?? "").join(" ");
+function headerLabel(cell: {
+  textContent: string;
+  querySelectorAll: (s: string) => Array<{ getAttribute: (n: string) => string | undefined }>;
+}) {
+  const imageText = cell
+    .querySelectorAll("img")
+    .map((img) => img.getAttribute("alt") ?? "")
+    .join(" ");
   return normalize(cell.textContent + " " + imageText);
 }
 
@@ -113,7 +134,9 @@ function courseLabelFor(
   if (tagged) return tagged;
   const caption = table.querySelector("caption");
   if (caption) return caption.textContent;
-  const active = panel.querySelectorAll(".tabController02 .on, .tabController02_01 .on, .tabController02_02 .on");
+  const active = panel.querySelectorAll(
+    ".tabController02 .on, .tabController02_01 .on, .tabController02_02 .on",
+  );
   if (active.length === 1) return active[0]!.textContent;
   return "";
 }
@@ -130,14 +153,23 @@ export function parseJongroResultCut(
   url = sourceUrl(exam),
   observedAt = new Date(),
 ): JongroParsedPage {
-  const expectedPath = "/service/examResult/ex" + exam.examDate.replace(/-/g, "") + "/go" + exam.grade + "_resultCut.asp";
+  const expectedPath =
+    "/service/examResult/ex" +
+    exam.examDate.replace(/-/g, "") +
+    "/go" +
+    exam.grade +
+    "_resultCut.asp";
   const parsedUrl = new URL(url);
   if (parsedUrl.hostname !== "www.jongro.co.kr" || parsedUrl.pathname !== expectedPath)
     throw new Error("Jongro URL exam identity mismatch");
   const root = parse(html);
   const allText = root.textContent.replace(/\s+/g, " ");
   const dateLabel = String(exam.month) + "." + String(Number(exam.examDate.slice(-2)));
-  if (!allText.includes(String(exam.year) + "년") || !allText.includes("고" + exam.grade) || !allText.includes(dateLabel))
+  if (
+    !allText.includes(String(exam.year) + "년") ||
+    !allText.includes("고" + exam.grade) ||
+    !allText.includes(dateLabel)
+  )
     throw new Error("Jongro page identity mismatch");
 
   const gradeCutTitle = allText.includes("확정 등급컷")
@@ -167,11 +199,20 @@ export function parseJongroResultCut(
           ? courseFor(courseLabel, null, exam)
           : courseFor(courseLabel, tabSubject, exam);
       const subject = course?.subject ?? tabSubject;
-      if (subject !== "korean" && subject !== "math" && subject !== "social" && subject !== "science")
+      if (
+        subject !== "korean" &&
+        subject !== "math" &&
+        subject !== "social" &&
+        subject !== "science"
+      )
         continue;
       if (gradingMode(exam, subject) !== "relative") continue;
       let courseCode: string | null = null;
-      if (subject === "social" || subject === "science" || (exam.grade === 3 && (subject === "korean" || subject === "math"))) {
+      if (
+        subject === "social" ||
+        subject === "science" ||
+        (exam.grade === 3 && (subject === "korean" || subject === "math"))
+      ) {
         if (!course) continue;
         courseCode = course.code;
       }

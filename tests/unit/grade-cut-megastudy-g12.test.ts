@@ -3,7 +3,6 @@ import { describe, expect, it } from "vitest";
 import { FixtureFetcher } from "../../src/ingestion/net/fixture-fetcher";
 import {
   createMegaStudyAdapter,
-  createMegaStudyAdapter,
   findMegaExamSeqInList,
   megaStudyAdapter,
   parseMegaCoreFragment,

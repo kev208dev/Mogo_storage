@@ -54,8 +54,7 @@ describe.skipIf(!TEST_DB_URL)("grade-cut extended value and provenance round-tri
       subject: "korean",
       courseId: null,
       source: "jongro",
-      sourceUrl:
-        "https://www.jongro.co.kr/service/examResult/ex20260902/go3_resultCut.asp",
+      sourceUrl: "https://www.jongro.co.kr/service/examResult/ex20260902/go3_resultCut.asp",
       cuts,
       observedAt: new Date("2026-09-28T00:00:00Z"),
       providerStatus: "provider_final",
@@ -66,10 +65,7 @@ describe.skipIf(!TEST_DB_URL)("grade-cut extended value and provenance round-tri
       parserVersion: "jongro-result-cut-v1",
     });
 
-    const [current] = await db
-      .select()
-      .from(gradeCuts)
-      .where(eq(gradeCuts.examId, exam!.id));
+    const [current] = await db.select().from(gradeCuts).where(eq(gradeCuts.examId, exam!.id));
     const [snapshot] = await db
       .select()
       .from(gradeCutSnapshots)

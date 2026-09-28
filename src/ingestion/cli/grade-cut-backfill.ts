@@ -4,11 +4,7 @@ import { courses, examCourses, exams, examSubjects } from "../../db/schema";
 import type { GradeCutSource, Subject } from "../../lib/constants";
 import { gradingMode } from "../../lib/grade-cut-mode";
 import { createGradeCutStore } from "../grade-cuts/persistence";
-import {
-  type GradeCutAdapter,
-  type WatchExam,
-  type WatchSlot,
-} from "../grade-cuts/core";
+import { type GradeCutAdapter, type WatchExam, type WatchSlot } from "../grade-cuts/core";
 import { validateGradeCut } from "../grade-cuts/validate";
 import { jongroAdapter, createJongroAdapter } from "../grade-cuts/adapters/jongro";
 import { megaStudyAdapter } from "../grade-cuts/adapters/megastudy";

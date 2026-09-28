@@ -160,7 +160,11 @@ export function parseJongroResultCut(
     exam.grade +
     "_resultCut.asp";
   const parsedUrl = new URL(url);
-  if (parsedUrl.hostname !== "www.jongro.co.kr" || parsedUrl.pathname !== expectedPath)
+  if (
+    parsedUrl.protocol !== "https:" ||
+    parsedUrl.hostname !== "www.jongro.co.kr" ||
+    parsedUrl.pathname !== expectedPath
+  )
     throw new Error("Jongro URL exam identity mismatch");
   const root = parse(html);
   const allText = root.textContent.replace(/\s+/g, " ");
@@ -183,6 +187,9 @@ export function parseJongroResultCut(
   const navLabels = nav.map((node) => normalize(node.textContent));
   const panels = root.querySelectorAll("[class*=tabCon]");
   const rows: CollectedGradeCut[] = [];
+  const scoreBasis: "raw" | "standard" = allText.includes("표준점수를 토대로 원점수를 역산")
+    ? "standard"
+    : "raw";
   for (const panel of panels) {
     const index = panelIndex(panel.getAttribute("class") ?? "");
     if (index === null) continue;
@@ -226,7 +233,7 @@ export function parseJongroResultCut(
         providerLabel: gradeCutTitle === "provider_final" ? "종로 최종" : "종로 예상",
         observedVia: null,
         firstParty: true,
-        scoreBasis: "raw",
+        scoreBasis,
         parserVersion: PARSER_VERSION,
       });
     }

@@ -260,63 +260,67 @@ const inquiryCourse = (exam: WatchExam, slot: WatchSlot) =>
 
 export function createMegaStudyAdapter(fetcher: Fetcher = megaFetcher): GradeCutAdapter {
   return {
-  source: "megastudy",
-  status: "automated_verified",
-  /**
-   * 공개 표에 원점수 열이 확인된 조합만:
-   *  - 고3 사회·과학탐구 세부과목
-   *  - 고2 학력평가 사회·과학탐구 세부과목
-   *  - 고1·고2 학력평가 국어·수학 (영역 전체)
-   * 고3 국어·수학은 표준점수만, 고1 통합사회·통합과학은 반점수라 제외한다.
-   */
-  supports: (exam, slot) => {
-    if (slot.subject === "social" || slot.subject === "science")
-      return (
-        (exam.grade === 3 || (exam.grade === 2 && exam.examType === "school_mock")) &&
-        inquiryCourse(exam, slot)
-      );
-    if (slot.subject === "korean" || slot.subject === "math")
-      return exam.grade !== 3 && exam.examType === "school_mock" && slot.courseCode === null;
-    return false;
-  },
-  async collect(exam, slots) {
-    const wanted = slots.filter((slot) => this.supports?.(exam, slot));
-    if (!wanted.length) return [];
-    const seq =
-      exam.grade === 3
-        ? findMegaExamSeq(await selectorPage(fetcher), exam)
-        : findMegaExamSeqInList(
-            await publicHtml(fetcher, EXAM_LIST, {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
-              body: new URLSearchParams({ grdFlg: String(exam.grade), examYear: "", examType: "" }),
-            }),
-            exam,
-          );
-    if (!seq) return []; // The exam has not yet appeared on the public selector.
-    const collected: CollectedGradeCut[] = [];
-    for (const tab of ["core", "social", "science"] as const) {
-      const needed = wanted.filter((slot) =>
-        tab === "core"
-          ? slot.subject === "korean" || slot.subject === "math"
-          : slot.subject === tab,
-      );
-      if (!needed.length) continue;
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      const fragment = await publicHtml(fetcher, FRAGMENT, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
-        body: new URLSearchParams({ examSeq: seq, tabNo: TAB[tab] }),
-      });
-      const observedAt = new Date();
-      collected.push(
-        ...(tab === "core"
-          ? parseMegaCoreFragment(fragment, exam, slots, observedAt)
-          : parseMegaInquiryFragment(fragment, exam, slots, observedAt, tab)),
-      );
-    }
-    return collected;
-  },
+    source: "megastudy",
+    status: "automated_verified",
+    /**
+     * 공개 표에 원점수 열이 확인된 조합만:
+     *  - 고3 사회·과학탐구 세부과목
+     *  - 고2 학력평가 사회·과학탐구 세부과목
+     *  - 고1·고2 학력평가 국어·수학 (영역 전체)
+     * 고3 국어·수학은 표준점수만, 고1 통합사회·통합과학은 반점수라 제외한다.
+     */
+    supports: (exam, slot) => {
+      if (slot.subject === "social" || slot.subject === "science")
+        return (
+          (exam.grade === 3 || (exam.grade === 2 && exam.examType === "school_mock")) &&
+          inquiryCourse(exam, slot)
+        );
+      if (slot.subject === "korean" || slot.subject === "math")
+        return exam.grade !== 3 && exam.examType === "school_mock" && slot.courseCode === null;
+      return false;
+    },
+    async collect(exam, slots) {
+      const wanted = slots.filter((slot) => this.supports?.(exam, slot));
+      if (!wanted.length) return [];
+      const seq =
+        exam.grade === 3
+          ? findMegaExamSeq(await selectorPage(fetcher), exam)
+          : findMegaExamSeqInList(
+              await publicHtml(fetcher, EXAM_LIST, {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
+                body: new URLSearchParams({
+                  grdFlg: String(exam.grade),
+                  examYear: "",
+                  examType: "",
+                }),
+              }),
+              exam,
+            );
+      if (!seq) return []; // The exam has not yet appeared on the public selector.
+      const collected: CollectedGradeCut[] = [];
+      for (const tab of ["core", "social", "science"] as const) {
+        const needed = wanted.filter((slot) =>
+          tab === "core"
+            ? slot.subject === "korean" || slot.subject === "math"
+            : slot.subject === tab,
+        );
+        if (!needed.length) continue;
+        await new Promise((resolve) => setTimeout(resolve, 500));
+        const fragment = await publicHtml(fetcher, FRAGMENT, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
+          body: new URLSearchParams({ examSeq: seq, tabNo: TAB[tab] }),
+        });
+        const observedAt = new Date();
+        collected.push(
+          ...(tab === "core"
+            ? parseMegaCoreFragment(fragment, exam, slots, observedAt)
+            : parseMegaInquiryFragment(fragment, exam, slots, observedAt, tab)),
+        );
+      }
+      return collected;
+    },
   };
 }
 

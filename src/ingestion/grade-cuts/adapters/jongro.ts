@@ -141,6 +141,41 @@ function courseLabelFor(
   return "";
 }
 
+function liveInquiryCourseFor(label: string, exam: WatchExam) {
+  const wanted = normalize(label);
+  const integratedCode =
+    wanted === "사회탐구"
+      ? "integrated-social"
+      : wanted === "과학탐구"
+        ? "integrated-science"
+        : null;
+  if (integratedCode) {
+    const item = COURSE_CATALOG.find((course) => course.code === integratedCode);
+    if (item && courseExpectation(item.code, exam) === "expected") return item;
+  }
+  return courseFor(label, null, exam);
+}
+
+function liveCourseLabelFor(
+  panel: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+  table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+) {
+  const submenu = panel.querySelector(".tab_subject02");
+  if (!submenu) return "";
+  const labels = submenu
+    .querySelectorAll("li")
+    .map((node) => visibleText(node))
+    .filter(Boolean);
+  if (labels.length === 0) return "";
+  const subpanel = panel.querySelectorAll("[id]").find((node) => {
+    const id = node.getAttribute("id") ?? "";
+    return /^tabCon\d+_\d+$/.test(id) && node.querySelectorAll("table").includes(table);
+  });
+  const match = /_(\d+)$/.exec(subpanel?.getAttribute("id") ?? "");
+  if (match) return labels[Number(match[1]) - 1] ?? "";
+  return labels.length === 1 ? labels[0]! : "";
+}
+
 export interface JongroParsedPage {
   rows: CollectedGradeCut[];
   isOfficial: false;
@@ -183,59 +218,86 @@ export function parseJongroResultCut(
       : null;
   if (!gradeCutTitle) return { rows: [], isOfficial: false };
 
-  const nav = root.querySelectorAll(".tabController01 li");
-  const navLabels = nav.map((node) => normalize(node.textContent));
-  const panels = root.querySelectorAll("[class*=tabCon]");
   const rows: CollectedGradeCut[] = [];
   const scoreBasis: "raw" | "standard" = allText.includes("표준점수를 토대로 원점수를 역산")
     ? "standard"
     : "raw";
+
+  const collectTable = (
+    table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+    tabLabel: string,
+    tabSubject: Subject,
+    courseLabel: string,
+    liveLayout: boolean,
+  ) => {
+    const cuts = parseTable(table);
+    if (!cuts) return;
+    const course =
+      tabLabel === "탐구"
+        ? liveLayout
+          ? liveInquiryCourseFor(courseLabel, exam)
+          : courseFor(courseLabel, null, exam)
+        : courseFor(courseLabel, tabSubject, exam);
+    const subject = course?.subject ?? tabSubject;
+    if (subject !== "korean" && subject !== "math" && subject !== "social" && subject !== "science")
+      return;
+    if (gradingMode(exam, subject) !== "relative") return;
+    let courseCode: string | null = null;
+    if (
+      subject === "social" ||
+      subject === "science" ||
+      (exam.grade === 3 && (subject === "korean" || subject === "math"))
+    ) {
+      if (!course) return;
+      courseCode = course.code;
+    }
+    rows.push({
+      subject,
+      courseCode,
+      cuts,
+      sourceUrl: url,
+      observedAt,
+      providerStatus: gradeCutTitle,
+      providerLabel: gradeCutTitle === "provider_final" ? "종로 최종" : "종로 예상",
+      observedVia: null,
+      firstParty: true,
+      scoreBasis,
+      parserVersion: PARSER_VERSION,
+    });
+  };
+
+  // Live Jongro pages use image-alt labels, #tabController01, and id-based tabCon panels.
+  const liveNavRoot = root.querySelector("#tabController01");
+  const liveNavLabels = liveNavRoot
+    ? liveNavRoot.querySelectorAll("li").map((node) => visibleText(node))
+    : [];
+  const livePanels = root
+    .querySelectorAll("[id]")
+    .filter((node) => /^tabCon\d+$/.test(node.getAttribute("id") ?? ""));
+  if (liveNavLabels.length > 0 && livePanels.length > 0) {
+    for (const [position, panel] of livePanels.entries()) {
+      const tabLabel = liveNavLabels[position];
+      const tabSubject = tabLabel ? SUBJECTS[tabLabel] : undefined;
+      if (!tabSubject || tabSubject === "english" || tabSubject === "history") continue;
+      for (const table of panel.querySelectorAll("table")) {
+        collectTable(table, tabLabel!, tabSubject, liveCourseLabelFor(panel, table), true);
+      }
+    }
+    if (rows.length > 0) return { rows, isOfficial: false };
+  }
+
+  // Legacy/minimal fixtures retain the class-based structure used by parser regression tests.
+  const nav = root.querySelectorAll(".tabController01 li");
+  const navLabels = nav.map((node) => normalize(node.textContent));
+  const panels = root.querySelectorAll("[class*=tabCon]");
   for (const panel of panels) {
     const index = panelIndex(panel.getAttribute("class") ?? "");
     if (index === null) continue;
     const tabLabel = navLabels[index - 1];
     const tabSubject = tabLabel ? SUBJECTS[tabLabel] : undefined;
-    if (!tabSubject || tabSubject === "english" || tabSubject === "history") continue;
-    const tableNodes = panel.querySelectorAll("table");
-    for (const table of tableNodes) {
-      const cuts = parseTable(table);
-      if (!cuts) continue;
-      const courseLabel = courseLabelFor(panel, table);
-      const course =
-        tabLabel === "탐구"
-          ? courseFor(courseLabel, null, exam)
-          : courseFor(courseLabel, tabSubject, exam);
-      const subject = course?.subject ?? tabSubject;
-      if (
-        subject !== "korean" &&
-        subject !== "math" &&
-        subject !== "social" &&
-        subject !== "science"
-      )
-        continue;
-      if (gradingMode(exam, subject) !== "relative") continue;
-      let courseCode: string | null = null;
-      if (
-        subject === "social" ||
-        subject === "science" ||
-        (exam.grade === 3 && (subject === "korean" || subject === "math"))
-      ) {
-        if (!course) continue;
-        courseCode = course.code;
-      }
-      rows.push({
-        subject,
-        courseCode,
-        cuts,
-        sourceUrl: url,
-        observedAt,
-        providerStatus: gradeCutTitle,
-        providerLabel: gradeCutTitle === "provider_final" ? "종로 최종" : "종로 예상",
-        observedVia: null,
-        firstParty: true,
-        scoreBasis,
-        parserVersion: PARSER_VERSION,
-      });
+    if (!tabLabel || !tabSubject || tabSubject === "english" || tabSubject === "history") continue;
+    for (const table of panel.querySelectorAll("table")) {
+      collectTable(table, tabLabel, tabSubject, courseLabelFor(panel, table), false);
     }
   }
   return { rows, isOfficial: false };

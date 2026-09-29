@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { decodeHtml, type FetchResult } from "../../src/ingestion/net/fetcher";
 
+// Mirrors Jongro's live response: HTTP omits charset while HTML declares EUC-KR.
 const cp949Html = new Uint8Array([
   60, 104, 116, 109, 108, 62, 60, 104, 101, 97, 100, 62, 60, 109, 101, 116, 97, 32, 99, 104, 97,
   114, 115, 101, 116, 61, 34, 101, 117, 99, 45, 107, 114, 34, 62, 60, 116, 105, 116, 108, 101, 62,

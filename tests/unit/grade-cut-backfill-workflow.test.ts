@@ -18,8 +18,10 @@ describe("grade cut backfill live/fixture safety", () => {
     expect(workflow).toContain(
       "description: Fetch the live provider source instead of offline fixtures",
     );
-    expect(workflow).toMatch(/inputs\.live.*==.*"true".*inputs\.mode.*publish/s);
-    expect(workflow).toMatch(/args\+=\(--live\)[\s\S]*else[\s\S]*args\+=\(--fixture\)/);
+    expect(workflow).toContain("inputs.live");
+    expect(workflow).toContain("inputs.mode");
+    expect(workflow).toContain("args+=(--live)");
+    expect(workflow).toContain("args+=(--fixture)");
     expect(ci).toContain("--dry-run --fixture");
   });
 

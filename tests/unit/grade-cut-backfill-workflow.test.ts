@@ -58,14 +58,14 @@ describe("grade cut backfill live/fixture safety", () => {
     expect(resolveGradeCutFetcherMode({ mode: "publish", live: true, fixture: false })).toBe(
       "live",
     );
-    expect(cli).toContain("if (publish) {\\n      for (const value of normalized)");
+    expect(cli).toContain("if (publish) {\n      for (const value of normalized)");
     expect(cli).toContain("INGESTION_DATABASE_URL is required before publish mode starts");
     expect(workflow).toContain("INGESTION_DATABASE_URL is required for publish.");
   });
 
   it("dry-run reports zero persistence because writes are publish-gated", () => {
     expect(cli).toContain("let persisted = 0;");
-    expect(cli).toContain("if (publish) {\\n      for (const value of normalized)");
+    expect(cli).toContain("if (publish) {\n      for (const value of normalized)");
     expect(cli).toContain("persisted,");
   });
 });

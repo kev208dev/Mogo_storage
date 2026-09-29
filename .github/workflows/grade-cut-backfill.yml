@@ -69,5 +69,7 @@ jobs:
           args+=(--source="${{ inputs.source }}")
           if [[ "${{ inputs.live }}" == "true" || "${{ inputs.mode }}" == "publish" ]]; then
             args+=(--live)
+          else
+            args+=(--fixture)
           fi
           npm run grade-cuts:backfill -- "${args[@]}"

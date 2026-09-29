@@ -45,7 +45,7 @@ if (!Number.isInteger(limit) || limit < 1 || limit > 500) throw new Error("inval
 if (publish === dryRun) throw new Error("choose exactly one of --dry-run or --publish");
 if (publish && !process.env.INGESTION_DATABASE_URL)
   throw new Error("INGESTION_DATABASE_URL is required before publish mode starts");
-const fetchMode = resolveGradeCutFetcherMode({ mode: publish ? "publish" : "dry-run", live, fixture });
+const fetchMode = resolveGradeCutFetcherMode({\n  mode: publish ? "publish" : "dry-run",\n  live,\n  fixture,\n});
 
 const adapters: Record<string, GradeCutAdapter> = {
   jongro: jongroAdapter,

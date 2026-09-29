@@ -1,0 +1,111 @@
+name: Apply Jongro charset fix
+
+on:
+  push:
+    branches:
+      - fix/jongro-euc-kr-meta-charset
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/jongro-euc-kr-meta-charset
+      - name: Patch HTML charset detection and add regression test
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+
+          path = Path('src/ingestion/net/fetcher.ts')
+          text = path.read_text()
+          old = '''export function decodeHtml(result: FetchResult): string {
+            const charset = /charset=([\\w-]+)/i.exec(result.contentType)?.[1]?.toLowerCase();
+            try {
+              return new TextDecoder(
+                charset === "euc-kr" || charset === "ks_c_5601-1987" ? "euc-kr" : (charset ?? "utf-8"),
+              ).decode(result.bytes);
+            } catch {
+              return new TextDecoder("utf-8").decode(result.bytes);
+            }
+          }
+          '''
+          new = '''function htmlMetaCharset(bytes: Uint8Array): string | null {
+            // HTML encoding declarations are ASCII-compatible, so the first few KB can be
+            // inspected safely before the document encoding itself is known.
+            const head = new TextDecoder("latin1").decode(bytes.subarray(0, 8 * 1024));
+            return /<meta\\b[^>]*charset\\s*=\\s*["']?\\s*([\\w-]+)/i.exec(head)?.[1]?.toLowerCase() ?? null;
+          }
+
+          function decoderLabel(charset: string | null): string {
+            if (charset === "euc-kr" || charset === "cp949" || charset === "ks_c_5601-1987") {
+              return "euc-kr";
+            }
+            return charset ?? "utf-8";
+          }
+
+          export function decodeHtml(result: FetchResult): string {
+            const headerCharset = /charset=([\\w-]+)/i.exec(result.contentType)?.[1]?.toLowerCase() ?? null;
+            const charset = headerCharset ?? htmlMetaCharset(result.bytes);
+            try {
+              return new TextDecoder(decoderLabel(charset)).decode(result.bytes);
+            } catch {
+              return new TextDecoder("utf-8").decode(result.bytes);
+            }
+          }
+          '''
+          if old not in text:
+              raise SystemExit('expected decodeHtml block not found')
+          path.write_text(text.replace(old, new))
+          PY
+
+          cat > tests/unit/html-decode.test.ts <<'EOF'
+          import { describe, expect, it } from "vitest";
+          import { decodeHtml, type FetchResult } from "../../src/ingestion/net/fetcher";
+
+          const cp949Html = new Uint8Array([
+            60, 104, 116, 109, 108, 62, 60, 104, 101, 97, 100, 62, 60, 109, 101, 116, 97, 32,
+            99, 104, 97, 114, 115, 101, 116, 61, 34, 101, 117, 99, 45, 107, 114, 34, 62, 60,
+            116, 105, 116, 108, 101, 62, 193, 190, 183, 206, 199, 208, 191, 248, 60, 47, 116,
+            105, 116, 108, 101, 62, 60, 47, 104, 101, 97, 100, 62, 60, 98, 111, 100, 121, 62,
+            50, 48, 50, 54, 179, 226, 32, 176, 237, 49, 32, 57, 46, 50, 32, 200, 174, 193,
+            164, 32, 181, 238, 177, 222, 196, 198, 60, 47, 98, 111, 100, 121, 62, 60, 47, 104,
+            116, 109, 108, 62,
+          ]);
+
+          function result(contentType: string, bytes = cp949Html): FetchResult {
+            return {
+              url: "https://www.jongro.co.kr/example",
+              status: 200,
+              contentType,
+              headers: new Headers(),
+              bytes,
+            };
+          }
+
+          describe("decodeHtml", () => {
+            it("uses an EUC-KR meta charset when the HTTP Content-Type omits charset", () => {
+              const html = decodeHtml(result("text/html"));
+              expect(html).toContain("종로학원");
+              expect(html).toContain("2026년 고1 9.2 확정 등급컷");
+            });
+
+            it("keeps the HTTP charset authoritative when one is provided", () => {
+              const bytes = new TextEncoder().encode(
+                '<meta charset="euc-kr"><title>UTF-8 정상</title>',
+              );
+              expect(decodeHtml(result("text/html; charset=utf-8", bytes))).toContain("UTF-8 정상");
+            });
+          });
+          EOF
+
+          rm .github/workflows/apply-jongro-charset-fix.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/ingestion/net/fetcher.ts tests/unit/html-decode.test.ts .github/workflows/apply-jongro-charset-fix.yml
+          git commit -m "fix: decode Jongro EUC-KR from HTML meta charset"
+          git push origin HEAD:fix/jongro-euc-kr-meta-charset

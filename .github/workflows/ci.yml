@@ -44,7 +44,7 @@ jobs:
       - run: DATABASE_URL=$DATABASE_URL_TEST npm run db:migrate:prod
       - run: npm test
       # Provider-specific backfill command: fixture fetch → parse → normalize → validate (no production DB).
-      - run: npm run grade-cuts:backfill -- --source=jongro --year=2026 --dry-run
+      - run: npm run grade-cuts:backfill -- --source=jongro --year=2026 --dry-run --fixture
       # 저장된 실제 source fixture 를 parser 에 통과 (네트워크 없음, fixture 가 없으면 통과)
       - run: npm run ingest:fixtures:validate
       - run: npm run build

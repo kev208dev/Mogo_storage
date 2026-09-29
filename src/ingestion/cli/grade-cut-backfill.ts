@@ -9,6 +9,7 @@ import { validateGradeCut } from "../grade-cuts/validate";
 import { jongroAdapter, createJongroAdapter } from "../grade-cuts/adapters/jongro";
 import { megaStudyAdapter } from "../grade-cuts/adapters/megastudy";
 import { FixtureFetcher } from "../net/fixture-fetcher";
+import { resolveGradeCutFetcherMode } from "./grade-cut-backfill-mode";
 
 function option(name: string): string | null {
   const exact = "--" + name + "=";
@@ -28,6 +29,7 @@ const limit = Number(option("limit") ?? "50");
 const publish = process.argv.includes("--publish");
 const dryRun = process.argv.includes("--dry-run");
 const live = process.argv.includes("--live");
+const fixture = process.argv.includes("--fixture");
 
 if (!source || !["jongro", "megastudy"].includes(source))
   throw new Error("--source must be jongro or megastudy");
@@ -43,6 +45,11 @@ if (!Number.isInteger(limit) || limit < 1 || limit > 500) throw new Error("inval
 if (publish === dryRun) throw new Error("choose exactly one of --dry-run or --publish");
 if (publish && !process.env.INGESTION_DATABASE_URL)
   throw new Error("INGESTION_DATABASE_URL is required before publish mode starts");
+const fetchMode = resolveGradeCutFetcherMode({
+  mode: publish ? "publish" : "dry-run",
+  live,
+  fixture,
+});
 
 const adapters: Record<string, GradeCutAdapter> = {
   jongro: jongroAdapter,
@@ -166,11 +173,11 @@ async function main() {
   }
 
   const fixtureRoutes: Record<string, string> = {};
-  if (!live && !publish && (source !== "jongro" || examsToProcess.length === 0))
+  if (fetchMode === "fixture" && (source !== "jongro" || examsToProcess.length === 0))
     throw new Error(
       "no offline fixtures match these filters; use the supported 2026 September Jongro fixture or pass --live",
     );
-  if (source === "jongro" && !live && !publish) {
+  if (source === "jongro" && fetchMode === "fixture") {
     for (const exam of examsToProcess) {
       fixtureRoutes[
         "https://www.jongro.co.kr/service/examResult/ex" +

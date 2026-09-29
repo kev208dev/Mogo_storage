@@ -8,6 +8,11 @@ on:
         options: [dry-run, publish]
         default: dry-run
         required: true
+      live:
+        type: boolean
+        default: true
+        description: Fetch the live provider source instead of offline fixtures
+        required: true
       year:
         type: string
         default: "2026"
@@ -56,9 +61,15 @@ jobs:
             exit 1
           fi
       - name: Backfill
+        shell: bash
         run: |
           args=(--year="${{ inputs.year }}" --limit="${{ inputs.limit }}" --"${{ inputs.mode }}")
           [ -z "${{ inputs.grade }}" ] || args+=(--grade="${{ inputs.grade }}")
           [ -z "${{ inputs.month }}" ] || args+=(--month="${{ inputs.month }}")
           args+=(--source="${{ inputs.source }}")
+          if [[ "${{ inputs.live }}" == "true" || "${{ inputs.mode }}" == "publish" ]]; then
+            args+=(--live)
+          else
+            args+=(--fixture)
+          fi
           npm run grade-cuts:backfill -- "${args[@]}"

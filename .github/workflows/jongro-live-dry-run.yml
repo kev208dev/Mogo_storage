@@ -1,0 +1,25 @@
+name: Jongro live dry-run diagnostic
+
+on:
+  push:
+    branches:
+      - diag/jongro-live-dry-run-20260929
+
+permissions:
+  contents: read
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      INGESTION_DATABASE_URL: ${{ secrets.INGESTION_DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Jongro 2026 high1 September live dry-run
+        run: npm run grade-cuts:backfill -- --source=jongro --year=2026 --grade=1 --month=9 --limit=10 --dry-run --live

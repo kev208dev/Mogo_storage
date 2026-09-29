@@ -29,6 +29,7 @@ const limit = Number(option("limit") ?? "50");
 const publish = process.argv.includes("--publish");
 const dryRun = process.argv.includes("--dry-run");
 const live = process.argv.includes("--live");
+const fixture = process.argv.includes("--fixture");
 
 if (!source || !["jongro", "megastudy"].includes(source))
   throw new Error("--source must be jongro or megastudy");
@@ -44,7 +45,7 @@ if (!Number.isInteger(limit) || limit < 1 || limit > 500) throw new Error("inval
 if (publish === dryRun) throw new Error("choose exactly one of --dry-run or --publish");
 if (publish && !process.env.INGESTION_DATABASE_URL)
   throw new Error("INGESTION_DATABASE_URL is required before publish mode starts");
-const fetchMode = resolveGradeCutFetcherMode({ mode: publish ? "publish" : "dry-run", live });
+const fetchMode = resolveGradeCutFetcherMode({ mode: publish ? "publish" : "dry-run", live, fixture });
 
 const adapters: Record<string, GradeCutAdapter> = {
   jongro: jongroAdapter,

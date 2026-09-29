@@ -39,20 +39,35 @@ jobs:
           const response = await fetcher.fetch(url, { accept: "text/html", maxBytes: 1_000_000 });
           const html = decodeHtml(response);
           const root = parse(html);
-          const text = (s) => s.replace(/\s+/g, " ").trim().slice(0, 160);
-          const tables = root.querySelectorAll("table");
+          const clean = (s, n = 220) => String(s ?? "").replace(/\s+/g, " ").trim().slice(0, n);
+          const visible = (node) => clean(node.textContent + " " + node.querySelectorAll("img").map((img) => img.getAttribute("alt") ?? "").join(" "));
+          const elementInfo = (node) => ({
+            tag: node?.rawTagName ?? null,
+            id: node?.getAttribute?.("id") ?? "",
+            className: node?.getAttribute?.("class") ?? "",
+            text: node?.textContent ? clean(node.textContent) : "",
+            alts: node?.querySelectorAll ? node.querySelectorAll("img").map((img) => clean(img.getAttribute("alt") ?? "")).filter(Boolean).slice(0, 20) : [],
+          });
+          const tables = root.querySelectorAll("table.view_data01");
           const summary = {
-            contentType: response.contentType,
-            tabController01: root.querySelectorAll(".tabController01 li").map((n) => text(n.textContent)),
-            classCandidates: [...new Set(root.querySelectorAll("[class]").map((n) => n.getAttribute("class") ?? "").filter((c) => /tab|cut|grade|result/i.test(c)))].slice(0, 80),
-            tableCount: tables.length,
-            tables: tables.slice(0, 30).map((table, index) => ({
-              index,
-              className: table.getAttribute("class") ?? "",
-              id: table.getAttribute("id") ?? "",
-              caption: text(table.querySelector("caption")?.textContent ?? ""),
-              firstRows: table.querySelectorAll("tr").slice(0, 4).map((row) => row.querySelectorAll("th,td").map((c) => text(c.textContent))),
-            })),
+            subjectMenus: root.querySelectorAll(".tab_subject01, .tab_subject02").map((n) => elementInfo(n)),
+            tables: tables.map((table, index) => {
+              const parent = table.parentNode;
+              const grand = parent?.parentNode;
+              const siblings = parent?.childNodes?.filter((n) => n.rawTagName).map((n) => elementInfo(n)).slice(0, 20) ?? [];
+              return {
+                index,
+                table: elementInfo(table),
+                parent: elementInfo(parent),
+                grandparent: elementInfo(grand),
+                siblings,
+                firstRows: table.querySelectorAll("tr").slice(0, 5).map((row) => row.querySelectorAll("th,td").map((cell) => ({
+                  text: clean(cell.textContent),
+                  visible: visible(cell),
+                  alts: cell.querySelectorAll("img").map((img) => clean(img.getAttribute("alt") ?? "")).filter(Boolean),
+                }))),
+              };
+            }),
           };
           console.log(JSON.stringify(summary, null, 2));
           NODE

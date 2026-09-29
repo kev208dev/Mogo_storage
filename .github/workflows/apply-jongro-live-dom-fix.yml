@@ -1,0 +1,330 @@
+name: Apply Jongro live DOM parser fix
+
+on:
+  push:
+    branches:
+      - fix/jongro-live-dom-parser
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/jongro-live-dom-parser
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Patch parser and tests
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+
+          adapter = Path('src/ingestion/grade-cuts/adapters/jongro.ts')
+          text = adapter.read_text()
+
+          marker = '''function courseLabelFor(
+            panel: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+            table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+          ) {
+            const tagged = table.getAttribute("data-course") ?? table.getAttribute("data-subject");
+            if (tagged) return tagged;
+            const caption = table.querySelector("caption");
+            if (caption) return caption.textContent;
+            const active = panel.querySelectorAll(
+              ".tabController02 .on, .tabController02_01 .on, .tabController02_02 .on",
+            );
+            if (active.length === 1) return active[0]!.textContent;
+            return "";
+          }
+          '''
+          addition = marker + '''
+          function liveInquiryCourseFor(label: string, exam: WatchExam) {
+            const wanted = normalize(label);
+            const integratedCode =
+              wanted === "사회탐구"
+                ? "integrated-social"
+                : wanted === "과학탐구"
+                  ? "integrated-science"
+                  : null;
+            if (integratedCode) {
+              const item = COURSE_CATALOG.find((course) => course.code === integratedCode);
+              if (item && courseExpectation(item.code, exam) === "expected") return item;
+            }
+            return courseFor(label, null, exam);
+          }
+
+          function liveCourseLabelFor(
+            panel: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+            table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+          ) {
+            const submenu = panel.querySelector(".tab_subject02");
+            if (!submenu) return "";
+            const labels = submenu
+              .querySelectorAll("li")
+              .map((node) => visibleText(node))
+              .filter(Boolean);
+            if (labels.length === 0) return "";
+            const subpanel = panel.querySelectorAll("[id]").find((node) => {
+              const id = node.getAttribute("id") ?? "";
+              return /^tabCon\\d+_\\d+$/.test(id) && node.querySelectorAll("table").includes(table);
+            });
+            const match = /_(\\d+)$/.exec(subpanel?.getAttribute("id") ?? "");
+            if (match) return labels[Number(match[1]) - 1] ?? "";
+            return labels.length === 1 ? labels[0]! : "";
+          }
+          '''
+          if marker not in text:
+              raise SystemExit('courseLabelFor marker not found')
+          text = text.replace(marker, addition, 1)
+
+          old = '''  const nav = root.querySelectorAll(".tabController01 li");
+            const navLabels = nav.map((node) => normalize(node.textContent));
+            const panels = root.querySelectorAll("[class*=tabCon]");
+            const rows: CollectedGradeCut[] = [];
+            const scoreBasis: "raw" | "standard" = allText.includes("표준점수를 토대로 원점수를 역산")
+              ? "standard"
+              : "raw";
+            for (const panel of panels) {
+              const index = panelIndex(panel.getAttribute("class") ?? "");
+              if (index === null) continue;
+              const tabLabel = navLabels[index - 1];
+              const tabSubject = tabLabel ? SUBJECTS[tabLabel] : undefined;
+              if (!tabSubject || tabSubject === "english" || tabSubject === "history") continue;
+              const tableNodes = panel.querySelectorAll("table");
+              for (const table of tableNodes) {
+                const cuts = parseTable(table);
+                if (!cuts) continue;
+                const courseLabel = courseLabelFor(panel, table);
+                const course =
+                  tabLabel === "탐구"
+                    ? courseFor(courseLabel, null, exam)
+                    : courseFor(courseLabel, tabSubject, exam);
+                const subject = course?.subject ?? tabSubject;
+                if (
+                  subject !== "korean" &&
+                  subject !== "math" &&
+                  subject !== "social" &&
+                  subject !== "science"
+                )
+                  continue;
+                if (gradingMode(exam, subject) !== "relative") continue;
+                let courseCode: string | null = null;
+                if (
+                  subject === "social" ||
+                  subject === "science" ||
+                  (exam.grade === 3 && (subject === "korean" || subject === "math"))
+                ) {
+                  if (!course) continue;
+                  courseCode = course.code;
+                }
+                rows.push({
+                  subject,
+                  courseCode,
+                  cuts,
+                  sourceUrl: url,
+                  observedAt,
+                  providerStatus: gradeCutTitle,
+                  providerLabel: gradeCutTitle === "provider_final" ? "종로 최종" : "종로 예상",
+                  observedVia: null,
+                  firstParty: true,
+                  scoreBasis,
+                  parserVersion: PARSER_VERSION,
+                });
+              }
+            }
+            return { rows, isOfficial: false };
+          }
+          '''
+          new = '''  const rows: CollectedGradeCut[] = [];
+            const scoreBasis: "raw" | "standard" = allText.includes("표준점수를 토대로 원점수를 역산")
+              ? "standard"
+              : "raw";
+
+            const collectTable = (
+              table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
+              tabLabel: string,
+              tabSubject: Subject,
+              courseLabel: string,
+              liveLayout: boolean,
+            ) => {
+              const cuts = parseTable(table);
+              if (!cuts) return;
+              const course =
+                tabLabel === "탐구"
+                  ? liveLayout
+                    ? liveInquiryCourseFor(courseLabel, exam)
+                    : courseFor(courseLabel, null, exam)
+                  : courseFor(courseLabel, tabSubject, exam);
+              const subject = course?.subject ?? tabSubject;
+              if (
+                subject !== "korean" &&
+                subject !== "math" &&
+                subject !== "social" &&
+                subject !== "science"
+              )
+                return;
+              if (gradingMode(exam, subject) !== "relative") return;
+              let courseCode: string | null = null;
+              if (
+                subject === "social" ||
+                subject === "science" ||
+                (exam.grade === 3 && (subject === "korean" || subject === "math"))
+              ) {
+                if (!course) return;
+                courseCode = course.code;
+              }
+              rows.push({
+                subject,
+                courseCode,
+                cuts,
+                sourceUrl: url,
+                observedAt,
+                providerStatus: gradeCutTitle,
+                providerLabel: gradeCutTitle === "provider_final" ? "종로 최종" : "종로 예상",
+                observedVia: null,
+                firstParty: true,
+                scoreBasis,
+                parserVersion: PARSER_VERSION,
+              });
+            };
+
+            // Live Jongro pages use image-alt labels, #tabController01, and id-based tabCon panels.
+            const liveNavRoot = root.querySelector("#tabController01");
+            const liveNavLabels = liveNavRoot
+              ? liveNavRoot.querySelectorAll("li").map((node) => visibleText(node))
+              : [];
+            const livePanels = root
+              .querySelectorAll("[id]")
+              .filter((node) => /^tabCon\\d+$/.test(node.getAttribute("id") ?? ""));
+            if (liveNavLabels.length > 0 && livePanels.length > 0) {
+              for (const [position, panel] of livePanels.entries()) {
+                const tabLabel = liveNavLabels[position];
+                const tabSubject = tabLabel ? SUBJECTS[tabLabel] : undefined;
+                if (!tabSubject || tabSubject === "english" || tabSubject === "history") continue;
+                for (const table of panel.querySelectorAll("table")) {
+                  collectTable(
+                    table,
+                    tabLabel!,
+                    tabSubject,
+                    liveCourseLabelFor(panel, table),
+                    true,
+                  );
+                }
+              }
+              if (rows.length > 0) return { rows, isOfficial: false };
+            }
+
+            // Legacy/minimal fixtures retain the class-based structure used by parser regression tests.
+            const nav = root.querySelectorAll(".tabController01 li");
+            const navLabels = nav.map((node) => normalize(node.textContent));
+            const panels = root.querySelectorAll("[class*=tabCon]");
+            for (const panel of panels) {
+              const index = panelIndex(panel.getAttribute("class") ?? "");
+              if (index === null) continue;
+              const tabLabel = navLabels[index - 1];
+              const tabSubject = tabLabel ? SUBJECTS[tabLabel] : undefined;
+              if (!tabLabel || !tabSubject || tabSubject === "english" || tabSubject === "history") continue;
+              for (const table of panel.querySelectorAll("table")) {
+                collectTable(table, tabLabel, tabSubject, courseLabelFor(panel, table), false);
+              }
+            }
+            return { rows, isOfficial: false };
+          }
+          '''
+          if old not in text:
+              raise SystemExit('parser block not found')
+          adapter.write_text(text.replace(old, new, 1))
+
+          tests = Path('tests/unit/grade-cut-jongro.test.ts')
+          t = tests.read_text()
+          anchor = '''const url = (grade: number) =>
+            "https://www.jongro.co.kr/service/examResult/ex20260902/go" + grade + "_resultCut.asp";
+          '''
+          live_fixture = anchor + '''
+
+          const liveTable = (max: [number, number, number], first: [number, number, number]) => `
+            <table class="view_data01">
+              <caption>영역별 등급컷</caption>
+              <tr><th><img alt="등급"></th><th><img alt="원점수"></th><th><img alt="표준점수"></th><th><img alt="백분위"></th></tr>
+              <tr><td><img alt="0등급"></td><td>${max[0]}</td><td>${max[1]}</td><td>${max[2]}</td></tr>
+              <tr><td><img alt="1등급"></td><td>${first[0]}</td><td>${first[1]}</td><td>${first[2]}</td></tr>
+            </table>`;
+
+          const liveLayoutFixture = `
+            <html><body>
+              <h1>2026년 고1 9.2 확정 등급컷</h1>
+              <p>표준점수를 토대로 원점수를 역산</p>
+              <ul id="tabController01" class="mlist01 tab_subject01">
+                <li><img alt="국어"></li><li><img alt="수학"></li><li><img alt="영어"></li><li><img alt="한국사"></li><li><img alt="탐구"></li>
+              </ul>
+              <div id="tabCon01"><ul class="mlist02 tab_subject02"><li><img alt="국어"></li></ul><div id="tabCon01_01">${liveTable([100, 149, 100], [87, 137, 96])}</div></div>
+              <div id="tabCon02"><ul class="mlist02 tab_subject02"><li><img alt="수학"></li></ul><div id="tabCon02_01">${liveTable([100, 151, 100], [84, 137, 96])}</div></div>
+              <div id="tabCon03"><ul class="mlist02 tab_subject02"><li><img alt="영어"></li></ul><div id="tabCon03_01">${liveTable([100, 0, 0], [90, 0, 0])}</div></div>
+              <div id="tabCon05"><ul class="mlist02 tab_subject02"><li><img alt="한국사"></li></ul><div id="tabCon05_01">${liveTable([50, 0, 0], [40, 0, 0])}</div></div>
+              <div id="tabCon06">
+                <ul class="mlist02 tab_subject02"><li><img alt="사회탐구"></li><li><img alt="과학탐구"></li></ul>
+                <div id="tabCon06_01">${liveTable([50, 70, 100], [43.5, 64, 96])}</div>
+                <div id="tabCon06_02">${liveTable([50, 70, 99], [47, 68, 96])}</div>
+              </div>
+            </body></html>`;
+          '''
+          if anchor not in t:
+              raise SystemExit('test anchor not found')
+          t = t.replace(anchor, live_fixture, 1)
+          test_anchor = '''  it("parses high school 2 estimate rows and preserves 42.5 without a maximum row", () => {
+          '''
+          live_test = '''  it("parses the live id-based DOM layout and image-alt labels", () => {
+            const result = parseJongroResultCut(liveLayoutFixture, exam(1), url(1));
+            expect(result.rows).toHaveLength(4);
+            expect(result.rows).toEqual(
+              expect.arrayContaining([
+                expect.objectContaining({
+                  subject: "korean",
+                  courseCode: null,
+                  cuts: expect.arrayContaining([
+                    expect.objectContaining({ grade: 1, rawScore: 87, standardScore: 137, percentile: 96 }),
+                  ]),
+                }),
+                expect.objectContaining({
+                  subject: "math",
+                  courseCode: null,
+                  cuts: expect.arrayContaining([expect.objectContaining({ grade: 1, rawScore: 84 })]),
+                }),
+                expect.objectContaining({
+                  subject: "social",
+                  courseCode: "integrated-social",
+                  cuts: expect.arrayContaining([expect.objectContaining({ grade: 1, rawScore: 43.5 })]),
+                }),
+                expect.objectContaining({
+                  subject: "science",
+                  courseCode: "integrated-science",
+                  cuts: expect.arrayContaining([expect.objectContaining({ grade: 1, rawScore: 47 })]),
+                }),
+              ]),
+            );
+            expect(result.rows.every((row) => row.cuts.every((cut) => cut.grade !== 0))).toBe(true);
+            expect(result.rows.every((row) => row.providerStatus === "provider_final")).toBe(true);
+          });
+
+          ''' + test_anchor
+          if test_anchor not in t:
+              raise SystemExit('test insertion anchor not found')
+          tests.write_text(t.replace(test_anchor, live_test, 1))
+          PY
+
+          npx prettier --write src/ingestion/grade-cuts/adapters/jongro.ts tests/unit/grade-cut-jongro.test.ts
+          npm run typecheck
+          npm test -- --run tests/unit/grade-cut-jongro.test.ts
+          rm .github/workflows/apply-jongro-live-dom-fix.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/ingestion/grade-cuts/adapters/jongro.ts tests/unit/grade-cut-jongro.test.ts .github/workflows/apply-jongro-live-dom-fix.yml
+          git commit -m "fix: parse Jongro live tab DOM"
+          git push origin HEAD:fix/jongro-live-dom-parser

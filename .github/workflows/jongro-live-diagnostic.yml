@@ -29,17 +29,20 @@ jobs:
           });
           const bytes = new Uint8Array(await res.arrayBuffer());
           const contentType = res.headers.get("content-type") ?? "";
-          const encoding = /(?:euc-kr|cp949|ks_c_5601-1987)/i.test(contentType) ? "euc-kr" : "utf-8";
+          const ascii = Buffer.from(bytes).subarray(0, 8192).toString("latin1");
+          const metaCharset = ascii.match(/<meta[^>]+charset\s*=\s*["']?([^\s"'/>;]+)/i)?.[1] ?? ascii.match(/<meta[^>]+content\s*=\s*["'][^"']*charset=([^\s"';>]+)/i)?.[1] ?? null;
+          const declaredEncoding = /charset=([\w-]+)/i.exec(contentType)?.[1] ?? null;
+          const encoding = /^(?:euc-kr|cp949|ks_c_5601-1987)$/i.test(declaredEncoding ?? metaCharset ?? "") ? "euc-kr" : "utf-8";
           const html = new TextDecoder(encoding, { fatal: false }).decode(bytes);
           const text = html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&nbsp;/gi, " ").replace(/\s+/g, " ").trim();
           const title = (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-          const alts = [...html.matchAll(/<img\b[^>]*\balt\s*=\s*["']([^"']*)["'][^>]*>/gi)].map((m) => m[1].replace(/\s+/g, " ").trim()).filter(Boolean);
-          const interestingAlts = alts.filter((x) => /2026|고\s*1|9\s*[월.]|등급컷/.test(x)).slice(0, 20);
           console.log(JSON.stringify({
             status: res.status,
             finalUrl: res.url,
             contentType,
-            encoding,
+            declaredEncoding,
+            metaCharset,
+            chosenEncoding: encoding,
             title,
             markers: {
               year: text.includes("2026년"),
@@ -50,7 +53,6 @@ jobs:
               finalCut: text.includes("확정 등급컷"),
               rawCut: text.includes("등급컷"),
             },
-            interestingAlts,
           }, null, 2));
           if (!res.ok) process.exitCode = 1;
           NODE

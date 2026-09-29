@@ -1,0 +1,58 @@
+name: Jongro live structure diagnostic
+
+on:
+  push:
+    branches:
+      - diag/jongro-live-dry-run-20260929
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Inspect live Jongro DOM structure
+        shell: bash
+        run: |
+          node --import tsx --input-type=module <<'NODE'
+          import { parse } from "node-html-parser";
+          import { SafeFetcher, decodeHtml } from "./src/ingestion/net/fetcher.ts";
+
+          const url = "https://www.jongro.co.kr/service/examResult/ex20260902/go1_resultCut.asp";
+          const fetcher = new SafeFetcher({
+            policy: { allowedHosts: ["www.jongro.co.kr"], allowHttp: false },
+            timeoutMs: 15000,
+            maxConcurrent: 1,
+            minGapMs: 2000,
+            maxRetries: 2,
+            userAgent: "MogoStorageGradeCutWatch/1.0 (+https://mogo-storage.vercel.app)",
+            respectRobots: true,
+          });
+          const response = await fetcher.fetch(url, { accept: "text/html", maxBytes: 1_000_000 });
+          const html = decodeHtml(response);
+          const root = parse(html);
+          const text = (s) => s.replace(/\s+/g, " ").trim().slice(0, 160);
+          const tables = root.querySelectorAll("table");
+          const summary = {
+            contentType: response.contentType,
+            tabController01: root.querySelectorAll(".tabController01 li").map((n) => text(n.textContent)),
+            classCandidates: [...new Set(root.querySelectorAll("[class]").map((n) => n.getAttribute("class") ?? "").filter((c) => /tab|cut|grade|result/i.test(c)))].slice(0, 80),
+            tableCount: tables.length,
+            tables: tables.slice(0, 30).map((table, index) => ({
+              index,
+              className: table.getAttribute("class") ?? "",
+              id: table.getAttribute("id") ?? "",
+              caption: text(table.querySelector("caption")?.textContent ?? ""),
+              firstRows: table.querySelectorAll("tr").slice(0, 4).map((row) => row.querySelectorAll("th,td").map((c) => text(c.textContent))),
+            })),
+          };
+          console.log(JSON.stringify(summary, null, 2));
+          NODE

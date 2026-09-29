@@ -23,6 +23,32 @@ const fixture = (grade: 1 | 2 | 3) =>
 const url = (grade: number) =>
   "https://www.jongro.co.kr/service/examResult/ex20260902/go" + grade + "_resultCut.asp";
 
+const liveTable = (max: [number, number, number], first: [number, number, number]) => `
+  <table class="view_data01">
+    <caption>영역별 등급컷</caption>
+    <tr><th><img alt="등급"></th><th><img alt="원점수"></th><th><img alt="표준점수"></th><th><img alt="백분위"></th></tr>
+    <tr><td><img alt="0등급"></td><td>${max[0]}</td><td>${max[1]}</td><td>${max[2]}</td></tr>
+    <tr><td><img alt="1등급"></td><td>${first[0]}</td><td>${first[1]}</td><td>${first[2]}</td></tr>
+  </table>`;
+
+const liveLayoutFixture = `
+  <html><body>
+    <h1>2026년 고1 9.2 확정 등급컷</h1>
+    <p>표준점수를 토대로 원점수를 역산</p>
+    <ul id="tabController01" class="mlist01 tab_subject01">
+      <li><img alt="국어"></li><li><img alt="수학"></li><li><img alt="영어"></li><li><img alt="한국사"></li><li><img alt="탐구"></li>
+    </ul>
+    <div id="tabCon01"><ul class="mlist02 tab_subject02"><li><img alt="국어"></li></ul><div id="tabCon01_01">${liveTable([100, 149, 100], [87, 137, 96])}</div></div>
+    <div id="tabCon02"><ul class="mlist02 tab_subject02"><li><img alt="수학"></li></ul><div id="tabCon02_01">${liveTable([100, 151, 100], [84, 137, 96])}</div></div>
+    <div id="tabCon03"><ul class="mlist02 tab_subject02"><li><img alt="영어"></li></ul><div id="tabCon03_01">${liveTable([100, 0, 0], [90, 0, 0])}</div></div>
+    <div id="tabCon05"><ul class="mlist02 tab_subject02"><li><img alt="한국사"></li></ul><div id="tabCon05_01">${liveTable([50, 0, 0], [40, 0, 0])}</div></div>
+    <div id="tabCon06">
+      <ul class="mlist02 tab_subject02"><li><img alt="사회탐구"></li><li><img alt="과학탐구"></li></ul>
+      <div id="tabCon06_01">${liveTable([50, 70, 100], [43.5, 64, 96])}</div>
+      <div id="tabCon06_02">${liveTable([50, 70, 99], [47, 68, 96])}</div>
+    </div>
+  </body></html>`;
+
 describe("Jongro grade-cut parser fixtures", () => {
   it("parses high school 1 raw, decimal, standard, percentile and integrated course rows", () => {
     expect(jongroAdapter.source).toBe("jongro");
@@ -50,6 +76,39 @@ describe("Jongro grade-cut parser fixtures", () => {
         expect.objectContaining({ subject: "science", courseCode: "integrated-science" }),
       ]),
     );
+  });
+
+  it("parses the live id-based DOM layout and image-alt labels", () => {
+    const result = parseJongroResultCut(liveLayoutFixture, exam(1), url(1));
+    expect(result.rows).toHaveLength(4);
+    expect(result.rows).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          subject: "korean",
+          courseCode: null,
+          cuts: expect.arrayContaining([
+            expect.objectContaining({ grade: 1, rawScore: 87, standardScore: 137, percentile: 96 }),
+          ]),
+        }),
+        expect.objectContaining({
+          subject: "math",
+          courseCode: null,
+          cuts: expect.arrayContaining([expect.objectContaining({ grade: 1, rawScore: 84 })]),
+        }),
+        expect.objectContaining({
+          subject: "social",
+          courseCode: "integrated-social",
+          cuts: expect.arrayContaining([expect.objectContaining({ grade: 1, rawScore: 43.5 })]),
+        }),
+        expect.objectContaining({
+          subject: "science",
+          courseCode: "integrated-science",
+          cuts: expect.arrayContaining([expect.objectContaining({ grade: 1, rawScore: 47 })]),
+        }),
+      ]),
+    );
+    expect(result.rows.every((row) => row.cuts.every((cut) => cut.grade !== 0))).toBe(true);
+    expect(result.rows.every((row) => row.providerStatus === "provider_final")).toBe(true);
   });
 
   it("parses high school 2 estimate rows and preserves 42.5 without a maximum row", () => {

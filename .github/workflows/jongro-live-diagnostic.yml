@@ -1,0 +1,55 @@
+name: Jongro live identity diagnostic
+
+on:
+  push:
+    branches:
+      - diag/jongro-live-identity-20260929
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Inspect safe page identity metadata
+        shell: bash
+        run: |
+          node <<'NODE'
+          const url = "https://www.jongro.co.kr/service/examResult/ex20260902/go1_resultCut.asp";
+          const res = await fetch(url, {
+            headers: { "User-Agent": "MogoStorageGradeCutWatch/1.0 (+https://mogo-storage.vercel.app)", Accept: "text/html" },
+            redirect: "follow",
+          });
+          const bytes = new Uint8Array(await res.arrayBuffer());
+          const contentType = res.headers.get("content-type") ?? "";
+          const encoding = /(?:euc-kr|cp949|ks_c_5601-1987)/i.test(contentType) ? "euc-kr" : "utf-8";
+          const html = new TextDecoder(encoding, { fatal: false }).decode(bytes);
+          const text = html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&nbsp;/gi, " ").replace(/\s+/g, " ").trim();
+          const title = (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+          const alts = [...html.matchAll(/<img\b[^>]*\balt\s*=\s*["']([^"']*)["'][^>]*>/gi)].map((m) => m[1].replace(/\s+/g, " ").trim()).filter(Boolean);
+          const interestingAlts = alts.filter((x) => /2026|고\s*1|9\s*[월.]|등급컷/.test(x)).slice(0, 20);
+          console.log(JSON.stringify({
+            status: res.status,
+            finalUrl: res.url,
+            contentType,
+            encoding,
+            title,
+            markers: {
+              year: text.includes("2026년"),
+              grade: text.includes("고1"),
+              dateDot: text.includes("9.2"),
+              month: text.includes("9월"),
+              estimateCut: text.includes("추정 등급컷"),
+              finalCut: text.includes("확정 등급컷"),
+              rawCut: text.includes("등급컷"),
+            },
+            interestingAlts,
+          }, null, 2));
+          if (!res.ok) process.exitCode = 1;
+          NODE

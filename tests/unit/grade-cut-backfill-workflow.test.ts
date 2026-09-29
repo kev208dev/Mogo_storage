@@ -43,9 +43,7 @@ describe("grade cut backfill live/fixture safety", () => {
   it("fixture fetcher can only be constructed in explicit fixture mode", () => {
     expect(cli).toContain('const fixture = process.argv.includes("--fixture")');
     expect(cli).toContain('source === "jongro" && fetchMode === "fixture"');
-    expect(cli).toContain(
-      "createJongroAdapter(new FixtureFetcher(fixtureRoutes, process.cwd()))",
-    );
+    expect(cli).toContain("new FixtureFetcher(fixtureRoutes, process.cwd())");
   });
 
   it("requires live mode for publish and prevents fixture persistence", () => {

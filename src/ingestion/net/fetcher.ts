@@ -305,12 +305,25 @@ async function readHead(
   return { bytes: out, truncated };
 }
 
+function htmlMetaCharset(bytes: Uint8Array): string | null {
+  // HTML encoding declarations are ASCII-compatible, so the first few KB can be
+  // inspected safely before the document encoding itself is known.
+  const head = new TextDecoder("latin1").decode(bytes.subarray(0, 8 * 1024));
+  return /<meta\b[^>]*charset\s*=\s*["']?\s*([\w-]+)/i.exec(head)?.[1]?.toLowerCase() ?? null;
+}
+
+function decoderLabel(charset: string | null): string {
+  if (charset === "euc-kr" || charset === "cp949" || charset === "ks_c_5601-1987") {
+    return "euc-kr";
+  }
+  return charset ?? "utf-8";
+}
+
 export function decodeHtml(result: FetchResult): string {
-  const charset = /charset=([\w-]+)/i.exec(result.contentType)?.[1]?.toLowerCase();
+  const headerCharset = /charset=([\w-]+)/i.exec(result.contentType)?.[1]?.toLowerCase() ?? null;
+  const charset = headerCharset ?? htmlMetaCharset(result.bytes);
   try {
-    return new TextDecoder(
-      charset === "euc-kr" || charset === "ks_c_5601-1987" ? "euc-kr" : (charset ?? "utf-8"),
-    ).decode(result.bytes);
+    return new TextDecoder(decoderLabel(charset)).decode(result.bytes);
   } catch {
     return new TextDecoder("utf-8").decode(result.bytes);
   }

@@ -204,11 +204,10 @@ export function parseJongroResultCut(
   const root = parse(html);
   const allText = root.textContent.replace(/\s+/g, " ");
   const dateLabel = String(exam.month) + "." + String(Number(exam.examDate.slice(-2)));
-  if (
-    !allText.includes(String(exam.year) + "년") ||
-    !allText.includes("고" + exam.grade) ||
-    !allText.includes(dateLabel)
-  )
+  const yearGradePattern = new RegExp(
+    String(exam.year) + "\\s*년?\\s*고" + String(exam.grade) + "(?:\\s|$)",
+  );
+  if (!yearGradePattern.test(allText) || !allText.includes(dateLabel))
     throw new Error("Jongro page identity mismatch");
 
   const gradeCutTitle = allText.includes("추정 등급컷")

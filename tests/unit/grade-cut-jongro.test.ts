@@ -144,6 +144,20 @@ describe("Jongro grade-cut parser fixtures", () => {
     expect(result.rows.some((row) => row.courseCode === "unknown-course")).toBe(false);
   });
 
+  it("accepts high school 3 page identity without the 년 suffix", () => {
+    const html = fixture(3).replace("2026년 고3", "2026 고3");
+    const result = parseJongroResultCut(html, exam(3), url(3));
+    expect(result.rows.length).toBeGreaterThan(0);
+    expect(result.rows.map((row) => row.courseCode)).toEqual(
+      expect.arrayContaining([
+        "language-and-media",
+        "speech-and-writing",
+        "calculus",
+        "probability-and-statistics",
+      ]),
+    );
+  });
+
   it("skips malformed table templates and absolute English/history rows", () => {
     const result = parseJongroResultCut(fixture(1), exam(1), url(1));
     expect(result.rows.every((row) => row.subject !== "english" && row.subject !== "history")).toBe(

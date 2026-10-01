@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Subject } from "@/lib/constants";
+import { SUBJECT_LABELS, type Subject } from "@/lib/constants";
 import { SUBJECT_AREA_LABELS } from "@/lib/courses";
 import type { Course, Exam } from "@/lib/data/types";
 import { examCoursePath } from "@/lib/exam-path";
@@ -23,7 +23,7 @@ export function CourseSelector({
   fileCounts: Record<string, number>;
 }) {
   if (courses.length === 0) return null;
-  const area = SUBJECT_AREA_LABELS[subject] ?? "선택과목";
+  const area = SUBJECT_AREA_LABELS[subject] ?? SUBJECT_LABELS[subject];
   return (
     <nav aria-label={`${area} 세부과목 선택`} className="mt-3">
       <p className="mb-1.5 text-sm font-bold">

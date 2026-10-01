@@ -7,7 +7,7 @@ import { VocabularyQuiz } from "@/components/english/VocabularyQuiz";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { SampleNotice } from "@/components/layout/SampleNotice";
 import { Section } from "@/components/ui/section";
-import { SUBJECT_LABELS } from "@/lib/constants";
+import { GRADE_CUT_SOURCE_LABELS, SUBJECT_LABELS } from "@/lib/constants";
 import { SUBJECT_AREA_LABELS } from "@/lib/courses";
 import type { ExamSubjectDetail } from "@/lib/data/types";
 import {
@@ -18,6 +18,7 @@ import {
 } from "@/lib/exam-metadata";
 import { conceptPath, examCoursePath, examPath, examTitle } from "@/lib/exam-path";
 import { AnswerSheet } from "./AnswerSheet";
+import { CourseOverview } from "./CourseOverview";
 import { CourseSelector } from "./CourseSelector";
 import { DifficultQuestions } from "./DifficultQuestions";
 import { ExamFiles } from "./ExamFiles";
@@ -47,6 +48,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     courses,
     course,
     courseFileCounts,
+    courseSummaries,
     files,
     questions,
     gradeCuts,
@@ -139,11 +141,10 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
             title={`${examTitle(exam)} ${subjectLabel}`}
             processingTypes={processingTypes}
           />
-        ) : (
-          <p className="border-border text-muted-foreground mt-4 rounded-md border px-3 py-3 text-sm">
-            위에서 {areaLabel} 과목을 선택하면 시험지와 정답·해설을 받을 수 있습니다.
-          </p>
-        )}
+        ) : null}
+        {!course && courseSummaries.length > 0 ? (
+          <CourseOverview exam={exam} subject={subjectKey} summaries={courseSummaries} />
+        ) : null}
 
         {exam.isSample ? (
           <SampleNotice className="mt-3">
@@ -218,7 +219,16 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
           )}
 
           <Section id="grade-cuts" title="등급컷" description="공식 자료와 기관별 예상 등급컷">
-            <GradeCutTable gradeCuts={gradeCuts} subject={subjectKey} exam={exam} />
+            <GradeCutTable
+              gradeCuts={gradeCuts}
+              subject={subjectKey}
+              exam={exam}
+              courseCuts={courseSummaries.map((c) => ({
+                name: c.name,
+                href: `${examCoursePath(exam, subjectKey, c.code)}#grade-cuts`,
+                providers: c.gradeCuts.map((g) => GRADE_CUT_SOURCE_LABELS[g.source]),
+              }))}
+            />
           </Section>
 
           {isEnglish && vocabulary.length > 0 ? (

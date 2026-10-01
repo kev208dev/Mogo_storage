@@ -222,11 +222,68 @@ function buildElectiveFiles(exam: Exam): ExamFile[] {
     makeFile(exam, "social", "solution", 600_000, "social-culture"),
     makeFile(exam, "second_language", "question", 1_100_000, "japanese-1"),
     makeFile(exam, "second_language", "solution", 400_000, "japanese-1"),
+    // 고3 수학: 영역 전체 자료 없이 선택과목(미적분) 자료만 있는 실제 운영 형태 재현
+    makeFile(exam, "math", "question", 2_100_000, "calculus"),
+    makeFile(exam, "math", "solution", 800_000, "calculus"),
+  ];
+}
+
+/**
+ * 고3 미적분 등급컷 샘플 — 임의의 개발용 수치.
+ * 출처별 값이 다르고(소수점·범위 포함) 업체 "최종" 표기가 공식이 아님을 화면에서 확인하기 위한 것.
+ */
+function buildElectiveGradeCuts(exam: Exam): GradeCut[] {
+  const base = {
+    examId: exam.id,
+    subject: "math" as const,
+    courseId: "calculus",
+    isOfficial: false,
+    isSample: true,
+    sourceUrl: null,
+    updatedAt: CREATED_AT,
+  };
+  return [
+    {
+      ...base,
+      id: `gc_${exam.id.replace("exam_", "")}_math_calculus_jongro`,
+      source: "jongro",
+      providerStatus: "provider_final",
+      providerLabel: "종로 최종",
+      observedVia: "jongro",
+      firstParty: true,
+      scoreBasis: "raw",
+      cuts: [
+        { grade: 1, rawScore: 84.5, standardScore: 131, percentile: 96 },
+        { grade: 2, rawScore: 76, standardScore: 124, percentile: 89 },
+      ],
+    },
+    {
+      ...base,
+      id: `gc_${exam.id.replace("exam_", "")}_math_calculus_megastudy`,
+      source: "megastudy",
+      providerStatus: "provider_estimate",
+      providerLabel: "메가스터디 예상",
+      observedVia: "megastudy",
+      firstParty: true,
+      scoreBasis: "raw",
+      cuts: [
+        { grade: 1, rawScore: 84.5 },
+        { grade: 2, rawScore: null, rawScoreMin: 74, rawScoreMax: 77 },
+      ],
+    },
   ];
 }
 
 function buildElectiveCourses(exam: Exam): SampleExamCourse[] {
-  return ["social-culture", "japanese-1", "classical-chinese-1"].map((courseId) => ({
+  return [
+    "social-culture",
+    "japanese-1",
+    "classical-chinese-1",
+    // 기하는 아무 자료도 없는 "자료 준비 중" 확인용
+    "calculus",
+    "probability-and-statistics",
+    "geometry",
+  ].map((courseId) => ({
     examId: exam.id,
     courseId,
   }));
@@ -697,7 +754,7 @@ function buildSampleDataset(): SampleDataset {
     files,
     questions,
     statistics: buildStatistics(questions),
-    gradeCuts: buildGradeCuts(featured),
+    gradeCuts: [...buildGradeCuts(featured), ...buildElectiveGradeCuts(elective)],
     vocabulary: buildVocabulary(featured, questions),
     listeningTracks: buildListeningTracks(featured, files),
     schedules,

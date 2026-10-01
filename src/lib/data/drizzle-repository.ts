@@ -1,7 +1,8 @@
-import { and, asc, count, desc, eq, gte, inArray, isNull, or, sql } from "drizzle-orm";
+import { and, asc, count, desc, eq, gte, inArray, isNotNull, isNull, or, sql } from "drizzle-orm";
 import type { Database } from "../../db/client";
 import * as s from "../../db/schema";
 import type { Grade, Subject } from "../constants";
+import { buildCourseSummaries } from "../course-summary";
 import type { ExamKey } from "../exam-path";
 import { questionsForSlot } from "./question-slot";
 import type { ExamRepository } from "./repository";
@@ -177,6 +178,9 @@ export class DrizzleExamRepository implements ExamRepository {
       counts,
       pending,
       conceptRows,
+      courseProcessing,
+      courseGradeCuts,
+      courseQuestions,
     ] = await Promise.all([
       this.db.select().from(s.exams).where(eq(s.exams.id, examRef)).limit(1),
       this.db
@@ -278,6 +282,50 @@ export class DrizzleExamRepository implements ExamRepository {
           ),
         )
         .orderBy(asc(s.concepts.name)),
+      // ── 영역 페이지 전용: 세부과목별 요약 (카드) ──
+      courseRef
+        ? Promise.resolve([])
+        : this.db
+            .selectDistinct({ courseId: s.sourceArtifacts.courseId, type: s.sourceArtifacts.type })
+            .from(s.sourceArtifacts)
+            .where(
+              and(
+                eq(s.sourceArtifacts.examId, examRef),
+                eq(s.sourceArtifacts.subject, subject),
+                isNotNull(s.sourceArtifacts.courseId),
+                inArray(s.sourceArtifacts.status, ["discovered", "verifying", "changed"]),
+              ),
+            ),
+      courseRef
+        ? Promise.resolve([])
+        : this.db
+            .select({
+              courseId: s.gradeCuts.courseId,
+              source: s.gradeCuts.source,
+              providerStatus: s.gradeCuts.providerStatus,
+              isOfficial: s.gradeCuts.isOfficial,
+            })
+            .from(s.gradeCuts)
+            .where(
+              and(
+                eq(s.gradeCuts.examId, examRef),
+                eq(s.gradeCuts.subject, subject),
+                isNotNull(s.gradeCuts.courseId),
+              ),
+            ),
+      courseRef
+        ? Promise.resolve([])
+        : this.db
+            .select({ courseId: s.questions.courseId, n: count() })
+            .from(s.questions)
+            .where(
+              and(
+                eq(s.questions.examId, examRef),
+                eq(s.questions.subject, subject),
+                isNotNull(s.questions.courseId),
+              ),
+            )
+            .groupBy(s.questions.courseId),
     ]);
 
     const examRow = examRows[0];
@@ -369,6 +417,14 @@ export class DrizzleExamRepository implements ExamRepository {
       course,
       courseFileCounts,
       courseFileTypes,
+      courseSummaries: course
+        ? []
+        : buildCourseSummaries(courses, {
+            files: counts,
+            processing: courseProcessing,
+            gradeCuts: courseGradeCuts,
+            questions: courseQuestions,
+          }),
       files: files.map(toFile),
       questions,
       gradeCuts,

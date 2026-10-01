@@ -1,5 +1,6 @@
 import type { Subject } from "../constants";
 import { courseByCode } from "../courses";
+import { buildCourseSummaries } from "../course-summary";
 import type { ExamKey } from "../exam-path";
 import { questionsForSlot } from "./question-slot";
 import { sortExamsDesc, type ExamRepository } from "./repository";
@@ -107,6 +108,23 @@ export class SampleExamRepository implements ExamRepository {
       ).length;
     }
 
+    const inExam = <T extends { examId: string; subject: Subject }>(rows: T[]) =>
+      rows.filter((r) => r.examId === exam.id && r.subject === subject);
+    const courseSummaries = course
+      ? []
+      : buildCourseSummaries(courses, {
+          files: inExam(this.data.files).map((f) => ({ courseId: f.courseId, type: f.type, n: 1 })),
+          processing: [],
+          gradeCuts: inExam(this.data.gradeCuts).map((g) => ({
+            courseId: g.courseId,
+            source: g.source,
+            providerStatus:
+              g.providerStatus ?? (g.isOfficial ? "official_final" : "provider_estimate"),
+            isOfficial: g.isOfficial,
+          })),
+          questions: inExam(this.data.questions).map((q) => ({ courseId: q.courseId, n: 1 })),
+        });
+
     return {
       exam,
       subjects,
@@ -115,6 +133,7 @@ export class SampleExamRepository implements ExamRepository {
       course,
       courseFileCounts,
       courseFileTypes,
+      courseSummaries,
       processingTypes: [],
       // 샘플 모드에는 개념 태그를 만들지 않는다 (공식 해설지 근거가 없음)
       conceptTags: {},

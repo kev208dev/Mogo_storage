@@ -1,3 +1,4 @@
+import type { CourseSummary } from "../course-summary";
 import type {
   ArtifactOrigin,
   ExamType,
@@ -216,6 +217,11 @@ export interface ExamSubjectDetail {
   courseFileCounts: Record<string, number>;
   /** 이 영역의 세부과목 자료에 있는 파일 종류 (영역 페이지 SEO 문구용: 실제로 있는 것만 말한다) */
   courseFileTypes: FileType[];
+  /**
+   * 영역 페이지에서 세부과목별로 실제 있는 자료 요약 (문제·해설 PDF, 등급컷 출처, 웹 정답).
+   * 세부과목 페이지에서는 빈 배열.
+   */
+  courseSummaries: CourseSummary[];
   /** 선택된 영역/세부과목의 자료 (영역 페이지에서는 course 가 없는 자료만) */
   files: ExamFile[];
   questions: QuestionWithStats[];

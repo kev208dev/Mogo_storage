@@ -32,6 +32,7 @@ import { ExamRelatedLinks } from "./ExamRelatedLinks";
 import { ExamSchedulePanel } from "./ExamSchedulePanel";
 import { FileDownloadCard, fileViewHref } from "./FileDownloadCard";
 import { GradeCutTable } from "./GradeCutTable";
+import { RecordVisit } from "./LastVisit";
 import { QuestionExplorer } from "./QuestionExplorer";
 import { QuickGrader } from "./QuickGrader";
 import { SubjectTabs } from "./SubjectTabs";
@@ -354,6 +355,10 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
           ) : null}
         </div>
         <ExamRelatedLinks exam={exam} subject={subjectKey} />
+        <RecordVisit
+          path={course ? examCoursePath(exam, subjectKey, course.code) : examPath(exam, subjectKey)}
+          title={`${examTitle(exam)} ${subjectLabel}`}
+        />
       </article>
       {/* BreadcrumbList(머리말) 다음에 CollectionPage */}
       <JsonLd data={structuredData} />

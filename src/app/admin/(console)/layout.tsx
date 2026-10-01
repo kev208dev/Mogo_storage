@@ -15,6 +15,7 @@ const NAV = [
   { href: "/admin/grade-cuts", label: "등급컷" },
   { href: "/admin/concepts", label: "개념 태그" },
   { href: "/admin/study", label: "학습 자료" },
+  { href: "/admin/schedules", label: "시험 일정" },
   { href: "/admin/coverage", label: "기능 coverage" },
   { href: "/admin/mappings", label: "Source mapping" },
   { href: "/admin/runs", label: "실행 기록" },

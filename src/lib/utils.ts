@@ -30,3 +30,8 @@ export function formatKstDateTime(date: Date | string): string {
   const p = (n: number) => String(n).padStart(2, "0");
   return `${d.getUTCFullYear()}.${p(d.getUTCMonth() + 1)}.${p(d.getUTCDate())} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
 }
+
+/** 오늘 날짜 (KST, YYYY-MM-DD) */
+export function kstToday(now: number = Date.now()): string {
+  return new Date(now + 9 * 3600_000).toISOString().slice(0, 10);
+}

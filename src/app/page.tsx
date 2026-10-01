@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { BookOpenIcon, HeadphonesIcon, PencilLineIcon, SpellCheckIcon } from "lucide-react";
 import Link from "next/link";
 import { ExamList } from "@/components/exam/ExamList";
+import { ContinueStudy } from "@/components/exam/LastVisit";
+import { UpcomingExams } from "@/components/exam/UpcomingExams";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { ExamFinder } from "@/components/search/ExamFinder";
 import { ExamSearch } from "@/components/search/ExamSearch";
@@ -10,6 +12,7 @@ import { getRepository, listAllExams } from "@/lib/data";
 import { FEATURED_EXAM } from "@/lib/data/sample-data";
 import { examPath, subjectSegment } from "@/lib/exam-path";
 import { absoluteUrl } from "@/lib/site";
+import { kstToday } from "@/lib/utils";
 
 export const revalidate = 3600;
 
@@ -42,10 +45,13 @@ const ENGLISH_TOOLS = [
 
 export default async function HomePage() {
   const repo = getRepository();
-  const [years, recent, allExams] = await Promise.all([
+  // KST 오늘 (ISR 재생성 시점 기준 — 시간 단위 오차는 허용)
+  const today = kstToday();
+  const [years, recent, allExams, upcoming] = await Promise.all([
     repo.listYears(),
     repo.listRecentExams(9),
     listAllExams(),
+    repo.listUpcomingSchedules(today, 6),
   ]);
   const latest = recent[0];
   const englishDemo = `${examPath(FEATURED_EXAM, "english")}`;
@@ -122,6 +128,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      <ContinueStudy />
+      <UpcomingExams schedules={upcoming} />
 
       <section aria-labelledby="recent-title" className="mt-10">
         <div className="mb-3 flex items-end justify-between">

@@ -791,6 +791,13 @@ export const examSchedules = pgTable(
       .default([]),
     isSample: boolean("is_sample").notNull().default(false),
     examId: text("exam_id").references(() => exams.id, { onDelete: "set null" }),
+    /** 누가 어떤 근거로 확인했는지 (운영자 이메일 · "manual_json:<파일>") */
+    verifiedBy: text("verified_by"),
+    verifiedAt: timestamp("verified_at", { withTimezone: true }),
+    /** 시행일이 바뀌면 이전 날짜와 사유를 남긴다 */
+    previousExamDate: date("previous_exam_date"),
+    changeNote: text("change_note"),
+    cancelledReason: text("cancelled_reason"),
     ...timestamps,
   },
   (t) => [

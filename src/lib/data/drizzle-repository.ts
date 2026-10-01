@@ -1,4 +1,17 @@
-import { and, asc, count, desc, eq, gte, inArray, isNotNull, isNull, or, sql } from "drizzle-orm";
+import {
+  and,
+  asc,
+  count,
+  desc,
+  eq,
+  gte,
+  inArray,
+  isNotNull,
+  isNull,
+  ne,
+  or,
+  sql,
+} from "drizzle-orm";
 import type { Database } from "../../db/client";
 import * as s from "../../db/schema";
 import type { Grade, Subject } from "../constants";
@@ -557,6 +570,22 @@ export class DrizzleExamRepository implements ExamRepository {
       .where(eq(s.examSchedules.examId, examId))
       .limit(1);
     return row ? toSchedule(row) : null;
+  }
+
+  async listUpcomingSchedules(from: string, limit: number): Promise<ExamSchedule[]> {
+    const rows = await this.db
+      .select()
+      .from(s.examSchedules)
+      .where(
+        and(
+          gte(s.examSchedules.examDate, from),
+          ne(s.examSchedules.status, "cancelled"),
+          eq(s.examSchedules.isSample, false),
+        ),
+      )
+      .orderBy(asc(s.examSchedules.examDate), asc(s.examSchedules.grade))
+      .limit(limit);
+    return rows.map(toSchedule);
   }
 
   async getFile(fileId: string) {

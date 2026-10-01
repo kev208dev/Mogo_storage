@@ -151,3 +151,22 @@ test.describe("듣기 · 받아쓰기", () => {
     );
   });
 });
+
+test.describe("홈: 다가오는 시험 · 이어서 보기", () => {
+  test("확인된 일정만 보여주고, 마지막으로 본 시험 페이지로 이어서 갈 수 있다", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    const upcoming = page.getByTestId("upcoming-exams");
+    await expect(upcoming.getByRole("heading", { name: "다가오는 시험" })).toBeVisible();
+    // 샘플 일정은 날짜가 지나면 목록에서 빠지므로 둘 중 하나
+    await expect(upcoming).toContainText(/샘플 일정|공식 공지로 확인된 예정 시험이 아직 없습니다/);
+
+    await open(page, ENGLISH, "vocabulary-list");
+    await page.goto("/");
+    await expect(page.getByTestId("continue-study").getByRole("link")).toHaveAttribute(
+      "href",
+      ENGLISH,
+    );
+  });
+});

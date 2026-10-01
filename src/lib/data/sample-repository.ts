@@ -171,6 +171,13 @@ export class SampleExamRepository implements ExamRepository {
     return null;
   }
 
+  async listUpcomingSchedules(from: string, limit: number) {
+    return this.data.schedules
+      .filter((s) => s.examDate >= from && s.status !== "cancelled")
+      .sort((a, b) => a.examDate.localeCompare(b.examDate) || a.grade - b.grade)
+      .slice(0, limit);
+  }
+
   async getFile(fileId: string) {
     return this.data.files.find((f) => f.id === fileId) ?? null;
   }

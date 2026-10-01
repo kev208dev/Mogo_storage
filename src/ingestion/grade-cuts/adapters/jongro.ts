@@ -17,7 +17,9 @@ const SUBJECTS: Record<string, Subject> = {
   한국사: "history",
   탐구: "social",
   사회: "social",
+  사회탐구: "social",
   과학: "science",
+  과학탐구: "science",
 };
 const normalize = (s: string) => s.replace(/[\s\u200b\u00a0·・]/g, "").trim();
 const visibleText = (node: {
@@ -156,6 +158,17 @@ function liveInquiryCourseFor(label: string, exam: WatchExam) {
   return courseFor(label, null, exam);
 }
 
+function liveCourseFor(label: string, subject: Subject, exam: WatchExam) {
+  const wanted = normalize(label);
+  const wrapped =
+    subject === "korean"
+      ? /^국어\((.+)\)$/.exec(wanted)
+      : subject === "math"
+        ? /^수학\((.+)\)$/.exec(wanted)
+        : null;
+  return courseFor(wrapped?.[1] ?? wanted, subject, exam);
+}
+
 function liveCourseLabelFor(
   panel: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
   table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number],
@@ -236,7 +249,9 @@ export function parseJongroResultCut(
         ? liveLayout
           ? liveInquiryCourseFor(courseLabel, exam)
           : courseFor(courseLabel, null, exam)
-        : courseFor(courseLabel, tabSubject, exam);
+        : liveLayout
+          ? liveCourseFor(courseLabel, tabSubject, exam)
+          : courseFor(courseLabel, tabSubject, exam);
     const subject = course?.subject ?? tabSubject;
     if (subject !== "korean" && subject !== "math" && subject !== "social" && subject !== "science")
       return;

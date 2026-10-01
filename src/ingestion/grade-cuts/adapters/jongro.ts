@@ -86,6 +86,18 @@ function headerLabel(cell: {
   return normalize(cell.textContent + " " + imageText);
 }
 
+function gradeFromCell(cell: {
+  textContent: string;
+  querySelectorAll: (s: string) => Array<{ getAttribute: (n: string) => string | undefined }>;
+}): number | null {
+  for (const img of cell.querySelectorAll("img")) {
+    const match = /^([0-9])등급$/.exec(normalize(img.getAttribute("alt") ?? ""));
+    if (match) return Number(match[1]);
+  }
+  const match = /(?:^|\D)([0-9])등급(?:\D|$)/.exec(normalize(cell.textContent));
+  return match ? Number(match[1]) : null;
+}
+
 function parseTable(table: ReturnType<ReturnType<typeof parse>["querySelectorAll"]>[number]) {
   const rows = table.querySelectorAll("tr");
   const headerIndex = rows.findIndex((row) => {
@@ -101,10 +113,8 @@ function parseTable(table: ReturnType<ReturnType<typeof parse>["querySelectorAll
   for (const row of rows.slice(headerIndex + 1)) {
     const cells = row.querySelectorAll("th,td");
     if (cells.length <= rawIndex) continue;
-    const gradeLabel = visibleText(cells[0]!);
-    const gradeMatch = /([0-9]+)등급/.exec(gradeLabel);
-    if (!gradeMatch) continue;
-    const grade = Number(gradeMatch[1]);
+    const grade = gradeFromCell(cells[0]!);
+    if (grade === null) continue;
     if (grade === 0) continue; // 만점 행
     if (grade < 1 || grade > 9) continue;
     const raw = entryValue(visibleText(cells[rawIndex]!));

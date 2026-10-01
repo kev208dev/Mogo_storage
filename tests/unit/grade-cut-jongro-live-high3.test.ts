@@ -23,7 +23,7 @@ const table = (raw: number, standard: number, percentile: number) => `
       <th><img alt="백분위"></th>
     </tr>
     <tr>
-      <td><img alt="1등급"></td>
+      <td>22<img alt="1등급"></td>
       <td>${raw}</td>
       <td>${standard}</td>
       <td>${percentile}</td>

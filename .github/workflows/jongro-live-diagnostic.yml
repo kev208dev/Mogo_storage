@@ -12,20 +12,39 @@ permissions:
 jobs:
   diagnose:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-      - name: Show Prettier diff for PR branch
+      - run: npm ci
+      - name: Inspect high3 Korean/math table labels
         shell: bash
         run: |
-          git fetch origin fix/jongro-high3-live-course-labels
-          git switch --detach FETCH_HEAD
-          npm ci
-          npx prettier --write src/ingestion/grade-cuts/adapters/jongro.ts tests/unit/grade-cut-jongro-live-high3.test.ts
-          git diff -- src/ingestion/grade-cuts/adapters/jongro.ts tests/unit/grade-cut-jongro-live-high3.test.ts
+          node --import tsx <<'NODE'
+          import { parse } from "node-html-parser";
+          const url = "https://www.jongro.co.kr/service/examResult/ex20260902/go3_resultCut.asp";
+          const res = await fetch(url, { headers: { "User-Agent": "MogoStorageGradeCutWatch/1.0 (+https://mogo-storage.vercel.app)", Accept: "text/html" } });
+          const bytes = new Uint8Array(await res.arrayBuffer());
+          const ascii = Buffer.from(bytes).subarray(0, 8192).toString("latin1");
+          const meta = ascii.match(/<meta[^>]+charset\s*=\s*["']?([^\s"'/>;]+)/i)?.[1] ?? "utf-8";
+          const enc = /^(?:euc-kr|cp949|ks_c_5601-1987)$/i.test(meta) ? "euc-kr" : "utf-8";
+          const html = new TextDecoder(enc).decode(bytes);
+          const root = parse(html);
+          const vis = (node) => (node.textContent + node.querySelectorAll("img").map((img) => img.getAttribute("alt") ?? "").join(" ")).replace(/[\s\u200b\u00a0·・]/g, "").trim();
+          const summarize = (id) => {
+            const panel = root.querySelector(`#${id}`);
+            if (!panel) return { id, missing: true };
+            const submenu = panel.querySelector(".tab_subject02");
+            const labels = submenu ? submenu.querySelectorAll("li").map(vis) : [];
+            const tables = panel.querySelectorAll("table").map((table, ti) => ({
+              ti,
+              ancestorId: table.closest("[id]")?.getAttribute("id") ?? null,
+              firstRows: table.querySelectorAll("tr").slice(0, 4).map((row) => row.querySelectorAll("th,td").map(vis)),
+            }));
+            return { id, labels, tableCount: tables.length, tables };
+          };
+          console.log(JSON.stringify({ status: res.status, panels: [summarize("tabCon01"), summarize("tabCon02")] }, null, 2));
+          NODE

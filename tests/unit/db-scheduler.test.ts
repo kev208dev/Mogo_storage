@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   DB_CRON_JOBS,
   DbSchedulerUnavailableError,
+  GRADE_CUT_FAST_WINDOW_DAYS,
   installDbScheduler,
   jobCommand,
   normalizeSiteUrl,
@@ -10,19 +11,20 @@ import {
 import { SCHEDULED_TASKS } from "../../src/ingestion/ops/scheduler";
 
 describe("DB scheduler (pg_cron + pg_net)", () => {
-  it("등급컷은 5분, watchdog 은 매시 — watchdog 기대 주기와 일치", () => {
+  it("등급컷은 5분 tick, 실제 HTTP 는 시험 종료 후 활성 구간만 — watchdog 기대 주기와 일치", () => {
     const gc = DB_CRON_JOBS.find((j) => j.task === "grade-cuts")!;
     expect(gc.schedule).toBe("*/5 * * * *");
+    expect(GRADE_CUT_FAST_WINDOW_DAYS).toBe(7);
     const spec = SCHEDULED_TASKS.find((s) => s.task === "grade-cuts")!;
     expect(spec.cadenceMinutes).toBe(5);
-    // stale 기준은 주기의 4배 — 한두 번 늦어도 알리지 않는다
+    // 활성 구간 밖 tick 도 DB heartbeat 를 남기므로 watchdog 의 5분 기대 주기는 그대로 유지한다.
     expect(spec.staleAfterMinutes).toBe(20);
     // pg_net 제한 시간은 endpoint maxDuration(300s)보다 짧고, 다음 실행(5분)보다 짧다
     expect(gc.timeoutMs).toBeLessThan(300_000);
     expect(DB_CRON_JOBS.find((j) => j.task === "watchdog")!.schedule).toBe("17 * * * *");
   });
 
-  it("job SQL 에는 Vault 이름만 — 비밀값·URL 이 들어갈 자리가 없다", () => {
+  it("grade-cut job SQL 은 활성 시험이 있을 때만 HTTP 를 보내고 그 밖에는 skipped heartbeat 만 남긴다", () => {
     const sql = jobCommand(DB_CRON_JOBS[0]!);
     expect(sql).toContain("vault.decrypted_secrets where name = 'mogo_site_url'");
     expect(sql).toContain("vault.decrypted_secrets where name = 'mogo_cron_secret'");
@@ -30,8 +32,21 @@ describe("DB scheduler (pg_cron + pg_net)", () => {
     expect(sql).toContain("'Authorization', 'Bearer ' ||");
     expect(sql).toContain("'X-Scheduler', 'pg_cron'");
     expect(sql).toContain("timeout_milliseconds := 290000");
+    expect(sql).toContain("from public.exams");
+    expect(sql).toContain("exam_type::text = 'csat'");
+    expect(sql).toContain("exam_type::text = 'kice_mock'");
+    expect(sql).toContain("at time zone 'Asia/Seoul'");
+    expect(sql).toContain(`interval '${GRADE_CUT_FAST_WINDOW_DAYS} days'`);
+    expect(sql).toContain("insert into public.scheduler_heartbeats");
+    expect(sql).toContain("'pg_cron:no_active_window'");
+    expect(sql).toContain("from active_window");
     expect(sql).not.toMatch(/https?:\/\//);
     expect(() => jobCommand({ ...DB_CRON_JOBS[0]!, task: "x'; drop" as never })).toThrow();
+
+    const watchdogSql = jobCommand(DB_CRON_JOBS.find((j) => j.task === "watchdog")!);
+    expect(watchdogSql).toContain("'/api/cron/watchdog'");
+    expect(watchdogSql).not.toContain("public.exams");
+    expect(watchdogSql).not.toContain("scheduler_heartbeats");
   });
 
   it("사이트 URL 은 인증정보·경로 없는 https origin 만", () => {

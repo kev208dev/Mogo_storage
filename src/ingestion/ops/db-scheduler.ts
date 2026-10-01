@@ -76,7 +76,9 @@ function gradeCutWindowCommand(job: DbCronJob, vault: (name: string) => string):
     "  limit 1",
     "),",
     "request as (",
-    ...request.map((line, index) => `  ${index === request.length - 1 ? `${line} as request_id` : line}`),
+    ...request.map(
+      (line, index) => `  ${index === request.length - 1 ? `${line} as request_id` : line}`,
+    ),
     "  from active_window",
     "),",
     "heartbeat as (",

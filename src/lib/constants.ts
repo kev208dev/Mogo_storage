@@ -70,8 +70,25 @@ export const FILE_TYPES = [
   "listening_audio",
   "listening_script",
   "vocabulary_pdf",
+  // 모의고사 창고가 만든 학습지 (artifact_origin = generated, 관리자 승인 후에만 게시)
+  "vocabulary_test",
+  "vocabulary_test_answers",
+  "dictation_sheet",
+  "dictation_answers",
+  "question_checklist",
 ] as const;
 export type FileType = (typeof FILE_TYPES)[number];
+
+/** 우리가 만드는 학습지 종류 (공식 자료 슬롯과 섞지 않는다) */
+export const WORKSHEET_FILE_TYPES = [
+  "vocabulary_pdf",
+  "vocabulary_test",
+  "vocabulary_test_answers",
+  "dictation_sheet",
+  "dictation_answers",
+  "question_checklist",
+] as const satisfies readonly FileType[];
+export type WorksheetFileType = (typeof WORKSHEET_FILE_TYPES)[number];
 
 export const FILE_TYPE_LABELS: Record<FileType, string> = {
   question: "시험지",
@@ -79,6 +96,11 @@ export const FILE_TYPE_LABELS: Record<FileType, string> = {
   listening_audio: "듣기 MP3",
   listening_script: "듣기 대본",
   vocabulary_pdf: "단어장",
+  vocabulary_test: "단어 시험 문제",
+  vocabulary_test_answers: "단어 시험 정답",
+  dictation_sheet: "받아쓰기 학습지",
+  dictation_answers: "받아쓰기 정답",
+  question_checklist: "문항별 점검표",
 };
 
 export const EXAM_TYPES = ["school_mock", "kice_mock", "csat"] as const;

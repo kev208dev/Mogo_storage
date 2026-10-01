@@ -56,7 +56,7 @@ export async function applyDiscoveredSchedules(
   for (const s of schedules) {
     const { sourceLabel: _label, ...input } = s;
     void _label;
-    await upsertSchedule(db, input);
+    await upsertSchedule(db, input, { verifiedBy: source.id });
     applied += 1;
   }
   return { applied, pendingReview: [] };

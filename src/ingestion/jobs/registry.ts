@@ -1,6 +1,7 @@
 import type { IngestionContext } from "../context";
 import { handlePublishArtifact, handleVerifyArtifact } from "./handlers";
 import type { Job } from "./queue";
+import { handleExtractListeningScript, handleGenerateStudyMaterials } from "./study-handlers";
 import { handleExtractVocabulary, handleGenerateVocabularyPdf } from "./vocabulary-handlers";
 
 /** job 종류 → 처리 함수 (DISCOVER 는 run 으로, 나머지 단계는 job 으로 처리) */
@@ -10,4 +11,6 @@ export const JOB_HANDLERS: Record<Job["type"], (ctx: IngestionContext, job: Job)
     publish_artifact: handlePublishArtifact,
     extract_vocabulary: handleExtractVocabulary,
     generate_vocabulary_pdf: handleGenerateVocabularyPdf,
+    generate_study_materials: handleGenerateStudyMaterials,
+    extract_listening_script: handleExtractListeningScript,
   };

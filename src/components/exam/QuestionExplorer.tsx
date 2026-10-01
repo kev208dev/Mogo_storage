@@ -312,17 +312,20 @@ export function QuestionExplorer({
                     ) : null}
                   </div>
 
-                  {track ? (
+                  {track && (track.timingVerified || track.transcript?.length) ? (
                     <div>
                       <h4 className="text-sm font-bold">듣기</h4>
-                      <button
-                        type="button"
-                        onClick={() => playListeningTrack(q.questionNumber)}
-                        className="border-border hover:border-primary mt-1 inline-flex min-h-10 items-center gap-1.5 rounded-md border px-3 text-sm font-semibold"
-                      >
-                        <PlayIcon className="size-4" aria-hidden />
-                        {q.questionNumber}번 듣기
-                      </button>
+                      {/* 문항 구간이 검증된 경우에만 문항 재생 (추측한 구간으로 재생하지 않는다) */}
+                      {track.timingVerified ? (
+                        <button
+                          type="button"
+                          onClick={() => playListeningTrack(q.questionNumber)}
+                          className="border-border hover:border-primary mt-1 inline-flex min-h-10 items-center gap-1.5 rounded-md border px-3 text-sm font-semibold"
+                        >
+                          <PlayIcon className="size-4" aria-hidden />
+                          {q.questionNumber}번 듣기
+                        </button>
+                      ) : null}
                       <details className="mt-2">
                         <summary className="text-sm font-semibold">듣기 대본</summary>
                         {track.transcript?.length ? (

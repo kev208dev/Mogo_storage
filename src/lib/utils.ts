@@ -23,3 +23,15 @@ export function formatKoreanDate(date: Date | string): string {
   const d = typeof date === "string" ? new Date(date) : date;
   return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
 }
+
+/** KST 기준 "2026.09.03 14:05" (서버 시간대와 무관하게 같은 문자열 → hydration 안전) */
+export function formatKstDateTime(date: Date | string): string {
+  const d = new Date((typeof date === "string" ? new Date(date) : date).getTime() + 9 * 3600_000);
+  const p = (n: number) => String(n).padStart(2, "0");
+  return `${d.getUTCFullYear()}.${p(d.getUTCMonth() + 1)}.${p(d.getUTCDate())} ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
+}
+
+/** 오늘 날짜 (KST, YYYY-MM-DD) */
+export function kstToday(now: number = Date.now()): string {
+  return new Date(now + 9 * 3600_000).toISOString().slice(0, 10);
+}

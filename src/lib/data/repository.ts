@@ -5,6 +5,7 @@ import type {
   Course,
   Exam,
   ExamFile,
+  ExamSchedule,
   ExamSubject,
   ExamSubjectDetail,
   NewReport,
@@ -36,6 +37,8 @@ export interface ExamRepository {
   /** 개념 페이지 (승인된 문항만). 없으면 null */
   getConcept(subject: Subject, slug: string): Promise<ConceptDetail | null>;
   getFile(fileId: string): Promise<ExamFile | null>;
+  /** 시행일이 from(YYYY-MM-DD, KST) 이후인 확인된 일정 (취소 제외, 가까운 순) */
+  listUpcomingSchedules(from: string, limit: number): Promise<ExamSchedule[]>;
   createReport(report: NewReport): Promise<Report>;
   countRecentReports(ipHash: string, since: Date): Promise<number>;
 }

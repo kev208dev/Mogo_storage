@@ -24,6 +24,12 @@ import { enqueueJob, type Job } from "./queue";
 
 export class JobError extends IngestionError {}
 
+// 순환 import 를 피하려고 동적으로 불러온다 (study-handlers 가 이 파일의 helper 를 쓴다)
+async function maybeEnqueueListeningScript(ctx: IngestionContext, examId: string) {
+  const mod = await import("./study-handlers");
+  await mod.maybeEnqueueListeningScript(ctx, examId);
+}
+
 async function loadArtifact(ctx: IngestionContext, artifactId: string) {
   const [artifact] = await ctx.db
     .select()
@@ -371,5 +377,13 @@ export async function handlePublishArtifact(ctx: IngestionContext, job: Job) {
         maxAttempts: 3,
       });
     }
+  }
+
+  // 영어 듣기 음원·대본이 게시되면 공식 대본 → 문항별 대본 추출 (둘 다 있어야 처리)
+  if (
+    slot.subject === "english" &&
+    (slot.type === "listening_script" || slot.type === "listening_audio")
+  ) {
+    await maybeEnqueueListeningScript(ctx, slot.examId);
   }
 }

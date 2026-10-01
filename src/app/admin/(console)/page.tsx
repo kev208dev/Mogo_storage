@@ -23,6 +23,7 @@ import {
 import { OPERATOR_IMPORT_SOURCE_ID } from "@/ingestion/manual-import/source";
 import { AdminNotice } from "./notice";
 import { NoDatabase } from "./no-db";
+import { ConfigPanel } from "@/components/admin/ConfigPanel";
 import { SchedulerPanel } from "@/components/admin/SchedulerPanel";
 import { SourcePolicyPanel } from "@/components/admin/SourcePolicyPanel";
 
@@ -62,6 +63,7 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/admin
         ))}
       </dl>
 
+      <ConfigPanel />
       <SchedulerPanel db={db} />
       <SourcePolicyPanel db={db} />
 

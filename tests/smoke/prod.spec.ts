@@ -210,19 +210,114 @@ test.describe("다운로드", () => {
     });
     expect(res.status()).toBe(404);
   });
+});
 
-  test("자료가 없는 슬롯은 '자료 준비 중' 으로 표시", async ({ request }) => {
-    const pages = examPages(await sitemapExams(request))
-      .sort(byNewest)
-      .slice(0, 10);
-    let found = false;
-    for (const e of pages) {
-      if ((await getHtml(request, e.url)).includes("자료 준비 중")) {
-        found = true;
-        break;
-      }
+/** 영역 페이지의 세부과목 카드: [code, availability, html 조각] */
+function courseCards(html: string): Array<{ code: string; availability: string; body: string }> {
+  return [
+    ...html.matchAll(/<li data-course="([a-z0-9-]+)" data-availability="(\w+)">([\s\S]*?)<\/li>/g),
+  ].map((m) => ({ code: m[1]!, availability: m[2]!, body: m[3]! }));
+}
+
+/** 등급컷 표 머리글의 (출처, 상태) 쌍 */
+function gradeCutColumns(html: string): Array<{ source: string; status: string }> {
+  return [...html.matchAll(/data-source="(\w+)" data-status="(\w+)"/g)].map((m) => ({
+    source: m[1]!,
+    status: m[2]!,
+  }));
+}
+
+test.describe("세부과목 자료 노출 · 등급컷 출처", () => {
+  /** sitemap 에서 세부과목 페이지가 있는 최신 영역 페이지 (고3 국어·수학·탐구 등) */
+  async function parentsWithCourses(request: APIRequestContext, limit: number) {
+    const all = await sitemapExams(request);
+    const parents = new Map<string, ExamUrl>();
+    for (const e of all.filter((x) => x.rest.length === 2).sort(byNewest)) {
+      const parentUrl = e.url.slice(0, e.url.lastIndexOf("/"));
+      if (!parents.has(parentUrl)) parents.set(parentUrl, { ...e, url: parentUrl });
+      if (parents.size >= limit) break;
     }
-    expect(found).toBe(true);
+    return [...parents.values()];
+  }
+
+  test("영역 페이지는 세부과목 자료를 카드로 보여주고 비어 보이지 않는다", async ({ request }) => {
+    const parents = await parentsWithCourses(request, 6);
+    expect(parents.length).toBeGreaterThan(0);
+    let withFiles = 0;
+    for (const p of parents) {
+      // 국어처럼 기본 과목은 시험 기본 페이지로 308 — canonical 위치에서 확인한다
+      const res = await request.get(p.url, { maxRedirects: 0 });
+      const path = [301, 308].includes(res.status())
+        ? new URL(res.headers()["location"]!, BASE).pathname
+        : p.url;
+      const html = await getHtml(request, path);
+      expect(html, `${path} course overview`).toContain('data-testid="course-overview"');
+      const cards = courseCards(html);
+      expect(cards.length, `${path} course cards`).toBeGreaterThan(0);
+      for (const c of cards) {
+        // "자료 준비 중" 은 정말 아무것도 없는 카드에만
+        if (c.availability === "empty")
+          expect(c.body, `${path} ${c.code}`).toContain("자료 준비 중");
+        else expect(c.body, `${path} ${c.code}`).not.toContain("자료 준비 중");
+      }
+      if (cards.some((c) => c.availability === "available")) withFiles += 1;
+    }
+    expect(withFiles, "자료가 있는 세부과목 카드가 하나 이상").toBeGreaterThan(0);
+  });
+
+  test("세부과목 페이지: 자료가 있으면 다운로드 링크가 있고 endpoint 가 302", async ({
+    request,
+  }) => {
+    const all = await sitemapExams(request);
+    const coursePages = all
+      .filter((e) => e.rest.length === 2)
+      .sort(byNewest)
+      .slice(0, 12);
+    let checked = 0;
+    for (const e of coursePages) {
+      const html = await getHtml(request, e.url);
+      expectIndexablePage(html, e.url);
+      const id = html.match(/\/api\/files\/([a-zA-Z0-9_-]+)\/download/)?.[1];
+      if (!id) continue;
+      const res = await request.get(`/api/files/${id}/download`, { maxRedirects: 0 });
+      expect([302, 307], `${e.url} download`).toContain(res.status());
+      const location = new URL(res.headers()["location"]!);
+      expect(location.protocol).toBe("https:");
+      expect(isHostAllowed(location.hostname, [...OFFICIAL_URL_HOSTS, ...EXTRA_HOSTS])).toBe(true);
+      checked += 1;
+      if (checked >= 3) break;
+    }
+    expect(checked, "세부과목 페이지 다운로드").toBeGreaterThan(0);
+  });
+
+  test("등급컷이 있는 세부과목은 출처·상태를 보여주고, 업체 '최종'에 공식 배지를 붙이지 않는다", async ({
+    request,
+  }) => {
+    const parents = await parentsWithCourses(request, 8);
+    let withCuts = 0;
+    for (const p of parents) {
+      const res = await request.get(p.url, { maxRedirects: 0 });
+      const path = [301, 308].includes(res.status())
+        ? new URL(res.headers()["location"]!, BASE).pathname
+        : p.url;
+      const parentHtml = await getHtml(request, path);
+      const cut = courseCards(parentHtml).find((c) => /등급컷 \d+개 출처/.test(c.body));
+      if (!cut) continue;
+      const coursePath = `${p.url}/${cut.code}`;
+      const html = await getHtml(request, coursePath);
+      expect(html, `${coursePath} provenance`).toContain('data-testid="grade-cut-provenance"');
+      const columns = gradeCutColumns(html);
+      expect(columns.length, `${coursePath} provider columns`).toBeGreaterThan(0);
+      for (const c of columns)
+        if (c.source !== "official")
+          expect(c.status, `${coursePath} ${c.source}`).not.toBe("official");
+      withCuts += 1;
+      if (withCuts >= 2) break;
+    }
+    // 등급컷 수집 전(시험 직후가 아닌 기간)에는 없을 수 있다 — 있을 때만 검사
+    test
+      .info()
+      .annotations.push({ type: "grade-cut courses checked", description: String(withCuts) });
   });
 });
 

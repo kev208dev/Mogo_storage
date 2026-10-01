@@ -7,6 +7,9 @@ import type postgres from "postgres";
  * 2~4시간 간격으로만 실행됐고, Vercel Hobby 는 5분 Cron 배포를 거절한다. pg_cron 은 DB 서버의
  * 실제 cron 이므로 5분 주기가 지켜진다.
  *
+ * 등급컷 job 은 5분 tick 자체는 유지하되 시험 종료 후 짧은 활성 구간에만 HTTP 요청을 보낸다.
+ * 활성 구간 밖에서는 provider/Vercel 을 호출하지 않고 heartbeat 만 skipped 로 갱신한다.
+ *
  * 비밀값:
  *  - CRON_SECRET 과 사이트 URL 은 Supabase Vault 에만 저장한다 (bind parameter 로 넘김, 로그 없음).
  *  - cron job 의 SQL 에는 Vault 이름만 들어가므로 cron.job / cron.job_run_details 에 비밀값이 남지 않는다.
@@ -16,6 +19,7 @@ import type postgres from "postgres";
 
 export const VAULT_SITE_URL = "mogo_site_url";
 export const VAULT_CRON_SECRET = "mogo_cron_secret";
+export const GRADE_CUT_FAST_WINDOW_DAYS = 7;
 
 export interface DbCronJob {
   /** cron.job.jobname — 같은 이름으로 다시 등록하면 교체된다 */
@@ -34,11 +38,7 @@ export const DB_CRON_JOBS: readonly DbCronJob[] = [
 
 const sqlLiteral = (value: string) => `'${value.replace(/'/g, "''")}'`;
 
-/** cron job 이 실행할 SQL. 비밀값 대신 Vault 이름만 포함한다. */
-export function jobCommand(job: DbCronJob): string {
-  if (!/^[a-z-]+$/.test(job.task)) throw new Error("invalid task");
-  const vault = (name: string) =>
-    `(select decrypted_secret from vault.decrypted_secrets where name = ${sqlLiteral(name)})`;
+function httpRequestSql(job: DbCronJob, vault: (name: string) => string): string[] {
   return [
     "select net.http_get(",
     `  url := ${vault(VAULT_SITE_URL)} || ${sqlLiteral(`/api/cron/${job.task}`)},`,
@@ -48,7 +48,70 @@ export function jobCommand(job: DbCronJob): string {
     "  ),",
     `  timeout_milliseconds := ${Math.trunc(job.timeoutMs)}`,
     ")",
+  ];
+}
+
+/**
+ * 시험 종류별 보수적 종료 시각(KST)부터 7일 동안만 등급컷 endpoint 를 호출한다.
+ * 그 밖의 5분 tick 은 scheduler heartbeat 만 skipped 로 갱신하므로 watchdog 은 정상 동작하면서
+ * 이미 끝난 시험의 provider 페이지나 Vercel function 을 계속 두드리지 않는다.
+ */
+function gradeCutWindowCommand(job: DbCronJob, vault: (name: string) => string): string {
+  const examEnd = [
+    "(exam_date::timestamp + case",
+    "  when exam_type::text = 'csat' then interval '18 hours'",
+    "  when exam_type::text = 'kice_mock' then interval '17 hours 30 minutes'",
+    "  else interval '17 hours'",
+    "end) at time zone 'Asia/Seoul'",
+  ].join("\n      ");
+  const request = httpRequestSql(job, vault);
+  return [
+    "with active_window as (",
+    "  select 1",
+    "  from public.exams",
+    "  where is_sample = false",
+    "    and exam_date is not null",
+    `    and now() >= (${examEnd})`,
+    `    and now() <= (${examEnd}) + interval '${GRADE_CUT_FAST_WINDOW_DAYS} days'`,
+    "  limit 1",
+    "),",
+    "request as (",
+    ...request.map(
+      (line, index) => `  ${index === request.length - 1 ? `${line} as request_id` : line}`,
+    ),
+    "  from active_window",
+    "),",
+    "heartbeat as (",
+    "  insert into public.scheduler_heartbeats (",
+    "    task, last_started_at, last_finished_at, last_status, last_detail,",
+    "    last_duration_ms, consecutive_failures, run_count, updated_at",
+    "  )",
+    "  select 'grade-cuts', now(), now(), 'skipped', 'pg_cron:no_active_window', 0, 0, 1, now()",
+    "  where not exists (select 1 from active_window)",
+    "  on conflict (task) do update set",
+    "    last_started_at = excluded.last_started_at,",
+    "    last_finished_at = excluded.last_finished_at,",
+    "    last_status = excluded.last_status,",
+    "    last_detail = excluded.last_detail,",
+    "    last_duration_ms = 0,",
+    "    consecutive_failures = 0,",
+    "    run_count = public.scheduler_heartbeats.run_count + 1,",
+    "    updated_at = excluded.updated_at",
+    "  returning 1",
+    ")",
+    "select request_id from request",
+    "union all",
+    "select null::bigint from heartbeat",
   ].join("\n");
+}
+
+/** cron job 이 실행할 SQL. 비밀값 대신 Vault 이름만 포함한다. */
+export function jobCommand(job: DbCronJob): string {
+  if (!/^[a-z-]+$/.test(job.task)) throw new Error("invalid task");
+  const vault = (name: string) =>
+    `(select decrypted_secret from vault.decrypted_secrets where name = ${sqlLiteral(name)})`;
+  if (job.task === "grade-cuts") return gradeCutWindowCommand(job, vault);
+  return httpRequestSql(job, vault).join("\n");
 }
 
 /** 사이트 URL: https origin 만 (경로·쿼리·인증정보 없음) */

@@ -1,4 +1,5 @@
 import type { CourseSummary } from "../course-summary";
+import type { ReadingNote, TranscriptOrigin, VocabularyProvenance } from "../study";
 import type {
   ArtifactOrigin,
   ExamType,
@@ -118,12 +119,17 @@ export interface VocabularyItem {
   meaning: string;
   partOfSpeech: string | null;
   difficulty: 1 | 2 | 3;
+  /** 단어·뜻 출처 (공식 해설 추출 / 운영자 입력 / AI 보조) */
+  provenance?: VocabularyProvenance;
   createdAt: string;
 }
 
 export interface TranscriptLine {
   speaker: string | null;
   text: string;
+  /** 공식 자료로 검증된 경우에만 있는 문장 구간 (초). 없으면 문장 단위 재생을 하지 않는다 */
+  startSeconds?: number | null;
+  endSeconds?: number | null;
 }
 
 export interface ListeningTrack {
@@ -135,7 +141,13 @@ export interface ListeningTrack {
   label: string;
   startSeconds: number;
   endSeconds: number;
+  /** 문항 구간이 검증됐는지. false 면 구간 재생을 하지 않고 전체 음원만 쓴다 */
+  timingVerified: boolean;
+  /** 공개 가능한 대본 (official/authorized/샘플). 출처 미확인 대본은 null */
   transcript: TranscriptLine[] | null;
+  /** 대본 출처 */
+  transcriptOrigin: TranscriptOrigin | null;
+  transcriptSourceUrl: string | null;
 }
 
 export interface GradeCutEntry {
@@ -237,6 +249,10 @@ export interface ExamSubjectDetail {
   processingTypes: FileType[];
   /** 문항 id → 승인된 개념 태그 (해설지 머리말 근거, 관리자 승인) */
   conceptTags: Record<string, ConceptTag[]>;
+  /** 게시된 독해 학습 노트 (영어 영역 페이지만) */
+  readingNotes: ReadingNote[];
+  /** 생성됐지만 아직 검토·게시 전인 학습 자료 종류 (화면에 "검토 중"으로만 표시) */
+  pendingMaterialKinds: string[];
 }
 
 export interface ConceptTag {

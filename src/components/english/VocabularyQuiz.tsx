@@ -1,7 +1,7 @@
 "use client";
 
 import { CheckIcon, XIcon } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import type { VocabularyItem } from "@/lib/data/types";
 import { cn } from "@/lib/utils";
@@ -12,7 +12,7 @@ import {
   type QuizFormat,
   type QuizQuestion,
 } from "@/lib/vocabulary-quiz";
-import { writeJson } from "@/components/exam/grader-storage";
+import { readJson, writeJson } from "@/components/exam/grader-storage";
 
 type Count = 10 | 20 | 30 | "all";
 interface Answer {
@@ -67,6 +67,17 @@ export function VocabularyQuiz({ examId, items }: { examId: string; items: Vocab
   const [input, setInput] = useState("");
   const [feedback, setFeedback] = useState<Answer | null>(null);
   const promptRef = useRef<HTMLParagraphElement>(null);
+  const [lastWrong, setLastWrong] = useState<VocabularyItem[]>([]);
+  const [ready, setReady] = useState(false);
+
+  // 지난 시험에서 틀린 단어 (이 기기에 저장된 기록)
+  useEffect(() => {
+    const saved = readJson<{ wrong?: string[] }>(`mogo:vocab-quiz:${examId}`);
+    const ids = new Set(saved?.wrong ?? []);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- 외부 저장소 동기화
+    setLastWrong(items.filter((v) => ids.has(v.id)));
+    setReady(true);
+  }, [examId, items, quiz]);
 
   function start(source: VocabularyItem[] = items) {
     const next = buildQuiz(source, {
@@ -112,7 +123,7 @@ export function VocabularyQuiz({ examId, items }: { examId: string; items: Vocab
   // ── 설정 화면 ─────────────────────────────────
   if (!quiz) {
     return (
-      <div className="space-y-4">
+      <div className="space-y-4" data-testid="vocabulary-quiz" data-ready={ready ? "" : undefined}>
         <RadioChips
           legend="방향"
           name="quiz-direction"
@@ -145,9 +156,21 @@ export function VocabularyQuiz({ examId, items }: { examId: string; items: Vocab
             { value: "all", label: `전체 (${items.length})` },
           ]}
         />
-        <Button size="lg" onClick={() => start()} className="w-full sm:w-auto">
-          단어 시험 시작
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button size="lg" onClick={() => start()} className="w-full sm:w-auto">
+            단어 시험 시작
+          </Button>
+          {lastWrong.length ? (
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => start(lastWrong)}
+              className="w-full sm:w-auto"
+            >
+              지난번 틀린 단어 다시 ({lastWrong.length})
+            </Button>
+          ) : null}
+        </div>
       </div>
     );
   }

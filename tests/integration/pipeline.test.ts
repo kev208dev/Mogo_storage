@@ -130,7 +130,6 @@ run("automatic ingestion pipeline (fake official source → DB → site)", () =>
       "english:listening_audio",
       "english:question",
       "english:solution",
-      "english:vocabulary_pdf",
       "korean:question",
       "korean:solution",
     ]);
@@ -141,10 +140,49 @@ run("automatic ingestion pipeline (fake official source → DB → site)", () =>
       artifactOrigin: "official",
       sourceLabel: "EBSi",
     });
-    // 우리가 만든 단어장 PDF 는 generated 로 분리된다
-    expect(byKey["english:vocabulary_pdf"]).toMatchObject({
+    // 우리가 만든 단어장 PDF 는 자동 게시하지 않는다: study_materials(generated) → 관리자 승인 → 게시
+    const materials = await db
+      .select()
+      .from(s.studyMaterials)
+      .where(eq(s.studyMaterials.examId, exam!.id));
+    const vocabMaterial = materials.find((m) => m.kind === "vocabulary_pdf");
+    expect(vocabMaterial).toMatchObject({
+      status: "generated",
+      origin: "generated",
+      mimeType: "application/pdf",
+      examFileId: null,
+    });
+    expect(vocabMaterial!.storageKey).toMatch(/^generated\/exams\/2025\/high2\/09\/english\//);
+    expect(vocabMaterial!.fileName).toBe("2025-고2-09월-영어-단어장.pdf");
+    const { reviewStudyMaterial } = await import("@/ingestion/study/materials");
+    await expect(
+      reviewStudyMaterial(ctx, {
+        id: vocabMaterial!.id,
+        action: "publish",
+        admin: "ops@example.com",
+      }),
+    ).rejects.toThrow(/허용되지 않습니다/);
+    await reviewStudyMaterial(ctx, {
+      id: vocabMaterial!.id,
+      action: "approve",
+      admin: "ops@example.com",
+    });
+    const revalidatedBefore = revalidated.length;
+    await reviewStudyMaterial(ctx, {
+      id: vocabMaterial!.id,
+      action: "publish",
+      admin: "ops@example.com",
+    });
+    expect(revalidated.slice(revalidatedBefore)).toEqual(["/exam/2025/high2/09/english"]);
+    const [vocabFile] = await db
+      .select()
+      .from(s.examFiles)
+      .where(and(eq(s.examFiles.examId, exam!.id), eq(s.examFiles.type, "vocabulary_pdf")));
+    expect(vocabFile).toMatchObject({
       deliveryType: "storage",
       artifactOrigin: "generated",
+      storageKey: vocabMaterial!.storageKey,
+      originalFileName: "2025-고2-09월-영어-단어장.pdf",
     });
 
     // provenance
@@ -231,7 +269,8 @@ run("automatic ingestion pipeline (fake official source → DB → site)", () =>
       await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2], force: true });
     }
     expect(await counts()).toEqual(first);
-    expect(first).toMatchObject({ exams: 1, mappings: 1, artifacts: 5, files: 6 });
+    // 공식 자료 5개만 게시 (우리가 만든 단어장 PDF 는 관리자 승인 전까지 게시하지 않는다)
+    expect(first).toMatchObject({ exams: 1, mappings: 1, artifacts: 5, files: 5 });
   });
 
   it("backfill checkpoint skips completed scopes and resumes failed ones", async () => {

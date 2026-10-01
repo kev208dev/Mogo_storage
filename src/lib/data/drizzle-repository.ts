@@ -3,6 +3,12 @@ import type { Database } from "../../db/client";
 import * as s from "../../db/schema";
 import type { Grade, Subject } from "../constants";
 import { buildCourseSummaries } from "../course-summary";
+import {
+  isPublishableTranscript,
+  READING_NOTE_KIND,
+  toReadingNote,
+  type ReadingNote,
+} from "../study";
 import type { ExamKey } from "../exam-path";
 import { questionsForSlot } from "./question-slot";
 import type { ExamRepository } from "./repository";
@@ -181,6 +187,7 @@ export class DrizzleExamRepository implements ExamRepository {
       courseProcessing,
       courseGradeCuts,
       courseQuestions,
+      materialRows,
     ] = await Promise.all([
       this.db.select().from(s.exams).where(eq(s.exams.id, examRef)).limit(1),
       this.db
@@ -326,6 +333,30 @@ export class DrizzleExamRepository implements ExamRepository {
               ),
             )
             .groupBy(s.questions.courseId),
+      // 우리가 만든 학습 자료 (게시된 독해 노트 + 검토 대기 상태). 영어 영역 페이지만
+      isEnglish
+        ? this.db
+            .select({
+              kind: s.studyMaterials.kind,
+              status: s.studyMaterials.status,
+              origin: s.studyMaterials.origin,
+              questionNumber: s.studyMaterials.questionNumber,
+              content: s.studyMaterials.content,
+            })
+            .from(s.studyMaterials)
+            .where(
+              and(
+                eq(s.studyMaterials.examId, examRef),
+                eq(s.studyMaterials.subject, "english"),
+                inArray(s.studyMaterials.status, [
+                  "generated",
+                  "reviewing",
+                  "approved",
+                  "published",
+                ]),
+              ),
+            )
+        : Promise.resolve([]),
     ]);
 
     const examRow = examRows[0];
@@ -383,8 +414,33 @@ export class DrizzleExamRepository implements ExamRepository {
     }));
 
     const listeningTracks: ListeningTrack[] = trackRows
-      .map(({ transcript, ...t }) => ({ ...t, transcript: transcript?.lines ?? null }))
+      .map(({ transcript, timingSource: _s, timingVerifiedBy: _b, timingVerifiedAt: _a, ...t }) => {
+        void _s;
+        void _b;
+        void _a;
+        // 출처 미확인 대본은 공개하지 않는다
+        const shown = transcript && isPublishableTranscript(transcript.origin) ? transcript : null;
+        return {
+          ...t,
+          transcript: shown?.lines ?? null,
+          transcriptOrigin: shown?.origin ?? null,
+          transcriptSourceUrl: shown?.sourceUrl ?? null,
+        };
+      })
       .sort((a, b) => (a.questionNumber ?? 0) - (b.questionNumber ?? 0));
+
+    const readingNotes = materialRows
+      .filter((m) => m.kind === READING_NOTE_KIND && m.status === "published")
+      .map((m) => toReadingNote(m.questionNumber, m.origin, m.content))
+      .filter((n): n is ReadingNote => n !== null)
+      .sort((a, b) => a.questionNumber - b.questionNumber);
+    const pendingMaterialKinds = [
+      ...new Set(
+        materialRows
+          .filter((m) => ["generated", "reviewing", "approved"].includes(m.status))
+          .map((m) => m.kind),
+      ),
+    ];
 
     const conceptTags: Record<string, ConceptTag[]> = {};
     for (const { questionId, concept } of conceptRows) {
@@ -435,6 +491,8 @@ export class DrizzleExamRepository implements ExamRepository {
       conceptTags: Object.fromEntries(
         questions.filter((q) => conceptTags[q.id]).map((q) => [q.id, conceptTags[q.id]!]),
       ),
+      readingNotes,
+      pendingMaterialKinds,
     };
   }
 

@@ -16,6 +16,12 @@ import {
 } from "drizzle-orm/pg-core";
 import { CONCEPT_SOURCES, CONCEPT_STATUSES } from "../lib/concepts";
 import {
+  STUDY_MATERIAL_ORIGINS,
+  STUDY_MATERIAL_STATUSES,
+  TRANSCRIPT_ORIGINS,
+  VOCABULARY_PROVENANCES,
+} from "../lib/study";
+import {
   ARTIFACT_DELIVERY_POLICIES,
   ARTIFACT_ORIGINS,
   EXAM_SOURCE_KINDS,
@@ -310,11 +316,22 @@ export const vocabulary = pgTable(
     sourceArtifactId: text("source_artifact_id").references(() => sourceArtifacts.id, {
       onDelete: "set null",
     }),
+    /**
+     * 단어·뜻의 출처: solution_extract(공식 해설 PDF 에서 규칙으로 추출) / manual(운영자 입력) /
+     * ai_assisted(AI 보조 생성 — 관리자 검토 후에만 등록)
+     */
+    provenance: text("provenance", { enum: VOCABULARY_PROVENANCES })
+      .notNull()
+      .default("solution_extract"),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [
     uniqueIndex("vocabulary_exam_number_word_uq").on(t.examId, t.subject, t.questionNumber, t.word),
     index("vocabulary_exam_idx").on(t.examId),
+    check(
+      "vocabulary_provenance_ck",
+      sql`${t.provenance} in ('solution_extract', 'manual', 'ai_assisted')`,
+    ),
   ],
 );
 
@@ -334,6 +351,14 @@ export const listeningTracks = pgTable(
     label: text("label").notNull(),
     startSeconds: real("start_seconds").notNull().default(0),
     endSeconds: real("end_seconds").notNull(),
+    /**
+     * 문항 구간(start~end)이 검증됐는지. false 면 화면은 구간을 쓰지 않고 전체 음원만 재생한다
+     * (문항별 구간을 추측하지 않는다). 근거는 timing_source 에 남긴다.
+     */
+    timingVerified: boolean("timing_verified").notNull().default(false),
+    timingSource: text("timing_source"),
+    timingVerifiedBy: text("timing_verified_by"),
+    timingVerifiedAt: timestamp("timing_verified_at", { withTimezone: true }),
   },
   (t) => [uniqueIndex("listening_tracks_exam_number_uq").on(t.examId, t.questionNumber)],
 );
@@ -346,9 +371,26 @@ export const listeningTranscripts = pgTable(
       .notNull()
       .references(() => listeningTracks.id, { onDelete: "cascade" }),
     lines: jsonb("lines").$type<TranscriptLine[]>().notNull(),
+    /**
+     * official: 공식 듣기 대본 자료 / authorized: 이용 허락을 받은 자료 / unverified: 출처 미확인(공개 안 함) /
+     * sample: 개발용 샘플 (is_sample 시험에만).
+     * AI 가 음원을 듣고 만든 대본은 저장하지 않는다.
+     */
+    origin: text("origin", { enum: TRANSCRIPT_ORIGINS }).notNull().default("unverified"),
+    sourceUrl: text("source_url"),
+    sourceFileId: text("source_file_id").references(() => examFiles.id, { onDelete: "set null" }),
+    parserVersion: text("parser_version"),
+    verifiedBy: text("verified_by"),
+    verifiedAt: timestamp("verified_at", { withTimezone: true }),
     ...timestamps,
   },
-  (t) => [uniqueIndex("listening_transcripts_track_uq").on(t.trackId)],
+  (t) => [
+    uniqueIndex("listening_transcripts_track_uq").on(t.trackId),
+    check(
+      "listening_transcripts_origin_ck",
+      sql`${t.origin} in ('official', 'authorized', 'unverified', 'sample')`,
+    ),
+  ],
 );
 
 /** 등급컷: 시험·과목·출처별 1건. 공식(isOfficial)과 예상치를 구분한다. */
@@ -1025,6 +1067,60 @@ export const questionConcepts = pgTable(
       sql`${t.status} in ('approved', 'manual_review', 'rejected')`,
     ),
     check("question_concepts_confidence_ck", sql`${t.confidence} >= 0 and ${t.confidence} <= 1`),
+  ],
+);
+
+/**
+ * 모의고사 창고가 만든 학습 자료 (학습지 PDF, 독해 학습 노트). 공식 자료가 아니다.
+ * 자동 게시하지 않는다: draft → generated → reviewing → approved → published (또는 rejected).
+ * 학습지는 승인되면 exam_files(artifact_origin=generated)로 게시되고 exam_file_id 로 연결된다.
+ */
+export const studyMaterials = pgTable(
+  "study_materials",
+  {
+    id: id(),
+    examId: text("exam_id")
+      .notNull()
+      .references(() => exams.id, { onDelete: "cascade" }),
+    subject: subjectEnum("subject").notNull(),
+    /** 학습지는 file_type 값 (vocabulary_test 등), 독해 노트는 reading_note */
+    kind: text("kind").notNull(),
+    /** "" = 시험·과목 전체, 그 외 문항 번호 문자열 */
+    slotKey: text("slot_key").notNull().default(""),
+    questionNumber: smallint("question_number"),
+    /** generated: 규칙 기반 생성 / ai_assisted: AI 보조 생성 (화면에 "검토 필요" 표시) */
+    origin: text("origin", { enum: STUDY_MATERIAL_ORIGINS }).notNull(),
+    status: text("status", { enum: STUDY_MATERIAL_STATUSES }).notNull().default("draft"),
+    title: text("title").notNull(),
+    /** 독해 노트 등 구조화된 내용. 저작권이 불분명한 지문 전문은 넣지 않는다 */
+    content: jsonb("content").$type<Record<string, unknown>>().notNull().default({}),
+    /** 생성 근거 (공식 파일 id/URL, 단어장·대본 버전) */
+    sourceRefs: jsonb("source_refs")
+      .$type<Array<{ kind: string; fileId?: string | null; url?: string | null }>>()
+      .notNull()
+      .default([]),
+    /** 입력 데이터 fingerprint — 같으면 다시 만들지 않는다 */
+    inputFingerprint: text("input_fingerprint").notNull(),
+    storageKey: text("storage_key"),
+    mimeType: text("mime_type"),
+    fileSize: integer("file_size"),
+    sha256: text("sha256"),
+    fileName: text("file_name"),
+    examFileId: text("exam_file_id").references(() => examFiles.id, { onDelete: "set null" }),
+    reviewNote: text("review_note"),
+    reviewedBy: text("reviewed_by"),
+    reviewedAt: timestamp("reviewed_at", { withTimezone: true }),
+    publishedAt: timestamp("published_at", { withTimezone: true }),
+    ...timestamps,
+  },
+  (t) => [
+    uniqueIndex("study_materials_slot_uq").on(t.examId, t.subject, t.kind, t.slotKey),
+    index("study_materials_status_idx").on(t.status, t.updatedAt),
+    check(
+      "study_materials_status_ck",
+      sql`${t.status} in ('draft', 'generated', 'reviewing', 'approved', 'published', 'rejected')`,
+    ),
+    check("study_materials_origin_ck", sql`${t.origin} in ('generated', 'ai_assisted')`),
   ],
 );
 

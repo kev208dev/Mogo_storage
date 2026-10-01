@@ -87,3 +87,22 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+/* 단어장 인쇄: html[data-print="vocabulary"] 일 때 단어장 표만 인쇄한다 */
+@media print {
+  html[data-print="vocabulary"] body * {
+    visibility: hidden;
+  }
+  html[data-print="vocabulary"] #vocabulary-print,
+  html[data-print="vocabulary"] #vocabulary-print * {
+    visibility: visible;
+  }
+  html[data-print="vocabulary"] #vocabulary-print {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+  }
+  html[data-print="vocabulary"] .print-hidden {
+    display: none !important;
+  }
+}

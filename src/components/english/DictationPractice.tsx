@@ -4,8 +4,10 @@ import { PlayIcon } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { NativeSelect } from "@/components/ui/select";
+import { readJson, writeJson } from "@/components/exam/grader-storage";
 import type { ListeningTrack } from "@/lib/data/types";
 import { createDictationTokens, isDictationMatch, type DictationLevel } from "@/lib/dictation";
+import { listeningMode, transcriptTracks } from "@/lib/listening";
 import { cn } from "@/lib/utils";
 import { DICTATION_SELECT_EVENT, playListeningTrack } from "./events";
 
@@ -15,11 +17,25 @@ const LEVELS: Array<{ value: DictationLevel; label: string; hint: string }> = [
   { value: "hard", label: "어려움", hint: "문장 전체 입력" },
 ];
 
-export function DictationPractice({ tracks }: { tracks: ListeningTrack[] }) {
-  const available = useMemo(
-    () => tracks.filter((t) => t.questionNumber !== null && t.transcript?.length),
-    [tracks],
-  );
+/** 문항별 받아쓰기 기록 (이 기기에만 저장) */
+type DictationProgress = Record<
+  string,
+  { level: DictationLevel; correct: number; total: number; at: string }
+>;
+const progressKey = (examId: string) => `mogo:dictation:${examId}`;
+
+export function DictationPractice({
+  examId,
+  tracks,
+}: {
+  examId: string;
+  tracks: ListeningTrack[];
+}) {
+  // 공개 가능한 대본이 있는 문항만 (문항 구간 검증 여부와는 무관)
+  const available = useMemo(() => transcriptTracks(tracks), [tracks]);
+  const segmentMode = listeningMode(tracks) === "segments";
+  const [progress, setProgress] = useState<DictationProgress>({});
+  const [ready, setReady] = useState(false);
   const [questionNumber, setQuestionNumber] = useState(available[0]?.questionNumber ?? 1);
   const [level, setLevel] = useState<DictationLevel>("easy");
   const [inputs, setInputs] = useState<Record<string, string>>({});
@@ -28,6 +44,12 @@ export function DictationPractice({ tracks }: { tracks: ListeningTrack[] }) {
   const uid = useId();
 
   const track = available.find((t) => t.questionNumber === questionNumber) ?? available[0];
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- 외부 저장소 동기화
+    setProgress(readJson<DictationProgress>(progressKey(examId)) ?? {});
+    setReady(true);
+  }, [examId]);
 
   useEffect(() => {
     const onSelect = (e: Event) => {
@@ -62,6 +84,23 @@ export function DictationPractice({ tracks }: { tracks: ListeningTrack[] }) {
         ),
   );
   const correctCount = blanks.filter((b) => isDictationMatch(b.answer, inputs[b.key] ?? "")).length;
+  const done = Object.keys(progress).length;
+
+  function check() {
+    setChecked(true);
+    if (track?.questionNumber == null) return;
+    const next = {
+      ...progress,
+      [String(track.questionNumber)]: {
+        level,
+        correct: correctCount,
+        total: blanks.length,
+        at: new Date().toISOString(),
+      },
+    };
+    setProgress(next);
+    writeJson(progressKey(examId), next);
+  }
 
   function reset(nextLevel = level, nextQuestion = questionNumber) {
     setLevel(nextLevel);
@@ -81,7 +120,12 @@ export function DictationPractice({ tracks }: { tracks: ListeningTrack[] }) {
     );
 
   return (
-    <div ref={rootRef} className="space-y-4">
+    <div
+      ref={rootRef}
+      className="space-y-4"
+      data-testid="dictation"
+      data-ready={ready ? "" : undefined}
+    >
       <div className="flex flex-wrap items-end gap-3">
         <div className="w-32">
           <label htmlFor={`${uid}-q`} className="mb-1 block text-sm font-semibold">
@@ -92,11 +136,15 @@ export function DictationPractice({ tracks }: { tracks: ListeningTrack[] }) {
             value={track.questionNumber ?? undefined}
             onChange={(e) => reset(level, Number(e.target.value))}
           >
-            {available.map((t) => (
-              <option key={t.id} value={t.questionNumber ?? ""}>
-                {t.label}
-              </option>
-            ))}
+            {available.map((t) => {
+              const p = progress[String(t.questionNumber)];
+              return (
+                <option key={t.id} value={t.questionNumber ?? ""}>
+                  {t.label}
+                  {p ? ` ✓ ${p.correct}/${p.total}` : ""}
+                </option>
+              );
+            })}
           </NativeSelect>
         </div>
         <fieldset>
@@ -123,17 +171,27 @@ export function DictationPractice({ tracks }: { tracks: ListeningTrack[] }) {
           variant="outline"
           size="lg"
           onClick={() => playListeningTrack(track.questionNumber)}
-          aria-label={`${track.label} 듣기`}
+          aria-label={segmentMode ? `${track.label} 듣기` : "듣기 음원 재생 (전체 음원)"}
         >
           <PlayIcon aria-hidden />
-          듣기
+          {segmentMode ? "듣기" : "음원 재생"}
         </Button>
       </div>
+      <p
+        className="text-muted-foreground text-xs"
+        aria-live="polite"
+        data-testid="dictation-progress"
+      >
+        {available.length}문항 중 {done}문항 완료 · 기록은 이 기기에만 저장됩니다.
+        {segmentMode
+          ? ""
+          : " 문항별 구간이 확인되지 않아 전체 음원에서 해당 문항을 찾아 들어 주세요."}
+      </p>
 
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          setChecked(true);
+          check();
         }}
         className="space-y-3"
         lang="en"

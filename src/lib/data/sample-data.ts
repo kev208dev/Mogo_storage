@@ -135,6 +135,11 @@ const MIME: Record<FileType, string> = {
   listening_audio: "audio/mpeg",
   listening_script: "application/pdf",
   vocabulary_pdf: "application/pdf",
+  vocabulary_test: "application/pdf",
+  vocabulary_test_answers: "application/pdf",
+  dictation_sheet: "application/pdf",
+  dictation_answers: "application/pdf",
+  question_checklist: "application/pdf",
 };
 
 const EXT: Record<FileType, string> = {
@@ -143,6 +148,11 @@ const EXT: Record<FileType, string> = {
   listening_audio: "mp3",
   listening_script: "pdf",
   vocabulary_pdf: "pdf",
+  vocabulary_test: "pdf",
+  vocabulary_test_answers: "pdf",
+  dictation_sheet: "pdf",
+  dictation_answers: "pdf",
+  question_checklist: "pdf",
 };
 
 const FILE_NAME_LABEL: Record<FileType, string> = {
@@ -151,6 +161,11 @@ const FILE_NAME_LABEL: Record<FileType, string> = {
   listening_audio: "듣기",
   listening_script: "듣기대본",
   vocabulary_pdf: "단어장",
+  vocabulary_test: "단어시험",
+  vocabulary_test_answers: "단어시험정답",
+  dictation_sheet: "받아쓰기",
+  dictation_answers: "받아쓰기정답",
+  question_checklist: "문항점검표",
 };
 
 const SUBJECT_FILE_LABEL: Record<Subject, string> = {
@@ -211,7 +226,17 @@ function buildFiles(featured: Exam): ExamFile[] {
   files.push(makeFile(featured, "social", "solution", size(500_000, 900_000), "social-culture"));
   files.push(makeFile(featured, "english", "listening_audio", 14_200_000));
   files.push(makeFile(featured, "english", "listening_script", 420_000));
-  files.push(makeFile(featured, "english", "vocabulary_pdf", 310_000));
+  // 단어장·단어 시험지는 모의고사 창고가 만든 자료 (generated)
+  files.push({
+    ...makeFile(featured, "english", "vocabulary_pdf", 310_000),
+    artifactOrigin: "generated",
+    sourceLabel: "모의고사 창고",
+  });
+  files.push({
+    ...makeFile(featured, "english", "vocabulary_test", 120_000),
+    artifactOrigin: "generated",
+    sourceLabel: "모의고사 창고",
+  });
   return files;
 }
 
@@ -225,7 +250,30 @@ function buildElectiveFiles(exam: Exam): ExamFile[] {
     // 고3 수학: 영역 전체 자료 없이 선택과목(미적분) 자료만 있는 실제 운영 형태 재현
     makeFile(exam, "math", "question", 2_100_000, "calculus"),
     makeFile(exam, "math", "solution", 800_000, "calculus"),
+    // 영어 듣기 음원만 있고 문항 구간은 검증되지 않은 시험 (전체 재생 fallback 확인용)
+    makeFile(exam, "english", "listening_audio", 14_200_000),
   ];
+}
+
+/** 구간 미검증 + 대본만 있는 듣기 (문항 구간을 추측하지 않는 fallback 화면 확인용) */
+function buildUnverifiedListening(exam: Exam, files: ExamFile[]): ListeningTrack[] {
+  const audio = files.find(
+    (f) => f.examId === exam.id && f.subject === "english" && f.type === "listening_audio",
+  );
+  if (!audio) return [];
+  return SAMPLE_TRANSCRIPTS.slice(0, 3).map((transcript, index) => ({
+    id: `lt_${exam.id}_${index + 1}`,
+    examId: exam.id,
+    fileId: audio.id,
+    questionNumber: index + 1,
+    label: `${index + 1}번`,
+    startSeconds: 0,
+    endSeconds: 0,
+    timingVerified: false,
+    transcript,
+    transcriptOrigin: "sample" as const,
+    transcriptSourceUrl: null,
+  }));
 }
 
 /**
@@ -629,7 +677,10 @@ function buildListeningTracks(featured: Exam, files: ExamFile[]): ListeningTrack
       label: "전체 듣기",
       startSeconds: 0,
       endSeconds: SAMPLE_TRANSCRIPTS.length * TRACK_SECONDS,
+      timingVerified: true,
       transcript: null,
+      transcriptOrigin: null,
+      transcriptSourceUrl: null,
     },
   ];
   SAMPLE_TRANSCRIPTS.forEach((transcript, index) => {
@@ -642,7 +693,11 @@ function buildListeningTracks(featured: Exam, files: ExamFile[]): ListeningTrack
       label: `${questionNumber}번`,
       startSeconds: index * TRACK_SECONDS,
       endSeconds: (index + 1) * TRACK_SECONDS,
+      // 샘플 음원(무음)과 샘플 대본은 우리가 만든 개발용 데이터라 구간을 알고 있다
+      timingVerified: true,
       transcript,
+      transcriptOrigin: "sample",
+      transcriptSourceUrl: null,
     });
   });
   return tracks;
@@ -756,7 +811,10 @@ function buildSampleDataset(): SampleDataset {
     statistics: buildStatistics(questions),
     gradeCuts: [...buildGradeCuts(featured), ...buildElectiveGradeCuts(elective)],
     vocabulary: buildVocabulary(featured, questions),
-    listeningTracks: buildListeningTracks(featured, files),
+    listeningTracks: [
+      ...buildListeningTracks(featured, files),
+      ...buildUnverifiedListening(elective, files),
+    ],
     schedules,
     examCourses: [...buildExamCourses(featured), ...buildElectiveCourses(elective)],
   };

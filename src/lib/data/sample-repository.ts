@@ -137,6 +137,9 @@ export class SampleExamRepository implements ExamRepository {
       processingTypes: [],
       // 샘플 모드에는 개념 태그를 만들지 않는다 (공식 해설지 근거가 없음)
       conceptTags: {},
+      // 샘플 모드에는 독해 노트·생성 학습지를 만들지 않는다 (근거 자료가 없음)
+      readingNotes: [],
+      pendingMaterialKinds: [],
       files: inSlot(this.data.files),
       questions,
       gradeCuts: inSlot(this.data.gradeCuts),

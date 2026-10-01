@@ -20,6 +20,10 @@ export type IngestionEvent =
   | "release_watch.missed"
   | "vocabulary.extracted"
   | "vocabulary.pdf_generated"
+  | "study.materials_generated"
+  | "study.material_reviewed"
+  | "listening_script.extracted"
+  | "listening_script.unrecognized"
   | "release_watch.tick"
   | "scheduler.unhealthy"
   | "scheduler.recovered";

@@ -14,6 +14,7 @@ const NAV = [
   { href: "/admin/imports", label: "공식 URL 입력" },
   { href: "/admin/grade-cuts", label: "등급컷" },
   { href: "/admin/concepts", label: "개념 태그" },
+  { href: "/admin/study", label: "학습 자료" },
   { href: "/admin/coverage", label: "기능 coverage" },
   { href: "/admin/mappings", label: "Source mapping" },
   { href: "/admin/runs", label: "실행 기록" },

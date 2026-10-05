@@ -72,6 +72,7 @@ async function main() {
           meaning: v.meaning,
           partOfSpeech: v.partOfSpeech,
           difficulty: v.difficulty,
+          provenance: "manual" as const,
           createdAt: new Date(v.createdAt),
         })),
       )
@@ -87,13 +88,22 @@ async function main() {
           label: t.label,
           startSeconds: t.startSeconds,
           endSeconds: t.endSeconds,
+          timingVerified: t.timingVerified,
+          timingSource: "sample",
         })),
       )
       .onConflictDoNothing();
     const transcripts = d.listeningTracks.filter((t) => t.transcript);
     await tx
       .insert(s.listeningTranscripts)
-      .values(transcripts.map((t) => ({ id: `tr_${t.id}`, trackId: t.id, lines: t.transcript! })))
+      .values(
+        transcripts.map((t) => ({
+          id: `tr_${t.id}`,
+          trackId: t.id,
+          lines: t.transcript!,
+          origin: "sample" as const,
+        })),
+      )
       .onConflictDoNothing();
     await tx
       .insert(s.gradeCuts)

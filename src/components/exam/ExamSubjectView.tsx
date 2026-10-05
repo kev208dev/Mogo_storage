@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { DictationPractice } from "@/components/english/DictationPractice";
+import { EnglishAvailability } from "@/components/english/EnglishAvailability";
+import { ReadingNotes } from "@/components/english/ReadingNotes";
+import { TranscriptList } from "@/components/english/TranscriptList";
 import { FullListeningPlayer } from "@/components/english/FullListeningPlayer";
 import { ListeningPlayer } from "@/components/english/ListeningPlayer";
 import { VocabularyList } from "@/components/english/VocabularyList";
@@ -7,7 +10,7 @@ import { VocabularyQuiz } from "@/components/english/VocabularyQuiz";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { SampleNotice } from "@/components/layout/SampleNotice";
 import { Section } from "@/components/ui/section";
-import { SUBJECT_LABELS } from "@/lib/constants";
+import { GRADE_CUT_SOURCE_LABELS, SUBJECT_LABELS, WORKSHEET_FILE_TYPES } from "@/lib/constants";
 import { SUBJECT_AREA_LABELS } from "@/lib/courses";
 import type { ExamSubjectDetail } from "@/lib/data/types";
 import {
@@ -17,15 +20,19 @@ import {
   examSeoOptions,
 } from "@/lib/exam-metadata";
 import { conceptPath, examCoursePath, examPath, examTitle } from "@/lib/exam-path";
+import { listeningMode, transcriptTracks, verifiedSegments } from "@/lib/listening";
+import { englishAvailability } from "@/lib/study";
 import { AnswerSheet } from "./AnswerSheet";
+import { CourseOverview } from "./CourseOverview";
 import { CourseSelector } from "./CourseSelector";
 import { DifficultQuestions } from "./DifficultQuestions";
 import { ExamFiles } from "./ExamFiles";
 import { ExamHeader } from "./ExamHeader";
 import { ExamRelatedLinks } from "./ExamRelatedLinks";
 import { ExamSchedulePanel } from "./ExamSchedulePanel";
-import { fileViewHref } from "./FileDownloadCard";
+import { FileDownloadCard, fileViewHref } from "./FileDownloadCard";
 import { GradeCutTable } from "./GradeCutTable";
+import { RecordVisit } from "./LastVisit";
 import { QuestionExplorer } from "./QuestionExplorer";
 import { QuickGrader } from "./QuickGrader";
 import { SubjectTabs } from "./SubjectTabs";
@@ -47,6 +54,7 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     courses,
     course,
     courseFileCounts,
+    courseSummaries,
     files,
     questions,
     gradeCuts,
@@ -55,6 +63,8 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
     schedule,
     processingTypes,
     conceptTags,
+    readingNotes,
+    pendingMaterialKinds,
   } = detail;
   const subjectKey = subject.subject;
   const areaLabel = SUBJECT_AREA_LABELS[subjectKey] ?? SUBJECT_LABELS[subjectKey];
@@ -92,15 +102,43 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
   );
   const contentWords = examContentWords(examSeoFeatures(detail));
 
+  const transcripts = isEnglish ? transcriptTracks(listeningTracks) : [];
+  const worksheets = isEnglish
+    ? files.filter(
+        (f) =>
+          f.type !== "vocabulary_pdf" &&
+          (WORKSHEET_FILE_TYPES as readonly string[]).includes(f.type),
+      )
+    : [];
+  const englishItems = isEnglish
+    ? englishAvailability({
+        fileTypes: files.map((f) => f.type),
+        processingTypes,
+        vocabularyCount: vocabulary.length,
+        transcriptCount: transcripts.length,
+        verifiedSegmentCount: verifiedSegments(listeningTracks).length,
+        questionCount: questions.length,
+        explainedQuestionCount: questions.filter((q) => q.explanation).length,
+        readingNotes,
+        pendingMaterialKinds,
+        publishedWorksheetTypes: worksheets.map((f) => f.type),
+      })
+    : [];
+
   const quickLinks = [
+    courseSummaries.length > 0 && { href: "#course-overview-heading", label: "세부과목" },
+    showFiles && { href: "#files-heading", label: "PDF" },
     hasQuestions && { href: "#answers", label: "정답" },
     hasQuestions && { href: "#grader", label: "자동 채점" },
     hasQuestions && { href: "#questions", label: "문항별 해설" },
     { href: "#grade-cuts", label: "등급컷" },
+    isEnglish && { href: "#english-study", label: "영어 학습 현황" },
     isEnglish && vocabulary.length > 0 && { href: "#vocabulary", label: "단어장" },
     isEnglish && vocabulary.length > 0 && { href: "#vocabulary-quiz", label: "단어 시험" },
-    isEnglish && (listeningTracks.length > 0 || audioFile) && { href: "#listening", label: "듣기" },
-    isEnglish && listeningTracks.length > 0 && { href: "#dictation", label: "받아쓰기" },
+    isEnglish && (audioFile || transcripts.length > 0) && { href: "#listening", label: "듣기" },
+    isEnglish && transcripts.length > 0 && { href: "#dictation", label: "받아쓰기" },
+    isEnglish && readingNotes.length > 0 && { href: "#reading", label: "독해 학습" },
+    isEnglish && worksheets.length > 0 && { href: "#worksheets", label: "학습지" },
   ].filter((x): x is { href: string; label: string } => Boolean(x));
 
   return (
@@ -139,11 +177,10 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
             title={`${examTitle(exam)} ${subjectLabel}`}
             processingTypes={processingTypes}
           />
-        ) : (
-          <p className="border-border text-muted-foreground mt-4 rounded-md border px-3 py-3 text-sm">
-            위에서 {areaLabel} 과목을 선택하면 시험지와 정답·해설을 받을 수 있습니다.
-          </p>
-        )}
+        ) : null}
+        {!course && courseSummaries.length > 0 ? (
+          <CourseOverview exam={exam} subject={subjectKey} summaries={courseSummaries} />
+        ) : null}
 
         {exam.isSample ? (
           <SampleNotice className="mt-3">
@@ -168,6 +205,15 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
         </nav>
 
         <div className="mt-4">
+          {isEnglish ? (
+            <Section
+              id="english-study"
+              title="영어 학습 자료 현황"
+              description="실제로 확인된 자료만 '있음'으로 표시합니다."
+            >
+              <EnglishAvailability items={englishItems} />
+            </Section>
+          ) : null}
           {hasQuestions ? (
             <>
               <Section id="answers" title="정답 바로 보기">
@@ -218,49 +264,101 @@ export function ExamSubjectView({ detail }: { detail: ExamSubjectDetail }) {
           )}
 
           <Section id="grade-cuts" title="등급컷" description="공식 자료와 기관별 예상 등급컷">
-            <GradeCutTable gradeCuts={gradeCuts} subject={subjectKey} exam={exam} />
+            <GradeCutTable
+              gradeCuts={gradeCuts}
+              subject={subjectKey}
+              exam={exam}
+              courseCuts={courseSummaries.map((c) => ({
+                name: c.name,
+                href: `${examCoursePath(exam, subjectKey, c.code)}#grade-cuts`,
+                providers: c.gradeCuts.map((g) => GRADE_CUT_SOURCE_LABELS[g.source]),
+              }))}
+            />
           </Section>
 
-          {isEnglish && vocabulary.length > 0 ? (
+          {isEnglish ? (
             <>
-              <Section
-                id="vocabulary"
-                title="지문별 단어장"
-                description={`${vocabulary.length}단어`}
-              >
-                <VocabularyList items={vocabulary} />
-              </Section>
-              <Section id="vocabulary-quiz" title="단어 시험">
-                <VocabularyQuiz examId={exam.id} items={vocabulary} />
-              </Section>
-            </>
-          ) : null}
+              {vocabulary.length > 0 ? (
+                <>
+                  <Section
+                    id="vocabulary"
+                    title="지문별 단어장"
+                    description={`${vocabulary.length}단어 · 공식 해설 자료에서 추출해 모의고사 창고가 정리한 학습 자료입니다.`}
+                  >
+                    <VocabularyList
+                      items={vocabulary}
+                      title={`${examTitle(exam)} 영어 지문별 단어장`}
+                    />
+                  </Section>
+                  <Section id="vocabulary-quiz" title="단어 시험">
+                    <VocabularyQuiz examId={exam.id} items={vocabulary} />
+                  </Section>
+                </>
+              ) : null}
 
-          {isEnglish && audioFile && listeningTracks.length > 0 ? (
-            <>
-              <Section
-                id="listening"
-                title="영어 듣기"
-                description="문항별로 재생하고 대본을 확인하세요."
-              >
-                <ListeningPlayer tracks={listeningTracks} audioUrl={fileViewHref(audioFile.id)} />
-              </Section>
-              <Section id="dictation" title="받아쓰기">
-                <DictationPractice tracks={listeningTracks} />
-              </Section>
+              {audioFile && listeningMode(listeningTracks) === "segments" ? (
+                <Section
+                  id="listening"
+                  title="영어 듣기"
+                  description="검증된 문항 구간으로 재생합니다. 대본은 공식 자료로 확인된 경우에만 제공합니다."
+                >
+                  <ListeningPlayer tracks={listeningTracks} audioUrl={fileViewHref(audioFile.id)} />
+                </Section>
+              ) : audioFile || transcripts.length > 0 ? (
+                // 문항별 구간이 검증되지 않은 시험: 공식 음원 전체만 재생 (구간을 추측하지 않는다)
+                <Section
+                  id="listening"
+                  title="영어 듣기"
+                  description="공식 듣기 음원 전체입니다. 문항별 구간은 공식 자료로 검증된 경우에만 제공합니다."
+                >
+                  {audioFile ? <FullListeningPlayer audioUrl={fileViewHref(audioFile.id)} /> : null}
+                  {transcripts.length > 0 ? <TranscriptList tracks={transcripts} /> : null}
+                </Section>
+              ) : null}
+
+              {transcripts.length > 0 ? (
+                <Section id="dictation" title="받아쓰기">
+                  <DictationPractice examId={exam.id} tracks={listeningTracks} />
+                </Section>
+              ) : null}
+
+              {readingNotes.length > 0 ? (
+                <Section id="reading" title="독해 학습">
+                  <ReadingNotes
+                    notes={readingNotes}
+                    solutionHref={solutionFile ? fileViewHref(solutionFile.id) : null}
+                  />
+                </Section>
+              ) : null}
+
+              {worksheets.length > 0 ? (
+                <Section
+                  id="worksheets"
+                  title="학습지"
+                  description="모의고사 창고가 만든 학습지입니다 (공식 시험 자료 아님). 관리자 검토 후 게시합니다."
+                >
+                  <ul className="divide-border border-border divide-y rounded-md border px-3">
+                    {worksheets.map((f) => (
+                      <FileDownloadCard
+                        key={f.id}
+                        type={f.type}
+                        file={f}
+                        examId={exam.id}
+                        subject={subjectKey}
+                        title={`${examTitle(exam)} 영어`}
+                      />
+                    ))}
+                  </ul>
+                </Section>
+              ) : null}
             </>
-          ) : isEnglish && audioFile ? (
-            // 문항별 구간·대본이 아직 없는 실제 시험: 공식 음원 전체만 재생 (구간·대본을 추측하지 않는다)
-            <Section
-              id="listening"
-              title="영어 듣기"
-              description="공식 듣기 음원 전체입니다. 문항별 구간과 대본은 공식 자료로 확인된 경우에만 제공합니다."
-            >
-              <FullListeningPlayer audioUrl={fileViewHref(audioFile.id)} />
-            </Section>
           ) : null}
         </div>
         <ExamRelatedLinks exam={exam} subject={subjectKey} />
+        <RecordVisit
+          path={course ? examCoursePath(exam, subjectKey, course.code) : examPath(exam, subjectKey)}
+          title={`${examTitle(exam)} ${subjectLabel}`}
+        />
       </article>
       {/* BreadcrumbList(머리말) 다음에 CollectionPage */}
       <JsonLd data={structuredData} />

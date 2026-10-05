@@ -32,6 +32,11 @@ const MIME_HINT: Record<FileType, string> = {
   listening_audio: "audio/mpeg",
   listening_script: "application/pdf",
   vocabulary_pdf: "application/pdf",
+  vocabulary_test: "application/pdf",
+  vocabulary_test_answers: "application/pdf",
+  dictation_sheet: "application/pdf",
+  dictation_answers: "application/pdf",
+  question_checklist: "application/pdf",
 };
 
 export function urlHash(url: string): string {

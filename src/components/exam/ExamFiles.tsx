@@ -39,6 +39,12 @@ export function ExamFiles({
           />
         ))}
       </ul>
+      {files.some((f) => f.deliveryType === "redirect") ? (
+        <p className="text-muted-foreground mt-1.5 text-xs" data-testid="redirect-hint">
+          공식 자료는 시행 기관 · EBSi 등 원본 사이트 파일로 바로 연결됩니다. 열리지 않으면 잠시 후
+          다시 시도하거나 [오류 신고]로 알려주세요.
+        </p>
+      ) : null}
     </section>
   );
 }

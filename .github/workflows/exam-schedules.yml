@@ -1,0 +1,54 @@
+name: Exam schedules
+
+# 공식 공지로 확인한 시험 일정(data/schedules/*.json)을 운영 DB 에 반영한다. 수동 실행 전용.
+# 기본은 dry-run (바뀌는 내용만 출력). 시험일은 기억·추측으로 넣지 않는다.
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "일정 파일 (예: data/schedules/2026.json)"
+        required: true
+      dry_run:
+        description: "dry-run (DB 를 바꾸지 않음)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: exam-schedules
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate file path
+        env:
+          FILE: ${{ inputs.file }}
+        run: |
+          case "$FILE" in
+            data/schedules/*.json) ;;
+            *) echo "file must be data/schedules/*.json"; exit 1 ;;
+          esac
+          test -f "$FILE"
+      - name: Apply schedules
+        env:
+          DATABASE_URL: ${{ secrets.INGESTION_DATABASE_URL }}
+          FILE: ${{ inputs.file }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then echo "INGESTION_DATABASE_URL secret is not configured"; exit 1; fi
+          if [ "$DRY_RUN" = "true" ]; then
+            npm run ingest:schedules -- --file="$FILE" --dry-run
+          else
+            npm run ingest:schedules -- --file="$FILE"
+          fi

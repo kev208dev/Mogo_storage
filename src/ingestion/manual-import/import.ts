@@ -37,6 +37,11 @@ const MIME: Record<FileType, string> = {
   listening_audio: "audio/mpeg",
   listening_script: "application/pdf",
   vocabulary_pdf: "application/pdf",
+  vocabulary_test: "application/pdf",
+  vocabulary_test_answers: "application/pdf",
+  dictation_sheet: "application/pdf",
+  dictation_answers: "application/pdf",
+  question_checklist: "application/pdf",
 };
 
 /** 운영자 입력 source 행 보장 (자동 수집 대상 아님: enabled=false, 기능 모두 꺼짐) */

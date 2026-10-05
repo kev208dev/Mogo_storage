@@ -61,6 +61,10 @@ export const JOB_TYPES = [
   "publish_artifact",
   "extract_vocabulary",
   "generate_vocabulary_pdf",
+  /** 단어장·단어 시험·받아쓰기·문항 점검표 PDF 생성 → study_materials (관리자 검토 후 게시) */
+  "generate_study_materials",
+  /** 공식 듣기 대본 PDF → 문항별 대본 (구간은 추측하지 않음) */
+  "extract_listening_script",
 ] as const;
 export type JobType = (typeof JOB_TYPES)[number];
 

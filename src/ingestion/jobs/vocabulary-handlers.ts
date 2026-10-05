@@ -1,15 +1,12 @@
-import { createHash } from "node:crypto";
-import { and, asc, eq, isNull } from "drizzle-orm";
-import { examFiles, exams, vocabulary, vocabularyCandidates } from "../../db/schema";
+import { vocabulary, vocabularyCandidates } from "../../db/schema";
 import type { IngestionContext } from "../context";
 import { ArtifactValidationError, toIngestionError } from "../errors";
 import { validateArtifact } from "../verify/artifact-validator";
 import { extractVocabularyCandidates } from "../vocabulary/candidates";
-import { generateVocabularyPdf } from "../vocabulary/pdf-generator";
 import { extractPdfText } from "../vocabulary/pdf-text";
-import { examFileConflict } from "../pipeline/slots";
+import { enqueueStudyMaterials, generateStudyMaterials } from "../study/materials";
 import { downloadArtifactBytes, JobError } from "./handlers";
-import { enqueueJob, type Job } from "./queue";
+import type { Job } from "./queue";
 
 /** PROCESS: 영어 해설 PDF → 텍스트 → 단어 후보 → (신뢰도 높은 것만) Vocabulary */
 export async function handleExtractVocabulary(ctx: IngestionContext, job: Job) {
@@ -79,92 +76,15 @@ export async function handleExtractVocabulary(ctx: IngestionContext, job: Job) {
   if (approved.length) await enqueueVocabularyPdf(ctx, artifact.examId);
 }
 
+/** 단어장이 바뀌면 학습지(단어장 PDF · 단어 시험)를 다시 만든다 — 게시는 관리자 승인 후 */
 export async function enqueueVocabularyPdf(ctx: IngestionContext, examId: string) {
-  const rows = await ctx.db
-    .select({ n: vocabulary.questionNumber, w: vocabulary.word, m: vocabulary.meaning })
-    .from(vocabulary)
-    .where(and(eq(vocabulary.examId, examId), eq(vocabulary.subject, "english")));
-  if (rows.length === 0) return;
-  const version = createHash("sha256")
-    .update(JSON.stringify(rows.sort((a, b) => a.n - b.n || a.w.localeCompare(b.w))))
-    .digest("hex")
-    .slice(0, 16);
-  await enqueueJob(ctx.db, {
-    runAt: ctx.now(),
-    type: "generate_vocabulary_pdf",
-    payload: { examId },
-    dedupeKey: `vocab-pdf:${examId}:${version}`,
-    maxAttempts: 3,
-  });
+  await enqueueStudyMaterials(ctx, examId);
 }
 
-/** PROCESS: Vocabulary → 우리가 만든 단어장 PDF (generated artifact) */
+/**
+ * 이전 job 종류(generate_vocabulary_pdf) 호환: 이미 쌓인 job 은 학습지 생성으로 처리한다.
+ * 예전처럼 바로 게시하지 않는다 (study_materials 검토 → 게시).
+ */
 export async function handleGenerateVocabularyPdf(ctx: IngestionContext, job: Job) {
-  const examId = String(job.payload.examId);
-  const { db } = ctx;
-  const [exam] = await db.select().from(exams).where(eq(exams.id, examId));
-  if (!exam) throw new JobError("EXAM_NOT_FOUND", examId);
-  const rows = await db
-    .select()
-    .from(vocabulary)
-    .where(and(eq(vocabulary.examId, examId), eq(vocabulary.subject, "english")))
-    .orderBy(asc(vocabulary.questionNumber), asc(vocabulary.word));
-  if (rows.length === 0) return;
-
-  const [current] = await db
-    .select()
-    .from(examFiles)
-    .where(
-      and(
-        eq(examFiles.examId, examId),
-        eq(examFiles.subject, "english"),
-        eq(examFiles.type, "vocabulary_pdf"),
-        isNull(examFiles.courseId),
-      ),
-    );
-  if (current && current.artifactOrigin !== "generated") {
-    // 공식 단어장이나 수동 등록 파일은 덮어쓰지 않는다
-    return;
-  }
-
-  const title = `${exam.year}년 고${exam.grade} ${exam.month}월 영어 지문별 단어장`;
-  const bytes = await generateVocabularyPdf({
-    title,
-    entries: rows.map((r) => ({
-      questionNumber: r.questionNumber,
-      word: r.word,
-      meaning: r.meaning,
-      partOfSpeech: r.partOfSpeech,
-    })),
-    sourceNote:
-      "모의고사 창고가 공식 해설 자료에서 추출한 단어로 만든 학습 자료입니다. 원본 시험 자료가 아닙니다.",
-  });
-  const sha = createHash("sha256").update(bytes).digest("hex");
-  // 생성 자료는 원본(exams/…)과 분리된 prefix 에 둔다
-  const key = `generated/exams/${exam.year}/high${exam.grade}/${String(exam.month).padStart(2, "0")}/english/vocabulary-${sha.slice(0, 16)}.pdf`;
-  await ctx.storage.putObject({ key, body: bytes, contentType: "application/pdf", sha256: sha });
-
-  const values = {
-    examId,
-    subject: "english" as const,
-    type: "vocabulary_pdf" as const,
-    deliveryType: "storage" as const,
-    storageKey: key,
-    externalUrl: null,
-    artifactOrigin: "generated" as const,
-    sourceArtifactId: null,
-    sourceLabel: "모의고사 창고",
-    mimeType: "application/pdf",
-    fileSize: bytes.byteLength,
-    originalFileName: `${exam.year}-고${exam.grade}-${exam.month}월-영어-단어장.pdf`,
-    updatedAt: ctx.now(),
-  };
-  await db
-    .insert(examFiles)
-    .values(values)
-    .onConflictDoUpdate({ ...examFileConflict(null), set: values });
-  ctx.logger.info("vocabulary.pdf_generated", { examId, words: rows.length, storageKey: key });
-  await ctx.revalidator.revalidatePaths([
-    `/exam/${exam.year}/high${exam.grade}/${String(exam.month).padStart(2, "0")}/english`,
-  ]);
+  await generateStudyMaterials(ctx, String(job.payload.examId));
 }

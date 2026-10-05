@@ -2,6 +2,7 @@
 
 import { PauseIcon, PlayIcon, RotateCcwIcon, RotateCwIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { LISTENING_PLAY_EVENT } from "./events";
 
 const RATES = [0.75, 1, 1.25, 1.5] as const;
 
@@ -14,7 +15,8 @@ function formatTime(sec: number): string {
 
 /**
  * 공식 듣기 음원 전체 재생기. 문항별 구간이 검증되지 않은 시험에서 쓴다 (임의로 자르지 않는다).
- * 재생/일시정지, ±5초, 속도. 음원은 사용자가 재생할 때만 내려받는다 (preload="none").
+ * 재생/일시정지, ±5·10초, 속도. 음원은 사용자가 재생할 때만 내려받는다 (preload="none").
+ * 받아쓰기의 "듣기" 요청도 문항 위치로 이동하지 않고 전체 음원을 이어서 재생한다.
  * 파일은 /api/files/{id}/view → 스토리지로 redirect 되므로 Range(구간 탐색)는 스토리지가 처리한다.
  */
 export function FullListeningPlayer({ audioUrl }: { audioUrl: string }) {
@@ -24,6 +26,7 @@ export function FullListeningPlayer({ audioUrl }: { audioUrl: string }) {
   const [duration, setDuration] = useState(0);
   const [rate, setRate] = useState<number>(1);
   const [error, setError] = useState<string | null>(null);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -56,6 +59,31 @@ export function FullListeningPlayer({ audioUrl }: { audioUrl: string }) {
     if (audioRef.current) audioRef.current.playbackRate = rate;
   }, [rate]);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- hydration 완료 표시
+  useEffect(() => setReady(true), []);
+
+  // 받아쓰기 등에서 재생 요청: 구간을 모르므로 위치는 그대로 두고 재생만
+  useEffect(() => {
+    const onRequest = () => {
+      const audio = audioRef.current;
+      if (audio?.paused) void audio.play().catch(() => undefined);
+    };
+    window.addEventListener(LISTENING_PLAY_EVENT, onRequest);
+    return () => window.removeEventListener(LISTENING_PLAY_EVENT, onRequest);
+  }, []);
+
+  function onKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
+    const target = e.target as HTMLElement;
+    if (target.closest("input, textarea, select")) return;
+    if (e.key === " " && target.tagName !== "BUTTON") {
+      e.preventDefault();
+      void toggle();
+    } else if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      e.preventDefault();
+      seek((e.key === "ArrowLeft" ? -1 : 1) * (e.shiftKey ? 10 : 5));
+    }
+  }
+
   async function toggle() {
     const audio = audioRef.current;
     if (!audio) return;
@@ -83,9 +111,20 @@ export function FullListeningPlayer({ audioUrl }: { audioUrl: string }) {
     "border-border hover:bg-muted focus-visible:ring-ring/60 inline-flex min-h-11 items-center gap-1.5 rounded-md border px-3 text-sm font-semibold focus-visible:ring-[3px] focus-visible:outline-none";
 
   return (
-    <div data-testid="listening-full-player">
+    <div
+      data-testid="listening-full-player"
+      data-ready={ready ? "" : undefined}
+      role="group"
+      aria-label="듣기 전체 재생"
+      aria-keyshortcuts="Space ArrowLeft ArrowRight Shift+ArrowLeft Shift+ArrowRight"
+      onKeyDown={onKeyDown}
+    >
       <audio ref={audioRef} src={audioUrl} preload="none" data-testid="listening-full-audio" />
       <div className="flex flex-wrap items-center gap-2">
+        <button type="button" onClick={() => seek(-10)} className={btn} aria-label="10초 뒤로">
+          <RotateCcwIcon className="size-4" aria-hidden />
+          10초
+        </button>
         <button type="button" onClick={() => seek(-5)} className={btn} aria-label="5초 뒤로">
           <RotateCcwIcon className="size-4" aria-hidden />
           5초
@@ -105,6 +144,10 @@ export function FullListeningPlayer({ audioUrl }: { audioUrl: string }) {
         </button>
         <button type="button" onClick={() => seek(5)} className={btn} aria-label="5초 앞으로">
           5초
+          <RotateCwIcon className="size-4" aria-hidden />
+        </button>
+        <button type="button" onClick={() => seek(10)} className={btn} aria-label="10초 앞으로">
+          10초
           <RotateCwIcon className="size-4" aria-hidden />
         </button>
         <span className="text-muted-foreground text-sm tabular-nums" aria-live="off">

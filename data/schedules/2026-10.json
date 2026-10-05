@@ -1,0 +1,28 @@
+{
+  "schedules": [
+    {
+      "year": 2026,
+      "grade": 1,
+      "month": 10,
+      "examType": "school_mock",
+      "examDate": "2026-10-20",
+      "announcementUrl": "https://bsss.pen.go.kr/view.do?dateM=10&dateY=2026&no=58&srchClassType="
+    },
+    {
+      "year": 2026,
+      "grade": 2,
+      "month": 10,
+      "examType": "school_mock",
+      "examDate": "2026-10-20",
+      "announcementUrl": "https://bsss.pen.go.kr/view.do?dateM=10&dateY=2026&no=58&srchClassType="
+    },
+    {
+      "year": 2026,
+      "grade": 3,
+      "month": 10,
+      "examType": "school_mock",
+      "examDate": "2026-10-20",
+      "announcementUrl": "https://bsss.pen.go.kr/view.do?dateM=10&dateY=2026&no=58&srchClassType="
+    }
+  ]
+}

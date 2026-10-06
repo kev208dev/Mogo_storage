@@ -1,4 +1,4 @@
-import { and, eq } from "drizzle-orm";
+import { and, eq, isNull } from "drizzle-orm";
 import type { Database } from "../../db/client";
 import { examFiles, exams, sourceArtifacts } from "../../db/schema";
 import type { IngestionContext } from "../context";
@@ -38,15 +38,17 @@ export function processableStudyArtifactVersion(input: {
 }
 
 async function selectedExams(db: Database, filter: EnglishStudyBackfillFilter) {
-  const predicates = [
+  const where = and(
     filter.year === undefined ? undefined : eq(exams.year, filter.year),
     filter.grade === undefined ? undefined : eq(exams.grade, filter.grade),
     filter.month === undefined ? undefined : eq(exams.month, filter.month),
-  ].filter((value): value is NonNullable<typeof value> => Boolean(value));
-
-  const query = db.select({ id: exams.id, year: exams.year, grade: exams.grade, month: exams.month }).from(exams);
-  if (predicates.length === 0) return query.orderBy(exams.year, exams.grade, exams.month);
-  return query.where(and(...predicates)).orderBy(exams.year, exams.grade, exams.month);
+  );
+  const query = db
+    .select({ id: exams.id, year: exams.year, grade: exams.grade, month: exams.month })
+    .from(exams);
+  return where
+    ? query.where(where).orderBy(exams.year, exams.grade, exams.month)
+    : query.orderBy(exams.year, exams.grade, exams.month);
 }
 
 async function sourceForPublishedFile(
@@ -66,6 +68,7 @@ async function sourceForPublishedFile(
         eq(examFiles.examId, examId),
         eq(examFiles.subject, "english"),
         eq(examFiles.type, type),
+        isNull(examFiles.courseId),
       ),
     );
   if (!file?.sourceArtifactId) return { file, artifact: null };
@@ -145,7 +148,7 @@ export async function backfillEnglishStudy(
         } else {
           result.listeningEligible += 1;
           if (!options.dryRun) {
-            await maybeEnqueueListeningScript(ctx as IngestionContext, exam.id);
+            await maybeEnqueueListeningScript(ctx, exam.id);
             result.listeningScheduled += 1;
           }
         }

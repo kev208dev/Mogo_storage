@@ -20,6 +20,7 @@ import {
   validateArtifactProbe,
 } from "../verify/artifact-validator";
 import { isOperatorImport } from "../manual-import/source";
+import { isApprovedOperatorStudyArtifact } from "../study/artifact-fetch";
 import { enqueueJob, type Job } from "./queue";
 
 export class JobError extends IngestionError {}
@@ -367,8 +368,13 @@ export async function handlePublishArtifact(ctx: IngestionContext, job: Job) {
           .where(eq(sourceArtifacts.id, file.sourceArtifactId))
       : [];
     const version = artifact?.contentFingerprint ?? artifact?.sha256;
-    // 단어장 추출은 해설 PDF 를 내려받아야 하므로 운영자 입력(요청 금지) 자료는 대상이 아니다
-    if (artifact && version && !isOperatorImport(artifact.sourceId)) {
+    // 자동 source 또는 브라우저 승인된 EBSi 직접 파일만 처리한다.
+    // 그 외 operator_import(KICE/교육청 등)는 서버에서 절대 요청하지 않는다.
+    if (
+      artifact &&
+      version &&
+      (!isOperatorImport(artifact.sourceId) || isApprovedOperatorStudyArtifact(artifact))
+    ) {
       await enqueueJob(ctx.db, {
         runAt: ctx.now(),
         type: "extract_vocabulary",

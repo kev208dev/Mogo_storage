@@ -2,7 +2,12 @@
 
 EBSi · 평가원(KICE) · 교육청 사이트는 robots.txt 로 자동 수집을 막고 있습니다 ([조사 기록](SOURCE_SURVEY.md)).
 그래서 기출 자료는 **운영자가 브라우저에서 직접 확인한 공식 파일 URL** 을 CSV 로 입력하고, 관리자가 확인 후 승인하는
-방식으로 등록합니다. 서버는 입력된 URL 에 **요청하지 않습니다** (검증 다운로드·재검증·단어장 추출 모두 제외).
+방식으로 등록합니다. 승인 전에는 서버가 입력 URL 에 **요청하지 않습니다**.
+
+예외는 EBSi 직접 파일 호스트 `wdown.ebsi.co.kr` 입니다. 브라우저 승인까지 끝난 영어 해설/대본 파일에 한해,
+robots 제한이 없는 직접 파일 URL을 전용 SafeFetcher allowlist로 다시 받아 단어 후보·문항별 대본 같은
+**파생 학습자료 처리**를 할 수 있습니다. 목록/검색 `.ajax` 요청은 계속 금지이며, KICE·교육청·그 밖의
+`operator_import` URL은 승인 후에도 서버가 요청하지 않습니다.
 
 ## 1. URL 모으기 (사람이 브라우저로)
 
@@ -56,7 +61,9 @@ year,grade,month,exam_type,exam_date,organizer,subject,course_code,file_type,off
 1. 각 행의 [공식 URL 열기]로 파일을 열어 시험·과목·자료 종류가 맞는지 확인합니다.
 2. 확인한 행을 선택하고 "브라우저에서 직접 열어 … 확인했습니다" 에 체크합니다 (체크 없으면 승인 불가).
 3. [선택 승인 · 게시] → `exam_files.delivery_type = redirect` 로 게시되고 시험 페이지가 즉시 갱신됩니다.
-   다운로드 버튼은 `/api/files/{id}/download` → 공식 URL 로 302 redirect 합니다 (우리 서버·R2 에 파일을 복제하지 않음).
+   다운로드 버튼은 `/api/files/{id}/download` → 공식 URL 로 302 redirect 합니다 (공식 원본 파일 자체는 우리 서버·R2 에 복제하지 않음).
+   EBSi `wdown.ebsi.co.kr` 의 승인된 영어 해설/대본은 이후 파생 학습자료 처리를 위해 SafeFetcher가 읽을 수 있으며,
+   생성 학습지는 별도 검토·승인 전에는 공개되지 않습니다.
 4. 틀린 자료는 [선택 거절] (사유 입력). 공개되지 않습니다.
 
 ### 샘플 데이터와 섞이지 않음

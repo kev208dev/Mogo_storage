@@ -19,7 +19,11 @@ import {
 import { enqueueStudyMaterials, generateStudyMaterials } from "../study/materials";
 import { validateArtifact } from "../verify/artifact-validator";
 import { extractPdfText } from "../vocabulary/pdf-text";
-import { downloadArtifactBytes, JobError } from "./handlers";
+import { JobError } from "./handlers";
+import {
+  downloadEnglishStudyArtifact,
+  isApprovedOperatorStudyArtifact,
+} from "../study/artifact-fetch";
 import { enqueueJob, type Job } from "./queue";
 
 /** PROCESS: 학습지 생성 (게시는 관리자 승인 후) */
@@ -29,9 +33,13 @@ export async function handleGenerateStudyMaterials(ctx: IngestionContext, job: J
 
 /**
  * 공식 듣기 대본이 게시되면 문항별 대본 추출을 예약한다.
- * 운영자 입력(서버 요청 금지) 자료는 내려받지 않으므로 대상이 아니다.
+ * 일반 운영자 입력은 내려받지 않는다. 브라우저 승인된 EBSi wdown 직접 대본만
+ * 파생 학습자료 처리용 allowlist 예외로 허용한다.
  */
-export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId: string) {
+export async function maybeEnqueueListeningScript(
+  ctx: Pick<IngestionContext, "db" | "now">,
+  examId: string,
+) {
   const [file] = await ctx.db
     .select({ sourceArtifactId: examFiles.sourceArtifactId })
     .from(examFiles)
@@ -49,8 +57,9 @@ export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId:
     .from(sourceArtifacts)
     .where(eq(sourceArtifacts.id, file.sourceArtifactId));
   const version = artifact?.contentFingerprint ?? artifact?.sha256;
-  if (!artifact || !version || isOperatorImport(artifact.sourceId)) return;
-  if (artifact.containerType !== "file") return; // ZIP 등은 자동으로 풀지 않는다
+  if (!artifact || !version) return;
+  if (isOperatorImport(artifact.sourceId) && !isApprovedOperatorStudyArtifact(artifact)) return;
+  if (artifact.containerType !== "file") return;
   await enqueueJob(ctx.db, {
     runAt: ctx.now(),
     type: "extract_listening_script",
@@ -67,7 +76,10 @@ export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId:
 export async function handleExtractListeningScript(ctx: IngestionContext, job: Job) {
   const artifactId = String(job.payload.artifactId);
   const { db, logger } = ctx;
-  const { artifact, res, expected } = await downloadArtifactBytes(ctx, artifactId);
+  const { artifact, res, expected, operatorApproved } = await downloadEnglishStudyArtifact(
+    ctx,
+    artifactId,
+  );
   const check = validateArtifact({
     status: res.status,
     contentType: res.contentType,
@@ -80,6 +92,12 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
       "ARTIFACT_CHANGED",
       "artifact changed since verification; waiting for re-verify",
     );
+  if (operatorApproved && !artifact.sha256) {
+    await db
+      .update(sourceArtifacts)
+      .set({ sha256: check.sha256, updatedAt: ctx.now() })
+      .where(eq(sourceArtifacts.id, artifact.id));
+  }
 
   let text: string;
   try {
@@ -90,7 +108,6 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
   const parsed = parseListeningScript(text);
   const valid = validateListeningScript(parsed);
   if (!valid.ok) {
-    // 형식을 확신할 수 없으면 공개하지 않는다 (재시도해도 같으므로 retryable=false)
     logger.warn("listening_script.unrecognized", { artifactId, reason: valid.reason });
     throw new JobError("LISTENING_SCRIPT_UNRECOGNIZED", valid.reason);
   }
@@ -107,7 +124,6 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
     );
   const audio = files.find((f) => f.type === "listening_audio");
   const script = files.find((f) => f.type === "listening_script");
-  // 트랙은 음원 파일을 가리켜야 한다. 음원이 아직 게시되지 않았으면 나중에 다시 시도
   if (!audio) throw new JobError("AUDIO_NOT_PUBLISHED", "listening audio not published yet", true);
 
   const now = ctx.now();
@@ -123,7 +139,6 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
         endSeconds: 0,
         timingVerified: false,
       })
-      // 이미 있는 트랙(검증된 구간 포함)은 그대로 둔다
       .onConflictDoUpdate({
         target: [listeningTracks.examId, listeningTracks.questionNumber],
         set: { fileId: audio.id },
@@ -134,7 +149,6 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
       .select({ origin: listeningTranscripts.origin })
       .from(listeningTranscripts)
       .where(eq(listeningTranscripts.trackId, track.id));
-    // 이용 허락을 받은 대본 등 다른 출처는 덮어쓰지 않는다
     if (existing && existing.origin !== "official" && existing.origin !== "unverified") continue;
     const values = {
       trackId: track.id,

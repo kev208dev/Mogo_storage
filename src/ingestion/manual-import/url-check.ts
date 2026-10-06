@@ -20,6 +20,19 @@ export function checkableHosts(): string[] {
   ).flatMap((c) => c.hosts);
 }
 
+/**
+ * 운영자 확인 자료라도 이 호스트의 공개 파일은 내용 추출 작업에서만 SafeFetcher로 재요청할 수 있다.
+ * discovery/verify 정책을 완화하는 함수가 아니다.
+ */
+export function isCheckableFileUrl(url: string): boolean {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return checkableHosts().some((allowed) => host === allowed || host.endsWith(`.${allowed}`));
+  } catch {
+    return false;
+  }
+}
+
 export function createUrlCheckFetcher(): Fetcher {
   return new SafeFetcher({
     policy: { allowedHosts: checkableHosts() },

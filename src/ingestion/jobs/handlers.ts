@@ -20,6 +20,7 @@ import {
   validateArtifactProbe,
 } from "../verify/artifact-validator";
 import { isOperatorImport } from "../manual-import/source";
+import { createUrlCheckFetcher, isCheckableFileUrl } from "../manual-import/url-check";
 import { enqueueJob, type Job } from "./queue";
 
 export class JobError extends IngestionError {}
@@ -41,9 +42,24 @@ async function loadArtifact(ctx: IngestionContext, artifactId: string) {
   return { artifact, source };
 }
 
-export async function downloadArtifactBytes(ctx: IngestionContext, artifactId: string) {
+export async function downloadArtifactBytes(
+  ctx: IngestionContext,
+  artifactId: string,
+  options: { allowCheckableOperatorImport?: boolean } = {},
+) {
   const { artifact, source } = await loadArtifact(ctx, artifactId);
-  const fetcher = createFetcherFor(source, ctx.adapterOptions);
+  let fetcher;
+  if (isOperatorImport(artifact.sourceId)) {
+    if (!options.allowCheckableOperatorImport || !isCheckableFileUrl(artifact.sourceUrl)) {
+      throw new JobError(
+        "OPERATOR_FILE_FETCH_BLOCKED",
+        "operator-import file is not allowlisted for automated content extraction",
+      );
+    }
+    fetcher = createUrlCheckFetcher();
+  } else {
+    fetcher = createFetcherFor(source, ctx.adapterOptions);
+  }
   const expected = expectedKindFor(artifact.type);
   const res = await fetcher.fetch(artifact.sourceUrl, { maxBytes: MAX_ARTIFACT_BYTES[expected] });
   return { artifact, source, res, expected };
@@ -368,7 +384,11 @@ export async function handlePublishArtifact(ctx: IngestionContext, job: Job) {
       : [];
     const version = artifact?.contentFingerprint ?? artifact?.sha256;
     // 단어장 추출은 해설 PDF 를 내려받아야 하므로 운영자 입력(요청 금지) 자료는 대상이 아니다
-    if (artifact && version && !isOperatorImport(artifact.sourceId)) {
+    if (
+      artifact &&
+      version &&
+      (!isOperatorImport(artifact.sourceId) || isCheckableFileUrl(artifact.sourceUrl))
+    ) {
       await enqueueJob(ctx.db, {
         runAt: ctx.now(),
         type: "extract_vocabulary",

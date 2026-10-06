@@ -31,22 +31,24 @@ export async function handleGenerateStudyMaterials(ctx: IngestionContext, job: J
  * operator_import 는 브라우저 승인된 direct-file 만 downloadArtifactBytes 의 별도 gate 를 통과한다.
  */
 export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId: string) {
-  const [file] = await ctx.db
-    .select({ sourceArtifactId: examFiles.sourceArtifactId })
+  const files = await ctx.db
+    .select({ sourceArtifactId: examFiles.sourceArtifactId, type: examFiles.type })
     .from(examFiles)
     .where(
       and(
         eq(examFiles.examId, examId),
         eq(examFiles.subject, "english"),
-        eq(examFiles.type, "listening_script"),
         isNull(examFiles.courseId),
       ),
     );
-  if (!file?.sourceArtifactId) return;
+  const script = files.find((f) => f.type === "listening_script");
+  const audio = files.find((f) => f.type === "listening_audio");
+  // 대본과 음원이 둘 다 실제 게시된 뒤에만 처리한다. 대본만 먼저 들어왔을 때 실패 job 을 만들지 않는다.
+  if (!script?.sourceArtifactId || !audio) return;
   const [artifact] = await ctx.db
     .select()
     .from(sourceArtifacts)
-    .where(eq(sourceArtifacts.id, file.sourceArtifactId));
+    .where(eq(sourceArtifacts.id, script.sourceArtifactId));
   const version = artifact?.contentFingerprint ?? artifact?.sha256;
   if (!artifact || !version) return;
   if (artifact.containerType !== "file") return; // ZIP 등은 자동으로 풀지 않는다

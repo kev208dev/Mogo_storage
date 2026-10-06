@@ -108,4 +108,15 @@ jobs:
               count++;
             }
           }
+
+          console.log("PAPER_FORM_CONTEXT");
+          for (const needle of ["paperListFrm", "previousPaperUserLevelCho.ajax", "goDownLoad(", "goDownLoadA(", "goDownLoadD(", "irecord="]) {
+            const at = html.indexOf(needle);
+            console.log("## "+needle+" @ "+at);
+            if (at >= 0) console.log(html.slice(Math.max(0,at-6000), Math.min(html.length,at+18000)).replace(/\s+/g," ").slice(0,24000));
+          }
+          console.log("DOWNLOAD_CALLS");
+          const calls = [];
+          for (const m of html.matchAll(/goDownLoad[A-Z]?\s*\(([^)]{1,1200})\)/g)) calls.push(m[0].replace(/\s+/g," "));
+          console.log([...new Set(calls)].slice(0,300).join("\n"));
           NODE

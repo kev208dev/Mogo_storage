@@ -78,6 +78,7 @@ npm run dev
 | `npm run test:smoke:prod`    | 배포된 사이트 읽기 전용 smoke (`SMOKE_BASE_URL`)    |
 | `npm run ops:scheduler`      | cron heartbeat 상태 (`--watchdog` 이면 알림까지)    |
 | `npm run ops:restore-verify` | 복원한 DB 무결성 점검 (읽기 전용)                   |
+| `npm run english:enrich`      | 브라우저 승인 공식 영어 파일 단어·대본 후처리       |
 
 ## URL 구조
 
@@ -430,7 +431,11 @@ npm run ingest:schedules -- --file=data/schedules/2027.json   # 공식 발표로
 
 ### 영어 단어장 pipeline
 
-영어 해설이 게시되면 다음 순서로 처리됩니다.
+자동 source 의 영어 해설이 게시되거나, 브라우저로 검증·승인된 공식 direct-file URL 을
+`npm run english:enrich` 배치로 처리하면 다음 순서로 진행됩니다. 후자의 경우에도 archive/discovery
+경로를 우회하지 않고 정책상 허용된 파일 호스트만 SafeFetcher 로 읽습니다.
+
+영어 해설이 처리되면 다음 순서로 진행됩니다.
 
 1. 해설 PDF 에서 텍스트를 추출하고 문항(18~45번)별로 나눕니다.
 2. 원문에 실제로 있는 "영단어 + 한국어 뜻" 줄만 후보로 저장합니다. LLM 은 쓰지 않고 단어를 만들어내지 않습니다.

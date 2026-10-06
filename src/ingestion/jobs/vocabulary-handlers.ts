@@ -5,14 +5,15 @@ import { validateArtifact } from "../verify/artifact-validator";
 import { extractVocabularyCandidates } from "../vocabulary/candidates";
 import { extractPdfText } from "../vocabulary/pdf-text";
 import { enqueueStudyMaterials, generateStudyMaterials } from "../study/materials";
-import { downloadArtifactBytes, JobError } from "./handlers";
+import { JobError } from "./handlers";
+import { downloadEnglishStudyArtifact } from "../study/artifact-fetch";
 import type { Job } from "./queue";
 
 /** PROCESS: 영어 해설 PDF → 텍스트 → 단어 후보 → (신뢰도 높은 것만) Vocabulary */
 export async function handleExtractVocabulary(ctx: IngestionContext, job: Job) {
   const artifactId = String(job.payload.artifactId);
   const { db, logger } = ctx;
-  const { artifact, res, expected } = await downloadArtifactBytes(ctx, artifactId);
+  const { artifact, res, expected } = await downloadEnglishStudyArtifact(ctx, artifactId);
   const check = validateArtifact({
     status: res.status,
     contentType: res.contentType,

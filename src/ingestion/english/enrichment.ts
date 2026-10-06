@@ -143,16 +143,23 @@ async function loadFiles(
         opts.examId ? eq(exams.id, opts.examId) : undefined,
       ),
     );
-  return rows.filter(
-    (r): r is FileRow =>
-      Boolean(
-        r.url &&
-          r.sourceArtifactId &&
-          (r.type === "solution" ||
-            r.type === "listening_audio" ||
-            r.type === "listening_script"),
-      ),
-  );
+  const files: FileRow[] = [];
+  for (const row of rows) {
+    if (!row.url || !row.sourceArtifactId) continue;
+    if (
+      row.type !== "solution" &&
+      row.type !== "listening_audio" &&
+      row.type !== "listening_script"
+    )
+      continue;
+    files.push({
+      ...row,
+      url: row.url,
+      sourceArtifactId: row.sourceArtifactId,
+      type: row.type,
+    });
+  }
+  return files;
 }
 
 async function fetchPdfText(
@@ -345,7 +352,7 @@ export async function runEnglishEnrichment(
       const eligible = enrichmentEligibility(solution);
       if (!eligible.ok) {
         summary.unsupported += 1;
-        ctx.logger.info("english.enrichment_skipped", {
+        ctx.logger.info("ingestion.skipped", {
           examId,
           kind: "vocabulary",
           reason: eligible.reason,
@@ -383,10 +390,14 @@ export async function runEnglishEnrichment(
       const audioEligibility = enrichmentEligibility(audio);
       if (!scriptEligibility.ok || !audioEligibility.ok) {
         summary.unsupported += 1;
-        ctx.logger.info("english.enrichment_skipped", {
+        ctx.logger.info("ingestion.skipped", {
           examId,
           kind: "listening_script",
-          reason: !scriptEligibility.ok ? scriptEligibility.reason : audioEligibility.ok ? "" : audioEligibility.reason,
+          reason: !scriptEligibility.ok
+            ? scriptEligibility.reason
+            : audioEligibility.ok
+              ? ""
+              : audioEligibility.reason,
         });
       } else {
         try {
@@ -397,7 +408,7 @@ export async function runEnglishEnrichment(
           const valid = validateListeningScript(parsed);
           if (!valid.ok) {
             summary.manualReview += 1;
-            ctx.logger.warn("english.listening_script_manual_review", {
+            ctx.logger.warn("artifact.manual_review", {
               examId,
               reason: valid.reason,
             });

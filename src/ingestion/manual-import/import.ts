@@ -365,9 +365,9 @@ export async function approveImportedArtifacts(
         .select()
         .from(sourceArtifacts)
         .where(eq(sourceArtifacts.id, a.id));
-      if (approved && a.subject === "english" && isApprovedOperatorStudyArtifact(approved)) {
+      if (approved && a.subject === "english") {
         const version = approved.contentFingerprint ?? approved.sha256;
-        if (a.type === "solution" && version) {
+        if (a.type === "solution" && version && isApprovedOperatorStudyArtifact(approved)) {
           await enqueueJob(ctx.db, {
             runAt: ctx.now(),
             type: "extract_vocabulary",

@@ -67,7 +67,6 @@ function semanticExamItems(
     .querySelectorAll(SEMANTIC_ITEM_SELECTOR)
     .filter((item) => Boolean(firstCanonicalTitle(item, context)));
 
-  // 동일 시험이 바깥 div / 안쪽 row 양쪽에서 잡히는 경우 가장 작은 컨테이너만 남긴다.
   return candidates.filter((item) => {
     const title = firstCanonicalTitle(item, context);
     if (!title) return false;
@@ -111,7 +110,6 @@ function examItems(
   const items = semanticExamItems(root, context);
   if (items.length > 0) return { items, mode: "semantic" };
 
-  // 검색/필터 shell 만 있고 서버 HTML 에 실제 시험 결과가 없는 경우를 구분한다.
   const shell = compact(text(root));
   if (/기출문제상세조건|시행연도|시행월/.test(shell)) {
     throw new SourceStructureChangedError(
@@ -125,7 +123,6 @@ function examItems(
   );
 }
 
-/** 목록 항목(시험 하나)의 자료 링크 → DiscoveredArtifact */
 function artifactsFromItem(
   item: HTMLElement,
   pageUrl: string,
@@ -157,13 +154,12 @@ function artifactsFromItem(
   if (configuredBlocks.length > 0) {
     for (const block of configuredBlocks) {
       const subjectLabel = text(block.querySelector(S.subjectName));
-      for (const link of block.querySelectorAll(S.downloadLink)) consume(link, subjectLabel || null);
+      for (const link of block.querySelectorAll(S.downloadLink))
+        consume(link, subjectLabel || null);
     }
     return { artifacts, blocks: configuredBlocks.length };
   }
 
-  // 현행 EBSi 처럼 table/div 기반으로 바뀐 경우: 링크의 가장 가까운 작은 컨테이너 텍스트를
-  // subjectLabel 로 사용한다. classifyArtifact 가 과목/자료종류를 확정하지 못하면 공개 후보가 되지 않는다.
   const links = item.querySelectorAll(DOWNLOAD_SELECTOR);
   for (const link of links) {
     let subjectLabel: string | null = null;
@@ -221,11 +217,6 @@ function itemExternalId(
   return `${canonicalKey(exam)}-${exam.examType}`;
 }
 
-/**
- * [Discovery] 학년·연도별 시험 목록 (pageType: exam_list).
- * 기존 class contract 를 우선 사용하고, EBSi 가 table/div markup 으로 바뀐 경우
- * 시험명/날짜를 의미 기반으로 찾는 fallback 을 사용한다.
- */
 export function parseEbsiExamList(
   html: string,
   context: { pageUrl: string; grade: Grade; year: number },
@@ -239,7 +230,10 @@ export function parseEbsiExamList(
     const title = configuredTitle || firstCanonicalTitle(item, context);
     if (!title) {
       if (mode === "configured") {
-        throw new SourceStructureChangedError("ebsi", `exam title "${S.examTitle}" missing in item`);
+        throw new SourceStructureChangedError(
+          "ebsi",
+          `exam title "${S.examTitle}" missing in item`,
+        );
       }
       continue;
     }
@@ -271,11 +265,6 @@ export function parseEbsiExamList(
   return { exams, warnings };
 }
 
-/**
- * [Artifact discovery] 특정 시험의 자료(문제/정답/해설/음원/대본) URL.
- * 목록 항목에 다운로드 링크가 있으면 그대로 사용한다. 링크가 client-side result 로만
- * 제공되는 페이지라면 found=true/artifacts=[] 로 조용히 성공시키지 않고 구조 변경으로 판단한다.
- */
 export function parseEbsiExamArtifacts(
   html: string,
   context: { pageUrl: string; grade: Grade; year: number; externalId: string },
@@ -288,9 +277,7 @@ export function parseEbsiExamArtifacts(
     if (!title) continue;
     const canonical = canonicalizeExamTitle(title, { grade: context.grade, year: context.year });
     if (!canonical.ok) continue;
-    if (
-      itemExternalId(item, canonical.exam, { pageUrl: context.pageUrl }) !== context.externalId
-    )
+    if (itemExternalId(item, canonical.exam, { pageUrl: context.pageUrl }) !== context.externalId)
       continue;
 
     const { artifacts, blocks } = artifactsFromItem(item, context.pageUrl, warnings);
@@ -306,9 +293,6 @@ export function parseEbsiExamArtifacts(
   return { artifacts: [], warnings, found: false };
 }
 
-/**
- * 목록 + 자료를 한 번에 (fixture contract, dry-run, 기존 테스트용).
- */
 export function parseEbsiListing(
   html: string,
   context: { pageUrl: string; grade: Grade; year: number },

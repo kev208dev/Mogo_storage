@@ -81,4 +81,17 @@ jobs:
             linkish.push(JSON.stringify({label,href,onclick}));
           }
           console.log(linkish.slice(0,250).join("\n"));
+
+          console.log("SCRIPT_NETWORK_HINTS");
+          const hints = [];
+          for (const m of html.matchAll(/<script(?:[^>]*)>([\\s\\S]*?)<\\/script>/gi)) {
+            const js = m[1];
+            for (const line of js.split(/\\n/)) {
+              const s = line.trim();
+              if (/(previousPaper|xipc|ajax|fetch\\(|\\.ebs|paper|search|retrieve|down|download|xhr|XMLHttpRequest|url\\s*:)/i.test(s)) {
+                hints.push(s.replace(/\\s+/g, " ").slice(0, 500));
+              }
+            }
+          }
+          console.log([...new Set(hints)].slice(0,400).join("\\n"));
           NODE

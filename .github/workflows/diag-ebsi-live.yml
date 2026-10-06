@@ -161,4 +161,17 @@ jobs:
           const fragCalls=[];
           for (const m of frag.matchAll(/goDownLoad[A-Z0-9]*\s*\(([^)]{1,1500})\)/g)) fragCalls.push(m[0].replace(/\s+/g," "));
           console.log([...new Set(fragCalls)].slice(0,600).join("\n"));
+
+          console.log("FRAG_PAGING");
+          const pAt = frag.indexOf('name="pagingForm"');
+          console.log("pagingForm@",pAt);
+          if (pAt>=0) console.log(frag.slice(Math.max(0,pAt-1200),Math.min(frag.length,pAt+6000)).replace(/\s+/g," ").slice(0,7200));
+          const pInputs=[];
+          for(const m of frag.matchAll(/<input\b([^>]*)>/gi)){ const attrs=m[1]; const name=(/name=["\']([^"\']+)["\']/i.exec(attrs)||[])[1]; const value=(/value=["\']([^"\']*)["\']/i.exec(attrs)||[])[1]??""; if(name) pInputs.push({name,value}); }
+          console.log(JSON.stringify(pInputs,null,2));
+          const page2 = new URLSearchParams(body); page2.set("currentPage","2");
+          const p2res=await fetch(ajaxUrl,{method:"POST",headers:{"user-agent":"MogoStorageBot/1.0 (+https://github.com/kev208dev/Mogo_storage)",accept:"text/html,*/*","content-type":"application/x-www-form-urlencoded; charset=UTF-8",referer:url},body:page2});
+          const p2=await p2res.text();
+          const p2text=p2.replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<[^>]+>/g,"\n").replace(/&nbsp;/g," ").replace(/&amp;/g,"&").split(/\n+/).map(s=>s.replace(/\s+/g," ").trim()).filter(Boolean).slice(0,160);
+          console.log("PAGE2_TEXT"); console.log(p2text.join("\n"));
           NODE

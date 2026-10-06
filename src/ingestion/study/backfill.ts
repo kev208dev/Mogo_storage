@@ -43,7 +43,10 @@ export function processableStudyArtifactVersion(
     | "sha256"
   >,
 ): string | null {
-  if (isOperatorImport(input.sourceId) && !isApprovedOperatorStudyArtifact(input)) return null;
+  if (isOperatorImport(input.sourceId)) {
+    if (!isApprovedOperatorStudyArtifact(input)) return null;
+    return input.sha256 ?? input.contentFingerprint ?? null;
+  }
   return input.contentFingerprint ?? input.sha256 ?? null;
 }
 

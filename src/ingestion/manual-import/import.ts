@@ -17,6 +17,7 @@ import type { FileType } from "../../lib/constants";
 import { examPath } from "../../lib/exam-path";
 import type { IngestionContext } from "../context";
 import { IngestionError } from "../errors";
+import { enqueueJob } from "../jobs/queue";
 import { publishSlot } from "../pipeline/artifacts";
 import { courseIdForCode } from "../pipeline/course-aliases";
 import { ensureExamSubjects, upsertCanonicalExam } from "../pipeline/exams";
@@ -360,6 +361,26 @@ export async function approveImportedArtifacts(
     } else if (outcome.reason !== "already published") {
       skipped.push({ id, reason: outcome.reason });
     }
+
+    // 브라우저 승인된 영어 direct-file 은 게시 직후 후처리를 예약한다.
+    // discovery/verify 정책을 우회하지 않으며 실제 다운로드 gate 는 job handler 가 다시 검사한다.
+    if (a.subject === "english" && (outcome.published || outcome.reason === "already published")) {
+      const version = `operator:${a.sourceUrl}`;
+      if (a.type === "solution" && process.env.VOCABULARY_PIPELINE_ENABLED !== "false") {
+        await enqueueJob(ctx.db, {
+          runAt: now,
+          type: "extract_vocabulary",
+          payload: { artifactId: a.id },
+          dedupeKey: `vocab:${a.id}:${version}`,
+          maxAttempts: 3,
+        });
+      }
+      if (a.type === "listening_script" || a.type === "listening_audio") {
+        const { maybeEnqueueListeningScript } = await import("../jobs/study-handlers");
+        await maybeEnqueueListeningScript(ctx, a.examId);
+      }
+    }
+
     await refreshWatchStates(ctx.db, { examId: a.examId, now });
     ctx.logger.info("artifact.published", {
       artifactId: a.id,

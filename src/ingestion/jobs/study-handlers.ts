@@ -19,7 +19,8 @@ import {
 import { enqueueStudyMaterials, generateStudyMaterials } from "../study/materials";
 import { validateArtifact } from "../verify/artifact-validator";
 import { extractPdfText } from "../vocabulary/pdf-text";
-import { downloadArtifactBytes, JobError } from "./handlers";
+import { JobError } from "./handlers";
+import { downloadEnglishStudyArtifact, isApprovedOperatorStudyArtifact } from "../study/artifact-fetch";
 import { enqueueJob, type Job } from "./queue";
 
 /** PROCESS: 학습지 생성 (게시는 관리자 승인 후) */
@@ -52,7 +53,8 @@ export async function maybeEnqueueListeningScript(
     .from(sourceArtifacts)
     .where(eq(sourceArtifacts.id, file.sourceArtifactId));
   const version = artifact?.contentFingerprint ?? artifact?.sha256;
-  if (!artifact || !version || isOperatorImport(artifact.sourceId)) return;
+  if (!artifact || !version) return;
+  if (isOperatorImport(artifact.sourceId) && !isApprovedOperatorStudyArtifact(artifact)) return;
   if (artifact.containerType !== "file") return; // ZIP 등은 자동으로 풀지 않는다
   await enqueueJob(ctx.db, {
     runAt: ctx.now(),
@@ -70,7 +72,7 @@ export async function maybeEnqueueListeningScript(
 export async function handleExtractListeningScript(ctx: IngestionContext, job: Job) {
   const artifactId = String(job.payload.artifactId);
   const { db, logger } = ctx;
-  const { artifact, res, expected } = await downloadArtifactBytes(ctx, artifactId);
+  const { artifact, res, expected } = await downloadEnglishStudyArtifact(ctx, artifactId);
   const check = validateArtifact({
     status: res.status,
     contentType: res.contentType,

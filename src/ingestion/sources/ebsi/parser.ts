@@ -71,7 +71,9 @@ function semanticExamItems(
   return candidates.filter((item) => {
     const title = firstCanonicalTitle(item, context);
     if (!title) return false;
-    const key = canonicalKey(canonicalizeExamTitle(title, context).exam!);
+    const parsedTitle = canonicalizeExamTitle(title, context);
+    if (!parsedTitle.ok) return false;
+    const key = canonicalKey(parsedTitle.exam);
     return !candidates.some((other) => {
       if (other === item) return false;
       let parent = other.parentNode;

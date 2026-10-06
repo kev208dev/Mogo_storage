@@ -1,7 +1,7 @@
 name: Scheduled ingestion
 
 # 기본 scheduler 는 GitHub Actions 이다.
-#   repository secrets   INGESTION_SITE_URL (예: https://mogo.example.com), CRON_SECRET
+# repository secrets: INGESTION_SITE_URL (예: https://mogo.example.com), CRON_SECRET
 # INGESTION_SCHEDULER 를 명시하면 다른 scheduler 로 전환할 수 있다.
 #   - 비어 있음 또는 github-actions: 실행
 #   - 그 외 값: 이 workflow 는 skip
@@ -13,6 +13,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/scheduled-ingestion.yml"
+      - "src/app/api/cron/[task]/route.ts"
   workflow_dispatch:
     inputs:
       task:
@@ -34,6 +35,7 @@ jobs:
           SITE_URL: ${{ secrets.INGESTION_SITE_URL }}
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
           TASK: ${{ github.event.inputs.task || 'scheduled' }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           if [ -z "$SITE_URL" ] || [ -z "$CRON_SECRET" ]; then
             echo "Ingestion endpoint credentials are not configured — skipping."
@@ -43,4 +45,18 @@ jobs:
             echo "Scheduled ingestion is configured for another scheduler ($SCHEDULER) — skipping."
             exit 0
           fi
-          curl --fail-with-body -sS --max-time 320             -H "Authorization: Bearer $CRON_SECRET"             "$SITE_URL/api/cron/$TASK"
+
+          call_task() {
+            local task="$1"
+            curl --fail-with-body -sS --max-time 320 -H "Authorization: Bearer $CRON_SECRET" -H "X-Scheduler: github-actions" "$SITE_URL/api/cron/$task"
+            echo
+          }
+
+          # 주기/배포 트리거에서는 검증·승인된 PROCESS queue 를 먼저 비운다.
+          # 새 외부 discovery 는 /scheduled 의 INGESTION_ENABLED gate 가 계속 제어한다.
+          if [ "$EVENT_NAME" = "schedule" ] || [ "$EVENT_NAME" = "push" ]; then
+            call_task jobs
+          fi
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$TASK" != "jobs" ]; then
+            call_task "$TASK"
+          fi

@@ -2,11 +2,11 @@ import { eq } from "drizzle-orm";
 import { sourceArtifacts } from "../../db/schema";
 import type { IngestionContext } from "../context";
 import { IngestionError } from "../errors";
-import { SafeFetcher } from "../net/fetcher";
+import { SafeFetcher, type FetchResult } from "../net/fetcher";
 import { loadSource } from "../pipeline/sources";
 import { userAgent } from "../sources/config";
 import { createFetcherFor } from "../sources/registry";
-import { expectedKindFor, MAX_ARTIFACT_BYTES } from "../verify/artifact-validator";
+import { expectedKindFor, MAX_ARTIFACT_BYTES, type ExpectedKind } from "../verify/artifact-validator";
 import { isOperatorImport } from "../manual-import/source";
 
 const PROCESSABLE_OPERATOR_HOSTS = new Set(["wdown.ebsi.co.kr"]);
@@ -61,8 +61,8 @@ function operatorStudyFetcher() {
 
 export interface StudyArtifactDownload {
   artifact: Artifact;
-  res: Awaited<ReturnType<ReturnType<typeof operatorStudyFetcher>["fetch"]>>;
-  expected: ReturnType<typeof expectedKindFor>;
+  res: FetchResult;
+  expected: ExpectedKind;
   operatorApproved: boolean;
 }
 

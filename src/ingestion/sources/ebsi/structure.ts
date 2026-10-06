@@ -4,12 +4,11 @@ import type { Grade } from "../../../lib/constants";
  * EBSi 기출문제 페이지 구조에 대한 가정은 모두 이 파일에만 둔다.
  * 사이트 구조가 바뀌면 이 파일과 fixture 만 고치면 된다.
  *
- * ⚠️ 검증 상태: 이 저장소 개발 환경에서는 ebsi.co.kr 에 접근할 수 없어 실제 HTML 을 확보하지 못했다.
- *    공개적으로 확인된 사실은 목록 URL 이 `/ebs/xip/xipc/previousPaperList.ebs?targetCd=D{학년}00`
- *    형태라는 것뿐이며, 아래 selector 는 tests/fixtures/ebsi 의 "합성(synthetic) fixture" 기준이다.
- *    운영 전 `npm run ingest:capture -- --source=ebsi --url=...` 로 실제 페이지를 저장하고
- *    이 파일과 fixture 를 실제 구조에 맞게 갱신해야 한다. 구조가 다르면 parser 는
- *    SourceStructureChangedError 로 실패한다 (조용히 빈 결과를 내지 않음).
+ * selector 는 과거 EBSi 구조를 우선 계약으로 유지한다. 현행 페이지처럼 table/div 기반으로
+ * class 이름이 바뀐 경우 parser.ts 의 의미 기반 fallback(시험명·날짜·다운로드 링크)을 사용한다.
+ * 서버 HTML 에 검색 조건 shell 만 있고 시험 결과가 client-side 로만 내려오는 경우에는
+ * SourceStructureChangedError 로 실패해 별도 result endpoint 검증이 필요함을 명시한다.
+ * live fixture/health 검증을 통과하기 전에는 source activation gate 때문에 운영 수집이 켜지지 않는다.
  */
 export const EBSI_STRUCTURE = {
   listContainer: "ul.board_list",

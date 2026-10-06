@@ -215,6 +215,37 @@ async function runTask(task: Task): Promise<TaskOutcome> {
       };
     }
   }
+  // 이미 검증·승인되어 queue 에 들어온 PROCESS 작업은 외부 discovery 스위치와 독립적으로 처리한다.
+  // INGESTION_ENABLED 는 새 외부 수집(scheduled/release-watch)만 제어한다.
+  if (task === "jobs") {
+    const ingestion = createAppIngestionContext();
+    if (!ingestion)
+      return {
+        status: 503,
+        body: { error: "database not configured" },
+        heartbeat: { status: "failed", detail: "no_database" },
+      };
+    try {
+      await syncBuiltinSources(ingestion.db);
+      const result = await runJobs(ingestion, { timeBudgetMs: 240_000 });
+      return {
+        status: 200,
+        body: { ok: true, task, result },
+        heartbeat: { status: "ok", detail: "queue_worker" },
+      };
+    } catch (error) {
+      ingestion.logger.error("ingestion.failed", {
+        task,
+        message: error instanceof Error ? error.message : String(error),
+      });
+      return {
+        status: 500,
+        body: { ok: false, error: "ingestion failed (see server logs)" },
+        heartbeat: { status: "failed", detail: "exception" },
+      };
+    }
+  }
+
   if (!ingestionEnabled()) {
     return {
       status: 200,
@@ -235,9 +266,7 @@ async function runTask(task: Task): Promise<TaskOutcome> {
     const result =
       task === "scheduled"
         ? await runScheduledIngestion(ingestion)
-        : task === "release-watch"
-          ? await runReleaseWatch(ingestion)
-          : await runJobs(ingestion, { timeBudgetMs: 240_000 });
+        : await runReleaseWatch(ingestion);
     return { status: 200, body: { ok: true, task, result }, heartbeat: { status: "ok" } };
   } catch (error) {
     ingestion.logger.error("ingestion.failed", {

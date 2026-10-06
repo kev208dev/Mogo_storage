@@ -4,7 +4,8 @@ import type { TranscriptLine } from "../../lib/data/types";
  * 공식 영어 듣기 대본 PDF 텍스트 → 문항별 대본.
  *
  * 규칙만 쓴다 (사이트 고유 selector · 추측 없음):
- *  - 문항 시작: 줄 머리의 "1번" · "1." · "[1]" · "1)" 및 공유 지문의 "16~17" 범위 표기\n *    (1~20번만, 번호가 증가하는 순서일 때만 인정)
+ *  - 문항 시작: 줄 머리의 "1번" · "1." · "[1]" · "1)" 및 공유 지문의 "16~17" 범위 표기
+ *    (1~20번만, 번호가 증가하는 순서일 때만 인정)
  *  - 화자: 줄 머리의 "M:" "W:" "남:" "여:" "Man:" "Woman:" 등
  *  - 화자 표기가 없는 줄은 앞 문장에 이어 붙인다
  *  - 머리말/쪽 번호 등 영문이 없는 줄은 버린다
@@ -22,7 +23,8 @@ export interface ParsedListeningScript {
   warnings: Array<{ code: string; detail: string }>;
 }
 
-const RANGE_RE = /^\\s*(?:\\[(\\d{1,2})\\s*[~∼–—-]\\s*(\\d{1,2})\\]|(\\d{1,2})\\s*[~∼–—-]\\s*(\\d{1,2})\\s*번?[.:)]?)\\s*(.*)$/;
+const RANGE_RE =
+  /^\s*(?:\[(\d{1,2})\s*[~∼–—-]\s*(\d{1,2})\]|(\d{1,2})\s*[~∼–—-]\s*(\d{1,2})\s*번?[.:)]?)\s*(.*)$/;
 const QUESTION_RE = /^\s*(?:\[(\d{1,2})\]|(\d{1,2})\s*번[.:)]?|(\d{1,2})\s*[.)])\s*(.*)$/;
 const SPEAKER_RE = /^\s*(M|W|B|G|Man|Woman|Boy|Girl|남|여|남자|여자)\s*[:：]\s*(.+)$/i;
 const MAX_LISTENING_QUESTION = 20;

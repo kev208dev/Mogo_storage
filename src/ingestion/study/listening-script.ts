@@ -23,8 +23,7 @@ export interface ParsedListeningScript {
   warnings: Array<{ code: string; detail: string }>;
 }
 
-const RANGE_RE =
-  /^\s*(?:\[(\d{1,2})\s*[~∼–—-]\s*(\d{1,2})\]|(\d{1,2})\s*[~∼–—-]\s*(\d{1,2})\s*번?[.:)]?)\s*(.*)$/;
+const RANGE_RE = /^\s*(?:\[(\d{1,2})\s*[~∼–—-]\s*(\d{1,2})\]|(\d{1,2})\s*[~∼–—-]\s*(\d{1,2})\s*번?[.:)]?)\s*(.*)$/;
 const QUESTION_RE = /^\s*(?:\[(\d{1,2})\]|(\d{1,2})\s*번[.:)]?|(\d{1,2})\s*[.)])\s*(.*)$/;
 const SPEAKER_RE = /^\s*(M|W|B|G|Man|Woman|Boy|Girl|남|여|남자|여자)\s*[:：]\s*(.+)$/i;
 const MAX_LISTENING_QUESTION = 20;

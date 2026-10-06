@@ -1,11 +1,18 @@
-# 공식 source 자동 수집 가능성 조사 (2026-09-25)
+# 공식 source 자동 수집 가능성 조사 (2026-10-06)
 
 조건: 로그인·CAPTCHA·anti-bot(대기열 포함)·robots.txt 를 우회하지 않는다. robots.txt 는 매 조사 시점 기준.
 각 사이트에 robots.txt 와 확인용 페이지 1~2회만 요청했다.
 
 | source                                  | robots.txt                      | 확인 결과                                                                                                                                                                                                     | 자동 수집       |
 | --------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| EBSi `www.ebsi.co.kr`                   | `Disallow: /*.ajax$`            | 기출 페이지 HTML 의 목록 영역(`boardListArea`)은 비어 있고, 시험 목록·월·과목·다운로드 정보는 `previousPaperListAjax.ajax`, `previousPaperMonthGet.ajax`, `previousPaperSubjIdAjax.ajax` 등 `.ajax` 로만 제공 | ✗ (robots 금지) |
+| EBSi `www.ebsi.co.kr`                   | `Disallow: /*.ajax# 공식 source 자동 수집 가능성 조사 (2026-10-06)
+
+조건: 로그인·CAPTCHA·anti-bot(대기열 포함)·robots.txt 를 우회하지 않는다. robots.txt 는 매 조사 시점 기준.
+각 사이트에 robots.txt 와 확인용 페이지 1~2회만 요청했다.
+
+| source                                  | robots.txt                      | 확인 결과                                                                                                                                                                                                     | 자동 수집       |
+| --------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+            | 2026-10-06 live 재확인: 기출 페이지 HTML의 `boardListArea`는 비어 있고 결과는 `previousPaperListAjax.ajax` 호출에 의존. SafeFetcher도 robots 정책으로 해당 AJAX 요청을 차단함 | ✗ (robots 금지) |
 | 평가원 수능 `www.suneung.re.kr`         | `User-agent: * Disallow: /`     | 사이트 전체 금지                                                                                                                                                                                              | ✗               |
 | 평가원 `www.kice.re.kr`                 | `User-agent: * Disallow: /`     | 사이트 전체 금지                                                                                                                                                                                              | ✗               |
 | 서울 `www.sen.go.kr`                    | 일부 허용, `*.pdf/hwp/zip` 금지 | 첫 화면이 NetFunnel 대기열(트래픽 제어)을 거침 → 자동 통과는 anti-bot 우회. 첨부 파일(pdf·hwp) 요청도 금지                                                                                                    | ✗               |
@@ -38,3 +45,16 @@
 
 정책이 바뀌면(예: 공개 API 제공, robots 변경) 근거를 이 문서에 기록하고 `policy.ts` 의 해당 기능을 `adapter` 로 바꾼 뒤,
 [ADDING_SOURCE.md](ADDING_SOURCE.md) 의 fixture 검증 → 승인 → health check 절차를 거쳐야 켜집니다.
+
+
+### 2026-10-06 EBSi 재검증
+
+GitHub Actions에서 실제 `previousPaperList.ebs?targetCd=D300&year=2026` shell을 캡처했다.
+서버 HTML에는 검색 조건과 빈 `boardListArea`가 있고, 결과 목록은 JavaScript가
+`previousPaperListAjax.ajax`를 호출해 채운다. 같은 SafeFetcher로 AJAX POST를 시도했을 때
+`ROBOTS_DISALLOWED`로 차단되는 것을 확인했다. 따라서 자동 목록 discovery를 우회 구현하지 않고
+계속 `policy_blocked`로 유지한다.
+
+반면 `wdown.ebsi.co.kr` 직접 파일은 기존 정책대로 제한된 SafeFetcher 요청이 가능하다.
+브라우저에서 승인된 EBSi 직접 파일에 한해 단어/대본 같은 파생 학습자료 처리를 허용하며,
+이 예외는 목록 discovery 권한을 의미하지 않는다.

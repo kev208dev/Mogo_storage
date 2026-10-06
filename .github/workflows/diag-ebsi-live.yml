@@ -119,4 +119,46 @@ jobs:
           const calls = [];
           for (const m of html.matchAll(/goDownLoad[A-Z]?\s*\(([^)]{1,1200})\)/g)) calls.push(m[0].replace(/\s+/g," "));
           console.log([...new Set(calls)].slice(0,300).join("\n"));
+
+          console.log("AJAX_FRAGMENT");
+          const monthValues = [...html.matchAll(/name=["\']month["\'][^>]*value=["\']([^"\']+)["\']/gi)].map(m=>m[1]);
+          const ordNames = ["korArOrd","mathArOrd","engArOrd","hisArOrd","srch1ArOrd","srch2ArOrd","jobArOrd","scndForgnlngArOrd"];
+          const ordValues = ordNames.map(name => {
+            const re = new RegExp(`name=["\']${name}["\'][^>]*value=["\']([^"\']+)["\']`, "i");
+            return (re.exec(html)||[])[1] || "";
+          }).filter(Boolean);
+          const body = new URLSearchParams({
+            targetCd: "D300",
+            yearList: "2026",
+            monthList: monthValues.join(","),
+            arOrd: ordValues.join(","),
+            subjIdList: "firstEnter",
+            sort: "recent",
+            paperId: "", paperNo: "", lvl: ""
+          });
+          console.log(JSON.stringify({monthValues, ordValues, postBody: body.toString()}, null, 2));
+          const ajaxUrl = "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperListAjax.ajax";
+          const ajaxRes = await fetch(ajaxUrl, {
+            method: "POST",
+            headers: {
+              "user-agent": "MogoStorageBot/1.0 (+https://github.com/kev208dev/Mogo_storage)",
+              accept: "text/html,*/*",
+              "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+              referer: url
+            },
+            body
+          });
+          const frag = await ajaxRes.text();
+          console.log(JSON.stringify({status:ajaxRes.status, contentType:ajaxRes.headers.get("content-type"), length:frag.length}, null, 2));
+          const fragClasses = new Map();
+          for (const m of frag.matchAll(/class=["\']([^"\']+)["\']/gi)) for (const cl of m[1].trim().split(/\s+/)) fragClasses.set(cl,(fragClasses.get(cl)||0)+1);
+          console.log("FRAG_TOP_CLASSES");
+          console.log([...fragClasses.entries()].sort((a,b)=>b[1]-a[1]).slice(0,100).map(([k,v])=>`${k}:${v}`).join("\n"));
+          console.log("FRAG_TEXT");
+          const fragText = frag.replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g,"\n").replace(/&nbsp;/g," ").replace(/&amp;/g,"&");
+          console.log(fragText.split(/\n+/).map(s=>s.replace(/\s+/g," ").trim()).filter(Boolean).slice(0,600).join("\n"));
+          console.log("FRAG_DOWNLOAD_CALLS");
+          const fragCalls=[];
+          for (const m of frag.matchAll(/goDownLoad[A-Z0-9]*\s*\(([^)]{1,1500})\)/g)) fragCalls.push(m[0].replace(/\s+/g," "));
+          console.log([...new Set(fragCalls)].slice(0,600).join("\n"));
           NODE

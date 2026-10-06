@@ -23,6 +23,30 @@ AI 가 음원을 듣고 만든 대본, 추측한 문항 구간, 출처가 확인
 
 기존 `generate_vocabulary_pdf` job 은 호환용으로 남아 학습지 생성으로 처리되며, 더 이상 바로 게시하지 않는다.
 
+### 브라우저 승인 공식 파일의 후처리
+
+EBSi archive 목록처럼 robots 정책상 자동 discovery 할 수 없는 source 는 `operator_import` 로만 등록한다.
+다만 운영자가 브라우저에서 파일 본문까지 확인해 `verification_mode=operator_browser`, `status=ready` 로
+게시한 **직접 공식 파일 URL**은 discovery 와 분리된 후처리 배치에서 읽을 수 있다.
+
+```bash
+npm run english:enrich -- --year=2026 --grade=3 --month=9 --dry-run
+npm run english:enrich -- --exam=exam_2026_h3_09
+```
+
+이 배치는 다음 조건을 모두 만족할 때만 요청한다.
+
+- 이미 `exam_files.artifact_origin=official` 로 게시된 redirect 자료
+- 연결된 `source_artifacts` 가 ready + verified 상태
+- `operator_import` 이면 반드시 `verification_mode=operator_browser`
+- 게시 URL이 검증 당시 `source_url` 또는 `final_url` 과 동일
+- 정책상 파일 요청이 허용된 좁은 allowlist(현재 `wdown.ebsi.co.kr`) 안의 URL
+
+따라서 EBSi `.ajax` archive, 로그인, CAPTCHA, anti-bot 경로를 요청하거나 우회하지 않는다.
+해설 PDF 에서는 규칙 기반 단어 후보만 추출하고, 공식 듣기 대본+음원이 함께 게시된 시험만 대본을
+문항별로 연결한다. 음원 구간은 계속 미검증으로 두며 추측하지 않는다. 생성 학습지는 별도
+`--enqueue-materials` 옵션으로만 예약하고 관리자 승인 전에는 공개하지 않는다.
+
 ## 독해 노트 입력
 
 `data/study/README.md` 참고. `npm run study:import-notes -- --file=… --dry-run`.

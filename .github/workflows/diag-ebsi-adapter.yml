@@ -1,0 +1,49 @@
+name: Diagnostic EBSi adapter
+
+on:
+  push:
+    branches:
+      - fix/ebsi-live-ingestion-and-english-backfill
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npx vitest run tests/unit/live-source-parsers.test.ts tests/unit/ingestion-parsers.test.ts
+      - name: Live EBSi adapter validation
+        run: |
+          node --import tsx <<'NODE'
+          const { builtinSource } = await import("./src/ingestion/sources/registry.ts");
+          const { EbsiExamSource } = await import("./src/ingestion/sources/ebsi/adapter.ts");
+          const source = { ...builtinSource("ebsi"), enabled: true };
+          const adapter = new EbsiExamSource(source);
+          for (const grade of [1,2,3]) {
+            const exams = await adapter.discoverExams({ fromYear: 2026, toYear: 2026, grade, month: 9 });
+            const summary = [];
+            for (const exam of exams) {
+              const artifacts = await adapter.discoverArtifacts(exam);
+              summary.push({
+                externalId: exam.externalId,
+                identity: exam.canonical,
+                examDate: exam.examDate,
+                artifactCount: artifacts.length,
+                subjects: [...new Set(artifacts.map(a => a.subject))].sort(),
+                english: artifacts.filter(a => a.subject === "english").map(a => a.type).sort()
+              });
+            }
+            console.log(JSON.stringify({ grade, exams: summary }, null, 2));
+            if (exams.length === 0) throw new Error(`No September 2026 exam for grade ${grade}`);
+            if (!summary.some(s => s.artifactCount > 0)) throw new Error(`No artifacts for grade ${grade}`);
+          }
+          NODE

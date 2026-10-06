@@ -16,6 +16,9 @@ import {
 import type { FileType } from "../../lib/constants";
 import { examPath } from "../../lib/exam-path";
 import type { IngestionContext } from "../context";
+import { enqueueJob } from "../jobs/queue";
+import { maybeEnqueueListeningScript } from "../jobs/study-handlers";
+import { isApprovedOperatorStudyArtifact } from "../study/artifact-fetch";
 import { IngestionError } from "../errors";
 import { publishSlot } from "../pipeline/artifacts";
 import { courseIdForCode } from "../pipeline/course-aliases";
@@ -357,6 +360,26 @@ export async function approveImportedArtifacts(
     if (outcome.published) {
       published += 1;
       for (const p of outcome.examPaths) paths.add(p);
+
+      const [approved] = await ctx.db
+        .select()
+        .from(sourceArtifacts)
+        .where(eq(sourceArtifacts.id, a.id));
+      if (approved && a.subject === "english" && isApprovedOperatorStudyArtifact(approved)) {
+        const version = approved.contentFingerprint ?? approved.sha256;
+        if (a.type === "solution" && version) {
+          await enqueueJob(ctx.db, {
+            runAt: ctx.now(),
+            type: "extract_vocabulary",
+            payload: { artifactId: a.id },
+            dedupeKey: `vocab:${a.id}:${version}`,
+            maxAttempts: 3,
+          });
+        }
+        if (a.type === "listening_script" || a.type === "listening_audio") {
+          await maybeEnqueueListeningScript(ctx, a.examId);
+        }
+      }
     } else if (outcome.reason !== "already published") {
       skipped.push({ id, reason: outcome.reason });
     }

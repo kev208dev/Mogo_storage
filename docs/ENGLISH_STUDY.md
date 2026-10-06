@@ -15,7 +15,9 @@ AI 가 음원을 듣고 만든 대본, 추측한 문항 구간, 출처가 확인
 
 ## 처리 흐름
 
-1. 영어 `listening_script`/`listening_audio` 게시 → `extract_listening_script` job (운영자 입력 URL 은 서버가 요청하지 않으므로 제외)
+1. 영어 `listening_script`/`listening_audio` 게시 → `extract_listening_script` job.
+   일반 operator 입력은 서버가 요청하지 않지만, 브라우저 승인된 EBSi `wdown.ebsi.co.kr` 직접 파일은
+   좁은 allowlist 예외로 파생 학습자료 처리에 사용할 수 있다 (EBSi 목록 `.ajax` 자동 수집은 robots 정책상 계속 금지).
 2. 대본 문항 번호가 1번부터 연속되지 않으면 공개하지 않고 job 실패로 남는다 (관리자 jobs 화면)
 3. 단어장 · 대본 · 웹 정답이 바뀌면 `generate_study_materials` job → `study_materials(status=generated)`
 4. `/admin/study` 에서 검토 시작 → 승인 → 게시. 게시를 내리면 우리가 만든 파일만 삭제된다
@@ -39,3 +41,17 @@ AI 가 음원을 듣고 만든 대본, 추측한 문항 구간, 출처가 확인
 시행 기관은 원점수 등급컷을 공개하지 않는다 (평가원은 채점 결과의 표준점수 등급 구분점수만, 교육청 학평 결과
 파일은 자동 수집 불가 경로). 기계로 검증 가능한 공식 원점수 경계가 없으므로 공식 원점수 등급컷 adapter 는 두지
 않고, 화면에 "공식 원점수 등급컷 미제공"을 표시한다. 다른 기관 값으로 공식 값을 만들지 않는다.
+
+
+## 기존 게시자료 backfill
+
+이미 게시된 영어 자료를 새 PROCESS 단계에 연결할 때:
+
+```bash
+npm run study:backfill -- --year=2026 --grade=3 --month=9 --dry-run
+npm run study:backfill -- --year=2026 --grade=3 --month=9 --process
+```
+
+dry-run은 네트워크 요청 없이 처리 가능 여부만 집계한다. 실제 처리는 검증된 자동 source 또는
+브라우저 승인된 EBSi `wdown.ebsi.co.kr` 영어 해설/대본만 대상으로 한다. 학습지 PDF는 생성 후
+`study_materials(status=generated)` 상태에 머물며 관리자 승인 없이 자동 게시하지 않는다.

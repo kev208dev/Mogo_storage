@@ -6,7 +6,11 @@ import { SafeFetcher, type FetchResult } from "../net/fetcher";
 import { loadSource } from "../pipeline/sources";
 import { userAgent } from "../sources/config";
 import { createFetcherFor } from "../sources/registry";
-import { expectedKindFor, MAX_ARTIFACT_BYTES, type ExpectedKind } from "../verify/artifact-validator";
+import {
+  expectedKindFor,
+  MAX_ARTIFACT_BYTES,
+  type ExpectedKind,
+} from "../verify/artifact-validator";
 import { isOperatorImport } from "../manual-import/source";
 
 const PROCESSABLE_OPERATOR_HOSTS = new Set(["wdown.ebsi.co.kr"]);
@@ -23,18 +27,11 @@ type Artifact = typeof sourceArtifacts.$inferSelect;
 export function isApprovedOperatorStudyArtifact(
   artifact: Pick<
     Artifact,
-    | "sourceId"
-    | "sourceUrl"
-    | "status"
-    | "verificationMode"
-    | "verifiedAt"
-    | "finalUrl"
-    | "type"
+    "sourceId" | "sourceUrl" | "status" | "verificationMode" | "verifiedAt" | "finalUrl" | "type"
   >,
 ): boolean {
   if (!isOperatorImport(artifact.sourceId)) return false;
-  if (artifact.status !== "ready" || artifact.verificationMode !== "operator_browser")
-    return false;
+  if (artifact.status !== "ready" || artifact.verificationMode !== "operator_browser") return false;
   if (!artifact.verifiedAt) return false;
   if (artifact.type !== "solution" && artifact.type !== "listening_script") return false;
   let url: URL;
@@ -96,7 +93,8 @@ export async function downloadEnglishStudyArtifact(
   }
 
   const source = await loadSource(ctx.db, artifact.sourceId);
-  if (!source) throw new IngestionError("SOURCE_NOT_FOUND", `source ${artifact.sourceId} not found`);
+  if (!source)
+    throw new IngestionError("SOURCE_NOT_FOUND", `source ${artifact.sourceId} not found`);
   const res = await createFetcherFor(source, ctx.adapterOptions).fetch(artifact.sourceUrl, {
     maxBytes: MAX_ARTIFACT_BYTES[expected],
   });

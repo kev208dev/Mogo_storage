@@ -3,6 +3,7 @@ import type { Database } from "../../db/client";
 import { examFiles, exams, sourceArtifacts } from "../../db/schema";
 import type { IngestionContext } from "../context";
 import { isOperatorImport } from "../manual-import/source";
+import { isApprovedOperatorStudyArtifact } from "./artifact-fetch";
 import { enqueueJob } from "../jobs/queue";
 import { maybeEnqueueListeningScript } from "../jobs/study-handlers";
 import { enqueueStudyMaterials, loadWorksheetInput } from "./materials";
@@ -28,12 +29,21 @@ export interface EnglishStudyBackfillResult {
 
 type BackfillCtx = Pick<IngestionContext, "db" | "now">;
 
-export function processableStudyArtifactVersion(input: {
-  sourceId: string;
-  contentFingerprint: string | null;
-  sha256: string | null;
-}): string | null {
-  if (isOperatorImport(input.sourceId)) return null;
+export function processableStudyArtifactVersion(
+  input: Pick<
+    typeof sourceArtifacts.$inferSelect,
+    | "sourceId"
+    | "sourceUrl"
+    | "status"
+    | "verificationMode"
+    | "verifiedAt"
+    | "finalUrl"
+    | "type"
+    | "contentFingerprint"
+    | "sha256"
+  >,
+): string | null {
+  if (isOperatorImport(input.sourceId) && !isApprovedOperatorStudyArtifact(input)) return null;
   return input.contentFingerprint ?? input.sha256 ?? null;
 }
 

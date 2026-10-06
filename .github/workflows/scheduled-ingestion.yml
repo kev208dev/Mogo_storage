@@ -1,12 +1,18 @@
 name: Scheduled ingestion
 
-# 운영 scheduler 로 GitHub Actions 를 선택한 경우에만 동작한다.
-#   repository variable  INGESTION_SCHEDULER = github-actions
+# 기본 scheduler 는 GitHub Actions 이다.
 #   repository secrets   INGESTION_SITE_URL (예: https://mogo.example.com), CRON_SECRET
-# 값이 없으면 아무것도 하지 않고 성공으로 끝난다.
+# INGESTION_SCHEDULER 를 명시하면 다른 scheduler 로 전환할 수 있다.
+#   - 비어 있음 또는 github-actions: 실행
+#   - 그 외 값: 이 workflow 는 skip
+# secret 이 없으면 아무것도 하지 않고 성공으로 끝난다.
 on:
   schedule:
     - cron: "*/10 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/scheduled-ingestion.yml"
   workflow_dispatch:
     inputs:
       task:
@@ -29,10 +35,12 @@ jobs:
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
           TASK: ${{ github.event.inputs.task || 'scheduled' }}
         run: |
-          if [ "$SCHEDULER" != "github-actions" ] || [ -z "$SITE_URL" ] || [ -z "$CRON_SECRET" ]; then
-            echo "GitHub Actions scheduler not configured — skipping."
+          if [ -z "$SITE_URL" ] || [ -z "$CRON_SECRET" ]; then
+            echo "Ingestion endpoint credentials are not configured — skipping."
             exit 0
           fi
-          curl --fail-with-body -sS --max-time 320 \
-            -H "Authorization: Bearer $CRON_SECRET" \
-            "$SITE_URL/api/cron/$TASK"
+          if [ -n "$SCHEDULER" ] && [ "$SCHEDULER" != "github-actions" ]; then
+            echo "Scheduled ingestion is configured for another scheduler ($SCHEDULER) — skipping."
+            exit 0
+          fi
+          curl --fail-with-body -sS --max-time 320             -H "Authorization: Bearer $CRON_SECRET"             "$SITE_URL/api/cron/$TASK"

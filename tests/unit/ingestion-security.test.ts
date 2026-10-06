@@ -10,6 +10,7 @@ import {
   isPrivateAddress,
 } from "@/ingestion/net/url-policy";
 import { sanitizeFileName, validateArtifact } from "@/ingestion/verify/artifact-validator";
+import { isCheckableFileUrl } from "@/ingestion/manual-import/url-check";
 import { createPlaceholderPdf } from "@/lib/storage/mock-files";
 
 const policy = { allowedHosts: ["www.ebsi.co.kr", "wdown.ebsi.co.kr", ".suneung.re.kr"] };
@@ -65,6 +66,19 @@ describe("source URL allowlist", () => {
     await expect(
       assertResolvesPublic(url, async () => ["211.43.1.1"], {}),
     ).resolves.toBeUndefined();
+  });
+});
+
+describe("operator content extraction allowlist", () => {
+  it("allows only the approved direct EBSi file host", () => {
+    expect(
+      isCheckableFileUrl(
+        "https://wdown.ebsi.co.kr/W61001/01exam/20260902/go3/eng_1_hsj_TEST.pdf",
+      ),
+    ).toBe(true);
+    expect(isCheckableFileUrl("https://www.ebsi.co.kr/ebs/private/file.pdf")).toBe(false);
+    expect(isCheckableFileUrl("https://wdown.ebsi.co.kr.evil.example/file.pdf")).toBe(false);
+    expect(isCheckableFileUrl("file:///etc/passwd")).toBe(false);
   });
 });
 

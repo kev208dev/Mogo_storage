@@ -54,6 +54,33 @@ describe("EBSi parser (synthetic fixtures)", () => {
     expect(lang[0]!.sourceSubjectLabel).toBe("제2외국어");
   });
 
+  it("table/div 기반 semantic fallback으로 시험과 자료를 파싱한다", () => {
+    const semanticPage = ebsiListingUrl(EBSI, 3, 2025);
+    const { exams } = parseEbsiListing(fixture("ebsi", "listing-semantic-table.html"), {
+      pageUrl: semanticPage,
+      grade: 3,
+      year: 2025,
+    });
+    expect(exams.map((e) => e.externalId)).toEqual(["202509023", "202506043"]);
+    expect(exams[0]!.canonical).toMatchObject({
+      year: 2025,
+      month: 9,
+      grade: 3,
+      examType: "kice_mock",
+      academicYear: 2026,
+    });
+    expect(exams[0]!.examDate).toBe("2025-09-03");
+    expect(exams[0]!.artifacts.map((a) => `${a.subject}:${a.type}`)).toEqual([
+      "english:question",
+      "english:solution",
+    ]);
+    expect(exams[1]!.artifacts[0]).toMatchObject({
+      subject: "korean",
+      type: "question",
+      url: "https://wdown.ebsi.co.kr/exam/20250604/go3/kor_q.pdf",
+    });
+  });
+
   it("학년도 표기 시험을 시행 연도로 변환한다", () => {
     const { exams } = parseEbsiListing(fixture("ebsi", "listing-high3-2025.html"), {
       pageUrl,
@@ -76,7 +103,7 @@ describe("EBSi parser (synthetic fixtures)", () => {
     ).toEqual([]);
   });
 
-  it("구조가 바뀌면 SourceStructureChangedError 로 실패한다", () => {
+  it("서버 HTML에 검색 shell만 남으면 SourceStructureChangedError 로 실패한다", () => {
     expect(() =>
       parseEbsiListing(fixture("ebsi", "listing-structure-changed.html"), {
         pageUrl,

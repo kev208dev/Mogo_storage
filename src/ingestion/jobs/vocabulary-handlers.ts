@@ -12,7 +12,9 @@ import type { Job } from "./queue";
 export async function handleExtractVocabulary(ctx: IngestionContext, job: Job) {
   const artifactId = String(job.payload.artifactId);
   const { db, logger } = ctx;
-  const { artifact, res, expected } = await downloadArtifactBytes(ctx, artifactId);
+  const { artifact, res, expected } = await downloadArtifactBytes(ctx, artifactId, {
+    allowCheckableOperatorImport: true,
+  });
   const check = validateArtifact({
     status: res.status,
     contentType: res.contentType,

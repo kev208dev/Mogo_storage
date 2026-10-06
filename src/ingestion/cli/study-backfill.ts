@@ -33,11 +33,7 @@ async function main() {
   const db = requireDb();
   try {
     const ctx = createCliContext(db);
-    const result = await backfillEnglishStudy(
-      ctx,
-      { year, grade, month },
-      { dryRun },
-    );
+    const result = await backfillEnglishStudy(ctx, { year, grade, month }, { dryRun });
     const output: Record<string, unknown> = { dryRun, filter: { year, grade, month }, ...result };
 
     if (runWorker && !dryRun) {

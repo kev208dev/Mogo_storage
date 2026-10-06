@@ -1,0 +1,84 @@
+name: Diagnostic EBSi live structure
+
+on:
+  push:
+    branches:
+      - fix/ebsi-live-ingestion-and-english-backfill
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Inspect EBSi public previous-paper HTML
+        env:
+          URL: https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs?targetCd=D300&year=2026
+        run: |
+          node <<'NODE'
+          const url = process.env.URL;
+          const res = await fetch(url, {
+            headers: {
+              "user-agent": "MogoStorageBot/1.0 (+https://github.com/kev208dev/Mogo_storage)",
+              accept: "text/html,application/xhtml+xml"
+            },
+            redirect: "follow"
+          });
+          const html = await res.text();
+          console.log(JSON.stringify({
+            status: res.status,
+            finalUrl: res.url,
+            contentType: res.headers.get("content-type"),
+            length: html.length,
+            ulBoardList: (html.match(/<ul[^>]+class=["'][^"']*board_list/gi) || []).length,
+            tableCount: (html.match(/<table\b/gi) || []).length,
+            tbodyCount: (html.match(/<tbody\b/gi) || []).length,
+            trCount: (html.match(/<tr\b/gi) || []).length,
+            dataExamId: (html.match(/data-exam-id/gi) || []).length,
+            hrefCount: (html.match(/href=/gi) || []).length,
+            onclickCount: (html.match(/onclick=/gi) || []).length,
+            pdfCount: (html.match(/\.pdf/gi) || []).length,
+            xlsCount: (html.match(/\.xls/gi) || []).length,
+            downloadWord: (html.match(/다운로드/g) || []).length,
+            questionWord: (html.match(/문제/g) || []).length,
+            answerWord: (html.match(/정답/g) || []).length,
+            englishWord: (html.match(/영어/g) || []).length
+          }, null, 2));
+
+          const classNames = new Map();
+          for (const m of html.matchAll(/class=["']([^"']+)["']/gi)) {
+            for (const c of m[1].trim().split(/\s+/)) classNames.set(c, (classNames.get(c)||0)+1);
+          }
+          console.log("TOP_CLASSES");
+          console.log([...classNames.entries()].sort((a,b)=>b[1]-a[1]).slice(0,80).map(([k,v])=>k+":"+v).join("\n"));
+
+          const text = html
+            .replace(/<script[\s\S]*?<\/script>/gi, " ")
+            .replace(/<style[\s\S]*?<\/style>/gi, " ")
+            .replace(/<[^>]+>/g, "\n")
+            .replace(/&nbsp;/g, " ")
+            .replace(/&amp;/g, "&")
+            .replace(/&#39;/g, "'")
+            .replace(/&quot;/g, '"');
+          const lines = text.split(/\n+/).map(s=>s.replace(/\s+/g," ").trim()).filter(Boolean);
+          console.log("MATCHED_TEXT");
+          console.log(lines.filter(s=>/(2026|9월|모의|학력|국어|수학|영어|한국사|사회|과학|문제|정답|해설)/.test(s)).slice(0,250).join("\n"));
+
+          console.log("LINKISH");
+          const linkish = [];
+          for (const m of html.matchAll(/<(?:a|button)\b([^>]*)>([\s\S]*?)<\/(?:a|button)>/gi)) {
+            const attrs=m[1];
+            const label=m[2].replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim();
+            if (!/(문제|정답|해설|국어|수학|영어|한국사|사회|과학|PDF|다운)/i.test(label+attrs)) continue;
+            const href=(/href=["']([^"']+)["']/i.exec(attrs)||[])[1]||"";
+            const onclick=(/onclick=["']([^"']+)["']/i.exec(attrs)||[])[1]||"";
+            linkish.push(JSON.stringify({label,href,onclick}));
+          }
+          console.log(linkish.slice(0,250).join("\n"));
+          NODE

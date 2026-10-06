@@ -24,6 +24,9 @@ async function main() {
       const jobs = await runJobs(ctx, {
         limit: intArg(args.limit) ?? 50,
         timeBudgetMs: (intArg(args.budget) ?? 180) * 1000,
+        // GitHub/운영 CLI에서 mock storage로 생성 학습지를 만들지 않는다.
+        // 추출 작업만 실행하고 generate_study_materials는 실제 storage가 있는 worker에 남긴다.
+        types: ["extract_vocabulary", "extract_listening_script"],
       });
       console.log(JSON.stringify({ jobs }, null, 2));
       if (jobs.failed > 0) process.exitCode = 1;

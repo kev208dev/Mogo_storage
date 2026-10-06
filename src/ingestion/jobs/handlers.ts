@@ -19,6 +19,7 @@ import {
   validateArtifact,
   validateArtifactProbe,
 } from "../verify/artifact-validator";
+import { createUrlCheckFetcher } from "../manual-import/url-check";
 import { isOperatorImport } from "../manual-import/source";
 import { enqueueJob, type Job } from "./queue";
 
@@ -43,9 +44,31 @@ async function loadArtifact(ctx: IngestionContext, artifactId: string) {
 
 export async function downloadArtifactBytes(ctx: IngestionContext, artifactId: string) {
   const { artifact, source } = await loadArtifact(ctx, artifactId);
-  const fetcher = createFetcherFor(source, ctx.adapterOptions);
   const expected = expectedKindFor(artifact.type);
-  const res = await fetcher.fetch(artifact.sourceUrl, { maxBytes: MAX_ARTIFACT_BYTES[expected] });
+
+  // operator_import 의 discovery/verify 단계는 계속 서버 요청 금지다.
+  // 단, 운영자가 브라우저로 본문까지 확인해 ready 로 게시한 direct file 은
+  // 영어 후처리 job 에서만 기존 EBSi file allowlist 로 읽을 수 있다.
+  const operatorApproved = isOperatorImport(artifact.sourceId);
+  if (
+    operatorApproved &&
+    (artifact.status !== "ready" ||
+      artifact.verificationMode !== "operator_browser" ||
+      !artifact.verifiedAt ||
+      artifact.finalUrl !== artifact.sourceUrl)
+  ) {
+    throw new JobError(
+      "OPERATOR_ARTIFACT_NOT_APPROVED",
+      "operator artifact requires browser approval before content processing",
+    );
+  }
+
+  const fetcher = operatorApproved
+    ? createUrlCheckFetcher()
+    : createFetcherFor(source, ctx.adapterOptions);
+  const res = await fetcher.fetch(artifact.sourceUrl, {
+    maxBytes: MAX_ARTIFACT_BYTES[expected],
+  });
   return { artifact, source, res, expected };
 }
 

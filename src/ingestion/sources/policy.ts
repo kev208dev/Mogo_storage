@@ -46,7 +46,7 @@ export type FeatureSupport =
   | { kind: "not_applicable" };
 
 const EBSI_ROBOTS: PolicyEvidence = {
-  checkedAt: "2026-09-25",
+  checkedAt: "2026-10-06",
   url: "https://www.ebsi.co.kr/robots.txt",
   finding: "Disallow: /*.ajax$ — 기출 archive 목록은 .ajax 응답으로만 제공된다",
 };

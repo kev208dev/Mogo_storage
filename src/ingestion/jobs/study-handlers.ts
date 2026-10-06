@@ -10,7 +10,6 @@ import type { Grade } from "../../lib/constants";
 import { examPath } from "../../lib/exam-path";
 import type { IngestionContext } from "../context";
 import { ArtifactValidationError, toIngestionError } from "../errors";
-import { isOperatorImport } from "../manual-import/source";
 import {
   LISTENING_SCRIPT_PARSER_VERSION,
   parseListeningScript,
@@ -29,7 +28,7 @@ export async function handleGenerateStudyMaterials(ctx: IngestionContext, job: J
 
 /**
  * 공식 듣기 대본이 게시되면 문항별 대본 추출을 예약한다.
- * 운영자 입력(서버 요청 금지) 자료는 내려받지 않으므로 대상이 아니다.
+ * operator_import 는 브라우저 승인된 direct-file 만 downloadArtifactBytes 의 별도 gate 를 통과한다.
  */
 export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId: string) {
   const [file] = await ctx.db
@@ -49,7 +48,7 @@ export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId:
     .from(sourceArtifacts)
     .where(eq(sourceArtifacts.id, file.sourceArtifactId));
   const version = artifact?.contentFingerprint ?? artifact?.sha256;
-  if (!artifact || !version || isOperatorImport(artifact.sourceId)) return;
+  if (!artifact || !version) return;
   if (artifact.containerType !== "file") return; // ZIP 등은 자동으로 풀지 않는다
   await enqueueJob(ctx.db, {
     runAt: ctx.now(),

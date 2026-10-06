@@ -1,4 +1,4 @@
-name: Diagnostic EBSi adapter
+name: Diagnostic English direct files
 
 on:
   push:
@@ -21,33 +21,25 @@ jobs:
       - run: npm ci
       - run: npx next typegen
       - run: npm run typecheck
-      - run: npx vitest run tests/unit/live-source-parsers.test.ts tests/unit/ingestion-parsers.test.ts
-      - name: Compute parser version
-        run: |
-          npm run ingest:parser-version
-          cat src/ingestion/sources/parser-versions.json
-      - name: Live EBSi adapter validation
+      - run: npx vitest run tests/unit/ingestion-security.test.ts tests/integration/english-study.test.ts
+      - name: Safe direct-file probe
         run: |
           node --import tsx <<'NODE'
-          const { builtinSource, createAdapter } = await import("./src/ingestion/sources/registry.ts");
-          const source = { ...builtinSource("ebsi"), enabled: true };
-          const adapter = createAdapter(source);
-          for (const grade of [1,2,3]) {
-            const exams = await adapter.discoverExams({ fromYear: 2026, toYear: 2026, grade, month: 9 });
-            const summary = [];
-            for (const exam of exams) {
-              const artifacts = await adapter.discoverArtifacts(exam);
-              summary.push({
-                externalId: exam.externalId,
-                identity: exam.canonical,
-                examDate: exam.examDate,
-                artifactCount: artifacts.length,
-                subjects: [...new Set(artifacts.map(a => a.subject))].sort(),
-                english: artifacts.filter(a => a.subject === "english").map(a => a.type).sort()
-              });
-            }
-            console.log(JSON.stringify({ grade, exams: summary }, null, 2));
-            if (exams.length === 0) throw new Error(`No September 2026 exam for grade ${grade}`);
-            if (!summary.some(s => s.artifactCount > 0)) throw new Error(`No artifacts for grade ${grade}`);
+          const { createUrlCheckFetcher, checkCandidateUrl } =
+            await import("./src/ingestion/manual-import/url-check.ts");
+          const fetcher = createUrlCheckFetcher();
+          const urls = [
+            "https://wdown.ebsi.co.kr/W61001/01exam/20260902/go3/eng_1_mp3_4Q555FY3.mp3",
+            "https://wdown.ebsi.co.kr/W61001/01exam/20260902/go3/eng_1_scr_G2YZUO58.pdf"
+          ];
+          for (const url of urls) {
+            const result = await checkCandidateUrl(fetcher, url);
+            console.log(JSON.stringify({
+              file: new URL(url).pathname.split("/").pop(),
+              ok: result.ok,
+              reason: result.ok ? null : result.reason,
+              evidence: result.evidence ?? null
+            }));
+            if (!result.ok) process.exitCode = 1;
           }
           NODE

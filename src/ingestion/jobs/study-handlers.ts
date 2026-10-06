@@ -20,7 +20,10 @@ import { enqueueStudyMaterials, generateStudyMaterials } from "../study/material
 import { validateArtifact } from "../verify/artifact-validator";
 import { extractPdfText } from "../vocabulary/pdf-text";
 import { JobError } from "./handlers";
-import { downloadEnglishStudyArtifact, isApprovedOperatorStudyArtifact } from "../study/artifact-fetch";
+import {
+  downloadEnglishStudyArtifact,
+  isApprovedOperatorStudyArtifact,
+} from "../study/artifact-fetch";
 import { enqueueJob, type Job } from "./queue";
 
 /** PROCESS: 학습지 생성 (게시는 관리자 승인 후) */
@@ -56,7 +59,7 @@ export async function maybeEnqueueListeningScript(
   const version = artifact?.contentFingerprint ?? artifact?.sha256;
   if (!artifact || !version) return;
   if (isOperatorImport(artifact.sourceId) && !isApprovedOperatorStudyArtifact(artifact)) return;
-  if (artifact.containerType !== "file") return; // ZIP 등은 자동으로 풀지 않는다
+  if (artifact.containerType !== "file") return;
   await enqueueJob(ctx.db, {
     runAt: ctx.now(),
     type: "extract_listening_script",
@@ -105,7 +108,6 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
   const parsed = parseListeningScript(text);
   const valid = validateListeningScript(parsed);
   if (!valid.ok) {
-    // 형식을 확신할 수 없으면 공개하지 않는다 (재시도해도 같으므로 retryable=false)
     logger.warn("listening_script.unrecognized", { artifactId, reason: valid.reason });
     throw new JobError("LISTENING_SCRIPT_UNRECOGNIZED", valid.reason);
   }
@@ -122,7 +124,6 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
     );
   const audio = files.find((f) => f.type === "listening_audio");
   const script = files.find((f) => f.type === "listening_script");
-  // 트랙은 음원 파일을 가리켜야 한다. 음원이 아직 게시되지 않았으면 나중에 다시 시도
   if (!audio) throw new JobError("AUDIO_NOT_PUBLISHED", "listening audio not published yet", true);
 
   const now = ctx.now();
@@ -138,7 +139,6 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
         endSeconds: 0,
         timingVerified: false,
       })
-      // 이미 있는 트랙(검증된 구간 포함)은 그대로 둔다
       .onConflictDoUpdate({
         target: [listeningTracks.examId, listeningTracks.questionNumber],
         set: { fileId: audio.id },
@@ -149,7 +149,6 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
       .select({ origin: listeningTranscripts.origin })
       .from(listeningTranscripts)
       .where(eq(listeningTranscripts.trackId, track.id));
-    // 이용 허락을 받은 대본 등 다른 출처는 덮어쓰지 않는다
     if (existing && existing.origin !== "official" && existing.origin !== "unverified") continue;
     const values = {
       trackId: track.id,

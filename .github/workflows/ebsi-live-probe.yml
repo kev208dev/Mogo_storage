@@ -1,0 +1,39 @@
+name: EBSi live probe
+
+on:
+  push:
+    branches:
+      - feat/finish-remaining-development
+    paths:
+      - "src/ingestion/sources/ebsi/**"
+      - "src/ingestion/sources/parser-versions.json"
+      - "tests/fixtures/ebsi/**"
+      - ".github/workflows/ebsi-live-probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Unit parser tests
+        run: npm test -- --run tests/unit/ingestion-parsers.test.ts
+      - name: Capture current EBSi high3 archive HTML
+        run: npm run -s ingest:capture -- --source=ebsi --page-type=exam_list --grade=3 --year=2026 --name=ebsi-g3-2026-probe
+      - name: Strict EBSi health
+        run: npm run -s ingest:health -- --source=ebsi --strict
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ebsi-live-probe
+          path: tests/fixtures/live/ebsi
+          if-no-files-found: ignore

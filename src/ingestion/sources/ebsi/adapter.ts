@@ -11,88 +11,35 @@ import type {
   SourceConfig,
   SourceHealth,
 } from "../../types";
-import { parseEbsiLivePage } from "./parser";
-import {
-  ebsiListAjaxUrl,
-  ebsiListBody,
-  ebsiListingUrl,
-  EBSI_AREA_ORDERS,
-  EBSI_STRUCTURE,
-} from "./structure";
-
-const FORM_HEADERS = {
-  "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-  "x-requested-with": "XMLHttpRequest",
-} as const;
+import { parseEbsiExamArtifacts, parseEbsiExamList } from "./parser";
+import { ebsiArtifactPageUrl, ebsiListingUrl } from "./structure";
 
 export class EbsiExamSource implements ExamSourceAdapter {
+  /** 한 번의 실행 안에서 같은 페이지를 두 번 요청하지 않는다 (목록 = 자료 페이지인 현재 구조에서 중요) */
+  private readonly pageCache = new Map<string, Promise<string>>();
+
   constructor(
     readonly source: SourceConfig,
     private readonly fetcher: Fetcher,
     private readonly now: () => Date = () => new Date(),
   ) {}
 
-  private async page(input: {
-    grade: Grade;
-    year: number;
-    month?: number | null;
-    areaOrders?: readonly string[];
-    page?: number;
-  }): Promise<ReturnType<typeof parseEbsiLivePage>> {
-    const ajaxUrl = ebsiListAjaxUrl(this.source.baseUrl);
-    const listingUrl = ebsiListingUrl(this.source.baseUrl, input.grade, input.year);
-    const body = ebsiListBody(input);
-    const res = await this.fetcher.fetch(ajaxUrl, {
-      method: "POST",
-      accept: "text/html,*/*",
-      headers: { ...FORM_HEADERS, referer: listingUrl },
-      body: body.toString(),
-      maxBytes: 4 * 1024 * 1024,
-    });
-    return parseEbsiLivePage(decodeHtml(res), {
-      pageUrl: listingUrl,
-      grade: input.grade,
-      year: input.year,
-    });
-  }
-
-  private async pages(input: {
-    grade: Grade;
-    year: number;
-    month?: number | null;
-    areaOrders?: readonly string[];
-  }) {
-    const out: Array<Awaited<ReturnType<EbsiExamSource["page"]>>> = [];
-    let seen = 0;
-    for (let page = 1; page <= 30; page += 1) {
-      const parsed = await this.page({ ...input, page });
-      out.push(parsed);
-      seen += parsed.itemCount;
-      if (
-        parsed.itemCount === 0 ||
-        parsed.itemCount < EBSI_STRUCTURE.pageSize ||
-        seen >= parsed.total
-      )
-        break;
+  private page(url: string): Promise<string> {
+    if (!this.pageCache.has(url)) {
+      this.pageCache.set(
+        url,
+        this.fetcher.fetch(url, { accept: "text/html" }).then((res) => decodeHtml(res)),
+      );
     }
-    return out;
+    return this.pageCache.get(url)!;
   }
 
-  /**
-   * 시험 identity discovery는 영어 영역만 조회한다.
-   * 같은 시험이 세부과목마다 반복되는 EBSi 구조에서 불필요한 페이지 요청을 크게 줄인다.
-   */
+  /** [Discovery] 학년·연도별 시험 목록 (pageType exam_list) */
   private async listing(grade: Grade, year: number): Promise<DiscoveredExam[]> {
-    const pages = await this.pages({ grade, year, areaOrders: ["3"] });
-    const byIdentity = new Map<string, DiscoveredExam>();
-    for (const page of pages) {
-      for (const exam of page.exams) {
-        const key = canonicalKey(exam.canonical);
-        const existing = byIdentity.get(key);
-        if (!existing || exam.examDate) byIdentity.set(key, exam);
-      }
-    }
-    return [...byIdentity.values()].filter((e) => e.canonical.year === year);
+    const url = ebsiListingUrl(this.source.baseUrl, grade, year);
+    const { exams } = parseEbsiExamList(await this.page(url), { pageUrl: url, grade, year });
+    // 목록 페이지가 다른 연도 시험을 섞어 보여줘도 해당 연도만 사용
+    return exams.filter((e) => e.canonical.year === year);
   }
 
   async discoverExams(options: DiscoverOptions): Promise<DiscoveredExam[]> {
@@ -114,52 +61,46 @@ export class EbsiExamSource implements ExamSourceAdapter {
   }
 
   /**
-   * 한 시험의 month만 조회하고 pagination을 모두 따라가 세부과목 전체를 모은다.
-   * EBSi 공개 HTML의 onclick 인자만 파싱하며 다운로드 카운트/login endpoint는 호출하지 않는다.
+   * [Artifact discovery] 시험 하나의 자료 URL. 시험 목록과 별개 단계다.
+   * externalId 가 없으면(release watch 등) 목록에서 canonical identity 로 찾는다.
    */
   async discoverArtifacts(exam: ExamLocator): Promise<DiscoveredArtifact[]> {
-    const pages = await this.pages({
+    let externalId = exam.externalId;
+    if (!externalId) {
+      const key = canonicalKey(exam);
+      const match = (await this.listing(exam.grade, exam.year)).find(
+        (e) => canonicalKey(e.canonical) === key && e.canonical.examType === exam.examType,
+      );
+      if (!match) return [];
+      externalId = match.externalId;
+    }
+    const listingUrl = ebsiListingUrl(this.source.baseUrl, exam.grade, exam.year);
+    const pageUrl = ebsiArtifactPageUrl(listingUrl);
+    const { artifacts } = parseEbsiExamArtifacts(await this.page(pageUrl), {
+      pageUrl,
       grade: exam.grade,
       year: exam.year,
-      month: exam.month,
-      areaOrders: EBSI_AREA_ORDERS,
+      externalId,
     });
-    const wantedKey = canonicalKey(exam);
-    const artifacts: DiscoveredArtifact[] = [];
-    const seen = new Set<string>();
-    for (const page of pages) {
-      const matchingIds = page.exams
-        .filter(
-          (e) =>
-            (exam.externalId ? e.externalId === exam.externalId : true) &&
-            canonicalKey(e.canonical) === wantedKey &&
-            e.canonical.examType === exam.examType,
-        )
-        .map((e) => e.externalId);
-      for (const id of matchingIds) {
-        for (const artifact of page.artifactsByExternalId.get(id) ?? []) {
-          const key = `${artifact.subject}:${
-            artifact.course.status === "resolved" ? artifact.course.code : artifact.courseLabel ?? "-"
-          }:${artifact.type}:${artifact.url}`;
-          if (seen.has(key)) continue;
-          seen.add(key);
-          artifacts.push(artifact);
-        }
-      }
-    }
     return artifacts;
   }
 
   async healthCheck(): Promise<SourceHealth> {
     const checkedAt = this.now().toISOString();
-    if (!this.source.enabled)
+    if (!this.source.enabled) {
       return { status: "disabled", checkedAt, message: "source disabled" };
+    }
     try {
       const exams = await this.listing(3, this.now().getFullYear());
-      return { status: "healthy", checkedAt, message: `parsed ${exams.length} exams via AJAX` };
+      // 실제 구조 검증 여부는 DB(exam_sources.verified_*)가 판단한다. 여기서는 요청·파싱 결과만 보고한다
+      return { status: "healthy", checkedAt, message: `parsed ${exams.length} exams` };
     } catch (error) {
       const e = toIngestionError(error);
-      return { status: healthStatusForError(e), checkedAt, message: `${e.code}: ${e.message}` };
+      return {
+        status: healthStatusForError(e),
+        checkedAt,
+        message: `${e.code}: ${e.message}`,
+      };
     }
   }
 }

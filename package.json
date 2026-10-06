@@ -42,7 +42,8 @@
     "import:candidates": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/import-candidates.ts",
     "answers:extract": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/answer-keys.ts",
     "grade-cuts:backfill": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/grade-cut-backfill.ts",
-    "study:import-notes": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/study-notes.ts"
+    "study:import-notes": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/study-notes.ts",
+    "english:enrich": "node --env-file-if-exists=.env.local --import tsx src/ingestion/cli/english-enrichment.ts"
   },
   "dependencies": {
     "@expo-google-fonts/noto-sans-kr": "^0.4.3",

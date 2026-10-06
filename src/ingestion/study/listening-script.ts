@@ -117,11 +117,11 @@ function normalizeSpeaker(s: string): string {
 }
 
 /**
- * 게시 기준: 1번부터 연속된 문항이 최소 개수 이상이어야 한다. 아니면 manual_review (공개하지 않음).
+ * 게시 기준: 영어 듣기 표준 17문항이 1번부터 연속되어야 한다. 아니면 manual_review (공개하지 않음).
  */
 export function validateListeningScript(
   parsed: ParsedListeningScript,
-  minQuestions = 10,
+  minQuestions = 17,
 ): { ok: true } | { ok: false; reason: string } {
   const numbers = parsed.questions.map((q) => q.questionNumber);
   if (numbers.length < minQuestions)

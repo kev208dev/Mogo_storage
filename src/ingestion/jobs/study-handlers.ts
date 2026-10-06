@@ -72,7 +72,10 @@ export async function maybeEnqueueListeningScript(
 export async function handleExtractListeningScript(ctx: IngestionContext, job: Job) {
   const artifactId = String(job.payload.artifactId);
   const { db, logger } = ctx;
-  const { artifact, res, expected } = await downloadEnglishStudyArtifact(ctx, artifactId);
+  const { artifact, res, expected, operatorApproved } = await downloadEnglishStudyArtifact(
+    ctx,
+    artifactId,
+  );
   const check = validateArtifact({
     status: res.status,
     contentType: res.contentType,
@@ -85,6 +88,12 @@ export async function handleExtractListeningScript(ctx: IngestionContext, job: J
       "ARTIFACT_CHANGED",
       "artifact changed since verification; waiting for re-verify",
     );
+  if (operatorApproved && !artifact.sha256) {
+    await db
+      .update(sourceArtifacts)
+      .set({ sha256: check.sha256, updatedAt: ctx.now() })
+      .where(eq(sourceArtifacts.id, artifact.id));
+  }
 
   let text: string;
   try {

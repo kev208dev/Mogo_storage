@@ -26,7 +26,7 @@ async function main() {
   if (year !== undefined && (year < 2000 || year > 2100)) throw new Error("--year 범위 오류");
   if (month !== undefined && (month < 1 || month > 12)) throw new Error("--month=1..12");
   const dryRun = args["dry-run"] === true;
-  const process = args.process === true;
+  const runWorker = args.process === true;
   const limit = intArg(args.limit) ?? 200;
   const budgetSeconds = intArg(args.budget) ?? 300;
 
@@ -40,7 +40,7 @@ async function main() {
     );
     const output: Record<string, unknown> = { dryRun, filter: { year, grade, month }, ...result };
 
-    if (process && !dryRun) {
+    if (runWorker && !dryRun) {
       output.worker = await runJobs(ctx, {
         limit,
         timeBudgetMs: budgetSeconds * 1000,

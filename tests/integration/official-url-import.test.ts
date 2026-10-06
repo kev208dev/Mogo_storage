@@ -23,6 +23,9 @@ const ROWS = {
   korQ: `2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,korean,,question,${U("kor_q.pdf")},국어_문제.pdf,국어 문제`,
   socQ: `2025,3,9,kice_mock,2025-09-03,한국교육과정평가원,social,social-culture,question,${U("soc_q.pdf")},,사회탐구 사회·문화 문제`,
   jpnQ: `2024,3,7,school_mock,2024-07-11,서울특별시교육청,second-language,japanese-1,question,https://wdown.ebsi.co.kr/__test__/jpn.pdf,일본어_문제.pdf,제2외국어/한문 일본어Ⅰ 문제`,
+  engS: `2026,3,9,kice_mock,2026-09-02,한국교육과정평가원,english,,solution,https://wdown.ebsi.co.kr/__test__/eng_hsj.pdf,영어_해설.pdf,영어 정답 및 해설`,
+  engAudio: `2026,3,9,kice_mock,2026-09-02,한국교육과정평가원,english,,listening_audio,https://wdown.ebsi.co.kr/__test__/eng.mp3,영어_듣기.mp3,영어 듣기 음원`,
+  engScript: `2026,3,9,kice_mock,2026-09-02,한국교육과정평가원,english,,listening_script,https://wdown.ebsi.co.kr/__test__/eng_scr.pdf,영어_대본.pdf,영어 듣기 대본`,
 };
 
 describe.skipIf(!TEST_DB_URL)("운영자 공식 URL CSV 입력 → 검토 → redirect 게시", () => {
@@ -197,6 +200,38 @@ describe.skipIf(!TEST_DB_URL)("운영자 공식 URL CSV 입력 → 검토 → re
       .from(s.sourceArtifacts)
       .where(eq(s.sourceArtifacts.id, ids[0]!));
     expect(still!.status).toBe("ready");
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it("브라우저 승인 영어 파일은 안전한 후처리 job 을 자동 예약한다", async () => {
+    const { ctx } = makeContext(db);
+    await importOfficialUrls(db, {
+      csv: csv(ROWS.engS, ROWS.engAudio, ROWS.engScript),
+      admin: "ops@example.com",
+    });
+    const artifacts = await db.select().from(s.sourceArtifacts);
+    const solution = artifacts.find((a) => a.type === "solution")!;
+    const audio = artifacts.find((a) => a.type === "listening_audio")!;
+    const script = artifacts.find((a) => a.type === "listening_script")!;
+
+    await approveImportedArtifacts(ctx, {
+      artifactIds: [solution.id, script.id],
+      admin: "ops@example.com",
+      browserChecked: true,
+    });
+    let jobs = await db.select().from(s.jobs);
+    expect(jobs.filter((j) => j.type === "extract_vocabulary")).toHaveLength(1);
+    // 대본만 먼저 승인됐을 때는 음원이 아직 공개되지 않았으므로 실패 job 을 만들지 않는다.
+    expect(jobs.filter((j) => j.type === "extract_listening_script")).toHaveLength(0);
+
+    await approveImportedArtifacts(ctx, {
+      artifactIds: [audio.id],
+      admin: "ops@example.com",
+      browserChecked: true,
+    });
+    jobs = await db.select().from(s.jobs);
+    expect(jobs.filter((j) => j.type === "extract_vocabulary")).toHaveLength(1);
+    expect(jobs.filter((j) => j.type === "extract_listening_script")).toHaveLength(1);
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 

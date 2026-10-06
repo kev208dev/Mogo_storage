@@ -1,4 +1,5 @@
 import type { IngestionContext } from "../context";
+import type { JobType } from "../constants";
 import { toIngestionError } from "../errors";
 import { JOB_HANDLERS } from "./registry";
 import { claimJobs, completeJob, failJob, recoverStaleJobs } from "./queue";
@@ -16,7 +17,7 @@ export interface WorkerResult {
  */
 export async function runJobs(
   ctx: IngestionContext,
-  options: { limit?: number; timeBudgetMs?: number; batchSize?: number } = {},
+  options: { limit?: number; timeBudgetMs?: number; batchSize?: number; types?: JobType[] } = {},
 ): Promise<WorkerResult> {
   const limit = options.limit ?? 200;
   const deadline = Date.now() + (options.timeBudgetMs ?? 60_000);
@@ -28,6 +29,7 @@ export async function runJobs(
       limit: Math.min(options.batchSize ?? 5, limit - result.processed),
       workerId: ctx.workerId,
       now: ctx.now(),
+      types: options.types,
     });
     if (batch.length === 0) break;
     for (const job of batch) {

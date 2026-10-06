@@ -25,10 +25,9 @@ jobs:
       - name: Live EBSi adapter validation
         run: |
           node --import tsx <<'NODE'
-          const { builtinSource } = await import("./src/ingestion/sources/registry.ts");
-          const { EbsiExamSource } = await import("./src/ingestion/sources/ebsi/adapter.ts");
+          const { builtinSource, createAdapter } = await import("./src/ingestion/sources/registry.ts");
           const source = { ...builtinSource("ebsi"), enabled: true };
-          const adapter = new EbsiExamSource(source);
+          const adapter = createAdapter(source);
           for (const grade of [1,2,3]) {
             const exams = await adapter.discoverExams({ fromYear: 2026, toYear: 2026, grade, month: 9 });
             const summary = [];

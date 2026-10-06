@@ -139,7 +139,8 @@ export const SOURCE_FEATURE_POLICIES: Record<
     },
     fetch_file: {
       kind: "manual",
-      reason: "서버는 입력된 URL 에 요청하지 않는다 — 관리자 브라우저 확인 후 승인",
+      reason:
+        "discovery/verify 요청 없음 — 관리자 브라우저 승인 후 EBSi direct-file 영어 후처리만 별도 allowlist 로 허용",
     },
     release_watch: { kind: "not_applicable" },
   },

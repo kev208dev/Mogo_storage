@@ -15,7 +15,7 @@ AI 가 음원을 듣고 만든 대본, 추측한 문항 구간, 출처가 확인
 
 ## 처리 흐름
 
-1. 영어 `listening_script`/`listening_audio` 게시 → `extract_listening_script` job (운영자 입력 URL 은 서버가 요청하지 않으므로 제외)
+1. 영어 `listening_script`/`listening_audio` 게시 → `extract_listening_script` job. `operator_import` 는 브라우저 승인된 direct-file 이고 정책상 파일 host 가 허용된 경우에만 처리
 2. 대본 문항 번호가 1번부터 연속되지 않으면 공개하지 않고 job 실패로 남는다 (관리자 jobs 화면)
 3. 단어장 · 대본 · 웹 정답이 바뀌면 `generate_study_materials` job → `study_materials(status=generated)`
 4. `/admin/study` 에서 검토 시작 → 승인 → 게시. 게시를 내리면 우리가 만든 파일만 삭제된다
@@ -43,8 +43,10 @@ npm run english:enrich -- --exam=exam_2026_h3_09
 - 정책상 파일 요청이 허용된 좁은 allowlist(현재 `wdown.ebsi.co.kr`) 안의 URL
 
 따라서 EBSi `.ajax` archive, 로그인, CAPTCHA, anti-bot 경로를 요청하거나 우회하지 않는다.
-해설 PDF 에서는 규칙 기반 단어 후보만 추출하고, 공식 듣기 대본+음원이 함께 게시된 시험만 대본을
-문항별로 연결한다. 음원 구간은 계속 미검증으로 두며 추측하지 않는다. 생성 학습지는 별도
+관리자가 영어 해설을 브라우저 승인하면 `extract_vocabulary` job 을 자동 예약하고, 듣기 대본+음원이 모두
+승인·게시된 시점에는 `extract_listening_script` job 을 자동 예약한다. 기존 승인 자료의 일괄 보충에는 위
+`english:enrich` 배치를 사용한다. 해설 PDF 에서는 규칙 기반 단어 후보만 추출하고, 공식 듣기 대본+음원이
+함께 게시된 시험만 대본을 문항별로 연결한다. 음원 구간은 계속 미검증으로 두며 추측하지 않는다. 생성 학습지는 별도
 `--enqueue-materials` 옵션으로만 예약하고 관리자 승인 전에는 공개하지 않는다.
 
 ## 독해 노트 입력

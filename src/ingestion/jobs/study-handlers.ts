@@ -11,6 +11,7 @@ import { examPath } from "../../lib/exam-path";
 import type { IngestionContext } from "../context";
 import { ArtifactValidationError, toIngestionError } from "../errors";
 import { isOperatorImport } from "../manual-import/source";
+import { isCheckableFileUrl } from "../manual-import/url-check";
 import {
   LISTENING_SCRIPT_PARSER_VERSION,
   parseListeningScript,
@@ -49,7 +50,8 @@ export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId:
     .from(sourceArtifacts)
     .where(eq(sourceArtifacts.id, file.sourceArtifactId));
   const version = artifact?.contentFingerprint ?? artifact?.sha256;
-  if (!artifact || !version || isOperatorImport(artifact.sourceId)) return;
+  if (!artifact || !version) return;
+  if (isOperatorImport(artifact.sourceId) && !isCheckableFileUrl(artifact.sourceUrl)) return;
   if (artifact.containerType !== "file") return; // ZIP 등은 자동으로 풀지 않는다
   await enqueueJob(ctx.db, {
     runAt: ctx.now(),
@@ -67,7 +69,9 @@ export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId:
 export async function handleExtractListeningScript(ctx: IngestionContext, job: Job) {
   const artifactId = String(job.payload.artifactId);
   const { db, logger } = ctx;
-  const { artifact, res, expected } = await downloadArtifactBytes(ctx, artifactId);
+  const { artifact, res, expected } = await downloadArtifactBytes(ctx, artifactId, {
+    allowCheckableOperatorImport: true,
+  });
   const check = validateArtifact({
     status: res.status,
     contentType: res.contentType,

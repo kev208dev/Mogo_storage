@@ -60,7 +60,7 @@ describe("listening script parser (official 대본 PDF text)", () => {
   });
 
   it("publishes only when numbering is complete; otherwise manual review", () => {
-    expect(validateListeningScript(parsed)).toEqual({ ok: true });
+    expect(validateListeningScript(parsed, 10)).toEqual({ ok: true });
     expect(
       validateListeningScript(parseListeningScript("1번\nM: Hi there.\n3번\nW: Skip.")),
     ).toMatchObject({

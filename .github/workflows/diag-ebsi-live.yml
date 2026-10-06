@@ -91,4 +91,21 @@ jobs:
             }
           }
           console.log([...new Set(hints)].slice(0,500).join("\n"));
+
+          console.log("TARGETED_SNIPPETS");
+          const needles = ["irecord", "previousPaper", "targetCd", "main_board_item", "main_board_subject", ".pdf", "wdown.ebsi.co.kr", "xipc", "searchForm", "goSearch", "searchList", "retrieve"];
+          for (const needle of needles) {
+            console.log("== "+needle+" ==");
+            let from = 0;
+            let count = 0;
+            const lower = html.toLowerCase();
+            const n = needle.toLowerCase();
+            while (count < 25) {
+              const at = lower.indexOf(n, from);
+              if (at < 0) break;
+              console.log(html.slice(Math.max(0, at-700), Math.min(html.length, at+1400)).replace(/\s+/g, " ").slice(0,2100));
+              from = at + n.length;
+              count++;
+            }
+          }
           NODE

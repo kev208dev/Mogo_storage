@@ -235,7 +235,8 @@ export function parseEbsiExamList(
   const { items, mode } = examItems(html, context);
 
   for (const item of items) {
-    const title = firstCanonicalTitle(item, context);
+    const configuredTitle = text(item.querySelector(S.examTitle));
+    const title = configuredTitle || firstCanonicalTitle(item, context);
     if (!title) {
       if (mode === "configured") {
         throw new SourceStructureChangedError("ebsi", `exam title "${S.examTitle}" missing in item`);
@@ -283,7 +284,7 @@ export function parseEbsiExamArtifacts(
   const { items } = examItems(html, context);
 
   for (const item of items) {
-    const title = firstCanonicalTitle(item, context);
+    const title = text(item.querySelector(S.examTitle)) || firstCanonicalTitle(item, context);
     if (!title) continue;
     const canonical = canonicalizeExamTitle(title, { grade: context.grade, year: context.year });
     if (!canonical.ok) continue;

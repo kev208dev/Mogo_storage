@@ -80,7 +80,8 @@ export interface ImportResult {
  * CSV 입력 → 시험 · 영역 · 세부과목 · 공식 URL(manual_review). idempotent:
  *  - 같은 (시험, 영역, 세부과목, 자료 종류) 슬롯 + 같은 URL → unchanged
  *  - 같은 슬롯, 다른 URL → URL 교체 후 다시 검토 대기 (승인 전까지 기존 게시 유지)
- * 서버는 URL 을 열어보지 않는다. 형식·공식 도메인만 검사한다.
+ * 입력 단계에서는 서버가 URL 을 열어보지 않는다. 형식·공식 도메인만 검사한다.
+ * 승인 후 EBSi wdown 영어 해설/대본만 파생 학습자료 처리용 좁은 예외가 있다.
  */
 export async function importOfficialUrls(
   db: Database,

@@ -30,7 +30,8 @@ export async function handleGenerateStudyMaterials(ctx: IngestionContext, job: J
 
 /**
  * 공식 듣기 대본이 게시되면 문항별 대본 추출을 예약한다.
- * 운영자 입력(서버 요청 금지) 자료는 내려받지 않으므로 대상이 아니다.
+ * 일반 운영자 입력은 내려받지 않는다. 브라우저 승인된 EBSi wdown 직접 대본만
+ * 파생 학습자료 처리용 allowlist 예외로 허용한다.
  */
 export async function maybeEnqueueListeningScript(
   ctx: Pick<IngestionContext, "db" | "now">,

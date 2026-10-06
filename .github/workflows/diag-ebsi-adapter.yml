@@ -11,7 +11,9 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    env:
+      DATABASE_URL: ${{ secrets.INGESTION_DATABASE_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -43,3 +45,5 @@ jobs:
             if (!result.ok) process.exitCode = 1;
           }
           NODE
+      - name: Backfill high3 September English study extraction
+        run: npm run study:backfill -- --exam=exam_2026_h3_09 --run-jobs --budget=240

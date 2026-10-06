@@ -75,6 +75,22 @@ describe("listening script parser (official 대본 PDF text)", () => {
     const p = parseListeningScript("1번\nM: Call me at\n5. o'clock please.\n2번\nW: Okay.");
     expect(p.questions.map((q) => q.questionNumber)).toEqual([1, 2]);
   });
+
+  it("duplicates a shared 16~17 passage onto both question transcripts", () => {
+    const firstFifteen = Array.from(
+      { length: 15 },
+      (_, i) => `${i + 1}번\nM: Question ${i + 1} audio.`,
+    ).join("\n");
+    const p = parseListeningScript(
+      `${firstFifteen}\n[16~17]\nM: This shared passage answers both final listening questions.`,
+    );
+    expect(p.questions.map((q) => q.questionNumber)).toEqual(
+      Array.from({ length: 17 }, (_, i) => i + 1),
+    );
+    expect(p.questions[15]!.lines).toEqual(p.questions[16]!.lines);
+    expect(p.questions[16]!.lines[0]!.text).toContain("shared passage");
+    expect(validateListeningScript(p)).toEqual({ ok: true });
+  });
 });
 
 const track = (over: Partial<ListeningTrack>): ListeningTrack => ({

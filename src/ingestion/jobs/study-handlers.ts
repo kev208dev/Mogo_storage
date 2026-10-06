@@ -31,7 +31,10 @@ export async function handleGenerateStudyMaterials(ctx: IngestionContext, job: J
  * 공식 듣기 대본이 게시되면 문항별 대본 추출을 예약한다.
  * 운영자 입력(서버 요청 금지) 자료는 내려받지 않으므로 대상이 아니다.
  */
-export async function maybeEnqueueListeningScript(ctx: IngestionContext, examId: string) {
+export async function maybeEnqueueListeningScript(
+  ctx: Pick<IngestionContext, "db" | "now">,
+  examId: string,
+) {
   const [file] = await ctx.db
     .select({ sourceArtifactId: examFiles.sourceArtifactId })
     .from(examFiles)

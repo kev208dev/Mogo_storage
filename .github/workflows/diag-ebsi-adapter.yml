@@ -22,6 +22,10 @@ jobs:
       - run: npx next typegen
       - run: npm run typecheck
       - run: npx vitest run tests/unit/live-source-parsers.test.ts tests/unit/ingestion-parsers.test.ts
+      - name: Compute parser version
+        run: |
+          npm run ingest:parser-version
+          cat src/ingestion/sources/parser-versions.json
       - name: Live EBSi adapter validation
         run: |
           node --import tsx <<'NODE'

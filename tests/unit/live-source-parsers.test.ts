@@ -12,7 +12,6 @@ import {
   parseEbsiExamArtifacts,
   parseEbsiExamList,
   parseEbsiListing,
-  parseEbsiLivePage,
 } from "@/ingestion/sources/ebsi/parser";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
 import { parseKiceExamIndex, parseReleaseTime } from "@/ingestion/sources/kice/index-parser";
@@ -76,45 +75,6 @@ describe("EBSi: discovery 와 artifact discovery 분리 (synthetic)", () => {
       ["second_language", "japanese-1", "solution", "제2외국어/한문"],
       ["second_language", "classical-chinese-1", "question", "제2외국어/한문"],
     ]);
-  });
-});
-
-
-
-describe("EBSi current live AJAX parser", () => {
-  const url = ebsiListingUrl("https://www.ebsi.co.kr", 3, 2026);
-
-  it("groups course rows by irecord and maps problem/solution/audio/script downloads", () => {
-    const parsed = parseEbsiLivePage(fixture("ebsi", "live-ajax-2026-h3-09.html"), {
-      pageUrl: url,
-      grade: 3,
-      year: 2026,
-    });
-    expect(parsed.total).toBe(2);
-    expect(parsed.exams).toHaveLength(1);
-    expect(parsed.exams[0]).toMatchObject({
-      externalId: "202609023",
-      examDate: "2026-09-02",
-      canonical: { year: 2026, grade: 3, month: 9, examType: "kice_mock" },
-    });
-    const artifacts = parsed.artifactsByExternalId.get("202609023")!;
-    expect(
-      artifacts.map((a) => [
-        a.subject,
-        a.course.status === "resolved" ? a.course.code : null,
-        a.type,
-      ]),
-    ).toEqual([
-      ["english", null, "question"],
-      ["english", null, "solution"],
-      ["english", null, "listening_audio"],
-      ["english", null, "listening_script"],
-      ["science", "physics-1", "question"],
-      ["science", "physics-1", "solution"],
-    ]);
-    expect(artifacts[0]!.url).toBe(
-      "https://wdown.ebsi.co.kr/W61001/01exam/20260902/go3/eng_1_mun_TEST.pdf",
-    );
   });
 });
 

@@ -103,3 +103,19 @@ describe("operator study artifact block reasons (dry-run diagnostics)", () => {
     ).toBe("redirected");
   });
 });
+
+describe("study backfill worker storage guard", () => {
+  it("refuses mock storage against a remote database, allows real storage or a local DB", async () => {
+    const { workerStorageProblem } = await import("@/ingestion/study/backfill");
+    expect(
+      workerStorageProblem({ DATABASE_URL: "postgres://u:p@db.example.com:5432/x" }),
+    ).toContain("STORAGE_DRIVER=mock");
+    expect(
+      workerStorageProblem({
+        DATABASE_URL: "postgres://u:p@db.example.com:5432/x",
+        STORAGE_DRIVER: "r2",
+      }),
+    ).toBeNull();
+    expect(workerStorageProblem({ DATABASE_URL: "postgres://u:p@localhost:5432/x" })).toBeNull();
+  });
+});

@@ -262,3 +262,19 @@ export async function backfillEnglishStudy(
 
   return result;
 }
+
+/**
+ * 학습지 PDF 를 만드는 job 은 파일을 스토리지에 쓴다. mock 스토리지는 이 프로세스의 로컬 디스크라
+ * 원격(운영) DB 에 행만 남고 파일은 사라진다 → 원격 DB 에서는 실제 스토리지 없이 worker 를 돌리지 않는다.
+ */
+export function workerStorageProblem(env: Record<string, string | undefined>): string | null {
+  if ((env.STORAGE_DRIVER ?? "mock") !== "mock") return null;
+  let host = "";
+  try {
+    host = new URL(env.DATABASE_URL ?? "").hostname;
+  } catch {
+    return null;
+  }
+  if (host === "localhost" || host === "127.0.0.1" || host === "::1") return null;
+  return "STORAGE_DRIVER=mock 으로 원격 DB 의 PROCESS job 을 처리하지 않습니다. --process 없이 enqueue 한 뒤 앱의 /api/cron/jobs 가 처리하게 하세요.";
+}

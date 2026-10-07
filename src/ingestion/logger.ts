@@ -11,6 +11,7 @@ export type IngestionEvent =
   | "artifact.verified"
   | "artifact.rejected"
   | "artifact.published"
+  | "artifact.study_attested"
   | "artifact.changed"
   | "artifact.manual_review"
   | "job.failed"

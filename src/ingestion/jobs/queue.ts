@@ -100,6 +100,35 @@ export async function failJob(
   return canRetry ? "retrying" : "failed";
 }
 
+/**
+ * claim 했지만 시간 예산이 끝나 시작하지 못한 job 을 그대로 queue 에 돌려준다.
+ * 시도 횟수를 쓰지 않은 것으로 되돌리고 lock 을 푼다 (15분 stale 복구를 기다리지 않는다).
+ * 이 worker 가 잡고 있는 processing job 만 바꾼다.
+ */
+export async function releaseJob(
+  db: Database,
+  job: Pick<Job, "id" | "attempts" | "lockedBy">,
+  now = new Date(),
+) {
+  const attempts = Math.max(0, job.attempts - 1);
+  await db
+    .update(jobs)
+    .set({
+      status: attempts > 0 ? "retrying" : "pending",
+      attempts,
+      lockedAt: null,
+      lockedBy: null,
+      updatedAt: now,
+    })
+    .where(
+      and(
+        eq(jobs.id, job.id),
+        eq(jobs.status, "processing"),
+        job.lockedBy ? eq(jobs.lockedBy, job.lockedBy) : undefined,
+      ),
+    );
+}
+
 /** 처리 중에 프로세스가 죽어 남은 job 을 되살린다 */
 export async function recoverStaleJobs(
   db: Database,

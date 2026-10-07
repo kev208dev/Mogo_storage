@@ -60,7 +60,7 @@ describe("listening script parser (official 대본 PDF text)", () => {
   });
 
   it("publishes only when numbering is complete; otherwise manual review", () => {
-    expect(validateListeningScript(parsed)).toEqual({ ok: true });
+    expect(validateListeningScript(parsed, 10)).toEqual({ ok: true });
     expect(
       validateListeningScript(parseListeningScript("1번\nM: Hi there.\n3번\nW: Skip.")),
     ).toMatchObject({
@@ -74,6 +74,93 @@ describe("listening script parser (official 대본 PDF text)", () => {
   it("does not treat a stray number inside text as a new question", () => {
     const p = parseListeningScript("1번\nM: Call me at\n5. o'clock please.\n2번\nW: Okay.");
     expect(p.questions.map((q) => q.questionNumber)).toEqual([1, 2]);
+  });
+
+  it("duplicates a shared 16~17 passage onto both question transcripts", () => {
+    const firstFifteen = Array.from(
+      { length: 15 },
+      (_, i) => `${i + 1}번\nM: Question ${i + 1} audio.`,
+    ).join("\n");
+    const p = parseListeningScript(
+      `${firstFifteen}\n[16~17]\nM: This shared passage answers both final listening questions.`,
+    );
+    expect(p.questions.map((q) => q.questionNumber)).toEqual(
+      Array.from({ length: 17 }, (_, i) => i + 1),
+    );
+    expect(p.questions[15]!.lines).toEqual(p.questions[16]!.lines);
+    expect(p.questions[16]!.lines[0]!.text).toContain("shared passage");
+    expect(validateListeningScript(p)).toEqual({ ok: true });
+  });
+});
+
+/** 1~n 번 단일 문항 (직접 쓴 최소 문장) */
+const singles = (n: number) =>
+  Array.from({ length: n }, (_, i) => `[${i + 1}]\nM: Single question ${i + 1} line.`).join("\n");
+
+describe("shared listening ranges (A–E)", () => {
+  it("A. single [15] marker links only question 15", () => {
+    const p = parseListeningScript(`${singles(14)}\n[15]\nW: Only fifteen here.`);
+    expect(p.questions.at(-1)).toEqual({
+      questionNumber: 15,
+      lines: [{ speaker: "W", text: "Only fifteen here." }],
+    });
+    expect(p.questions.filter((q) => q.lines.some((l) => l.text.includes("fifteen")))).toHaveLength(
+      1,
+    );
+  });
+
+  it("B/C. [16~17] links one passage to both; the next marker starts a separate passage", () => {
+    const p = parseListeningScript(
+      `${singles(15)}\n[16~17]\nW: Shared passage first line.\nM: Shared passage second line.\n[18]\nW: Next passage only.`,
+    );
+    const by = (n: number) => p.questions.find((q) => q.questionNumber === n)!;
+    const shared = [
+      { speaker: "W", text: "Shared passage first line." },
+      { speaker: "M", text: "Shared passage second line." },
+    ];
+    expect(by(16).lines).toEqual(shared);
+    expect(by(17).lines).toEqual(shared);
+    // 문항마다 독립된 배열 (한쪽 수정이 다른 쪽에 번지지 않는다)
+    expect(by(16).lines).not.toBe(by(17).lines);
+    expect(by(18).lines).toEqual([{ speaker: "W", text: "Next passage only." }]);
+    expect(by(17).lines.some((l) => l.text.includes("Next"))).toBe(false);
+    expect(by(18).lines.some((l) => l.text.includes("Shared"))).toBe(false);
+    // timing 은 만들지 않는다
+    for (const l of [...by(16).lines, ...by(17).lines]) expect(l.startSeconds ?? null).toBeNull();
+  });
+
+  it("also accepts the unbracketed '16~17번' and dash forms", () => {
+    for (const marker of ["16~17번", "16-17", "[16-17]", "[16 ~ 17]"]) {
+      const p = parseListeningScript(`${singles(15)}\n${marker}\nM: Shared text.`);
+      expect(p.questions.map((q) => q.questionNumber).slice(-2), marker).toEqual([16, 17]);
+    }
+  });
+
+  it.each([
+    ["reversed", "[17~16]"],
+    ["outside listening range", "[16~21]"],
+    ["too long", "[16~19]"],
+    ["not continuing the sequence", "[18~19]"],
+  ])("D. %s range is rejected and its passage is not mixed into question 15", (_, marker) => {
+    const p = parseListeningScript(`${singles(15)}\n${marker}\nW: Passage of a rejected marker.`);
+    expect(p.questions.map((q) => q.questionNumber)).toEqual(
+      Array.from({ length: 15 }, (_, i) => i + 1),
+    );
+    expect(p.questions[14]!.lines).toEqual([{ speaker: "M", text: "Single question 15 line." }]);
+    expect(p.warnings.map((w) => w.code)).toContain("INVALID_RANGE");
+    expect(validateListeningScript(p).ok).toBe(false);
+  });
+
+  it("D. a range-looking phrase inside dialogue stays ordinary text", () => {
+    const p = parseListeningScript("1번\nM: We need\n3-4 more chairs please.\n2번\nW: Sure.");
+    expect(p.questions[0]!.lines).toEqual([
+      { speaker: "M", text: "We need 3-4 more chairs please." },
+    ]);
+  });
+
+  it("E. requires the full 17 questions by default (shorter scripts go to manual review)", () => {
+    expect(validateListeningScript(parseListeningScript(singles(17)))).toEqual({ ok: true });
+    expect(validateListeningScript(parseListeningScript(singles(16))).ok).toBe(false);
   });
 });
 

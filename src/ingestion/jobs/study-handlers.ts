@@ -64,7 +64,7 @@ export async function maybeEnqueueListeningScript(
     runAt: ctx.now(),
     type: "extract_listening_script",
     payload: { artifactId: artifact.id },
-    dedupeKey: `listening-script:${artifact.id}:${version}`,
+    dedupeKey: `listening-script:${artifact.id}:${version}:${LISTENING_SCRIPT_PARSER_VERSION}`,
     maxAttempts: 3,
   });
 }

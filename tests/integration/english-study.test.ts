@@ -1,4 +1,4 @@
-import { and, eq } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 import type { Database } from "@/db/client";
 import * as s from "@/db/schema";
@@ -22,14 +22,16 @@ import {
 
 const run = describe.skipIf(!TEST_DB_URL);
 
-/** 직접 쓴 합성 대본 (실제 시험 대본 아님) */
+/** 직접 쓴 합성 대본 (실제 시험 대본 아님) — 1~15번 단일 문항 + 16~17번 공유 지문 */
 function scriptLines(): string[] {
   const lines = ["TEST FIXTURE — NOT A REAL EXAM (합성 듣기 대본)"];
-  for (let n = 1; n <= 12; n += 1) {
+  for (let n = 1; n <= 15; n += 1) {
     lines.push(`${n}번`);
     lines.push(`M: Synthetic question ${n} opening line.`);
-    lines.push(`W: Synthetic reply for question ${n}.`);
   }
+  lines.push("[16~17]");
+  lines.push("W: Shared synthetic passage for the last two questions.");
+  lines.push("M: It continues with a second shared line.");
   return lines;
 }
 
@@ -99,16 +101,30 @@ run("English study pipeline (official script → transcripts → worksheets → 
     expect(jobs?.failed).toBe(0);
 
     const tracks = await db.select().from(s.listeningTracks);
-    expect(tracks).toHaveLength(12);
+    expect(tracks).toHaveLength(17);
     // 구간은 만들지 않는다
     expect(
       tracks.every((t) => !t.timingVerified && t.startSeconds === 0 && t.endSeconds === 0),
     ).toBe(true);
     const transcripts = await db.select().from(s.listeningTranscripts);
-    expect(transcripts).toHaveLength(12);
+    expect(transcripts).toHaveLength(17);
     expect(new Set(transcripts.map((t) => t.origin))).toEqual(new Set(["official"]));
-    expect(transcripts[0]!.sourceUrl).toBe(`${fake.baseUrl}/files/eng_script.pdf`);
-    expect(transcripts[0]!.parserVersion).toBe("listening-script-v1");
+    for (const t of transcripts) {
+      expect(t.sourceUrl).toBe(`${fake.baseUrl}/files/eng_script.pdf`);
+      expect(t.parserVersion).toBe("listening-script-v2");
+    }
+    // 16·17번은 같은 공유 지문에서 나온 같은 대본, 출처도 같다
+    const numberOf = new Map(tracks.map((t) => [t.id, t.questionNumber]));
+    const byNumber = (n: number) => transcripts.find((t) => numberOf.get(t.trackId) === n)!;
+    expect(byNumber(16).lines).toEqual([
+      { speaker: "W", text: "Shared synthetic passage for the last two questions." },
+      { speaker: "M", text: "It continues with a second shared line." },
+    ]);
+    expect(byNumber(17).lines).toEqual(byNumber(16).lines);
+    expect(byNumber(17).sourceFileId).toBe(byNumber(16).sourceFileId);
+    expect(byNumber(15).lines).toEqual([
+      { speaker: "M", text: "Synthetic question 15 opening line." },
+    ]);
     expect(revalidated).toContain("/exam/2025/high2/09/english");
 
     // 학습지: 받아쓰기 학습지/정답이 생성됐지만 게시되지 않았다
@@ -120,14 +136,11 @@ run("English study pipeline (official script → transcripts → worksheets → 
     const repo = new DrizzleExamRepository(db);
     const detail = await repo.getSubjectDetail({ year: 2025, grade: 2, month: 9 }, "english");
     const withScript = detail!.listeningTracks.filter((t) => t.transcript);
-    expect(withScript).toHaveLength(12);
+    expect(withScript).toHaveLength(17);
     expect(withScript[0]).toMatchObject({
       timingVerified: false,
       transcriptOrigin: "official",
-      transcript: [
-        { speaker: "M", text: "Synthetic question 1 opening line." },
-        { speaker: "W", text: "Synthetic reply for question 1." },
-      ],
+      transcript: [{ speaker: "M", text: "Synthetic question 1 opening line." }],
     });
     expect(detail!.pendingMaterialKinds.sort()).toEqual(["dictation_answers", "dictation_sheet"]);
     expect(detail!.files.some((f) => f.type === "dictation_sheet")).toBe(false);
@@ -138,7 +151,7 @@ run("English study pipeline (official script → transcripts → worksheets → 
       .set({ origin: "unverified" })
       .where(eq(s.listeningTranscripts.id, transcripts[0]!.id));
     const hidden = await repo.getSubjectDetail({ year: 2025, grade: 2, month: 9 }, "english");
-    expect(hidden!.listeningTracks.filter((t) => t.transcript)).toHaveLength(11);
+    expect(hidden!.listeningTracks.filter((t) => t.transcript)).toHaveLength(16);
 
     // 승인 → 게시하면 generated 파일로 공개
     const sheet = materials.find((m) => m.kind === "dictation_sheet")!;
@@ -157,6 +170,52 @@ run("English study pipeline (official script → transcripts → worksheets → 
       .from(s.examFiles)
       .where(and(eq(s.examFiles.type, "dictation_sheet")));
     expect(gone).toBeUndefined();
+  });
+
+  it("reprocesses v1 data: study:backfill re-enqueues with the new parser version and restores 17번", async () => {
+    await seed(true);
+    const { ctx } = makeContext(db);
+    await runBackfill(ctx, { fromYear: 2025, toYear: 2025, grades: [2] });
+    // v1 시절 상태 재현: 17번 없음 · parser v1 · dedupe key 에 parser version 없음
+    const [t17] = await db
+      .select()
+      .from(s.listeningTracks)
+      .where(eq(s.listeningTracks.questionNumber, 17));
+    await db.delete(s.listeningTracks).where(eq(s.listeningTracks.id, t17!.id));
+    await db.update(s.listeningTranscripts).set({ parserVersion: "listening-script-v1" });
+    await db.execute(
+      sql`update jobs set dedupe_key = regexp_replace(dedupe_key, ':listening-script-v2$', '') where type = 'extract_listening_script'`,
+    );
+
+    const { backfillEnglishStudy } = await import("@/ingestion/study/backfill");
+    const filter = { year: 2025, grade: 2 as const, month: 9 };
+    const dry = await backfillEnglishStudy(ctx, filter, { dryRun: true });
+    expect(dry).toMatchObject({ listeningEligible: 1, listeningScheduled: 0 });
+    expect(await db.select().from(s.jobs).where(eq(s.jobs.status, "pending"))).toHaveLength(0);
+
+    await backfillEnglishStudy(ctx, filter);
+    const { runJobs } = await import("@/ingestion/jobs/worker");
+    const worker = await runJobs(ctx, { limit: 20 });
+    expect(worker.failed).toBe(0);
+
+    const tracks = await db.select().from(s.listeningTracks);
+    expect(tracks.map((t) => t.questionNumber).sort((a, b) => a! - b!)).toEqual(
+      Array.from({ length: 17 }, (_, i) => i + 1),
+    );
+    const transcripts = await db.select().from(s.listeningTranscripts);
+    expect(transcripts).toHaveLength(17);
+    expect(new Set(transcripts.map((t) => t.parserVersion))).toEqual(
+      new Set(["listening-script-v2"]),
+    );
+    expect(tracks.every((t) => !t.timingVerified && t.endSeconds === 0)).toBe(true);
+    // 같은 버전으로 다시 돌려도 중복 job 이 생기지 않는다
+    await backfillEnglishStudy(ctx, filter);
+    expect(
+      await db
+        .select()
+        .from(s.jobs)
+        .where(and(eq(s.jobs.type, "extract_listening_script"), eq(s.jobs.status, "pending"))),
+    ).toHaveLength(0);
   });
 
   it("without an official script there are no transcripts (full-audio fallback only)", async () => {

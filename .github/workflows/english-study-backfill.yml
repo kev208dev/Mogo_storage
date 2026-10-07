@@ -22,7 +22,7 @@ on:
         required: false
         type: string
       process:
-        description: enqueue 후 jobs worker까지 실행
+        description: enqueue 후 운영 앱의 /api/cron/jobs 로 queue 처리 (운영 스토리지 사용)
         required: true
         default: true
         type: boolean
@@ -75,7 +75,26 @@ jobs:
           fi
           if [[ "$MODE" == "dry-run" ]]; then
             args+=("--dry-run")
-          elif [[ "$PROCESS" == "true" ]]; then
-            args+=("--process" "--limit=500" "--budget=1200")
           fi
+          # runner 에서는 enqueue 만 한다. 학습지 PDF 는 스토리지에 써야 하므로 PROCESS job 은
+          # 운영 앱(실제 스토리지 설정)의 /api/cron/jobs 가 처리한다.
           npm run -s study:backfill -- "${args[@]}"
+      - name: Drain PROCESS queue via production app
+        if: inputs.mode == 'enqueue' && inputs.process
+        env:
+          SITE_URL: ${{ secrets.INGESTION_SITE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          if [ -z "$SITE_URL" ] || [ -z "$CRON_SECRET" ]; then
+            echo "::error::INGESTION_SITE_URL / CRON_SECRET secret 이 없습니다."
+            exit 1
+          fi
+          for i in 1 2 3 4; do
+            body=$(curl --fail-with-body -sS --max-time 320 \
+              -H "Authorization: Bearer $CRON_SECRET" -H "X-Scheduler: github-actions" \
+              "$SITE_URL/api/cron/jobs")
+            echo "$body"
+            processed=$(echo "$body" | jq -r '.result.processed // 0')
+            released=$(echo "$body" | jq -r '.result.released // 0')
+            if [ "$processed" = "0" ] && [ "$released" = "0" ]; then break; fi
+          done

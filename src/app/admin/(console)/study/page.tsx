@@ -20,7 +20,12 @@ import {
 import type { Grade } from "@/lib/constants";
 import { AdminNotice } from "../notice";
 import { NoDatabase } from "../no-db";
-import { regenerateStudyMaterialsAction, reviewStudyMaterialAction } from "./actions";
+import {
+  attestStudyArtifactAction,
+  regenerateStudyMaterialsAction,
+  reviewStudyMaterialAction,
+} from "./actions";
+import { listStudyAttestationCandidates } from "@/ingestion/study/operator-attest";
 
 export const dynamic = "force-dynamic";
 
@@ -51,6 +56,7 @@ export default async function StudyAdminPage({ searchParams }: PageProps<"/admin
     .orderBy(desc(exams.year), desc(exams.month), desc(exams.grade))
     .limit(24);
   const ids = recentExams.map((e) => e.id);
+  const attestable = await listStudyAttestationCandidates(db);
   const [pending, published, files, vocab, transcripts, tracks] = await Promise.all([
     db
       .select({ material: studyMaterials, exam: exams })
@@ -208,6 +214,45 @@ export default async function StudyAdminPage({ searchParams }: PageProps<"/admin
           ) : null}
         </ul>
       </Panel>
+
+      {attestable.length ? (
+        <Panel title={`브라우저 확인이 필요한 운영자 입력 자료 (${attestable.length})`}>
+          <p className="text-muted-foreground mb-2 text-xs">
+            게시는 되어 있지만 브라우저 확인 기록이 없어 단어장 · 듣기 대본 추출을 하지 않는
+            자료입니다. 공식 파일을 직접 열어 맞는 시험 · 종류인지 확인한 경우에만 체크하세요. 허용
+            호스트 · 자료 종류 조건은 바뀌지 않습니다.
+          </p>
+          <ul className="divide-border divide-y text-sm" data-testid="study-attest">
+            {attestable.map(({ artifact: a, exam }) => (
+              <li key={a.id} className="flex flex-wrap items-center gap-2 py-2">
+                <span className="font-semibold">
+                  {examTitle({ ...exam, grade: exam.grade as Grade })}
+                </span>
+                <span>{FILE_TYPE_LABELS[a.type]}</span>
+                <a
+                  href={a.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs underline"
+                >
+                  공식 파일 열기
+                </a>
+                <form
+                  action={attestStudyArtifactAction}
+                  className="ml-auto flex items-center gap-2"
+                >
+                  <input type="hidden" name="artifactId" value={a.id} />
+                  <label className="flex items-center gap-1 text-xs">
+                    <input type="checkbox" name="browserChecked" required />
+                    브라우저에서 확인했습니다
+                  </label>
+                  <SmallButton variant="primary">학습자료 처리 허용</SmallButton>
+                </form>
+              </li>
+            ))}
+          </ul>
+        </Panel>
+      ) : null}
 
       <Panel title="영어 보충 자료 현황 (최근 시험)">
         <div className="overflow-x-auto">

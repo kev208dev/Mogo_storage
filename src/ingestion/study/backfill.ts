@@ -3,7 +3,10 @@ import type { Database } from "../../db/client";
 import { examFiles, exams, sourceArtifacts } from "../../db/schema";
 import type { IngestionContext } from "../context";
 import { isOperatorImport } from "../manual-import/source";
-import { isApprovedOperatorStudyArtifact } from "./artifact-fetch";
+import {
+  isApprovedOperatorStudyArtifact,
+  operatorStudyArtifactBlockReason,
+} from "./artifact-fetch";
 import { enqueueJob } from "../jobs/queue";
 import { maybeEnqueueListeningScript } from "../jobs/study-handlers";
 import { enqueueStudyMaterials, loadWorksheetInput } from "./materials";
@@ -25,6 +28,59 @@ export interface EnglishStudyBackfillResult {
   worksheetScheduled: number;
   blockedOperatorArtifacts: number;
   missingSourceArtifacts: number;
+  /**
+   * 시험·자료별 판정 근거 (dry-run 에서 대상 확인용). URL 은 host 만, 비밀값 없음.
+   * reason: eligible | missing_source_artifact | no_version | 운영자 자료 차단 사유
+   */
+  details: BackfillDetail[];
+}
+
+export interface BackfillDetail {
+  exam: string;
+  kind: "vocabulary" | "listening";
+  fileId: string;
+  artifactId: string | null;
+  sourceId: string | null;
+  host: string | null;
+  status: string | null;
+  verificationMode: string | null;
+  reason: string;
+}
+
+function hostOf(url: string | null | undefined): string | null {
+  try {
+    return url ? new URL(url).hostname : null;
+  } catch {
+    return null;
+  }
+}
+
+function detailFor(
+  exam: { year: number; grade: number; month: number },
+  kind: BackfillDetail["kind"],
+  file: { fileId: string },
+  artifact: typeof sourceArtifacts.$inferSelect | null,
+  reason: string,
+): BackfillDetail {
+  return {
+    exam: `${exam.year}-g${exam.grade}-${String(exam.month).padStart(2, "0")}`,
+    kind,
+    fileId: file.fileId,
+    artifactId: artifact?.id ?? null,
+    sourceId: artifact?.sourceId ?? null,
+    host: hostOf(artifact?.sourceUrl),
+    status: artifact?.status ?? null,
+    verificationMode: artifact?.verificationMode ?? null,
+    reason,
+  };
+}
+
+/** 처리할 수 없는 이유 (처리 가능하면 null) */
+function blockReason(artifact: typeof sourceArtifacts.$inferSelect): string | null {
+  if (processableStudyArtifactVersion(artifact)) return null;
+  if (isOperatorImport(artifact.sourceId))
+    return operatorStudyArtifactBlockReason(artifact) ?? "no_version";
+  return "no_version";
 }
 
 type BackfillCtx = Pick<IngestionContext, "db" | "now">;
@@ -118,6 +174,7 @@ export async function backfillEnglishStudy(
     worksheetScheduled: 0,
     blockedOperatorArtifacts: 0,
     missingSourceArtifacts: 0,
+    details: [],
   };
 
   for (const exam of rows) {
@@ -125,8 +182,20 @@ export async function backfillEnglishStudy(
     if (solution.file) {
       if (!solution.artifact) {
         result.missingSourceArtifacts += 1;
+        result.details.push(
+          detailFor(exam, "vocabulary", solution.file, null, "missing_source_artifact"),
+        );
       } else {
         const version = processableStudyArtifactVersion(solution.artifact);
+        result.details.push(
+          detailFor(
+            exam,
+            "vocabulary",
+            solution.file,
+            solution.artifact,
+            blockReason(solution.artifact) ?? "eligible",
+          ),
+        );
         if (!version) {
           if (isOperatorImport(solution.artifact.sourceId)) result.blockedOperatorArtifacts += 1;
           else result.missingSourceArtifacts += 1;
@@ -153,8 +222,20 @@ export async function backfillEnglishStudy(
     if (audio.file && script.file) {
       if (!script.artifact) {
         result.missingSourceArtifacts += 1;
+        result.details.push(
+          detailFor(exam, "listening", script.file, null, "missing_source_artifact"),
+        );
       } else {
         const version = processableStudyArtifactVersion(script.artifact);
+        result.details.push(
+          detailFor(
+            exam,
+            "listening",
+            script.file,
+            script.artifact,
+            blockReason(script.artifact) ?? "eligible",
+          ),
+        );
         if (!version) {
           if (isOperatorImport(script.artifact.sourceId)) result.blockedOperatorArtifacts += 1;
           else result.missingSourceArtifacts += 1;
@@ -180,4 +261,20 @@ export async function backfillEnglishStudy(
   }
 
   return result;
+}
+
+/**
+ * 학습지 PDF 를 만드는 job 은 파일을 스토리지에 쓴다. mock 스토리지는 이 프로세스의 로컬 디스크라
+ * 원격(운영) DB 에 행만 남고 파일은 사라진다 → 원격 DB 에서는 실제 스토리지 없이 worker 를 돌리지 않는다.
+ */
+export function workerStorageProblem(env: Record<string, string | undefined>): string | null {
+  if ((env.STORAGE_DRIVER ?? "mock") !== "mock") return null;
+  let host = "";
+  try {
+    host = new URL(env.DATABASE_URL ?? "").hostname;
+  } catch {
+    return null;
+  }
+  if (host === "localhost" || host === "127.0.0.1" || host === "::1") return null;
+  return "STORAGE_DRIVER=mock 으로 원격 DB 의 PROCESS job 을 처리하지 않습니다. --process 없이 enqueue 한 뒤 앱의 /api/cron/jobs 가 처리하게 하세요.";
 }

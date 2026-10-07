@@ -8,6 +8,7 @@ import {
   reviewStudyMaterial,
   type StudyReviewAction,
 } from "@/ingestion/study/materials";
+import { attestOperatorArtifactForStudy } from "@/ingestion/study/operator-attest";
 import { requireAdmin } from "@/lib/server/admin-session";
 import { createAppIngestionContext } from "@/lib/server/ingestion-context";
 
@@ -62,5 +63,26 @@ export async function regenerateStudyMaterialsAction(form: FormData) {
       JSON.stringify({ event: "admin.action", admin, action: "study.regenerate", target: examId }),
     );
     return "학습지 생성 작업을 예약했습니다 (jobs worker 가 처리).";
+  });
+}
+
+/** 게시된 운영자 입력 영어 자료: 관리자가 브라우저에서 확인 → 학습자료 처리 허용 */
+export async function attestStudyArtifactAction(form: FormData) {
+  const admin = await requireAdmin();
+  const ctx = createAppIngestionContext();
+  if (!ctx) throw new Error("DATABASE_URL 이 설정되지 않았습니다.");
+  await withNotice(async () => {
+    const artifactId = formId(form, "artifactId");
+    const { enqueued } = await attestOperatorArtifactForStudy(ctx, {
+      artifactId,
+      admin,
+      browserChecked: form.get("browserChecked") === "on",
+    });
+    console.info(
+      JSON.stringify({ event: "admin.action", admin, action: "study.attest", target: artifactId }),
+    );
+    return enqueued === "listening"
+      ? "확인을 기록했습니다. 듣기 대본 추출 job 을 예약했습니다."
+      : "확인을 기록했습니다. 단어장 추출 job 을 예약했습니다.";
   });
 }

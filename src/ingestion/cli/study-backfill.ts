@@ -6,7 +6,7 @@
  *
  * operator_import URL은 서버에서 다시 요청하지 않는 기존 정책을 유지한다.
  */
-import { backfillEnglishStudy } from "../study/backfill";
+import { backfillEnglishStudy, workerStorageProblem } from "../study/backfill";
 import { runJobs } from "../jobs/worker";
 import { intArg, parseArgs } from "./args";
 import { closeDb, createCliContext, requireDb } from "./context";
@@ -27,6 +27,10 @@ async function main() {
   if (month !== undefined && (month < 1 || month > 12)) throw new Error("--month=1..12");
   const dryRun = args["dry-run"] === true;
   const runWorker = args.process === true;
+  if (runWorker && !dryRun) {
+    const problem = workerStorageProblem(process.env);
+    if (problem) throw new Error(problem);
+  }
   const limit = intArg(args.limit) ?? 200;
   const budgetSeconds = intArg(args.budget) ?? 300;
 

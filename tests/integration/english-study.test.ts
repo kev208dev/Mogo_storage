@@ -208,6 +208,23 @@ run("English study pipeline (official script → transcripts → worksheets → 
       new Set(["listening-script-v2"]),
     );
     expect(tracks.every((t) => !t.timingVerified && t.endSeconds === 0)).toBe(true);
+    // 읽기 전용 상태 보고 (운영 검증용)
+    const { englishStudyStatus } = await import("@/ingestion/study/status");
+    const status = await englishStudyStatus(db, filter);
+    const report = status.exams[0]!;
+    expect(report.exam).toBe("2025-g2-09");
+    expect(report.transcripts.map((t) => t.q)).toEqual(Array.from({ length: 17 }, (_, i) => i + 1));
+    for (const t of report.transcripts)
+      expect(t).toMatchObject({
+        origin: "official",
+        parserVersion: "listening-script-v2",
+        sourceHost: "127.0.0.1",
+        lineTimings: false,
+        timingVerified: false,
+      });
+    expect(report.transcripts[15]!.firstLine).toBe(report.transcripts[16]!.firstLine);
+    expect(report.studyMaterials.every((m) => !m.published && m.status === "generated")).toBe(true);
+    expect(status.recentFailures).toEqual([]);
     // 같은 버전으로 다시 돌려도 중복 job 이 생기지 않는다
     await backfillEnglishStudy(ctx, filter);
     expect(

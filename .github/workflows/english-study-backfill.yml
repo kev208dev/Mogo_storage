@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: dry-run | enqueue
+        description: dry-run | enqueue | status (읽기 전용 상태 보고)
         required: true
         default: dry-run
         type: choice
-        options: [dry-run, enqueue]
+        options: [dry-run, enqueue, status]
       year:
         description: 시행 연도 (비우면 전체)
         required: false
@@ -75,6 +75,8 @@ jobs:
           fi
           if [[ "$MODE" == "dry-run" ]]; then
             args+=("--dry-run")
+          elif [[ "$MODE" == "status" ]]; then
+            args+=("--status")
           fi
           # runner 에서는 enqueue 만 한다. 학습지 PDF 는 스토리지에 써야 하므로 PROCESS job 은
           # 운영 앱(실제 스토리지 설정)의 /api/cron/jobs 가 처리한다.
@@ -98,3 +100,16 @@ jobs:
             released=$(echo "$body" | jq -r '.result.released // 0')
             if [ "$processed" = "0" ] && [ "$released" = "0" ]; then break; fi
           done
+      - name: Status after processing (read-only)
+        if: always() && inputs.mode == 'enqueue'
+        env:
+          DATABASE_URL: ${{ secrets.INGESTION_DATABASE_URL }}
+          YEAR: ${{ inputs.year }}
+          GRADE: ${{ inputs.grade }}
+          MONTH: ${{ inputs.month }}
+        run: |
+          args=("--status")
+          [[ -n "$YEAR" ]] && args+=("--year=$YEAR")
+          [[ -n "$GRADE" ]] && args+=("--grade=$GRADE")
+          [[ -n "$MONTH" ]] && args+=("--month=$MONTH")
+          npm run -s study:backfill -- "${args[@]}"

@@ -218,7 +218,7 @@ run("English study pipeline (official script → transcripts → worksheets → 
     for (const t of report.transcripts)
       expect(t).toMatchObject({
         origin: "official",
-        parserVersion: "listening-script-v2",
+        parserVersion: LISTENING_SCRIPT_PARSER_VERSION,
         sourceHost: "127.0.0.1",
         lineTimings: false,
         timingVerified: false,

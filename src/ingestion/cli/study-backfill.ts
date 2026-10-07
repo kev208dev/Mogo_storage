@@ -7,6 +7,7 @@
  * operator_import URL은 서버에서 다시 요청하지 않는 기존 정책을 유지한다.
  */
 import { backfillEnglishStudy, workerStorageProblem } from "../study/backfill";
+import { englishStudyStatus } from "../study/status";
 import { runJobs } from "../jobs/worker";
 import { intArg, parseArgs } from "./args";
 import { closeDb, createCliContext, requireDb } from "./context";
@@ -36,6 +37,11 @@ async function main() {
 
   const db = requireDb();
   try {
+    // --status: 읽기 전용 상태 보고만 (enqueue 하지 않는다)
+    if (args.status === true) {
+      console.log(JSON.stringify(await englishStudyStatus(db, { year, grade, month }), null, 2));
+      return;
+    }
     const ctx = createCliContext(db);
     const result = await backfillEnglishStudy(ctx, { year, grade, month }, { dryRun });
     const output: Record<string, unknown> = { dryRun, filter: { year, grade, month }, ...result };

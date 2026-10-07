@@ -227,7 +227,8 @@ async function runTask(task: Task): Promise<TaskOutcome> {
       };
     try {
       await syncBuiltinSources(ingestion.db);
-      const result = await runJobs(ingestion, { timeBudgetMs: 240_000 });
+      // maxDuration(300초) 안에 source 동기화 + 마지막으로 시작한 job 하나가 끝날 여유를 남긴다
+      const result = await runJobs(ingestion, { timeBudgetMs: 200_000 });
       return {
         status: 200,
         body: { ok: true, task, result },

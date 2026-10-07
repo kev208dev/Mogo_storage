@@ -164,6 +164,55 @@ describe("shared listening ranges (A–E)", () => {
   });
 });
 
+describe("official script layout (v3)", () => {
+  // 직접 쓴 합성 대본 — 공식 대본 PDF 텍스트의 배치(지시문 · 쪽 번호 · 저작권 문구 · 16～17 공유 지문)만 흉내
+  const layout = readFileSync(
+    path.join(__dirname, "../fixtures/english/listening-script-official-layout.txt"),
+    "utf8",
+  );
+  const p = parseListeningScript(layout);
+  const by = (n: number) => p.questions.find((q) => q.questionNumber === n)!;
+
+  it("recognises all 17 questions including a fullwidth ～ shared range", () => {
+    expect(p.questions.map((q) => q.questionNumber)).toEqual(
+      Array.from({ length: 17 }, (_, i) => i + 1),
+    );
+    expect(validateListeningScript(p)).toEqual({ ok: true });
+    expect(p.warnings).toEqual([]);
+  });
+
+  it("does not treat '16번부터 17번까지는 …' as a question marker", () => {
+    // 15번 대본 뒤에 안내문이 끼어들거나 16번이 안내문에서 시작하지 않는다
+    expect(
+      by(15)
+        .lines.map((l) => l.text)
+        .join(" "),
+    ).not.toMatch(/[가-힣]/);
+    expect(by(16).lines[0]!.text).toBe(
+      "Shared test talk about invented gardens that wraps onto a second line. Now, let us begin.",
+    );
+    expect(by(17).lines).toEqual(by(16).lines);
+  });
+
+  it("keeps Korean instructions (even with English names) and footers out of transcripts", () => {
+    for (const q of p.questions)
+      for (const l of q.lines) expect(l.text, `${q.questionNumber}`).not.toMatch(/[가-힣]/);
+    expect(by(8).lines[0]!.text).toBe(
+      "Test speaker line for question 8 begins here and continues on the next line.",
+    );
+    expect(by(7).lines.at(-1)).toEqual({ speaker: "W", text: "See you later." });
+    expect(by(15).lines).toHaveLength(1);
+  });
+
+  it("keeps Korean speaker labels working", () => {
+    const k = parseListeningScript("1번\n남: Hello there.\n여: Hi.");
+    expect(k.questions[0]!.lines).toEqual([
+      { speaker: "M", text: "Hello there." },
+      { speaker: "W", text: "Hi." },
+    ]);
+  });
+});
+
 const track = (over: Partial<ListeningTrack>): ListeningTrack => ({
   id: `t${over.questionNumber ?? "all"}`,
   examId: "e",

@@ -2,6 +2,7 @@ import { and, eq, sql } from "drizzle-orm";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 import type { Database } from "@/db/client";
 import * as s from "@/db/schema";
+import { LISTENING_SCRIPT_PARSER_VERSION } from "@/ingestion/study/listening-script";
 import { runBackfill } from "@/ingestion/backfill";
 import { ebsiListingUrl } from "@/ingestion/sources/ebsi/structure";
 import { reviewStudyMaterial } from "@/ingestion/study/materials";
@@ -111,7 +112,7 @@ run("English study pipeline (official script → transcripts → worksheets → 
     expect(new Set(transcripts.map((t) => t.origin))).toEqual(new Set(["official"]));
     for (const t of transcripts) {
       expect(t.sourceUrl).toBe(`${fake.baseUrl}/files/eng_script.pdf`);
-      expect(t.parserVersion).toBe("listening-script-v2");
+      expect(t.parserVersion).toBe(LISTENING_SCRIPT_PARSER_VERSION);
     }
     // 16·17번은 같은 공유 지문에서 나온 같은 대본, 출처도 같다
     const numberOf = new Map(tracks.map((t) => [t.id, t.questionNumber]));
@@ -184,7 +185,7 @@ run("English study pipeline (official script → transcripts → worksheets → 
     await db.delete(s.listeningTracks).where(eq(s.listeningTracks.id, t17!.id));
     await db.update(s.listeningTranscripts).set({ parserVersion: "listening-script-v1" });
     await db.execute(
-      sql`update jobs set dedupe_key = regexp_replace(dedupe_key, ':listening-script-v2$', '') where type = 'extract_listening_script'`,
+      sql`update jobs set dedupe_key = regexp_replace(dedupe_key, ${`:${LISTENING_SCRIPT_PARSER_VERSION}$`}, '') where type = 'extract_listening_script'`,
     );
 
     const { backfillEnglishStudy } = await import("@/ingestion/study/backfill");
@@ -205,7 +206,7 @@ run("English study pipeline (official script → transcripts → worksheets → 
     const transcripts = await db.select().from(s.listeningTranscripts);
     expect(transcripts).toHaveLength(17);
     expect(new Set(transcripts.map((t) => t.parserVersion))).toEqual(
-      new Set(["listening-script-v2"]),
+      new Set([LISTENING_SCRIPT_PARSER_VERSION]),
     );
     expect(tracks.every((t) => !t.timingVerified && t.endSeconds === 0)).toBe(true);
     // 같은 버전으로 다시 돌려도 중복 job 이 생기지 않는다

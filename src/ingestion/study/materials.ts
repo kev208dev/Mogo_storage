@@ -110,7 +110,24 @@ export async function generateStudyMaterials(ctx: Ctx, examId: string) {
     const sha = createHash("sha256").update(bytes).digest("hex");
     // 생성 자료는 원본(exams/…)과 분리된 prefix 에 둔다
     const key = `generated/exams/${year}/high${grade}/${String(month).padStart(2, "0")}/english/${spec.type}-${sha.slice(0, 16)}.pdf`;
-    await ctx.storage.putObject({ key, body: bytes, contentType: "application/pdf", sha256: sha });
+    try {
+      await ctx.storage.putObject({
+        key,
+        body: bytes,
+        contentType: "application/pdf",
+        sha256: sha,
+      });
+    } catch (error) {
+      // mock 스토리지는 로컬 디스크용이다. 운영(읽기 전용 파일시스템)에서는 저장할 곳이 없으므로
+      // 재시도하지 않고 원인을 분명히 남긴다 (행을 만들지 않아 없는 파일을 가리키지 않는다)
+      if (ctx.storage.name === "mock")
+        throw new IngestionError(
+          "STORAGE_NOT_CONFIGURED",
+          "학습지 PDF 를 저장할 운영 스토리지가 없습니다 (STORAGE_DRIVER=r2 와 R2 설정 필요)",
+          false,
+        );
+      throw error;
+    }
     const values = {
       examId,
       subject: "english" as const,

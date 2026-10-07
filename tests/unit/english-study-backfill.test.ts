@@ -76,3 +76,30 @@ describe("English study backfill policy", () => {
     ).toBeNull();
   });
 });
+
+describe("operator study artifact block reasons (dry-run diagnostics)", () => {
+  it("names the exact condition that blocks server-side processing", async () => {
+    const { operatorStudyArtifactBlockReason } = await import("@/ingestion/study/artifact-fetch");
+    const op = { ...base, sourceId: "operator_import" };
+    expect(operatorStudyArtifactBlockReason(op)).toBeNull();
+    expect(operatorStudyArtifactBlockReason({ ...op, sourceId: "ebsi" })).toBe(
+      "not_operator_import",
+    );
+    expect(operatorStudyArtifactBlockReason({ ...op, status: "manual_review" })).toBe("not_ready");
+    expect(operatorStudyArtifactBlockReason({ ...op, verificationMode: "probe" })).toBe(
+      "not_browser_verified",
+    );
+    expect(operatorStudyArtifactBlockReason({ ...op, verifiedAt: null })).toBe("not_verified");
+    expect(operatorStudyArtifactBlockReason({ ...op, type: "question" })).toBe("unsupported_type");
+    expect(
+      operatorStudyArtifactBlockReason({
+        ...op,
+        sourceUrl: "https://www.kice.re.kr/x.pdf",
+        finalUrl: null,
+      }),
+    ).toBe("host_not_allowed");
+    expect(
+      operatorStudyArtifactBlockReason({ ...op, finalUrl: "https://wdown.ebsi.co.kr/other.pdf" }),
+    ).toBe("redirected");
+  });
+});

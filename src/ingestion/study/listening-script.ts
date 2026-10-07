@@ -47,12 +47,7 @@ export function parseListeningScript(text: string): ParsedListeningScript {
       const end = Number(range[2] ?? range[4]);
       const expected = lastQuestionNumber + 1;
       // "16~17"처럼 하나의 지문을 공유하는 연속 문항만 허용한다.
-      if (
-        start === expected &&
-        end >= start &&
-        end <= MAX_LISTENING_QUESTION &&
-        end - start <= 2
-      ) {
+      if (start === expected && end >= start && end <= MAX_LISTENING_QUESTION && end - start <= 2) {
         current = [];
         for (let n = start; n <= end; n += 1) {
           const question = { questionNumber: n, lines: [] as TranscriptLine[] };
@@ -61,8 +56,17 @@ export function parseListeningScript(text: string): ParsedListeningScript {
         }
         lastQuestionNumber = end;
         const rest = range[5]?.trim() ?? "";
-        if (rest && hasEnglish(rest))
-          for (const question of current) appendLine(question, rest);
+        if (rest && hasEnglish(rest)) for (const question of current) appendLine(question, rest);
+        continue;
+      }
+      // "[18~25]"·"[17~16]"처럼 대괄호로 쓴 범위는 분명한 문항 경계다. 허용하지 않는 범위면
+      // 그 지문을 앞 문항에 붙이지 않고 버린다 (검증에서 번호 누락 → manual_review).
+      if (range[1] !== undefined) {
+        current = [];
+        warnings.push({
+          code: "INVALID_RANGE",
+          detail: `허용하지 않는 문항 범위: ${start}~${end}`,
+        });
         continue;
       }
     }

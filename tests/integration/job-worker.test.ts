@@ -74,3 +74,44 @@ run("job worker time budget", () => {
     expect(left).toMatchObject({ status: "retrying", attempts: 2, lockedBy: null });
   });
 });
+
+run("study materials storage", () => {
+  let db: Database;
+  beforeAll(async () => {
+    db = await setupDb();
+  });
+  beforeEach(async () => {
+    await resetDb(db);
+  });
+
+  it("mock storage that cannot write fails fast with STORAGE_NOT_CONFIGURED and creates no rows", async () => {
+    const [exam] = await db
+      .insert(s.exams)
+      .values({ year: 2099, grade: 3, month: 9, examType: "kice_mock", organizer: "t", slug: "s" })
+      .returning();
+    await db.insert(s.vocabulary).values({
+      examId: exam!.id,
+      questionNumber: 18,
+      word: "testword",
+      meaning: "테스트",
+    });
+    const readOnlyMock = {
+      name: "mock",
+      getFileUrl: async () => "",
+      getDownloadUrl: async () => "",
+      putObject: async () => {
+        throw Object.assign(
+          new Error("ENOENT: no such file or directory, mkdir '/var/task/.data'"),
+          {
+            code: "ENOENT",
+          },
+        );
+      },
+    };
+    const { ctx } = makeContext(db, { storage: readOnlyMock });
+    const { generateStudyMaterials } = await import("@/ingestion/study/materials");
+    const error = await generateStudyMaterials(ctx, exam!.id).catch((e) => e);
+    expect(error).toMatchObject({ code: "STORAGE_NOT_CONFIGURED", retryable: false });
+    expect(await db.select().from(s.studyMaterials)).toEqual([]);
+  });
+});

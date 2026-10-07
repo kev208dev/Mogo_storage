@@ -9,9 +9,12 @@ import type { TranscriptLine } from "../../lib/data/types";
  *  - 화자: 줄 머리의 "M:" "W:" "남:" "여:" "Man:" "Woman:" 등
  *  - 화자 표기가 없는 줄은 앞 문장에 이어 붙인다
  *  - 머리말/쪽 번호 등 영문이 없는 줄은 버린다
+ *  - 한글 문제 지시문("8. 대화를 듣고, … Event 에 관해 …")은 영문 고유명사가 섞여 있어도 대본이 아니다:
+ *    한글이 든 줄(화자 표기 제외)은 대본에 넣지 않는다. 쪽 끝 저작권 문구는 줄 중간에 붙어도 떼어 낸다
+ *  - "16번부터 17번까지는 …" 같은 안내 문장은 문항 표기가 아니다 ("N번" 바로 뒤에 한글이 오면 제외)
  * 시간 정보(구간)는 만들지 않는다. 대본 PDF 에는 재생 위치가 없으므로 구간은 미검증으로 둔다.
  */
-export const LISTENING_SCRIPT_PARSER_VERSION = "listening-script-v2";
+export const LISTENING_SCRIPT_PARSER_VERSION = "listening-script-v3";
 
 export interface ParsedScriptQuestion {
   questionNumber: number;
@@ -23,9 +26,14 @@ export interface ParsedListeningScript {
   warnings: Array<{ code: string; detail: string }>;
 }
 
+/** 범위 구분 기호: ~ ∼ ～(전각) 〜 – — - */
 const RANGE_RE =
-  /^\s*(?:\[(\d{1,2})\s*[~∼–—-]\s*(\d{1,2})\]|(\d{1,2})\s*[~∼–—-]\s*(\d{1,2})\s*번?[.:)]?)\s*(.*)$/;
-const QUESTION_RE = /^\s*(?:\[(\d{1,2})\]|(\d{1,2})\s*번[.:)]?|(\d{1,2})\s*[.)])\s*(.*)$/;
+  /^\s*(?:\[(\d{1,2})\s*[~∼～〜–—-]\s*(\d{1,2})\]|(\d{1,2})\s*[~∼～〜–—-]\s*(\d{1,2})\s*번?(?![가-힣])[.:)]?)\s*(.*)$/;
+const QUESTION_RE =
+  /^\s*(?:\[(\d{1,2})\]|(\d{1,2})\s*번(?![가-힣])[.:)]?|(\d{1,2})\s*[.)])\s*(.*)$/;
+/** 공식 문제지 쪽 끝 저작권 문구 (PDF 텍스트에서 앞 줄 끝에 붙어 나오기도 한다) */
+const COPYRIGHT_RE = /이\s*문제지에\s*관한\s*저작권은[^.]*?있습니다\.?/g;
+const HANGUL_RE = /[가-힣]/;
 const SPEAKER_RE = /^\s*(M|W|B|G|Man|Woman|Boy|Girl|남|여|남자|여자)\s*[:：]\s*(.+)$/i;
 const MAX_LISTENING_QUESTION = 20;
 
@@ -38,7 +46,7 @@ export function parseListeningScript(text: string): ParsedListeningScript {
   let lastQuestionNumber = 0;
 
   for (const raw of text.split(/\r?\n/)) {
-    const line = raw.replace(/\s+/g, " ").trim();
+    const line = raw.replace(COPYRIGHT_RE, " ").replace(/\s+/g, " ").trim();
     if (!line) continue;
 
     const range = RANGE_RE.exec(line);
@@ -104,6 +112,8 @@ export function parseListeningScript(text: string): ParsedListeningScript {
 
 function appendLine(q: ParsedScriptQuestion, text: string) {
   const speaker = SPEAKER_RE.exec(text);
+  // 한글이 든 내용은 대본이 아니다 (문제 지시문 · 안내문 · 머리말). 화자 표기 "남:" 은 제외하고 본문만 본다
+  if (HANGUL_RE.test(speaker ? speaker[2]! : text)) return;
   if (speaker) {
     q.lines.push({ speaker: normalizeSpeaker(speaker[1]!), text: speaker[2]!.trim() });
     return;

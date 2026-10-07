@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { beforeAll, beforeEach, describe, expect, it } from "vitest";
 import type { Database } from "@/db/client";
 import * as s from "@/db/schema";
+import { LISTENING_SCRIPT_PARSER_VERSION } from "@/ingestion/study/listening-script";
 import { ensureOperatorImportSource } from "@/ingestion/manual-import/import";
 import {
   attestOperatorArtifactForStudy,
@@ -107,7 +108,7 @@ run("operator artifact study attestation", () => {
     });
     const jobs = await db.select().from(s.jobs);
     expect(jobs.map((j) => j.type)).toEqual(["extract_listening_script"]);
-    expect(jobs[0]!.dedupeKey).toContain("listening-script-v2");
+    expect(jobs[0]!.dedupeKey).toContain(LISTENING_SCRIPT_PARSER_VERSION);
     // 이미 확인된 자료는 다시 받을 수 없다
     await expect(
       attestOperatorArtifactForStudy(ctx, {

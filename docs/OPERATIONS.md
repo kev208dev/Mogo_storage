@@ -47,7 +47,11 @@ npm run ingest:inspect -- --source=ebsi --year=2026 --grade=3 --month=9   # 읽�
 
 ### job 이 멈춤 / 계속 실패
 
-- `processing` 에 15분 이상 남은 job 은 다음 실행에서 자동 복구됩니다.
+- `processing` 에 15분 이상 남은 job 은 다음 실행에서 자동 복구됩니다. 복구도 한 번의 시도로 셉니다:
+  시도 횟수가 남았으면 지수 backoff 뒤 다시 실행하고, `maxAttempts` 를 다 썼으면 `failed`
+  (`STALE_PROCESSING`) 로 닫고 "job 영구 실패" 알림을 보냅니다. 함수를 계속 죽이는 job 이 15분마다 무한 반복되지 않습니다.
+- 결과 기록은 job 을 잡은 worker 만 합니다. 복구로 다른 worker 가 다시 가져간 job 을 늦게 끝난 이전 worker 가 덮어쓰지 않습니다
+  (`job.ownership_lost` 로그, 결과의 `lost`).
 - `failed`(maxAttempts 초과) 는 `/admin` 실패 목록에서 원인 확인 → [다시 시도] 또는 [무시](`dismissed`).
 - 수동 처리: `npm run ingest:jobs`
 
@@ -101,11 +105,38 @@ DATABASE_URL=postgres://.../mogo_restore npm run ingest:audit        # 슬롯 �
 - 모든 `/api/cron/<task>` 실행은 `scheduler_heartbeats` 에 시작·종료·결과(`ok`/`skipped`/`failed` + 짧은 상태 코드)를 남깁니다. 기록이 실패해도 cron 자체는 영향을 받지 않습니다.
 - `/api/cron/watchdog` 이 기대 주기 대비 늦은 task(`stale`), 연속 실패(`failing`), 켜져 있는데 기록이 없는 task(`never_run`)를 찾아 `OPS_WEBHOOK_URL` 로 알립니다. 정상으로 돌아오면 복구 알림을 한 번 보냅니다.
 
-| task         | 기대 주기 | stale 기준 | 감시 조건                          |
-| ------------ | --------- | ---------- | ---------------------------------- |
-| `grade-cuts` | 5분       | 20분       | `GRADE_CUT_INGESTION_ENABLED=true` |
-| `scheduled`  | 10분      | 90분       | `INGESTION_ENABLED=true`           |
-| `watchdog`   | 1시간     | 36시간     | 항상 (관리자 화면 표시용)          |
+| task         | 기대 주기 | stale 기준 | 감시 조건                                            |
+| ------------ | --------- | ---------- | ---------------------------------------------------- |
+| `grade-cuts` | 5분       | 20분       | `GRADE_CUT_INGESTION_ENABLED=true`                   |
+| `scheduled`  | 10분      | 90분       | `INGESTION_ENABLED=true`                             |
+| `jobs`       | 10분      | 8시간      | cron endpoint 가 켜져 있음 (16자 이상 `CRON_SECRET`) |
+| `watchdog`   | 1시간     | 36시간     | 항상 (관리자 화면 표시용)                            |
+
+- `jobs` 는 검증·승인된 PROCESS queue(학습자료·단어장 생성, 재검증 등)입니다. `INGESTION_ENABLED` 와 무관하게
+  GitHub `Scheduled ingestion` 이 호출합니다. GitHub schedule 이 실제로 2~5시간 간격이라 stale 기준을 8시간으로 둡니다.
+  repository secret(`INGESTION_SITE_URL`, `CRON_SECRET`)이 없어 workflow 가 skip 하면 여기서 `never_run`/`stale` 로 드러납니다
+  (workflow 에도 warning annotation 이 남습니다).
+- 시작만 기록되고 15분 넘게 끝나지 않은 실행(`running`)은 함수가 죽은 것으로 보고 최근 실행으로 치지 않습니다 (maxDuration 300초).
+
+heartbeat 상태 코드(`lastDetail`, `<scheduler>:<코드>`)는 HTTP 200 과 "실제로 한 일"을 구분합니다.
+
+| task            | 상태 · 코드               | 의미                                                                                 |
+| --------------- | ------------------------- | ------------------------------------------------------------------------------------ |
+| `scheduled`     | `skipped:disabled`        | `INGESTION_ENABLED` 가 `"true"` 가 아님 (의도된 꺼짐 — 아래 "정기 수집 스위치")      |
+| `scheduled`     | `skipped:locked`          | 다른 정기 수집이 실행 중 (advisory lock)                                             |
+| `scheduled`     | `ok:no_runnable_sources`  | 정책(robots·anti-bot)상 discovery 를 실행할 수 있는 source 가 없음                   |
+| `scheduled`     | `failed:discovery_failed` | 실행한 discovery 가 모두 실패 (3회 연속이면 "연속 실패" 알림)                        |
+| `scheduled`     | `ok:discovery_partial`    | 일부 source 만 실패                                                                  |
+| `jobs`          | `ok:queue_worker`         | queue 처리 완료. `.jobs_dead`(영구 실패) · `.jobs_lost`(소유권 잃음) 가 붙을 수 있음 |
+| `release-watch` | `ok:polled` / `ok:idle`   | 공개 시간대 감시에서 요청을 했는지                                                   |
+
+### 정기 수집 스위치 (`INGESTION_ENABLED`)
+
+- 정확히 `"true"` 일 때만 켜집니다. `True`·`1` 같은 값은 꺼진 것으로 처리되고, 서버 시작·build 시 경고가 남습니다.
+- 2026-10 현재 모든 공식 source 의 시험·파일 목록 discovery 가 정책상 금지(`docs/SOURCE_SURVEY.md`)라서,
+  켜도 목록·시험일 감시 요청은 생기지 않습니다. 하는 일은 `ok:no_runnable_sources` 기록, release watch 장부 정리
+  (공개 시간대가 지난 slot → `missed` 알림), 자동 수집으로 들어온 EBSi `wdown` 자료가 있을 때의 7일 주기 재검증뿐입니다.
+  자료는 운영자 CSV → 관리자 승인 경로로만 들어옵니다. 따라서 꺼 둔 상태(`skipped:disabled`)가 현재 정상입니다.
 
 - 기준은 `SCHEDULER_STALE_MINUTES_GRADE_CUTS=60` 처럼 env 로 조정합니다 (주기보다 짧은 값은 무시).
 - heartbeat 의 `lastDetail` 앞부분은 호출한 scheduler 입니다: `pg_cron:` · `vercel_cron:` · `github_actions:` · `github_manual:` · `manual:` (헤더 `X-Scheduler` 또는 Vercel Cron user-agent). 자동 실행과 수동 호출을 구분할 수 있습니다.
@@ -165,6 +196,26 @@ SMOKE_BASE_URL=https://mogo-storage.vercel.app npm run test:smoke:prod
 - 서버 시작 시(`instrumentation`)와 Vercel Production build 시(`next.config.ts`) 같은 검증을 합니다. build 에서 실패하면 배포가 중단되고 기존 배포가 계속 서비스됩니다.
 - 실패 조건: `NEXT_PUBLIC_SITE_URL` 이 https origin 이 아님(경로·쿼리·계정정보 포함) · 수집/등급컷 cron 이 켜졌는데 DB 나 16자 이상 `CRON_SECRET` 없음 · 관리자 설정 3개 중 일부만 있음 또는 짧음 · DB 연결 상태에서 `ALLOW_SAMPLE_INDEXING=1` · R2 설정 일부만 있음/`R2_PUBLIC_BASE_URL` 이 https 아님.
 - 메시지에는 변수 이름만 나오고 값은 출력하지 않습니다. 긴급 우회는 `SKIP_ENV_VALIDATION=1` (원인을 고친 뒤 제거).
+
+## 공식 source health check (`ingest:health`, 주간 workflow)
+
+- 정책상 자동 수집이 금지된 source(현재 `kice` · `ebsi` 목록 · `education_office`)는 **요청하지 않고** 사유만 출력합니다(`skipped`).
+  금지된 source 는 health 가 통과해도 켤 수 없고, 요청 자체가 정책 위반이기 때문입니다.
+- 검증·재검증 job 도 `fetch_file` 이 정책상 금지된 source 의 URL 에는 요청하지 않습니다 (`ingestion.skipped`, `fetch_file is policy_blocked`).
+  이미 게시된 자료의 상태는 바꾸지 않습니다. EBSi 직접 파일 호스트(`wdown.ebsi.co.kr`)는 계속 허용입니다.
+
+## 등급컷 backfill — fixture 검증과 실제 provider 검증 구분
+
+| 명령                                                             | 시험 목록                     | 요청                 | DB 쓰기         |
+| ---------------------------------------------------------------- | ----------------------------- | -------------------- | --------------- |
+| `--dry-run --fixture`                                            | 2026-09 fixture               | 없음 (저장 HTML)     | 없음            |
+| `--dry-run --live` (+ `INGESTION_DATABASE_URL`)                  | DB 의 실제 시험·slot (읽기만) | provider 실제 페이지 | 없음            |
+| `--dry-run --live --year=2026 --month=10 --exam-date=2026-10-20` | 지정 시험일의 고1~3           | provider 실제 페이지 | 없음            |
+| `--publish --live`                                               | DB 의 실제 시험·slot          | provider 실제 페이지 | 있음 (변경분만) |
+
+- 결과의 `mode`(`fixture-dry-run`/`live-dry-run`/`publish`)와 `exams`(`fixture-2026-09`/`exam-date`/`database`)로 무엇을 검증했는지 구분합니다.
+- 대상 시험이 없으면 실패합니다. live 실행에서 유효한 행이 0건이면(아직 미공개·구조 변경·slot 불일치) exit 1 입니다.
+- GitHub `Grade cuts (backfill)` 의 `exam_date` 입력은 live dry-run 전용입니다.
 
 ## 보안 점검
 

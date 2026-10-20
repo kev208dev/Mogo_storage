@@ -63,11 +63,29 @@ export async function claimJobs(
   return db.select().from(jobs).where(inArray(jobs.id, ids));
 }
 
-export async function completeJob(db: Database, id: string, now = new Date()) {
-  await db
+/**
+ * job 을 잡은 worker 만 결과를 기록한다 (status=processing AND locked_by=worker).
+ * 15분 stale 복구로 다른 worker 가 다시 가져간 job 을 늦게 끝난 이전 worker 가 덮어쓰지 않는다.
+ * lockedBy 를 모르는 호출(관리자 도구 등)은 id 만으로 기록한다. 기록했으면 true.
+ */
+function ownedBy(id: string, lockedBy: string | null | undefined) {
+  return lockedBy
+    ? and(eq(jobs.id, id), eq(jobs.status, "processing"), eq(jobs.lockedBy, lockedBy))
+    : eq(jobs.id, id);
+}
+
+export async function completeJob(
+  db: Database,
+  id: string,
+  now = new Date(),
+  lockedBy?: string | null,
+): Promise<boolean> {
+  const rows = await db
     .update(jobs)
     .set({ status: "completed", lockedAt: null, lockedBy: null, lastError: null, updatedAt: now })
-    .where(eq(jobs.id, id));
+    .where(ownedBy(id, lockedBy))
+    .returning({ id: jobs.id });
+  return rows.length > 0;
 }
 
 /** 지수 backoff: 30s, 60s, 120s ... 최대 1시간 */
@@ -81,12 +99,12 @@ export function retryDelayMs(attempts: number): number {
  */
 export async function failJob(
   db: Database,
-  job: Pick<Job, "id" | "attempts" | "maxAttempts">,
+  job: Pick<Job, "id" | "attempts" | "maxAttempts"> & { lockedBy?: string | null },
   error: { message: string; retryable: boolean },
   now = new Date(),
-): Promise<"retrying" | "failed"> {
+): Promise<"retrying" | "failed" | "lost"> {
   const canRetry = error.retryable && job.attempts < job.maxAttempts;
-  await db
+  const rows = await db
     .update(jobs)
     .set({
       status: canRetry ? "retrying" : "failed",
@@ -96,7 +114,10 @@ export async function failJob(
       lastError: error.message.slice(0, 1000),
       updatedAt: now,
     })
-    .where(eq(jobs.id, job.id));
+    .where(ownedBy(job.id, job.lockedBy))
+    .returning({ id: jobs.id });
+  // 다른 worker 가 이미 다시 가져갔다 (stale 복구) — 그쪽 결과를 덮어쓰지 않는다
+  if (rows.length === 0) return "lost";
   return canRetry ? "retrying" : "failed";
 }
 
@@ -129,20 +150,56 @@ export async function releaseJob(
     );
 }
 
-/** 처리 중에 프로세스가 죽어 남은 job 을 되살린다 */
+export interface StaleRecovery {
+  /** 다시 시도하도록 돌려준 job (backoff 적용) */
+  retried: number;
+  /** 시도 횟수를 다 써서 failed 로 닫은 job — worker 가 job_dead 알림을 보낸다 */
+  dead: Array<Pick<Job, "id" | "type" | "attempts">>;
+}
+
+export const STALE_PROCESSING_ERROR =
+  "STALE_PROCESSING: 처리 중 worker 가 끝나지 않음 (시간 초과 또는 중단)";
+
+/**
+ * 처리 중에 프로세스가 죽어 남은 job 을 되살린다.
+ *  - 시도 횟수가 남았으면 retrying + 지수 backoff (같은 job 이 함수를 계속 죽이는 경우 즉시 반복하지 않는다)
+ *  - maxAttempts 를 다 썼으면 failed (영원히 되살리지 않는다 — 관리자 [다시 시도]로만 재개)
+ * attempts 는 claim 할 때 이미 올렸으므로 여기서는 바꾸지 않는다.
+ */
 export async function recoverStaleJobs(
   db: Database,
   staleAfterMs = 15 * 60 * 1000,
   now = new Date(),
-) {
-  const rows = await db
+): Promise<StaleRecovery> {
+  const stale = and(
+    eq(jobs.status, "processing"),
+    lt(jobs.lockedAt, new Date(now.getTime() - staleAfterMs)),
+  );
+  const dead = await db
     .update(jobs)
-    .set({ status: "retrying", lockedAt: null, lockedBy: null, updatedAt: now })
-    .where(
-      and(eq(jobs.status, "processing"), lt(jobs.lockedAt, new Date(now.getTime() - staleAfterMs))),
-    )
+    .set({
+      status: "failed",
+      lockedAt: null,
+      lockedBy: null,
+      lastError: STALE_PROCESSING_ERROR,
+      updatedAt: now,
+    })
+    .where(and(stale, sql`${jobs.attempts} >= ${jobs.maxAttempts}`))
+    .returning({ id: jobs.id, type: jobs.type, attempts: jobs.attempts });
+  const retried = await db
+    .update(jobs)
+    .set({
+      status: "retrying",
+      lockedAt: null,
+      lockedBy: null,
+      lastError: STALE_PROCESSING_ERROR,
+      // 30s × 2^(attempts-1), 최대 1시간 — failJob 과 같은 backoff
+      runAt: sql`${now.toISOString()}::timestamptz + least(interval '1 hour', interval '30 seconds' * power(2, greatest(${jobs.attempts} - 1, 0)))`,
+      updatedAt: now,
+    })
+    .where(and(stale, sql`${jobs.attempts} < ${jobs.maxAttempts}`))
     .returning({ id: jobs.id });
-  return rows.length;
+  return { retried: retried.length, dead };
 }
 
 /** 관리자 수동 재시도: 실패한 job 을 처음부터 다시 */

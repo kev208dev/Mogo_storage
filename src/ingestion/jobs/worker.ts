@@ -1,7 +1,15 @@
 import type { IngestionContext } from "../context";
 import { toIngestionError } from "../errors";
 import { JOB_HANDLERS } from "./registry";
-import { claimJobs, completeJob, failJob, recoverStaleJobs, releaseJob, type Job } from "./queue";
+import {
+  claimJobs,
+  completeJob,
+  failJob,
+  recoverStaleJobs,
+  releaseJob,
+  STALE_PROCESSING_ERROR,
+  type Job,
+} from "./queue";
 
 export interface WorkerResult {
   processed: number;
@@ -10,6 +18,10 @@ export interface WorkerResult {
   failed: number;
   /** claim 했지만 시간 예산이 끝나 시작하지 않고 queue 로 돌려준 job */
   released: number;
+  /** 처리 중에 멈춘(15분 이상 processing) job 을 되살린 수. 시도 횟수를 다 쓴 job 은 failed 에 센다 */
+  recovered: number;
+  /** 처리하는 동안 stale 복구로 다른 worker 에게 넘어가 결과를 기록하지 않은 job */
+  lost: number;
 }
 
 type Handlers = Record<Job["type"], (ctx: IngestionContext, job: Job) => Promise<void>>;
@@ -27,8 +39,33 @@ export async function runJobs(
   const limit = options.limit ?? 200;
   const handlers = options.handlers ?? JOB_HANDLERS;
   const deadline = Date.now() + (options.timeBudgetMs ?? 60_000);
-  const result: WorkerResult = { processed: 0, completed: 0, retrying: 0, failed: 0, released: 0 };
-  await recoverStaleJobs(ctx.db, 15 * 60 * 1000, ctx.now());
+  const result: WorkerResult = {
+    processed: 0,
+    completed: 0,
+    retrying: 0,
+    failed: 0,
+    released: 0,
+    recovered: 0,
+    lost: 0,
+  };
+  const recovery = await recoverStaleJobs(ctx.db, 15 * 60 * 1000, ctx.now());
+  result.recovered = recovery.retried;
+  for (const dead of recovery.dead) {
+    // 함수가 계속 죽는 job 은 영원히 되살리지 않고 영구 실패로 알린다
+    result.failed += 1;
+    ctx.logger.error("job.failed", {
+      jobId: dead.id,
+      jobType: dead.type,
+      attempts: dead.attempts,
+      code: "STALE_PROCESSING",
+    });
+    await ctx.notifier.notify({
+      kind: "job_dead",
+      jobType: dead.type,
+      jobId: dead.id,
+      message: STALE_PROCESSING_ERROR,
+    });
+  }
 
   while (result.processed < limit && Date.now() < deadline) {
     const batch = await claimJobs(ctx.db, {
@@ -46,8 +83,11 @@ export async function runJobs(
       result.processed += 1;
       try {
         await handlers[job.type](ctx, job);
-        await completeJob(ctx.db, job.id, ctx.now());
-        result.completed += 1;
+        if (await completeJob(ctx.db, job.id, ctx.now(), job.lockedBy)) result.completed += 1;
+        else {
+          result.lost += 1;
+          ctx.logger.warn("job.ownership_lost", { jobId: job.id, jobType: job.type });
+        }
       } catch (error) {
         const e = toIngestionError(error);
         const outcome = await failJob(
@@ -56,6 +96,11 @@ export async function runJobs(
           { message: `${e.code}: ${e.message}`, retryable: e.retryable },
           ctx.now(),
         );
+        if (outcome === "lost") {
+          result.lost += 1;
+          ctx.logger.warn("job.ownership_lost", { jobId: job.id, jobType: job.type });
+          continue;
+        }
         ctx.logger[outcome === "failed" ? "error" : "warn"](
           outcome === "failed" ? "job.failed" : "job.retry_scheduled",
           {

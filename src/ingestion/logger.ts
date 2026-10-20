@@ -16,6 +16,8 @@ export type IngestionEvent =
   | "artifact.manual_review"
   | "job.failed"
   | "job.retry_scheduled"
+  /** stale 복구로 다른 worker 가 가져간 job — 이 worker 의 결과는 기록하지 않음 */
+  | "job.ownership_lost"
   | "source.health"
   | "source.structure_changed"
   | "release_watch.missed"

@@ -1,0 +1,25 @@
+{
+  "checkedOn": "2026-10-21",
+  "method": "공개 검색 색인만 조회; 원문 파일 브라우저 검증 없음",
+  "approvedFiles": 0,
+  "candidates": [
+    {
+      "url": "https://www.ebsi.co.kr/ebs/xip/xipa/retrieveSCVMainInfo.ebs?irecord=202610201&targetCd=D100",
+      "title": "EBSi 풀서비스",
+      "reason": "고1 10모 안내 페이지; 직접 파일 URL·과목·파일 유형·브라우저 검증 미확보",
+      "approved": false
+    },
+    {
+      "url": "https://www.ebsi.co.kr/ebs/xip/xipc/previousPaperList.ebs?targetCd=D200",
+      "title": "EBSi 고2 기출문제",
+      "reason": "색인에 10모 풀서비스 공지 존재; 특정 시험 직접 파일이 아님",
+      "approved": false
+    },
+    {
+      "url": "https://cloud.ebsi.co.kr/ebs/xip/xipa/retrieveSCVPreparation.ebs?cookieGradeVal=high3&irecord=202610203&targetCd=D300",
+      "title": "EBSi 사전준비",
+      "reason": "고3 10모 안내 페이지; 직접 파일 URL·과목·파일 유형·브라우저 검증 미확보",
+      "approved": false
+    }
+  ]
+}

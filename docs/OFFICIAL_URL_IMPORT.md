@@ -124,3 +124,7 @@ npm run ingest:audit -- --json
 ## 현재 입력분
 
 `data/imports/official-urls.csv` 에 검색엔진 색인에서 발견된 EBSi 공식 URL 309행(2023~2025년)이 있습니다. 브라우저 검증 도구는 `scripts/official-url-search/verify-browser.mts`(검증) · `contact-sheet.mts`(육안 대조용 캡처 모음) · `approve-admin.mts`(관리자 승인 폼으로 게시)입니다. 근거와 누락은 [REAL_DATA_COVERAGE.md](REAL_DATA_COVERAGE.md) 를 보세요.
+
+## 2026년 10모 운영 UX
+
+`/admin/imports?year=2026&month=10`에서 학년별로 검토 대상을 좁힐 수 있습니다. 화면에서 CSV 헤더 템플릿을 다운로드하고 선택 시험으로 빈 행을 작성할 수 있습니다. 파일/붙여넣기 후 **저장 전 검사**로 행별 오류를 확인한 다음 **입력**하세요. 기존 등록·승인 규칙은 그대로이며 검사만으로 URL이 검증되거나 게시되지 않습니다. 자세한 동선, 보류 후보, Claude 통합 계약은 [10모 관리자 운영](OCTOBER_ADMIN_UX.md)을 참조하세요.

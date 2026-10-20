@@ -172,6 +172,15 @@ describe.skipIf(!TEST_DB_URL)("scheduler heartbeat · watchdog · 알림 dedupe 
       await call("grade-cuts", undefined, { "x-scheduler": "https://evil.example/?x=1" });
       expect((await loadHeartbeat(db, "grade-cuts"))!.lastDetail).toBe("manual:disabled");
 
+      // 승인 job worker 는 INGESTION_ENABLED 와 무관하게 돌고, watchdog 이 감시한다
+      await db.delete(s.jobs); // 앞선 테스트 파일이 남긴 job 이 없도록 (빈 queue)
+      const jobs = await call("jobs", undefined, { "x-scheduler": "github-actions" });
+      expect(jobs.status).toBe(200);
+      expect(await loadHeartbeat(db, "jobs")).toMatchObject({
+        lastStatus: "ok",
+        lastDetail: "github_actions:queue_worker",
+      });
+
       const watchdog = await call("watchdog");
       expect(watchdog.status).toBe(200);
       expect(watchdog.headers.get("cache-control")).toContain("no-store");
@@ -181,6 +190,7 @@ describe.skipIf(!TEST_DB_URL)("scheduler heartbeat · watchdog · 알림 dedupe 
       expect(body.tasks.map((t: { task: string; state: string }) => [t.task, t.state])).toEqual([
         ["grade-cuts", "disabled"],
         ["scheduled", "disabled"],
+        ["jobs", "ok"],
       ]);
       // 응답에는 상태 코드만 — 비밀값이나 URL 이 없다
       expect(JSON.stringify(body)).not.toContain("route-test-secret");

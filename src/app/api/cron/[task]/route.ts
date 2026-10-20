@@ -17,6 +17,11 @@ import { createOpsNotifier } from "@/ingestion/notifier";
 import { createDbAlertGate, failOpen } from "@/ingestion/ops/alert-gate";
 import { recordTaskFinish, recordTaskStart, type HeartbeatStatus } from "@/ingestion/ops/scheduler";
 import { runSchedulerWatchdog } from "@/ingestion/ops/watchdog";
+import {
+  jobsHeartbeat,
+  releaseWatchHeartbeat,
+  scheduledHeartbeat,
+} from "@/ingestion/ops/task-outcome";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
@@ -232,7 +237,7 @@ async function runTask(task: Task): Promise<TaskOutcome> {
       return {
         status: 200,
         body: { ok: true, task, result },
-        heartbeat: { status: "ok", detail: "queue_worker" },
+        heartbeat: jobsHeartbeat(result),
       };
     } catch (error) {
       ingestion.logger.error("ingestion.failed", {
@@ -264,11 +269,21 @@ async function runTask(task: Task): Promise<TaskOutcome> {
 
   try {
     await syncBuiltinSources(ingestion.db);
-    const result =
-      task === "scheduled"
-        ? await runScheduledIngestion(ingestion)
-        : await runReleaseWatch(ingestion);
-    return { status: 200, body: { ok: true, task, result }, heartbeat: { status: "ok" } };
+    if (task === "scheduled") {
+      const result = await runScheduledIngestion(ingestion);
+      // lock 경합·실행 가능한 source 없음·전체 실패를 ok 와 구분해 남긴다 (ops/task-outcome.ts)
+      return {
+        status: 200,
+        body: { ok: true, task, result },
+        heartbeat: scheduledHeartbeat(result),
+      };
+    }
+    const result = await runReleaseWatch(ingestion);
+    return {
+      status: 200,
+      body: { ok: true, task, result },
+      heartbeat: releaseWatchHeartbeat(result),
+    };
   } catch (error) {
     ingestion.logger.error("ingestion.failed", {
       task,

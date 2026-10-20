@@ -1,4 +1,4 @@
-import { and, desc, eq, gte, inArray, lt, ne } from "drizzle-orm";
+import { and, desc, eq, gte, inArray, lt, ne, notInArray } from "drizzle-orm";
 import { ingestionCheckpoints, ingestionRuns, sourceArtifacts } from "../db/schema";
 import { GRADES, type Grade } from "../lib/constants";
 import type { IngestionContext } from "./context";
@@ -10,6 +10,7 @@ import { loadSources } from "./pipeline/sources";
 import { canaryGate } from "./audit";
 import { IngestionError } from "./errors";
 import { OPERATOR_IMPORT_SOURCE_ID } from "./manual-import/source";
+import { fetchPolicyBlockedSourceIds } from "./sources/policy";
 import { canRun } from "./sources/verification";
 import type { SourceConfig } from "./types";
 
@@ -201,6 +202,10 @@ export async function queueRechecks(
         lt(sourceArtifacts.lastCheckedAt, cutoff),
         // 운영자 입력 자료는 서버가 다시 받지 않는다
         ne(sourceArtifacts.sourceId, OPERATOR_IMPORT_SOURCE_ID),
+        // 정책상 파일 요청이 금지된 source (KICE · 교육청) 도 다시 받지 않는다
+        ctx.allowUnverifiedSources
+          ? undefined
+          : notInArray(sourceArtifacts.sourceId, fetchPolicyBlockedSourceIds()),
       ),
     )
     .limit(limit);

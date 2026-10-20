@@ -3,10 +3,13 @@
  *   npm run ingest:health -- [--source=ebsi] [--strict]
  * --strict: structure_changed 가 있으면 exit 1 (기본은 결과만 출력하고 0)
  * 결과는 꺼져 있는 source 도 그대로 기록한다 — "최근 health check 통과"가 source 활성화 조건이다.
+ * 정책상 자동 수집이 금지된 source(sources/policy.ts: robots·anti-bot)는 요청하지 않고 사유만 출력한다.
+ * 금지된 source 는 health 가 통과해도 켤 수 없으므로 확인할 이유가 없고, 요청 자체가 정책 위반이다.
  */
 import { createDb } from "../../db/client";
 import { recordHealthCheck, syncBuiltinSources, loadSources } from "../pipeline/sources";
 import { BUILTIN_SOURCES } from "../sources/config";
+import { policyBlockers } from "../sources/policy";
 import { createAdapter } from "../sources/registry";
 import type { SourceConfig } from "../types";
 import { listArg, parseArgs } from "./args";
@@ -28,6 +31,11 @@ async function main() {
     .map((s) => ({ ...s, enabled: true }));
   let broken = 0;
   for (const source of targets) {
+    const blockers = policyBlockers(source.id);
+    if (blockers.length > 0) {
+      console.log(`${source.id.padEnd(18)} ${"skipped".padEnd(9)} ${blockers.join(" / ")}`);
+      continue;
+    }
     const health = await createAdapter(source).healthCheck();
     if (health.status === "structure_changed") broken += 1;
     console.log(`${source.id.padEnd(18)} ${health.status.padEnd(9)} ${health.message}`);

@@ -299,6 +299,18 @@ async function main() {
     JSON.stringify({ source, year: year ?? null, from, grade, month, results: report }, null, 2),
   );
   if (db) await db.$client.end({ timeout: 5 });
+  // GitHub Actions 에서는 시험별 요약을 annotation 으로도 남긴다 (값·URL 없이 건수와 slot 만)
+  if (process.env.GITHUB_ACTIONS === "true")
+    for (const r of report) {
+      const e = r.exam as { year: number; grade: number; month: number };
+      const rows = (r.rows as Array<{ subject: string; courseCode: string | null }>).map(
+        (row) => row.subject + (row.courseCode ? "/" + row.courseCode : ""),
+      );
+      console.log(
+        `::notice title=grade-cuts ${source} ${e.year} 고${e.grade} ${e.month}월 (${String(r.mode)})::` +
+          `parsed=${String(r.parsed)} valid=${String(r.valid)} persisted=${String(r.persisted)} slots=${rows.join(",") || "-"}`,
+      );
+    }
   // live 검증에서 유효한 행이 하나도 없으면 실패로 끝낸다 (provider 미공개·구조 변경·slot 불일치를 성공으로 숨기지 않음)
   const validRows = report.reduce((n, r) => n + Number(r.valid ?? 0), 0);
   if (fetchMode === "live" && validRows === 0) {

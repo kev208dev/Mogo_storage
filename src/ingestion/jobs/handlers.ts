@@ -20,6 +20,7 @@ import {
   validateArtifactProbe,
 } from "../verify/artifact-validator";
 import { isOperatorImport } from "../manual-import/source";
+import { isFetchPolicyBlocked } from "../sources/policy";
 import { isApprovedOperatorStudyArtifact } from "../study/artifact-fetch";
 import { enqueueJob, type Job } from "./queue";
 
@@ -158,6 +159,17 @@ export async function handleVerifyArtifact(ctx: IngestionContext, job: Job) {
   // 운영자 입력 자료는 서버가 URL 에 요청하지 않는다 (robots.txt 가 자동 수집을 막는 source). 관리자 브라우저 확인만 인정
   if (isOperatorImport(artifact.sourceId)) {
     logger.info("ingestion.skipped", { artifactId, reason: "operator import is never fetched" });
+    return;
+  }
+  // robots·anti-bot 정책상 파일 요청이 금지된 source(KICE·교육청)는 queue 에 남아 있던 검증·재검증 job 도
+  // 요청하지 않는다. SafeFetcher 의 robots 확인은 robots.txt 를 못 받으면 허용으로 보므로 여기서 먼저 막는다.
+  // 자료 상태는 바꾸지 않는다 (이미 게시된 자료를 내리지 않음).
+  if (!ctx.allowUnverifiedSources && isFetchPolicyBlocked(artifact.sourceId)) {
+    logger.warn("ingestion.skipped", {
+      artifactId,
+      sourceId: artifact.sourceId,
+      reason: "fetch_file is policy_blocked",
+    });
     return;
   }
   const previous = artifact;

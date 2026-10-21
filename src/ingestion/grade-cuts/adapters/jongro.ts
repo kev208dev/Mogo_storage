@@ -1,5 +1,5 @@
 import { parse } from "node-html-parser";
-import { COURSE_CATALOG, courseExpectation } from "../../../lib/courses";
+import { COURSE_CATALOG, courseByCode, courseExpectation } from "../../../lib/courses";
 import type { GradeCutEntry } from "../../../lib/data/types";
 import type { Subject } from "../../../lib/constants";
 import { gradingMode } from "../../../lib/grade-cut-mode";
@@ -72,6 +72,17 @@ function courseFor(label: string, subject: Subject | null, exam: WatchExam) {
       ),
   );
   if (!item || courseExpectation(item.code, exam) !== "expected") return null;
+  return item;
+}
+
+/**
+ * watch slot 의 세부과목 code("calculus", "integrated-social" …)로 카탈로그 항목을 찾는다.
+ * courseFor 는 페이지에 보이는 한글 표기용이라 code 를 넣으면 항상 null 이 된다.
+ */
+function expectedCourseByCode(code: string, subject: Subject, exam: WatchExam) {
+  const item = courseByCode(code);
+  if (!item || item.subject !== subject || courseExpectation(item.code, exam) !== "expected")
+    return null;
   return item;
 }
 
@@ -346,10 +357,12 @@ export function createJongroAdapter(fetcher: Fetcher = safeFetcher): GradeCutAda
       if (slot.subject === "english" || slot.subject === "history") return false;
       if (slot.subject === "social" || slot.subject === "science") {
         if (!slot.courseCode) return false;
-        return courseFor(slot.courseCode, slot.subject, exam) !== null;
+        return expectedCourseByCode(slot.courseCode, slot.subject, exam) !== null;
       }
       if ((slot.subject === "korean" || slot.subject === "math") && exam.grade === 3)
-        return !!slot.courseCode && courseFor(slot.courseCode, slot.subject, exam) !== null;
+        return (
+          !!slot.courseCode && expectedCourseByCode(slot.courseCode, slot.subject, exam) !== null
+        );
       return slot.subject === "korean" || slot.subject === "math";
     },
     async collect(exam, slots) {

@@ -42,6 +42,18 @@ export const SCHEDULED_TASKS: ScheduledTaskSpec[] = [
     enabled: (env) => env.INGESTION_ENABLED === "true",
   },
   {
+    // 검증·승인된 PROCESS queue (단어장·학습자료 생성, 재검증 등). INGESTION_ENABLED 와 무관하게 돈다.
+    // GitHub Actions `Scheduled ingestion` 이 10분 cron 으로 부르지만 실제 간격은 2~5시간이었다
+    // (docs/OPERATIONS.md) → 8시간 동안 기록이 없을 때만 stale. secret 누락으로 workflow 가 조용히
+    // skip 하는 경우도 여기서 never_run/stale 로 드러난다. cron endpoint 가 켜진 환경에서만 감시한다.
+    task: "jobs",
+    label: "승인 job 처리",
+    cadenceMinutes: 10,
+    staleAfterMinutes: 8 * 60,
+    failingAfter: 3,
+    enabled: (env) => (env.CRON_SECRET ?? "").length >= 16,
+  },
+  {
     task: "watchdog",
     label: "scheduler watchdog",
     cadenceMinutes: 60,
@@ -50,6 +62,12 @@ export const SCHEDULED_TASKS: ScheduledTaskSpec[] = [
     enabled: () => true,
   },
 ];
+
+/**
+ * endpoint maxDuration 은 300초다. 이보다 훨씬 오래 running 으로 남은 기록은 실행 중이 아니라
+ * 함수가 죽어 종료 기록을 남기지 못한 것이다 — "최근 실행" 으로 치지 않는다.
+ */
+export const HUNG_AFTER_MINUTES = 15;
 
 export type TaskHealthState = "ok" | "stale" | "failing" | "never_run" | "disabled";
 
@@ -99,8 +117,12 @@ export function evaluateSchedulerHealth(
   return specs.map((spec) => {
     const row = byTask.get(spec.task);
     const staleAfter = staleMinutes(spec, env);
+    const hung =
+      row?.lastStatus === "running" &&
+      row.lastStartedAt instanceof Date &&
+      now.getTime() - row.lastStartedAt.getTime() > HUNG_AFTER_MINUTES * 60_000;
     const lastSeenAt = row
-      ? ([row.lastFinishedAt, row.lastStartedAt]
+      ? ([row.lastFinishedAt, hung ? null : row.lastStartedAt]
           .filter((d): d is Date => d instanceof Date)
           .sort((a, b) => b.getTime() - a.getTime())[0] ?? null)
       : null;
@@ -109,7 +131,8 @@ export function evaluateSchedulerHealth(
       : null;
     let state: TaskHealthState;
     if (!spec.enabled(env)) state = "disabled";
-    else if (!lastSeenAt) state = "never_run";
+    // 시작만 하고 끝난 적이 없다 (첫 실행부터 함수가 죽음) — 기록 없음이 아니라 지연으로 본다
+    else if (!lastSeenAt) state = hung ? "stale" : "never_run";
     else if (minutesSinceSeen! > staleAfter) state = "stale";
     else if ((row?.consecutiveFailures ?? 0) >= spec.failingAfter) state = "failing";
     else state = "ok";

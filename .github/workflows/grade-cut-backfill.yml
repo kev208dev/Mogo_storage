@@ -26,6 +26,11 @@ on:
         type: string
         default: ""
         required: false
+      exam_date:
+        type: string
+        default: ""
+        description: "DB 없이 live dry-run 할 시험일 (YYYY-MM-DD, 예: 2026-10-20). 비우면 DB 의 시험 목록"
+        required: false
       source:
         type: choice
         options: [jongro, megastudy]
@@ -66,6 +71,13 @@ jobs:
           args=(--year="${{ inputs.year }}" --limit="${{ inputs.limit }}" --"${{ inputs.mode }}")
           [ -z "${{ inputs.grade }}" ] || args+=(--grade="${{ inputs.grade }}")
           [ -z "${{ inputs.month }}" ] || args+=(--month="${{ inputs.month }}")
+          if [ -n "${{ inputs.exam_date }}" ]; then
+            if [ "${{ inputs.mode }}" = "publish" ]; then
+              echo "::error::exam_date is only for live dry-run (publish uses the database exams)."
+              exit 1
+            fi
+            args+=(--exam-date="${{ inputs.exam_date }}")
+          fi
           args+=(--source="${{ inputs.source }}")
           if [[ "${{ inputs.live }}" == "true" || "${{ inputs.mode }}" == "publish" ]]; then
             args+=(--live)

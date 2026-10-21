@@ -30,6 +30,10 @@ const publish = process.argv.includes("--publish");
 const dryRun = process.argv.includes("--dry-run");
 const live = process.argv.includes("--live");
 const fixture = process.argv.includes("--fixture");
+// DB 없이 live dry-run 할 때 확인할 시험일 (예: --year=2026 --month=10 --exam-date=2026-10-20)
+const examDate = option("exam-date");
+if (examDate !== null && !/^\d{4}-\d{2}-\d{2}$/.test(examDate))
+  throw new Error("invalid --exam-date (YYYY-MM-DD)");
 
 if (!source || !["jongro", "megastudy"].includes(source))
   throw new Error("--source must be jongro or megastudy");
@@ -55,6 +59,24 @@ const adapters: Record<string, GradeCutAdapter> = {
   jongro: jongroAdapter,
   megastudy: megaStudyAdapter,
 };
+
+/** DB 없이 지정한 시험일의 학력평가 후보 (live dry-run 전용). 시험일·연도·월이 서로 맞아야 한다 */
+function examDateCandidates(date: string): WatchExam[] {
+  const [y, m] = date.split("-").map(Number) as [number, number];
+  if (year === null || year !== y || (month !== null && month !== m))
+    throw new Error("--exam-date must match --year (and --month when given)");
+  return ([1, 2, 3] as const)
+    .filter((g) => grade === null || grade === g)
+    .map((g) => ({
+      id: `exam-date-${date}-g${g}`,
+      year: y,
+      grade: g,
+      month: m,
+      examDate: date,
+      academicYear: y + (4 - g),
+      examType: "school_mock" as const,
+    }));
+}
 
 function known2026ExamCandidates(): WatchExam[] {
   if ((year !== null && year !== 2026) || (from !== null && from > 2026)) return [];
@@ -168,9 +190,21 @@ async function main() {
     const found = await liveExams();
     db = found.db;
     examsToProcess = found.exams;
+  } else if (fetchMode === "live" && examDate === null && process.env.INGESTION_DATABASE_URL) {
+    // live dry-run: 실제 DB 의 시험·slot 을 읽기만 한다 (store 는 publish 에서만 만든다)
+    const found = await liveExams();
+    db = found.db;
+    examsToProcess = found.exams;
+  } else if (fetchMode === "live" && examDate !== null) {
+    examsToProcess = examDateCandidates(examDate);
   } else {
     examsToProcess = known2026ExamCandidates();
   }
+  // 대상 시험이 없으면 "검증할 것이 없음" 을 성공으로 보고하지 않는다
+  if (examsToProcess.length === 0)
+    throw new Error(
+      "no exams match these filters (live dry-run without a database only knows --exam-date or the 2026-09 fixtures)",
+    );
 
   const fixtureRoutes: Record<string, string> = {};
   if (fetchMode === "fixture" && (source !== "jongro" || examsToProcess.length === 0))
@@ -192,7 +226,7 @@ async function main() {
     source === "jongro" && Object.keys(fixtureRoutes).length > 0
       ? createJongroAdapter(new FixtureFetcher(fixtureRoutes, process.cwd()))
       : adapters[source!]!;
-  const store = db ? createGradeCutStore(db) : null;
+  const store = publish && db ? createGradeCutStore(db) : null;
   const now = new Date();
   const report: Array<Record<string, unknown>> = [];
 
@@ -244,6 +278,7 @@ async function main() {
       exam: { year: exam.year, grade: exam.grade, month: exam.month, examDate: exam.examDate },
       provider: source,
       mode: publish ? "publish" : live ? "live-dry-run" : "fixture-dry-run",
+      exams: db ? "database" : examDate !== null ? "exam-date" : "fixture-2026-09",
       discovered: true,
       fetched: true,
       parsed: collected.length,
@@ -264,6 +299,24 @@ async function main() {
     JSON.stringify({ source, year: year ?? null, from, grade, month, results: report }, null, 2),
   );
   if (db) await db.$client.end({ timeout: 5 });
+  // GitHub Actions 에서는 시험별 요약을 annotation 으로도 남긴다 (값·URL 없이 건수와 slot 만)
+  if (process.env.GITHUB_ACTIONS === "true")
+    for (const r of report) {
+      const e = r.exam as { year: number; grade: number; month: number };
+      const rows = (r.rows as Array<{ subject: string; courseCode: string | null }>).map(
+        (row) => row.subject + (row.courseCode ? "/" + row.courseCode : ""),
+      );
+      console.log(
+        `::notice title=grade-cuts ${source} ${e.year} 고${e.grade} ${e.month}월 (${String(r.mode)})::` +
+          `parsed=${String(r.parsed)} valid=${String(r.valid)} persisted=${String(r.persisted)} slots=${rows.join(",") || "-"}`,
+      );
+    }
+  // live 검증에서 유효한 행이 하나도 없으면 실패로 끝낸다 (provider 미공개·구조 변경·slot 불일치를 성공으로 숨기지 않음)
+  const validRows = report.reduce((n, r) => n + Number(r.valid ?? 0), 0);
+  if (fetchMode === "live" && validRows === 0) {
+    console.error("live " + (publish ? "publish" : "dry-run") + " produced 0 valid grade-cut rows");
+    process.exitCode = 1;
+  }
 }
 
 main().catch((error: unknown) => {

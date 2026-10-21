@@ -164,6 +164,16 @@ export function isCapabilityPolicyBlocked(sourceId: string, capability: SourceCa
   );
 }
 
+/** 이 source 의 공식 파일 URL 에 서버가 요청하는 것(검증·재검증)이 정책상 금지인가 */
+export function isFetchPolicyBlocked(sourceId: string): boolean {
+  return featureSupport(sourceId, "fetch_file").kind === "policy_blocked";
+}
+
+/** 파일 요청이 정책상 금지된 source id 목록 (재검증 예약에서 제외) */
+export function fetchPolicyBlockedSourceIds(): string[] {
+  return Object.keys(SOURCE_FEATURE_POLICIES).filter(isFetchPolicyBlocked);
+}
+
 /** source 를 켤 수 없는 정책상 이유 (source 활성화 전 확인). 빈 배열이면 정책상 문제 없음 */
 export function policyBlockers(sourceId: string): string[] {
   const discovery = featureSupport(sourceId, "discover_exams");

@@ -38,18 +38,25 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
         run: |
           if [ -z "$SITE_URL" ] || [ -z "$CRON_SECRET" ]; then
-            echo "Ingestion endpoint credentials are not configured — skipping."
+            # 성공으로 끝나지만 annotation 으로 드러낸다 (job worker 가 호출되지 않음 → watchdog 의 jobs never_run/stale)
+            echo "::warning::Ingestion endpoint credentials (INGESTION_SITE_URL / CRON_SECRET) are not configured — skipping."
             exit 0
           fi
           if [ -n "$SCHEDULER" ] && [ "$SCHEDULER" != "github-actions" ]; then
-            echo "Scheduled ingestion is configured for another scheduler ($SCHEDULER) — skipping."
+            echo "::notice::Scheduled ingestion is configured for another scheduler ($SCHEDULER) — skipping."
             exit 0
           fi
 
+          # 응답 요약을 annotation 으로 남긴다 (skip 사유 · job 처리 수). 본문에는 비밀값·URL 이 없다
           call_task() {
             local task="$1"
-            curl --fail-with-body -sS --max-time 320 -H "Authorization: Bearer $CRON_SECRET" -H "X-Scheduler: github-actions" "$SITE_URL/api/cron/$task"
-            echo
+            local body code=0
+            body=$(curl --fail-with-body -sS --max-time 320 -H "Authorization: Bearer $CRON_SECRET" -H "X-Scheduler: github-actions" "$SITE_URL/api/cron/$task") || code=$?
+            echo "$body"
+            local summary
+            summary=$(printf '%s' "$body" | jq -c '{skipped, ok, error} + (if (.result.processed? // null) != null then {processed: .result.processed, completed: .result.completed, failed: .result.failed} elif (.result.discovery? // null) != null then {discovery: (.result.discovery | length), rechecks: .result.rechecksQueued, jobs_failed: (.result.jobs.failed // 0)} else {} end) | with_entries(select(.value != null))' 2>/dev/null || echo '"unparsed"')
+            echo "::notice title=cron/$task::$summary"
+            return $code
           }
 
           # 주기/배포 트리거에서는 검증·승인된 PROCESS queue 를 먼저 비운다.

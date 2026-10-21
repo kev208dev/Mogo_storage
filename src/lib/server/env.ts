@@ -57,7 +57,11 @@ export function checkProductionEnv(
   }
 
   for (const flag of ["INGESTION_ENABLED", "GRADE_CUT_INGESTION_ENABLED"]) {
-    if (env[flag] !== "true") continue;
+    // 정확히 "true" 만 켜진다. "True"·"1"·"yes" 는 꺼진 것으로 처리되므로 의도와 다르면 바로 알 수 있게 한다
+    const raw = env[flag];
+    if (raw !== undefined && raw !== "" && raw !== "true" && raw !== "false")
+      warnings.push(`${flag} 값이 "true"/"false" 가 아니라 꺼진 것으로 처리됩니다`);
+    if (raw !== "true") continue;
     if (!env.DATABASE_URL) errors.push(`${flag}=true 에는 DATABASE_URL 이 필요합니다`);
     if (!env.CRON_SECRET || env.CRON_SECRET.length < 16)
       errors.push(`${flag}=true 에는 16자 이상 CRON_SECRET 이 필요합니다`);

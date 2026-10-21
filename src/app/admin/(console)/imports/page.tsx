@@ -1,11 +1,14 @@
 import { getDb } from "@/db/client";
 import { FILE_TYPE_LABELS, SUBJECT_LABELS } from "@/lib/constants";
-import { importsData } from "@/lib/server/admin-queries";
+import { filteredImportsData } from "@/lib/server/admin-imports";
+import { ExamFilter } from "@/components/admin/ExamFilter";
+import { OfficialCsvForm } from "@/components/admin/OfficialCsvForm";
+import { adminExamFilter } from "@/lib/admin-exam-filter";
+import { requireAdmin } from "@/lib/server/admin-session";
 import { examPath } from "@/lib/exam-path";
 import { formatKst, Panel, SmallButton } from "@/components/admin/ui";
 import {
   approveImportsAction,
-  importOfficialUrlsAction,
   rejectImportsAction,
   resolveDuplicateImportsAction,
 } from "../../actions";
@@ -24,10 +27,16 @@ const TEMPLATE_HEADER =
  * 서버는 입력된 URL 에 요청하지 않는다. 승인하면 redirect 로 게시된다.
  */
 export default async function ImportsPage({ searchParams }: PageProps<"/admin/imports">) {
-  const notice = (await searchParams).notice;
+  await requireAdmin();
+  const params = await searchParams;
+  const notice = params.notice;
+  const filter = adminExamFilter(params);
   const db = getDb();
   if (!db) return <NoDatabase />;
-  const { pending, byStatus, recent, insights, notes, rules } = await importsData(db);
+  const { pending, byStatus, recent, insights, notes, rules } = await filteredImportsData(
+    db,
+    filter,
+  );
   const duplicates = [...insights.values()].filter((i) => i.publishedInSlot?.sameUrl).length;
   const statusCount = Object.fromEntries(byStatus.map((r) => [r.status, r.n]));
 
@@ -39,6 +48,11 @@ export default async function ImportsPage({ searchParams }: PageProps<"/admin/im
         EBSi·KICE·교육청은 robots.txt 로 자동 수집을 막고 있습니다. 브라우저에서 공식 사이트를 직접
         열어 확인한 파일 URL 만 입력하세요. 서버는 이 URL 에 요청하지 않으며, 승인 전에는 공개되지
         않습니다. 비공식 미러·블로그· 클라우드 공유 링크는 공식 도메인 검사에서 거부됩니다.
+      </p>
+      <ExamFilter path="/admin/imports" filter={filter} />
+      <p className="text-muted-foreground text-sm">
+        아래 상태 수는 선택 시험 기준입니다. 현재 연결 DB 기준이며 Production 수치로 보장하지
+        않습니다. 샘플 시험 후보는 승인 전 실제 게시 자료가 아닙니다.
       </p>
       <dl className="grid grid-cols-3 gap-2 text-sm">
         {[
@@ -54,33 +68,10 @@ export default async function ImportsPage({ searchParams }: PageProps<"/admin/im
       </dl>
 
       <Panel title="CSV 입력">
-        <form action={importOfficialUrlsAction} className="space-y-2 text-sm">
-          <p className="text-muted-foreground text-xs">
-            헤더(첫 줄): <code className="break-all">{TEMPLATE_HEADER}</code> · 템플릿:{" "}
-            <code>data/imports/official-urls.template.csv</code> · 설명:{" "}
-            <code>docs/OFFICIAL_URL_IMPORT.md</code>
-          </p>
-          <label className="block">
-            <span className="font-semibold">CSV 파일</span>
-            <input type="file" name="file" accept=".csv,text/csv" className="mt-1 block" />
-          </label>
-          <label className="block">
-            <span className="font-semibold">또는 붙여넣기</span>
-            <textarea
-              name="csv"
-              rows={6}
-              className="border-border mt-1 block w-full rounded border p-2 font-mono text-xs"
-              placeholder={TEMPLATE_HEADER}
-            />
-          </label>
-          <label className="flex items-center gap-1.5">
-            <input type="checkbox" name="dryRun" value="1" /> 검사만 (DB 에 저장하지 않음)
-          </label>
-          <SmallButton variant="primary">입력</SmallButton>
-        </form>
+        <OfficialCsvForm header={TEMPLATE_HEADER} filter={filter} />
       </Panel>
 
-      <Panel title={`검토 대기 ${pending.length}건`}>
+      <Panel title={`검토 대기 ${pending.length}건 (최대 500건 표시)`}>
         {pending.length === 0 ? (
           <p className="text-muted-foreground text-sm">검토할 입력 자료가 없습니다.</p>
         ) : (
@@ -175,7 +166,8 @@ export default async function ImportsPage({ searchParams }: PageProps<"/admin/im
         )}
       </Panel>
 
-      {duplicates > 0 ? (
+      {/* 일괄 정리는 전체 시험에 적용되는 기존 동작이므로 필터 사용 시 숨김 */}
+      {!filter.year && !filter.month && !filter.grade && duplicates > 0 ? (
         <Panel title="확정적 중복 정리">
           <form
             action={resolveDuplicateImportsAction}
@@ -211,7 +203,7 @@ export default async function ImportsPage({ searchParams }: PageProps<"/admin/im
         )}
       </Panel>
 
-      <Panel title="최근 입력 기록">
+      <Panel title="최근 입력 기록 (전체 시험)">
         <ul className="divide-border divide-y text-sm">
           {recent.length === 0 ? <li className="text-muted-foreground">기록이 없습니다.</li> : null}
           {recent.map((r) => (

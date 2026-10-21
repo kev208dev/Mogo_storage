@@ -23,7 +23,9 @@ test("공식 URL CSV 입력 → 검토 대기 → 브라우저 확인 체크 →
     `2021,2,11,school_mock,,,korean,,solution,https://blog.example.com/x.pdf,,비공식`,
   ].join("\n");
   await page.getByLabel("또는 붙여넣기").fill(csv);
-  await page.getByRole("button", { name: "입력" }).click();
+  await page.getByRole("button", { name: "저장 전 검사" }).click();
+  await expect(page.getByText("검사 2행 · 오류 1행")).toBeVisible();
+  await page.getByRole("button", { name: "입력", exact: true }).click();
   await expect(page.getByRole("status")).toContainText("신규 1");
   await expect(page.getByRole("status")).toContainText("공식 기관 도메인");
 

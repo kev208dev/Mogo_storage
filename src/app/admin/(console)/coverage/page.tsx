@@ -1,4 +1,10 @@
 import Link from "next/link";
+import { ExamFilter } from "@/components/admin/ExamFilter";
+import { adminExamFilter, matchesExam } from "@/lib/admin-exam-filter";
+import { adminCoverageDetails } from "@/lib/server/admin-coverage";
+import { cutLabel } from "@/lib/admin-coverage-model";
+import { FILE_TYPE_LABELS, GRADE_CUT_SOURCE_LABELS, type FileType } from "@/lib/constants";
+import { requireAdmin } from "@/lib/server/admin-session";
 import { getDb } from "@/db/client";
 import { Panel } from "@/components/admin/ui";
 import {
@@ -31,23 +37,39 @@ function intParam(value: string | string[] | undefined): number | undefined {
 }
 
 export default async function CoveragePage({ searchParams }: PageProps<"/admin/coverage">) {
+  await requireAdmin();
   const db = getDb();
   if (!db) return <NoDatabase />;
   const params = await searchParams;
-  const year = intParam(params.year);
-  const grade = intParam(params.grade);
+  const filter = adminExamFilter(params);
+  const { year, grade, month } = filter;
   const page = intParam(params.page) ?? 1;
-  const coverage = await computeFeatureCoverage(db, {
-    year,
-    grade: grade && grade <= 3 ? (grade as Grade) : undefined,
-    limit: PAGE_SIZE,
-    offset: (page - 1) * PAGE_SIZE,
-  });
+  const all = await computeFeatureCoverage(db, { year, grade: grade as Grade | undefined });
+  const filtered = all.rows.filter((r) => matchesExam(r, filter));
+  const rows = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const coverage = {
+    ...all,
+    total: filtered.length,
+    rows,
+    summary: Object.fromEntries(
+      FEATURES.map((f) => [
+        f,
+        Object.fromEntries(
+          FEATURE_STATUSES.map((s) => [s, rows.filter((r) => r.features[f].status === s).length]),
+        ),
+      ]),
+    ) as typeof all.summary,
+  };
+  const details = await adminCoverageDetails(
+    db,
+    rows.map((r) => r.examId),
+  );
   const pages = Math.max(1, Math.ceil(coverage.total / PAGE_SIZE));
   const href = (p: number) =>
     `/admin/coverage?${new URLSearchParams({
       ...(year ? { year: String(year) } : {}),
       ...(grade ? { grade: String(grade) } : {}),
+      ...(month ? { month: String(month) } : {}),
       page: String(p),
     })}`;
 
@@ -56,24 +78,67 @@ export default async function CoveragePage({ searchParams }: PageProps<"/admin/c
       <h1 className="text-xl font-bold">기능 coverage</h1>
       <p className="text-muted-foreground text-sm">
         시험별로 시험지·해설, 정답·채점, 등급컷, 영어 듣기·단어장이 어디까지 채워졌는지 보여줍니다.
-        &ldquo;정책상 수동&rdquo;은 robots.txt 등으로 자동 수집하지 않는 항목입니다. 합계는 현재 쪽 기준입니다.
+        &ldquo;정책상 수동&rdquo;은 robots.txt 등으로 자동 수집하지 않는 항목입니다. 합계는 현재 쪽
+        기준입니다.
       </p>
-      <form className="flex flex-wrap items-end gap-2 text-sm" action="/admin/coverage">
-        <label className="flex flex-col">
-          시행 연도
-          <input name="year" defaultValue={year ?? ""} inputMode="numeric" className="border-border w-24 rounded border px-2 py-1" />
-        </label>
-        <label className="flex flex-col">
-          학년
-          <select name="grade" defaultValue={grade ?? ""} className="border-border rounded border px-2 py-1">
-            <option value="">전체</option>
-            <option value="1">고1</option>
-            <option value="2">고2</option>
-            <option value="3">고3</option>
-          </select>
-        </label>
-        <button className="bg-muted rounded px-3 py-1 font-semibold">보기</button>
-      </form>
+      <ExamFilter path="/admin/coverage" filter={filter} />
+      <p className="text-muted-foreground text-sm">
+        현재 연결된 DB 기준 · 샘플 제외. Production 여부는 이 화면에서 판정하지 않습니다. 대상일:
+        2026-10-20 (실제 일정 확인 상태는 아래 표시).
+      </p>
+      {rows.length === 0 ? (
+        <p role="status">
+          선택한 시험의 실자료가 없습니다. 일정과 과목 편성 등록 여부를 확인하세요. 자료가 없다는
+          사실만으로 원문 미공개라고 판정하지 않습니다.
+        </p>
+      ) : null}
+      {details.map(({ exam, schedule, pending, cuts, slots }) => (
+        <Panel key={exam.id} title={`${exam.year} 고${exam.grade} ${exam.month}월 · 과목별 자료`}>
+          <p className="text-sm">
+            일정: {schedule?.verifiedAt ? "확인됨" : "미확인"} ·{" "}
+            {schedule?.examDate ?? exam.examDate ?? "날짜 미등록"} ·{" "}
+            {schedule?.status ?? "일정 미등록"}
+          </p>
+          <Link
+            className="text-primary text-sm underline"
+            href={`/admin/imports?year=${exam.year}&month=${exam.month}&grade=${exam.grade}`}
+          >
+            공식 URL 검토 대기 {pending}건 · 등록/승인
+          </Link>
+          <p className="my-2 text-sm">
+            등급컷:{" "}
+            {cuts.length
+              ? [
+                  ...new Set(
+                    cuts.map((c) => `${GRADE_CUT_SOURCE_LABELS[c.source]} — ${cutLabel(c)}`),
+                  ),
+                ].join(" / ")
+              : "제공 자료 없음"}
+          </p>
+          {!slots.length ? (
+            <p>과목 편성 정보 없음 · 누락 개수를 계산할 수 없습니다.</p>
+          ) : (
+            <ul className="grid gap-3 md:grid-cols-2">
+              {slots.map((slot) => (
+                <li
+                  className="border-border rounded border p-3"
+                  key={`${slot.subject}:${slot.courseId}`}
+                >
+                  <h3 className="font-semibold">{slot.name}</h3>
+                  {slot.materials.map((m) => (
+                    <p key={m.type} className="mt-1 text-sm" data-status={m.status}>
+                      <span className={TONE[m.status]}>
+                        {FILE_TYPE_LABELS[m.type as FileType]} · {STATUS_LABELS[m.status]}
+                      </span>
+                      <span className="text-muted-foreground block text-xs">{m.detail}</span>
+                    </p>
+                  ))}
+                </li>
+              ))}
+            </ul>
+          )}
+        </Panel>
+      ))}
 
       <Panel title="기능별 합계 (현재 쪽)">
         <table className="w-full text-sm tabular-nums">
@@ -118,7 +183,9 @@ export default async function CoveragePage({ searchParams }: PageProps<"/admin/c
                       <span className={cn("font-semibold", TONE[r.features[f].status])}>
                         {STATUS_LABELS[r.features[f].status]}
                       </span>
-                      <span className="text-muted-foreground block text-xs">{r.features[f].detail}</span>
+                      <span className="text-muted-foreground block text-xs">
+                        {r.features[f].detail}
+                      </span>
                     </td>
                   ))}
                 </tr>
